@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://csfwuy2bi3s2o"
+
+[deps]
+
+files=["res://assets/ASSET_PROVENANCE.kind.translation", "res://assets/ASSET_PROVENANCE.origin.translation", "res://assets/ASSET_PROVENANCE.author.translation", "res://assets/ASSET_PROVENANCE.license.translation", "res://assets/ASSET_PROVENANCE.notes.translation"]
+
+source_file="res://assets/ASSET_PROVENANCE.csv"
+dest_files=["res://assets/ASSET_PROVENANCE.kind.translation", "res://assets/ASSET_PROVENANCE.origin.translation", "res://assets/ASSET_PROVENANCE.author.translation", "res://assets/ASSET_PROVENANCE.license.translation", "res://assets/ASSET_PROVENANCE.notes.translation"]
+
+[params]
+
+compress=true
+delimiter=0

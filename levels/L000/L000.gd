@@ -650,3 +650,24 @@ func qa_capture_plan() -> Array:
 			shot["flashlight"] = true
 		plan.append(shot)
 	return plan
+
+
+## Engine assertions for this level's sourced mechanics (run by the QA harness).
+func qa_self_test() -> Array:
+	var out: Array = []
+	var before := world.shift_count
+	var pk := world.key_at(player.global_position)
+	var v_player := int(world.versions.get(pk, 0))
+	player.rotation.y = -PI * 0.5   # face +X: chunks on the -X side leave the frustum
+	for i in 660:
+		await get_tree().process_frame
+	out.append({"what": "peripheral shift re-randomised unobserved chunks", "ok": world.shift_count > before, "detail": world.shift_count - before})
+	out.append({"what": "the player's own chunk never shifts", "ok": int(world.versions.get(pk, 0)) == v_player})
+	var arch_shift := false
+	for k in world.versions.keys():
+		if kind_of(k.x, k.y) == "arches" and int(world.versions[k]) > 0:
+			arch_shift = true
+	out.append({"what": "arch rooms stay stable (never shift)", "ok": not arch_shift})
+	var hole := find_chunk_of("holes")
+	out.append({"what": "hole zones exist in the streamed world", "ok": hole.x != 999999, "detail": hole})
+	return out

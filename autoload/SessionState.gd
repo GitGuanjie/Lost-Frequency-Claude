@@ -14,6 +14,7 @@ var in_gameplay := false         # a level with a player is active
 var hints_overlay := true
 var debug_hint_mode := false     # shows SOURCE/ADAPTATION/DEBUG route tags
 var qa_run := false              # launched by the QA harness: saves go to a sandbox dir
+var qa_fixtures := false         # story-mode QA playthrough: keep deterministic QA exit fixtures
 
 
 func _ready() -> void:
@@ -32,7 +33,7 @@ func is_developer() -> bool:
 
 
 func is_qa() -> bool:
-	return mode == Mode.QA
+	return mode == Mode.QA or qa_fixtures
 
 
 func mode_name() -> String:

@@ -2,7 +2,7 @@
   "counters": {
     "accepted": 0,
     "blocked_source": 0,
-    "playable": 0,
+    "playable": 1,
     "requested": 100,
     "source_audited": 100,
     "spawnable": 1
@@ -21,41 +21,41 @@
         "target": "L000>L001#1",
         "ticks": 703
       },
-      "build_ms": 362,
+      "build_ms": 454,
       "collision_shapes": 3669,
       "distinct_layouts_over_3_seeds": 3,
       "dup_profile": {
         "boxes": {
-          "-1_-1_2": 173,
+          "-1_-1_2": 153,
           "-2_-1_1": 34,
           "-2_-1_2": 34,
           "-2_2_2": 47,
           "-2_2_4": 5,
-          "-2_2_6": 4,
+          "-2_2_6": 3,
           "-2_4_4": 10,
           "-2_4_5": 6,
-          "-2_4_6": 5,
-          "-2_5_6": 5,
+          "-2_4_6": 7,
+          "-2_5_6": 4,
           "-2_6_6": 52,
           "-3_-1_2": 18,
           "-3_0_4": 28,
           "-3_1_2": 63,
           "-3_1_5": 68,
           "-3_2_2": 1,
-          "-4_-1_0": 334,
-          "-4_-1_1": 250,
+          "-4_-1_0": 317,
+          "-4_-1_1": 254,
           "-4_-1_2": 345,
-          "-4_-2_0": 31,
-          "-4_-2_1": 30,
-          "-4_-2_2": 5,
+          "-4_-2_0": 34,
+          "-4_-2_1": 28,
+          "-4_-2_2": 6,
           "-4_-3_-1": 576,
           "-4_-3_-2": 288,
           "-4_-3_0": 144,
-          "-4_0_0": 5,
-          "-4_0_1": 3,
-          "-4_0_2": 850,
-          "-4_1_2": 106,
-          "-4_2_2": 698,
+          "-4_0_0": 7,
+          "-4_0_1": 5,
+          "-4_0_2": 831,
+          "-4_1_2": 108,
+          "-4_2_2": 688,
           "-5_-1_1": 126,
           "-5_-4_2": 28,
           "-5_-5_2": 10,
@@ -78,15 +78,15 @@
           "l0_ceiling": 60,
           "l0_panel": 3840,
           "l0_wall_flicker": 12,
-          "l0_wallpaper": 25088,
+          "l0_wallpaper": 24568,
           "l0_wallpaper_pale": 13452,
-          "l0_wallpaper_rough": 1176,
+          "l0_wallpaper_rough": 1264,
           "void_black": 136
         }
       },
       "exits_declared": 1,
       "exits_found": 1,
-      "load_ms": 368,
+      "load_ms": 459,
       "nav": {
         "exits": [
           {
@@ -97,12 +97,13 @@
           }
         ],
         "map_regions": 1,
-        "map_sync_ticks": 30,
+        "map_sync_ticks": 6,
         "nav_polygons": 2719,
         "start": "(10.5, 0.116389, 10.5)"
       },
       "qa_status": "ENGINE_SMOKE_PASS",
       "save_tested": true,
+      "self_tests": 4,
       "spawn": {
         "floor_hit": true,
         "offset": 0.0,
@@ -114,7 +115,18 @@
     }
   ],
   "renderer": "headless",
-  "started": "2026-11-04T18:30:19",
+  "started": "2026-11-04T18:35:41",
+  "story_chain": [
+    {
+      "bot_fired": true,
+      "edge": "L000>L001#1",
+      "from": "L000",
+      "release_boundary_offered": false,
+      "sim_seconds": 18.2,
+      "stop": "destination not built/playable: L001",
+      "to": "L001"
+    }
+  ],
   "suites": {
     "duplication": {
       "checks": [
@@ -190,6 +202,26 @@
           "what": "bot fired a declared exit"
         },
         {
+          "detail": "22",
+          "ok": true,
+          "what": "self-test: peripheral shift re-randomised unobserved chunks"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "self-test: the player's own chunk never shifts"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "self-test: arch rooms stay stable (never shift)"
+        },
+        {
+          "detail": "(3, 0)",
+          "ok": true,
+          "what": "self-test: hole zones exist in the streamed world"
+        },
+        {
           "detail": "",
           "ok": true,
           "what": "pause menu opens on this level"
@@ -200,7 +232,7 @@
           "what": "resume unpauses on this level"
         },
         {
-          "detail": "{ \"arrival\": \"qa_checkpoint\", \"level\": \"L000\", \"pitch\": 0.0, \"pos\": [28.0689277648926, 0.00017586536705, 10.4945859909058], \"yaw\": -1.58335506916046 }",
+          "detail": "{ \"arrival\": \"qa_checkpoint\", \"level\": \"L000\", \"pitch\": 0.0, \"pos\": [28.0689277648926, 0.00017586536705, 10.4945859909058], \"yaw\": -1.57079637050629 }",
           "ok": true,
           "what": "checkpoint saves and reloads with this level"
         },
@@ -208,10 +240,15 @@
           "detail": "",
           "ok": true,
           "what": "same seed reproduces identical layout"
+        },
+        {
+          "detail": "3",
+          "ok": true,
+          "what": "three seeds give three distinct layouts"
         }
       ],
       "failed": 0,
-      "passed": 16
+      "passed": 21
     },
     "lint": {
       "checks": [
@@ -2365,6 +2402,22 @@
       ],
       "failed": 0,
       "passed": 14
+    },
+    "story": {
+      "checks": [
+        {
+          "detail": "{ \"fired\": true, \"ticks\": 1092, \"sim_seconds\": 18.2, \"edge\": \"L000>L001#1\", \"distance_walked\": 50.6166720036417, \"target\": \"L000>L001#1\" }",
+          "ok": true,
+          "what": "bot used L000>L001#1 in story mode"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "witnessed route journaled even when destination is unbuilt"
+        }
+      ],
+      "failed": 0,
+      "passed": 2
     },
     "ui": {
       "checks": [

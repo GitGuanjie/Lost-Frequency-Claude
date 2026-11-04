@@ -279,6 +279,13 @@ func checkpoint(tag: String = "") -> void:
 		SaveService.save_story("checkpoint")
 
 
+## Level-specific engine assertions (override; must stay a coroutine).
+## Return [{what, ok, detail}] — e.g. Level 0 verifies its peripheral shift.
+func qa_self_test() -> Array:
+	await get_tree().process_frame
+	return []
+
+
 ## QA description consumed by tests/qa_runner.gd.
 func qa_describe() -> Dictionary:
 	var ex: Array = []

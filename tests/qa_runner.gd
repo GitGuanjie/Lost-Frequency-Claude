@@ -7,6 +7,7 @@ extends Node
 var results := {"started": "", "engine": "", "suites": {}, "levels": [], "failures": []}
 var args := {}
 var fails := 0
+var _story_fired := ""
 
 
 func _ready() -> void:
@@ -49,6 +50,8 @@ func _run() -> void:
 		_save_suite()
 	if suite in ["all", "ui"]:
 		await _ui_suite()
+	if suite in ["all", "story"]:
+		await _story_suite()
 	if suite in ["all", "levels"]:
 		var ids: Array = []
 		if args.has("levels"):
@@ -372,6 +375,10 @@ func _level_suite(sid: String) -> void:
 		check(bot.get("fired", false), s, "walker bot physically triggers an exit", bot)
 		check(bot.get("edge", "") in found_ids, s, "bot fired a declared exit", bot.get("edge", ""))
 	print("QA[%s] pause_save" % sid)
+	var st: Array = await lvl.qa_self_test()
+	for c in st:
+		check(c.get("ok", false), s, "self-test: " + str(c.get("what", "")), c.get("detail", null))
+	rec["self_tests"] = st.size()
 	# --- pause / resume / checkpoint save round-trip on this level
 	Overlay.open_pause()
 	await get_tree().process_frame
@@ -479,10 +486,10 @@ func _nav_check(lvl: LevelBase, found: Array) -> Dictionary:
 
 ## Drive the real CharacterBody3D along the navmesh path with physics and
 ## require the exit to fire through its normal trigger logic.
-func _bot_walk(lvl: LevelBase, nav: Dictionary, found: Array) -> Dictionary:
+func _bot_walk(lvl: LevelBase, nav: Dictionary, found: Array, want_edge: String = "", detect_signal: bool = false) -> Dictionary:
 	var target: Dictionary = {}
 	for e in nav.get("exits", []):
-		if e.get("reachable", false):
+		if e.get("reachable", false) and (want_edge == "" or e["edge"] == want_edge):
 			target = e
 			break
 	if target.is_empty():
@@ -519,8 +526,10 @@ func _bot_walk(lvl: LevelBase, nav: Dictionary, found: Array) -> Dictionary:
 				if (t as ExitTrigger).edge_id == trig["edge"]:
 					(t as ExitTrigger).interact(p)
 		await get_tree().physics_frame
-		if not TransitionService.qa_log.is_empty():
+		if not TransitionService.qa_log.is_empty() or (detect_signal and _story_fired != ""):
 			fired = true
+			break
+		if not is_instance_valid(p):
 			break
 		if ticks % 60 == 0:
 			if p.global_position.distance_to(last) < 0.15:
@@ -529,10 +538,14 @@ func _bot_walk(lvl: LevelBase, nav: Dictionary, found: Array) -> Dictionary:
 			if stuck > 6 and i < path.size():
 				i += 1
 				stuck = 0
-	p.qa_input = Vector2.ZERO
-	p.qa_active = false
-	var res := {"fired": fired, "ticks": ticks, "sim_seconds": ticks / 60.0, "edge": TransitionService.qa_log[0].get("id", "") if fired else "",
-		"distance_walked": p.stats["distance"], "target": target["edge"]}
+	if is_instance_valid(p):
+		p.qa_input = Vector2.ZERO
+		p.qa_active = false
+	var fired_edge := ""
+	if fired:
+		fired_edge = _story_fired if detect_signal else str(TransitionService.qa_log[0].get("id", ""))
+	var res := {"fired": fired, "ticks": ticks, "sim_seconds": ticks / 60.0, "edge": fired_edge,
+		"distance_walked": p.stats["distance"] if is_instance_valid(p) else -1.0, "target": target["edge"]}
 	_nav_free(nav)
 	return res
 
@@ -610,3 +623,88 @@ func _dupe_suite() -> void:
 	results["duplication_pairs"] = pairs
 	if ids.size() < 2:
 		check(true, s, "fewer than two levels profiled (nothing to compare)")
+
+
+# =================================================================== story
+
+## Real STORY-mode playthrough through TransitionService: the walker bot uses
+## each level's sourced exit toward the next built level; arrivals, journal and
+## saves are verified on every hop. Stops at the first unbuilt destination.
+func _story_suite() -> void:
+	var s := "story"
+	SessionState.set_mode(SessionState.Mode.STORY)
+	SessionState.qa_fixtures = true
+	SessionState.qa_seed_override = -1
+	TransitionService.qa_intercept = false
+	SaveService.story = SaveService.fresh_story(777)
+	SaveService.save_story("qa-story-start")
+	var cb := func(e: Dictionary): _story_fired = str(e.get("id", ""))
+	TransitionService.transition_requested.connect(cb)
+	var chain: Array = []
+	TransitionService.load_level("L000", "start", "qa-story")
+	await TransitionService.level_loaded
+	var visited := {"L000": true}
+	for hop in 14:
+		while TransitionService.loading:
+			await get_tree().process_frame
+		var lvl := get_tree().current_scene as LevelBase
+		if lvl == null:
+			check(false, s, "a level is loaded at hop %d" % hop)
+			break
+		await get_tree().physics_frame
+		var d := lvl.qa_describe()
+		var choice := ""
+		var to := ""
+		for x in d["exits"]:
+			for y in lvl.manifest.get("exits", []):
+				if y["id"] == x["edge"] and not visited.has(y.get("to", "")):
+					if choice == "" or LevelRegistry.is_playable(y.get("to", "")):
+						choice = x["edge"]
+						to = y.get("to", "")
+		if choice == "":
+			chain.append({"at": lvl.stable_id, "stop": "no unvisited exit placed near this arrival"})
+			break
+		var nav := await _nav_check(lvl, d["exits"])
+		_story_fired = ""
+		var bot := await _bot_walk(lvl, nav, d["exits"], choice, true)
+		var hop_rec := {"from": d["stable_id"], "edge": choice, "to": to, "bot_fired": bot.get("fired", false), "sim_seconds": bot.get("sim_seconds", 0.0)}
+		check(bot.get("fired", false), s, "bot used %s in story mode" % choice, bot)
+		if not bot.get("fired", false):
+			chain.append(hop_rec)
+			break
+		if not LevelRegistry.is_playable(to):
+			for i in 10:
+				await get_tree().process_frame
+			hop_rec["release_boundary_offered"] = Overlay.confirm_panel.is_visible_in_tree()
+			hop_rec["stop"] = "destination not built/playable: " + to
+			check(SaveService.has_witnessed(choice), s, "witnessed route journaled even when destination is unbuilt")
+			Overlay.close_all()
+			chain.append(hop_rec)
+			break
+		var t0 := Time.get_ticks_msec()
+		while (TransitionService.loading or (get_tree().current_scene as LevelBase) == lvl) and Time.get_ticks_msec() - t0 < 60000:
+			await get_tree().process_frame
+		var nl := get_tree().current_scene as LevelBase
+		var ok := nl != null and nl.stable_id == to
+		check(ok, s, "story transition %s loaded %s" % [choice, to])
+		if not ok:
+			chain.append(hop_rec)
+			break
+		var arrival := str(nl.spawn_report.get("used_arrival", ""))
+		hop_rec["arrival"] = arrival
+		check(arrival == "from_" + d["stable_id"] or arrival == "checkpoint_position", s, "arrived at sourced arrival point from_%s in %s" % [d["stable_id"], to], arrival)
+		check(nl.spawn_report.get("spawn_ok", false), s, "safe spawn after story transition into " + to)
+		SaveService.load_story()
+		check(SaveService.story.get("current_level", "") == to, s, "story save advanced to " + to)
+		check(SaveService.has_witnessed(choice), s, "journal records witnessed route " + choice)
+		visited[to] = true
+		chain.append(hop_rec)
+	results["story_chain"] = chain
+	TransitionService.transition_requested.disconnect(cb)
+	var cur := get_tree().current_scene
+	if cur is LevelBase:
+		_free_level(cur)
+	SessionState.qa_fixtures = false
+	SessionState.set_mode(SessionState.Mode.QA)
+	TransitionService.qa_intercept = true
+	await get_tree().process_frame
