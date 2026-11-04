@@ -1,6 +1,15 @@
 {
+  "counters": {
+    "accepted": 0,
+    "blocked_source": 0,
+    "playable": 0,
+    "requested": 100,
+    "source_audited": 100,
+    "spawnable": 1
+  },
   "engine": "4.5.1-stable (official)",
   "failures": [],
+  "legacy_save_found_on_machine": true,
   "levels": [
     {
       "bot": {
@@ -11,12 +20,12 @@
         "target": "L000>L001#1",
         "ticks": 703
       },
-      "build_ms": 639,
+      "build_ms": 431,
       "collision_shapes": 3669,
       "distinct_layouts_over_3_seeds": 3,
       "exits_declared": 1,
       "exits_found": 1,
-      "load_ms": 727,
+      "load_ms": 435,
       "nav": {
         "exits": [
           {
@@ -27,7 +36,7 @@
           }
         ],
         "map_regions": 1,
-        "map_sync_ticks": 11,
+        "map_sync_ticks": 10,
         "nav_polygons": 2719,
         "start": "(10.5, 0.116389, 10.5)"
       },
@@ -43,7 +52,7 @@
     }
   ],
   "renderer": "headless",
-  "started": "2026-11-04T14:16:59",
+  "started": "2026-11-04T14:24:15",
   "suites": {
     "level:L000": {
       "checks": [
@@ -115,6 +124,2290 @@
       ],
       "failed": 0,
       "passed": 13
+    },
+    "lint": {
+      "checks": [
+        {
+          "detail": "",
+          "ok": true,
+          "what": "transitions.json parses"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L000>L001#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L000>L001#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L000>L001#1"
+        },
+        {
+          "detail": "[\"L001\", \"L001\"]",
+          "ok": true,
+          "what": "destination matches source L000>L001#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L000>L001#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L000>L001#1"
+        }
+      ],
+      "failed": 0,
+      "passed": 7
+    },
+    "registry": {
+      "checks": [
+        {
+          "detail": "",
+          "ok": true,
+          "what": "roster loads"
+        },
+        {
+          "detail": "100",
+          "ok": true,
+          "what": "exactly 100 roster entries"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L000"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L000"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L000"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L000"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "unique scene path res://levels/L000/L000.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "scene path encodes stable id res://levels/L000/L000.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L001"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L001"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L001"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L001"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L002"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L002"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L002"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L002"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L003"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L003"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L003"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L003"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L004"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L004"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L004"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L004"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L005"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L005"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L005"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L005"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L006"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L006"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L006"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L006"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L007"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L007"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L007"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L007"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L008"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L008"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L008"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L008"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L009"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L009"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L009"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L009"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L010"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L010"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L010"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L010"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L011"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L011"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L011"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L011"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L012"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L012"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L012"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L012"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L013"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L013"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L013"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L013"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L014"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L014"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L014"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L014"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L019"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L019"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L019"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L019"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L037"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L037"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L037"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L037"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L188"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L188"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L188"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L188"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L015"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L015"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L015"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L015"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L016"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L016"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L016"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L016"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L017"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L017"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L017"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L017"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L018"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L018"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L018"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L018"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L020"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L020"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L020"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L020"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L022"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L022"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L022"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L022"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L023"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L023"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L023"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L023"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L024"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L024"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L024"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L024"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L025"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L025"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L025"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L025"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L026"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L026"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L026"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L026"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L027"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L027"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L027"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L027"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L028"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L028"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L028"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L028"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L029"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L029"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L029"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L029"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L030"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L030"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L030"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L030"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L031"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L031"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L031"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L031"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L036"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L036"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L036"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L036"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L048"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L048"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L048"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L048"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L049"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L049"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L049"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L049"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L053"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L053"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L053"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L053"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L069"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L069"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L069"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L069"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L071"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L071"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L071"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L071"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L073"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L073"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L073"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L073"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L075"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L075"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L075"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L075"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L079"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L079"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L079"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L079"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L094"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L094"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L094"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L094"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L200"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L200"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L200"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L200"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L256"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L256"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L256"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L256"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L289"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L289"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L289"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L289"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L404"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L404"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L404"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L404"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L601"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L601"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L601"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L601"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L906"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L906"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L906"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L906"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L974"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L974"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L974"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L974"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L000_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L000_1"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L000_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L000_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L000_2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L000_2"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L000_2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L000_2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L000_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L000_3"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L000_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L000_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L001_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L001_1"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L001_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L001_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L001_2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L001_2"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L001_2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L001_2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L001_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L001_3"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L001_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L001_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L001_5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L001_5"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L001_5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L001_5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L003_5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L003_5"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L003_5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L003_5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L005_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L005_1"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L005_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L005_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L006_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L006_1"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L006_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L006_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L007_7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L007_7"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L007_7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L007_7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L010_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L010_1"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L010_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L010_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L011_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L011_3"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L011_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L011_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L037_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L037_1"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L037_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L037_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L055"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L055"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L055"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L055"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L058"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L058"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L058"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L058"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L060"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L060"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L060"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L060"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L083"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L083"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L083"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L083"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L090"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L090"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L090"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L090"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L096"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L096"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L096"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L096"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L808"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L808"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L808"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L808"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L922"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L922"
+        },
+        {
+          "detail": "RESOLVED_TITLE_DIFFERS",
+          "ok": true,
+          "what": "source resolved L922"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L922"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L965"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L965"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L965"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L965"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L994"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L994"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L994"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L994"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L999"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L999"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L999"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L999"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L005_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L005_3"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L005_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L005_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L007_8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L007_8"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L007_8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L007_8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L009_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L009_3"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L009_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L009_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L011_2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L011_2"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L011_2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L011_2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L021"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L021"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L021"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L021"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L032"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L032"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L032"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L032"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L041"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L041"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L041"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L041"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L050"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L050"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L050"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L050"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L052"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L052"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L052"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L052"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L077"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L077"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L077"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L077"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L085"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L085"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L085"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L085"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L100"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L100"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L100"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L100"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L101"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L101"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L101"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L101"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L108"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L108"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L108"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L108"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L114"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L114"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L114"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L114"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L140"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L140"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L140"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L140"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L149"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L149"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L149"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L149"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L160"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L160"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L160"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L160"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L197"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L197"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L197"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L197"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L201"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L201"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L201"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L201"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L263"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L263"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L263"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L263"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L320"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L320"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L320"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L320"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L737"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L737"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L737"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L737"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L899"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L899"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L899"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L899"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L998"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L998"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L998"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L998"
+        },
+        {
+          "detail": "100",
+          "ok": true,
+          "what": "100 unique stable ids"
+        },
+        {
+          "detail": "100",
+          "ok": true,
+          "what": "100 unique source URLs"
+        }
+      ],
+      "failed": 0,
+      "passed": 406
+    },
+    "save": {
+      "checks": [
+        {
+          "detail": "",
+          "ok": true,
+          "what": "story save writes (atomic)"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "story file exists"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "second save writes"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "backup kept"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "developer mode cannot write story save"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "story file unchanged by developer session"
+        },
+        {
+          "detail": "backup",
+          "ok": true,
+          "what": "corrupted primary falls back"
+        },
+        {
+          "detail": "backup",
+          "ok": true,
+          "what": "fallback used backup"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "backup content intact"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "V62 legacy save imports"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "legacy seed carried"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "legacy visit list mapped to stable ids"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "unknown legacy version refused"
+        },
+        {
+          "detail": "temp",
+          "ok": true,
+          "what": "interrupted write recovers from .tmp"
+        }
+      ],
+      "failed": 0,
+      "passed": 14
+    },
+    "ui": {
+      "checks": [
+        {
+          "detail": "",
+          "ok": true,
+          "what": "panel attached to UI tree: pause_menu"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "panel attached to UI tree: dev_browser"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "panel attached to UI tree: settings_panel"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "panel attached to UI tree: journal_panel"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "panel attached to UI tree: credits_panel"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "panel attached to UI tree: note_panel"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "panel attached to UI tree: death_panel"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "panel attached to UI tree: confirm_panel"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "Esc opens pause menu (visible in tree)"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "Esc pauses gameplay"
+        },
+        {
+          "detail": "0",
+          "ok": true,
+          "what": "mouse released in pause"
+        },
+        {
+          "detail": "8",
+          "ok": true,
+          "what": "pause menu has its buttons"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "pause menu takes keyboard focus"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "Esc again resumes"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "F3 opens developer browser (visible in tree)"
+        },
+        {
+          "detail": "100",
+          "ok": true,
+          "what": "browser lists all 100 entries"
+        },
+        {
+          "detail": "[\"L023\", \"L027\", \"L073\", \"L974\", \"L010_1\", \"L083\"]",
+          "ok": true,
+          "what": "search finds Kitty's House"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "Locked filter shows only unbuilt entries"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "Esc closes browser and resumes"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "F4 does nothing in story mode"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "F7 flycam refused in story mode"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "F7 flycam in developer mode"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "flycam exit rolls back to safe player position"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "J opens journal (visible in tree)"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "Esc closes journal"
+        }
+      ],
+      "failed": 0,
+      "passed": 25
     }
   }
 }

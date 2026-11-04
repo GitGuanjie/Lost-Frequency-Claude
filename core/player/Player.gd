@@ -190,6 +190,7 @@ func _physics_process(delta: float) -> void:
 	if frozen or dead:
 		return
 	_update_water()
+	_update_ladder()
 	var input := _move_input()
 	var basis_flat := global_transform.basis
 	var dir := (basis_flat.x * input.x + -basis_flat.z * input.y)
@@ -307,6 +308,18 @@ func _handle_crouch(_delta: float) -> void:
 			shape.position.y = HEIGHT_STAND * 0.5
 
 
+func _update_ladder() -> void:
+	var probe := global_position + Vector3.UP * 0.9
+	var was := on_ladder
+	on_ladder = false
+	for l in get_tree().get_nodes_in_group("ladder"):
+		if (l as LadderVolume).contains(probe):
+			on_ladder = true
+			break
+	if on_ladder and not was:
+		velocity = Vector3.ZERO
+
+
 func _update_water() -> void:
 	var feet := global_position + Vector3.UP * 0.9
 	var eye := camera.global_position
@@ -361,9 +374,13 @@ func _swim(delta: float, input: Vector2) -> void:
 
 
 func _climb(_delta: float, input: Vector2) -> void:
-	velocity = Vector3(0, input.y * 2.2, 0) + _wish_dir * 1.0
-	if Input.is_action_just_pressed("jump"):
-		velocity += -global_transform.basis.z * 2.0 + Vector3.UP * 2.0
+	# forward/back climbs; strafing still allowed so the top can be stepped off
+	var right := global_transform.basis.x
+	velocity = Vector3(0, input.y * 2.2, 0) + right * input.x * 1.2
+	if input.y > 0.1:
+		velocity += -global_transform.basis.z * 0.35
+	if Input.is_action_just_pressed("jump") and not qa_active:
+		velocity += global_transform.basis.z * 2.0 + Vector3.UP * 1.0
 		on_ladder = false
 	move_and_slide()
 

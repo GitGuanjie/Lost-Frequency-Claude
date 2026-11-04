@@ -68,16 +68,40 @@ func request_exit(edge_id: String) -> void:
 		push_warning("Exit %s does not belong to current level" % edge_id)
 		return
 	var to: String = edge.get("to", "")
+	if to == "@origin":
+		# canon "return the way you came" (e.g. Level 188's entry window)
+		to = str(arrived_via.get("from", previous_level()))
+		edge = edge.duplicate()
+		edge["to"] = to
 	transition_requested.emit(edge)
 	var allowed := LevelRegistry.is_playable(to) if SessionState.is_story() else LevelRegistry.is_spawnable(to)
 	SaveService.record_edge(edge)
 	if not allowed:
 		var nm := LevelRegistry.display_name(to) if LevelRegistry.has_level(to) else str(edge.get("to_label", to))
-		Overlay.toast("This documented route leads to %s — not built in this release (IN DEVELOPMENT)." % nm, 6.0)
 		SaveService.save_story("route-witnessed")
+		var back := previous_level()
+		if back != "" and LevelRegistry.is_spawnable(back) and back != SessionState.current_level:
+			Overlay.confirm("This documented route leads to %s, which is not built in this release (IN DEVELOPMENT). The route is now in your journal.\n\nRELEASE BOUNDARY (not canon): return to %s to continue your expedition?" % [nm, LevelRegistry.display_name(back)],
+				func(): load_level(back, "from_" + SessionState.current_level, "release-boundary"))
+		else:
+			Overlay.toast("This documented route leads to %s — not built in this release (IN DEVELOPMENT)." % nm, 6.0)
 		return
 	arrived_via = edge
 	load_level(to, edge.get("arrival", "from_" + str(edge.get("from", ""))), "exit:" + edge_id)
+
+
+## The level visited before the current one (journal order), "" if none.
+func previous_level() -> String:
+	var lv: Array = SaveService.scope()["journal"]["levels_visited"]
+	var edges: Array = SaveService.scope()["journal"]["edges"]
+	for i in range(edges.size() - 1, -1, -1):
+		var e: Dictionary = edges[i]
+		if e.get("to", "") == SessionState.current_level and e.get("from", "") != SessionState.current_level:
+			return e.get("from", "")
+	for i in range(lv.size() - 1, -1, -1):
+		if lv[i] != SessionState.current_level:
+			return lv[i]
+	return ""
 
 
 # --------------------------------------------------------------- top level
