@@ -46,6 +46,6 @@
     }
   ],
   "entity_policy": "NO ENTITY PER SOURCE (existence unknown). Whispers/scratching are sound-only.",
-  "notes": "Flashlight is unavailable in a story run until one is found (wanderers arrive unprepared). Exit placement is seeded: arch chunks 50%, distant normal chunks 7%. QA fixture forces one flickering wall in chunk (1,0).",
+  "notes": "Flashlight is unavailable in a story run until one is found (wanderers arrive unprepared). Exit placement is seeded: arch chunks 50%, distant normal chunks 7%. QA fixture forces one flickering wall in chunk (1,0). ADAPTATION: one damp note near the wake-up point paraphrases the page's exit advice (flickering wall) and the arch-room stability fact; it is a clue device, not a companion (Isolation Effect respected).",
   "procedural": true
 }

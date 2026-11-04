@@ -21,8 +21,8 @@
         "target": "L000>L001#1",
         "ticks": 703
       },
-      "build_ms": 454,
-      "collision_shapes": 3669,
+      "build_ms": 331,
+      "collision_shapes": 3670,
       "distinct_layouts_over_3_seeds": 3,
       "dup_profile": {
         "boxes": {
@@ -67,6 +67,7 @@
           "-5_2_4": 104,
           "-5_2_5": 58,
           "-5_2_6": 28,
+          "-6_-2_-2": 1,
           "-6_-4_6": 4,
           "1_2_2": 1
         },
@@ -86,7 +87,7 @@
       },
       "exits_declared": 1,
       "exits_found": 1,
-      "load_ms": 459,
+      "load_ms": 336,
       "nav": {
         "exits": [
           {
@@ -97,7 +98,7 @@
           }
         ],
         "map_regions": 1,
-        "map_sync_ticks": 6,
+        "map_sync_ticks": 9,
         "nav_polygons": 2719,
         "start": "(10.5, 0.116389, 10.5)"
       },
@@ -115,7 +116,7 @@
     }
   ],
   "renderer": "headless",
-  "started": "2026-11-04T18:35:41",
+  "started": "2026-11-04T18:37:55",
   "story_chain": [
     {
       "bot_fired": true,
@@ -162,7 +163,7 @@
           "what": "floor (or water) under spawn"
         },
         {
-          "detail": "3669",
+          "detail": "3670",
           "ok": true,
           "what": "non-null collision"
         },

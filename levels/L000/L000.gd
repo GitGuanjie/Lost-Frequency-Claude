@@ -82,6 +82,11 @@ func build() -> void:
 	add_child(_heart)
 	_heart.play()
 	_blackout_buzz = sound.emitter("fluorescent_hum", Vector3.ZERO, {"base": 60.0, "rasp": 0.5}, -60.0, 14.0)
+	# ADAPTATION: an in-world clue paraphrasing the page's own exit advice ("find a
+	# flickering wall to throw yourself through"); no other wanderer is ever met.
+	add_note("L000_wanderer_note", "Damp note",
+		"[i]The handwriting runs where the carpet soaked it.[/i]\n\nDon't trust the halls behind you, they move when you stop looking.\n\nIf a wall ever flickers like a dying tube, don't stop to think. Run at it. Throw yourself through.\n\nThe archway rooms stay put. Rest there if you have to.",
+		Vector3(11.7, 0.03, 9.6))
 	add_shot("spawn", Vector3(10.5, 1.62, 10.5), Vector3(0.5, 1.45, 10.5))
 	add_landmark("Wake-up point", Vector3(10.5, 0, 10.5))
 

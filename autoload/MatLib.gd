@@ -76,6 +76,9 @@ var PRESETS: Dictionary = {
 		"pattern": 11, "pattern_color": Color(0.43, 0.40, 0.36), "pattern_strength": 0.5,
 		"noise_scale": 0.8, "roughness_a": 0.8, "roughness_b": 0.97, "bump_strength": 2.0,
 		"wetness": 0.25},
+	"paper": {"albedo_a": Color(0.86, 0.84, 0.77), "albedo_b": Color(0.78, 0.76, 0.68),
+		"noise_scale": 7.0, "roughness_a": 0.85, "roughness_b": 0.95, "stain_amount": 0.3,
+		"stain_color": Color(0.62, 0.55, 0.38), "stain_scale": 6.0, "bump_strength": 0.2},
 	"trim_white": {"albedo_a": Color(0.88, 0.87, 0.83), "albedo_b": Color(0.84, 0.83, 0.79),
 		"roughness_a": 0.4, "roughness_b": 0.55, "noise_scale": 0.5},
 }

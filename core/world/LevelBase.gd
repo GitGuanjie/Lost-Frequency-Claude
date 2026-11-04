@@ -239,11 +239,22 @@ func make_exit(edge_id: String, kind: String, center: Vector3, size: Vector3, pr
 	return t
 
 
-func add_note(id: String, title: String, text: String, center: Vector3, size: Vector3 = Vector3(0.4, 0.05, 0.3)) -> Interactable:
+func add_note(id: String, title: String, text: String, center: Vector3, size: Vector3 = Vector3(0.4, 0.05, 0.3), visible_paper: bool = true) -> Interactable:
 	var it := Interactable.new()
 	add_child(it)
 	it.setup(center, size, "Read")
 	it.as_note(id, title, text)
+	if visible_paper:
+		# a visible sheet of paper (the interactable itself is only a hit box)
+		var mi := MeshInstance3D.new()
+		var bm := BoxMesh.new()
+		bm.size = Vector3(0.21, 0.003, 0.29)
+		mi.mesh = bm
+		mi.material_override = MatLib.get_mat("paper")
+		mi.position = Vector3(0, -size.y * 0.5 + 0.002, 0)
+		mi.rotation.y = rng.randf_range(-0.6, 0.6)
+		mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+		it.add_child(mi)
 	return it
 
 
