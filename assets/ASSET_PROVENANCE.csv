@@ -1,0 +1,36 @@
+asset,kind,origin,author,license,notes
+core/graphics/shaders/emissive_panel.gdshader,shader,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,procedural material/effect
+core/graphics/shaders/screen_fx.gdshader,shader,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,procedural material/effect
+core/graphics/shaders/surface.gdshader,shader,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,procedural material/effect
+core/graphics/shaders/water.gdshader,shader,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,procedural material/effect
+autoload/AudioSynth.gd#chiptune,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#crackle,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#creak,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#crickets,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#distant_boom,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#drip,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#fluorescent_hum,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#footstep,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#heartbeat,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#knock,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#music_box,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#pad,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#pipe_clank,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#rain,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#room_tone,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#scratch,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#splash,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#static,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#thunder,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#transformer,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#ui,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#water_bed,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#whisper,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+autoload/AudioSynth.gd#wind,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
+icon.svg,vector icon,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,
+reports/screenshots/L000_arches.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
+reports/screenshots/L000_blackout.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
+reports/screenshots/L000_holes.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
+reports/screenshots/L000_pillars.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
+reports/screenshots/L000_red.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
+reports/screenshots/L000_spawn.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render

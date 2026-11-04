@@ -57,6 +57,7 @@ func _run() -> void:
 			ids = LevelRegistry.spawnable_ids()
 		for sid in ids:
 			await _level_suite(sid)
+		_dupe_suite()
 	_write()
 	var summary := "QA DONE: %d failures; suites=%s" % [fails, JSON.stringify(_suite_counts())]
 	print(summary)
@@ -333,11 +334,13 @@ func _level_suite(sid: String) -> void:
 	rec["collision_shapes"] = shapes
 	check(shapes > 0, s, "non-null collision", shapes)
 	check(lvl.world_env != null and lvl.world_env.environment != null, s, "environment present")
+	print("QA[%s] settle" % sid)
 	# --- physics settle: player must not fall through the world
 	var y0 := lvl.player.global_position.y
 	for i in 30:
 		await get_tree().physics_frame
 	check(lvl.player.global_position.y > y0 - 1.0 or in_water, s, "player stable on floor after 30 ticks", [y0, lvl.player.global_position.y])
+	print("QA[%s] exits" % sid)
 	# --- exits
 	var man: Dictionary = LevelRegistry.get_entry(sid).get("impl", {})
 	var declared: Array = man.get("exits", [])
@@ -356,6 +359,7 @@ func _level_suite(sid: String) -> void:
 			if y["id"] == x["edge"]:
 				ok = true
 		check(ok, s, "physical exit is declared in manifest " + x["edge"])
+	print("QA[%s] nav" % sid)
 	# --- navigation reachability + walker bot
 	var nav := await _nav_check(lvl, found)
 	rec["nav"] = nav
@@ -367,9 +371,27 @@ func _level_suite(sid: String) -> void:
 		rec["bot"] = bot
 		check(bot.get("fired", false), s, "walker bot physically triggers an exit", bot)
 		check(bot.get("edge", "") in found_ids, s, "bot fired a declared exit", bot.get("edge", ""))
+	print("QA[%s] pause_save" % sid)
+	# --- pause / resume / checkpoint save round-trip on this level
+	Overlay.open_pause()
+	await get_tree().process_frame
+	check(Overlay.pause_menu.is_visible_in_tree() and get_tree().paused, s, "pause menu opens on this level")
+	Overlay.close_all()
+	await get_tree().process_frame
+	check(not get_tree().paused, s, "resume unpauses on this level")
+	SessionState.set_mode(SessionState.Mode.STORY)
+	SaveService.story = SaveService.fresh_story(5150)
+	lvl.checkpoint("qa_checkpoint")
+	var cp_ok: bool = SaveService.load_story() and SaveService.story.get("checkpoint", {}).get("level", "") == sid
+	check(cp_ok, s, "checkpoint saves and reloads with this level", SaveService.story.get("checkpoint", {}))
+	rec["save_tested"] = cp_ok
+	SessionState.set_mode(SessionState.Mode.QA)
+	print("QA[%s] profile" % sid)
+	rec["dup_profile"] = _profile(lvl)
 	_free_level(lvl)
 	await get_tree().process_frame
 	await get_tree().process_frame
+	print("QA[%s] determinism" % sid)
 	# --- determinism: same seed => same layout; three seeds differ (procedural)
 	var sig_a := await _sig_for(sid, 1001)
 	var sig_b := await _sig_for(sid, 1001)
@@ -525,3 +547,66 @@ func _nav_free(nav: Dictionary) -> void:
 	nav.erase("exits_path")
 	for e in nav.get("exits", []):
 		e.erase("path")
+
+
+# ============================================================ duplication
+
+## Material (triangles per material) and geometry (box-size bins) profiles.
+func _profile(lvl: Node) -> Dictionary:
+	var mats := {}
+	for mi in lvl.find_children("Mesh_*", "MeshInstance3D", true, false):
+		var m := mi as MeshInstance3D
+		if m.mesh == null:
+			continue
+		var key := str(m.name).trim_prefix("Mesh_")
+		var tris := 0
+		for si in m.mesh.get_surface_count():
+			var arr := m.mesh.surface_get_arrays(si)
+			tris += (arr[Mesh.ARRAY_INDEX] as PackedInt32Array).size() / 3 if arr[Mesh.ARRAY_INDEX] != null else 0
+		mats[key] = int(mats.get(key, 0)) + tris
+	var boxes := {}
+	for cs in lvl.find_children("*", "CollisionShape3D", true, false):
+		var c := cs as CollisionShape3D
+		if c.shape is BoxShape3D:
+			var sz := (c.shape as BoxShape3D).size
+			var dims := [sz.x, sz.y, sz.z]
+			dims.sort()
+			var bin := "%d_%d_%d" % [int(round(log(maxf(dims[0], 0.01)) * 2.0)), int(round(log(maxf(dims[1], 0.01)) * 2.0)), int(round(log(maxf(dims[2], 0.01)) * 2.0))]
+			boxes[bin] = int(boxes.get(bin, 0)) + 1
+	return {"materials": mats, "boxes": boxes}
+
+
+func _cos(a: Dictionary, b: Dictionary) -> float:
+	var dot := 0.0
+	var na := 0.0
+	var nb := 0.0
+	for k in a.keys():
+		na += float(a[k]) * float(a[k])
+		if b.has(k):
+			dot += float(a[k]) * float(b[k])
+	for k in b.keys():
+		nb += float(b[k]) * float(b[k])
+	if na <= 0.0 or nb <= 0.0:
+		return 0.0
+	return dot / sqrt(na * nb)
+
+
+func _dupe_suite() -> void:
+	var s := "duplication"
+	var prof := {}
+	for r in results["levels"]:
+		if r.has("dup_profile"):
+			prof[r["stable_id"]] = r["dup_profile"]
+	var ids := prof.keys()
+	var pairs: Array = []
+	for i in ids.size():
+		for j in range(i + 1, ids.size()):
+			var a: Dictionary = prof[ids[i]]
+			var b: Dictionary = prof[ids[j]]
+			var ms := _cos(a["materials"], b["materials"])
+			var gs := _cos(a["boxes"], b["boxes"])
+			pairs.append({"a": ids[i], "b": ids[j], "material_similarity": snappedf(ms, 0.001), "geometry_similarity": snappedf(gs, 0.001)})
+			check(not (ms > 0.8 and gs > 0.9), s, "%s vs %s not a palette/layout clone" % [ids[i], ids[j]], [ms, gs])
+	results["duplication_pairs"] = pairs
+	if ids.size() < 2:
+		check(true, s, "fewer than two levels profiled (nothing to compare)")

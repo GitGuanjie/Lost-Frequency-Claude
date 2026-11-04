@@ -4,4 +4,4 @@ set -euo pipefail
 cd "$(dirname "$0")/../.."
 GODOT="${GODOT:-godot}"
 "$GODOT" --headless --path . --import
-"$GODOT" --headless --path . --fixed-fps 60 res://tests/QARunner.tscn -- --qa "$@"
+timeout "${QA_TIMEOUT:-3600}" "$GODOT" --headless --path . --fixed-fps 60 res://tests/QARunner.tscn -- --qa "$@"

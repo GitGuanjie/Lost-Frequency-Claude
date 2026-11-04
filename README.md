@@ -57,6 +57,7 @@ tests/      QA harness + capture runner     tools/  canon data builder
 
 ## Licence and attribution
 Level texts adapted from the Backrooms Wiki are © their authors, **CC BY-SA 3.0** (per-page
-citations in Credits and in `docs/canon/ATTRIBUTION_AND_LICENSES.md`). The derived game
-content is shared under CC BY-SA 3.0, and the code is MIT. All textures and sounds are
-generated procedurally in-project. No third-party images, models or audio are shipped.
+citations in Credits and in `docs/canon/ATTRIBUTION_AND_LICENSES.md`). As the wiki's
+Licensing Guide requires for Backrooms games, this whole folder (code included) is released
+under **CC BY-SA 3.0**; see `LICENSE.md` for the release statement. All textures and sounds
+are generated procedurally in-project. No third-party images, models or audio are shipped.

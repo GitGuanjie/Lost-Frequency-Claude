@@ -468,7 +468,7 @@ func _build_credits() -> Control:
 
 func _credits_bbcode() -> String:
 	var s := "[b]LOST FREQUENCY[/b] — an unofficial, non-commercial adaptation of the [b]Backrooms Wiki[/b] (English Wikidot continuity, https://backrooms-wiki.wikidot.com/).\n"
-	s += "Level text adapted from the pages listed below is licensed [b]CC BY-SA 3.0[/b] by their authors; this adaptation's derived content is shared under the same licence. Code is MIT-licensed (see LICENSE in the repository).\n"
+	s += "Content relating to the Backrooms is licensed under Creative Commons Sharealike 3.0 and all concepts originate from http://backrooms-wiki.wikidot.com/ and its authors. LOST FREQUENCY, being derived from this content, is hereby also released under [b]Creative Commons Sharealike 3.0[/b] (code included; see LICENSE.md).\n"
 	s += "All textures, materials and sounds in this build are generated procedurally in-project; no third-party images, models or audio are shipped.\n"
 	s += "Built with Godot Engine (MIT). Physics: Jolt (MIT).\n\n[b]Source pages (accessed 2026-11-04)[/b]\n"
 	for e in LevelRegistry.entries:

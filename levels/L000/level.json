@@ -1,22 +1,51 @@
 {
   "stable_id": "L000",
   "scene": "res://levels/L000/L000.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT_TESTED",
-  "arrivals": ["start"],
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (16/16 level checks, bot fired L000>L001#1); stills reviewed by integrator (AI); human review pending",
+  "arrivals": [
+    "start"
+  ],
   "signature": "Peripheral-shift streaming maze of mono-yellow rooms, halls and sunken stair rooms; arches (stable rest), pillar lattices, hole grids, silent blackout zones with ankle-deep fluid, and sealing Red Rooms.",
-  "mechanics": ["peripheral_shift", "chunk_streaming", "blackout_zones", "red_room_closed_loop", "fatal_holes", "arch_rest_checkpoint", "hum_swells", "isolation_no_npcs"],
+  "mechanics": [
+    "peripheral_shift",
+    "chunk_streaming",
+    "blackout_zones",
+    "red_room_closed_loop",
+    "fatal_holes",
+    "arch_rest_checkpoint",
+    "hum_swells",
+    "isolation_no_npcs"
+  ],
   "exits": [
-    {"id": "L000>L001#1", "to": "L001", "trigger": "noclip", "label": "Threw yourself through a flickering wall",
-     "confidence": "CONFIRMED", "basis": "SOURCE", "source_section": "Entrances and Exits",
-     "source_quote": "find a flickering wall to throw yourself through",
-     "hint": "Some wall sections flicker and crackle. Arch rooms seem to hold them more often. Sprint into one and keep pushing.",
-     "arrival": "from_L000"}
+    {
+      "id": "L000>L001#1",
+      "to": "L001",
+      "trigger": "noclip",
+      "label": "Threw yourself through a flickering wall",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "find a flickering wall to throw yourself through",
+      "hint": "Some wall sections flicker and crackle. Arch rooms seem to hold them more often. Sprint into one and keep pushing.",
+      "arrival": "from_L000"
+    }
   ],
   "fail_states": [
-    {"kind": "fall", "label": "Holes — none have reported surviving", "basis": "SOURCE", "source_quote": "none have reported doing so and surviving"},
-    {"kind": "red_rooms", "label": "Red Rooms seal into a closed loop", "basis": "SOURCE", "source_quote": "completely unbreachable once fully entered—like a closed loop"}
+    {
+      "kind": "fall",
+      "label": "Holes — none have reported surviving",
+      "basis": "SOURCE",
+      "source_quote": "none have reported doing so and surviving"
+    },
+    {
+      "kind": "red_rooms",
+      "label": "Red Rooms seal into a closed loop",
+      "basis": "SOURCE",
+      "source_quote": "completely unbreachable once fully entered—like a closed loop"
+    }
   ],
   "entity_policy": "NO ENTITY PER SOURCE (existence unknown). Whispers/scratching are sound-only.",
-  "notes": "Flashlight is unavailable in a story run until one is found (wanderers arrive unprepared). Exit placement is seeded: arch chunks 50%, distant normal chunks 7%. QA fixture forces one flickering wall in chunk (1,0)."
+  "notes": "Flashlight is unavailable in a story run until one is found (wanderers arrive unprepared). Exit placement is seeded: arch chunks 50%, distant normal chunks 7%. QA fixture forces one flickering wall in chunk (1,0).",
+  "procedural": true
 }

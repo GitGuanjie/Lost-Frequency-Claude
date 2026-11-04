@@ -7,6 +7,7 @@
     "source_audited": 100,
     "spawnable": 1
   },
+  "duplication_pairs": [],
   "engine": "4.5.1-stable (official)",
   "failures": [],
   "legacy_save_found_on_machine": true,
@@ -20,12 +21,72 @@
         "target": "L000>L001#1",
         "ticks": 703
       },
-      "build_ms": 431,
+      "build_ms": 362,
       "collision_shapes": 3669,
       "distinct_layouts_over_3_seeds": 3,
+      "dup_profile": {
+        "boxes": {
+          "-1_-1_2": 173,
+          "-2_-1_1": 34,
+          "-2_-1_2": 34,
+          "-2_2_2": 47,
+          "-2_2_4": 5,
+          "-2_2_6": 4,
+          "-2_4_4": 10,
+          "-2_4_5": 6,
+          "-2_4_6": 5,
+          "-2_5_6": 5,
+          "-2_6_6": 52,
+          "-3_-1_2": 18,
+          "-3_0_4": 28,
+          "-3_1_2": 63,
+          "-3_1_5": 68,
+          "-3_2_2": 1,
+          "-4_-1_0": 334,
+          "-4_-1_1": 250,
+          "-4_-1_2": 345,
+          "-4_-2_0": 31,
+          "-4_-2_1": 30,
+          "-4_-2_2": 5,
+          "-4_-3_-1": 576,
+          "-4_-3_-2": 288,
+          "-4_-3_0": 144,
+          "-4_0_0": 5,
+          "-4_0_1": 3,
+          "-4_0_2": 850,
+          "-4_1_2": 106,
+          "-4_2_2": 698,
+          "-5_-1_1": 126,
+          "-5_-4_2": 28,
+          "-5_-5_2": 10,
+          "-5_0_2": 44,
+          "-5_1_1": 7,
+          "-5_1_2": 12,
+          "-5_2_2": 28,
+          "-5_2_3": 50,
+          "-5_2_4": 104,
+          "-5_2_5": 58,
+          "-5_2_6": 28,
+          "-6_-4_6": 4,
+          "1_2_2": 1
+        },
+        "materials": {
+          "l0_carpet": 834,
+          "l0_carpet_deep": 6,
+          "l0_carpet_dry": 6,
+          "l0_carpet_fluid": 2,
+          "l0_ceiling": 60,
+          "l0_panel": 3840,
+          "l0_wall_flicker": 12,
+          "l0_wallpaper": 25088,
+          "l0_wallpaper_pale": 13452,
+          "l0_wallpaper_rough": 1176,
+          "void_black": 136
+        }
+      },
       "exits_declared": 1,
       "exits_found": 1,
-      "load_ms": 435,
+      "load_ms": 368,
       "nav": {
         "exits": [
           {
@@ -36,11 +97,12 @@
           }
         ],
         "map_regions": 1,
-        "map_sync_ticks": 10,
+        "map_sync_ticks": 30,
         "nav_polygons": 2719,
         "start": "(10.5, 0.116389, 10.5)"
       },
       "qa_status": "ENGINE_SMOKE_PASS",
+      "save_tested": true,
       "spawn": {
         "floor_hit": true,
         "offset": 0.0,
@@ -52,8 +114,19 @@
     }
   ],
   "renderer": "headless",
-  "started": "2026-11-04T14:24:15",
+  "started": "2026-11-04T18:30:19",
   "suites": {
+    "duplication": {
+      "checks": [
+        {
+          "detail": "",
+          "ok": true,
+          "what": "fewer than two levels profiled (nothing to compare)"
+        }
+      ],
+      "failed": 0,
+      "passed": 1
+    },
     "level:L000": {
       "checks": [
         {
@@ -119,11 +192,26 @@
         {
           "detail": "",
           "ok": true,
+          "what": "pause menu opens on this level"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "resume unpauses on this level"
+        },
+        {
+          "detail": "{ \"arrival\": \"qa_checkpoint\", \"level\": \"L000\", \"pitch\": 0.0, \"pos\": [28.0689277648926, 0.00017586536705, 10.4945859909058], \"yaw\": -1.58335506916046 }",
+          "ok": true,
+          "what": "checkpoint saves and reloads with this level"
+        },
+        {
+          "detail": "",
+          "ok": true,
           "what": "same seed reproduces identical layout"
         }
       ],
       "failed": 0,
-      "passed": 13
+      "passed": 16
     },
     "lint": {
       "checks": [
