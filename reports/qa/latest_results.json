@@ -1,0 +1,120 @@
+{
+  "engine": "4.5.1-stable (official)",
+  "failures": [],
+  "levels": [
+    {
+      "bot": {
+        "distance_walked": 29.9695880729705,
+        "edge": "L000>L001#1",
+        "fired": true,
+        "sim_seconds": 11.7166666666667,
+        "target": "L000>L001#1",
+        "ticks": 703
+      },
+      "build_ms": 639,
+      "collision_shapes": 3669,
+      "distinct_layouts_over_3_seeds": 3,
+      "exits_declared": 1,
+      "exits_found": 1,
+      "load_ms": 727,
+      "nav": {
+        "exits": [
+          {
+            "edge": "L000>L001#1",
+            "goal": "(28.9, 0.116389, 10.5)",
+            "path_points": 44,
+            "reachable": true
+          }
+        ],
+        "map_regions": 1,
+        "map_sync_ticks": 11,
+        "nav_polygons": 2719,
+        "start": "(10.5, 0.116389, 10.5)"
+      },
+      "qa_status": "ENGINE_SMOKE_PASS",
+      "spawn": {
+        "floor_hit": true,
+        "offset": 0.0,
+        "requested_arrival": "start",
+        "spawn_ok": true,
+        "used_arrival": "start"
+      },
+      "stable_id": "L000"
+    }
+  ],
+  "renderer": "headless",
+  "started": "2026-11-04T14:16:59",
+  "suites": {
+    "level:L000": {
+      "checks": [
+        {
+          "detail": "",
+          "ok": true,
+          "what": "scene loads and builds"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "player spawned"
+        },
+        {
+          "detail": "{ \"requested_arrival\": \"start\", \"used_arrival\": \"start\", \"spawn_ok\": true, \"offset\": 0.0, \"floor_hit\": true }",
+          "ok": true,
+          "what": "spawn clear of collision and on a floor"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "floor (or water) under spawn"
+        },
+        {
+          "detail": "3669",
+          "ok": true,
+          "what": "non-null collision"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "environment present"
+        },
+        {
+          "detail": "[0.02455555461347, 0.01638888753951]",
+          "ok": true,
+          "what": "player stable on floor after 30 ticks"
+        },
+        {
+          "detail": "1",
+          "ok": true,
+          "what": "at least one physical exit present near start"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "physical exit is declared in manifest L000>L001#1"
+        },
+        {
+          "detail": "{ \"edge\": \"L000>L001#1\", \"reachable\": true, \"path_points\": 44, \"goal\": (28.9, 0.116389, 10.5), \"path\": [(10.5, 0.116389, 10.5), (11.04321, 0.116389, 10.59366), (11.5, 0.116389, 10.67241), (11.95, 0.116389, 10.75), (12.4, 0.116389, 10.9), (12.65653, 0.116389, 11.7658), (12.66667, 0.116389, 11.8), (12.7407, 0.116389, 12.04985), (13.37579, 0.116389, 14.19329), (13.46667, 0.116389, 14.5), (13.50944, 0.116389, 14.64434), (13.6, 0.116389, 14.95), (13.73171, 0.116389, 15.38903), (13.735, 0.116389, 15.4), (13.73944, 0.116389, 15.41479), (14.365, 0.116389, 17.5), (14.5, 0.116389, 17.95), (14.65, 0.116389, 18.4), (17.5, 0.116389, 19.30682), (17.50405, 0.116389, 19.30811), (17.95, 0.116389, 19.45), (18.4, 0.116389, 19.4275), (18.56682, 0.116389, 19.41916), (18.7326, 0.116389, 19.41087), (20.65, 0.116389, 19.315), (20.66154, 0.116389, 19.31442), (21.37857, 0.116389, 19.27857), (21.4, 0.116389, 19.2775), (21.98413, 0.116389, 19.24829), (23.05132, 0.116389, 19.19494), (23.5, 0.116389, 19.1725), (23.95, 0.116389, 19.15), (24.4, 0.116389, 19.0), (25.54166, 0.116389, 13.03799), (25.60655, 0.116389, 12.69912), (25.66383, 0.116389, 12.4), (25.69349, 0.116389, 12.24512), (25.75, 0.116389, 11.95), (25.9, 0.116389, 11.5), (26.65, 0.116389, 10.6), (27.25, 0.116389, 10.55556), (27.27913, 0.116389, 10.5534), (27.67892, 0.116389, 10.52378), (28.0, 0.116389, 10.5)] }",
+          "ok": true,
+          "what": "exit reachable on navmesh L000>L001#1"
+        },
+        {
+          "detail": "{ \"fired\": true, \"ticks\": 703, \"sim_seconds\": 11.7166666666667, \"edge\": \"L000>L001#1\", \"distance_walked\": 29.9695880729705, \"target\": \"L000>L001#1\" }",
+          "ok": true,
+          "what": "walker bot physically triggers an exit"
+        },
+        {
+          "detail": "L000>L001#1",
+          "ok": true,
+          "what": "bot fired a declared exit"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "same seed reproduces identical layout"
+        }
+      ],
+      "failed": 0,
+      "passed": 13
+    }
+  }
+}
