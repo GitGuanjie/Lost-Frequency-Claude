@@ -318,7 +318,7 @@ func _level_suite(sid: String) -> void:
 	var s := "level:" + sid
 	var rec := {"stable_id": sid}
 	var t0 := Time.get_ticks_msec()
-	var lvl: LevelBase = await _instance(sid, 1001)
+	var lvl: LevelBase = await _instance(sid, int(args.get("seed", "1001")))
 	rec["load_ms"] = Time.get_ticks_msec() - t0
 	if not check(lvl != null, s, "scene loads and builds"):
 		rec["qa_status"] = "LOAD_FAILED"
@@ -650,6 +650,9 @@ func _story_suite() -> void:
 	var cb := func(e: Dictionary): _story_fired = str(e.get("id", ""))
 	TransitionService.transition_requested.connect(cb)
 	var chain: Array = []
+	# the runner itself is the main scene: never let load_level free it
+	if get_tree().current_scene == self:
+		get_tree().current_scene = null
 	TransitionService.load_level("L000", "start", "qa-story")
 	await TransitionService.level_loaded
 	var visited := {"L000": true}
