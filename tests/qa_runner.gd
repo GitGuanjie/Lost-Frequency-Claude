@@ -641,6 +641,7 @@ func _story_suite() -> void:
 	SessionState.qa_fixtures = true
 	SessionState.qa_seed_override = -1
 	TransitionService.qa_intercept = false
+	TransitionService.qa_seamless = true
 	SaveService.story = SaveService.fresh_story(777)
 	SaveService.save_story("qa-story-start")
 	var cb := func(e: Dictionary): _story_fired = str(e.get("id", ""))
@@ -707,6 +708,7 @@ func _story_suite() -> void:
 		hop_rec["arrival"] = arrival
 		check(arrival == "from_" + d["stable_id"] or arrival == "checkpoint_position", s, "arrived at sourced arrival point from_%s in %s" % [d["stable_id"], to], arrival)
 		check(nl.spawn_report.get("spawn_ok", false), s, "safe spawn after story transition into " + to)
+		check(nl.spawn_report.get("carried_state", false), s, "seamless switch carried player state into " + to)
 		for i in 5:
 			await get_tree().process_frame
 		var on_disk: Variant = JSON.parse_string(FileAccess.get_file_as_string(SaveService.story_path()))
@@ -721,6 +723,7 @@ func _story_suite() -> void:
 	if cur is LevelBase:
 		_free_level(cur)
 	SessionState.qa_fixtures = false
+	TransitionService.qa_seamless = false
 	SessionState.set_mode(SessionState.Mode.QA)
 	TransitionService.qa_intercept = true
 	await get_tree().process_frame

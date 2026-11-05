@@ -22,6 +22,8 @@ var title_card: VBoxContainer
 var mode_badge: Label
 var fps_label: Label
 var hint_label: Label
+var rec_label: Label
+var _glitch := 0.0
 
 var pause_menu: Control
 var dev_browser: Control
@@ -111,6 +113,7 @@ func _apply_fx_settings() -> void:
 	fx_mat.set_shader_parameter("brightness", float(Settings.get_value("brightness")))
 	fx_mat.set_shader_parameter("contrast", float(Settings.get_value("contrast")))
 	fx_mat.set_shader_parameter("grain", 0.0 if Settings.get_value("reduce_motion") else 0.025)
+	fx_mat.set_shader_parameter("camcorder", 1.0 if Settings.get_value("camcorder") else 0.0)
 
 
 func _build_hud() -> void:
@@ -199,6 +202,11 @@ func _build_hud() -> void:
 	fps_label = UITheme.label("", 14, UITheme.MUTED)
 	fps_label.position = Vector2(14, 10)
 	root.add_child(fps_label)
+	rec_label = UITheme.label("", 18, Color(1, 1, 1, 0.85))
+	rec_label.position = Vector2(34, 26)
+	rec_label.add_theme_color_override("font_outline_color", Color(0, 0, 0, 0.7))
+	rec_label.add_theme_constant_override("outline_size", 4)
+	hud.add_child(rec_label)
 	hint_label = UITheme.label("", 14, Color(0.8, 0.78, 0.7, 0.75))
 	hint_label.set_anchors_preset(Control.PRESET_BOTTOM_RIGHT)
 	hint_label.position = Vector2(-720, -34)
@@ -363,6 +371,8 @@ func _build_settings() -> Control:
 	_slider_row(v, "Brightness", "brightness", 0.6, 1.6, 0.05)
 	_slider_row(v, "Contrast", "contrast", 0.7, 1.4, 0.05)
 	_check_row(v, "Show frame time / FPS", "show_fps")
+	_check_row(v, "Found-footage camcorder look (VHS, REC, handheld)", "camcorder")
+	_check_row(v, "Continuous level switching (no loading screen)", "seamless")
 	var fsb := CheckBox.new()
 	fsb.text = "Fullscreen"
 	fsb.button_pressed = DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN
@@ -714,6 +724,14 @@ func _process(delta: float) -> void:
 		elif _title_t > 5.0:
 			a = (6.0 - _title_t)
 		title_card.modulate.a = clampf(a, 0.0, 1.0)
+	_glitch = maxf(0.0, _glitch - delta * 1.6)
+	fx_mat.set_shader_parameter("glitch", _glitch)
+	if Settings.get_value("camcorder") and gameplay:
+		var t := Time.get_datetime_dict_from_system()
+		var blink := "●" if int(Time.get_ticks_msec() / 600) % 2 == 0 else "  "
+		rec_label.text = "%s REC   %02d:%02d:%02d   %s" % [blink, t["hour"], t["minute"], t["second"], LevelRegistry.display_name(SessionState.current_level).to_upper()]
+	else:
+		rec_label.text = ""
 	_underwater = move_toward(_underwater, _underwater_target, delta * 3.0)
 	fx_mat.set_shader_parameter("underwater", _underwater)
 	if Settings.get_value("show_fps"):
@@ -791,6 +809,12 @@ func set_capture_mode(on: bool) -> void:
 	hud.modulate.a = 0.0 if on else 1.0
 
 
+## No-clip tear used by continuous level switching (no black screen).
+func glitch(strength: float = 1.0) -> void:
+	_glitch = maxf(_glitch, strength)
+	fx_mat.set_shader_parameter("glitch", _glitch)
+
+
 func reset_screen_effects() -> void:
 	for k in ["red_tint", "desaturate", "blackout"]:
 		fx_mat.set_shader_parameter(k, 0.0)
@@ -855,7 +879,7 @@ func _refresh_mode_badge() -> void:
 
 
 func _on_setting_changed(key: String) -> void:
-	if key in ["brightness", "contrast", "reduce_motion"]:
+	if key in ["brightness", "contrast", "reduce_motion", "camcorder"]:
 		_apply_fx_settings()
 
 

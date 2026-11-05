@@ -139,6 +139,8 @@ func kind_of(cx: int, cz: int) -> String:
 		return "blackout"
 	if h > 0.74 and h <= 0.86:
 		return "arches"
+	if d >= 2 and h > 0.62 and h <= 0.74:
+		return "atrium"
 	return "normal"
 
 
@@ -170,7 +172,7 @@ func _carpet_mat(kind: String, cx: int, cz: int) -> String:
 
 
 func _can_shift(_k: Vector2i, meta: Dictionary) -> bool:
-	return meta.get("kind", "") in ["normal", "pillars", "holes", "blackout"] and not meta.get("qa_locked", false)
+	return meta.get("kind", "") in ["normal", "pillars", "holes", "blackout", "atrium"] and not meta.get("qa_locked", false)
 
 
 # -------------------------------------------------------------- borders
@@ -229,6 +231,13 @@ func _build_chunk(cx: int, cz: int, version: int, node: Node3D) -> Dictionary:
 	if kind == "blackout":
 		_blackout_extras(node, k, ox, oz)
 	# ---- ceiling + fixtures
+	if kind == "atrium":
+		_atrium(k, ox, oz, r, wall, group, meta)
+		_border_walls(k, cx, cz, "x", 0.0)
+		_border_walls(k, cx, cz, "z", 0.0)
+		k.commit()
+		meta["boxes"] = k.stats["boxes"]
+		return meta
 	k.slab(ox, oz, ox + CS, oz + CS, H + 0.3, 0.3, "l0_ceiling", GeoKit.NY)
 	for j in N:
 		for i in N:
@@ -276,6 +285,61 @@ func _build_chunk(cx: int, cz: int, version: int, node: Node3D) -> Dictionary:
 	k.commit()
 	meta["boxes"] = k.stats["boxes"]
 	return meta
+
+
+## "Randomly segmented rooms, hallways, and stairs": a two-storey yellow hall.
+## A 12 m void rises through both floors; an upper gallery (railing-edged)
+## rings it, reached by a stair run; upper rooms sit along two sides.
+func _atrium(k: GeoKit, ox: float, oz: float, r: RandomNumberGenerator, wall: String, group: String, meta: Dictionary) -> void:
+	var up := H + 0.25            # upper floor top
+	var top := up + H             # upper ceiling
+	var v0 := Vector2(ox + 6.0, oz + 6.0)
+	var v1 := Vector2(ox + 18.0, oz + 18.0)
+	# upper floor slab around the void (4 pieces), with a carpet top and tile underside
+	for rect in [[ox, oz, ox + CS, v0.y], [ox, v1.y, ox + CS, oz + CS], [ox, v0.y, v0.x, v1.y], [v1.x, v0.y, ox + CS, v1.y]]:
+		k.slab(rect[0], rect[1], rect[2], rect[3], up, 0.25, "l0_carpet", GeoKit.PY)
+		k.box_mm(Vector3(rect[0], up - 0.25, rect[1]), Vector3(rect[2], up - 0.22, rect[3]), "l0_ceiling", GeoKit.NY, false)
+	k.slab(ox, oz, ox + CS, oz + CS, top + 0.3, 0.3, "l0_ceiling", GeoKit.NY)
+	# railings (solid wallpapered parapets, 1.0 m); the stair arrives through a gap at the NW corner
+	var rh := 1.0
+	k.box_mm(Vector3(v0.x + 1.9, up, v0.y - 0.12), Vector3(v1.x, up + rh, v0.y), wall)
+	k.box_mm(Vector3(v0.x, up, v1.y), Vector3(v1.x, up + rh, v1.y + 0.12), wall)
+	k.box_mm(Vector3(v1.x, up, v0.y), Vector3(v1.x + 0.12, up + rh, v1.y), wall)
+	k.box_mm(Vector3(v0.x - 0.12, up, v0.y), Vector3(v0.x, up + rh, v1.y), wall)
+	# stair run along the void's west edge, rising north onto the gallery
+	var steps := 16
+	var run := 0.32
+	k.stairs(Vector3(v0.x + 0.9, 0.0, v0.y + steps * run), Vector3(0, 0, -1), 1.6, up, steps, "l0_carpet", run, false)
+	# upper-storey shell on the chunk perimeter so nothing beyond the chunk is ever visible
+	for e in [[Vector3(ox, H, oz), Vector3(ox + CS, top, oz + 0.1)], [Vector3(ox, H, oz + CS - 0.1), Vector3(ox + CS, top, oz + CS)],
+			[Vector3(ox, H, oz), Vector3(ox + 0.1, top, oz + CS)], [Vector3(ox + CS - 0.1, H, oz), Vector3(ox + CS, top, oz + CS)]]:
+		k.box_mm(e[0], e[1], wall)
+	# perimeter partition walls on both storeys (segmented rooms with doorways)
+	for storey in [0.0, up]:
+		for side in 4:
+			var a: Vector3
+			var b: Vector3
+			match side:
+				0: a = Vector3(ox + 3.0, storey, oz + 3.0); b = Vector3(ox + CS - 3.0, storey, oz + 3.0)
+				1: a = Vector3(ox + 3.0, storey, oz + CS - 3.0); b = Vector3(ox + CS - 3.0, storey, oz + CS - 3.0)
+				2: a = Vector3(ox + 3.0, storey, oz + 3.0); b = Vector3(ox + 3.0, storey, oz + CS - 3.0)
+				_: a = Vector3(ox + CS - 3.0, storey, oz + 3.0); b = Vector3(ox + CS - 3.0, storey, oz + CS - 3.0)
+			var ops := [{"at": r.randf_range(2.0, 5.0), "w": 1.3, "h": 2.2}, {"at": r.randf_range(9.0, 15.0), "w": 1.3, "h": 2.2}]
+			k.wall(a, b, H, T, wall, ops, GeoKit.SIDES)
+	# fixtures on both storeys; tall panels over the void
+	for j in N:
+		for i in N:
+			var c := Vector3(ox + (i + 0.5) * CELL, 0, oz + (j + 0.5) * CELL)
+			var in_void := c.x > v0.x and c.x < v1.x and c.z > v0.y and c.z < v1.y
+			if not in_void:
+				k.panel(Vector3(c.x, H - 0.004 + 0.0, c.z), 1.2, 0.6, "l0_panel", float(i * 13 + j), 0.0)
+				k.panel(Vector3(c.x, up - 0.255, c.z), 1.2, 0.6, "l0_panel", float(i * 7 + j), 0.0)
+			k.panel(Vector3(c.x, top - 0.004, c.z), 1.2, 0.6, "l0_panel", float(i + j * 5), 0.03 if r.randf() < 0.06 else 0.0)
+			if (i + j) % 2 == 0:
+				lights.add_anchor(Vector3(c.x, (top if in_void else H) - 0.3, c.z), Color(1.0, 0.93, 0.74), 1.3, 7.5, 0.0, group)
+				if not in_void:
+					lights.add_anchor(Vector3(c.x, top - 0.3, c.z), Color(1.0, 0.93, 0.74), 1.1, 6.5, 0.0, group)
+	meta["storeys"] = 2
 
 
 func _floor_around(k: GeoKit, ox: float, oz: float, hole: Rect2i, mat: String) -> void:
@@ -642,7 +706,7 @@ func find_chunk_of(kind: String, max_r: int = 14) -> Vector2i:
 
 func qa_capture_plan() -> Array:
 	var plan: Array = qa_shots.duplicate()
-	for kind in ["pillars", "arches", "holes", "blackout", "red"]:
+	for kind in ["atrium", "pillars", "arches", "holes", "blackout", "red"]:
 		var k := find_chunk_of(kind)
 		if k.x == 999999:
 			continue
@@ -653,6 +717,13 @@ func qa_capture_plan() -> Array:
 			"prepare": func(): world.build_around(o + Vector3(CS * 0.5, 0, CS * 0.5), 1)}
 		if kind == "blackout":
 			shot["flashlight"] = true
+		if kind == "atrium":
+			shot["pos"] = o + Vector3(13.5, 1.62, 16.5)
+			shot["target"] = o + Vector3(13.0, 4.8, 5.0)
+			plan.append(shot)
+			plan.append({"name": "atrium_gallery", "pos": o + Vector3(16.5, H + 0.25 + 1.62, 4.6),
+				"target": o + Vector3(10.0, 0.6, 14.0), "prepare": shot["prepare"]})
+			continue
 		plan.append(shot)
 	return plan
 

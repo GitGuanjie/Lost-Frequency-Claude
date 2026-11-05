@@ -81,9 +81,20 @@ func level_process(_delta: float) -> void:
 	pass
 
 
+var _prefetch_t := 0.0
+
+
 func _process(delta: float) -> void:
 	if built:
 		level_process(delta)
+		_prefetch_t -= delta
+		if _prefetch_t <= 0.0 and player and not SessionState.qa_run:
+			_prefetch_t = 0.5
+			for t in exits:
+				if is_instance_valid(t) and t.global_position.distance_to(player.global_position) < 18.0:
+					for x in manifest.get("exits", []):
+						if x.get("id", "") == t.edge_id and LevelRegistry.is_spawnable(str(x.get("to", ""))):
+							TransitionService.prefetch(str(x.get("to", "")))
 
 
 # --------------------------------------------------------------- environment
@@ -173,6 +184,15 @@ func _spawn_player() -> void:
 		xf = Transform3D(Basis(Vector3.UP, float(cp.get("yaw", 0.0))), Vector3(p[0], p[1], p[2]))
 		spawn_report["used_arrival"] = "checkpoint_position"
 	player.global_transform = Transform3D(Basis(Vector3.UP, xf.basis.get_euler().y), xf.origin)
+	var cr: Dictionary = TransitionService.carry
+	if not cr.is_empty():
+		player.look_pitch = float(cr.get("pitch", 0.0))
+		player.head.rotation.x = player.look_pitch
+		var lv: Vector3 = cr.get("local_velocity", Vector3.ZERO)
+		player.velocity = player.global_transform.basis * Vector3(lv.x, 0.0, lv.z) * 0.6
+		if cr.get("flashlight", false) and rules.get("flashlight", "allowed") in ["allowed", "weak"]:
+			player.flashlight.visible = true
+		spawn_report["carried_state"] = true
 
 
 ## Ensure the player stands on a floor in free space; search nearby otherwise.

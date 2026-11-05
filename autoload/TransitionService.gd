@@ -16,6 +16,18 @@ var arrived_via: Dictionary = {}       # edge used to enter the current level
 var qa_intercept := false
 var qa_log: Array = []
 var _edge_cache: Dictionary = {}       # edge id -> edge dict (from manifests)
+var qa_seamless := false               # QA story suite exercises the seamless path
+var carry: Dictionary = {}             # player state carried across a seamless switch
+var _prefetched: Dictionary = {}       # scene path -> true (threaded load requested)
+
+
+## Start loading a destination scene in the background (called near exits).
+func prefetch(sid: String) -> void:
+	var path := LevelRegistry.scene_path(sid)
+	if path == "" or _prefetched.has(path) or not ResourceLoader.exists(path):
+		return
+	if ResourceLoader.load_threaded_request(path, "PackedScene", true) == OK:
+		_prefetched[path] = true
 
 
 func _ready() -> void:
@@ -172,18 +184,35 @@ func load_level(sid: String, arrival: String, reason: String) -> void:
 	pending_arrival = arrival
 	get_tree().paused = false
 	Overlay.close_all()
-	Overlay.show_loading(LevelRegistry.display_name(sid), reason)
-	await Overlay.fade_to(1.0, 0.35)
+	var seamless: bool = Settings.get_value("seamless") and reason.begins_with("exit:") and (not SessionState.qa_run or qa_seamless)
+	if seamless:
+		# keep the old level alive while the new one loads in the background
+		if not _prefetched.has(path):
+			ResourceLoader.load_threaded_request(path, "PackedScene", true)
+			_prefetched[path] = true
+		Overlay.glitch(0.6)
+		while ResourceLoader.load_threaded_get_status(path) == ResourceLoader.THREAD_LOAD_IN_PROGRESS:
+			Overlay.glitch(0.6)
+			await get_tree().process_frame
+		_capture_carry()
+		Overlay.glitch(1.0)
+		await get_tree().process_frame
+	else:
+		carry = {}
+		Overlay.show_loading(LevelRegistry.display_name(sid), reason)
+		await Overlay.fade_to(1.0, 0.35)
 	SessionState.in_gameplay = false
 	# drop the old level first so both worlds never coexist in memory
 	var old := get_tree().current_scene
 	if old:
 		old.queue_free()
 	await get_tree().process_frame
-	var err := ResourceLoader.load_threaded_request(path, "PackedScene", true)
-	if err != OK:
-		_fail(sid, "load request failed: " + error_string(err))
-		return
+	if not _prefetched.has(path):
+		var err := ResourceLoader.load_threaded_request(path, "PackedScene", true)
+		if err != OK:
+			_fail(sid, "load request failed: " + error_string(err))
+			return
+	_prefetched.erase(path)
 	var progress := []
 	while true:
 		var st := ResourceLoader.load_threaded_get_status(path, progress)
@@ -208,8 +237,22 @@ func load_level(sid: String, arrival: String, reason: String) -> void:
 	if SessionState.is_story():
 		SaveService.save_story("arrive:" + sid)
 	Overlay.hide_loading()
-	await Overlay.fade_to(0.0, 0.6)
+	if seamless:
+		Overlay.glitch(0.8)
+		carry = {}
+	else:
+		await Overlay.fade_to(0.0, 0.6)
 	loading = false
+
+
+func _capture_carry() -> void:
+	carry = {}
+	var ps := get_tree().get_nodes_in_group("player")
+	if ps.is_empty():
+		return
+	var p := ps[0] as Player
+	var local_v := p.global_transform.basis.inverse() * p.velocity
+	carry = {"pitch": p.look_pitch, "local_velocity": local_v, "flashlight": p.flashlight.visible, "crouch": p.crouching}
 
 
 func _fail(sid: String, reason: String) -> void:

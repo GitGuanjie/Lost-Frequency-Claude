@@ -208,6 +208,12 @@ func _physics_process(delta: float) -> void:
 		_walk(delta, dir)
 	_update_focus()
 	_update_hud(delta)
+	if Settings.get_value("camcorder") and not Settings.get_value("reduce_motion"):
+		var t := Time.get_ticks_msec() * 0.001
+		var amp := 0.004 + velocity.length() * 0.0012
+		camera.rotation = Vector3(sin(t * 1.3) * amp + sin(t * 3.1) * amp * 0.3, sin(t * 0.9) * amp, sin(t * 0.7) * amp * 0.8)
+	else:
+		camera.rotation = Vector3.ZERO
 	_flashlight_rules(delta)
 	if global_position.y < -400.0:
 		hurt(1000.0, "fell out of the world")
