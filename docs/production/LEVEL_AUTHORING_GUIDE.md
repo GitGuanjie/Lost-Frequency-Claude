@@ -153,3 +153,26 @@ software (lavapipe): roughly 130 ms per frame, and that number is not a GPU resu
   (edge, simulated seconds, distance), determinism, stills paths, known gaps.
 - Commit in your worktree branch with a clear message. Report: files, QA summary, what is
   SOURCE vs ADAPTATION, known gaps, and any framework needs.
+
+## 9. Film-grade spatial rules (added 2026-11-05 after user playtest feedback)
+The user's feedback on v1.0.0-m1 was: too few levels, spaces should feel like the Backrooms films, with
+real 3D structure, continuous level switching, and no obvious boundaries. These rules are now part of the bar:
+1. **Real 3D structure.** Every level needs at least two walkable heights where the page allows it:
+   mezzanines, galleries, stairwells, sunken rooms, catwalks, ramps, shafts, voids you can look down
+   into. Use stairs and ramps for collision, never floating steps. Pages that are canonically flat or
+   compact (e.g. Kitty's House) keep their identity, but still use natural vertical variation
+   (raised floors, split levels, stairs inside the house).
+2. **No obvious boundaries.** A player must never see a world edge, a skybox seam, a dead-flat terrain
+   cut-off, or an invisible wall in an open area. Use one of: ChunkWorld streaming (infinite feel); natural
+   enclosure the page supports (walls, cliffs, water, dense fog, darkness); or long sightlines that end in
+   real geometry. If you need a hard limit, make it diegetic (a locked door, a collapsed corridor, deep
+   water) and soft (it slows or turns you), never a flat invisible wall.
+3. **Continuous switching.** Exits now switch levels without a loading screen. The player keeps facing
+   and momentum, and arrives at `from_<SID>` with a short no-clip glitch. Place each arrival so it reads
+   as the continuation of the exit action: falling through a wall, landing on carpet, stepping out of a
+   door, surfacing from water. Facing should point into the space. No arrival should spawn the player
+   facing a wall.
+4. **Film look.** Realistic scale (ceiling 2.6–3.0 m in offices, doors 2.1 m, stair risers 0.18 m),
+   believable clutter (vents, outlets, exit signs, ceiling grates, pipes) where the page supports it,
+   and motivated lighting with pools and dark gaps. The camcorder filter is global, so don't fake it
+   per level.
