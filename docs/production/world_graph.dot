@@ -4,7 +4,7 @@ digraph LostFrequency {
   edge [fontsize=8];
   L000 [label="L0\nThreshold", fillcolor="#2e7d32", fontcolor="white"];
   L001 [label="L1\nHabitable Zone", fillcolor="#2e7d32", fontcolor="white"];
-  L002 [label="L2\nAbandoned Utility Halls", fillcolor="#e0e0e0", fontcolor="#424242"];
+  L002 [label="L2\nAbandoned Utility Halls", fillcolor="#2e7d32", fontcolor="white"];
   L003 [label="L3\nElectrical Station", fillcolor="#e0e0e0", fontcolor="#424242"];
   L004 [label="L4\nAbandoned Office", fillcolor="#2e7d32", fontcolor="white"];
   L005 [label="L5\nTerror Hotel", fillcolor="#2e7d32", fontcolor="white"];
@@ -113,10 +113,10 @@ digraph LostFrequency {
   L001 -> L001_1 [color="#424242"];
   L001 -> L001_2 [color="#424242"];
   L001 -> L001_5 [color="#424242"];
-  L002 -> L001 [color="#424242"];
-  L002 -> L031 [color="#424242"];
-  L002 -> L101 [style=dashed, color="#616161"];
-  L002 -> L998 [color="#424242"];
+  L002 -> L001 [color="#2e7d32", penwidth=2.4];
+  L002 -> L031 [color="#2e7d32", penwidth=2.4];
+  L002 -> L101 [color="#2e7d32", penwidth=2.4];
+  L002 -> L998 [color="#2e7d32", penwidth=2.4];
   L002 -> L002 [color="#424242"];
   L003 -> L004 [color="#424242"];
   L003 -> L005 [color="#424242"];

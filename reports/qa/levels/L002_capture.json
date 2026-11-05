@@ -1,0 +1,52 @@
+{
+  "adapter": "llvmpipe (LLVM 20.1.2, 256 bits)",
+  "captured": "2026-11-05T19:41:50",
+  "driver": "vulkan",
+  "engine": "4.5.1-stable (official)",
+  "levels": [
+    {
+      "seed": 1001,
+      "shots": [
+        {
+          "file": "res://reports/screenshots/L002_arrival.jpg",
+          "frame_ms_mean": 133.298721313477,
+          "pos": "(7.6, 1.67, 11.9)",
+          "shot": "arrival"
+        },
+        {
+          "file": "res://reports/screenshots/L002_gallery_floor.jpg",
+          "frame_ms_mean": 132.673501332601,
+          "pos": "(44.4, 1.62, 8.4)",
+          "shot": "gallery_floor"
+        },
+        {
+          "file": "res://reports/screenshots/L002_catwalk.jpg",
+          "frame_ms_mean": 133.756291389465,
+          "pos": "(50.0, 5.82, 5.0)",
+          "shot": "catwalk"
+        },
+        {
+          "file": "res://reports/screenshots/L002_stacked.jpg",
+          "frame_ms_mean": 133.054498990377,
+          "pos": "(50.0, 1.62, -31.6)",
+          "shot": "stacked"
+        },
+        {
+          "file": "res://reports/screenshots/L002_stair.jpg",
+          "frame_ms_mean": 133.829651832581,
+          "pos": "(-11.6, 1.62, -10.0)",
+          "shot": "stair"
+        },
+        {
+          "file": "res://reports/screenshots/L002_corridor.jpg",
+          "frame_ms_mean": 132.796584447225,
+          "pos": "(-8.4, 1.62, -10.0)",
+          "shot": "corridor"
+        }
+      ],
+      "stable_id": "L002"
+    }
+  ],
+  "note": "Software rasteriser timings (llvmpipe/lavapipe) are NOT representative of GPU performance.",
+  "vendor": "Unknown"
+}

@@ -1,0 +1,251 @@
+{
+  "stable_id": "L002",
+  "scene": "res://levels/L002/L002.tscn",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-05, 27/27); stills reviewed by integrator (AI); human review pending",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L001"
+  ],
+  "signature": "Tight, chalky concrete maintenance tunnels that only ever turn at 45 degrees, choked floor-to-ceiling with pipes and dead machines, stacked two decks deep with grating mid-floors, maintenance stairs and catwalks over double-height pipe galleries; series-wired fluorescent blocks die all at once, and most of the many coloured doors are locked.",
+  "mechanics": [
+    "chunk_streaming_service_lattice",
+    "octagon_junctions_45_degree_turns",
+    "two_decks_stairs_catwalks_galleries",
+    "drops_through_torn_grating",
+    "series_circuit_blackouts",
+    "brownout_violet_emergency_lights",
+    "locked_doors_and_coded_exit_doors",
+    "void_rooms",
+    "heat_hotspots_noclip",
+    "chalky_tight_corridors",
+    "smilers_in_darkness",
+    "burst_pipe_smell",
+    "defunct_bntg_tramway_signposts",
+    "whirring_machines"
+  ],
+  "exits": [
+    {
+      "id": "L002>L001#1",
+      "to": "L001",
+      "trigger": "interact",
+      "label": "Went back through a sign-marked unlocked door",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "all of which take the form of unlocked doors",
+      "hint": "Wanderers chalk signs over the doors that lead back up. One is in the vestibule where you arrive.",
+      "arrival": "from_L002"
+    },
+    {
+      "id": "L002>L031#2",
+      "to": "L031",
+      "trigger": "interact",
+      "label": "Opened a plywood door",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "By finding plywood doors in Level 2, one can enter Level 31 and Level 127.",
+      "hint": "Not every door is steel. Some are cheap plywood, nailed into the concrete.",
+      "arrival": "from_L002"
+    },
+    {
+      "id": "L002>L137#3",
+      "to": "L137",
+      "trigger": "interact",
+      "label": "Opened an aged wooden door",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "wooden doors that appear aged lead to Level 137 instead",
+      "hint": "Old, dark wooden doors with rotting stiles turn up among the steel ones.",
+      "arrival": "from_L002"
+    },
+    {
+      "id": "L002>L070#4",
+      "to": "L070",
+      "trigger": "interact",
+      "label": "Pushed through a floor-to-ceiling door engraved 70",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "The ones that lead to Level 70 have the text \"70\" engraved into them",
+      "hint": "Some doors are far too tall for a door, running floor to ceiling. Read what is cut into them.",
+      "arrival": "from_L002"
+    },
+    {
+      "id": "L002>L283#5",
+      "to": "L283",
+      "trigger": "interact",
+      "label": "Pushed through a floor-to-ceiling rainbow door",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "the ones that lead to Level 283 are often painted in rainbow colors",
+      "hint": "Some of the over-tall doors are painted in bands of colour.",
+      "arrival": "from_L002"
+    },
+    {
+      "id": "L002>L101#6",
+      "to": "L101",
+      "trigger": "interact",
+      "label": "An ordinary door that was not locked",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Some unlocked doors go to Level 101",
+      "hint": "Most plain doors are locked. Not all of them.",
+      "arrival": "from_L002"
+    },
+    {
+      "id": "L002>L126#7",
+      "to": "L126",
+      "trigger": "interact",
+      "label": "Followed an echoing piano through a door",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "any unlocked doors that have an echoey piano emanating from the other side lead to Level 126",
+      "hint": "Listen at the doors. Behind one of them a piano plays in a big empty room, but only while the lights on that block are alive.",
+      "arrival": "from_L002"
+    },
+    {
+      "id": "L002>L141#8",
+      "to": "L141",
+      "trigger": "interact",
+      "label": "Opened a bare metal door and walked in",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Opening a metal door and entering it leads to Level 141.",
+      "hint": "Unpainted, riveted metal doors are different from the painted steel ones.",
+      "arrival": "from_L002"
+    },
+    {
+      "id": "L002>L175#9",
+      "to": "L175",
+      "trigger": "interact",
+      "label": "Opened a blue door",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Any blue doors in Level 2 lead to Level 175",
+      "hint": "Doors come in colours. Blue ones are worth remembering.",
+      "arrival": "from_L002"
+    },
+    {
+      "id": "L002>L997#10",
+      "to": "L997",
+      "trigger": "interact",
+      "label": "Opened a pink door",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "all pink doors in Level 2 lead to Level 997",
+      "hint": "Doors come in colours. Pink ones are worth remembering.",
+      "arrival": "from_L002"
+    },
+    {
+      "id": "L002>L811#11",
+      "to": "L811",
+      "trigger": "interact",
+      "label": "Pulled the Macchina blade out of a door",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Pulling the knife will then take individuals to Level 811.",
+      "hint": "Some pipes carry pulsing blue lights. Follow them to the end. It only works while that block has power.",
+      "arrival": "from_L002"
+    },
+    {
+      "id": "L002>L916#12",
+      "to": "L916",
+      "trigger": "interact",
+      "label": "Pushed through wooden doors with a broken knob",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "a set of wooden doors with a broken doorknob that lead to Level 916",
+      "hint": "Only after wandering for a long, long time do some people find a pair of wooden doors with a snapped doorknob.",
+      "arrival": "from_L002"
+    },
+    {
+      "id": "L002>L998#13",
+      "to": "L998",
+      "trigger": "interact",
+      "label": "Stepped into elevator-like doors",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "elevator-like doors will lead to Level 998",
+      "hint": "Brushed-steel sliding doors with a call button: one is off the catwalk in the first big pipe gallery.",
+      "arrival": "from_L002"
+    },
+    {
+      "id": "L002>L064#17",
+      "to": "L064",
+      "trigger": "walk_in",
+      "label": "Walked into a furnished living room behind an unlocked door",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "rooms behind Level 2's unlocked doors that resemble fully furnished and decorated houses will lead to Level 64",
+      "hint": "Every so often an open door shows wallpaper and a sofa instead of concrete.",
+      "arrival": "from_L002"
+    },
+    {
+      "id": "L002>L127#18",
+      "to": "L127",
+      "trigger": "noclip",
+      "label": "Pressed into a scorching boiler until the walls gave",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "hotspots for noclipping into Level 127",
+      "hint": "Some machine rooms run unreasonably hot. People who lean into the heat are sometimes not there any more.",
+      "arrival": "from_L002"
+    },
+    {
+      "id": "L002>L158#19",
+      "to": "L158",
+      "trigger": "condition",
+      "label": "Kept walking the halls until they were somewhere else",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "By traversing the halls for long enough",
+      "hint": "Walk. Far. For a very long time.",
+      "arrival": "from_L002"
+    },
+    {
+      "id": "L002>L902#20",
+      "to": "L902",
+      "trigger": "walk_in",
+      "label": "Crawled down a dugout passage at a right angle to the halls",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "small dugout passageways at perpendicular angles to the rest of Level 2's layout",
+      "hint": "A few doorways open onto crude dirt tunnels that run square off the corridor, nothing like the 45-degree halls.",
+      "arrival": "from_L002"
+    }
+  ],
+  "fail_states": [
+    {
+      "kind": "entity",
+      "label": "Staying in a dark (tripped or brownout) block lets a Smiler close in",
+      "basis": "SOURCE",
+      "source_quote": "Due to their instinctual love for darkness, Smilers were drawn to Level 2"
+    },
+    {
+      "kind": "void",
+      "label": "Getting lost in a void room",
+      "basis": "SOURCE",
+      "source_quote": "It is extremely easy to get lost and perish in these infinite, lightless voids"
+    }
+  ],
+  "entity_policy": "SOURCED ENTITIES ONLY, kept sparse. Smilers (page: very common, love darkness) appear only after you have stayed 14+ s in a dark block (a tripped series circuit or a brownout), ahead of you in the dark, and close in slowly while you stay dark; reaching a lit block makes them fade. Clumps (ambush at corners), Wranglers (burrow and noclip) and machinery noises are sound-only captions. No Skin-Stealers (page: left after the blackout), no Macchina or Aiding Stragglers (extinct / gone), no NPC groups (page: none since the blackout), no Jerry's Room.",
+  "notes": "SOURCE: infinite Euclidean maintenance tunnels; strictly 45-degree turns and ~5 m-multiple hall lengths (20 m junction lattice, octagonal junctions); tight, sometimes shoulder-wide tunnels further narrowed by pipes and machines; withered dirty concrete or muddy brown/black brick, chalky to the touch (tight corridors smear dust and bruise if you run); floor-to-ceiling machinery and thick pipes that do not work together and only whir; flatbed trolleys, oil drums, boxes, toolboxes, stepladders, extension cords, shattered bulbs, paper; buzzing white or orange fluorescents, sparse, exposed series wiring (one break kills a whole block: tug exposed wiring, or it happens on its own); brownout parts with few lights and violet emergency lights; doors of many colours/materials, mostly locked, white/grey/cream steel by default, some windowed onto black void, a few void doors unlocked (infinite lightless soundless floor, only the doorway lit); rooms behind unlocked doors (bare rooms, PC rooms, furnished house rooms -> 64); B.N.T.G. narrow-gauge tramway long defunct and signposts toward Office Space EL3A; burst pipes with a rotting-meat smell; no food or medicine. ADAPTATION: the two-deck service lattice (upper corridors on every fourth column, stacked two-storey corridors with grating mid-floors, 23-riser maintenance stairs, double-height pipe galleries with catwalks and a central platform, drops through torn grating) is ours: the page gives no section or map and does not mention stairs. Exit placement and weights are ours; the authored arrival vestibule (tram buffer, chalk note paraphrasing the exit lore, sign-marked door back to Level 1), the blue door in its first corridor and the elevator doors off the first gallery catwalk are deterministic in every seed. The page lists Level 127 behind plywood doors too, but the documented edge targets Level 31 only, so plywood doors go to 31. The Level 811 blade door, the piano door (126) and the 127 hotspot need their block powered (page: they failed in the blackout). Level 916 doors only appear after ~700 m of wandering; Level 158 fires after 1500 m walked, in a far corridor (radius >= 7 junctions). Smiler distances/speeds, heat radius, void 'lost' timing (40 m, 30 s), the random circuit trips (80-200 s) and the chalk slowdown are ours. Not built: The Hub (location unknown per page), Office Space EL3A itself (internal area; trespass barred; only signposts and rails), Levels 606/38 seamless drift (no physical trigger stated), Level 189 (requires a wish), Jerry's Room / 712 (cult capture; omitted for this slice), Level 2.2 (dossier: do not invent). The playable world is a finite streaming window (5x5 chunks of 20 m) with stable coordinates; canonical infinity is not simulated. QA fixture: in QA mode only the authored exits exist (elevator, blue door, sign door) and random circuit trips/Smilers are off; the walker bot climbs the gallery stair to the elevator doors.",
+  "fail_states_note": "Death returns to the last checkpoint."
+}

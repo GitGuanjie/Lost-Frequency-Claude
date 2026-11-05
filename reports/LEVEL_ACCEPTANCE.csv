@@ -1,7 +1,7 @@
 level_id,stable_id,group,canonical_source_resolved,correct_identity,unique_signature,complete_scene,real_entrance_tested,real_exit_tested,nav_and_collision_tested,has_gameplay,save_tested,actual_engine_tested,screenshots,fps_evidence,lore_reviewer,qa_status,implementation_status,story_reachable,blocker
 0,L000,A_LOCKED_EXISTING,True,True,True,True,False,True,True,True,True,True,5,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
 1,L001,A_LOCKED_EXISTING,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
-2,L002,A_LOCKED_EXISTING,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
+2,L002,A_LOCKED_EXISTING,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
 3,L003,A_LOCKED_EXISTING,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
 4,L004,A_LOCKED_EXISTING,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,False,
 5,L005,A_LOCKED_EXISTING,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
