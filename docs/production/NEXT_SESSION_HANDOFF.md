@@ -35,6 +35,15 @@ python3 -I tools/build_reports.py      # scoreboard, acceptance CSV, world_graph
 godot --headless --path . --export-release "Windows Desktop" ../export/windows/LostFrequency.exe
 ```
 
+## Open issues found at handoff
+- **Story chain past Level 9 is not verified.** In a long story-suite run (with route waypoints added for
+  Level 9's arrow signs), Godot printed `Jolt Physics job system exceeded the maximum number of jobs` and
+  stalled. Likely cause: a heavy streamed level (L009/L011) combined with the chained loads. Reproduce with
+  `--suite=story`, check that each previous level is fully freed before the next physics step, and consider
+  smaller per-chunk collision counts. Hops 0 → 1 → 19 → 5 → 9 passed in the full-suite run of 2026-11-05.
+- The story-suite assertion that checks the on-disk save after each hop was rewritten to read the file
+  directly. Earlier it failed on some hops; confirm it on the next run.
+
 ## Highest-value next steps
 1. Finish **L008** (completes 7 → 8 → 9 in the story) and **L974**.
 2. Remaining **Group A**: L002, L003, L004, L010, L012, L013, L014 (all but 13 are story-reachable).
