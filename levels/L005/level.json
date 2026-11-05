@@ -1,0 +1,110 @@
+{
+  "stable_id": "L005",
+  "scene": "res://levels/L005/L005.tscn",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (full-suite run 2026-11-05, 0 failures); stills reviewed by integrator (AI); human review pending",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L019",
+    "from_L006",
+    "from_L025",
+    "from_L003"
+  ],
+  "signature": "An endless 1930s hotel: mahogany-and-gold Main Hall corridors of numbered doors and buzzing candle sconces around The Beverly Room (doors on every wall and on the ceiling, one small table with drinks and an unfinished Mahjong game under a chandelier), lifts whose buttons 1-12 never leave the floor, and a Boiler Room that grows hotter until it drops into Level 6.",
+  "mechanics": [
+    "hotel_chunk_streaming",
+    "lift_floors_1_12_relocate_same_floor",
+    "lift_13_plus_death_or_disappearance",
+    "lift_reboard_to_level3_only_if_arrived_by_lift",
+    "doors_locked_unlock_over_time_open_close_randomly",
+    "boiler_heat_gradient_damage",
+    "self_cleaning_soot_footprints",
+    "turntable_jazz_random_switching",
+    "party_chatter_behind_walls",
+    "unison_flicker_wooden_door",
+    "unfinishable_mahjong",
+    "furnished_quarters_checkpoint",
+    "deathmoth_ambient_swarms"
+  ],
+  "exits": [
+    {
+      "id": "L005>L006#3",
+      "to": "L006",
+      "trigger": "walk_in",
+      "label": "Went down past the furnaces into the dark, through the extreme heat",
+      "confidence": "CONFIRMED+DANGEROUS",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Travel deep into The Boiler Room to get to Level 6, although this is not advised due to the extreme heat",
+      "hint": "Housekeeping's notes say the Boiler Room passage keeps going past the furnaces. It only gets hotter.",
+      "arrival": "from_L005"
+    },
+    {
+      "id": "L005>L009#4",
+      "to": "L009",
+      "trigger": "interact",
+      "label": "Took the dark wooden door",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Taking a dark wooden door can lead to Level 9",
+      "hint": "Among the mahogany doors of the Main Hall, a few are almost black.",
+      "arrival": "from_L005"
+    },
+    {
+      "id": "L005>L003#1",
+      "to": "L003",
+      "trigger": "interact",
+      "label": "Got back on the elevator you arrived in",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Get back on the elevator to re-enter Level 3",
+      "conditions": "Only works for a wanderer who arrived from Level 3 by elevator (arrival from_L003, car nearest the lobby's north end). No floor button leads there.",
+      "hint": "The car that brought you here still waits with its doors open.",
+      "arrival": "from_L005"
+    },
+    {
+      "id": "L005>L040#8",
+      "to": "L040",
+      "trigger": "interact",
+      "label": "Played the arcade cabinet in the Boiler Room",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Playing an arcade cabinet in The Boiler Room will lead you to Level 40",
+      "hint": "Something down among the boilers plays a tinny tune to itself.",
+      "arrival": "from_L005"
+    },
+    {
+      "id": "L005>L427#7",
+      "to": "L427",
+      "trigger": "interact",
+      "label": "Opened the wooden door that appeared after the lights flickered together",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "If flickering lights occur in unison, then a wooden door will appear. Open it to transport yourself to Level 427",
+      "conditions": "Rare event in the Main Hall (every 5-10 minutes of play): all lights flicker together, then a plain wooden door appears on a nearby wall.",
+      "hint": "When every light in the hall stutters at once, look at the walls around you.",
+      "arrival": "from_L005"
+    }
+  ],
+  "fail_states": [
+    {
+      "kind": "heat",
+      "label": "Overcome by the extreme heat deep in the Boiler Room",
+      "basis": "SOURCE",
+      "source_quote": "not advised due to the extreme heat"
+    },
+    {
+      "kind": "lift_13_plus",
+      "label": "Pressed 13 or higher: death or disappearance",
+      "basis": "SOURCE",
+      "source_quote": "13 or higher will either result in death or disappearance"
+    }
+  ],
+  "entity_policy": "Deathmoths only, as ambient swarms that burst out of dark rooms into the halls (SOURCE: nests all around the level; 'Most fly out of dark rooms, swarming the halls'). The page gives no behaviour toward wanderers, so swarms do not attack. 'Normal entities are fairly scarce': Hounds, Woodlins, Skin-Stealers, Watchers, Nguithr'xurh, Growlers, Deathrats and the reported Entity 89 / Wrangler / Samantha are not spawned. Communities (M.E.G. Housekeeping, Homely Hotel, The Originals) are not staffed; Housekeeping appears only through its notes and Boiler Room post. Wallpaper faces and watching painting eyes are reports of questionable authenticity and are not made real.",
+  "notes": "ADAPTATION: the hotel floor-plan grammar (3.2 m cells, corridors carved from border entries to a hub, 1x1/1x2 guest rooms, galleries, lift chunks) is ours; the page gives no map. The playable Main Hall is a finite streaming window (ChunkWorld radius 2) around an infinite seeded plan. ADAPTATION: the Beverly Room sits inside a Main Hall ring so its many doors physically open onto the Main Hall; one service door leads down to the Boiler Room (page: its doors lead to the Main Hall or the Boiler Room). ADAPTATION: a dozen doors are fixed to the ballroom ceiling (one wanderer reported doors on walls, floor and ceiling; the Level 63 exit wording also implies such doors); they do not open. ADAPTATION: lift floors 1-12 map to 12 seeded lift lobbies (floor 1 = the lobby by the Beverly Room); the indicator shows the pressed number although the car never changes height. ADAPTATION: 13+ ends the run (death or disappearance by seed); nothing above floor 12 is ever rendered. ADAPTATION: the Level 3 re-boarding exit is the arrival car itself and is only offered to wanderers who arrived from Level 3 by elevator. ADAPTATION: self-cleaning is shown with soot footprints tracked from the Boiler Room that fade in 2-3 minutes. ADAPTATION: heat effects (haze, sprint limit, damage over ~0.86 heat) and the gradual depth gradient; the page states only that it is hot and extremely hot deeper in. ADAPTATION: Boiler Room layout (entrance hall with Housekeeping post, pipe passage, boiler hall, furnace hall, descending passage) and its position under the hotel. ADAPTATION: furnished living quarters act as checkpoints ('capable of sustaining life'); arrivals also checkpoint. ADAPTATION: arrival points - from_L019 in front of a damaged door in the lift lobby, from_L025 at the lobby's south end (page gives no spot), from_L006 at the top of the descent, from_L003 inside the lobby's first car. ADAPTATION: jazz and party chatter are synthesised in-level (L005_audio.gd, worker thread) because AudioSynth has no jazz/voices recipe; the out-of-place track is AudioSynth chiptune. Maintenance elevator is present but chained (page: 'not advised'; no outcome stated). Known gaps: Homely Hotel / The Originals / The Lobby Room not built; exits to Levels 4, 63, 78, 84, 98, 171 not built in this slice."
+}

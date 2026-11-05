@@ -1,0 +1,115 @@
+{
+  "stable_id": "L009",
+  "scene": "res://levels/L009/L009.tscn",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (full-suite run 2026-11-05, 0 failures); stills reviewed by integrator (AI); human review pending",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L005",
+    "from_L007",
+    "from_L008",
+    "from_L025"
+  ],
+  "signature": "An endless midnight suburb of wet, unpainted streets and dead trees: every house different, furnished and powerless, most street lamps dead, mist that brings The Mangled, and arrow street signs whose next lamp wakes as you follow them toward Level 11.",
+  "mechanics": [
+    "chunk_streaming_suburb",
+    "arrow_sign_route_following",
+    "route_lamps_power_on",
+    "furnished_unpowered_houses",
+    "interior_streaming",
+    "fog_cycle_mangled_exposure",
+    "street_dread_static",
+    "house_shelter_checkpoint",
+    "house_entry_chance_L053",
+    "walkway_vs_field_exits",
+    "identical_and_clipped_houses",
+    "flashlight_in_kitchen_drawers"
+  ],
+  "exits": [
+    {
+      "id": "L009>L011#1",
+      "to": "L011",
+      "trigger": "condition",
+      "label": "Followed the arrow street signs until the houses gave way to a city",
+      "confidence": "CONFIRMED+CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "following the arrow street signs will soon lead to Level 11",
+      "hint": "Some intersections carry a white sign with a black arrow. Each time you obey one, a lamp wakes at the next. Only an unbroken chain counts.",
+      "arrival": "from_L009"
+    },
+    {
+      "id": "L009>L036#7",
+      "to": "L036",
+      "trigger": "walk_in",
+      "label": "Walked into the dark airport terminal beside the sign route",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "Enter the airport to be transported to Level 36",
+      "hint": "Partway along the arrow signs, a control tower stands above the roofs.",
+      "arrival": "from_L009"
+    },
+    {
+      "id": "L009>L009_1#2",
+      "to": "L009_1",
+      "to_label": "Level 9.1",
+      "trigger": "walk_in",
+      "label": "Followed the stone walkway out into the grass field",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Description",
+      "source_quote": "Any walkways that lead to grass fields will lead to Level 9.1",
+      "hint": "West of the first intersection a pale walkway runs into a dark field. Stay on the stones.",
+      "arrival": "from_L009"
+    },
+    {
+      "id": "L009>L010#3",
+      "to": "L010",
+      "trigger": "condition",
+      "label": "Wandered off the walkway into the field",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Description",
+      "source_quote": "Wandering off the walkway into the fields will for some reason lead to Level 10",
+      "hint": "The field beside the walkway is not part of the suburb. Step off the stones and it takes you.",
+      "arrival": "from_L009"
+    },
+    {
+      "id": "L009>L053#5",
+      "to": "L053",
+      "trigger": "condition",
+      "label": "Stepped into a house and never stepped back out onto the same street",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "Entering a house will have a chance to randomly transport you to Level 53",
+      "hint": "Every front door is a small gamble.",
+      "arrival": "from_L009"
+    },
+    {
+      "id": "L009>L283#9",
+      "to": "L283",
+      "to_label": "Level 283",
+      "trigger": "interact",
+      "label": "Crawled into the playground tube with the white glowing windows",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "crawling through any kind of tube structure with white glowing interior windows will commonly teleport to Level 283",
+      "hint": "Past the first intersection, on the right, something in a playground glows.",
+      "arrival": "from_L009"
+    }
+  ],
+  "fail_states": [
+    {
+      "kind": "fog_exposure",
+      "label": "Caught on open ground in the mist: The Mangled",
+      "basis": "SOURCE",
+      "source_quote": "the fog being the spawning mechanism for The Mangled"
+    }
+  ],
+  "entity_policy": "SOURCED ONLY, as phenomena: The Mangled exist only during mist events, as an exposure hazard on open ground with sounds and a glimpsed dark shape that is never fought (page: fog is their spawning mechanism; streets are the most dangerous area). The other listed entities (Deathmoths, Smilers, Hounds, Neighborhood Watch, Observer and others) are not spawned in this slice. No groups or bases (page: none recorded).",
+  "notes": "ADAPTATION: the playable world is a finite streaming window (64 m chunks, radius 2) of the infinite suburb. Street grid, lot layout, house styles and room plans are ours (page gives no map). The 100-200 mile sign walk is compressed to ten signs at intersections with a required unbroken chain of eight; the lamp at the next sign powers on as you follow (page: power origin unknown), and the last blocks thicken into blank mid-rise slabs under a distant lit skyline, because Level 11's page says its suburban lots are mistaken for Level 9. The Mangled are modelled as fog exposure (page gives no behaviour). 'Felt watched' and 'TV static in my brain' come from the discovery testimony and drive a dread/static layer, not a rule. Houses are shelter and set a checkpoint. Kitchen drawers sometimes hold a flashlight (page: useful objects can be found in houses). Arrival points: from_L008 on the street (testimony: fell and landed on a street), from_L005 on a porch with a dark wooden door, from_L007 beside a backyard cellar hatch, from_L025 beside a dead yellow arcade cabinet (page: powered items do not work). Midnight per page; fog and lamp colours are ours. QA fixture (QA mode only): three arrow signs on the spawn street lead west to a compressed route end. Not built: Level 60 street-floor no-clip, Level 113 powerline chance, negative-level no-clip (placement ambiguous in source)."
+}

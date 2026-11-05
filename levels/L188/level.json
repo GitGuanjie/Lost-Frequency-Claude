@@ -1,0 +1,97 @@
+{
+  "stable_id": "L188",
+  "scene": "res://levels/L188/L188.tscn",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (full-suite run 2026-11-05, 0 failures); stills reviewed by integrator (AI); human review pending",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L025"
+  ],
+  "signature": "A cold, silent, irregular white-concrete atrium thirty metres tall, its walls inlaid with rows of evenly spaced windows, many of them no longer windows; a pentagonal path and moss around a pale birchwood circle with a clock in it, a table in the far corner, glass-railed walkways and a bridge high above. The window you came in by stays open for two or three minutes.",
+  "mechanics": [
+    "entry_window_closes_2_3_min",
+    "return_to_origin_exit",
+    "naa_exposure_meter",
+    "window_proximity_and_gaze_risk",
+    "living_windows_and_silhouettes",
+    "do_not_look_directly",
+    "glass_railing_contact",
+    "wooden_circle_contact",
+    "table_and_objects_contact",
+    "emergency_protocol_stillness",
+    "courtyard_shift_after_sleep",
+    "windows_multiply",
+    "vacant_window_rumour",
+    "mahogany_door_shifts",
+    "clinical_corridor_annex",
+    "stairwell_walkways_bridge",
+    "fatal_falls",
+    "vertigo_view",
+    "pink_dress_faceling_corridor",
+    "silence_cold"
+  ],
+  "exits": [
+    {
+      "id": "L188>EXT#1",
+      "to": "@origin",
+      "to_label": "Level of origin",
+      "trigger": "interact",
+      "label": "Climbed straight back out through the window you came in by",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "leave immediately through the window from which you entered",
+      "conditions": "only while the entry window is still there (it closes within 2-3 minutes)",
+      "hint": "Behind you, one window is open and warm. It will not stay that way.",
+      "arrival": "from_L188"
+    },
+    {
+      "id": "L188>L001_5#2",
+      "to": "L001_5",
+      "trigger": "interact",
+      "label": "Climbed into a vacant window",
+      "confidence": "RUMORED",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "vacant windows are believed to lead to Level 1.5",
+      "conditions": "rumour only; the page also warns that windows are not exits",
+      "hint": "Not every window has blinds. Not every window has anything behind it. Not every empty window is empty.",
+      "arrival": "from_L188"
+    }
+  ],
+  "fail_states": [
+    {
+      "kind": "exposure",
+      "label": "Neuro-auditory / neuro-visual exposure: windows, glass railings, the wooden circle, the table and its objects",
+      "basis": "SOURCE",
+      "source_quote": "Prolonged contact may induce nonstandard psychological/neurological effects"
+    },
+    {
+      "kind": "look",
+      "label": "Looking straight at the silhouettes",
+      "basis": "SOURCE",
+      "source_quote": "Do not look directly at them."
+    },
+    {
+      "kind": "dead_end",
+      "label": "The entry window closes; afterwards there is no confirmed exit",
+      "basis": "SOURCE",
+      "source_quote": "Upon entry, they generally disappear within 2-3 minutes."
+    },
+    {
+      "kind": "entity",
+      "label": "Pink-dress faceling in the corridors",
+      "basis": "SOURCE",
+      "source_quote": "Pink dress facelings have been sighted within the halls"
+    },
+    {
+      "kind": "fall",
+      "label": "Falling from the open ends of the 8 m walkway",
+      "basis": "ADAPTATION",
+      "adaptation_reason": "page gives walkways above a 30 m atrium but no railing detail at their ends"
+    }
+  ],
+  "entity_policy": "SOURCE entities only. Window entities are the windows themselves: a seeded share (about 30-90%, rising after each shift) are 'living' windows with raised blinds over a dim room, where shadowy silhouettes flit at the edge of vision; looking straight at one hurts. A pink-dress faceling keeps to one corridor floor and is lethal at arm's length (log 4). Silhouettes appear at corridor corners and vanish when looked at or approached. Skin-stealers are named by the page but given no description or behaviour, so none is spawned. No settlement, no NPC.",
+  "notes": "SOURCE: irregular indoor atrium about 45 m across and 30 m tall; stark white concrete walls with windows at even intervals, roughly 100-200 at a time, most with blinds; a quarter to almost all replaced by living window entities; pentagonal path with four perpendicular inroads to a hollow pale birchwood circle that cannot be pried open; living moss between the paths; a table, gramophone, photographs, books, vases and an alarm clock placed arbitrarily; cold (13.8 C), dry, silent; avoid windows other than the entry, glass railings, the circle, the table and its objects; emergency protocol of covering eyes and ears and staying still for 6-8 hours; mahogany doors that appear and shift, leading to white, harshly lit corridors on several floors with stairwells and walkways above the atrium; most doors locked from the inside, the open rooms blank white squares; facelings and silhouettes in the halls; the entry window disappears within 2-3 minutes; vacant windows rumoured to lead to Level 1.5; logs: clock in the centre, table in the far corner, the table later in the middle, windows shifted and multiplied, gramophone playing, balloons on the floor. ADAPTATION: (1) the polygon, window size, 4 m row pitch and the exact spacing (seeded 5.2-6.4 m, tightening after each shift; a seventh row appears) are ours within the page's figures; (2) the exposure meter and its rates, the death texts, and compressing 6-8 hours into 60-80 seconds of stillness while crouched are ours; (3) 'living' windows are shown as blinds raised over a dim room (the page gives no visual), and about a third of vacant windows turn out to be living ones because the page's own warning says windows are not exits; (4) the luminous ceiling, walkway heights (8 m, 16 m), the bridge, the fixed corridor annex behind one wall and the two alternating ground doorways are our layout for the page's corridors, stairwells and walkways; (5) the arrival from Level 25's cabinet comes through this level's entry window and that window is the @origin return; (6) skin-stealers and the 'space station' memory are not represented. QA: the bot climbs back out through the open entry window, which the page names as the way out."
+}

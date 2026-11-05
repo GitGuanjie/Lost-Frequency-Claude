@@ -1,0 +1,34 @@
+{
+  "adapter": "llvmpipe (LLVM 20.1.2, 256 bits)",
+  "captured": "2026-11-05T05:38:45",
+  "driver": "vulkan",
+  "engine": "4.5.1-stable (official)",
+  "levels": [
+    {
+      "seed": 1001,
+      "shots": [
+        {
+          "file": "res://reports/screenshots/L006_stairs.jpg",
+          "frame_ms_mean": 116.737749099731,
+          "pos": "(1.5, 4.02, 13.2)",
+          "shot": "stairs"
+        },
+        {
+          "file": "res://reports/screenshots/L006_dark.jpg",
+          "frame_ms_mean": 116.346456845601,
+          "pos": "(39.6, 1.62, 10.8)",
+          "shot": "dark"
+        },
+        {
+          "file": "res://reports/screenshots/L006_waves.jpg",
+          "frame_ms_mean": 111.4912109375,
+          "pos": "(39.6, 1.62, 10.8)",
+          "shot": "waves"
+        }
+      ],
+      "stable_id": "L006"
+    }
+  ],
+  "note": "Software rasteriser timings (llvmpipe/lavapipe) are NOT representative of GPU performance.",
+  "vendor": "Unknown"
+}

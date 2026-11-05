@@ -1,0 +1,164 @@
+{
+  "stable_id": "L019",
+  "scene": "res://levels/L019/L019.tscn",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (full-suite run 2026-11-05, 0 failures); stills reviewed by integrator (AI); human review pending",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L001",
+    "from_L025"
+  ],
+  "signature": "A dank, dark, cluttered attic of randomly shaped rooms under rafters and pink insulation, joined by steep gable passages through empty door frames, where warm orange light seeps up between some floorboards and quietly rewrites what you remember.",
+  "mechanics": [
+    "bounded_seeded_attic",
+    "hipped_and_gable_ceilings",
+    "orange_glow_comfort_lure",
+    "memory_rewrite_tablet",
+    "decay_nausea_hallucination_blackout",
+    "box_items_rot",
+    "rotten_boards_give_way",
+    "crevice_falls",
+    "broken_door_exits",
+    "handheld_game_exit",
+    "boarded_arrival_hole"
+  ],
+  "exits": [
+    {
+      "id": "L019>L005#6",
+      "to": "L005",
+      "trigger": "walk_in",
+      "label": "Squeezed past a broken door into the dark",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "occasional, broken or damaged doors can lead to Level 289, Level 5",
+      "hint": "Two rooms from where you came up, a door hangs broken in its frame at a dead end, with only darkness beyond it. A warm glow lies close by.",
+      "arrival": "from_L019"
+    },
+    {
+      "id": "L019>L289#5",
+      "to": "L289",
+      "trigger": "walk_in",
+      "label": "Went through a damaged door",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "occasional, broken or damaged doors can lead to Level 289",
+      "hint": "Some dead-end walls hold a broken door instead of an empty frame.",
+      "arrival": "from_L019"
+    },
+    {
+      "id": "L019>L012#7",
+      "to": "L012",
+      "trigger": "walk_in",
+      "label": "Went through a damaged door",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "Level 5 , Level 12 , or Level 20",
+      "hint": "Some dead-end walls hold a broken door instead of an empty frame.",
+      "arrival": "from_L019"
+    },
+    {
+      "id": "L019>L020#8",
+      "to": "L020",
+      "trigger": "walk_in",
+      "label": "Went through a damaged door",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "Level 12 , or Level 20",
+      "hint": "Some dead-end walls hold a broken door instead of an empty frame.",
+      "arrival": "from_L019"
+    },
+    {
+      "id": "L019>L038#1",
+      "to": "L038",
+      "trigger": "fall",
+      "label": "Fell through rotten boards",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "falling through any of the non-glowing floorboards or crevices",
+      "hint": "Dark, wet boards groan under your weight; stand on them too long and they give. Crevices open straight down.",
+      "arrival": "from_L019"
+    },
+    {
+      "id": "L019>L202#2",
+      "to": "L202",
+      "trigger": "fall",
+      "label": "Fell through rotten boards",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "falling through any of the non-glowing floorboards or crevices",
+      "hint": "Dark, wet boards groan under your weight; stand on them too long and they give. Crevices open straight down.",
+      "arrival": "from_L019"
+    },
+    {
+      "id": "L019>L432#3",
+      "to": "L432",
+      "trigger": "fall",
+      "label": "Fell through rotten boards",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "falling through any of the non-glowing floorboards or crevices",
+      "hint": "Dark, wet boards groan under your weight; stand on them too long and they give. Crevices open straight down.",
+      "arrival": "from_L019"
+    },
+    {
+      "id": "L019>L654#4",
+      "to": "L654",
+      "trigger": "fall",
+      "label": "Fell through rotten boards",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "falling through any of the non-glowing floorboards or crevices",
+      "hint": "Dark, wet boards groan under your weight; stand on them too long and they give. Crevices open straight down.",
+      "arrival": "from_L019"
+    },
+    {
+      "id": "L019>L040#9",
+      "to": "L040",
+      "trigger": "interact",
+      "label": "Switched on a handheld game from a box",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "can teleport one's self to Level 40",
+      "hint": "One open box holds a small handheld game, its screen faintly lit.",
+      "arrival": "from_L019"
+    },
+    {
+      "id": "L019>L212#10",
+      "to": "L212",
+      "trigger": "interact",
+      "label": "Switched on a handheld game from a box",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "can teleport one's self to Level 40 , or Level 212",
+      "hint": "One open box holds a small handheld game, its screen faintly lit.",
+      "arrival": "from_L019"
+    }
+  ],
+  "fail_states": [
+    {
+      "kind": "status",
+      "label": "Decay: nausea, dizziness, hallucinations and blackouts (no physical decay: the page says it is unknown)",
+      "basis": "SOURCE",
+      "source_quote": "may be subject to periods of blacking out or hallucinations"
+    },
+    {
+      "kind": "lure",
+      "label": "The Orange Glow comforts, draws you toward it and rewrites your memories",
+      "basis": "SOURCE",
+      "source_quote": "alluring effect that can attract wanderers"
+    }
+  ],
+  "entity_policy": "NO ENTITY PER SOURCE. The final write-up names no creature and says the glow is 'not known to be sentient'. Voices under the floor are draft TESTIMONY presented only as captioned hallucination audio near the glow. No bases, no NPCs.",
+  "notes": "SOURCE (final revision): dank, dilapidated, cluttered attic; randomly shaped attic spaces packed with boxes and vintage furniture; exteriors damp and dusty, interiors pristine; boxes hold vital foods and catalogued objects; removed items may rot rapidly; decay effects (nausea, paranoia, dizziness, blackouts, hallucinations; physical decay unknown); the Orange Glow under some floorboards (comforting, alluring, rewrites memories, theorised to cause or amplify decay); no bases; exits by falling through non-glowing boards or crevices (38/202/432/654), occasional broken or damaged doors (289/5/12/20), handheld games or small arcade devices from boxes (40/212). Entrance from Level 1 by climbing into holes. TESTIMONY used as colour only: triangular ceilings tapering to the floor and empty door frames between areas; a floor mix of pink insulation and floorboards; tables, ottomans, bookcases, sofas with a care-home feel; tuna, water bottles and cooked gammon in boxes; no natural light, only a faint glow of unknown origin; voices calling from the glow (captioned hallucination only); the tablet found by a hole. ADAPTATION: the attic is a bounded seeded 5x5 grid of hip-roofed rooms joined by gable passages (layout grammar is ours; the page gives no map); the Level 5 door is placed two rooms from the arrival for the story spine, other broken doors and the single handheld game (40 or 212 by seed) are seeded; which fall destination a crevice leads to is seeded (the page lists four outcomes without saying which); rotten boards give way after about 1.4 s of standing (2.2x faster running); glow exposure, lure speed, decay rates and blackout timing are ours; the arrival hole is boarded shut behind you (draft: 'Getting in was fine getting out, though. That's going to be an issue.'); memory rewriting is shown as the tablet text changing and a rewritten memory of the arrival. Not built: the presumed-perimeter exit to Level 140 (blur/decay at the boundary). QA: in QA mode boards do not break and the lure/blackouts are off so the walker route is stable; the bot walks to the Level 5 door. RELEASE BOUNDARY: falling into a crevice whose destination is not built returns you to the last safe boards."
+}

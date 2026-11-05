@@ -1,0 +1,87 @@
+{
+  "stable_id": "L037",
+  "scene": "res://levels/L037/L037.tscn",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (full-suite run 2026-11-05, 0 failures); stills reviewed by integrator (AI); human review pending",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L025"
+  ],
+  "signature": "Pristine, identical white tiles submerged in lukewarm blue-green water of truly varying depth: pillar lattices standing in pools, stairs descending straight into deep pits, ledgeless open water, light from irregular angles beside lightless corners, and sound that refuses to echo.",
+  "mechanics": [
+    "chunk_streaming_poolrooms",
+    "authored_hub",
+    "true_variable_depth",
+    "wading_drag",
+    "swim_oxygen",
+    "epsom_relaxation",
+    "altered_acoustics",
+    "obtrusive_water_variant",
+    "irregular_light_dark_zones",
+    "stairs_into_deep_pits",
+    "ledgeless_open_water",
+    "immersion_roll_exit",
+    "dark_tunnel_exit",
+    "rare_corridor_exit",
+    "isolation_no_entities"
+  ],
+  "exits": [
+    {
+      "id": "L037>L043#2",
+      "to": "L043",
+      "to_label": "Level 43",
+      "trigger": "walk_in",
+      "label": "Followed an enclosed, dark tunnel to its end",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Enclosed, dark tunnels in this level may lead to Level 43",
+      "hint": "Low tiled tunnels run off into total darkness. Some only dead-end; the ones that lead somewhere seem to breathe a faint draft.",
+      "arrival": "from_L037"
+    },
+    {
+      "id": "L037>L130#1",
+      "to": "L130",
+      "to_label": "Level 130",
+      "trigger": "condition",
+      "label": "Stayed under the water and resurfaced somewhere else",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Immersing oneself in the water of Level 37 may cause reemergence in the pools of Level 130",
+      "hint": "Where the water is deep enough, go fully under and stay there a while. It does not happen every time.",
+      "arrival": "from_L037"
+    },
+    {
+      "id": "L037>L233#3",
+      "to": "L233",
+      "to_label": "Level 233",
+      "trigger": "walk_in",
+      "label": "Walked a corridor that never came back",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Corridors in Level 37 can rarely lead to similar corridors in Level 233",
+      "hint": "Very rarely a hallway sprouts a narrow side corridor that runs on long after it should end, its lights giving out.",
+      "arrival": "from_L037"
+    },
+    {
+      "id": "L037>L025#A1",
+      "to": "L025",
+      "to_label": "Level 25",
+      "trigger": "interact",
+      "label": "Put a quarter into the arcade cabinet that came with you",
+      "confidence": "CONFIRMED",
+      "basis": "ADAPTATION",
+      "adaptation_reason": "Cross-page: Level 25's article says a tethered cabinet trip is two-way, with another machine always behind the arriving wanderer or within about 100 ft. Level 37's page does not list it, so the edge is labelled ADAPTATION. Built only for arcade arrivals (from_L025); needs a quarter (inventory key 'quarter').",
+      "source_section": "Level 25 — Arcade Cabinets",
+      "source_quote": "another arcade machine will always be discoverable either behind the wanderer or within around 100ft",
+      "hint": "If you came by arcade, the machine is right behind you.",
+      "arrival": "from_L037"
+    }
+  ],
+  "fail_states": [],
+  "entity_policy": "NO ENTITY PER SOURCE ('Devoid of Entities'; no entity or wanderer encounter recorded). Nothing spawns; no NPCs, notes or outposts. The emptiness is intentional.",
+  "notes": "SOURCE: white identical pristine tiles (tile_variation 0, no grime), blue-green lukewarm water with constant minimal rippling, rooms/corridors from uniform pools to abnormal open areas, pillars protruding from water, open water without ledges, irregular light leaving areas completely dark, stairs into deep pits, Epsom-salt relaxing water, altered sound (drop-offs, no reverberation, water bed quiet or rarely obtrusive), no entities/outposts, 'You feel a calming sensation'. ADAPTATION: the 32 m chunk streaming window and the 2 m cell grammar (hall, corridor, pit, flooded pillars, open, dark) plus the authored hub (Grand Pool Hall, Stair Pit) are ours — the page gives no map; the water surface is one level (y = 0) and depth comes from floors (wading 0.2-0.35 m, pools 1.4-3.4 m, pits 6-7.5 m); light wells, high slits, underwater lamps, tilted light planes and two shadowed spot beams are our reading of 'irregular angles'; relaxation numbers (soak > 8 s ramps healing to 2 HP/s and stamina recovery, vignette eases) and wading drag are ours; acoustics: bus reverb near-dry with full damping, ~50% of footsteps cut off after 40-110 ms, occasional total drop-outs, and on ~15% of seeds the water bed swells and ducks footsteps; immersion exit = 7 s fully under in any deep-water chunk then a 45% roll per immersion ('may'); dark-tunnel exits roll 45% per tunnel (hub tunnel 60% by world seed; always in QA) and leading tunnels breathe a faint draft; the Level 233 branch appears in ~12% of corridor chunks; flashlight allowed (page silent). The journal excerpt is TESTIMONY and is not placed in-world. Drowning is only the generic swimming oxygen rule (page silent). QA fixture: the hub tunnel always leads in QA mode; procedural exits are not created in QA mode."
+}

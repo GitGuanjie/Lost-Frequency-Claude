@@ -1,0 +1,84 @@
+{
+  "stable_id": "L001",
+  "scene": "res://levels/L001/L001.tscn",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (full-suite run 2026-11-05, 0 failures); stills reviewed by integrator (AI); human review pending",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L000"
+  ],
+  "signature": "Endless grey parking-garage/warehouse halls of huge concrete pillars, leaking ceiling pipes and wooden crates, with green EXIT lights over pushable doors into safe Euclidean corridors; random Flickering blackouts make light and running in the halls deadly.",
+  "mechanics": [
+    "chunk_streaming_halls",
+    "sectors_aquila_gild_gothic",
+    "flickering_blackouts",
+    "smiler_light_then_noise",
+    "crates_appear_behind_and_vanish",
+    "crate_contents_and_hazards",
+    "flashlight_supply_crate",
+    "non_euclidean_fold",
+    "landmark_navigation",
+    "euclidean_corridors",
+    "corridor_rest_checkpoint",
+    "vanishing_floor_painting",
+    "meg_landmark_cloth",
+    "ceiling_hole_ladders",
+    "pipes_and_dials_gradient"
+  ],
+  "exits": [
+    {
+      "id": "L001>L019#10",
+      "to": "L019",
+      "trigger": "condition",
+      "label": "Climbed up into a hole in the ceiling",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Climbing up into holes into the ceiling can lead to Level 19",
+      "hint": "There is a ragged hole in the hall ceiling just off Base Alpha's north exit, with a ladder bolted to the wall under it. Floorboards creak somewhere above.",
+      "arrival": "from_L001"
+    },
+    {
+      "id": "L001>L002#1",
+      "to": "L002",
+      "trigger": "walk_in",
+      "label": "Walked on until pipes and dials crowded out the halls",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "simply walking far enough in a direction with pipes and dials gradually appearing",
+      "hint": "In one direction the pillars start to carry pressure dials and valves and the pipes multiply; the clanking and the transformer drone grow louder. Keep heading that way, navigating by landmarks.",
+      "arrival": "from_L001"
+    },
+    {
+      "id": "L001>L800#14",
+      "to": "L800",
+      "trigger": "walk_in",
+      "label": "Crawled into an open ventilation duct",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Going into an open ventilation duct will lead to Level 800",
+      "hint": "Behind the EXIT doors, the corridor dead-ends at a floor-level duct with its grille lying on the floor. You would have to crouch to fit.",
+      "arrival": "from_L001"
+    }
+  ],
+  "fail_states": [
+    {
+      "kind": "entity",
+      "label": "During Flickering, a light (or running once seen) in the halls draws a Smiler",
+      "basis": "SOURCE",
+      "source_quote": "Do NOT use a light source to walk up to it!"
+    },
+    {
+      "kind": "hazard",
+      "label": "Crate hazards: glass, chemicals, solid nitrogen",
+      "basis": "SOURCE",
+      "source_quote": "chemicals, explosives, or even specific objects like glass shards or cubes of solid nitrogen"
+    }
+  ],
+  "entity_policy": "SOURCED ENTITIES ONLY. Smilers (page entity table: 'Bright animalistic faces attracted by light (and noise once having spotted their prey)') appear only in the halls during a Flickering blackout, and only when the wanderer uses a light (or keeps running once seen); switching the light off and moving quietly loses them, and entering a corridor ends the hunt. Other listed entities are sound-only presences during Flickering (bare feet on concrete, claws, something in the vents). Nothing enters the corridors. No NPCs: M.E.G. patrols, Base Alpha and settlements appear only as their landmarks.",
+  "notes": "SOURCE: halls as parking lot/warehouse chimera with pillars, discoloured walls, ceiling pipes leaking onto the floor; sectors (Aquila grey with huge pillars and leaks, Gild more lights and crates, Gothic arches and round pillars); Flickering (random total blackouts, green exit lights, no light sources, do not run, corridors safe); crates (appear behind your back or after Flickering, vanish unobserved, contents from food and Almond Water to glass/chemicals/solid nitrogen; 'Headlights or flashlight' listed among crate objects, hence the arrival supply crate that grants the flashlight); corridors behind single/double pushable doors with exit signs, Euclidean, dim, purposeless rooms (office with old computer and hanging bulb, brick cell, infirmary bed, rubber room with chair sometimes clipped into the floor, painting room), restful; painting on the floor before the doors that vanishes unobserved; M.E.G. landmark cloth with Almond Water and a note that you take down after taking the contents; Base Alpha in the Aquila Sector; a ceiling hole just off Base Alpha's north exit plus 15 more (Level 19 page). ADAPTATION: 32 m chunk grammar on an 8 m bay grid, sector map and the pipes-and-dials direction are ours (the page gives no map); non-Euclidean geometry is a disorientation meter that grows while walking without a landmark in view and then 'folds' the hall by whole structural bays (16-32 m) so pillars line up but features do not; Smiler attention rates and the 1.5 m catch distance are ours; crate vanish timing (35 s unobserved, 50%) and appearance timing are ours; Base Alpha's north exit is barred from inside because the base belongs to a separate article and no NPCs are spawned; ceiling holes get a bolted steel ladder (the page does not say how one climbs); the ventilation duct sits at floor level; the arrival crate is held until opened. The playable world is a finite streaming window (5x5 chunks loaded) with stable coordinates; canonical infinity is not simulated. QA fixture: in QA mode only the authored Base Alpha hole and duct exist (no seeded holes, no Level 2 threshold, no Flickering or folds), and the walker bot climbs the hole's ladder. RELEASE BOUNDARY: a fired climb exit disarms until you climb back down, so declining the 'not built' prompt does not repeat it.",
+  "fail_states_note": "Death returns to the last checkpoint (corridor rest)."
+}

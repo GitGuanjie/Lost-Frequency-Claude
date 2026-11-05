@@ -1,22 +1,22 @@
 level_id,stable_id,group,canonical_source_resolved,correct_identity,unique_signature,complete_scene,real_entrance_tested,real_exit_tested,nav_and_collision_tested,has_gameplay,save_tested,actual_engine_tested,screenshots,fps_evidence,lore_reviewer,qa_status,implementation_status,story_reachable,blocker
 0,L000,A_LOCKED_EXISTING,True,True,True,True,False,True,True,True,True,True,6,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
-1,L001,A_LOCKED_EXISTING,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
+1,L001,A_LOCKED_EXISTING,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
 2,L002,A_LOCKED_EXISTING,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
 3,L003,A_LOCKED_EXISTING,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
 4,L004,A_LOCKED_EXISTING,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
-5,L005,A_LOCKED_EXISTING,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
-6,L006,A_LOCKED_EXISTING,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
-7,L007,A_LOCKED_EXISTING,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
+5,L005,A_LOCKED_EXISTING,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
+6,L006,A_LOCKED_EXISTING,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
+7,L007,A_LOCKED_EXISTING,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
 8,L008,A_LOCKED_EXISTING,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
-9,L009,A_LOCKED_EXISTING,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
+9,L009,A_LOCKED_EXISTING,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
 10,L010,A_LOCKED_EXISTING,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
-11,L011,A_LOCKED_EXISTING,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
+11,L011,A_LOCKED_EXISTING,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
 12,L012,A_LOCKED_EXISTING,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
 13,L013,A_LOCKED_EXISTING,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
 14,L014,A_LOCKED_EXISTING,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
-19,L019,A_LOCKED_EXISTING,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
-37,L037,A_LOCKED_EXISTING,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
-188,L188,A_LOCKED_EXISTING,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
+19,L019,A_LOCKED_EXISTING,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
+37,L037,A_LOCKED_EXISTING,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
+188,L188,A_LOCKED_EXISTING,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
 15,L015,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
 16,L016,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
 17,L017,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
@@ -25,7 +25,7 @@ level_id,stable_id,group,canonical_source_resolved,correct_identity,unique_signa
 22,L022,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
 23,L023,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
 24,L024,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
-25,L025,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
+25,L025,B_FLAGSHIP,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
 26,L026,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
 27,L027,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
 28,L028,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built

@@ -526,6 +526,9 @@ func _bot_walk(lvl: LevelBase, nav: Dictionary, found: Array, want_edge: String 
 				if (t as ExitTrigger).edge_id == trig["edge"]:
 					(t as ExitTrigger).interact(p)
 		await get_tree().physics_frame
+		if trig.get("kind", "") == "waypoint" and Vector2(p.global_position.x - trig["pos"].x, p.global_position.z - trig["pos"].z).length() < 1.2:
+			fired = true
+			break
 		if not TransitionService.qa_log.is_empty() or (detect_signal and _story_fired != ""):
 			fired = true
 			break
@@ -542,7 +545,9 @@ func _bot_walk(lvl: LevelBase, nav: Dictionary, found: Array, want_edge: String 
 		p.qa_input = Vector2.ZERO
 		p.qa_active = false
 	var fired_edge := ""
-	if fired:
+	if fired and trig.get("kind", "") == "waypoint":
+		fired_edge = "waypoint"
+	elif fired:
 		fired_edge = _story_fired if detect_signal else str(TransitionService.qa_log[0].get("id", ""))
 	var res := {"fired": fired, "ticks": ticks, "sim_seconds": ticks / 60.0, "edge": fired_edge,
 		"distance_walked": p.stats["distance"] if is_instance_valid(p) else -1.0, "target": target["edge"]}
@@ -648,6 +653,7 @@ func _story_suite() -> void:
 		while TransitionService.loading:
 			await get_tree().process_frame
 		var lvl := get_tree().current_scene as LevelBase
+		print("STORY hop %d at %s paused=%s" % [hop, lvl.stable_id if lvl else "none", get_tree().paused])
 		if lvl == null:
 			check(false, s, "a level is loaded at hop %d" % hop)
 			break
@@ -664,6 +670,13 @@ func _story_suite() -> void:
 		if choice == "":
 			chain.append({"at": lvl.stable_id, "stop": "no unvisited exit placed near this arrival"})
 			break
+		# levels may declare sourced route waypoints (e.g. Level 9's arrow signs)
+		for r in d["routes"]:
+			if r.get("edge", "") == choice:
+				for wp in r.get("waypoints", []):
+					var wx := [{"edge": "waypoint", "kind": "waypoint", "pos": wp, "size": Vector3(2.0, 3.0, 2.0)}]
+					var wnav := await _nav_check(lvl, wx)
+					await _bot_walk(lvl, wnav, wx, "waypoint", true)
 		var nav := await _nav_check(lvl, d["exits"])
 		_story_fired = ""
 		var bot := await _bot_walk(lvl, nav, d["exits"], choice, true)
@@ -694,8 +707,11 @@ func _story_suite() -> void:
 		hop_rec["arrival"] = arrival
 		check(arrival == "from_" + d["stable_id"] or arrival == "checkpoint_position", s, "arrived at sourced arrival point from_%s in %s" % [d["stable_id"], to], arrival)
 		check(nl.spawn_report.get("spawn_ok", false), s, "safe spawn after story transition into " + to)
-		SaveService.load_story()
-		check(SaveService.story.get("current_level", "") == to, s, "story save advanced to " + to)
+		for i in 5:
+			await get_tree().process_frame
+		var on_disk: Variant = JSON.parse_string(FileAccess.get_file_as_string(SaveService.story_path()))
+		var disk_level: String = on_disk.get("current_level", "") if on_disk is Dictionary else ""
+		check(disk_level == to, s, "story save on disk advanced to " + to, [disk_level, SaveService.story.get("current_level", ""), SaveService.last_error])
 		check(SaveService.has_witnessed(choice), s, "journal records witnessed route " + choice)
 		visited[to] = true
 		chain.append(hop_rec)
