@@ -78,9 +78,12 @@ func _write() -> void:
 	var path: String = args.get("out", "res://reports/qa/latest_results.json")
 	var gp := ProjectSettings.globalize_path(path)
 	DirAccess.make_dir_recursive_absolute(gp.get_base_dir())
+	# keep the report compact: counts per suite, full detail only for failures
+	for k in results["suites"].keys():
+		results["suites"][k]["checks"] = (results["suites"][k]["checks"] as Array).filter(func(c): return not c["ok"])
 	var f := FileAccess.open(gp, FileAccess.WRITE)
 	if f:
-		f.store_string(JSON.stringify(results, "  "))
+		f.store_string(JSON.stringify(results, " "))
 		f.close()
 
 
@@ -650,7 +653,7 @@ func _story_suite() -> void:
 	TransitionService.load_level("L000", "start", "qa-story")
 	await TransitionService.level_loaded
 	var visited := {"L000": true}
-	for hop in 14:
+	for hop in int(args.get("story_hops", "14")):
 		while TransitionService.loading:
 			await get_tree().process_frame
 		var lvl := get_tree().current_scene as LevelBase
@@ -677,7 +680,8 @@ func _story_suite() -> void:
 				for wp in r.get("waypoints", []):
 					var wx := [{"edge": "waypoint", "kind": "waypoint", "pos": wp, "size": Vector3(2.0, 3.0, 2.0)}]
 					var wnav := await _nav_check(lvl, wx)
-					await _bot_walk(lvl, wnav, wx, "waypoint", true)
+					var wr := await _bot_walk(lvl, wnav, wx, "waypoint", true)
+					print("STORY waypoint %s reached=%s sim=%.1f" % [wp, wr.get("fired", false), wr.get("sim_seconds", 0.0)])
 		var nav := await _nav_check(lvl, d["exits"])
 		_story_fired = ""
 		var bot := await _bot_walk(lvl, nav, d["exits"], choice, true)

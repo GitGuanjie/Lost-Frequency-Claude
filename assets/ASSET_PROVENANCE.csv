@@ -28,20 +28,23 @@ autoload/AudioSynth.gd#water_bed,synthesised audio recipe,created in-project,LOS
 autoload/AudioSynth.gd#whisper,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
 autoload/AudioSynth.gd#wind,synthesised audio recipe,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,generated at runtime; no samples
 icon.svg,vector icon,created in-project,LOST FREQUENCY contributors,CC BY-SA 3.0,
-reports/screenshots/L000_arches.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
-reports/screenshots/L000_blackout.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
-reports/screenshots/L000_holes.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
+reports/screenshots/L000_atrium.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
+reports/screenshots/L000_atrium_gallery.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
 reports/screenshots/L000_pillars.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
 reports/screenshots/L000_red.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
 reports/screenshots/L000_spawn.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
 reports/screenshots/L001_corridor.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
 reports/screenshots/L001_flicker.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
+reports/screenshots/L004_atrium.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
+reports/screenshots/L004_corridor.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
 reports/screenshots/L005_ballroom_wide.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
 reports/screenshots/L005_boiler.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
 reports/screenshots/L006_dark.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
 reports/screenshots/L006_stairs.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
 reports/screenshots/L007_room.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
 reports/screenshots/L007_sea.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
+reports/screenshots/L008_exit.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
+reports/screenshots/L008_pool.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
 reports/screenshots/L009_field.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
 reports/screenshots/L009_street.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
 reports/screenshots/L011_arcade.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
@@ -54,3 +57,5 @@ reports/screenshots/L037_corner.jpg,evidence still,rendered by Godot from this p
 reports/screenshots/L037_corridor.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
 reports/screenshots/L188_atrium.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
 reports/screenshots/L188_vertigo.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
+reports/screenshots/L974_bedroom.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render
+reports/screenshots/L974_house.jpg,evidence still,rendered by Godot from this project,LOST FREQUENCY contributors,CC BY-SA 3.0,QA evidence; not a marketing render

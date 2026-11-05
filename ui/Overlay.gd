@@ -816,8 +816,9 @@ func glitch(strength: float = 1.0) -> void:
 
 
 func reset_screen_effects() -> void:
-	for k in ["red_tint", "desaturate", "blackout"]:
+	for k in ["red_tint", "desaturate", "blackout", "glitch"]:
 		fx_mat.set_shader_parameter(k, 0.0)
+	fx_mat.set_shader_parameter("vignette", 0.25)
 	_underwater = 0.0
 	_underwater_target = 0.0
 	fx_mat.set_shader_parameter("underwater", 0.0)
@@ -1034,7 +1035,7 @@ func _refresh_journal() -> void:
 	for e in edges:
 		var edge := TransitionService.get_edge(e.get("edge", ""))
 		s += "  • %s → %s — %s ×%d\n" % [LevelRegistry.display_name(e.get("from", "")),
-			LevelRegistry.display_name(e.get("to", "")) if LevelRegistry.has_level(e.get("to", "")) else str(e.get("to", "")),
+			LevelRegistry.display_name(e.get("to", "")) if LevelRegistry.has_level(e.get("to", "")) else str(edge.get("to_label", e.get("to", ""))),
 			edge.get("label", edge.get("trigger", "")), int(e.get("count", 1))]
 	var notes: Array = j.get("notes", [])
 	s += "\n[b]Documents read:[/b] %d\n" % notes.size()

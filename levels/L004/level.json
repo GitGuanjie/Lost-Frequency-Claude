@@ -1,0 +1,86 @@
+{
+  "stable_id": "L004",
+  "scene": "res://levels/L004/L004.tscn",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-05, 25/25); stills reviewed by integrator (AI); human review pending",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L005"
+  ],
+  "signature": "An empty office building, storey on storey: bare carpet with the ghosts of removed desks, corridors lined with painted-black windows, light wells where the rare clear window is a trap, Almond Water in every cooler, vending machine and fountain, and office stairways down that may not be there once you look away.",
+  "mechanics": [
+    "office_chunk_streaming_two_storeys",
+    "almond_water_dispensers",
+    "blacked_out_windows",
+    "clear_window_trap_exposure",
+    "exits_vanish_out_of_line_of_sight",
+    "base_omega_closed_shutters",
+    "no_entities_no_npcs"
+  ],
+  "exits": [
+    {
+      "id": "L004>L005#1",
+      "to": "L005",
+      "trigger": "walk_in",
+      "label": "Went down the old-fashioned office stairway",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "Level 4 has occasional exits that lead to Level 5 and Level 6 . Most exits take the form of office-style stairways",
+      "conditions": "Anchor: the dark-wood stairway beside Base Omega (stable). Streamed: occasional stairways that may vanish once out of sight.",
+      "hint": "Base Omega sits by the stairways down. One of them is older than the rest of the building: dark wood and brass.",
+      "arrival": "from_L004"
+    },
+    {
+      "id": "L004>L006#2",
+      "to": "L006",
+      "trigger": "walk_in",
+      "label": "Went down the stairway where the lights give out",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "Level 4 has occasional exits that lead to Level 5 and Level 6 . Most exits take the form of office-style stairways",
+      "conditions": "Anchor: the plain stairway next to the Level 5 one (stable). Streamed: occasional, may vanish.",
+      "hint": "Next to the old stairway is a plain fire stair whose landing lights stop working halfway down.",
+      "arrival": "from_L004"
+    },
+    {
+      "id": "L004>L003#3",
+      "to": "L003",
+      "trigger": "interact",
+      "label": "Rode an occasional lift that was standing open",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "occasional elevators that may even lead back to Level 3",
+      "conditions": "Streamed only: about one lift core in six has a car standing open on one storey. May vanish once out of sight.",
+      "hint": "Lift doors here are always shut. Almost always.",
+      "arrival": "from_L004"
+    },
+    {
+      "id": "L004>L071#4",
+      "to": "L071",
+      "trigger": "walk_in",
+      "label": "Took the rare stairs down to a basement",
+      "confidence": "CONFIRMED (rare)",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "Rarely, stairs leading to a basement can be found, and these go to Level 71",
+      "conditions": "Streamed only, rare: a stairway door marked BASEMENT. May vanish once out of sight.",
+      "hint": "A hand-lettered BASEMENT sign over a stair door is worth following.",
+      "arrival": "from_L004"
+    }
+  ],
+  "fail_states": [
+    {
+      "kind": "window_trap",
+      "label": "Kept looking through a window that had not been blacked out",
+      "basis": "ADAPTATION",
+      "source_quote": "Any windows that have not been blacked out are considered traps, and should be avoided at all costs",
+      "adaptation_reason": "The page calls clear windows traps but does not say what they do; we model an unexplained exposure that drains colour and sound and then costs health."
+    }
+  ],
+  "entity_policy": "No entities spawned. The page says Level 4 is mostly devoid of entities: Hounds and Dullers have been observed (no behaviour given) and one unverified Smiler sighting. With no behaviour to model, none appear and no entity sounds are played; the Smiler stays absent. 'windows' links to an entity page but the article text only calls clear windows traps, so they are a hazard without a creature. The page says there are lots of wanderers; this release has no NPC system, so wanderers appear only through traces (a M.E.G. notice, distant doors and footsteps, Base Omega's closed shutters and radio). Amor Incrementum and T.B.D. are mentioned in the notice only.",
+  "notes": "ADAPTATION: the office grammar is ours (the page gives no map, size, lighting or sound): 24 m chunks of one office block plus west/north corridors, two walkable storeys (floor-to-floor 3.6 m, 2.8 m ceilings), per-storey ring offices / open plan / conference room, and per-block vertical features (fire-stair + lift core, double-height atrium with gallery and sometimes a sunken floor, light well, rare exit stairway). The playable world is a finite streaming window (ChunkWorld radius 2) around an infinite seeded plan. ADAPTATION: 'almost completely devoid of furniture' is shown as empty carpet with unfaded marks where desks stood, a few leftover partitions and the odd conference table. ADAPTATION: painted-over windows on corridor and room walls; light wells hold real glazing, most painted black, about one pane in five clear (chunk (1,1) always has a well with a clear pane on its upper storey). ADAPTATION: exits that may disappear: streamed stairways and lifts roll a 50% chance to vanish each time line of sight is lost for 2.5 s (seeded); a vanished doorway is plastered over for the rest of the visit. The anchor stairways by Base Omega are kept stable so the Level 4 <-> Level 5 stair link stays reliable. ADAPTATION: Base Omega ('heavily guarded') is a closed shutter wall with a locked door, work lights, supply boxes and a radio heard through the wall; no guards are shown (no NPC system). ADAPTATION: the Level 5 stairway is styled old-fashioned (dark wood, brass) because Level 5's page says it is reached by an old-fashioned stairway in Level 4. ADAPTATION: the Level 6 stairway's landing lights fail on the way down (Level 6 is total darkness). ADAPTATION: arrival from_L005 is the top landing of the old stairway, facing its door out into the lobby (the climb back up from Level 5). Almond Water dispensers each fill one bottle per visit and heal a little. Known gaps: arrivals from The Hub, Level 2, Level 3 (elevator), Level 283 (through the ceiling) and the other inbound edges are not built (their origins are not in this slice). Level 6 has no from_L004 arrival yet, so that edge lands at Level 6's start. No Amor Incrementum or T.B.D. rooms are built."
+}

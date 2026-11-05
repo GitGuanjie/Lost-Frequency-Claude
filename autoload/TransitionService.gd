@@ -234,6 +234,9 @@ func load_level(sid: String, arrival: String, reason: String) -> void:
 	# LevelBase emits level_loaded after build + player placement
 	await level_loaded
 	SaveService.mark_visited(sid)
+	if reason != "continue" and reason != "restart":
+		# an arrival is a checkpoint: Continue must resume in the level you reached
+		SaveService.set_checkpoint(sid, arrival, null)
 	if SessionState.is_story():
 		SaveService.save_story("arrive:" + sid)
 	Overlay.hide_loading()

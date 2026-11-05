@@ -108,6 +108,10 @@ func build() -> void:
 	add_arrival("from_L025", Vector3(-3.2, 0.05, 30.2), 0.0)
 	add_arrival("from_L006", Vector3(16.0, -7.3, 88.2), 0.0)
 	add_arrival("from_L003", Vector3(-8.3, 0.05, 8.0), -90.0)
+	# Added with Level 4 (edge L004>L005#1, "an old-fashioned stairway in Level 4"):
+	# the wanderer comes down a stairway and lands on the service stair's top landing,
+	# facing the door into the hotel. Nothing else in Level 5 changes.
+	add_arrival("from_L004", Vector3(22.0, 0.05, 26.8), 0.0)
 	_audio()
 	_print_mat = StandardMaterial3D.new()
 	_print_mat.albedo_color = Color(0.05, 0.04, 0.035, 0.8)
