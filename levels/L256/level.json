@@ -1,8 +1,8 @@
 {
   "stable_id": "L256",
   "scene": "res://levels/L256/L256.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT_TESTED",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-06, 24/24; no exit per canon, no_exit_reason documented); stills reviewed by integrator (AI); human review pending",
   "procedural": false,
   "arrivals": [
     "start",
