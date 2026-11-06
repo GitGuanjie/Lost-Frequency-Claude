@@ -1,0 +1,74 @@
+{
+  "stable_id": "L906",
+  "scene": "res://levels/L906/L906.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-06, 34/34, bot fired L906>EXT#1); stills pending integrator review",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "A massive, seemingly endless candlelit library of wooden shelves, blue-and-gold carpets and floating bookcases under a stained-glass ceiling that backs away as you climb, kept by Blanche, a small, pale, perfectly polite host who will give you tea and a room, open a door to any safe level you ask for nicely, and hold you still and send you home if you are not nice.",
+  "mechanics": [
+    "office_entry_point_at_the_centre",
+    "four_endless_halls_streamed_12m_segments",
+    "gallery_level_and_marble_stair",
+    "floating_bookcases_wooden_ladders_walkable_tops",
+    "receding_ceiling_stained_glass_painted_landscapes",
+    "candelabra_lighting_from_the_dark",
+    "books_spawn_in_and_clip_out_all_signed",
+    "etiquette_warn_callout_lecture",
+    "telekinetic_hold_then_expulsion_to_safe_origin",
+    "polite_request_guided_door_to_safe_level_of_choice",
+    "tea_session_with_blanche",
+    "guest_room_reshapes_to_suit_guest",
+    "toms_kept_room",
+    "light_guides_flicker_vanish_random_drift",
+    "recording_equipment_malfunction",
+    "no_hazards"
+  ],
+  "exits": [
+    {
+      "id": "L906>EXT#1",
+      "to": "EXT",
+      "to_label": "A safe level of the visitor's choice (chosen in conversation with Blanche)",
+      "trigger": "walk_in",
+      "label": "Asked Blanche politely to leave; she opened a door onto the level you chose",
+      "confidence": "CONFIRMED+CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "In order to exit Level 906, politely ask Blanche to leave. She will guide you to an exit to the level of your choosing, provided it is a safe level.",
+      "mechanism_basis": "ADAPTATION",
+      "adaptation_reason": "The page does not say what the exit looks like. Here Blanche walks you to a tall door in the north-west corner of the crossing and opens it onto a short passage lit by the chosen level's light; walking in fires the edge. The destination list is every built level whose own page header calls it Safe (or survival class 0-1), Level 974 excepted (its own page sets its entry terms), with the level you came from listed first. The documented edge has no fixed destination (to: null), so the chosen level is written into the edge at run time.",
+      "conditions": "only after asking politely; the chosen level must be safe",
+      "hint": "Your host is not keeping you. You only have to ask her nicely.",
+      "arrival": "from_L906"
+    },
+    {
+      "id": "L906>EXT#2",
+      "to": "EXT",
+      "to_label": "The level you came from if it is safe, otherwise a safe level",
+      "trigger": "condition",
+      "label": "Were held still by an invisible force and sent back where you came from",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "you will be forcefully teleported out of the level, back to where you were when you entered, if it was a safe level, or to a safe level, if not.",
+      "mechanism_basis": "ADAPTATION",
+      "adaptation_reason": "Escalation counters are ours: rude acts (rude dialogue, tearing a page from a signed book, insulting the tea, rolling your eyes at the lecture) give a warning, then a calling-out, then the etiquette lecture; a fourth counts as excessive rudeness. A hostile act (threatening her, or excessive rudeness) immobilises you by telekinesis for 6 s; the next one holds you 2.5 s and then fires the edge. An apology clears rudeness, not hostility.",
+      "conditions": "after warning, calling-out and lecture (rudeness) or after an immobilisation (hostility)",
+      "hint": "She is very patient. Not infinitely.",
+      "arrival": "from_L906"
+    }
+  ],
+  "fail_states": [
+    {
+      "kind": "relocation",
+      "label": "Expelled for rudeness or hostility: held still, then teleported back to where you came from (if safe) or to a safe level",
+      "basis": "SOURCE",
+      "source_quote": "Hostile visitors are immobilized by telekinetic force."
+    }
+  ],
+  "entity_policy": "Blanche (CONFIRMED, unique, controls the library): present as a figure built from the page's description (short, pale, long blonde hair, light blue eyes, a tea gown). She is never hostile or combative: she welcomes you, invites you to tea, warns, calls out and lectures the impolite, and holds the hostile still by telekinesis before sending them out; she moves through the library at will (she glides or simply is elsewhere). Tom Von Haderach (named as her butler and protege, permanently occupying one guest room): never shown; his room's door stays shut with light beneath it and a card on it; knocking gets no answer. Light Guides (CONFIRMED): four small drifting lights that flicker, change direction at random and vanish and reappear; harmless; their appearance is not described on this page. 'Witnessing the Beyond' (RUMORED, no confirmation, likely U.E.C. propaganda per the page): exists only as a guest's sceptical note; it has no mechanic. No other entities, no hazards, no bases or communities.",
+  "notes": "SOURCE: a massive, seemingly endless library with gothic, Victorian and baroque decoration; recording equipment malfunctions; wooden shelves full of books, notebooks, folders and documents in many, mostly incomprehensible, languages; some shelves float and need wooden ladders; candelabras hang from an impossibly high ceiling yet light the whole library; the ceiling is ornamented with stained glass and painted landscapes and recedes as you approach; wooden floor with blue velvet carpets with golden ornaments; books, folders, scrolls and notes spawn in and clip out and all carry Blanche's signature; Blanche's office is the small central entry point (desk, tables, chairs, favourite books and unfinished works, the A.River portrait, the unfinished 'Blanche's Guide To Comfort Food', the two named scrolls, philosophy, the music-sheet folder for harpsichord, organ and piano, religious books, the plush of Captain with its 'Free hugs.' sign, botany, the Colombina mask, the 'To-read list' shelf with one book that flickers); the Tea Room is a small kitchen in the middle of the library (working oven and stove, tea cabinets, porcelain, silver, cooking books; tea sessions last one to two hours and she asks about your life, interests and expertise); guest rooms of unknown number that she reshapes for guests; one kept by Tom Von Haderach; visitors sometimes stay weeks or months; no bases; exits as documented. ADAPTATION: (1) the page gives no map. Plan: a 38 m crossing with a 4.5 m gallery ring carried over the mouths of four halls; the office pavilion in the middle under a great candelabra; a two-flight marble stair to the north gallery (after the staircase sketch credited on the page); chamfered corner blocks with the Tea Room (SE) and the guide door (NW); four guest rooms on the gallery corners (yours SE, Tom's SW, two empty and locked). Halls: 14 m nave with carpet runner, ground bays between double-sided stacks under the gallery, upper stacks, walls rising into the dark, a candelabra every 12 m, a gallery stair every third segment, a floating bookcase in most other segments (bottom 2.25-3 m up, walkable deck on top with rails, wooden ladder from the floor); occasional locked guest doors on the galleries. The playable world is a finite streaming window: hall segments are built within about 98 m of the player and fade into candle-dark depth haze; canonical endlessness is never simulated. (2) Shelves sit on one 0.375 m lattice, and the book spines are a shader (leather colours, gilt bands, labels). (3) Ceiling: about 44 m above your eyes, moving 2.4 m further away for every metre you climb. (4) Recording malfunction: the camcorder overlay shows an error instead of a timecode, the picture tears now and then, and the screenshot key saves nothing; this is our reading of 'cameras and recording equipment inexplicably malfunction'. (5) Loose items: up to 10 at a time, one appears every 6-12 s at a table, floor or gallery spot 3-17 m away (preferably out of view) and some clip out through the floor; each can be read (gibberish in an unknown script, then her signature), traced (nothing happens: you are already here) or torn (rude). (6) Tea: about 60-120 minutes pass behind a fade; it restores you and saves a checkpoint. (7) Guest room styles are picked by need (reader -> study, tea taken -> tea corner, long walks or a night slept -> canopy bed, else plain), rebuilt while you are away; resting there saves a checkpoint. Injury tending is not modelled because nothing in the level hurts you. (8) Light Guide drift, flicker and vanish rates are ours. (9) Arrival: 'start' in the office, as for every visitor (page: the office is the entry point for any and all). GAP: the entrance edge (tracing Blanche's signature on one of her documents in another level) has no id in data/canon/transitions.json and no built level places one of her books, so the level is reachable from the developer browser only. Levels 905/907 appear only in the link list. Log 906-1 was not captured and is not used. QA FIXTURE: in QA mode only, the guest has already asked: the guide door is open onto the first safe built level, so the walker bot walks from the office to the door and fires L906>EXT#1. The etiquette ladder, hold, expulsion (L906>EXT#2), tea, guest room, loose books, floating decks and the receding ceiling are exercised by qa_self_test.",
+  "framework_needs": "TransitionService has no way to pass a destination chosen at run time for an edge whose documented destination is open (to: null); the level writes the chosen level into the cached edge (TransitionService.get_edge) before firing. A dialogue/choice panel in Overlay would also replace the level-local panel built with Overlay._panel."
+}
