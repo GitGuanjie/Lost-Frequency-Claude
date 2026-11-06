@@ -1,8 +1,8 @@
 {
   "stable_id": "L404",
   "scene": "res://levels/L404/L404.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "ENGINE_SMOKE_PASS (2026-11-06, levels suite 23/23 + duplication 1/1, 0 failures; 10 level self-tests); stills captured, awaiting integrator review",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-06, 23/23; no exit per canon, no_exit_reason documented); stills reviewed by integrator (AI); human review pending",
   "procedural": true,
   "arrivals": [
     "start"

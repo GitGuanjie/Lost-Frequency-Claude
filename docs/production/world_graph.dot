@@ -48,7 +48,7 @@ digraph LostFrequency {
   L200 [label="L200\nHome", fillcolor="#e0e0e0", fontcolor="#424242"];
   L256 [label="L256\nDemoscene", fillcolor="#e0e0e0", fontcolor="#424242"];
   L289 [label="L289\nOverflow", fillcolor="#e0e0e0", fontcolor="#424242"];
-  L404 [label="L404\nmy dearly fragmented", fillcolor="#e0e0e0", fontcolor="#424242"];
+  L404 [label="L404\nmy dearly fragmented", fillcolor="#2e7d32", fontcolor="white"];
   L601 [label="L601\nThe End", fillcolor="#e0e0e0", fontcolor="#424242"];
   L906 [label="L906\nThe Cygnus Archive", fillcolor="#e0e0e0", fontcolor="#424242"];
   L974 [label="L974\nKitty's House", fillcolor="#2e7d32", fontcolor="white"];
