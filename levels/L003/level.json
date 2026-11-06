@@ -1,0 +1,109 @@
+{
+  "stable_id": "L003",
+  "scene": "res://levels/L003/L003.tscn",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-06, 33/33); stills reviewed by integrator (AI); human review pending",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L004",
+    "from_L005"
+  ],
+  "signature": "An old electrical facility of brick halls in mismatched colours, dusty concrete and dim tubes, every wall crusted with cables, boxes and black-liquid pipes, where most branches end in indestructible bars that let you see the maze go on; a two-deck Generator Room, an unattended Assembly Line, a sunken Boiler Room, a silent marble Sanctum, and Base Gamma glowing like daylight in a hall too big to see across.",
+  "mechanics": [
+    "indestructible_bars_visible_maze",
+    "lockpick_gate_pocket",
+    "dread_staring_past_bars_shadow_figure",
+    "paranoia_hotspot_crouch_passage",
+    "unrecordable_hallucinations",
+    "fallen_live_wires_sparking_outlets",
+    "shattering_tubes",
+    "exploding_generator_cycle",
+    "black_sludge_burns_and_fumes",
+    "sanctum_safe_haven_checkpoint",
+    "assembly_line_conveyors_replenishing_almond_water",
+    "purpification_site",
+    "base_gamma_cameras_blood_check_gate",
+    "random_lift_level4_or_level5",
+    "occasional_car_room",
+    "two_deck_generator_room_catwalks",
+    "sunken_boiler_room",
+    "base_gamma_viewing_gantry"
+  ],
+  "exits": [
+    {
+      "id": "L003>L069#4",
+      "to": "L069",
+      "trigger": "interact",
+      "label": "Got into the car in a room that had not been there before",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Occasionally, a room with a car inside may appear. Entering the car will lead the wanderer to Level 69.",
+      "conditions": "The room off the arrival hall is bricked over most of the time; it opens unobserved after a few minutes and closes again later. QA mode keeps it open from the start (bot fixture).",
+      "hint": "Walk the arrival hall more than once. Its walls are not always the same.",
+      "arrival": "from_L003"
+    },
+    {
+      "id": "L003>L004#1",
+      "to": "L004",
+      "trigger": "interact",
+      "label": "Rode the service lift (not Entity 81); it opened on Level 4",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Elevators that are not instances of Entity 81 will lead to either Level 4 or Level 5 at random.",
+      "conditions": "Base Gamma transfer hall lift. Press the button inside the car; the destination (Level 4 or Level 5) is rolled at random each ride.",
+      "hint": "Base Gamma keeps a checked service lift.",
+      "arrival": "from_L003"
+    },
+    {
+      "id": "L003>L005#2",
+      "to": "L005",
+      "trigger": "interact",
+      "label": "Rode the service lift (not Entity 81); it opened on Level 5",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Elevators that are not instances of Entity 81 will lead to either Level 4 or Level 5 at random.",
+      "conditions": "Same lift as L003>L004#1; the random roll picks this edge about half the time.",
+      "hint": "Base Gamma keeps a checked service lift.",
+      "arrival": "from_L003"
+    },
+    {
+      "id": "L003>L011#3",
+      "to": "L011",
+      "trigger": "interact",
+      "label": "Went through the Base Gamma transfer door to the entry point on Level 11",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "There is a door in Base Gamma that will lead one right back to the Base Gamma entry point on Level 11",
+      "conditions": "Inside the Base Gamma intake/transfer hall, past the blood-check gate.",
+      "hint": "Follow the M.E.G. arrows to Base Gamma and let them check your blood.",
+      "arrival": "from_L003"
+    }
+  ],
+  "fail_states": [
+    {
+      "kind": "electrocution",
+      "label": "Electrocuted by a fallen live wire",
+      "basis": "SOURCE",
+      "source_quote": "One should be aware of common issues like fallen wires"
+    },
+    {
+      "kind": "generator",
+      "label": "Caught by an exploding generator",
+      "basis": "SOURCE",
+      "source_quote": "exploding generators"
+    },
+    {
+      "kind": "sludge",
+      "label": "Scalded or poisoned by the black sludge",
+      "basis": "SOURCE",
+      "source_quote": "It is scalding hot and can cause 2nd-degree burns if direct contact is made with the skin."
+    }
+  ],
+  "entity_policy": "No entity is spawned. The page's hostile entities (Hounds, Facelings, Wretches, Deathmoths, Skin-Stealers, Smilers, Clumps, Death Rats) act as coordinated brigades; this slice does not simulate them and does not substitute a lone wanderer. Phenomena only: the shadowy figure behind the bars appears as a brief, unreachable glimpse (REPORTED by wanderers, never confirmed), faint crying past the bars (one wanderer's report), shared hotspot hallucinations (TESTIMONY), and one purpified Hound carcass fused into a wall (ARTICLE: dead entities found partly noclipped into purple walls). Empress Deathmoths, their hive and Entity 71 are not present. Base Gamma's thousands of residents and guards are heard (captions, music bed) but not shown.",
+  "notes": "ADAPTATION: the explorable network is a finite authored slice (arrival hall, crouch passage, Generator Room, Assembly Line, Boiler Room, Sanctum, two passages to Base Gamma); the page says most of the level is unreachable behind bars, so every unexplored branch ends in bars with the hall continuing beyond (a diegetic, canon boundary). Seeded: hall wall colours, clutter, cabinet spacing, window lighting. ADAPTATION: start stands at a door from Level 2 (page: new wanderers often end up here via Level 2); the door does not reopen. ADAPTATION: second levels (generator catwalks and bridge at +5 m, assembly control mezzanine at +3.6 m, boiler entry walkway 3.5 m above a sunken floor, Sanctum altar, Base Gamma viewing gantry 10 m up with a long stair, outpost mezzanine); the page gives no plans. ADAPTATION: Base Gamma is a 450 x 520 m hall with an 80 m ceiling (page: hundreds of feet, several miles wide) lost in haze; the fortress (Public Sector mall floors, Residence windows above, Administration with antennas on top) is massing seen from outside; the walkable part is the intake/transfer gatehouse (finger-prick hatch, metal detector arch, gate, lift, Level 11 door, outpost behind mirrored glass). The gate opens after the blood check (and from the inside for anyone arriving by lift); QA mode opens it from the start so the navmesh check can reach the lift and door. ADAPTATION: arrivals from_L004/from_L005 stand inside the Base Gamma lift (page: one of these elevators is right within Base Gamma). ADAPTATION: car room position and timing (opens unobserved after 2.5-5.5 min, stays 3-5 min, closes unobserved). ADAPTATION: hazard numbers (wire 18 damage, generator cycle 80-160 s with a 6 s rising-whine warning and up to 45 damage within 6 m, sludge 14/s plus fume build-up, falling glass 8). ADAPTATION: dread builds after ~3 s of staring past bars (vignette, heartbeat); glimpses/crying on a 35 s cooldown. Paranoia hotspot = the dark crouch passage to the Sanctum (page: dark, narrow sections; M.E.G. signage installed; video never captures the sounds). ADAPTATION: Sanctum light sources (wall lamps, pale spot on the statue) are ours; glyph band is a pattern, not the page's font. ADAPTATION: Assembly Line goods are boxes and Almond Water bottles on three belts; the pallet stack never runs out (page: resources replenish). ADAPTATION: the notebook page is paraphrased and trimmed; its distressing passages are omitted. Known gaps: no entity brigades; Base Gamma interior, Residence faux town, B.N.T.G. Storage Unit, Blue Salvation and Scylla Colony not built; Levels 4 and 11 have no from_L003 arrival tag yet (they fall back to start); Level 69 is not built."
+}

@@ -1,0 +1,79 @@
+{
+  "stable_id": "L010",
+  "scene": "res://levels/L010/L010.tscn",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-06, 23/23); stills reviewed by integrator (AI); human review pending",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L009"
+  ],
+  "signature": "Endless rolling wheat and barley under a leaden sky, plots fenced by hedges that never outgrow one another, dirt tracks with fresh ruts that no vehicle ever made, clear lakes in every hollow below one water line, empty barns of wood and nails, and a one-metre crust of soil over a mass of worms.",
+  "mechanics": [
+    "chunk_streaming_farmland_with_far_lod_ring",
+    "multimesh_crop_tiles_streamed_around_camera",
+    "wind_gusts_rolling_through_crops",
+    "rare_fog_and_light_rain_spells",
+    "constant_height_hedges_and_tree_lines",
+    "lakes_below_one_water_level",
+    "drinkable_lake_water",
+    "track_following_distance_to_level_11",
+    "canola_patch_exit",
+    "lake_dive_exit",
+    "survey_pit_worm_surge_below_one_metre",
+    "wading_slows_in_crops",
+    "barn_shelter_checkpoint",
+    "enterable_barns_stables_sheds_with_loft"
+  ],
+  "exits": [
+    {
+      "id": "L010>L011#1",
+      "to": "L011",
+      "trigger": "walk_in",
+      "label": "Followed a dirt track until it ran out onto a cracked asphalt back road",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Finding a road and following it for a prolonged period may eventually lead one to Level 11",
+      "conditions": "keep to the tracks for about 1.1 km; wandering more than ~45 m off them resets the walk",
+      "hint": "The tracks never seem to end. Keep to the ruts.",
+      "arrival": "from_L010"
+    },
+    {
+      "id": "L010>L184#2",
+      "to": "L184",
+      "trigger": "walk_in",
+      "label": "Walked into a patch of canola among the wheat",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Finding a patch of canola among the wheat and entering it will lead one into Level 184",
+      "hint": "Somewhere out among the gold there is a brighter yellow. You may smell it first.",
+      "arrival": "from_L010"
+    },
+    {
+      "id": "L010>EXT#3",
+      "to": "EXT",
+      "to_label": "Aquatic levels (unspecified)",
+      "trigger": "condition",
+      "label": "Dived down into a lake until the water led somewhere else",
+      "confidence": "UNKNOWN",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Swimming into a lake can lead one to a number of aquatic levels",
+      "conditions": "the page says research into the destinations is underway; here: stay under in deep water for about four seconds",
+      "hint": "The lakes are clearer and deeper than they look.",
+      "arrival": "from_L010"
+    }
+  ],
+  "fail_states": [
+    {
+      "kind": "worm_surge",
+      "label": "Dug past one metre; worms surged out, slipping and burrowing at the skin",
+      "basis": "SOURCE",
+      "source_quote": "digging a hole deeper than one meter may result in the rapid emergence of worms from the soil"
+    }
+  ],
+  "entity_policy": "SOURCED ONLY: the soil worms, which live below the one-metre soil crust and appear only when the survey pit is dug past one metre (they spill a few metres out, then sink back). Nothing roams the surface (page: 0/5 hostile entities). No vehicles anywhere, although the tracks look used (page). No people and no M.E.G. outpost (page: none).",
+  "notes": "ADAPTATION: (1) the playable world is a finite streaming window (64 m chunks, radius 2) plus a cheap far LOD ring out to ~350 m on the same grid; leaden fog hides its edge; canonical infinity is not simulated. (2) Plot grid, plot sizes, hedge/tree-line layout, crop assignment (wheat, barley, a few grass plots), terrain noise and the home rise around the spawn are ours; the page gives no map. Hedges are one fixed height everywhere (page: shrub lines never outgrow one another). (3) Every hollow below one fixed elevation is water (page); the lake near the spawn is an authored hollow. (4) Structure plans (threshing barn with loft and stairs, stable stalls, shed, cart shed) are ordinary farm anatomy; the page only says they are mostly empty and hold wood and nails, which is all they hold here. (5) The 'prolonged' road walk is compressed to ~1.1 km of track (any tracks, junctions allowed); grey city shapes rise ahead after ~650 m and the dirt meets an asphalt back road (Level 11's page: a back road there leads to Level 10). (6) Canola patches are seeded rarely (one guaranteed ~350 m from the spawn); a mustard smell caption is the affordance. (7) The lake exit is a ~4 s dive in deep water (destination UNKNOWN on the page; shown as a documented, unbuilt route). (8) The dig hazard uses an M.E.G. survey pit left at 0.6 m beside the home barn (page: worms were observed using shovels); digging past 1 m triggers the surge. (9) The home barn's new doorstep, the uneaten wheat stalk, a cold stove with a burnt pot and the notebook scrap come from the narrator's testimony; no bodies are shown and nothing is mandatory. (10) Gusts are periodic; fog and light-rain spells are rare (page: brief and infrequent); there is no sun path and no night. Wading through crops slows walking. Barns are a story checkpoint (page: M.E.G. teams stay briefly in barns). QA fixture (QA mode only): a small canola patch 20 m from the spawn. Not built: the Level 11 back-road and Level 25 arcade entrances (no arrival tags requested), harvest/crafting with wood and nails."
+}
