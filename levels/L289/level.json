@@ -1,8 +1,8 @@
 {
   "stable_id": "L289",
   "scene": "res://levels/L289/L289.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT_TESTED",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-06, 25/25, bot fired L289>EXT#1); stills reviewed by integrator (AI); human review pending",
   "procedural": true,
   "arrivals": [
     "start",

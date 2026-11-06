@@ -44,7 +44,7 @@ level_id,stable_id,group,canonical_source_resolved,correct_identity,unique_signa
 94,L094,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
 200,L200,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
 256,L256,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
-289,L289,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
+289,L289,B_FLAGSHIP,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
 404,L404,B_FLAGSHIP,True,True,True,True,False,False,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,False,
 601,L601,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
 906,L906,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
