@@ -264,6 +264,10 @@ func _ui_suite() -> void:
 	await get_tree().process_frame
 	await _tap(KEY_F7)
 	check(lvl.player.flycam == null and lvl.player.global_position.distance_to(pos_before) < 0.05, s, "flycam exit rolls back to safe player position")
+	for i in 8:
+		Overlay.toast("qa burst %d" % i, 0.5)
+	await get_tree().process_frame
+	check(Overlay.toast_box.get_child_count() <= 5, s, "toast burst is capped without hanging", Overlay.toast_box.get_child_count())
 	await _tap(KEY_J)
 	check(Overlay.journal_panel.is_visible_in_tree(), s, "J opens journal (visible in tree)")
 	await _tap(KEY_ESCAPE)
@@ -372,6 +376,8 @@ func _level_suite(sid: String) -> void:
 	for e in nav.get("exits", []):
 		check(e.get("reachable", false), s, "exit reachable on navmesh " + e["edge"], e)
 	var routes: Array = d["routes"]
+	if found.is_empty():
+		_nav_free(nav)
 	if not found.is_empty():
 		var bot := await _bot_walk(lvl, nav, found)
 		rec["bot"] = bot

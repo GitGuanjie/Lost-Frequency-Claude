@@ -775,8 +775,11 @@ func toast(text: String, seconds: float = 3.0) -> void:
 	l.custom_minimum_size = Vector2(800, 0)
 	pc.add_child(l)
 	toast_box.add_child(pc)
+	# detach before freeing: queue_free alone keeps the child counted this frame
 	while toast_box.get_child_count() > 4:
-		toast_box.get_child(0).queue_free()
+		var old := toast_box.get_child(0)
+		toast_box.remove_child(old)
+		old.queue_free()
 	get_tree().create_timer(seconds, true, false, true).timeout.connect(func():
 		if is_instance_valid(pc):
 			pc.queue_free())

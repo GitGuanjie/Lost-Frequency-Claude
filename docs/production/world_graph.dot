@@ -45,7 +45,7 @@ digraph LostFrequency {
   L075 [label="L75\nLiminality", fillcolor="#e0e0e0", fontcolor="#424242"];
   L079 [label="L79\nGhosts in the Machine", fillcolor="#e0e0e0", fontcolor="#424242"];
   L094 [label="L94\nMotion", fillcolor="#e0e0e0", fontcolor="#424242"];
-  L200 [label="L200\nHome", fillcolor="#e0e0e0", fontcolor="#424242"];
+  L200 [label="L200\nHome", fillcolor="#2e7d32", fontcolor="white"];
   L256 [label="L256\nDemoscene", fillcolor="#e0e0e0", fontcolor="#424242"];
   L289 [label="L289\nOverflow", fillcolor="#2e7d32", fontcolor="white"];
   L404 [label="L404\nmy dearly fragmented", fillcolor="#2e7d32", fontcolor="white"];

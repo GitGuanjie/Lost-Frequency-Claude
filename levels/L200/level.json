@@ -1,8 +1,8 @@
 {
   "stable_id": "L200",
   "scene": "res://levels/L200/L200.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "ENGINE_SMOKE_PASS (2026-11-06, 0 failures, 22 checks incl. 10 self-tests); stills pending integrator review",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-06, 22/22; no exit per canon, no_exit_reason documented); stills reviewed by integrator (AI); human review pending",
   "procedural": false,
   "arrivals": [
     "start"
