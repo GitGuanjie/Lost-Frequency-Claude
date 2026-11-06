@@ -1,8 +1,8 @@
 # Quality scoreboard
 
-Generated 2026-11-06 07:36 UTC by `tools/build_reports.py` from engine artefacts.
+Generated 2026-11-06 07:47 UTC by `tools/build_reports.py` from engine artefacts.
 
-**100 requested / 100 source-audited / 24 built scenes / 21 playable-in-engine / 24 lore-validated (AI review) / 0 fully accepted / 18 story-reachable**
+**100 requested / 100 source-audited / 25 built scenes / 22 playable-in-engine / 25 lore-validated (AI review) / 0 fully accepted / 18 story-reachable**
 
 Definitions: *playable-in-engine* means the scene loads in Godot, spawns safely, and a walker bot physically triggered a sourced exit. *Lore-validated* means the integrator reviewed the stills and manifest against the dossier (Claude, not a human). *Fully accepted* needs human sign-off and real-GPU performance evidence, so it is 0 by design until those exist. *Story-reachable* means reachable from Level 0 through implemented story exits between playable levels.
 
@@ -44,6 +44,7 @@ Definitions: *playable-in-engine* means the scene loads in Godot, spawns safely,
 | L256 | PLAYABLE | ENGINE_SMOKE_PASS | 24/24 | — | ok | ok | 2 | no |
 | L289 | PLAYABLE | ENGINE_SMOKE_PASS | 25/25 | L289>EXT#1 (15.3) | ok | ok | 2 | yes |
 | L404 | PLAYABLE | ENGINE_SMOKE_PASS | 23/23 | — | ok | ok | 2 | no |
+| L601 | PLAYABLE | ENGINE_SMOKE_PASS | 31/31 | L601>EXT#1 (13.8) | ok | ok | 2 | no |
 | L974 | PLAYABLE | ENGINE_SMOKE_PASS | 22/22 | L974>EXT#2 (31.0) | ok | ok | 2 | no |
 
 ## Roster progress by group
@@ -51,7 +52,7 @@ Definitions: *playable-in-engine* means the scene loads in Godot, spawns safely,
 | Group | Entries | Built |
 |---|---:|---:|
 | A_LOCKED_EXISTING | 18 | 18 |
-| B_FLAGSHIP | 32 | 6 |
+| B_FLAGSHIP | 32 | 7 |
 | C_HIGH_INTEREST | 25 | 0 |
 | D_BREADTH | 25 | 0 |
 

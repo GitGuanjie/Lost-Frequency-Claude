@@ -1,8 +1,8 @@
 {
   "stable_id": "L601",
   "scene": "res://levels/L601/L601.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "ENGINE_SMOKE_PASS (2026-11-06, 31/31, bot fired L601>EXT#1); stills reviewed by builder only, integrator review pending",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-06, 31/31, bot fired L601>EXT#1); stills reviewed by integrator (AI); human review pending",
   "procedural": true,
   "arrivals": [
     "start",
