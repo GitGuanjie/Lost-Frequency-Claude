@@ -1,0 +1,43 @@
+{
+  "stable_id": "L256",
+  "scene": "res://levels/L256/L256.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT_TESTED",
+  "procedural": false,
+  "arrivals": [
+    "start",
+    "from_L004"
+  ],
+  "signature": "A dark, utterly still technology exhibition centre lit in neon blue, where black glass looks onto nothing, every door is locked onto more wall, and the only things that move are the branded terminals - static, your own distorted image, a 1990s demo with a sine scroller, a game with no ending, a black screen that screams - while the volunteer's M.E.G. draft of the article writes itself, comes apart, and fails to upload because user isle4 does not exist.",
+  "mechanics": [
+    "dread_writes_three_drafts",
+    "meg_terminal_draft_panel",
+    "five_sourced_terminal_programs",
+    "recording_of_the_viewer_feed",
+    "endless_game_scare",
+    "loud_tone_black_screens",
+    "terminals_turn_on_by_themselves",
+    "screens_change_when_unwatched",
+    "clocks_frozen_then_change_when_unwatched_and_zero",
+    "locked_doors_kick_reveals_wall",
+    "heavy_dark_windows_gaze",
+    "stillness_no_air_sound",
+    "safe_place_checkpoint",
+    "upload_fails_user_does_not_exist",
+    "theatre_demo_sine_scroller",
+    "isolation_no_entities"
+  ],
+  "exits": [],
+  "no_exit_reason": "The page states none: its Exits section reads only \"haven't found any. keep looking.\", then \"there has to be something\", then \"its too dark\"; data/canon/transitions.json has no edge from L256. No story exit is built. The volunteer's last upload fails (\"User isle4 does not exist\") and the level simply continues. The non-canon release boundary is the framework's own: Pause -> Main menu.",
+  "content_warnings": [
+    "psychological horror",
+    "mental breakdown (a narrator's notes deteriorate)",
+    "profanity (softened: 'jesus f-')",
+    "isolation",
+    "sudden extremely loud distorted tones (sourced; short, captioned)",
+    "flashing screen content"
+  ],
+  "fail_states": [],
+  "entity_policy": "NO ENTITY PER SOURCE: 'there's just no one and nothing here but those terminals'. Nothing moves except screens (and what the player knocks over). The dark outside is never shown as anything: it is only heavier the longer you look ('its not the sky' is one line of testimony, written once into the dead terminal). The figure on the recording terminals is the player, rendered only into that feed.",
+  "notes": "SOURCE (article, rev 46): the 257th Level; an abandoned technological demonstration and exhibition center; entirely indoors; windows onto a featureless, dark exterior; modern interior, neon blue lighting and artistic fixtures; all doors locked; terminals branded with well-known game franchises that show unrelated programs: faint static (most common), a recording of the viewer distorted by inverted colours / infrared / coloured outlines, low-definition early 3D demos, simple banal repetitive games with no ending, extremely loud distorted tones on a black screen; no bases or communities; entered by clipping through Level 4. TESTIMONY (lower-case notes): way too dark; a kicked door has more wall behind it; a game scared the narrator; nobody responds, are these uploading; no exits found; draft 3: terminals turn on on their own, nothing moves but the screens, the air does not move, clocks do not tick and change time when not watched (all 00:00, then normal), the sky is oppressive, 'its not the sky', 'this is a safe place, I have water and food', 'I gave it class 5'; final upload aborted, 'User isle4 does not exist'. ADAPTATION (the page has no map): the plan - a 32 x 24 x 9 m atrium with a full-height north curtain wall of black glass, a mezzanine gallery at +4.5 m reached by a 25-step stair (0.18 m risers; guide section 9 verticality; the page states no vertical structure), a corridor of locked doors with clocks over them, a viewer room of recording terminals, and a sunken theatre (-1.8 m, six raked tiers, aisle half-steps) facing an 11 m screen running a wireframe-cube / copper-bar / checker-floor demo with a 3D sine scroller (the page's 'early 3D demonstrations' and its title 'Demoscene'; the scroller text is our paraphrase of the volunteer's notes); a screen totem, suspended neon rings and a 'light forest' of hanging neon tubes as the 'artistic fixtures'; the franchise branding is rendered as invented pixel-glyph marquees (no real brand is shown); kiosk program assignment is fixed by design except one 'wild' kiosk chosen by seed (procedural=false: the seed never changes the layout). The drafting: the player is the volunteer isle4; a small M.E.G. Mobile Terminal AE4 panel types the article as you discover things - draft 1 (the template 'Level n...'), draft 2 (article sentences), draft 3 (notes taking over, typing errors) - and a dread value (time, staring at the windows, watching terminals, kicking doors, the game's scare, the tones, standing still in draft 3; resting by your pack lowers it but never below the current draft) advances the drafts, uploading each with no reply; at full dread the final upload fails exactly as the page ends, every screen falls to static, and the level continues (no exit). Dread also dims the neon, lowers exposure and ambient, wakes sleeping terminals (draft 2 and 3, captioned), lets screens swap programs while unwatched (draft 3), and starts the clocks jumping when unwatched (draft 3) with a single 00:00 episode. Windows: staring into them (ray within 11 m) closes a vignette, desaturates, swallows the glass's reflection and raises a sub-bass pressure bed. The endless game: 'Play' makes the runner jump; after 5-10 plays it cuts to an inverted flash of the viewer feed with the loud tone. Black screens blast a 2.2 s synthesized distorted tone (captioned) when you stand in front of them, with a 25 s cooldown. Doors: 'Try the door' -> locked; 'Kick the door' -> the leaf slams flat outward, revealing solid wall (persisted per door in story saves). The recording of the viewer is a 192x144 SubViewport camera on the nearest recording terminal that renders a dark figure where the player stands (layer 20, hidden from the player camera). Arrival 'from_L004' and 'start' share the gallery's east wall: a square of Level 4's grey office carpet came through with you, with your pack and water beside it (the 'water and food' of the testimony; reading the pack shows the full drafts). Audio: almost nothing (the air does not move); faint static at lit terminals, the theatre's chiptune (AudioSynth chiptune; ADAPTATION of the page title), the tones, door sounds, the window pressure bed; every recurring sound is captioned. No roster edge enters L256 from a built level in transitions.json (the page's Level 4 entrance is not listed as an L004 edge), so from_L004 is provided for the dev browser and future edges."
+}
