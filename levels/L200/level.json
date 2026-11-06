@@ -1,0 +1,41 @@
+{
+  "stable_id": "L200",
+  "scene": "res://levels/L200/L200.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-06, 0 failures, 22 checks incl. 10 self-tests); stills pending integrator review",
+  "procedural": false,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "A bleak-blue small-town Main Street that talks to you in the second person: it insists this is home and asks you to remember, while rot spreads wherever you look and wherever you leave, residents come apart, the two-storey house never quite takes shape, and every road out ends in townspeople.",
+  "mechanics": [
+    "second_person_narrator_insists_vs_space_reveals",
+    "remember_to_shape_the_house_three_memory_groups",
+    "rot_grows_when_noticed_and_when_absent",
+    "ms_garcia_bisects_under_a_long_look",
+    "joe_vee_soup_bowl_falls_apart",
+    "school_basement_below_below_below",
+    "bring_sarah_palmer_with_you",
+    "stay_street_ends_in_townspeople",
+    "look_behind_you_everyone_is_here",
+    "skin_breaking_sky_and_burning_rust_captions",
+    "two_storey_house_real_stair_open_gallery"
+  ],
+  "exits": [],
+  "no_exit_reason": "SOURCE: the page's only exit material is the Entrances And Exits section, answered in the town's voice with 'Why would you care about that?'. data/canon/transitions.json records it as L200>EXT#1 (to: null, trigger: unknown, confidence UNKNOWN, risk entrapment). An unknown trigger to an unknown destination cannot be built without inventing a door, so no physical exit exists; the street ends in a crowd of residents and the narrator repeats the deflection. Entrances are not stated either, so the level is developer-accessible only (F3 browser).",
+  "documented_edges_not_built": [
+    {
+      "id": "L200>EXT#1",
+      "to": null,
+      "label": "UNKNOWN: deflected by the narrator ('Why would you care about that?')",
+      "confidence": "UNKNOWN",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "Why would you care about that?",
+      "reason_not_built": "trigger and destination unknown; the dossier forbids inventing a door"
+    }
+  ],
+  "fail_states": [],
+  "entity_policy": "NO ENTITY PER SOURCE. The page names townspeople (Joe Vee, Sarah Palmer, Ms. Garcia, 'everyone') without classifying them; they appear only as static figures that never move toward you, never attack and cannot be traded with. Nothing is spawned as an entity.",
+  "notes": "SOURCE (all NARRATOR, second person, the town speaking): Level 200 is 'Home' and has always been around; a small, unremarkable town of about 4,000 people you will come to know; a smell of burning rust in your ears and the faint sound of skin breaking from the sky; the visitor arrives exhausted, clothes torn, barely fed; 'Let's take a walk'; Joe Vee has run the breakfast place for 60 years and has held the same soup bowl for 30 days, and it is starting to fall apart; the school could become your school as you remember it; space camp in the science lab, Sarah Palmer's dare to go into the dark, cold basement ('Below, below, below'), you might have believed you were falling apart down there; 'Bring her with you'; rot that only grows when you notice it AND only grows when you are not around (both kept); the house that used to be beautiful, chipped paint, walls grown too thin, not taken shape yet, and the request to remember walks with Mother, birthdays, and not thinking about living and dying; residents getting old, Ms. Garcia will bisect if you look too hard; 'This town needs new blood', 'Stay', 'Look behind you. Everyone's here.'; exits deflected. The licence box credits a photo of a small-town Main Street, which sets the architecture. ADAPTATION: one block of Main Street (frame houses north, storefronts, the diner and the school south) closed at both ends by a T-junction where the townspeople stand shoulder to shoulder across the road, with walking slowing to a crawl as you approach (the street never ends in a world edge; depth fog from 16 to 95 m, back fences, hedges); overcast 'bleak blue sky' daylight (from the remembered mornings; the present time of day is not stated); the house plan (10 x 9 m, two storeys, 16-riser stair of 0.1875 m, open gallery, porch with three steps; no basement or attic because the page gives the house neither); three memory groups (walks: hall, living room, den; birthday: dining room, kitchen; childhood: bedrooms, bathroom) whose walls/fabrics/lights lerp from chipped, stained, colourless and cold to whole and warm; the spare room never takes shape (bare studs); rot rates (0.06/s while in view within 11 m, 0.0025/s while you are in another zone; remembering cuts it to 30 percent, never zero; heavy rot greys a remembered group again); Ms. Garcia comes apart after about 6 s of direct looking (non-gory: two halves lean apart along a dark seam); Joe's bowl loses a shard every 50 s or when you look at it; the school basement memory ('Remember the dare') makes Sarah Palmer appear, back turned, at the house's landing window; after all three memories the narrator closes ('stay ... look behind you') and up to nine static residents are placed behind the player; the birthday card and report card are invented in-world props (names deliberately blank). Neither 4,000 residents nor 'you will know them all' is simulated beyond the crowds. Smell is a caption only. Not built: Level 199/201 (link list only, no edges)."
+}
