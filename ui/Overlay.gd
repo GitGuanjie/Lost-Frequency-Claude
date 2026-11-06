@@ -373,6 +373,7 @@ func _build_settings() -> Control:
 	_check_row(v, "Show frame time / FPS", "show_fps")
 	_check_row(v, "Found-footage camcorder look (VHS, REC, handheld)", "camcorder")
 	_check_row(v, "Continuous level switching (no loading screen)", "seamless")
+	_check_row(v, "Photographic CC0 materials (applies on next level load)", "photo_materials")
 	var fsb := CheckBox.new()
 	fsb.text = "Fullscreen"
 	fsb.button_pressed = DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN
@@ -480,6 +481,7 @@ func _credits_bbcode() -> String:
 	var s := "[b]LOST FREQUENCY[/b] — an unofficial, non-commercial adaptation of the [b]Backrooms Wiki[/b] (English Wikidot continuity, https://backrooms-wiki.wikidot.com/).\n"
 	s += "Content relating to the Backrooms is licensed under Creative Commons Sharealike 3.0 and all concepts originate from http://backrooms-wiki.wikidot.com/ and its authors. LOST FREQUENCY, being derived from this content, is hereby also released under [b]Creative Commons Sharealike 3.0[/b] (code included; see LICENSE.md).\n"
 	s += "All textures, materials and sounds in this build are generated procedurally in-project; no third-party images, models or audio are shipped.\n"
+	s += "Photographic textures: CC0 1.0 sets from Poly Haven (polyhaven.com) by Rob Tuytel, eye-candy.xyz, Guillaume Monsergent and Amal Kumar (see assets/ASSET_PROVENANCE.csv).\n"
 	s += "Built with Godot Engine (MIT). Physics: Jolt (MIT).\n\n[b]Source pages (accessed 2026-11-04)[/b]\n"
 	for e in LevelRegistry.entries:
 		s += "• %s — by %s — %s\n" % [e.get("page_title", ""), e.get("cite_authors", "?"), e.get("url", "")]

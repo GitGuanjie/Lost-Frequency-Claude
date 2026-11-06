@@ -24,6 +24,11 @@ Developer channel (never writes your story save):
 - **F4 / Shift+F4**: next/previous built catalog item (developer mode only, never a story exit).
 - **F7**: flycam inspection; exiting it returns to the player's safe position.
 
+Photographic CC0 textures (Poly Haven) are fetched, not committed:
+```bash
+python3 -I tools/fetch_assets.py   # pinned in assets/external/lock.json; procedural fallback if absent
+```
+
 ## Test it (real engine)
 ```bash
 cd lost_frequency

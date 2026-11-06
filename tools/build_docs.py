@@ -117,6 +117,12 @@ def main():
     src = (ROOT / "autoload/AudioSynth.gd").read_text(encoding="utf-8")
     for r in sorted(set(re.findall(r'^\t\t"([a-z_]+)": s = ', src, re.M))):
         rows.append([f"autoload/AudioSynth.gd#{r}", "synthesised audio recipe", "created in-project", "LOST FREQUENCY contributors", "CC BY-SA 3.0", "generated at runtime; no samples"])
+    lockp = ROOT / "assets/external/lock.json"
+    if lockp.exists():
+        for a, r in sorted(json.loads(lockp.read_text()).items()):
+            rows.append([f"assets/external/{a}/ (diff, nor_gl, arm, 1k)", "PBR texture set (fetched, not in Git)",
+                         r["source"], "; ".join(r.get("authors", [])), r.get("license", "CC0 1.0"),
+                         "sha256 " + ", ".join(f'{k}={v["sha256"][:12]}' for k, v in r["files"].items())])
     rows.append(["icon.svg", "vector icon", "created in-project", "LOST FREQUENCY contributors", "CC BY-SA 3.0", ""])
     for j in sorted((ROOT / "reports/screenshots").glob("*.jpg")):
         rows.append([str(j.relative_to(ROOT)), "evidence still", "rendered by Godot from this project", "LOST FREQUENCY contributors", "CC BY-SA 3.0", "QA evidence; not a marketing render"])

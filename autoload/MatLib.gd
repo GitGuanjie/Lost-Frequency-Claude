@@ -88,7 +88,10 @@ func get_mat(name: String) -> Material:
 	if _cache.has(name):
 		return _cache[name]
 	var m: Material
-	if PRESETS.has(name):
+	var pbr := _pbr(name)
+	if pbr != null:
+		m = pbr
+	elif PRESETS.has(name):
 		m = surface(PRESETS[name])
 	else:
 		match name:
@@ -178,3 +181,43 @@ func standard(color: Color, rough := 0.8, metal := 0.0, emission := Color(0, 0, 
 		s.emission = emission
 		s.emission_energy_multiplier = emission_energy
 	return s
+
+
+# ------------------------------------------------- CC0 photographic materials
+
+var _pbr_manifest: Dictionary = {}
+var _pbr_loaded := false
+
+
+## Photographic CC0 texture set (Poly Haven) for a preset, when fetched
+## (tools/fetch_assets.py) and enabled in Settings; null otherwise.
+func _pbr(name: String) -> Material:
+	if not bool(Settings.get_value("photo_materials")):
+		return null
+	if not _pbr_loaded:
+		_pbr_loaded = true
+		var p := "res://assets/external/manifest.json"
+		if FileAccess.file_exists(p):
+			var d: Variant = JSON.parse_string(FileAccess.get_file_as_string(p))
+			if d is Dictionary:
+				_pbr_manifest = d.get("materials", {})
+	if not _pbr_manifest.has(name):
+		return null
+	var e: Dictionary = _pbr_manifest[name]
+	var a: String = e["asset"]
+	var base := "res://assets/external/%s/%s_%%s_1k.jpg" % [a, a]
+	if not ResourceLoader.exists(base % "diff"):
+		return null
+	var m := ORMMaterial3D.new()
+	m.albedo_texture = load(base % "diff")
+	var t: Array = e.get("tint", [1, 1, 1])
+	m.albedo_color = Color(t[0], t[1], t[2])
+	if ResourceLoader.exists(base % "nor_gl"):
+		m.normal_enabled = true
+		m.normal_texture = load(base % "nor_gl")
+	if ResourceLoader.exists(base % "arm"):
+		m.orm_texture = load(base % "arm")
+	var r := 1.0 / float(e.get("repeat_m", 2.0))
+	m.uv1_scale = Vector3(r, r, 1.0)
+	m.texture_filter = BaseMaterial3D.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS_ANISOTROPIC
+	return m

@@ -27,6 +27,7 @@ var values: Dictionary = {
 	"show_fps": false,
 	"camcorder": true,
 	"seamless": true,
+	"photo_materials": true,
 }
 
 ## action -> [default keycodes...]; gamepad bindings are added separately.
