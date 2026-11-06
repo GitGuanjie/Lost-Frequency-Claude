@@ -1,0 +1,85 @@
+{
+  "stable_id": "L601",
+  "scene": "res://levels/L601/L601.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-06, 31/31, bot fired L601>EXT#1); stills reviewed by builder only, integrator review pending",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L085"
+  ],
+  "signature": "A bright, silent, seemingly endless modern library that feels like the way out: in its centre metal letters say 'the end is near' over terminals that buzz far too loudly, every straight walk loops back to them and leaves a wall behind you, the floor drops you between other shelves, and somewhere close by a home and an evening field you almost remember fray into the stacks, with six people around a cold fire and a door that only sometimes goes anywhere.",
+  "mechanics": [
+    "illusion_of_escape_bright_quiet_library",
+    "periodic_chunk_streaming_loop_144m",
+    "turn_around_after_loop_meets_wall",
+    "random_noclip_never_exits",
+    "isolation_grows_away_from_centre",
+    "near_total_silence_terminals_buzz",
+    "all_electricity_fails_flashlight_dies",
+    "terminals_work_any_wifi_discouraged_escalating",
+    "taken_at_terminals_fail_state",
+    "fake_realities_home_and_field_blend",
+    "breach_border_returns_to_normal",
+    "inconsistent_exit_inside_fake_reality",
+    "junkies_perceivable_memory_juice_only",
+    "no_other_wanderers_perceived",
+    "gallery_mezzanine_and_sunken_reading_pits"
+  ],
+  "exits": [
+    {
+      "id": "L601>EXT#1",
+      "to": "EXT",
+      "to_label": "Other, safer levels (unnamed on the page)",
+      "trigger": "interact",
+      "label": "A door inside a fake reality opened onto somewhere else",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "The fake realities of The End can sometimes contain exits into other, safer Levels. However, this is not consistent.",
+      "mechanism_basis": "ADAPTATION",
+      "adaptation_reason": "The page says only that fake realities sometimes contain exits and that this is not consistent. Which doors, and the odds, are ours: the home's front door (28% per try) and the field's gate (14% per try), rolled fresh on every try, so the same door works and fails. A failed try breaches the border: you are in the stacks again and everything is normal (page: breaching a border returns everything to normal). The destination is unnamed, so 'to' is the placeholder EXT and the route reports as not built.",
+      "conditions": "inside a fake reality; per-try chance, never consistent; most tries breach back into the library",
+      "hint": "The house's front door glows with an evening you have not seen in a long time. Doors here are not to be trusted.",
+      "risk": "High",
+      "arrival": "from_L601"
+    }
+  ],
+  "no_reliable_exit": "SOURCE: 'A reliable way to leave The End has not been discovered.' The only built exit (L601>EXT#1) is deliberately unreliable; no-clipping never exits (SOURCE); the door you arrived by does not open from this side (ADAPTATION of the neon-sign-door entrance). No victory screen: a successful try hits the framework's honest release boundary because the destination is unnamed.",
+  "documented_edges_not_built": [
+    {
+      "id": "L601>EXT#2",
+      "to": null,
+      "label": "UNKNOWN: exits exist, but there is no way to document them",
+      "confidence": "UNKNOWN",
+      "basis": "SOURCE",
+      "source_section": "Description",
+      "source_quote": "Exits do exist, but there is currently no way to document them.",
+      "reason_not_built": "trigger and destination are undocumentable by the page's own statement; building one would invent it"
+    }
+  ],
+  "content_warnings": [
+    "isolation and dread",
+    "abduction (reported, off-screen: being taken at the terminals ends in a blackout)",
+    "drug-like intoxication (the Junkies' Memory Juice, referenced only)",
+    "manipulative 'happiness' messages (unattributed testimony, paraphrased; the page's body-horror line is not used)"
+  ],
+  "fail_states": [
+    {
+      "kind": "taken",
+      "label": "Used the terminals a third time and was taken (blackout; reported Partygoer abductions)",
+      "basis": "SOURCE",
+      "source_quote": "There have been at least three different reports of Wanderers being taken by Partygoers",
+      "mechanism_basis": "ADAPTATION",
+      "adaptation_reason": "the page advises against the terminals and reports abductions; the three-use escalation, the smiling screens and the blackout are ours, and no Partygoer is shown"
+    },
+    {
+      "kind": "stranded",
+      "label": "Trapped: every straight walk loops back to the centre",
+      "basis": "SOURCE",
+      "source_quote": "the Level seems to loop when walking in one direction"
+    }
+  ],
+  "entity_policy": "No entity is spawned. Partygoers (REPORTED) exist only as the page's warning: a note at the terminals, rising buzz and smiling screens after use, and the off-screen 'taken' fail state; the 'host' they refer to is mentioned once, unnamed, in that note. No other wanderer is ever shown in the library (SOURCE: wanderers cannot perceive each other). Inside the field fake reality the six Junkies are perceivable humans (SOURCE: humans are perceived normally there): static, slumped around a cold fire, non-hostile, unwilling to trade without Memory Juice; nothing is traded because the page does not say what they offer. The page's closing first-person 'smile' monologue is TESTIMONY from an unnamed, unreliable narrator: it appears only as a paraphrased, explicitly labelled terminal message and as the '=)' sign-off on the screens; none of its claims (sending messages, altering articles, named persons) is treated as fact.",
+  "notes": "SOURCE (rev 119; banner says the page is being rewritten): a supposed trap level that creates the illusion of escaping; a seemingly endless modern library; a central main area decorated with metal letters spelling 'the end is near'; near-complete silence (some areas at -6.2 dB); the centre almost as silent but its computer terminals buzz loudly; advice to stay in the centre to avoid isolation; unstable geometry: walking one way loops and turning around then meets a wall; frequent random no-clipping that does not exit; wanderers unable to perceive other wanderers; fake realities: personalised sub-areas replicating familiar environments, physical, with humans perceivable normally, close together, blending transitionally, and returning everything to normal when a border is breached; all electricity fails until you leave except the terminals, which connect to any Wi-Fi; terminals advised against (Partygoers and possibly their 'host'; three reports of abductions); the Junkies (six people, an outpost in the fake realities, trade only with Memory Juice, intoxicate to feel at home, B.N.T.G. rescues failed); entrances: doors that would indicate an exit, most commonly with a neon sign above, or rarely a no-clip fall; exits sometimes inside fake realities, not consistent, no reliable way out. TESTIMONY: the unattributed first-person monologue at the end of the exits section. ADAPTATION: (1) the page gives no map. The playable world is a finite streaming window (ChunkWorld, 24 m chunks, radius 2) over a plan that repeats exactly every 6 chunks (a 144 m period cell): the main area, the two fake realities and the stack layouts recur, so walking one way brings you back to the letters. Crossing a period seam arms a wall across the aisle behind you, placed the moment the seam is out of view; it follows you along the seam and moves to the next seam you cross. (2) Library grammar: 2.1 m double-sided shelf runs (birch end panels, white steel, seeded book spines) in 8.8 m segments on a 2.2 m pitch with 12 m column grid, seeded orientation per chunk; some chunks hold reading tables or a sunken reading pit (three 0.18 m risers). Ceiling 3.2 m. (3) Light: because 'anything that uses electricity' fails, the library is lit by frosted skylights and clerestory ribbons (daylight, never seen directly); desk lamps and downlights are dead. The only screens that glow are the terminals. (4) Main area: a 20.8 m double-height hall (roof 7.6 m) with a 12 m void under one big frosted skylight, a gallery ring at 3.6 m reached by a 20-riser stair, glass balustrades, shelves on the gallery, reading tables beneath; letters on the north wall above the gallery, eight terminals on a back-to-back desk island in the void, buzzing (synth transformer hum). (5) Silence is a very low room tone; isolation (0-1) rises with distance from the nearest main area and eases there or in a fake reality: desaturation, vignette, thicker haze, the room tone drops further and your heartbeat comes up; random no-clips (every ~55-140 s outside the centre and fake realities, more often when isolated) drop you between other shelves 24-48 m away, never out of the level. (6) Fake realities: the page gives none in detail, so we built two personalised but generic ones side by side in every period cell: a family living room and kitchen at dusk whose floorboards, walls and ceiling fray into the stacks (a shelf run pushes into the room), with an open back door onto a garden that becomes an open field under a painted evening sky; the field holds a dead vending machine (from the page's 'corrupted' image credit, a field with a vending machine) and the Junkies' outpost. Walking toward them blends the light and haze gradually; leaving across a border snaps everything back to the library at once. (7) Terminals: first use connects (to any network) and shows an anonymous '=)'; every screen then shows it and the buzz rises; second use shows a labelled-testimony message; third use is the 'taken' fail state. (8) The flashlight is switched off the instant it comes on. (9) Arrival 'start' is the neon-sign-door entrance: you stand inside the hall in front of a plain door whose neon EXIT sign is dead on this side; it does not open. Arrival 'from_L085' (Level 85's documented library no-clip, edge L085>L601#2) drops you into an aisle west of the main area facing it. (10) Notes are paraphrases in our words (survey notes on a reading table, a warning taped to the terminal desk, a B.N.T.G. tag at the gate). Not built: L601>EXT#2 (undocumentable by the page), the B.N.T.G. themselves, Partygoer bodies, any trade, any measurement of the -6.2 dB areas (no instrument works here). QA FIXTURE: in QA mode only, the fake-reality door always opens (the walker bot walks from the hall to the home's front door and fires L601>EXT#1 through the normal interact logic) and random no-clips are off; qa_self_test exercises the inconsistent door, the seam wall, the no-clip, the blend/breach, the terminals and isolation."
+}
