@@ -1,0 +1,107 @@
+{
+ "duplication_pairs": [],
+ "engine": "4.5.1-stable (official)",
+ "failures": [],
+ "levels": [
+  {
+   "build_ms": 285,
+   "collision_shapes": 113,
+   "distinct_layouts_over_3_seeds": 1,
+   "dup_profile": {
+    "boxes": {
+     "-1_-1_0": 14,
+     "-1_0_0": 15,
+     "-1_0_1": 10,
+     "-1_0_5": 1,
+     "-2_-1_2": 3,
+     "-2_-1_5": 5,
+     "-2_-2_3": 2,
+     "-2_0_5": 1,
+     "-2_1_4": 1,
+     "-2_2_3": 2,
+     "-2_2_4": 3,
+     "-2_2_6": 1,
+     "-2_2_7": 1,
+     "-2_3_4": 7,
+     "-2_3_5": 1,
+     "-2_3_6": 1,
+     "-2_3_7": 1,
+     "-2_4_4": 1,
+     "-2_4_5": 5,
+     "-2_4_6": 2,
+     "-2_5_6": 1,
+     "-2_6_7": 1,
+     "-2_7_7": 1,
+     "-3_-2_5": 2,
+     "-3_-2_7": 2,
+     "-4_-1_0": 12,
+     "-4_2_3": 1,
+     "-4_2_4": 2,
+     "-5_2_4": 1,
+     "-6_3_5": 1,
+     "-6_4_7": 1,
+     "-7_0_1": 2,
+     "-7_0_4": 1,
+     "-7_0_6": 1,
+     "0_0_4": 1,
+     "0_0_5": 1,
+     "0_1_5": 3
+    },
+    "materials": {
+     "l256_alu": 948,
+     "l256_bottle": 96,
+     "l256_ceil": 48,
+     "l256_floor": 36,
+     "l256_floor_gal": 12,
+     "l256_gloss": 2172,
+     "l256_l4_carpet": 12,
+     "l256_neon": 696,
+     "l256_neon_soft": 336,
+     "l256_pack": 24,
+     "l256_rail_glass": 48,
+     "l256_seat": 120,
+     "l256_seat_floor": 228,
+     "l256_stair": 300,
+     "l256_wall": 84,
+     "l256_wall_lt": 192,
+     "l256_window": 4
+    }
+   },
+   "exits_declared": 0,
+   "exits_found": 0,
+   "load_ms": 389,
+   "nav": {
+    "exits": [],
+    "map_regions": 1,
+    "map_sync_ticks": 2,
+    "nav_polygons": 358,
+    "start": "(15.0, 4.601972, -2.4)"
+   },
+   "qa_status": "ENGINE_SMOKE_PASS",
+   "save_tested": true,
+   "self_tests": 12,
+   "spawn": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+   },
+   "stable_id": "L256"
+  }
+ ],
+ "renderer": "headless",
+ "started": "2026-11-06T07:34:48",
+ "suites": {
+  "duplication": {
+   "checks": [],
+   "failed": 0,
+   "passed": 1
+  },
+  "level:L256": {
+   "checks": [],
+   "failed": 0,
+   "passed": 24
+  }
+ }
+}
