@@ -5,7 +5,7 @@ Its history was imported from `GitGuanjie/claude-EO` (`lost_frequency/`, branch 
 on 2026-11-06. Engine: Godot **4.5.1** (Forward+).
 
 ## State (2026-11-06)
-- **Built: 23 (see the scoreboard for the current list; this line was written at 19).** L000, L001, L002, L003, L004,
+- **Built: 27** (scoreboard has the list). This batch added L906, L601, L256 and L000_1. L000, L001, L002, L003, L004,
   L005, L006, L007, L008, L009, L010, L011, L012, L014, L019, L025, L037, L188 and L974. 17 are
   story-reachable from Level 0; L974 is developer-only per canon. Fully accepted: 0 (needs a human playtest and
   real-GPU numbers).
@@ -46,6 +46,6 @@ Run one level per QA process: four heavy streamed levels in one process hit the 
   QA runner leaked a nav map for exit-less levels.
 
 ## Next levels (priority)
-Group A is complete, and L404, L200 and L289 are built. Next are the flagships L906, L601, L256, L999, L000_1, L005_1, L006_1 and L808; then Group C/D.
+Next are L999, L005_1, L006_1, L808, L994, L075, L079, L048 and L069, then the rest of Group C/D. Wire a story route into the developer-only levels only where transitions.json documents one.
 Each needs: QA with 0 failures plus the walker bot, two reviewed stills, and `status: PLAYABLE` only after review.
 Use at most 4 parallel builders: six opus builders hit the account usage limit twice.

@@ -25,6 +25,7 @@ var step_height := 0.36
 var flashlight_policy := "allowed"   # allowed | weak | fails | none
 var oxygen_seconds := 40.0
 var stamina_max := 6.0
+var kill_y := -400.0     # "fell out of the world"; levels with deep geometry set rules["kill_y"]
 
 var head: Node3D
 var camera: Camera3D
@@ -126,6 +127,7 @@ func apply_rules(rules: Dictionary) -> void:
 	jump_velocity = rules.get("jump_velocity", jump_velocity)
 	flashlight_policy = rules.get("flashlight", flashlight_policy)
 	oxygen_seconds = rules.get("oxygen_seconds", oxygen_seconds)
+	kill_y = rules.get("kill_y", kill_y)
 	oxygen = oxygen_seconds
 	camera.far = rules.get("view_distance", camera.far)
 	if flashlight_policy == "weak":
@@ -215,7 +217,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		camera.rotation = Vector3.ZERO
 	_flashlight_rules(delta)
-	if global_position.y < -400.0:
+	if global_position.y < kill_y:
 		hurt(1000.0, "fell out of the world")
 
 

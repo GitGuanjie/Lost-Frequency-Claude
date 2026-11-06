@@ -1,8 +1,8 @@
 {
   "stable_id": "L000_1",
   "scene": "res://levels/L000_1/L000_1.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "ENGINE_SMOKE_PASS (2026-11-06, 35/35 level checks incl. 16 self-tests; bot fired L000_1>L000#1); stills pending integrator review",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-06, 35/35, bot fired L000_1>L000#1); stills reviewed by integrator (AI); human review pending",
   "procedural": true,
   "arrivals": [
     "start"

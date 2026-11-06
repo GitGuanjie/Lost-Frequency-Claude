@@ -176,3 +176,14 @@ real 3D structure, continuous level switching, and no obvious boundaries. These 
    believable clutter (vents, outlets, exit signs, ceiling grates, pipes) where the page supports it,
    and motivated lighting with pools and dark gaps. The camcorder filter is global, so don't fake it
    per level.
+
+## 10. Integrator notes from builders (2026-11-06)
+- `rules["kill_y"]` (default -400) sets the fall-out-of-world height; deep levels must lower it.
+- Fog and ambient colours are linear: a dark fog of 0.12 reads khaki-grey; pick colours in linear space.
+- Pooled lights cast no shadows and leak through floors; keep ranges short, or feed the pool per storey.
+- `GeoKit.wall()`: openings stacked at different heights (a window above a door) block the lower one;
+  build multi-storey walls one storey at a time. GeoKit gives transparent materials shadows; disable them by hand.
+- QA nav bakes cover every exit from `start`; exits reachable only by teleport (lifts) must be created only
+  while the player is in their slice.
+- For a chosen-at-runtime destination (`to: null` edges), set the cached edge's `to` just before firing
+  (see L906); a proper API is still pending.

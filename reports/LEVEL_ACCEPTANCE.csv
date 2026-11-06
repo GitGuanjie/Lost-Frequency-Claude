@@ -1,5 +1,5 @@
 level_id,stable_id,group,canonical_source_resolved,correct_identity,unique_signature,complete_scene,real_entrance_tested,real_exit_tested,nav_and_collision_tested,has_gameplay,save_tested,actual_engine_tested,screenshots,fps_evidence,lore_reviewer,qa_status,implementation_status,story_reachable,blocker
-0,L000,A_LOCKED_EXISTING,True,True,True,True,False,True,True,True,True,True,5,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
+0,L000,A_LOCKED_EXISTING,True,True,True,True,False,True,True,True,True,True,7,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
 1,L001,A_LOCKED_EXISTING,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
 2,L002,A_LOCKED_EXISTING,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
 3,L003,A_LOCKED_EXISTING,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
@@ -49,7 +49,7 @@ level_id,stable_id,group,canonical_source_resolved,correct_identity,unique_signa
 601,L601,B_FLAGSHIP,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,False,
 906,L906,B_FLAGSHIP,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,False,
 974,L974,B_FLAGSHIP,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,False,
-0.1,L000_1,C_HIGH_INTEREST,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
+0.1,L000_1,C_HIGH_INTEREST,True,True,True,True,False,True,True,True,True,True,0,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,False,
 0.2,L000_2,C_HIGH_INTEREST,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
 0.3,L000_3,C_HIGH_INTEREST,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
 1.1,L001_1,C_HIGH_INTEREST,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,NOT_STARTED,False,not built
