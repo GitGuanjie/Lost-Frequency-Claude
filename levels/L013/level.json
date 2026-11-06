@@ -1,8 +1,8 @@
 {
   "stable_id": "L013",
   "scene": "res://levels/L013/L013.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT_TESTED",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-06, 29/29, bot fired L013>L000#1); stills reviewed by integrator (AI); human review pending",
   "procedural": true,
   "arrivals": [
     "start"

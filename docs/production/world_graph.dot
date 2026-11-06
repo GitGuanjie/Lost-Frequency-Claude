@@ -15,7 +15,7 @@ digraph LostFrequency {
   L010 [label="L10\nBumper Crop", fillcolor="#2e7d32", fontcolor="white"];
   L011 [label="L11\nThe City That Never Slee", fillcolor="#2e7d32", fontcolor="white"];
   L012 [label="L12\nMatrix", fillcolor="#2e7d32", fontcolor="white"];
-  L013 [label="L13\nThe Boiling Frogs", fillcolor="#e0e0e0", fontcolor="#424242"];
+  L013 [label="L13\nThe Boiling Frogs", fillcolor="#2e7d32", fontcolor="white"];
   L014 [label="L14\nParadise", fillcolor="#2e7d32", fontcolor="white"];
   L019 [label="L19\nAttic Floorboards", fillcolor="#2e7d32", fontcolor="white"];
   L037 [label="L37\nSublimity", fillcolor="#2e7d32", fontcolor="white"];
@@ -162,9 +162,9 @@ digraph LostFrequency {
   L012 -> L019 [color="#2e7d32", penwidth=2.4];
   L012 -> L023 [color="#2e7d32", penwidth=2.4];
   L012 -> L025 [color="#2e7d32", penwidth=2.4];
-  L013 -> L000 [color="#424242"];
-  L013 -> L114 [color="#424242"];
-  L013 -> L289 [style=dashed, color="#616161"];
+  L013 -> L000 [color="#2e7d32", penwidth=2.4];
+  L013 -> L114 [color="#2e7d32", penwidth=2.4];
+  L013 -> L289 [color="#2e7d32", penwidth=2.4];
   L019 -> L289 [color="#2e7d32", penwidth=2.4];
   L019 -> L005 [color="#2e7d32", penwidth=2.4];
   L019 -> L012 [color="#2e7d32", penwidth=2.4];
