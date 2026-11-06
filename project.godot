@@ -7,7 +7,7 @@ config_version=5
 [application]
 
 config/name="LOST FREQUENCY"
-config/version="1.1.0-m2"
+config/version="1.2.0-m3"
 config/description="A source-locked adaptation of the English Backrooms Wikidot continuity. 100-level roster, honest per-level acceptance status."
 run/main_scene="res://ui/MainMenu.tscn"
 config/use_custom_user_dir=true
