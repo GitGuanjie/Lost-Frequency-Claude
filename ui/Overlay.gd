@@ -780,9 +780,11 @@ func toast(text: String, seconds: float = 3.0) -> void:
 		var old := toast_box.get_child(0)
 		toast_box.remove_child(old)
 		old.queue_free()
+	var ref := weakref(pc)   # the toast may already be gone when the timer fires
 	get_tree().create_timer(seconds, true, false, true).timeout.connect(func():
-		if is_instance_valid(pc):
-			pc.queue_free())
+		var n: Object = ref.get_ref()
+		if n != null:
+			n.queue_free())
 
 
 func level_title(title: String, cls: String) -> void:
