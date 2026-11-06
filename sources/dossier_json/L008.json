@@ -1,0 +1,54 @@
+{
+ "stable_id": "L008", "level_id": "8", "title": "Level 8 - \"Cave Systems\"",
+ "survival_class": "SURVIVAL DIFFICULTY CLASS 4; Exit: 4/5 Very Difficult to Exit; Environment: 4/5 Extreme Environmental Risk; Entities: 4/5 Extreme Hostile Presence",
+ "physical_identity": "Sprawling subterranean network of organic karst caves, cold and dark, with almond water pools and rivers, stalagspikes, non-Euclidean connectivity and shifting gravity. M.E.G. marked 9th Road crosses islands of stability.",
+ "scale_topology": "Very large underground network (Handyland alone spans acres); loops and non-linear connections; vertical shafts; fully enclosed.",
+ "anomalies": ["Non-Euclidean loops", "Fluctuating gravity direction and magnitude", "Floating rocks", "Accelerated entropy", "Stalagspikes shaped like hands or objects", "Sudden flooding", "Silvery-coated passages"],
+ "lighting_sound": "Dark; lamps shine dimmer and sounds echo louder than expected; chittering; bioluminescent fungi, red moss, light guides, faint aurora in Handyland.",
+ "entities": [
+  {"name": "Wranglers", "status": "CONFIRMED", "behavior": "Giant serpentine predators that burrow or noclip through rock"},
+  {"name": "Arachnids", "status": "CONFIRMED", "behavior": "Territorial venomous colonies"},
+  {"name": "Hands of tar", "status": "CONFIRMED", "behavior": "Drag victims into hot tar pools"},
+  {"name": "Light guides", "status": "CONFIRMED", "behavior": "Guide wanderers in Hyperspace Lane"},
+  {"name": "Death rats", "status": "CONFIRMED", "behavior": "Nest on Rottnest ceiling"},
+  {"name": "Deathmoths", "status": "CONFIRMED", "behavior": "Territorial females at New Movile Cave"},
+  {"name": "Nguithr'xhurs, smilers, camo crawlers", "status": "CONFIRMED", "behavior": "Predators in Handyland"},
+  {"name": "Wretches", "status": "CONFIRMED", "behavior": "Zombie-like infestations in slums"}
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: wranglers, arachnids, hands of tar, light guides, death rats, deathmoths, scits, dunks, curabitur birds, nguithr'xhurs, smilers, camo crawlers, wretches; some areas empty",
+ "hazards": ["Drowning and flash floods", "Hypothermia", "Toxic or low-oxygen air", "Gravity shifts and disorientation", "Spider colonies", "Tar pools", "Sleeping in the cold", "Hostile U.E.C. facility", "Slums and wretch infection"],
+ "items_communities": ["M.E.G. Outpost Hollow Nest", "Harmouth Speleological Society", "Amor Incrementum temple", "The Lost hunting parties", "B.N.T.G. Facility 3 squatters", "Cerberus Research Facility (U.E.C.)", "Kavragost ruins", "Veiled ruins", "Battery heater and flashlight in vignette"],
+ "entrances": [
+  {"from": "Level 6", "from_id": "6", "slug": null, "method": "Entrance pool of 9th Road", "trigger_type": "swim", "conditions": "Stated by guide", "confidence": "CONFIRMED", "quote": "The Road starts at the entrance pool from Level 6"},
+  {"from": "Level 103", "from_id": "103", "slug": null, "method": "Specific dark hallway", "trigger_type": "walk_in", "conditions": "Specific hallway", "confidence": "CONFIRMED", "quote": "Walking through a specific dark hallway in Level 103 will lead to Level 8."},
+  {"from": "Level 2.1", "from_id": "2.1", "slug": "/level-2-1", "method": "Wander dark concrete caves", "trigger_type": "walk_in", "conditions": "May eventually", "confidence": "CONDITIONAL", "quote": "may eventually lead to Level 8"},
+  {"from": "Level 135", "from_id": "135", "slug": null, "method": "Jump into the well", "trigger_type": "fall", "conditions": "Can lead", "confidence": "CONDITIONAL", "quote": "Jumping into the well in Level 135 can lead to Level 8."},
+  {"from": "Level 4.1", "from_id": "4.1", "slug": "/level-4-1", "method": "Small tunnels", "trigger_type": "walk_in", "conditions": "Most often", "confidence": "CONDITIONAL", "quote": "Small tunnels in Level 4.1 most often lead to Level 8."},
+  {"from": "Level 283", "from_id": "283", "slug": "/level-283", "method": "Multi-coloured playground tubes", "trigger_type": "walk_in", "conditions": "Entrance vanishes behind", "confidence": "CONDITIONAL+ONE-WAY", "quote": "The entrance, however, will vanish as soon as one passes through"}
+ ],
+ "exits": [
+  {"to": "Level 9", "to_id": "9", "slug": "/level-9", "method": "Follow the 9th Road", "trigger_type": "walk_in", "conditions": "Follow markers", "risk": "High", "confidence": "CONFIRMED", "quote": "runs all the way to the exit at Level 9"},
+  {"to": "Level 2", "to_id": "2", "slug": "/level-2", "method": "Rottnest Jungle ceiling vents", "trigger_type": "interact", "conditions": "Death rats; not advised", "risk": "High", "confidence": "CONDITIONAL+DANGEROUS", "quote": "Vents in the ceiling of the Rottnest Jungle are reported to lead to Level 2"},
+  {"to": "Level 41 or Level 91", "to_id": "41", "slug": "/level-41", "method": "Tar pit", "trigger_type": "death", "conditions": "Dragged in, wake elsewhere", "risk": "Extreme", "confidence": "DANGEROUS", "quote": "dragged into either Level 41 or Level 91 upon waking"},
+  {"to": "Level 75", "to_id": "75", "slug": null, "method": "Silvery-coated tight passages", "trigger_type": "walk_in", "conditions": "Rare", "risk": "Unknown", "confidence": "RUMORED", "quote": "Rare, tight passageways coated in its characteristic silvery substance"},
+  {"to": "Level 93", "to_id": "93", "slug": "/level-93", "method": "Noclip through certain cave walls", "trigger_type": "noclip", "conditions": "Specific walls", "risk": "Unknown", "confidence": "CONDITIONAL", "quote": "No-clipping through certain cave walls has been reported to lead to Level 93"},
+  {"to": "Level 203", "to_id": "203", "slug": "/level-203", "method": "Door near Harmouth Camp 4", "trigger_type": "door", "conditions": "Level 203 has no exit", "risk": "Extreme", "confidence": "DANGEROUS+ONE-WAY", "quote": "Entering is ill-advised, since Level 203 has no exit."},
+  {"to": "Level 205", "to_id": "205", "slug": null, "method": "Noclip through ceiling", "trigger_type": "noclip", "conditions": "Purposeful", "risk": "Unknown", "confidence": "CONDITIONAL", "quote": "Purposely no-clipping through the ceiling has been reported"},
+  {"to": "Level 69", "to_id": "69", "slug": "/level-69", "method": "Fall through the floor", "trigger_type": "fall", "conditions": "Reported", "risk": "Unknown", "confidence": "CONDITIONAL", "quote": "Falling through the floor has been reported"}
+ ],
+ "signature_mechanic": "Non-Euclidean caves with per-cavern gravity shifts, flash flooding and accelerated entropy, navigated by M.E.G. road markers that decay unless maintained.",
+ "verticality": "Vertical shafts to climb, floating rocks, gravity-tilted caverns; ceiling nests in Rottnest Jungle.",
+ "do_not": ["Make it a flat maze", "Make almond water harmful to drink", "Invent exits not listed", "Revive the Veiled", "Add edges to Levels 7 or 480"],
+ "content_warnings": ["Gore", "Drowning", "Corpse looting/undressing", "Violence and starvation", "Wretch body horror", "Spiders on body"],
+ "source_completeness": "PARTIAL",
+ "conflicts_notes": "Wikidot CSS noise at top. Entrance list text mixes slug-less levels. Level 6 and 9 are named in text; Level 7 and 480 appear only in link list.",
+ "key_quotes": [
+  {"section": "Nonstandard Physics", "quote": "Turning back may not return one to where they came from before."},
+  {"section": "Nonstandard Physics", "quote": "Entropic effects also intensify when an area is left unobserved."},
+  {"section": "Environment", "quote": "Bone-dry chambers may be completely submerged in a matter of seconds."},
+  {"section": "Tip #1", "quote": "The Road starts at the entrance pool from Level 6"},
+  {"section": "Ecology", "quote": "Some portions of Level 8 appear empty, devoid of entities altogether."},
+  {"section": "Entrances And Exits", "quote": "Jumping into the well in Level 135 can lead to Level 8."},
+  {"section": "Entrances And Exits", "quote": "Entering is ill-advised, since Level 203 has no exit."}
+ ]
+}

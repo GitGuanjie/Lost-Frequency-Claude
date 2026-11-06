@@ -1,6 +1,6 @@
 # Licence
 
-**LOST FREQUENCY** (everything inside this `lost_frequency/` folder: code, data,
+**LOST FREQUENCY** (everything inside this the repository root folder: code, data,
 documentation, procedurally generated media and evidence stills) is released under the
 **Creative Commons Attribution-ShareAlike 3.0 Unported** licence (CC BY-SA 3.0),
 https://creativecommons.org/licenses/by-sa/3.0/.
@@ -20,5 +20,6 @@ DRM or add EULA restrictions, and must not impede alternative distribution.
 Third-party software (not covered by the statement above, used under its own terms):
 Godot Engine (MIT licence), Jolt Physics (MIT licence).
 
-This folder lives inside a repository whose other contents (the EO research) are
-licensed separately by the repository's top-level `LICENSE`.
+Photographic textures in `assets/external/` are CC0 1.0 (Poly Haven); authors and hashes are in
+`assets/external/lock.json`. `sources/` holds dated snapshots of the adapted wiki pages (CC BY-SA 3.0,
+their authors as cited in each file).

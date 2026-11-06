@@ -1,0 +1,317 @@
+{
+ "stable_id": "L013",
+ "level_id": "13",
+ "title": "The Boiling Frogs",
+ "survival_class": "Unsafe. / Secure. / Non-Entity Hazards.",
+ "physical_identity": "Infinite-or-looping 20th-century-style apartment complex of 290 floors; bland beige halls, identical flats, regenerating basic food.",
+ "scale_topology": "290 floors; width and length infinite or looping; stable area geometry, unstable perimeter; indoor, vertical via stairs/elevators.",
+ "anomalies": [
+  "Rooms regenerate stock for Earthborn humans",
+  "Long-term residents vanish",
+  "Level could not support its own weight",
+  "Lethargy rife (esp. floor 283)"
+ ],
+ "lighting_sound": "Dimly lit hallways; sound not stated.",
+ "entities": [],
+ "entity_policy": "NO ENTITY PER SOURCE",
+ "hazards": [
+  "Lethargy and attachment to rooms",
+  "Unexplained disappearances after a decade",
+  "Suicide risk (stated)",
+  "Hostile residents (testimony)",
+  "Addendum destruction"
+ ],
+ "items_communities": [
+  "Fridge meals and microwavable food",
+  "TVs with vintage media",
+  "B.N.T.G. Free Home Project (floor 283)",
+  "M.E.G. interview (floor 277)"
+ ],
+ "entrances": [
+  {
+   "from": "Level 62",
+   "from_id": "62",
+   "slug": "/level-62",
+   "method": "bland basic door",
+   "trigger_type": "door",
+   "conditions": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "bland, basic doors that open to Level 13"
+  },
+  {
+   "from": "Level 151",
+   "from_id": "151",
+   "slug": "/level-151",
+   "method": "bland basic door",
+   "trigger_type": "door",
+   "conditions": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "bland, basic doors that open to Level 13"
+  },
+  {
+   "from": "Level 210",
+   "from_id": "210",
+   "slug": "/level-210",
+   "method": "bland basic door",
+   "trigger_type": "door",
+   "conditions": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "bland, basic doors that open to Level 13"
+  },
+  {
+   "from": "Level 683",
+   "from_id": "683",
+   "slug": "/level-683",
+   "method": "bland basic door",
+   "trigger_type": "door",
+   "conditions": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "bland, basic doors that open to Level 13"
+  },
+  {
+   "from": "Level 979",
+   "from_id": "979",
+   "slug": "/level-979",
+   "method": "bland basic door",
+   "trigger_type": "door",
+   "conditions": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "bland, basic doors that open to Level 13"
+  },
+  {
+   "from": "Level 12",
+   "from_id": "12",
+   "slug": "/level-12",
+   "method": "random featureless doors",
+   "trigger_type": "door",
+   "conditions": "random doors; a few other levels also",
+   "confidence": "CONFIRMED",
+   "quote": "Random, featureless doors in Level 12 go to Level 13"
+  },
+  {
+   "from": "Level 12",
+   "from_id": "12",
+   "slug": "/level-12",
+   "method": "white staircases to the topmost floor",
+   "trigger_type": "stairs",
+   "conditions": "arrive on topmost floor",
+   "confidence": "CONFIRMED",
+   "quote": "White staircases in Level 12 also lead to the topmost floor of Level 13"
+  },
+  {
+   "from": "Level 21",
+   "from_id": "21",
+   "slug": "/level-21",
+   "method": "hallway gradually morphs into a Level 13 hallway",
+   "trigger_type": "walk_in",
+   "conditions": "optical effect seen only by the traveller; onlookers see them vanish",
+   "confidence": "CONDITIONAL",
+   "quote": "gradually morph into one of Level 13's hallways"
+  },
+  {
+   "from": "Level 215 (Harbour Oyster Hotel)",
+   "from_id": "215",
+   "slug": "/level-215",
+   "method": "some hotel room doors lead to Level 13 rooms",
+   "trigger_type": "door",
+   "conditions": "only some rooms",
+   "confidence": "CONDITIONAL",
+   "quote": "Some room doors in Level 215 's \"Harbour Oyster Hotel\" lead to rooms of Level 13"
+  },
+  {
+   "from": "Level 2-FR",
+   "from_id": "2-FR",
+   "slug": "/niveau-2-fr",
+   "method": "elevator",
+   "trigger_type": "elevator",
+   "conditions": "only if operational",
+   "confidence": "CONDITIONAL",
+   "quote": "Should it be operational, Level 2-FR 's elevator can lead to Level 13"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 0",
+   "to_id": "0",
+   "slug": "/level-0",
+   "method": "bland unassuming door",
+   "trigger_type": "door",
+   "conditions": "door design differs from ordinary doors",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "exited to Level 0, Level 114, Level 327, Level 395, or Level 410 by bland and unassuming doors"
+  },
+  {
+   "to": "Level 114",
+   "to_id": "114",
+   "slug": "/level-114",
+   "method": "bland unassuming door",
+   "trigger_type": "door",
+   "conditions": "as above",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "exited to Level 0, Level 114, Level 327, Level 395, or Level 410 by bland and unassuming doors"
+  },
+  {
+   "to": "Level 327",
+   "to_id": "327",
+   "slug": "/level-327",
+   "method": "bland unassuming door",
+   "trigger_type": "door",
+   "conditions": "as above",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "exited to Level 0, Level 114, Level 327, Level 395, or Level 410 by bland and unassuming doors"
+  },
+  {
+   "to": "Level 395",
+   "to_id": "395",
+   "slug": "/level-395",
+   "method": "bland unassuming door",
+   "trigger_type": "door",
+   "conditions": "as above",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "exited to Level 0, Level 114, Level 327, Level 395, or Level 410 by bland and unassuming doors"
+  },
+  {
+   "to": "Level 410",
+   "to_id": "410",
+   "slug": "/level-410",
+   "method": "bland unassuming door",
+   "trigger_type": "door",
+   "conditions": "as above",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "exited to Level 0, Level 114, Level 327, Level 395, or Level 410 by bland and unassuming doors"
+  },
+  {
+   "to": "Level 70",
+   "to_id": "70",
+   "slug": "/level-70",
+   "method": "stairs or elevators down on the bottom floor, into buildings within Level 70",
+   "trigger_type": "stairs",
+   "conditions": "bottom floor only; Level 70 or 208",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "staircases or elevators on the bottom floor of Level 13 leads to buildings within Level 70 or Level 208"
+  },
+  {
+   "to": "Level 208",
+   "to_id": "208",
+   "slug": "/level-208",
+   "method": "stairs or elevators down on the bottom floor",
+   "trigger_type": "stairs",
+   "conditions": "bottom floor only",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "staircases or elevators on the bottom floor of Level 13 leads to buildings within Level 70 or Level 208"
+  },
+  {
+   "to": "Level 157",
+   "to_id": "157",
+   "slug": "/level-157",
+   "method": "touch a generated chessboard flanked by two chairs",
+   "trigger_type": "interact",
+   "conditions": "room must generate it; artificial arrangement and inhabited rooms do not work",
+   "risk": "not stated",
+   "confidence": "CONDITIONAL",
+   "quote": "touching the chessboard leads to Level 157"
+  },
+  {
+   "to": "Level 235",
+   "to_id": "235",
+   "slug": "/level-235",
+   "method": "open a door labelled '235'",
+   "trigger_type": "door",
+   "conditions": "must be found arbitrarily",
+   "risk": "not stated",
+   "confidence": "CONDITIONAL",
+   "quote": "attempting to open it will teleport you to the level of the same number"
+  },
+  {
+   "to": "Level 275",
+   "to_id": "275",
+   "slug": "/level-275",
+   "method": "red doors",
+   "trigger_type": "door",
+   "conditions": "none stated",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "red doors lead to Level 275"
+  },
+  {
+   "to": "Level 289",
+   "to_id": "289",
+   "slug": "/level-289",
+   "method": "noclip through a deeper-yellow wall",
+   "trigger_type": "noclip",
+   "conditions": "repeated failure means wrong wall",
+   "risk": "not stated",
+   "confidence": "CONDITIONAL",
+   "quote": "can lead to Level 289 if noclipped through"
+  },
+  {
+   "to": "Level 387",
+   "to_id": "387",
+   "slug": "/level-387",
+   "method": "enter any apartment building",
+   "trigger_type": "walk_in",
+   "conditions": "'theoretically'; scarcely documented",
+   "risk": "not stated",
+   "confidence": "RUMORED",
+   "quote": "Theoretically, entering any apartment building can lead to Level 387"
+  },
+  {
+   "to": "Level 280",
+   "to_id": "280",
+   "slug": "/level-280",
+   "method": "staircase changes and ascends endlessly",
+   "trigger_type": "stairs",
+   "conditions": "rare",
+   "risk": "not stated",
+   "confidence": "CONDITIONAL",
+   "quote": "staircases can change and begin ascending with no end, leading to Level 280"
+  }
+ ],
+ "signature_mechanic": "Comfortable monotony: regenerating basic supplies make staying easy; lethargy and attachment gradually trap residents, who may vanish after a decade.",
+ "verticality": "290 floors via plentiful stairs and unreliable elevators; topmost floor receives Level 12 stairs; bottom floor stairs lead to L70/208.",
+ "do_not": [
+  "Do not add entities or monsters; the level is 'Non-Entity Hazards'.",
+  "Do not explain the disappearances; the page says there is no evidence.",
+  "Do not treat interview statements as article fact (Corvette is hostile and paranoid).",
+  "Do not make the chessboard exit buildable by the player; artificial arrangements do not work.",
+  "Do not add windows; the interview describes rooms without windows (testimony).",
+  "Do not state the level has a fixed perimeter; page says infinite or looping."
+ ],
+ "content_warnings": [
+  "Suicide mention",
+  "Abusive/crude language in interviews",
+  "Implied sexual content",
+  "Mass-casualty addendum"
+ ],
+ "source_completeness": "COMPLETE",
+ "conflicts_notes": "Both interviews are headed \"Began Recording at\" 07:19. Addendum is dated 28/06/22 yet says thousands left \"as of July\". Interviews are TESTIMONY.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "Level 13 has 290 floors in total, spanning a width and length that is either infinite or looping."
+  },
+  {
+   "section": "Description",
+   "quote": "its renewal deliberately targets Earthborn humans"
+  },
+  {
+   "section": "Residents",
+   "quote": "the objective truth is that there is no evidence to support any hypothesis"
+  },
+  {
+   "section": "Exits",
+   "quote": "Should a room generate a chessboard and two chairs, touching the chessboard leads to Level 157."
+  },
+  {
+   "section": "Addendum",
+   "quote": "an estimated 12% of Level 13 destroyed, a further 41% of it damaged"
+  }
+ ]
+}

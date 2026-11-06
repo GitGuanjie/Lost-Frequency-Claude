@@ -1,0 +1,160 @@
+{
+ "stable_id": "L004",
+ "level_id": "4",
+ "title": "Abandoned Office",
+ "survival_class": "not stated",
+ "physical_identity": "Empty office building, almost no furniture; most windows blacked out; Almond Water coolers, vending machines and fountains scattered.",
+ "scale_topology": "Not stated (no size or topology given); indoor office; stairways and elevators serve as exits.",
+ "anomalies": [
+  "Un-blacked windows are traps",
+  "Exits may vanish when out of line of sight"
+ ],
+ "lighting_sound": "Not stated.",
+ "entities": [
+  {
+   "name": "Hounds",
+   "status": "CONFIRMED",
+   "behavior": "Observed on the level; no behaviour described."
+  },
+  {
+   "name": "Dullers",
+   "status": "CONFIRMED",
+   "behavior": "Observed on the level; no behaviour described."
+  },
+  {
+   "name": "Smiler",
+   "status": "RUMORED",
+   "behavior": "One person claimed a sighting; no evidence."
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Hounds, Dullers (observed, no behaviour); Smiler unverified claim",
+ "hazards": [
+  "Un-blacked windows ('traps')",
+  "Hounds/Dullers observed",
+  "Hostile cult Amor Incrementum"
+ ],
+ "items_communities": [
+  "Almond Water (coolers, vending machines, fountains)",
+  "M.E.G. Base Omega",
+  "Amor Incrementum",
+  "T.B.D."
+ ],
+ "entrances": [
+  {
+   "from": "The Hub",
+   "from_id": null,
+   "slug": "/the-hub",
+   "method": "No-Clip into a wall in The Hub",
+   "trigger_type": "noclip",
+   "conditions": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "No-Clip into a wall in The Hub"
+  },
+  {
+   "from": "Level 3",
+   "from_id": "3",
+   "slug": "/level-3",
+   "method": "elevators",
+   "trigger_type": "elevator",
+   "conditions": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "from Level 3 using the elevators"
+  },
+  {
+   "from": "Level 2",
+   "from_id": "2",
+   "slug": "/level-2",
+   "method": "an unlocked door",
+   "trigger_type": "door",
+   "conditions": "door must be found and unlocked",
+   "confidence": "CONDITIONAL",
+   "quote": "finding a door on Level 2 that is unlocked"
+  },
+  {
+   "from": "Level 283 (The Pit)",
+   "from_id": "283",
+   "slug": "/level-283",
+   "method": "falling through The Pit teleports divers through Level 4's ceiling",
+   "trigger_type": "dive",
+   "conditions": "only 'has the chance'",
+   "confidence": "CONDITIONAL+DANGEROUS",
+   "quote": "has the chance of teleporting divers through the ceiling of Level 4"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 5",
+   "to_id": "5",
+   "slug": "/level-5",
+   "method": "office-style stairways or occasional elevators",
+   "trigger_type": "stairs",
+   "conditions": "exits are 'occasional'; may vanish when out of sight",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "occasional exits that lead to Level 5 and Level 6"
+  },
+  {
+   "to": "Level 6",
+   "to_id": "6",
+   "slug": "/level-6",
+   "method": "office-style stairways or occasional elevators",
+   "trigger_type": "stairs",
+   "conditions": "as above",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "occasional exits that lead to Level 5 and Level 6"
+  },
+  {
+   "to": "Level 3",
+   "to_id": "3",
+   "slug": "/level-3",
+   "method": "occasional elevators",
+   "trigger_type": "elevator",
+   "conditions": "'may even' lead back",
+   "risk": "not stated",
+   "confidence": "CONDITIONAL",
+   "quote": "occasional elevators that may even lead back to Level 3"
+  },
+  {
+   "to": "Level 71",
+   "to_id": "71",
+   "slug": "/level-71",
+   "method": "stairs leading to a basement",
+   "trigger_type": "stairs",
+   "conditions": "rarely found",
+   "risk": "not stated",
+   "confidence": "CONFIRMED (rare)",
+   "quote": "Rarely, stairs leading to a basement can be found, and these go to Level 71"
+  }
+ ],
+ "signature_mechanic": "Safe, supply-rich empty office where Almond Water is plentiful; blacked-out windows with rare trap windows; exits (stairs/elevators) can vanish out of line of sight.",
+ "verticality": "None stated beyond stairs/elevators as exits; basement stair to Level 71 is rare.",
+ "do_not": [
+  "Do not make the level hostile or entity-heavy; page says it is mostly devoid of entities.",
+  "Do not add a Smiler as confirmed.",
+  "Do not invent room layout lore, lighting colour, or hours; page is silent.",
+  "Do not make exits permanent: they can disappear out of line of sight.",
+  "Do not treat page banner placeholders as a survival class."
+ ],
+ "content_warnings": [],
+ "source_completeness": "COMPLETE",
+ "conflicts_notes": "Page has 'being rewritten' banner and unrendered class placeholders; creator in history differs from cite author.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "Level 4 resembles an empty office building, though it is almost completely devoid of furniture."
+  },
+  {
+   "section": "Description",
+   "quote": "Any windows that have not been blacked out are considered traps, and should be avoided at all costs."
+  },
+  {
+   "section": "Description",
+   "quote": "Level 4 is very easy to escape from, and also return to."
+  },
+  {
+   "section": "Exits",
+   "quote": "once you lose a direct line of sight with them, they may disappear unexpectedly"
+  }
+ ]
+}

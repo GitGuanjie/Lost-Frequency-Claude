@@ -1,0 +1,86 @@
+{
+ "stable_id": "L052",
+ "level_id": "52",
+ "title": "DESTINATION REACHED",
+ "survival_class": "not stated",
+ "physical_identity": "A dark limestone cave reached by a shallow crawl passage; stalactites, cave drawings, handprints, claw marks, a cold campfire and three mutilated corpses.",
+ "scale_topology": "Large cavern of unknown length; ceiling heights from under 2 m upward; interior only; entrance is one-way.",
+ "anomalies": [
+  "Entrance mouth smaller from inside",
+  "Diary dates inconsistent with body decay",
+  "Increasing 'eyes' in notes"
+ ],
+ "lighting_sound": "No natural light; artificial source necessary. Sound not stated except dripping implied by leaking water.",
+ "entities": [
+  {
+   "name": "Unseen observer ('eyes')",
+   "status": "REPORTED",
+   "behavior": "Only trace of an intelligent life form is the courier's feeling of being watched; no entity described."
+  }
+ ],
+ "entity_policy": "NO ENTITY PER SOURCE (a watcher is reported by diary only)",
+ "hazards": [
+  "Total darkness",
+  "Sparse food and water",
+  "Impossible exit",
+  "Unseen observer (diary)",
+  "Mutilated bodies"
+ ],
+ "items_communities": [
+  "Dina A.'s notebook",
+  "Rucksack and delivery instructions",
+  "Crude prehistoric tools",
+  "Handheld phone footage"
+ ],
+ "entrances": [
+  {
+   "from": "Plane #445",
+   "from_id": "445",
+   "slug": "/level-445",
+   "method": "shallow passage into a large cavern",
+   "trigger_type": "walk_in",
+   "conditions": "remains found three metres from the entrance in Plane #445; exact entrance mechanism not stated",
+   "confidence": "CONFIRMED+ONE-WAY",
+   "quote": "a shallow passage, making movement difficult"
+  }
+ ],
+ "exits": [],
+ "signature_mechanic": "One-way descent into a dark cave where being watched drives the traveller to madness; there is no way back.",
+ "verticality": "None; ceilings vary in height, no stairs or levels stated.",
+ "do_not": [
+  "Do not add a monster, chaser, or visible 'eyes' entity.",
+  "Do not add an exit or a way back through the entrance.",
+  "Do not name the Agency as a hub or add M.E.G. presence; the page does not.",
+  "Do not treat the Level 4 link on the symbol 'Ω' as a stated origin; it is only a link target.",
+  "Do not make the cave bright or give it electric lights.",
+  "Do not give the remains lore beyond what is stated (cause unknown)."
+ ],
+ "content_warnings": [
+  "Mutilated and decomposing remains",
+  "Madness and implied death"
+ ],
+ "source_completeness": "NARRATIVE_FORMAT",
+ "conflicts_notes": "Link list maps the 'Ω' symbol to /level-4 and has a spurious /a-quick-one link; Plane #51 and #53 appear only in link list. Footage content not provided.",
+ "key_quotes": [
+  {
+   "section": "Intro",
+   "quote": "Attempting to exit through the entrance is impossible"
+  },
+  {
+   "section": "Intro",
+   "quote": "Navigation inside the cavern is difficult due to a lack of natural light"
+  },
+  {
+   "section": "Intro",
+   "quote": "the currently accepted hypothesis is that Plane #52 is a limestone cave"
+  },
+  {
+   "section": "Intro",
+   "quote": "I se e yo u"
+  },
+  {
+   "section": "End",
+   "quote": "all further requests to supply Plane #52 are to be ignored"
+  }
+ ]
+}

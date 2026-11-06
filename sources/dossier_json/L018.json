@@ -1,0 +1,113 @@
+{
+ "stable_id": "L018",
+ "level_id": "18",
+ "title": "Memories",
+ "survival_class": "not stated (class bullets are unfilled template placeholders)",
+ "physical_identity": "A level that appears as a childhood memory (age 2-5) of the wanderer, commonly a preschool or daycare, with whispering voices and a guide plushie.",
+ "scale_topology": "Not stated; room-scale memory spaces implied; void for those with no memories.",
+ "anomalies": [
+  "Appears differently per viewer",
+  "Whispering voices of regrets",
+  "Resurfaces forgotten memories/dead pets",
+  "Allergies suppressed",
+  "Level 'enjoys' company"
+ ],
+ "lighting_sound": "Not stated; whispering voices are the only sound.",
+ "entities": [
+  {
+   "name": "The Plush Dino (Entity 198)",
+   "status": "CONFIRMED",
+   "behavior": "Rare; sentient plushie that wanders, guides and offers food and water; induces contentment."
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: The Plush Dino",
+ "hazards": [
+  "Addictive/persuasive to stay",
+  "Emotional distress from voices and memories"
+ ],
+ "items_communities": [
+  "Food and water from the Plush Dino",
+  "Outpost The Children (20-25 people)"
+ ],
+ "entrances": [
+  {
+   "from": "Anywhere (memory resurgence)",
+   "from_id": null,
+   "slug": null,
+   "method": "Appear when experiencing a resurgence of memories",
+   "trigger_type": "condition",
+   "conditions": "No consistent entryway",
+   "confidence": "CONDITIONAL",
+   "quote": "Most commonly, wanderers appear whenever they experience a resurgence of memories."
+  },
+  {
+   "from": "Level 17",
+   "from_id": "17",
+   "slug": "/level-17",
+   "method": "Consistent but rare entrance",
+   "trigger_type": "unknown",
+   "conditions": "rare; method not given",
+   "confidence": "CONFIRMED",
+   "quote": "a consistent entrance on level-17 , despite being rare"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 19",
+   "to_id": "19",
+   "slug": "/level-19",
+   "method": "Turn around and leave",
+   "trigger_type": "walk_in",
+   "conditions": "simplest method",
+   "risk": "Low",
+   "confidence": "CONFIRMED",
+   "quote": "the most simple method is to turn around and leave, which will take you to Level 19"
+  },
+  {
+   "to": "Level of choice",
+   "to_id": null,
+   "slug": null,
+   "method": "Follow The Plush Dino for an extended period",
+   "trigger_type": "condition",
+   "conditions": "Plush Dino must be encountered; may take a long time",
+   "risk": "Low",
+   "confidence": "CONDITIONAL",
+   "quote": "you can follow him for an extended period, which will take you to the Level you desire to go to"
+  }
+ ],
+ "signature_mechanic": "A personalised childhood-memory space whispering your regrets, kind to visitors and guided by a sentient plush dinosaur.",
+ "verticality": "Not stated.",
+ "do_not": [
+  "Do not add hostile entities: the page says no threats.",
+  "Do not give it a fixed static layout claim: it differs per viewer.",
+  "Do not invent lighting or sound; not stated.",
+  "Do not claim a survival class."
+ ],
+ "content_warnings": [
+  "emotional/psychological content (regrets, dead childhood animals)"
+ ],
+ "source_completeness": "COMPLETE",
+ "conflicts_notes": "Level 17's page does not mention an exit to Level 18. First line 'Level 18 is the 19th Level of the Backrooms' is as written. Outdated banner.",
+ "key_quotes": [
+  {
+   "section": "Intro",
+   "quote": "Level 18 is the 19th Level of the Backrooms. It resembles a childhood memory from your past."
+  },
+  {
+   "section": "Description",
+   "quote": "The most common appearance it can undertake is a preschool or a daycare."
+  },
+  {
+   "section": "Description",
+   "quote": "the most common things it will whisper are your biggest regrets or biggest mistakes"
+  },
+  {
+   "section": "Description",
+   "quote": "The Level itself has no threats around and is known to \"enjoy\" company."
+  },
+  {
+   "section": "Exits",
+   "quote": "the most simple method is to turn around and leave, which will take you to Level 19"
+  }
+ ]
+}

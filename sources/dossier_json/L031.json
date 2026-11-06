@@ -1,0 +1,185 @@
+{
+ "stable_id": "L031",
+ "level_id": "31",
+ "title": "The Roller Rink",
+ "survival_class": "Devoid of Harmful Entities (first two class items unrendered placeholders {$one}, {$two})",
+ "physical_identity": "Infinitely looping roller rink with arcade, food court, skate rental and cinema; wooden rink floor, colourful dimmed lights, pop music.",
+ "scale_topology": "Looping interior; rink is largest; arcade east; cinema north; food court small; indoor; single level.",
+ "anomalies": [
+  "Infinite loop",
+  "Cinema plays favorite movies",
+  "Compass works (diary)",
+  "Familiarity decays with long stays (diary)"
+ ],
+ "lighting_sound": "Colourful fluorescents, star fixture, usually dimmed; muffled radio pop, skates, laughter, arcade noise.",
+ "entities": [
+  {
+   "name": "Facelings (general)",
+   "status": "CONFIRMED",
+   "behavior": "Docile employees or lone customers; wander, play arcade games, converse in food court and Cinema."
+  },
+  {
+   "name": "Food court Faceling",
+   "status": "CONFIRMED",
+   "behavior": "Blank name tag, serves free food, cleans up, refuses to answer questions about the Backrooms."
+  },
+  {
+   "name": "DJ Faceling",
+   "status": "CONFIRMED",
+   "behavior": "Occasionally seen inside the south DJ station selecting songs."
+  },
+  {
+   "name": "The Coach",
+   "status": "CONFIRMED",
+   "behavior": "Native Faceling; friendly, smart; lessons, remembers names, leads wanderers out."
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Facelings, The Coach",
+ "hazards": [
+  "Complacency and long stays",
+  "Dehydration if one stops eating (TESTIMONY)"
+ ],
+ "items_communities": [
+  "Green arcade card",
+  "Free food and soda, almond water",
+  "Skate rental",
+  "Venosha temporary camps"
+ ],
+ "entrances": [
+  {
+   "from": "Level 2",
+   "from_id": "2",
+   "slug": "/level-2",
+   "method": "wooden door with music playing behind it",
+   "trigger_type": "door",
+   "conditions": "infrequent appearance",
+   "confidence": "CONDITIONAL",
+   "quote": "wooden door in Level 2 or Level 3 that has music playing on the other side"
+  },
+  {
+   "from": "Level 3",
+   "from_id": "3",
+   "slug": "/level-3",
+   "method": "wooden door with music playing behind it",
+   "trigger_type": "door",
+   "conditions": "infrequent appearance",
+   "confidence": "CONDITIONAL",
+   "quote": "wooden door in Level 2 or Level 3 that has music playing on the other side"
+  },
+  {
+   "from": "Level 67",
+   "from_id": "67",
+   "slug": "/level-67",
+   "method": "consuming a Least Favorite/Hated Pastry",
+   "trigger_type": "item",
+   "conditions": "'may lead'",
+   "confidence": "CONDITIONAL",
+   "quote": "Consuming one of the Least Favorite/Hated Pastries on Level 67 may lead to this level"
+  },
+  {
+   "from": "Level 210",
+   "from_id": "210",
+   "slug": "/level-210",
+   "method": "touching a hyperlink leading here",
+   "trigger_type": "interact",
+   "conditions": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "Touching a hyperlink leading to this level in Level 210 will send one here"
+  },
+  {
+   "from": "Unnamed level with brick electrical station",
+   "from_id": null,
+   "slug": null,
+   "method": "wooden door within brick walls of a forgotten electrical station",
+   "trigger_type": "door",
+   "conditions": "origin level not stated (diary)",
+   "confidence": "UNKNOWN (TESTIMONY)",
+   "quote": "the wooden door within the brick walls of a long-forgotten electrical station"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 40",
+   "to_id": "40",
+   "slug": "/level-40",
+   "method": "noclip into any working arcade game",
+   "trigger_type": "noclip",
+   "conditions": "working game in the arcade portion",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "No-clipping into any working game in the arcade portion will transport one to Level 40"
+  },
+  {
+   "to": "Level 70 (building)",
+   "to_id": "70",
+   "slug": "/level-70",
+   "method": "white door engraved 70",
+   "trigger_type": "door",
+   "conditions": "must be found; diary places it in a back arcade area with covered machines",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "a white door in this level with the number 70 engraved on it"
+  },
+  {
+   "to": "Level 232",
+   "to_id": "232",
+   "slug": "/level-232",
+   "method": "door labelled \"Employees only!\" in the food court",
+   "trigger_type": "door",
+   "conditions": "diary claims people who enter do not return",
+   "risk": "unverified (TESTIMONY)",
+   "confidence": "CONFIRMED",
+   "quote": "a door labeled \"Employees only!\" in the food court will send you to Level 232"
+  },
+  {
+   "to": "Unspecified (Coach leads)",
+   "to_id": null,
+   "slug": null,
+   "method": "the Coach leads you to an exit if asked",
+   "trigger_type": "condition",
+   "conditions": "ask the Coach; automatic after a prolonged stay",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "The Coach will then attempt to lead you to an exit"
+  }
+ ],
+ "signature_mechanic": "Comfort trap: free food, games, skates and music keep wanderers; the Coach pushes them to leave before familiarity turns to apathy.",
+ "verticality": "None; cinema benches in a small stepped fashion.",
+ "do_not": [
+  "Do not add hostile entities; class is 'Devoid of Harmful Entities'.",
+  "Do not make the Coach a villain; he is protective, and the diary is TESTIMONY.",
+  "Do not give the Coach a stated exit destination; the page names none.",
+  "Do not make Level 30/32 exits; they appear only in the link list.",
+  "Do not treat Employees-only door as deadly in canon; only a diary claim.",
+  "Do not build a huge rink; infinity is a loop.",
+  "Do not make Jonathan a playable or present NPC; he is a past incident."
+ ],
+ "content_warnings": [
+  "Despair/apathy",
+  "Implied death by dehydration"
+ ],
+ "source_completeness": "UNUSUAL_FORMAT",
+ "conflicts_notes": "Diary says the Coach 'failed to help' others (TESTIMONY). Closing note says Liminal Echo is suspected but unknown. Link list includes Levels 30 and 32 not in body.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "Level 31 is a infinitely looping roller rink."
+  },
+  {
+   "section": "The Food Court",
+   "quote": "will serve food and drinks for free if asked"
+  },
+  {
+   "section": "Skate Rental",
+   "quote": "He can also lead you out of this level if asked."
+  },
+  {
+   "section": "Entrances and Exits",
+   "quote": "No-clipping into any working game in the arcade portion will transport one to Level 40."
+  },
+  {
+   "section": "Closing note",
+   "quote": "Whatever you do, listen to The Coach, and most importantly, do not stay too long."
+  }
+ ]
+}

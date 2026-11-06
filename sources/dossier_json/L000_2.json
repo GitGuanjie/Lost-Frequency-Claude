@@ -1,0 +1,80 @@
+{
+ "stable_id": "L000_2",
+ "level_id": "0.2",
+ "title": "Remodeled Mess",
+ "survival_class": "not stated",
+ "physical_identity": "Sub-section made by Backrooms Remodeling Co.: a pristine remodeled Level 0 (dry red carpet, white walls, Wi-Fi, outlets) that collapses on entry, revealing an unfinished house.",
+ "scale_topology": "Small-to-unspecified indoor sub-section between Level 0 and Level 1; extent not stated.",
+ "anomalies": [
+  "pristine until entered, then chain-reaction collapse toward the exit door",
+  "fully resets upon re-entry"
+ ],
+ "lighting_sound": "Not stated (Wi-Fi and outlets work; Level 0 buzz quiets at the entrance region).",
+ "entities": [],
+ "entity_policy": "NO ENTITY PER SOURCE",
+ "hazards": [
+  "falling ceiling tiles and toppling walls",
+  "floor collapse",
+  "dangerous dust"
+ ],
+ "items_communities": [
+  "recovered documents 1-3 and a clipboard",
+  "no known bases, outposts or communities"
+ ],
+ "entrances": [
+  {
+   "from": "Level 0",
+   "from_id": "0",
+   "slug": "/level-0",
+   "method": "find a door where buzz quiets, carpet drier, rooms under construction",
+   "trigger_type": "door",
+   "conditions": "chance of finding it",
+   "confidence": "CONDITIONAL",
+   "quote": "there's a chance of finding a door to Level 0.2"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 0",
+   "to_id": "0",
+   "slug": "/level-0",
+   "method": "door back the way you came",
+   "trigger_type": "door",
+   "conditions": "none stated",
+   "risk": "debris, dust",
+   "confidence": "CONFIRMED",
+   "quote": "finding a door will lead back to Level 0"
+  }
+ ],
+ "signature_mechanic": "Pristine remodeled rooms collapse in a chain reaction toward the exit door, revealing an unfinished house; re-entry resets everything.",
+ "verticality": "Floor collapses but no lower space is stated; none required.",
+ "do_not": [
+  "add crew NPCs or enemies",
+  "add an exit to Level 1",
+  "make destruction permanent",
+  "claim collapse is deliberate"
+ ],
+ "content_warnings": [
+  "none"
+ ],
+ "source_completeness": "PARTIAL",
+ "conflicts_notes": "Described as between Level 0 and Level 1 but only a Level 0 link is given. Document 3 is truncated ('The Rest of the page has been ripped off').",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "a revamped or \"remodeled\" version of Level 0"
+  },
+  {
+   "section": "Description",
+   "quote": "completely fixed as if nothing occurred"
+  },
+  {
+   "section": "Bases, Outposts and Communities",
+   "quote": "There are no known bases, outposts or communities on this Level."
+  },
+  {
+   "section": "Entrances",
+   "quote": "there's a chance of finding a door to Level 0.2"
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "stable_id": "L100", "level_id": "100", "title": "Brief Peace",
+ "survival_class": "not stated",
+ "physical_identity": "A thin straight strip of pale tropical sand in an infinite, nearly static turquoise ocean under a clear sun; periodic gravestones; tended by a tall tendril-armed black being. All via narrator testimony.",
+ "scale_topology": "Outdoor; endless straight sand spit (walked for hours without change) in a boundless ocean; no other land.",
+ "anomalies": ["static ocean, tide never changes", "stagnant wind, no clouds", "gravestones for forgotten people from other worlds appear along the strip", "a being buries and etches headstones, carries survivors away", "levels' sand shrinks to a needle when swimming away"],
+ "lighting_sound": "Clear bright tropical sun, basic blue sky gradient, no clouds; small waves near shore, still sea beyond; stagnant wind. Other sound not stated.",
+ "entities": [
+  {"name": "Unnamed tall black tendril-armed being", "status": "REPORTED", "behavior": "About 10 ft, mute, buries forgotten people, saves and carries Holly away"},
+  {"name": "Vantablack figure", "status": "REPORTED", "behavior": "Glimpsed briefly on awakening; likely the same being"}
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: one non-hostile tall black being (single-witness testimony)",
+ "hazards": ["drowning/exhaustion when swimming out", "salt water burning", "sun and fatigue on long walks", "burial in sand on arrival (narrator)"],
+ "items_communities": ["headstones with epitaphs and small accessories (photographs)", "no communities", "level reserved as Level 100 by Holly Clove, pending approval"],
+ "entrances": [
+  {"from": "Earth", "from_id": null, "slug": null, "method": "Jumped from a cliff into the ocean while picturing a beach, arrived on the sand strip", "trigger_type": "fall", "conditions": "single testimony; no early level used", "confidence": "RUMORED", "quote": "She pictured the beach, and took a final step."}
+ ],
+ "exits": [
+  {"to": "Level 4 (the office world, Base Omega)", "to_id": "4", "slug": "/level-4", "method": "Swim out to near-drowning; the black being carries her away", "trigger_type": "death", "conditions": "single testimony; requires near-death and the being", "risk": "may drown", "confidence": "ONE-WAY+DANGEROUS", "quote": "gently wrapped its tendrils around her waist"}
+ ],
+ "signature_mechanic": "An endless motionless strip of sand and sea with long-spaced graves; wandering is fruitless, and the only way out is exhausting oneself swimming until a gentle mute being rescues and carries the player away.",
+ "verticality": "None.",
+ "do_not": ["add weather or day-night", "add other land or settlements", "make the being hostile or vocal", "show the cliff or abuse scenes", "invent a Description section"],
+ "content_warnings": ["suicide depiction (page-stated)", "drowning", "cancer", "slight sexual detail", "parental abuse", "alcohol", "burial alive", "profanity"],
+ "source_completeness": "NARRATIVE_FORMAT",
+ "conflicts_notes": "Holly first says the level was only sand and water, then later reveals graves and the being. No entrance/exit sections; edges derived from narrative. Link list includes nav entries (Level 99, 101).",
+ "key_quotes": [
+  {"section": "Flashback", "quote": "a thin, straight stretch of sand in an infinite, nearly static ocean"},
+  {"section": "Interview", "quote": "The tide never rose or anything, and the wind was pretty… stagnant."},
+  {"section": "Interview", "quote": "I got to this level directly from Earth."},
+  {"section": "Flashback", "quote": "The static ocean water gave her no pushback"},
+  {"section": "Flashback", "quote": "The creature was at least ten foot tall"},
+  {"section": "Flashback", "quote": "You do it for people who are forgotten, don't you?"},
+  {"section": "Interview", "quote": "I'd like to take the number 100."}
+ ]
+}

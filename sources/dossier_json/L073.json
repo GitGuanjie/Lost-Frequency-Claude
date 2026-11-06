@@ -1,0 +1,133 @@
+{
+ "stable_id": "L073",
+ "level_id": "73",
+ "title": "\ud835\udd7f\ud835\udd8d\ud835\udd8a \ud835\udd7d\ud835\udd8a\ud835\udd89\ud835\udd91\ud835\udd86\ud835\udd93\ud835\udd89\ud835\udd98",
+ "survival_class": "not stated",
+ "physical_identity": "Medium-sized island with crimson-stained black ground under a fixed full moon, surrounded by ocean; the Silver Castle on the highest point is the only safe place.",
+ "scale_topology": "Finite outdoor island plus unexplored ocean; castle with three floors and an attic.",
+ "anomalies": [
+  "no day/night; fixed moon",
+  "cloud blackouts",
+  "castle impenetrable, infinite food and water",
+  "you almost always arrive within sight of the castle"
+ ],
+ "lighting_sound": "Near-perpetual darkness lit by a fixed full moon; artificial light forbidden outside; castle lit and furnished.",
+ "entities": [
+  {
+   "name": "Windows, Smilers, Deathmoths, Clumps, Dullers, Hounds, Skin-Stealers, Death Rats, Camo Crawlers",
+   "status": "CONFIRMED",
+   "behavior": "extremely hostile; hunt in groups"
+  },
+  {
+   "name": "CORAN",
+   "status": "CONFIRMED",
+   "behavior": "castle-bound; kills other entities, never harms humans"
+  },
+  {
+   "name": "Unidentified aquatic entities",
+   "status": "CONFIRMED",
+   "behavior": "in the ocean"
+  },
+  {
+   "name": "Great Hound",
+   "status": "REPORTED",
+   "behavior": "claimed slain by CORAN"
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Windows, Smilers, Deathmoths, Clumps, Dullers, Hounds, Skin-Stealers, Death Rats, Camo Crawlers, aquatic entities, CORAN",
+ "hazards": [
+  "one entity per 3.3 m2",
+  "artificial light",
+  "looking around or stopping",
+  "the ocean",
+  "looking outside castle windows"
+ ],
+ "items_communities": [
+  "Coran's Children (37)",
+  "infinite food/water at the table",
+  "weak castle Wi-Fi",
+  "Frontrooms paintings (not exits)"
+ ],
+ "entrances": [
+  {
+   "from": "Level 9.1",
+   "from_id": "9.1",
+   "slug": "/level-9-1",
+   "method": "stay near the Gloom too long",
+   "trigger_type": "condition",
+   "conditions": "prolonged time near the Gloom",
+   "confidence": "CONFIRMED",
+   "quote": "Stay near the Gloom for too long on Level 9.1 and you will end up here."
+  },
+  {
+   "from": "Level 14",
+   "from_id": "14",
+   "slug": "/level-14",
+   "method": "unknown means",
+   "trigger_type": "unknown",
+   "conditions": "unknown",
+   "confidence": "RUMORED",
+   "quote": "arrived through unknown means from Level 14"
+  },
+  {
+   "from": "Level 6",
+   "from_id": "6",
+   "slug": "/level-6",
+   "method": "unknown means",
+   "trigger_type": "unknown",
+   "conditions": "unknown",
+   "confidence": "RUMORED",
+   "quote": "unknown means from Level 14 and Level 6"
+  },
+  {
+   "from": "any (noclip)",
+   "from_id": null,
+   "slug": null,
+   "method": "no-clip onto the island",
+   "trigger_type": "noclip",
+   "conditions": "stated for every wanderer",
+   "confidence": "CONFIRMED",
+   "quote": "every wanderer will no-clip into"
+  }
+ ],
+ "exits": [],
+ "signature_mechanic": "Run to the Silver Castle through a dark red island of hostile entities without a light or looking around; bang on the door; no escape from the level.",
+ "verticality": "Castle with three floors and an attic with balcony; island highest point.",
+ "do_not": [
+  "add a working exit",
+  "add safe zones outside the castle",
+  "allow flashlights outside",
+  "show entities in full",
+  "make CORAN hostile",
+  "add day/night"
+ ],
+ "content_warnings": [
+  "entity horror and violence implied",
+  "gouged-out eyes necklace",
+  "unspecified upsetting photos"
+ ],
+ "source_completeness": "NARRATIVE_FORMAT",
+ "conflicts_notes": "Exits list is empty by source ('no known way to exit'). Level 6 origin is claimed only here. Written in-universe by Coran's Children; M.E.G. audio log gives CORAN as speaker.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "a medium-sized island that every wanderer will no-clip into"
+  },
+  {
+   "section": "Description",
+   "quote": "one per 35 square feet (3.3 square meters)"
+  },
+  {
+   "section": "Description",
+   "quote": "There is no day or night cycle."
+  },
+  {
+   "section": "Description",
+   "quote": "DO NOT use an artificial light source"
+  },
+  {
+   "section": "Exits",
+   "quote": "There is no known way to exit Level 73."
+  }
+ ]
+}

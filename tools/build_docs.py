@@ -34,7 +34,7 @@ def main():
          "says that Backrooms games must be released under **CC BY-SA 3.0** (or GPLv3 with full playable source). A prominent "
          "release statement is required wherever the game is distributed. Paid releases may not use DRM, may not add legal "
          "restrictions through EULAs, and may not impede alternative distribution. LOST FREQUENCY therefore releases the whole "
-         "`lost_frequency/` folder (code, data, docs, generated media) under **CC BY-SA 3.0**; see `LICENSE.md`. This is not "
+         "the repository root folder (code, data, docs, generated media) under **CC BY-SA 3.0**; see `LICENSE.md`. This is not "
          "legal advice. Get a real review before any commercial distribution.", "",
          "> Release statement: Content relating to the Backrooms is licensed under Creative Commons Sharealike 3.0 and all "
          "concepts originate from http://backrooms-wiki.wikidot.com/ and its authors. LOST FREQUENCY, being derived from this "

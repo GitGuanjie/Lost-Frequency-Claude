@@ -1,0 +1,36 @@
+{
+ "stable_id": "L016", "level_id": "16", "title": "Altered Topography",
+ "survival_class": "not stated",
+ "physical_identity": "Terrain-shifting level documented as two archived states: a low-gravity foggy rainforest at permanent dawn, and an arctic glacier field with luminous reflective ice and a 13-hour day.",
+ "scale_topology": "Outdoor; extent not stated. Terrain alters itself at unknown intervals; exit position moves each time, destination fixed.",
+ "anomalies": ["terrain alteration at unknown intervals", "reduced gravity for foreign objects/entities only (rainforest state)", "luminous reflective ice (arctic state)", "Level Key changes with the terrain", "small warning orbs before shifts", "glaciers rise and rivers gush from boulders during shifts"],
+ "lighting_sound": "Rainforest: persistent fog, always dawn, 21C. Arctic: luminous reflective ice, about 13 h day-night cycle, 10C to 6C. Sound not stated.",
+ "entities": [
+  {"name": "Light Guides", "status": "CONFIRMED", "behavior": "Arctic state: large groups seen, unusual since normally rare and solitary"}
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Light Guides (arctic state); NO ENTITY PER SOURCE for the rainforest state",
+ "hazards": ["being encased in changing terrain", "frostbite", "freezing air during shifts", "long-term low-gravity effects (rainforest)"],
+ "items_communities": ["no long-term bases possible", "Level Key"],
+ "entrances": [
+  {"from": "Level 75", "from_id": "75", "slug": null, "method": "Find and touch an orange gallium patch (earlier state: copper-like liquid metal)", "trigger_type": "interact", "conditions": "gallium patch", "confidence": "CONFIRMED", "quote": "Finding and touching an orange gallium patch in level-75 will bring you here."},
+  {"from": "Other", "from_id": null, "slug": null, "method": "Several other supposed entrances", "trigger_type": "unknown", "conditions": "unconfirmed", "confidence": "RUMORED", "quote": "There have been several other supposed entrances"}
+ ],
+ "exits": [
+  {"to": "Level 46", "to_id": "46", "slug": "/level-46", "method": "Rainforest state: climb a sand-covered tree; arctic state: stand on a sand-covered ice sheet", "trigger_type": "interact", "conditions": "exit location changes each alteration", "risk": "terrain shift entombment", "confidence": "CONFIRMED", "quote": "The location of the exit is different with each alteration, but the destination is constant."}
+ ],
+ "signature_mechanic": "Two terrain states (rainforest/arctic) swap at unknown intervals preceded by orbs; the only exit always leads to Level 46 but moves to a different prop (sand-covered tree or sand-covered ice).",
+ "verticality": "Climbable tree in rainforest state; glacier spires in arctic state.",
+ "do_not": ["add a base", "give rainforest a day-night cycle", "apply low gravity to natives", "invent a third state", "fix exit position"],
+ "content_warnings": ["frostbite and entombment mentioned"],
+ "source_completeness": "UNUSUAL_FORMAT",
+ "conflicts_notes": "Page is two archived entries with survivor comments. State A says no consistent entrance; State B names the gallium patch as the only confirmed one. Level 75 has no link-list slug. Level 15/17 appear in links only as navigation.",
+ "key_quotes": [
+  {"section": "Description (File 1)", "quote": "the gravity within this Level is greatly reduced compared to standard reality"},
+  {"section": "Description (File 1)", "quote": "does not appear to have a day-night cycle, only staying at dawn"},
+  {"section": "Description (File 2)", "quote": "a day-night cycle with a length of approximately 13 hours"},
+  {"section": "Bases (File 2)", "quote": "Human life within this Level is unsustainable due to the unstable nature of this Level."},
+  {"section": "Exits (File 2)", "quote": "The location of the exit is different with each alteration, but the destination is constant."},
+  {"section": "NOTICE", "quote": "should not be used in survival circumstances"},
+  {"section": "closing", "quote": "Walked into a rainforest, walked out of a tundra."}
+ ]
+}

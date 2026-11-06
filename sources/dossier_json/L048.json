@@ -1,0 +1,48 @@
+{
+ "stable_id": "L048", "level_id": "48", "title": "The Sunset Beach",
+ "survival_class": "not stated",
+ "physical_identity": "Infinite sandy beach with lukewarm ocean to the south, luxury hotels and houses, a tropical forest 200 m inland, under a permanent red-yellow sunset.",
+ "scale_topology": "Infinite beachfront and ocean; forest north of the beach; unique species 30 km north.",
+ "anomalies": ["permanent sunset, no day-night cycle", "sun at 30% of noon sunlight", "recoloured Frontrooms-like fauna", "many portals (lakes, windows, trenches, farmhouses)"],
+ "lighting_sound": "Red-yellow low sun, sunny weather, 22 to 36 C; sound not stated except qarrot calls and pinkther roars.",
+ "entities": [
+  {"name": "Languars", "status": "CONFIRMED", "behavior": "Docile blue jaguar-like herbivores"},
+  {"name": "Veraffes", "status": "CONFIRMED", "behavior": "Green giraffe-like giants, packs of 6-10"},
+  {"name": "Pinkthers", "status": "CONFIRMED", "behavior": "Passive pink panther-like herbivores"},
+  {"name": "Zapes", "status": "CONFIRMED", "behavior": "Red apes that speak and build shelters"},
+  {"name": "Qarrots", "status": "CONFIRMED", "behavior": "Black parrot-like birds"},
+  {"name": "The Shadow", "status": "RUMORED", "behavior": "Might drag a play-dead wanderer to Level 100; unconfirmed"}
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: docile Languars, Veraffes, Pinkthers, Zapes, Qarrots; The Shadow rumoured",
+ "hazards": ["none stated for fauna", "play-dead rumour"],
+ "items_communities": ["edible plants", "Veroka fruit and juice", "The Veroka Farmers (~300)", "luxury hotels and houses"],
+ "entrances": [
+  {"from": "Level 134", "from_id": "134", "slug": "/level-134", "method": "Noclip into the sand", "trigger_type": "noclip", "conditions": "usually", "confidence": "CONDITIONAL", "quote": "no-clipping into the sand of Level 134"},
+  {"from": "Level 121", "from_id": "121", "slug": "/level-121", "method": "Swim to floor of a light-blue lake", "trigger_type": "swim", "conditions": "specific lake", "confidence": "CONFIRMED", "quote": "Swimming to the floor of a light-blue lukewarm lake on Level 121"},
+  {"from": "Level 188", "from_id": "188", "slug": "/level-188", "method": "Window depicting a sunset beach", "trigger_type": "door", "conditions": "specific window", "confidence": "CONFIRMED", "quote": "Going through a window on Level 188 depicting a beach"},
+  {"from": "Level 21", "from_id": "21", "slug": "/level-21", "method": "Red-yellow gradient door", "trigger_type": "door", "conditions": "specific door", "confidence": "CONFIRMED", "quote": "Entering a door with a red-yellow gradient on Level 21"},
+  {"from": "Level 11", "from_id": "11", "slug": "/level-11", "method": "Sleep in a sand-covered room", "trigger_type": "sleep", "conditions": "sand-covered room", "confidence": "CONFIRMED", "quote": "Sleeping in a room covered with sand on Level 11"},
+  {"from": "Level 46", "from_id": "46", "slug": "/level-46", "method": "Noclip into a random desert palm tree", "trigger_type": "noclip", "conditions": "randomly appearing palm", "confidence": "CONFIRMED", "quote": "No-clipping into a randomly-appearing palm tree"},
+  {"from": "Level 85", "from_id": "85", "slug": "/level-85", "method": "Rest in Level 85", "trigger_type": "condition", "conditions": "50% chance", "confidence": "CONDITIONAL", "quote": "Resting in Level 85 will have a 50% chance"}
+ ],
+ "exits": [
+  {"to": "Level 581", "to_id": "581", "slug": "/level-581", "method": "Noclip inside a hotel to the lobby", "trigger_type": "noclip", "conditions": "inside a hotel", "risk": "low", "confidence": "CONFIRMED", "quote": "No-clipping inside of a hotel on Level 48 will lead to the lobby of Level 581"},
+  {"to": "Level 121", "to_id": "121", "slug": "/level-121", "method": "Swim to floor of a small lake", "trigger_type": "swim", "conditions": "small lake", "risk": "low", "confidence": "CONFIRMED", "quote": "Swimming to the floor of a small lake will transport one back to Level 121"},
+  {"to": "Level 100", "to_id": "100", "slug": "/level-100", "method": "Play dead on beach floor; The Shadow drags", "trigger_type": "death", "conditions": "small chance, unconfirmed", "risk": "entity", "confidence": "RUMORED", "quote": "This is not confirmed."},
+  {"to": "Level 49", "to_id": "49", "slug": "/level-49", "method": "Follow dirt trenches in the forest", "trigger_type": "walk_in", "conditions": "long following", "risk": "low", "confidence": "CONDITIONAL", "quote": "will progressively lead one to Level 49"},
+  {"to": "Level 10", "to_id": "10", "slug": "/level-10", "method": "Enter and exit a random farmhouse", "trigger_type": "door", "conditions": "random farmhouse", "risk": "low", "confidence": "CONDITIONAL", "quote": "Entering and exiting any of the farmhouses will take you to Level 10."}
+ ],
+ "signature_mechanic": "Permanent-sunset habitable beach with hotels and tropical forest and many portal types rather than threats.",
+ "verticality": "Hotel stories only.",
+ "do_not": ["add day-night cycle", "make fauna hostile", "guarantee the Level 100 exit", "assign survival class"],
+ "content_warnings": [],
+ "source_completeness": "PARTIAL",
+ "conflicts_notes": "Outdated banner; class placeholders unresolved; page calls it the 49th level; footnote 1 missing.",
+ "key_quotes": [
+  {"section": "Description", "quote": "stuck in a permanent state of sunset"},
+  {"section": "Description", "quote": "30% of the sunlight that is received on Earth at noon"},
+  {"section": "Description", "quote": "They are all non-hostile and possibly tameable."},
+  {"section": "Exits", "quote": "No-clipping inside of a hotel on Level 48 will lead to the lobby of Level 581"},
+  {"section": "Exits", "quote": "This is not confirmed."}
+ ]
+}

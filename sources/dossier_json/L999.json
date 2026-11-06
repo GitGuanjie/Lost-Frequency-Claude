@@ -1,0 +1,91 @@
+{
+ "stable_id": "L999",
+ "level_id": "999",
+ "title": "Level 999 (no subtitle)",
+ "survival_class": "Class Final (SURVIVAL DIFFICULTY: Class Final - Unchanging Landscape. / Unchanging Structures. / Unchanging.)",
+ "physical_identity": "A flat, greyscale tropical island floating in a starry void: smoke-grey beaches, motionless grey palms and forest, dormant unchanged houses and a trapdoor at its center.",
+ "scale_topology": "Finite island, flat enough to see entirely from deep inside; fixed outside void; underside is an inverted rocky pyramid.",
+ "anomalies": [
+  "Desaturating aura persists on removed objects",
+  "Floating sand and rocks beyond the perimeter",
+  "Trees do not move despite wind sound",
+  "Entire level unchanging forever"
+ ],
+ "lighting_sound": "Constant semi-illuminant aura; starry sky; cold 13-16 C; constant unnerving ethereal wind sounds.",
+ "entities": [],
+ "entity_policy": "NO ENTITY PER SOURCE",
+ "hazards": [
+  "Cold 13-16 C (mild)",
+  "Isolation / mental weight (mood text)",
+  "Far travel to the trapdoor"
+ ],
+ "items_communities": [
+  "none stated"
+ ],
+ "entrances": [
+  {
+   "from": "The halls that echo (a level not linked or numbered)",
+   "from_id": null,
+   "slug": null,
+   "method": "The sole transport; reached at one fixed position among millions of cells and accessible to those 'diligent enough'",
+   "trigger_type": "walk_in",
+   "conditions": "far from the doors to the other exit",
+   "confidence": "CONFIRMED",
+   "quote": "The halls that echo are the only transport to Level 999, appearing in one constant position among its millions of square cells."
+  }
+ ],
+ "exits": [
+  {
+   "to": "The halls that echo (return)",
+   "to_id": null,
+   "slug": null,
+   "method": "Walk to the epicenter and use the single trapdoor among its benches",
+   "trigger_type": "interact",
+   "conditions": "epicenter of the island",
+   "risk": "Low",
+   "confidence": "CONFIRMED",
+   "quote": "The only method of exit is to return to the echoing halls through venturing to the epicenter"
+  }
+ ],
+ "signature_mechanic": "The ultimate constant: a frozen greyscale island in space where nothing ever changes and the only way out is a trapdoor at the center.",
+ "verticality": "None (flat island); underside is unseen.",
+ "do_not": [
+  "Do not add entities, items or secrets: the page says nothing of value.",
+  "Do not let anything change over time: Unchanging class.",
+  "Do not make the island hilly.",
+  "Do not let trees sway.",
+  "Do not guess the echoing halls' level number: not stated.",
+  "Do not add colour."
+ ],
+ "content_warnings": [
+  "none"
+ ],
+ "source_completeness": "COMPLETE",
+ "conflicts_notes": "Roster notes no subtitle on the current page. The 'echoing halls' level is unnamed here.",
+ "key_quotes": [
+  {
+   "section": "Intro",
+   "quote": "Level 999 is nothing."
+  },
+  {
+   "section": "Description",
+   "quote": "Level 999 is a floating, tropical island that rests deep within a starry, space-like void."
+  },
+  {
+   "section": "Description",
+   "quote": "Level 999 is hopelessly flat"
+  },
+  {
+   "section": "Description",
+   "quote": "It is the ultimate constant."
+  },
+  {
+   "section": "Entrances And Exits",
+   "quote": "The halls that echo are the only transport to Level 999"
+  },
+  {
+   "section": "Entrances And Exits",
+   "quote": "utilizing a single trapdoor amongst its benches"
+  }
+ ]
+}

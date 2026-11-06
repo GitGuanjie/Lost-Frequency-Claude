@@ -1,0 +1,39 @@
+{
+ "stable_id": "L001_5", "level_id": "1.5", "title": "Level 1.5 - \"Inverted\"",
+ "survival_class": "not stated",
+ "physical_identity": "An inverted sub-section: ceiling fluorescents radiate darkness while ordinary darkness is replaced by light; walls blank white (testimony); almost silent except whispering.",
+ "scale_topology": "Not stated beyond halls, rooms and a door to an endless dark corridor (testimony); indoor.",
+ "anomalies": ["Inverted light and dark", "Fake windows that close behind you", "Garbled communications", "Whispers that quiet when entities approach", "Corridor walls of body parts (testimony)", "Warping hallway distance (testimony)"],
+ "lighting_sound": "Fluorescent bulbs radiate darkness; shadows are light. No usual hum per article; near silence apart from whispering.",
+ "entities": [
+  {"name": "Whispering denizens", "status": "CONFIRMED", "behavior": "Whisper; softer as they get closer"},
+  {"name": "Hardened-husk stalker", "status": "REPORTED", "behavior": "Breathes behind narrator, whispers (Log 4)"},
+  {"name": "Mother", "status": "REPORTED", "behavior": "Dense-air presence that attacks the narrator (True Log 6)"},
+  {"name": "She", "status": "REPORTED", "behavior": "Influences Log 7 author"}
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: whispering denizens (article); husk stalker, Mother, She (testimony only)",
+ "hazards": ["Fake windows trap", "Whispers quietening means entities near", "Loss of self / body horror beyond the door", "No way out except noclip"],
+ "items_communities": ["No known bases, outposts or communities"],
+ "entrances": [
+  {"from": "Fake window (location not stated)", "from_id": null, "slug": null, "method": "Enter a window that looks like outside or a mirror room", "trigger_type": "interact", "conditions": "TESTIMONY; window fades after entry", "confidence": "CONFIRMED", "quote": "the ones that look like they lead outside or to a mirror of the room"}
+ ],
+ "exits": [
+  {"to": "Unspecified", "to_id": null, "slug": null, "method": "Noclip", "trigger_type": "noclip", "conditions": "Destination not stated", "risk": "Unknown", "confidence": "CONFIRMED", "quote": "no known way to exit Level 1.5 besides no-clipping"},
+  {"to": "Deeper dark corridor", "to_id": null, "slug": null, "method": "Walk through door that appears when whispers stop", "trigger_type": "door", "conditions": "Narrator testimony; door vanishes behind", "risk": "Extreme", "confidence": "DANGEROUS+ONE-WAY", "quote": "maybe the only way to leave is to go deeper"},
+  {"to": "Outside level 1.5 (per Log 7)", "to_id": null, "slug": null, "method": "Fake windows", "trigger_type": "interact", "conditions": "Unreliable Log 7", "risk": "Unknown", "confidence": "RUMORED", "quote": "If you see the fake windows, enter them and find salvation."}
+ ],
+ "signature_mechanic": "Inverted light (dark emitters, light shadows) and silence; whisper loudness falls as entities approach, so quiet is danger.",
+ "verticality": "None stated.",
+ "do_not": ["Add hum", "Add bases or communities", "Make windows a safe exit", "Add a named exit to Level 1", "Trust Log 7"],
+ "content_warnings": ["Body horror", "Possession / loss of self", "Narrator K.I.A."],
+ "source_completeness": "NARRATIVE_FORMAT",
+ "conflicts_notes": "Article says hum absent; Log 3 says humming present but quiet. Link list maps 'Level √2' to /level-1-4 and Level 2; no edges stated to them. No parent level is stated.",
+ "key_quotes": [
+  {"section": "Description", "quote": "fluorescent darkness pouring from the ceiling"},
+  {"section": "Description", "quote": "the usual humming is absent"},
+  {"section": "Description", "quote": "becomes softer as one's proximity to the creatures increases"},
+  {"section": "Bases, Outposts and Communities", "quote": "There are no known bases, outposts or communities on this Level."},
+  {"section": "Entrances And Exits", "quote": "There is currently no known way to exit Level 1.5 besides no-clipping."},
+  {"section": "Log 5", "quote": "The window closes immediately and fades away, leaving you trapped here."}
+ ]
+}

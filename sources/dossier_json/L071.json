@@ -1,0 +1,31 @@
+{
+ "stable_id": "L071", "level_id": "71", "title": "Void Basement",
+ "survival_class": "not stated",
+ "physical_identity": "Described only as an infinite basement; entry data fails with Error 0071 and the rest is a fading monologue ending in a corrupted-file notice.",
+ "scale_topology": "Infinite basement; no further geometry stated.",
+ "anomalies": ["entry data fails to load", "entrance closes soon after use", "body fading and layers of reality collapsing (testimony)", "file corrupted and gone"],
+ "lighting_sound": "Dark and cold per the monologue; no sound details.",
+ "entities": [],
+ "entity_policy": "NO ENTITY PER SOURCE",
+ "hazards": ["fading of body and identity (testimony)", "no stated exit"],
+ "items_communities": ["none stated"],
+ "entrances": [
+  {"from": "Level 4", "from_id": "4", "slug": "/level-4", "method": "Find a basement in Level 4", "trigger_type": "door", "conditions": "entrance is closed soon after", "confidence": "CONDITIONAL+ONE-WAY", "quote": "Finding a basement in Level 4 will lead you to Level 71."}
+ ],
+ "exits": [
+  {"to": "None stated", "to_id": null, "slug": null, "method": "The Exit section is only a fading monologue", "trigger_type": "unknown", "conditions": "none", "risk": "self-dissolution (narrative)", "confidence": "UNKNOWN", "quote": "I am stuck… fading into nothing."}
+ ],
+ "signature_mechanic": "An unreadable infinite basement with a closing entrance and a fade-into-nothing experience.",
+ "verticality": "None stated.",
+ "do_not": ["invent description or entities", "make entrance reusable", "add an exit", "assign a survival class"],
+ "content_warnings": ["dissolving body", "despair and loss of self", "breathing distress"],
+ "source_completeness": "UNUSUAL_FORMAT",
+ "conflicts_notes": "Description and Group data deliberately absent (Error 0071). Page says 72nd level. Links point to /th3-sh4dy-gr3y; navigation to Level 70 and 72 only.",
+ "key_quotes": [
+  {"section": "Intro", "quote": "It appears to be an infinite basement."},
+  {"section": "Intro", "quote": "There was an error while loading Entry data. Error 0071."},
+  {"section": "Entrance", "quote": "This entrance is closed soon after."},
+  {"section": "Exit", "quote": "Layers of reality starts to collapse onto me."},
+  {"section": "Footer", "quote": "File corrupted and no longer exists."}
+ ]
+}

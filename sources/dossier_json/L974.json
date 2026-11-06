@@ -1,0 +1,21 @@
+{"stable_id":"L974","level_id":"974","title":"Kitty's House","survival_class":"Safe . / Secure . / Devoid of harmful entities .",
+"physical_identity":"A finite pink-themed home of about 970 sq ft with no outdoor door, tailored to each Wanderer, Baker Miller pink walls and coquette decor.",
+"scale_topology":"Finite indoor house: bedroom, master bedroom, two bathrooms, living room, kitchen/dining; windows show artwork.",
+"anomalies":["Windows show artwork not outdoors","House varies per Wanderer","Fuzzy childhood memories","Food replaces itself, decays toward sugar","Old computer with DreamSleep"],
+"lighting_sound":"Lighting not stated; page carries 'A foggy lullaby' audio; Wi-Fi works; kitchen smells of childhood food.",
+"entities":[{"name":"Kitty","status":"CONFIRMED","behavior":"3.2 m black featureless humanoid; stalks but not hostile; ceases if provoked"},{"name":"The Owner","status":"REPORTED","behavior":"May appear after certain actions in 974.1"}],
+"entity_policy":"SOURCED ENTITIES ONLY: Kitty (Owner only via 974.1)",
+"hazards":["Prolonged pink exposure lowers sanity","Food turns to sugar","Provoking Kitty removes food and sanity"],
+"items_communities":["Greasy Marshmallows","Fridge and pantry food","Cute clothes and plushies","Old computer (Owner/Guest, Mail, Internet, DreamSleep)","No bases or communities"],
+"entrances":[
+{"from":"Any level (arrival with cute item)","from_id":null,"slug":null,"method":"Carrying a cute item when entering a new level","trigger_type":"noclip","conditions":"slight chance","confidence":"CONDITIONAL","quote":"there is a slight possibility of being transported to Level 974 instead of the location they would have normally been transported to."}],
+"exits":[
+{"to":"Level 974.1","to_id":"974.1","slug":"/level-974-1","method":"Open DreamSleep, then sleep in the bedroom bed","trigger_type":"sleep","conditions":"must sleep in the bed","risk":"not stated","confidence":"CONFIRMED","quote":"Sleeping on the bed will allow the Wanderer to enter the sub-section, 974.1 ."},
+{"to":"An unnamed safe level","to_id":null,"slug":null,"method":"Give Kitty a cute item obtained before the visit","trigger_type":"item","conditions":"any time during stay","risk":"not stated","confidence":"CONFIRMED","quote":"Upon handing the gift to Kitty, you will immediately fall asleep and wake up in a safe level."}],
+"signature_mechanic":"A tailored pink house where Kitty stalks harmlessly; gift a pre-owned cute item to Kitty to leave; sleep in the bed after DreamSleep to reach 974.1.",
+"verticality":"none",
+"do_not":["Make Kitty hostile","Add outdoors","Furnish empty rooms","Allow 974.1 sleep elsewhere","Invent email text"],
+"content_warnings":["Sanity loss","Stalking entity","Childhood memory themes"],
+"source_completeness":"PARTIAL",
+"conflicts_notes":"Email text blank in snapshot. Infobox says Devoid of harmful entities while Kitty stalks; provoking causes sanity loss. Return from 974.1 not stated. 973/975 are nav links.",
+"key_quotes":[{"section":"Description","quote":"There appears to be no physical door leading to an outdoor area."},{"section":"Description","quote":"The only furnished rooms are the dining room and bedroom."},{"section":"Entities","quote":"The entity has not yet displayed any forms of hostility, opting instead to stalk Wanderers"},{"section":"Description","quote":"Your dreams are ready, sleep to start"},{"section":"Exits","quote":"The only known exit from Level 974 is by giving Kitty a 'cute' item"}]}

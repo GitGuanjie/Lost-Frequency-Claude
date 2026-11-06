@@ -1,0 +1,204 @@
+{
+ "stable_id": "L049",
+ "level_id": "49",
+ "title": "The Unfilled River of Phlegethon",
+ "survival_class": "SURVIVAL DIFFICULTY CLASS 4 (Exit: 2/5 Somewhat Difficult to Exit; Environment: 4/5 Extreme Environmental Risk; Entities: 5/5 Hostile Infestation)",
+ "physical_identity": "Endless WWI-style abandoned trench system with mud, sandbags, barbed wire, bunkers, gun emplacements and artillery stations.",
+ "scale_topology": "Level spans infinitely but only the trench system is accessible; Euclidean, with random twists; outdoors in trenches; underground bunkers and tunnels.",
+ "anomalies": [
+  "Unseen entities kill anyone leaving the trench",
+  "Extended day-night cycle",
+  "Dense fog",
+  "Floods and lightning",
+  "Non-human artillery"
+ ],
+ "lighting_sound": "Eerie silence broken by distant gunfire (reduced at night); fog, flood and storm; blue entity lights; lighting otherwise day/night.",
+ "entities": [
+  {
+   "name": "Entity 49/1 'Trenchcleaners'",
+   "status": "CONFIRMED",
+   "behavior": "Patrols trenches; stalks movement, closes to line of sight, fires chaingun; stays in sections for long periods."
+  },
+  {
+   "name": "Unseen entities beyond no man's land",
+   "status": "CONFIRMED",
+   "behavior": "Shoot anyone leaving the trench; escalate to missiles, artillery; bombers rarely; identity unknown."
+  },
+  {
+   "name": "Kingdom of Hagsten military",
+   "status": "RUMORED",
+   "behavior": "Supposed shooters/creators of the Trenchcleaner; 'highly possible'."
+  },
+  {
+   "name": "Republic of Nuvaria soldiers",
+   "status": "RUMORED",
+   "behavior": "May once have inhabited the trenches; may not have existed."
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Trenchcleaners (49/1), unseen entities",
+ "hazards": [
+  "Leaving the trench is fatal",
+  "Trenchcleaner",
+  "Shelling and bombers",
+  "Flooding and drowning",
+  "Fog",
+  "Respiratory discomfort from soil",
+  "Barbed wire"
+ ],
+ "items_communities": [
+  "Almond Water",
+  "Canned food",
+  "Medical kits",
+  "Rifles (empty)",
+  "Notes and books",
+  "M.E.G. Outpost Gutter Bunkers",
+  "Brotherhood of Firearm Guardians",
+  "Vault of Ares (U.E.C.)"
+ ],
+ "entrances": [
+  {
+   "from": "Level 35",
+   "from_id": "35",
+   "slug": "/level-35",
+   "method": "enter an abandoned Humvee; lose consciousness and wake in the trench",
+   "trigger_type": "interact",
+   "conditions": "vehicle must be abandoned HMMWV",
+   "confidence": "CONFIRMED",
+   "quote": "Entering an abandoned High Mobility Multipurpose Wheeled Vehicle (Humvee) in Level 35 causes you to lose consciousness"
+  },
+  {
+   "from": "Level 11",
+   "from_id": "11",
+   "slug": "/level-11",
+   "method": "touch a military recruitment poster",
+   "trigger_type": "interact",
+   "conditions": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "Touching a military recruitment poster in Level 11 triggers an immediate no-clip to this level"
+  },
+  {
+   "from": "Any level",
+   "from_id": null,
+   "slug": null,
+   "method": "being buried alive, by accident or intent, then regain consciousness",
+   "trigger_type": "condition",
+   "conditions": "any level",
+   "confidence": "CONFIRMED+DANGEROUS",
+   "quote": "Being buried alive in any level"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 14",
+   "to_id": "14",
+   "slug": "/level-14",
+   "method": "specific rusted bunker doors",
+   "trigger_type": "door",
+   "conditions": "found in all three bunkers of the M.E.G. Outpost Gutter Bunkers",
+   "risk": "bunker area near hostile activity",
+   "confidence": "CONFIRMED",
+   "quote": "Specific rusted doors in the bunkers serve as access points to Level 14, Level 65, or Level 50"
+  },
+  {
+   "to": "Level 65",
+   "to_id": "65",
+   "slug": "/level-65",
+   "method": "specific rusted bunker doors",
+   "trigger_type": "door",
+   "conditions": "as above",
+   "risk": "as above",
+   "confidence": "CONFIRMED",
+   "quote": "Specific rusted doors in the bunkers serve as access points to Level 14, Level 65, or Level 50"
+  },
+  {
+   "to": "Level 50",
+   "to_id": "50",
+   "slug": "/level-50",
+   "method": "specific rusted bunker doors",
+   "trigger_type": "door",
+   "conditions": "as above",
+   "risk": "as above",
+   "confidence": "CONFIRMED",
+   "quote": "Specific rusted doors in the bunkers serve as access points to Level 14, Level 65, or Level 50"
+  },
+  {
+   "to": "Level 3",
+   "to_id": "3",
+   "slug": "/level-3",
+   "method": "struck by lightning during rainstorm",
+   "trigger_type": "condition",
+   "conditions": "only during the rainstorm phenomenon",
+   "risk": "lightning strike",
+   "confidence": "CONFIRMED+DANGEROUS",
+   "quote": "Being struck by lightning during a rainstorm phenomenon results in an immediate no-clip to Level 3"
+  },
+  {
+   "to": "Level 7",
+   "to_id": "7",
+   "slug": "/level-7",
+   "method": "follow a water-filled tunnel opened by severe flooding",
+   "trigger_type": "swim",
+   "conditions": "only during severe flooding",
+   "risk": "drowning",
+   "confidence": "CONDITIONAL",
+   "quote": "a water-filled tunnel may become accessible. Following this tunnel will lead you to Level 7"
+  },
+  {
+   "to": "Level 666",
+   "to_id": "666",
+   "slug": "/level-666",
+   "method": "killing another wanderer triggers an immediate no-clip",
+   "trigger_type": "condition",
+   "conditions": "kill a wanderer in this level",
+   "risk": "moral/danger; destination Level 666",
+   "confidence": "CONFIRMED+ONE-WAY",
+   "quote": "Killing another wanderer in this level will trigger an immediate no-clip to Level 666"
+  }
+ ],
+ "signature_mechanic": "Stay in the trench: the parapet is a lethal boundary enforced by unseen entities, while a Trenchcleaner stalks by heat and noise, weather shifts the risk and exits are hidden.",
+ "verticality": "None above ground; bunkers and tunnels underground; exits through rusted bunker doors.",
+ "do_not": [
+  "Do not allow leaving the trench; the page says it is invariably fatal and exits are not via the surface.",
+  "Do not give the unseen entities visible models; they are never seen.",
+  "Do not make the level a combat shooter; 'Fight back' is on the DON'T list.",
+  "Do not make the B.F.G. or M.E.G. outposts safe hubs with trade systems beyond the page; keep them minimal.",
+  "Do not treat Nuvaria/Hagsten as confirmed; they are hypotheses and in-universe documents.",
+  "Do not add Level 48 as an edge; it appears only in the link list.",
+  "Do not give a single canonical Trenchcleaner count; testimonies conflict."
+ ],
+ "content_warnings": [
+  "War violence and mass death",
+  "Bodies vaporised",
+  "Profanity",
+  "Killing a wanderer as an exit trigger",
+  "Buried alive"
+ ],
+ "source_completeness": "COMPLETE",
+ "conflicts_notes": "Lancaster saw three machines; Falcon says only one exists. The article says 'only one known entity'. Page attributes the entrance list to 2016/07/18 but is edited 2026.",
+ "key_quotes": [
+  {
+   "section": "Intro",
+   "quote": "only the trench system is accessible to wanderers"
+  },
+  {
+   "section": "Description",
+   "quote": "Attempts to exit the trench invariably result in immediate death."
+  },
+  {
+   "section": "Entities",
+   "quote": "relentless hunter, quietly stalking the trenches and waiting for movement"
+  },
+  {
+   "section": "Environment",
+   "quote": "strongly advised not to leave the trench at any point"
+  },
+  {
+   "section": "Exits",
+   "quote": "Killing another wanderer in this level will trigger an immediate no-clip to Level 666."
+  },
+  {
+   "section": "Exits",
+   "quote": "Following this tunnel will lead you to Level 7."
+  }
+ ]
+}

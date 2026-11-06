@@ -1,0 +1,147 @@
+{
+ "stable_id": "L037",
+ "level_id": "37",
+ "title": "Sublimity",
+ "survival_class": "Safe. / Unsecure. / Devoid of Entities.",
+ "physical_identity": "Submerged ceramic-tile complex of pools and halls; lukewarm blue-green water with constant ripple; irregular lights and dark corners.",
+ "scale_topology": "Immense; whether infinite is not stated; indoor-pool architecture; stairs descend into deep pits.",
+ "anomalies": [
+  "Constant rippling without disturbance",
+  "Severely altered sound",
+  "Epsom-salt water with unknown enhancing compounds",
+  "Senseless connections"
+ ],
+ "lighting_sound": "Light from irregular angles with dark areas; sound muffled, dry, water sound variable.",
+ "entities": [],
+ "entity_policy": "NO ENTITY PER SOURCE",
+ "hazards": [
+  "Deep water pits without ledges (implied)",
+  "Dark zones",
+  "Isolation"
+ ],
+ "items_communities": [
+  "none stated"
+ ],
+ "entrances": [
+  {
+   "from": "Level 58",
+   "from_id": "58",
+   "slug": "/level-58",
+   "method": "submerge in its waters",
+   "trigger_type": "swim",
+   "conditions": "may lead to reemerging in Level 37",
+   "confidence": "CONDITIONAL",
+   "quote": "Submerging oneself in the waters of Level 58 and Level 119 may lead to one reemerging in this level"
+  },
+  {
+   "from": "Level 119",
+   "from_id": "119",
+   "slug": "/level-119",
+   "method": "submerge in its waters",
+   "trigger_type": "swim",
+   "conditions": "as above",
+   "confidence": "CONDITIONAL",
+   "quote": "Submerging oneself in the waters of Level 58 and Level 119 may lead to one reemerging in this level"
+  },
+  {
+   "from": "Level 233",
+   "from_id": "233",
+   "slug": "/level-233",
+   "method": "porcelain-tiled areas",
+   "trigger_type": "walk_in",
+   "conditions": "infrequent",
+   "confidence": "CONDITIONAL",
+   "quote": "Porcelain-tiled areas of Level 233 infrequently lead to this level"
+  },
+  {
+   "from": "Level 130",
+   "from_id": "130",
+   "slug": "/level-130",
+   "method": "underwater areas",
+   "trigger_type": "swim",
+   "conditions": "rare",
+   "confidence": "CONDITIONAL",
+   "quote": "In rare circumstances, underwater areas of level-130 may act as entrances to this level"
+  },
+  {
+   "from": "Level 25",
+   "from_id": "25",
+   "slug": "/level-25",
+   "method": "an arcade",
+   "trigger_type": "interact",
+   "conditions": "details not stated",
+   "confidence": "CONFIRMED",
+   "quote": "You can also enter via an arcade on Level 25"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 130",
+   "to_id": "130",
+   "slug": "/level-130",
+   "method": "immerse in the water",
+   "trigger_type": "swim",
+   "conditions": "may reemerge in Level 130's pools",
+   "risk": "not stated",
+   "confidence": "CONDITIONAL",
+   "quote": "Immersing oneself in the water of Level 37 may cause reemergence in the pools of Level 130"
+  },
+  {
+   "to": "Level 43",
+   "to_id": "43",
+   "slug": "/level-43",
+   "method": "enclosed dark tunnels",
+   "trigger_type": "walk_in",
+   "conditions": "dark enclosed tunnels only; 'may'",
+   "risk": "not stated",
+   "confidence": "CONDITIONAL",
+   "quote": "Enclosed, dark tunnels in this level may lead to Level 43"
+  },
+  {
+   "to": "Level 233",
+   "to_id": "233",
+   "slug": "/level-233",
+   "method": "corridors",
+   "trigger_type": "walk_in",
+   "conditions": "rare",
+   "risk": "not stated",
+   "confidence": "CONDITIONAL",
+   "quote": "Corridors in Level 37 can rarely lead to similar corridors in Level 233"
+  }
+ ],
+ "signature_mechanic": "Relaxing Epsom-salt water and altered acoustics in an empty pristine tile maze; exits by immersion or dark tunnels.",
+ "verticality": "Stairs that descend into deep water pits; no other vertical structure stated.",
+ "do_not": [
+  "Do not add entities, wanderers, outposts or NPCs.",
+  "Do not add hostile drowning-monsters; page lists none.",
+  "Do not make the level finite and small by design; page stresses immense size (but a compact build is acceptable).",
+  "Do not make the water warm-damaging or toxic; it is relaxing.",
+  "Do not present the journal's 'Scape' theory as article fact (TESTIMONY).",
+  "Do not add Level 36 or 38 edges; they appear only in the link list."
+ ],
+ "content_warnings": [],
+ "source_completeness": "COMPLETE",
+ "conflicts_notes": "Class says Safe but Unsecure; Entities section also says 'inability to sustain life' (Bases). Footnotes 1 and 2 absent.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "submerged in undulating, lukewarm water"
+  },
+  {
+   "section": "Description",
+   "quote": "certain staircases descend directly into deep pits of water"
+  },
+  {
+   "section": "Description",
+   "quote": "Sound is severely altered in Level 37"
+  },
+  {
+   "section": "Entities",
+   "quote": "Level 37 is thought to be entirely devoid of life."
+  },
+  {
+   "section": "Exits",
+   "quote": "Immersing oneself in the water of Level 37 may cause reemergence in the pools of Level 130"
+  }
+ ]
+}

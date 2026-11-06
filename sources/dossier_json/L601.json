@@ -1,0 +1,38 @@
+{
+ "stable_id": "L601", "level_id": "601", "title": "Level 601 - \"The End\"",
+ "survival_class": "not stated",
+ "physical_identity": "A seemingly endless modern library, near silent, with a central area of metal letters spelling 'the end is near' and loud computer terminals. A trap level that fakes escape.",
+ "scale_topology": "Endless indoor library with unstable geometry; personalised 'fake reality' sub-areas close together.",
+ "anomalies": ["Looping walk; turning around meets a wall", "Random noclipping that never exits", "Wanderers cannot perceive each other", "Fake realities blend at borders", "All electronics die except terminals"],
+ "lighting_sound": "Near complete silence, some areas -6.2 dB; central computer terminals buzz loudly. Light not stated.",
+ "entities": [
+  {"name": "Partygoers", "status": "REPORTED", "behavior": "Take wanderers chased into The End; frequent terminal area"},
+  {"name": "The host entity", "status": "RUMORED", "behavior": "Quite possibly referred to by Partygoers"},
+  {"name": "Unnamed smile narrator", "status": "REPORTED", "behavior": "Claims to send messages and alter articles; unreliable"}
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Partygoers (reported), host (rumored), unnamed narrator voice",
+ "hazards": ["Isolation", "Abduction by Partygoers", "No reliable exit", "Memory Juice intoxication", "Terminal area"],
+ "items_communities": ["The Junkies (6 people in fake realities, trade for Memory Juice)", "Computer terminals that connect to any Wi-Fi", "Memory Juice"],
+ "entrances": [
+  {"from": "Any level (neon-sign door)", "from_id": null, "slug": null, "method": "Door that would typically indicate an exit, most commonly with neon sign", "trigger_type": "door", "conditions": "Not guaranteed", "confidence": "CONDITIONAL", "quote": "Most commonly, this is any door with a neon sign above it"},
+  {"from": "Any level (noclip)", "from_id": null, "slug": null, "method": "Rare random noclip fall", "trigger_type": "noclip", "conditions": "Rare and random", "confidence": "CONDITIONAL", "quote": "possible to fall into The End via no-clipping but this seems to be rare"}
+ ],
+ "exits": [
+  {"to": "Other safer levels (unnamed)", "to_id": null, "slug": null, "method": "Exit inside a fake reality", "trigger_type": "door", "conditions": "Inconsistent", "risk": "High", "confidence": "CONDITIONAL", "quote": "can sometimes contain exits into other, safer Levels"},
+  {"to": "Undocumented exits", "to_id": null, "slug": null, "method": "Not documentable", "trigger_type": "unknown", "conditions": "None known", "risk": "Unknown", "confidence": "UNKNOWN", "quote": "Exits do exist, but there is currently no way to document them."}
+ ],
+ "signature_mechanic": "Silent looping library trap with personalised fake realities that blend at borders; all electronics fail except terminals; exits are rare and inconsistent.",
+ "verticality": "None stated.",
+ "do_not": ["Give a reliable exit or noclip exit", "Allow electronics to work", "Make terminals safe", "Make Junkies free vendors", "Trust narrator claims", "Name the host"],
+ "content_warnings": ["Abduction", "Intoxication", "Body-horror threat", "Manipulation"],
+ "source_completeness": "PARTIAL",
+ "conflicts_notes": "Page under rewrite. Terminals are said to work (and connect to Wi-Fi) while all other electricity fails. Exits section ends with an unattributed first-person monologue.",
+ "key_quotes": [
+  {"section": "Description", "quote": "decorated with metal letters spelling 'the end is near'"},
+  {"section": "Description", "quote": "some areas measuring at -6.2dB"},
+  {"section": "Description", "quote": "turning around at this point will cause you to run into a wall"},
+  {"section": "Addendum", "quote": "Anything that uses electricity to function immediately ceases all functionality"},
+  {"section": "Entrances", "quote": "Most commonly, this is any door with a neon sign above it"},
+  {"section": "Exits", "quote": "A reliable way to leave The End has not been discovered."}
+ ]
+}

@@ -1,0 +1,679 @@
+{
+ "stable_id": "L001",
+ "level_id": "1",
+ "title": "Habitable Zone",
+ "survival_class": "Safe and Secure. (header list: 'Safe and Secure', 'Presence of Anomalous Resources', third item unresolved template)",
+ "physical_identity": "Endless non-Euclidean halls like a cross between an underground parking lot and an abandoned warehouse (grey concrete, pillars, pipes), plus a labyrinth of dim concrete corridors with purposeless rooms.",
+ "scale_topology": "Huge indoor level, partitioned into sectors (Aquila, Gild, Gothic, Ouroboros, Garden, Fabled); halls non-Euclidean, corridors Euclidean for kilometres.",
+ "anomalies": [
+  "non-Euclidean halls (landmark navigation)",
+  "Flickering blackouts",
+  "crates appear behind your back and disappear when unobserved",
+  "locks and paintings vanish when looked at",
+  "rooms are purposeless",
+  "Garden Sector transforms people into plants in about an hour",
+  "Ouroboros Sector under endless construction"
+ ],
+ "lighting_sound": "Artificial overhead lights with random total-blackout Flickering; pipes clang and rumble; corridors dim and quiet. No sun; time not meaningful (narrative).",
+ "entities": [
+  {
+   "name": "Arms",
+   "status": "CONFIRMED",
+   "behavior": "Single limb through vents and cracks during blackouts to catch wanderers"
+  },
+  {
+   "name": "Clumps",
+   "status": "CONFIRMED",
+   "behavior": "Piles of connected limbs rushing at prey at high speed; no eyes"
+  },
+  {
+   "name": "Crawlers",
+   "status": "CONFIRMED",
+   "behavior": "Pathogenic fungus that takes over the mind; spread via unsealed liquids"
+  },
+  {
+   "name": "Dullers",
+   "status": "CONFIRMED",
+   "behavior": "Humanoids ambushing by no-clipping through walls"
+  },
+  {
+   "name": "Growlers",
+   "status": "CONFIRMED",
+   "behavior": "Cable creatures with high strength, low intelligence"
+  },
+  {
+   "name": "Hounds",
+   "status": "CONFIRMED",
+   "behavior": "Humanoid dogs, animalistic"
+  },
+  {
+   "name": "Nguithr'xurh",
+   "status": "CONFIRMED",
+   "behavior": "Insectoid, on ceilings near ball-like webs"
+  },
+  {
+   "name": "Skin-Stealer",
+   "status": "CONFIRMED",
+   "behavior": "White humanoids wearing victims' skin; attack after a long interaction"
+  },
+  {
+   "name": "Smilers",
+   "status": "CONFIRMED",
+   "behavior": "Bright animal faces attracted to light and noise"
+  },
+  {
+   "name": "Wrangler",
+   "status": "CONFIRMED",
+   "behavior": "Huge snake-like creatures burrowing in walls, hypnotizing"
+  },
+  {
+   "name": "Wretches",
+   "status": "CONFIRMED",
+   "behavior": "Aggressive undead humanoids, low intelligence"
+  },
+  {
+   "name": "Shadowy construction workers (Ouroboros Sector)",
+   "status": "CONFIRMED",
+   "behavior": "ignore other life; accidents reported; purpose unknown"
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Arms, Clumps, Crawlers, Dullers, Growlers, Hounds, Nguithr'xurh, Skin-Stealer, Smilers, Wrangler, Wretches; Ouroboros construction creatures; entities rarely wander in the corridors",
+ "hazards": [
+  "Flickering events (deadly)",
+  "non-Euclidean disorientation",
+  "overconfidence",
+  "hostile humans and Cornucopia Justice Seekers",
+  "harmful crate contents (chemicals, glass, nitrogen)",
+  "over-encumbrance",
+  "spoiled or infected food",
+  "natural locks vanishing",
+  "Garden Sector plant transformation",
+  "do not use light in the halls during Flickering"
+ ],
+ "items_communities": [
+  "crates (food, tools, clothes, medical, Frvyo jades, Squirt Guns, Warpberries)",
+  "Almond Water",
+  "M.E.G. Base Alpha (Aquila)",
+  "Trader's Keep and Vault (Gild)",
+  "Hippocrates-1 (Gothic)",
+  "Camp Amber (left in 2013)",
+  "Cornucopia",
+  "Speednoclippers registration spots",
+  "Tom's Diner",
+  "landmark cloth with supplies and note"
+ ],
+ "entrances": [
+  {
+   "from": "Level 0 (The Yellow Halls)",
+   "from_id": "0",
+   "slug": "/level-0",
+   "method": "No-clip from Level 0; new wanderers usually arrive in the Aquila Sector",
+   "trigger_type": "noclip",
+   "conditions": "successful no-clip out of Level 0",
+   "confidence": "CONFIRMED",
+   "quote": "the only entrance to the Habitable Zone you know of is Level 0"
+  },
+  {
+   "from": "Level 4.2 - Parking Lot of Fog",
+   "from_id": "4.2",
+   "slug": null,
+   "method": "Certain random doors",
+   "trigger_type": "door",
+   "conditions": "only certain doors",
+   "confidence": "CONFIRMED",
+   "quote": "Certain random doors on Level 4.2"
+  },
+  {
+   "from": "Level 11 - The Endless City",
+   "from_id": "11",
+   "slug": "/level-11",
+   "method": "Some building entrances",
+   "trigger_type": "door",
+   "conditions": "some buildings only",
+   "confidence": "CONFIRMED",
+   "quote": "Some building entrances on Level 11"
+  },
+  {
+   "from": "Level 12 - Matrix",
+   "from_id": "12",
+   "slug": "/level-12",
+   "method": "The door, after a specific course of action",
+   "trigger_type": "door",
+   "conditions": "action not described",
+   "confidence": "CONDITIONAL",
+   "quote": "The door on Level 12 - \"Matrix\" after following a specific course of action"
+  },
+  {
+   "from": "Level 40",
+   "from_id": "40",
+   "slug": "/level-40",
+   "method": "Rusted metal doors",
+   "trigger_type": "door",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Rusted metal doors on Level 40"
+  },
+  {
+   "from": "Level 46 - Arabian Desert",
+   "from_id": "46",
+   "slug": "/level-46",
+   "method": "Sandstone doors",
+   "trigger_type": "door",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Sandstone doors on Level 46"
+  },
+  {
+   "from": "Level 54 - Stairwell Of Spirals",
+   "from_id": "54",
+   "slug": "/level-54",
+   "method": "Certain doors",
+   "trigger_type": "door",
+   "conditions": "only certain doors",
+   "confidence": "CONFIRMED",
+   "quote": "Certain doors on Level 54"
+  },
+  {
+   "from": "Level 162 - The Concrete Wall",
+   "from_id": "162",
+   "slug": "/level-162",
+   "method": "Doors on an office space; also no-clip through a platform's secondary wall as it recedes",
+   "trigger_type": "door",
+   "conditions": "two listed methods",
+   "confidence": "CONFIRMED",
+   "quote": "Doors on an office space on Level 162"
+  },
+  {
+   "from": "Level 215 - Harborside View",
+   "from_id": "215",
+   "slug": "/level-215",
+   "method": "Doors leading to non-noteworthy buildings",
+   "trigger_type": "door",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Doors leading to non-noteworthy buildings on Level 215"
+  },
+  {
+   "from": "Level 330 - A Stroke of Colour",
+   "from_id": "330",
+   "slug": "/level-330",
+   "method": "Certain doors connected to a building",
+   "trigger_type": "door",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Certain doors connected to a building on Level 330"
+  },
+  {
+   "from": "Level 409 - The Paper-Rooms",
+   "from_id": "409",
+   "slug": null,
+   "method": "Cardboard doors",
+   "trigger_type": "door",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Cardboard doors on Level 409"
+  },
+  {
+   "from": "Level 726 - Just A Regular Living Room",
+   "from_id": "726",
+   "slug": "/level-726",
+   "method": "Either door of the room",
+   "trigger_type": "door",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Either door of the room on Level 726"
+  },
+  {
+   "from": "Level 2 - Abandoned Utility Halls",
+   "from_id": "2",
+   "slug": "/level-2",
+   "method": "Walk back toward blander corridors (smooth threshold)",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Going back to blander corridors on Level 2"
+  },
+  {
+   "from": "Level 38 - Fold Point",
+   "from_id": "38",
+   "slug": "/level-38",
+   "method": "Follow a concrete hall or corridor that gets progressively less glitchy (smooth threshold)",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "gets progressiveley less glitchy on Level 38"
+  },
+  {
+   "from": "Level 141 - The Boiler Rooms",
+   "from_id": "141",
+   "slug": "/level-141",
+   "method": "Use a flight of stairs or an elevator",
+   "trigger_type": "stairs",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Using a flight of stairs or an elevator on Level 141"
+  },
+  {
+   "from": "Level 0.1 - Zenith Station",
+   "from_id": "0.1",
+   "slug": "/level-0-1",
+   "method": "No-clip through a wall",
+   "trigger_type": "noclip",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "No-clipping though a wall on Level 0.1"
+  },
+  {
+   "from": "Level 84 - The Shifting Hedge Maze",
+   "from_id": "84",
+   "slug": "/level-84",
+   "method": "Touch or no-clip with most objects or walls in VP 3",
+   "trigger_type": "noclip",
+   "conditions": "only in VP 3",
+   "confidence": "CONDITIONAL",
+   "quote": "Touching or no-clipping with a majority of objects or walls in VP 3 on Level 84"
+  },
+  {
+   "from": "Level 128 - The Great Outdoors",
+   "from_id": "128",
+   "slug": "/level-128",
+   "method": "No-clip through a concrete wall",
+   "trigger_type": "noclip",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "No-clipping through a concrete wall on Level 128"
+  },
+  {
+   "from": "Level 283 - PlayLand",
+   "from_id": "283",
+   "slug": "/level-283",
+   "method": "No-clip through the floor in The Lounges",
+   "trigger_type": "noclip",
+   "conditions": "only in The Lounges",
+   "confidence": "CONFIRMED",
+   "quote": "No-clipping through the floor in The Lounges of Level 283"
+  },
+  {
+   "from": "Level 294 - The Liminary Theatre",
+   "from_id": "294",
+   "slug": "/level-294",
+   "method": "Controlled no-clip into the Main Hall walls",
+   "trigger_type": "noclip",
+   "conditions": "controlled no-clip",
+   "confidence": "CONDITIONAL",
+   "quote": "Performing a controlled no-clip into the walls of the Main Hall on Level 294"
+  },
+  {
+   "from": "The Surveillance Room (screen showing Level 1)",
+   "from_id": null,
+   "slug": "/the-surveillance-room",
+   "method": "Use a key card on the screen",
+   "trigger_type": "item",
+   "conditions": "key card",
+   "confidence": "CONDITIONAL",
+   "quote": "Use a key card onto the screen displaying Level 1 in the Surveillance Room"
+  },
+  {
+   "from": "Level 58 - Water Wonder",
+   "from_id": "58",
+   "slug": "/level-58",
+   "method": "Open a supply crate with a red number one",
+   "trigger_type": "interact",
+   "conditions": "specific crate",
+   "confidence": "CONDITIONAL",
+   "quote": "Opening a supply crate with a red number one on Level 58"
+  },
+  {
+   "from": "Level 304 - Las Panaderias",
+   "from_id": "304",
+   "slug": "/level-304",
+   "method": "Eat a ham croissant",
+   "trigger_type": "interact",
+   "conditions": "specific food",
+   "confidence": "CONDITIONAL",
+   "quote": "Eating a ham croissant on Level 304"
+  },
+  {
+   "from": "Level 305 - The Descent into Darkness",
+   "from_id": "305",
+   "slug": "/level-305",
+   "method": "No-clip into a tree",
+   "trigger_type": "noclip",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "No-clipping into a tree on Level 305"
+  },
+  {
+   "from": "Level 322 - Unrecognized Landscape",
+   "from_id": "322",
+   "slug": "/level-322",
+   "method": "Touch any green shape",
+   "trigger_type": "interact",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Touching any green shape on Level 322"
+  },
+  {
+   "from": "Level 365 - Your Worst Enemy",
+   "from_id": "365",
+   "slug": "/level-365",
+   "method": "Touch a mirror",
+   "trigger_type": "interact",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Touching a mirror on Level 365"
+  },
+  {
+   "from": "Level 852 - Retail Therapy",
+   "from_id": "852",
+   "slug": "/level-852",
+   "method": "Find the sales floor and acquire two bottles of almond water",
+   "trigger_type": "item",
+   "conditions": "two bottles of almond water",
+   "confidence": "CONDITIONAL",
+   "quote": "acquiring two bottles of almond water on Level 852"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 2 - Abandoned Utility Halls",
+   "to_id": "2",
+   "slug": "/level-2",
+   "method": "Walk far enough in a direction where pipes and dials gradually appear (smooth threshold); the most common exit",
+   "trigger_type": "walk_in",
+   "conditions": "none",
+   "risk": "low",
+   "confidence": "CONFIRMED",
+   "quote": "simply walking far enough in a direction with pipes and dials gradually appearing"
+  },
+  {
+   "to": "Level 22 - Ruins Left Behind",
+   "to_id": "22",
+   "slug": "/level-22",
+   "method": "Glass doors",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "Glass doors will lead to Level 22"
+  },
+  {
+   "to": "Level 154 - The Laser Game",
+   "to_id": "154",
+   "slug": "/level-154",
+   "method": "Doors with unique symbols at ends of corridors with fluorescent lights",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "Doors with unique symbols at the end of corridors with fluorescent lights"
+  },
+  {
+   "to": "Level 159 - Beastland",
+   "to_id": "159",
+   "slug": "/level-159",
+   "method": "Ice-coated metal doors",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "Ice coated metal doors will lead to Level 159"
+  },
+  {
+   "to": "Level 218 - Dead Man's Mile",
+   "to_id": "218",
+   "slug": "/level-218",
+   "method": "Bunker doors",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "Bunker doors will lead to Level 218"
+  },
+  {
+   "to": "Level 389 - The Gaming Hall",
+   "to_id": "389",
+   "slug": "/level-389",
+   "method": "Wooden door in nonsensical locations; also a painting of a jester-looking character (no-clip)",
+   "trigger_type": "door",
+   "conditions": "two methods",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "Wooden door in nonsensical locations will lead to Level 389"
+  },
+  {
+   "to": "Level 998 - A Path Across Hell, and Towards Any Beyond",
+   "to_id": "998",
+   "slug": "/level-998",
+   "method": "Metal double doors resembling elevator doors lead to a staircase",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "lead to a staircase going to Level 998"
+  },
+  {
+   "to": "Level 998.2 - Fight Club",
+   "to_id": "998.2",
+   "slug": "/level-998-2",
+   "method": "Plain-white wooden doors",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "Plain-white, wooden doors will lead to Level 998.2"
+  },
+  {
+   "to": "The Hub",
+   "to_id": null,
+   "slug": "/the-hub",
+   "method": "Specific sequence of doors and halls",
+   "trigger_type": "door",
+   "conditions": "sequence not described",
+   "risk": "not stated",
+   "confidence": "CONDITIONAL",
+   "quote": "Specific sequence of doors and halls can take the wanderer to The Hub"
+  },
+  {
+   "to": "Level 19 - Attic Floorboards",
+   "to_id": "19",
+   "slug": "/level-19",
+   "method": "Climb up into holes in the ceiling",
+   "trigger_type": "interact",
+   "conditions": "",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "Climbing up into holes into the ceiling can lead to Level 19"
+  },
+  {
+   "to": "Level 38 - Fold Point",
+   "to_id": "38",
+   "slug": "/level-38",
+   "method": "Walk a corridor that gets gradually more glitchy",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "Walking in a corridor getting gradually more glitchy will eventually lead to Level 38"
+  },
+  {
+   "to": "Level 128 - The Great Outdoors",
+   "to_id": "128",
+   "slug": "/level-128",
+   "method": "Breaches in some walls showing the exterior; no-clip through some walls",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "Breaches in some walls displaying the exterior can lead to Level 128"
+  },
+  {
+   "to": "Level 352 (spoken level name bHZsMzUy)",
+   "to_id": "352",
+   "slug": "/level-352",
+   "method": "Speak the string bHZsMzUy intelligibly in a Latin-alphabet language",
+   "trigger_type": "interact",
+   "conditions": "spoken",
+   "risk": "not stated",
+   "confidence": "CONDITIONAL",
+   "quote": "Speaking the level name of bHZsMzUy in any language involving the Latin Alphabet"
+  },
+  {
+   "to": "Level 800 - House of Clockwork",
+   "to_id": "800",
+   "slug": "/level-800",
+   "method": "Go into an open ventilation duct",
+   "trigger_type": "interact",
+   "conditions": "",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "Going into an open ventilation duct will lead to Level 800"
+  },
+  {
+   "to": "Level 24 - The Moon",
+   "to_id": "24",
+   "slug": "/level-24",
+   "method": "Entrance kept secret by the B.N.T.G.; rumored to be a painting of the Moon",
+   "trigger_type": "interact",
+   "conditions": "",
+   "risk": "unknown",
+   "confidence": "RUMORED",
+   "quote": "rumored to be a painting of the Moon like the one on Level 57"
+  },
+  {
+   "to": "Level 201 - A E S T H E T I C",
+   "to_id": "201",
+   "slug": "/level-201",
+   "method": "Use a VHS tape labeled Mach+ to no-clip into the TV",
+   "trigger_type": "item",
+   "conditions": "VHS tape Mach+",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "Using a VHS tape labeled \"Mach+\" will make you no-clip into the TV"
+  },
+  {
+   "to": "Level 305 - The Descent into Darkness",
+   "to_id": "305",
+   "slug": "/level-305",
+   "method": "No-clip into a dead tree",
+   "trigger_type": "noclip",
+   "conditions": "",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "No-clipping into a dead tree will lead to Level 305"
+  },
+  {
+   "to": "Level 710 - Ring and Ruins",
+   "to_id": "710",
+   "slug": "/level-710",
+   "method": "Chain of Pilgrim's Path landmarks that no-clip when touched",
+   "trigger_type": "noclip",
+   "conditions": "repeat across levels",
+   "risk": "not stated",
+   "confidence": "CONDITIONAL",
+   "quote": "Continuing doing so will eventually lead you to Level 710"
+  },
+  {
+   "to": "Level 817 - The Scrapyard",
+   "to_id": "817",
+   "slug": "/level-817",
+   "method": "Clip through a crate containing scrap metal",
+   "trigger_type": "noclip",
+   "conditions": "",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "Clipping through a crate containing scrap metal will lead you to Level 817"
+  },
+  {
+   "to": "Level 1.1 - Corrupted Corridor",
+   "to_id": "1.1",
+   "slug": "/level-1-1",
+   "method": "Entrance at the south of Base Alpha (sub-section)",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "can be found at the south of Base Alpha"
+  },
+  {
+   "to": "Level 1.2 - Concrete Garden",
+   "to_id": "1.2",
+   "slug": "/level-1-2",
+   "method": "Passage within the Aquila Sector (sub-section)",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "risk": "Garden Sector is deadly (plant transformation)",
+   "confidence": "CONFIRMED",
+   "quote": "The passage leading to Level 1.2"
+  },
+  {
+   "to": "Level √2",
+   "to_id": null,
+   "slug": null,
+   "method": "Access not confirmed",
+   "trigger_type": "unknown",
+   "conditions": "",
+   "risk": "not stated",
+   "confidence": "UNKNOWN",
+   "quote": "The access to Level √2 hasn't been confirmed as of yet"
+  },
+  {
+   "to": "Level 1.5 - Inverted",
+   "to_id": "1.5",
+   "slug": "/level-1-5",
+   "method": "No-clipping",
+   "trigger_type": "noclip",
+   "conditions": "",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "Level 1.5 - \"Inverted\" can be accessed through no-clipping"
+  }
+ ],
+ "signature_mechanic": "Non-Euclidean hall of crates and pillars with random total-blackout Flickering; retreat to Euclidean corridor rooms; landmark navigation; crates that vanish when unobserved; sector variants.",
+ "verticality": "Mostly flat; a few sourced vertical links (ceiling holes to Level 19, stairs/elevator from Level 141).",
+ "do_not": [
+  "make halls Euclidean",
+  "let flashlights work in the halls during Flickering",
+  "fill corridors with entities",
+  "let crates persist when unobserved",
+  "make the Garden Sector safe",
+  "treat narrative first-person story as article fact"
+ ],
+ "content_warnings": [
+  "body horror (Skin-Stealer scene, flayed corpse)",
+  "violence and blood",
+  "dehydration and despair"
+ ],
+ "source_completeness": "PARTIAL",
+ "conflicts_notes": "Page mixes factual guide sections with first-person fiction (nameless wanderer; Stephanie Ashford). Footnote bodies, the sector carousel and entity-table photos are not captured. The Fabled Sector excerpt by Leo Castellos is cut off mid-sentence. 'Only entrance you know of is Level 0' vs a long entrance list. The 'level 15' after the bHZsMzUy line is a footnote marker; link target is /level-352.",
+ "key_quotes": [
+  {
+   "section": "The Halls",
+   "quote": "an endless chimera between an underground parking lot and an abandoned warehouse"
+  },
+  {
+   "section": "Navigation",
+   "quote": "Walk towards it carefully, never looking away from it."
+  },
+  {
+   "section": "Flickering",
+   "quote": "all the natural lights of the Habitable Zone switch off, engulfing the level in complete darkness"
+  },
+  {
+   "section": "The Corridors",
+   "quote": "they're actually far safer than the halls"
+  },
+  {
+   "section": "Crates",
+   "quote": "crates can disappear once not looked at"
+  },
+  {
+   "section": "Garden Sector",
+   "quote": "turning you into a plant"
+  },
+  {
+   "section": "Exits",
+   "quote": "simply walking far enough in a direction with pipes and dials gradually appearing"
+  }
+ ]
+}

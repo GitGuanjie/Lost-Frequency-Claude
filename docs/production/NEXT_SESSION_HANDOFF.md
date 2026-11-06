@@ -1,63 +1,46 @@
 # Next-session handoff
 
-Repository `GitGuanjie/claude-EO`, branch `claude/affectionate-wright-axgljs`, folder `lost_frequency/`.
-Engine: Godot **4.5.1** (Forward+). Tested on Linux with headless runs and software Vulkan (Mesa
-lavapipe under Xvfb). No real GPU was available.
+Repository `GitGuanjie/Lost-Frequency-Claude`, branch `main`. The game is at the repository root.
+Its history was imported from `GitGuanjie/claude-EO` (`lost_frequency/`, branch `claude/affectionate-wright-axgljs`)
+on 2026-11-06. Engine: Godot **4.5.1** (Forward+).
 
-## State at handoff (2026-11-05, v1.1.0-m2)
-- **Playable (engine QA 0 failures, stills reviewed by the AI integrator): 15.** These are L000, L001, L002, L004, L005,
-  L006, L007, L008, L009, L011, L019, L025, L037, L188 and L974. 13 are story-reachable; L974 is developer-only per canon.
-- **User feedback on v1.0 (applied):** the levels felt too few and too boundaried, and the user wanted "Backrooms
-  film" 3D space with continuous switching. Response:
-  - Seamless switching: the destination prefetches near an exit and swaps under a no-clip glitch, with
-    momentum, view pitch and flashlight carried over. There is no loading screen.
-  - A found-footage camcorder filter with a REC timestamp and handheld sway (Settings toggle).
-  - Level 0 two-storey atrium zones.
-  - Guide section 9, "Film-grade spatial rules": multi-height spaces and no visible boundaries are now mandatory.
-  - L002, L004 and L008 were built under these rules (two-deck tunnels and catwalks, two-floor office blocks with
-    light wells, and caves from -8 m to +5 m).
-- **Fixes this round:**
-  - Arrivals now update the story checkpoint, so Continue resumes in the level you reached.
-  - MSAA made the water depth read 0 (opaque water); the project now uses FXAA.
-  - QA reports are compacted.
-- **Repository budget:** 4.85 MB of the research repository's 5 MiB cap. **Move the game to its own repository
-  before adding more levels**: `git subtree split --prefix=lost_frequency -b lost-frequency`, then push that
-  branch to a new repository.
+## State (2026-11-06)
+- **Playable (engine QA 0 failures, stills reviewed by the AI integrator): 19.** L000, L001, L002, L003, L004,
+  L005, L006, L007, L008, L009, L010, L011, L012, L014, L019, L025, L037, L188 and L974. 17 are
+  story-reachable from Level 0; L974 is developer-only per canon. Fully accepted: 0 (needs a human playtest and
+  real-GPU numbers).
+- **Film-grade features:**
+  - Seamless level switching (prefetch plus a no-clip glitch, with state carried over).
+  - Found-footage camcorder filter with REC timestamp.
+  - Multi-storey spaces (L000 atriums, L002 decks, L004 floors, L008 shafts).
+  - CC0 photographic materials (Poly Haven sets in `assets/external`; `tools/fetch_assets.py` re-fetches them, pinned by `lock.json`).
+- **Sources:**
+  - `sources/wiki_text/` holds the dated text snapshots of all 100 pages (2026-11-04), plus the full offset
+    captures for L320 and L289 in `*_full.md`.
+  - `sources/dossier_json/` holds the structured dossiers; `docs/canon/levels/` holds the markdown dossiers.
+  - The mandate and roster are in `sources/`.
 
 ## Exact commands
-(Story suite: add `--story_hops=N` to limit the chain; `--seed=N` sets the level-suite seed.)
 ```bash
-cd lost_frequency
 godot --headless --path . --import
-godot --headless --path . --fixed-fps 60 res://tests/QARunner.tscn -- --qa                    # all suites
-godot --headless --path . --fixed-fps 60 res://tests/QARunner.tscn -- --qa --suite=levels --levels=L008
-xvfb-run -a -s "-screen 0 1280x720x24" godot --path . --rendering-driver vulkan res://tests/CaptureRunner.tscn -- --qa --levels=L008 --w=640 --frames=24
-python3 -I tools/build_reports.py      # scoreboard, acceptance CSV, world_graph.dot
+godot --headless --path . --fixed-fps 60 res://tests/QARunner.tscn -- --qa --suite=levels --levels=L003   # one level per process (memory)
+godot --headless --path . --fixed-fps 60 res://tests/QARunner.tscn -- --qa --suite=story --story_hops=8   # story chain, run alone
+xvfb-run -a -s "-screen 0 1280x720x24" godot --path . --rendering-driver vulkan res://tests/CaptureRunner.tscn -- --qa --levels=L003 --w=640 --frames=24
+python3 -I tools/build_canon_data.py --snapshot <raw html dir> --roster sources/BACKROOMS_100_LEVEL_ROSTER.csv --dossiers sources/dossier_json
+python3 -I tools/build_reports.py
 godot --headless --path . --export-release "Windows Desktop" ../export/windows/LostFrequency.exe
 ```
+Run one level per QA process: four heavy streamed levels in one process hit the container's memory limit.
 
-## Open issues found at handoff
-- **Root cause of the earlier "story stall" (fixed):** in story-only runs, `TransitionService.load_level` freed
-  the current scene, which was the QA runner itself. The Jolt "max jobs" warning was a side effect, not
-  the cause. The story suite (`--suite=story --story_hops=5`) now runs: 28 passed, 1 failed.
-  0 → 1 → 19 → 5 → 9 passes with seamless switching, sourced arrivals, carried state and the on-disk save advancing.
-- **Remaining failure:** the walker bot does not complete Level 9's sourced arrow-sign route
-  (`L009>L011#1` needs the signs passed in order) when starting from the `from_L005` house arrival. It works from
-  `start`. Check the waypoint walks (printed as `STORY waypoint ...`). The house arrival is upstairs, and the first
-  sign may be unreachable within the streaming radius.
-- QA runs that execute in parallel share `user://qa_saves`. Run story suites one at a time.
+## Open issues
+- The story suite passes 0 → 1 → 19 → 5 → 9. The walker bot fails Level 9's ordered arrow-sign route
+  (`L009>L011#1`) when it starts from the `from_L005` house arrival; it works from `start`.
+- Add `from_L002` to L001 and `from_L004` to L006 (return trips currently land at `start`).
+- First-wave levels (L001, L005, L006, L009, L011, L019, L025, L037, L188) predate guide section 9. Retrofit
+  them with multi-height structure and no-boundary edges.
+- QA runs executed in parallel share `user://qa_saves`.
 
-## Highest-value next steps
-1. Move the game to its own repository (see above), then raise the storage budget.
-2. Remaining **Group A**: L003, L010, L012, L013, L014; add `from_L002` to L001 and `from_L004` to L006.
-3. Retrofit section 9 (multi-height and no-boundary) onto the first-wave levels: L001, L005, L006, L009, L011,
-   L019, L025, L037, L188.
-3. Top-rated flagships: L404, L200, L289, L906, L601, L256, L999, L000_1, L005_1.
-4. A human playtest of the chain on a real GPU. Record frame-time numbers, then promote to ACCEPTED.
-5. Move the game into its own repository (`git subtree split --prefix=lost_frequency`). The research
-   repository caps total tracked size at 5 MiB, which limits stills and evidence.
-
-Build rule for every level: follow `docs/production/LEVEL_AUTHORING_GUIDE.md`, then pass QA with 0
-failures and the walker bot. Integrator review of stills comes before `status: PLAYABLE`. Use at most
-4–6 parallel builders: this session hit the account usage limit twice with 6 opus builders plus
-sonnet researchers.
+## Next levels (priority)
+L013 (completes Group A), then the top-rated flagships L404, L200, L289, L906, L601, L256, L999, L000_1 and L005_1.
+Each needs: QA with 0 failures plus the walker bot, two reviewed stills, and `status: PLAYABLE` only after review.
+Use at most 4 parallel builders: six opus builders hit the account usage limit twice.

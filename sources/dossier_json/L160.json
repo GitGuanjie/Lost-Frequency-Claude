@@ -1,0 +1,34 @@
+{
+ "stable_id": "L160", "level_id": "160", "title": "Level 160 - \"The City Of Promised Memories\"",
+ "survival_class": "not stated",
+ "physical_identity": "Not described physically. The page is a second-person monologue by an unnamed voice that lures the reader toward 'the city of promised memories' with promised reunions and a pact.",
+ "scale_topology": "Not stated.",
+ "anomalies": ["Voice that claims to read thoughts", "Place of jumbled memories", "Promised reunion with dead loved ones (lure)"],
+ "lighting_sound": "Not stated beyond grey monotone present and an azure/orange sky memory; background piano music credited.",
+ "entities": [
+  {"name": "Unnamed pact-offering voice", "status": "REPORTED", "behavior": "Lures with promised reunions; claims to read thoughts"},
+  {"name": "Emma and the addressee's friends and mother", "status": "RUMORED", "behavior": "Said by the voice to be waiting"}
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: the unnamed pact voice; promised people are claims only",
+ "hazards": ["Coercive pact", "Psychological manipulation"],
+ "items_communities": ["Not stated"],
+ "entrances": [
+  {"from": "Unspecified earlier place ('worse than hell', link to /level-0)", "from_id": null, "slug": "/level-0", "method": "Narrative: addressee jumped and arrived", "trigger_type": "fall", "conditions": "Single narrative; not a general entrance", "confidence": "UNKNOWN", "quote": "you found yourself in a place worse than hell"}
+ ],
+ "exits": [
+  {"to": "One more place inside", "to_id": null, "slug": null, "method": "Go through final place where the voice waits", "trigger_type": "unknown", "conditions": "Implied", "risk": "Coercive/unknown", "confidence": "UNKNOWN", "quote": "There's just one more place you need to go through."}
+ ],
+ "signature_mechanic": "A voice repeatedly offers a pact in the second person; the 'city' is named but never described.",
+ "verticality": "Not stated.",
+ "do_not": ["Invent city layout or residents", "Make Emma or family real NPCs", "Depict suicide graphically", "Add exits to Levels 159/161/0", "Add combat or collectibles"],
+ "content_warnings": ["Suicide (author-note warned)", "Grief and guilt", "Coercive manipulation", "Child bereavement"],
+ "source_completeness": "NARRATIVE_FORMAT",
+ "conflicts_notes": "Link 'worse than hell' targets /level-0 but is narrative phrasing. Levels 159 and 161 are in the link list only. No class, entrance or exit sections.",
+ "key_quotes": [
+  {"section": "Author Note", "quote": "mentions the topic suicide in it"},
+  {"section": "body", "quote": "All you have to do is accept my pact"},
+  {"section": "body", "quote": "You cannot hide your thoughts from me"},
+  {"section": "body", "quote": "everything is monotone and grey"},
+  {"section": "body", "quote": "There's just one more place you need to go through."}
+ ]
+}

@@ -1,0 +1,590 @@
+{
+ "stable_id": "L002",
+ "level_id": "2",
+ "title": "Abandoned Utility Halls",
+ "survival_class": "not stated",
+ "physical_identity": "Infinite Euclidean maze of cramped chalky concrete maintenance tunnels turning at 45 degrees, lined with non-cooperating pipes and machinery and many coded doors.",
+ "scale_topology": "Infinite indoor tunnel array; side rooms and void rooms behind doors; Office Space EL3A inside it.",
+ "anomalies": [
+  "45-degree-only turns, lengths multiples of 5 m",
+  "Series-wired lights black out 3x3 to 6x6 grids",
+  "Infinite lightless void rooms behind doors",
+  "Machines regenerate disconnected",
+  "2-year level-wide blackout in history"
+ ],
+ "lighting_sound": "Sparse buzzing fluorescents (white or orange), uneven; machines only whir; violet emergency lights in blackout areas.",
+ "entities": [
+  {
+   "name": "Windows",
+   "status": "CONFIRMED",
+   "behavior": "Rare, at corridor ends; do not approach"
+  },
+  {
+   "name": "Smilers",
+   "status": "CONFIRMED",
+   "behavior": "Very common, drawn to darkness"
+  },
+  {
+   "name": "Deathmoths",
+   "status": "CONFIRMED",
+   "behavior": "Declined, smaller, docile"
+  },
+  {
+   "name": "Clumps",
+   "status": "CONFIRMED",
+   "behavior": "Very common, lethal corner ambush"
+  },
+  {
+   "name": "Jerry and cultists",
+   "status": "CONFIRMED",
+   "behavior": "Confined to Jerry's Room; capture those spotted"
+  },
+  {
+   "name": "Hounds",
+   "status": "CONFIRMED",
+   "behavior": "Pack hunters"
+  },
+  {
+   "name": "Facelings",
+   "status": "CONFIRMED",
+   "behavior": "Rare groups, rarely attack"
+  },
+  {
+   "name": "Wretches",
+   "status": "CONFIRMED",
+   "behavior": "Exist on practically every level"
+  },
+  {
+   "name": "Nguithr'xurhs",
+   "status": "CONFIRMED",
+   "behavior": "Small, ceiling ambush of insects"
+  },
+  {
+   "name": "Death Rats",
+   "status": "CONFIRMED",
+   "behavior": "Harmless, bald"
+  },
+  {
+   "name": "Cannibal Cuisines",
+   "status": "CONFIRMED",
+   "behavior": "At dead ends; light formerly waypoints"
+  },
+  {
+   "name": "Wranglers",
+   "status": "CONFIRMED",
+   "behavior": "Burrow by noclip and snatch prey"
+  },
+  {
+   "name": "Photoshop",
+   "status": "REPORTED",
+   "behavior": "Rare near PC rooms"
+  },
+  {
+   "name": "Growlers",
+   "status": "CONFIRMED",
+   "behavior": "Fuse into blockages then die"
+  },
+  {
+   "name": "Swindlebirds",
+   "status": "RUMORED",
+   "behavior": "One uninvestigated blue sighting"
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Windows, Smilers, Deathmoths, Clumps, Jerry, Hounds, Facelings, Wretches, Nguithr'xurhs, Death Rats, Cannibal Cuisines, Wranglers, Photoshop, Growlers (Skin-Stealers left)",
+ "hazards": [
+  "Clump ambushes",
+  "Smilers in dark",
+  "Void rooms",
+  "Wrangler snatching",
+  "Light-grid blackouts",
+  "Chalk powder bruises",
+  "Burst pipes smell"
+ ],
+ "items_communities": [
+  "Flatbed trolleys, oil drums, boxes, tools, toolboxes, ladders",
+  "B.N.T.G. at Office Space EL3A",
+  "The Survivors, Followers of Jerry (history)",
+  "Defunct tramway tracks",
+  "No edible food or medical supplies"
+ ],
+ "entrances": [
+  {
+   "from": "Level 1",
+   "from_id": "1",
+   "slug": "/level-1",
+   "method": "Traverse unusually long corridors",
+   "trigger_type": "walk_in",
+   "conditions": "none",
+   "confidence": "CONFIRMED",
+   "quote": "via traversing down any corridors that appear to go on for longer than most corridors do in the level"
+  },
+  {
+   "from": "The Frontrooms",
+   "from_id": null,
+   "slug": "/the-frontrooms",
+   "method": "Noclip directly",
+   "trigger_type": "noclip",
+   "conditions": "direct",
+   "confidence": "CONFIRMED",
+   "quote": "noclipped into Level 2 directly from The Frontrooms"
+  },
+  {
+   "from": "Level 52",
+   "from_id": "52",
+   "slug": "/level-52",
+   "method": "Climb into small cavern tunnels",
+   "trigger_type": "interact",
+   "conditions": "none",
+   "confidence": "CONFIRMED",
+   "quote": "climbing into small tunnels within Level 52's many large caverns"
+  },
+  {
+   "from": "Level 287",
+   "from_id": "287",
+   "slug": "/level-287",
+   "method": "Random doors",
+   "trigger_type": "door",
+   "conditions": "random",
+   "confidence": "CONDITIONAL",
+   "quote": "Random doors within Level 287 open to Level 2."
+  },
+  {
+   "from": "Office Space EL3A",
+   "from_id": null,
+   "slug": "/office-space-el3a",
+   "method": "Signposts or defunct railway tracks",
+   "trigger_type": "walk_in",
+   "conditions": "trespassing barred",
+   "confidence": "CONDITIONAL",
+   "quote": "trespassing is barred by those not affiliated with the group"
+  },
+  {
+   "from": "Level 2.2",
+   "from_id": "2.2",
+   "slug": null,
+   "method": "Doors occasionally",
+   "trigger_type": "door",
+   "conditions": "occasional",
+   "confidence": "CONDITIONAL",
+   "quote": "individuals can occasionally find doors in the former to lead to the latter"
+  },
+  {
+   "from": "Level 8",
+   "from_id": "8",
+   "slug": "/level-8",
+   "method": "Large-enough vents in cave walls",
+   "trigger_type": "interact",
+   "conditions": "only large vents",
+   "confidence": "CONDITIONAL",
+   "quote": "entering the ones that are large enough lead to Level 2"
+  },
+  {
+   "from": "Level 11",
+   "from_id": "11",
+   "slug": "/level-11",
+   "method": "Doors of random buildings lacking interiors",
+   "trigger_type": "door",
+   "conditions": "potential",
+   "confidence": "CONDITIONAL",
+   "quote": "have the potential to lead to Level 2, among other levels"
+  },
+  {
+   "from": "Level 43",
+   "from_id": "43",
+   "slug": "/level-43",
+   "method": "Aquarium staff halls",
+   "trigger_type": "walk_in",
+   "conditions": "or Level 4",
+   "confidence": "CONDITIONAL",
+   "quote": "individuals can suddenly appear within Level 2, or Level 4"
+  },
+  {
+   "from": "Level 84",
+   "from_id": "84",
+   "slug": "/level-84",
+   "method": "Touch or noclip Clipped Park terrain for long",
+   "trigger_type": "noclip",
+   "conditions": "long period",
+   "confidence": "CONDITIONAL",
+   "quote": "may trigger teleportation to Level 2"
+  },
+  {
+   "from": "Level 127",
+   "from_id": "127",
+   "slug": "/level-127",
+   "method": "Crematorium furnaces",
+   "trigger_type": "interact",
+   "conditions": "none",
+   "confidence": "CONFIRMED",
+   "quote": "Climbing into any crematorium furnaces within the above level"
+  },
+  {
+   "from": "Level 141",
+   "from_id": "141",
+   "slug": "/level-141",
+   "method": "Stairs or elevator",
+   "trigger_type": "stairs",
+   "conditions": "also other levels",
+   "confidence": "CONDITIONAL",
+   "quote": "By climbing any stairs or utilizing an elevator, wanderers can arrive in Level 2"
+  },
+  {
+   "from": "Level 158",
+   "from_id": "158",
+   "slug": "/level-158",
+   "method": "Aries station subway tunnel before train arrives",
+   "trigger_type": "walk_in",
+   "conditions": "timing",
+   "confidence": "CONDITIONAL",
+   "quote": "Entering the subway tunnel within Aries station before its train has arrived leads to Level 2."
+  },
+  {
+   "from": "Level 173",
+   "from_id": "173",
+   "slug": "/level-173",
+   "method": "Waterfalls in caves",
+   "trigger_type": "swim",
+   "conditions": "slim chance",
+   "confidence": "CONDITIONAL",
+   "quote": "a slim chance of entering Level 2"
+  },
+  {
+   "from": "Level 309",
+   "from_id": "309",
+   "slug": "/level-309",
+   "method": "Three miles down The Path",
+   "trigger_type": "walk_in",
+   "conditions": "none",
+   "confidence": "CONFIRMED",
+   "quote": "By travelling three miles down The Path, one can arrive within Level 2"
+  },
+  {
+   "from": "Level 480",
+   "from_id": "480",
+   "slug": "/level-480",
+   "method": "Store hallways",
+   "trigger_type": "walk_in",
+   "conditions": "sometimes",
+   "confidence": "CONDITIONAL",
+   "quote": "can sometimes lead to Level 2 instead of their actual target destination"
+  },
+  {
+   "from": "Level 522",
+   "from_id": "522",
+   "slug": "/level-522",
+   "method": "Submerge into wiring",
+   "trigger_type": "dive",
+   "conditions": "none",
+   "confidence": "CONFIRMED",
+   "quote": "By submerging oneself into the thick sets of wiring on Level 522"
+  },
+  {
+   "from": "Level 916",
+   "from_id": "916",
+   "slug": "/level-916",
+   "method": "Wooden doors at stairway bottom",
+   "trigger_type": "door",
+   "conditions": "return route",
+   "confidence": "CONFIRMED",
+   "quote": "will take you back to Level 2"
+  },
+  {
+   "from": "Level 997",
+   "from_id": "997",
+   "slug": "/level-997",
+   "method": "Pink door embedded in a tree",
+   "trigger_type": "door",
+   "conditions": "return route",
+   "confidence": "CONFIRMED",
+   "quote": "individuals must use a pink door embedded in a tree"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Levels 1, 3, 4",
+   "to_id": "1",
+   "slug": "/level-1",
+   "method": "Unlocked doors, often sign-marked",
+   "trigger_type": "door",
+   "conditions": "easiest",
+   "risk": "low",
+   "confidence": "CONFIRMED",
+   "quote": "all of which take the form of unlocked doors"
+  },
+  {
+   "to": "Level 31 and Level 127",
+   "to_id": "31",
+   "slug": "/level-31",
+   "method": "Plywood doors",
+   "trigger_type": "door",
+   "conditions": "both listed",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "By finding plywood doors in Level 2, one can enter Level 31 and Level 127."
+  },
+  {
+   "to": "Level 137",
+   "to_id": "137",
+   "slug": "/level-137",
+   "method": "Aged wooden doors",
+   "trigger_type": "door",
+   "conditions": "none",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "wooden doors that appear aged lead to Level 137 instead"
+  },
+  {
+   "to": "Level 70",
+   "to_id": "70",
+   "slug": "/level-70",
+   "method": "Floor-to-ceiling doors engraved 70",
+   "trigger_type": "door",
+   "conditions": "engraved",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "The ones that lead to Level 70 have the text \"70\" engraved into them"
+  },
+  {
+   "to": "Level 283",
+   "to_id": "283",
+   "slug": "/level-283",
+   "method": "Floor-to-ceiling doors painted rainbow",
+   "trigger_type": "door",
+   "conditions": "colour",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "the ones that lead to Level 283 are often painted in rainbow colors"
+  },
+  {
+   "to": "Level 101",
+   "to_id": "101",
+   "slug": "/level-101",
+   "method": "Some unlocked doors",
+   "trigger_type": "door",
+   "conditions": "some",
+   "risk": "not stated",
+   "confidence": "CONDITIONAL",
+   "quote": "Some unlocked doors go to Level 101"
+  },
+  {
+   "to": "Level 126",
+   "to_id": "126",
+   "slug": null,
+   "method": "Unlocked doors with echoey piano",
+   "trigger_type": "door",
+   "conditions": "sound cue",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "any unlocked doors that have an echoey piano emanating from the other side lead to Level 126"
+  },
+  {
+   "to": "Level 141",
+   "to_id": "141",
+   "slug": "/level-141",
+   "method": "Open and enter a metal door",
+   "trigger_type": "door",
+   "conditions": "none",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "Opening a metal door and entering it leads to Level 141."
+  },
+  {
+   "to": "Level 175",
+   "to_id": "175",
+   "slug": "/level-175",
+   "method": "Blue doors",
+   "trigger_type": "door",
+   "conditions": "colour",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "Any blue doors in Level 2 lead to Level 175"
+  },
+  {
+   "to": "Level 997",
+   "to_id": "997",
+   "slug": "/level-997",
+   "method": "Pink doors",
+   "trigger_type": "door",
+   "conditions": "colour",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "all pink doors in Level 2 lead to Level 997"
+  },
+  {
+   "to": "Level 811",
+   "to_id": "811",
+   "slug": "/level-811",
+   "method": "Follow blue pulsing pipe lights to blade door; pull knife",
+   "trigger_type": "interact",
+   "conditions": "needs power; failed in blackout",
+   "risk": "not stated",
+   "confidence": "CONDITIONAL",
+   "quote": "Pulling the knife will then take individuals to Level 811."
+  },
+  {
+   "to": "Level 916",
+   "to_id": "916",
+   "slug": "/level-916",
+   "method": "Wooden doors with broken doorknob",
+   "trigger_type": "door",
+   "conditions": "long wandering",
+   "risk": "not stated",
+   "confidence": "CONDITIONAL",
+   "quote": "a set of wooden doors with a broken doorknob that lead to Level 916"
+  },
+  {
+   "to": "Level 998",
+   "to_id": "998",
+   "slug": "/level-998",
+   "method": "Elevator-like doors",
+   "trigger_type": "door",
+   "conditions": "common",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "elevator-like doors will lead to Level 998"
+  },
+  {
+   "to": "The Hub",
+   "to_id": null,
+   "slug": null,
+   "method": "Same scheme as Level 1; location unknown",
+   "trigger_type": "unknown",
+   "conditions": "unofficial",
+   "risk": "not stated",
+   "confidence": "RUMORED",
+   "quote": "the location in which to do so is not officially known by most main groups"
+  },
+  {
+   "to": "Office Space EL3A (returns to Level 2)",
+   "to_id": "2",
+   "slug": "/office-space-el3a",
+   "method": "Internal area",
+   "trigger_type": "walk_in",
+   "conditions": "inside Level 2",
+   "risk": "none",
+   "confidence": "CONFIRMED",
+   "quote": "exiting this area will place individuals back into Level 2"
+  },
+  {
+   "to": "Level 606 and Level 38",
+   "to_id": "606",
+   "slug": "/level-606",
+   "method": "Seamless transition",
+   "trigger_type": "unknown",
+   "conditions": "606 rarer",
+   "risk": "very high for 606",
+   "confidence": "CONDITIONAL+DANGEROUS",
+   "quote": "no one who has been to Make Believe has survived"
+  },
+  {
+   "to": "Level 64",
+   "to_id": "64",
+   "slug": "/level-64",
+   "method": "Furnished house rooms behind unlocked doors",
+   "trigger_type": "door",
+   "conditions": "houses",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "rooms behind Level 2's unlocked doors that resemble fully furnished and decorated houses will lead to Level 64"
+  },
+  {
+   "to": "Level 127",
+   "to_id": "127",
+   "slug": "/level-127",
+   "method": "Unreasonably hot areas as noclip hotspots",
+   "trigger_type": "noclip",
+   "conditions": "failed in blackout",
+   "risk": "heat",
+   "confidence": "CONDITIONAL",
+   "quote": "hotspots for noclipping into Level 127"
+  },
+  {
+   "to": "Level 158",
+   "to_id": "158",
+   "slug": "/level-158",
+   "method": "Traverse halls for long enough",
+   "trigger_type": "walk_in",
+   "conditions": "long traverse",
+   "risk": "not stated",
+   "confidence": "CONDITIONAL",
+   "quote": "By traversing the halls for long enough"
+  },
+  {
+   "to": "Level 902",
+   "to_id": "902",
+   "slug": "/level-902",
+   "method": "Perpendicular dugout passageways",
+   "trigger_type": "walk_in",
+   "conditions": "passages",
+   "risk": "not stated",
+   "confidence": "CONDITIONAL",
+   "quote": "small dugout passageways at perpendicular angles to the rest of Level 2's layout"
+  },
+  {
+   "to": "Level 189",
+   "to_id": "189",
+   "slug": null,
+   "method": "Wish to use restroom, then interact with door",
+   "trigger_type": "interact",
+   "conditions": "wish first",
+   "risk": "not stated",
+   "confidence": "CONDITIONAL",
+   "quote": "one can spontaneously arrive on Level 189 after interacting with a door after they have made the wish"
+  },
+  {
+   "to": "Level 712 (via Jerry's Room)",
+   "to_id": "712",
+   "slug": "/level-712",
+   "method": "Jerry's Room",
+   "trigger_type": "door",
+   "conditions": "Followers of Jerry",
+   "risk": "capture",
+   "confidence": "DANGEROUS",
+   "quote": "it is one of Level 712's exits"
+  }
+ ],
+ "signature_mechanic": "Cramped 45-degree machine tunnels with series-wired lights (a break blacks out a 3x3-6x6 grid) and colour/material-coded doors to many levels, plus lightless infinite void rooms.",
+ "verticality": "none stated",
+ "do_not": [
+  "Use right-angle only corridors",
+  "Make machines functional",
+  "Add food or medical caches",
+  "Add Skin-Stealers",
+  "Light the void rooms",
+  "Revive Macchina or Aiding Stragglers"
+ ],
+ "content_warnings": [
+  "Predation",
+  "Kidnapping cult",
+  "Disappearance in voids",
+  "Rotting-meat smell"
+ ],
+ "source_completeness": "PARTIAL",
+ "conflicts_notes": "Footnotes 1-25 missing. Level 126, The Hub, Level 2.2 and Level 189 not in link list. Make Believe named alongside Level 606/38 without explicit mapping. Navbox ignored.",
+ "key_quotes": [
+  {
+   "section": "Intro",
+   "quote": "an infinite array of complex yet Euclidian maintenance tunnels that range in size"
+  },
+  {
+   "section": "Description",
+   "quote": "all contort at strictly 45 degree angles"
+  },
+  {
+   "section": "Description",
+   "quote": "all lights within a set space will immediately deactivate"
+  },
+  {
+   "section": "Description",
+   "quote": "an infinitely wide, infinitely long space that disregards the exterior dimensions"
+  },
+  {
+   "section": "Bases",
+   "quote": "Level 2 has a severe lack of edible foods and medical supplies"
+  },
+  {
+   "section": "Exits",
+   "quote": "Any blue doors in Level 2 lead to Level 175"
+  }
+ ]
+}

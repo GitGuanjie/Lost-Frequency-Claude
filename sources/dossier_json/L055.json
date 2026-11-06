@@ -1,0 +1,164 @@
+{
+ "stable_id": "L055",
+ "level_id": "55",
+ "title": "Pit Stop",
+ "survival_class": "not stated (class box shows unrendered {$one}, {$two}, {$three})",
+ "physical_identity": "Infinite abandoned rustic restaurant rooms with cracked brick, flaking wallpaper, thick dust, creaking floors, and shafts of sunlight from an unseen source.",
+ "scale_topology": "Infinite set of segmented indoor rooms joined by corridors; Safe Room is the sole entry; rooms reshuffle between visits.",
+ "anomalies": [
+  "Rooms rearrange when unobserved",
+  "Sunlight with no source",
+  "Random-duration automatic ejection",
+  "Hallucinations"
+ ],
+ "lighting_sound": "Eerily quiet, no light hum or machinery; damp 21 C; sunbeams from unseen angles.",
+ "entities": [],
+ "entity_policy": "NO ENTITY PER SOURCE",
+ "hazards": [
+  "Hallucinations from staying",
+  "Drowsiness from sunlight",
+  "Unpredictable ejection",
+  "Isolation (no base possible)"
+ ],
+ "items_communities": [
+  "Frontrooms foods in kitchens",
+  "Drinking water",
+  "M.E.G. supply caches (phones, weapons, pamphlets)",
+  "BackNET forum"
+ ],
+ "entrances": [
+  {
+   "from": "Level 1",
+   "from_id": "1",
+   "slug": "/level-1",
+   "method": "run through a door while chased or in dire need",
+   "trigger_type": "door",
+   "conditions": "random; susceptibility rises with 2+ years in the Backrooms, few items, fleeing, barging through doors",
+   "confidence": "CONDITIONAL",
+   "quote": "running through a door while being chased by an entity or in a particularly dire situation"
+  },
+  {
+   "from": "Level 2",
+   "from_id": "2",
+   "slug": "/level-2",
+   "method": "as above",
+   "trigger_type": "door",
+   "conditions": "as above",
+   "confidence": "CONDITIONAL",
+   "quote": "running through a door while being chased by an entity or in a particularly dire situation"
+  },
+  {
+   "from": "Level 3",
+   "from_id": "3",
+   "slug": "/level-3",
+   "method": "as above",
+   "trigger_type": "door",
+   "conditions": "as above",
+   "confidence": "CONDITIONAL",
+   "quote": "running through a door while being chased by an entity or in a particularly dire situation"
+  },
+  {
+   "from": "Level 4",
+   "from_id": "4",
+   "slug": "/level-4",
+   "method": "as above",
+   "trigger_type": "door",
+   "conditions": "as above",
+   "confidence": "CONDITIONAL",
+   "quote": "running through a door while being chased by an entity or in a particularly dire situation"
+  },
+  {
+   "from": "Level 5",
+   "from_id": "5",
+   "slug": "/level-5",
+   "method": "as above (most common: 64 of 404 cases)",
+   "trigger_type": "door",
+   "conditions": "as above",
+   "confidence": "CONDITIONAL",
+   "quote": "running through a door while being chased by an entity or in a particularly dire situation"
+  },
+  {
+   "from": "Level 11",
+   "from_id": "11",
+   "slug": "/level-11",
+   "method": "as above",
+   "trigger_type": "door",
+   "conditions": "as above",
+   "confidence": "CONDITIONAL",
+   "quote": "running through a door while being chased by an entity or in a particularly dire situation"
+  },
+  {
+   "from": "Level 54",
+   "from_id": "54",
+   "slug": "/level-54",
+   "method": "as above",
+   "trigger_type": "door",
+   "conditions": "as above",
+   "confidence": "CONDITIONAL",
+   "quote": "running through a door while being chased by an entity or in a particularly dire situation"
+  },
+  {
+   "from": "Level 56",
+   "from_id": "56",
+   "slug": "/level-56",
+   "method": "no-clip while in dire situation",
+   "trigger_type": "noclip",
+   "conditions": "two incidents only",
+   "confidence": "CONDITIONAL+RUMORED",
+   "quote": "two individuals have no-clipped into Level 55 from Level 56 while in a dire situation"
+  }
+ ],
+ "exits": [
+  {
+   "to": "The level the wanderer entered from (varies: 1, 2, 3, 4, 5, 11, 54 or 56)",
+   "to_id": null,
+   "slug": null,
+   "method": "automatic no-clip after a random duration",
+   "trigger_type": "timed",
+   "conditions": "random duration; shortest ~53 min, longest 4 months 15 days, average ~3 days 7 h",
+   "risk": "none stated",
+   "confidence": "CONFIRMED+ONE-WAY",
+   "quote": "no-clip wanderers out of the level after a random duration of time has elapsed, back to the original level from which they entered"
+  }
+ ],
+ "signature_mechanic": "A quiet safe pit stop where rooms silently reshuffle and a hidden random timer returns you to where you came from.",
+ "verticality": "None stated.",
+ "do_not": [
+  "Do not add entities or chasers; the level has no signs of life.",
+  "Do not add Almond Water or Backrooms foods.",
+  "Do not add ordinary exit doors or let the player choose to leave.",
+  "Do not allow re-entry after leaving.",
+  "Do not show a visible sun or windows; the light source is imperceptible.",
+  "Do not treat the narrator's memory scenes as article fact (TESTIMONY/fiction).",
+  "Do not add hum or machinery sounds; silence is the identity."
+ ],
+ "content_warnings": [
+  "Hallucinations",
+  "Grief/estrangement narrative",
+  "Despair"
+ ],
+ "source_completeness": "UNUSUAL_FORMAT",
+ "conflicts_notes": "Narrative sections are fiction/TESTIMONY. Link list maps the phrase 'enjoy the sunset' to /level-55. Survival class placeholders are unrendered.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "This room is the one and only point of entry into the level"
+  },
+  {
+   "section": "Other Properties",
+   "quote": "the lights have no hum-buzz"
+  },
+  {
+   "section": "Other Properties",
+   "quote": "the existing rooms move, connecting back together in a new orientation"
+  },
+  {
+   "section": "Exits",
+   "quote": "Level 55 has no conventional exits."
+  },
+  {
+   "section": "Exits",
+   "quote": "There have been zero cases of re-entering Level 55."
+  }
+ ]
+}

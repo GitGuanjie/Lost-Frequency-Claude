@@ -1,0 +1,109 @@
+{
+ "stable_id": "L032",
+ "level_id": "32",
+ "title": "Forest of the Skeleton Queen",
+ "survival_class": "not stated",
+ "physical_identity": "Infinite ever-dark forest under a crescent moon and starless sky; skeletons hang from trees and clatter in the wind.",
+ "scale_topology": "Infinite; outdoor forest; no vertical structure stated.",
+ "anomalies": [
+  "hanging skeletons that may speak",
+  "one entity in two forms",
+  "ground swallows victims",
+  "no exit until meeting the Queen"
+ ],
+ "lighting_sound": "Moonlight only; skeletons clatter, wind whistles through skulls; hearsay of speech.",
+ "entities": [
+  {
+   "name": "The Belle",
+   "status": "CONFIRMED",
+   "behavior": "silent woman in orange Victorian dress who lures wanderers"
+  },
+  {
+   "name": "The Skeleton Queen",
+   "status": "CONFIRMED",
+   "behavior": "commands trees and ground; may release respectful wanderers"
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: The Belle, The Skeleton Queen",
+ "hazards": [
+  "dismemberment by trees",
+  "ground swallowing",
+  "being lured",
+  "being trapped before meeting the Queen"
+ ],
+ "items_communities": [
+  "none stated"
+ ],
+ "entrances": [
+  {
+   "from": "dark forest (unspecified)",
+   "from_id": null,
+   "slug": null,
+   "method": "Get lost in a dark forest",
+   "trigger_type": "condition",
+   "conditions": "no known method",
+   "confidence": "RUMORED",
+   "quote": "all it takes to enter is getting lost in a dark forest"
+  },
+  {
+   "from": "Frontrooms",
+   "from_id": null,
+   "slug": null,
+   "method": "Direct arrival reported",
+   "trigger_type": "unknown",
+   "conditions": "none",
+   "confidence": "RUMORED",
+   "quote": "arrived in the level directly from the Frontrooms"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Another forest of the Backrooms (unnamed)",
+   "to_id": null,
+   "slug": null,
+   "method": "Released by the Skeleton Queen; wake in another forest",
+   "trigger_type": "condition",
+   "conditions": "Queen's decision",
+   "risk": "death if disrespectful",
+   "confidence": "CONDITIONAL+ONE-WAY",
+   "quote": "find themselves waking up in another forest of the Backrooms"
+  }
+ ],
+ "signature_mechanic": "Follow the Belle to the Skeleton Queen; the encounter is the only exit and her judgement of respect decides release or death.",
+ "verticality": "None stated.",
+ "do_not": [
+  "add generic enemies",
+  "add a findable exit",
+  "make the Queen purely hostile",
+  "add stars"
+ ],
+ "content_warnings": [
+  "dismemberment described",
+  "death and burial",
+  "grief and soul-bargain"
+ ],
+ "source_completeness": "PARTIAL",
+ "conflicts_notes": "Page flagged outdated; survival class not filled; vignette is fiction/testimony, not general rule.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "an ever-dark forest that stretches out infinitely"
+  },
+  {
+   "section": "Description",
+   "quote": "only a single entity roams the level; one being in two forms"
+  },
+  {
+   "section": "Description",
+   "quote": "she will command the trees to rip you limb from limb in a second"
+  },
+  {
+   "section": "Entrances and Exits",
+   "quote": "there's no way out until you meet the Skeleton Queen herself"
+  },
+  {
+   "section": "Entrances and Exits",
+   "quote": "waking up in another forest of the Backrooms"
+  }
+ ]
+}

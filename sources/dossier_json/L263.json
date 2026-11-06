@@ -1,0 +1,103 @@
+{
+ "stable_id": "L263",
+ "level_id": "263",
+ "title": "Pretty Pink",
+ "survival_class": "SURVIVAL DIFFICULTY: 0 Safe . Secure . Singular Nonhostile Presence",
+ "physical_identity": "Seemingly endless repetitive pink hallway with segmented windows of changing static on both sides; pink walls, slightly darker pink carpet, pitch-black ceiling about 17 m high.",
+ "scale_topology": "Seemingly endless; indoor corridor; single hallway; no vertical structure.",
+ "anomalies": [
+  "windows are solid static textures",
+  "level has a consciousness named Pink who speaks via text devices",
+  "exit always leads back to origin"
+ ],
+ "lighting_sound": "Vibrant pink, soft static; quiet per Pink's draft; light source not stated.",
+ "entities": [
+  {
+   "name": "Pink",
+   "status": "CONFIRMED",
+   "behavior": "friendly level consciousness speaking via text displays"
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Pink (nonhostile level consciousness)",
+ "hazards": [
+  "exhaustion and starvation from walking too far",
+  "loneliness (Pink's distress)"
+ ],
+ "items_communities": [
+  "no community",
+  "text-displaying devices as communication",
+  "past visitor's laptop"
+ ],
+ "entrances": [
+  {
+   "from": "Level 11 (near Base Beta)",
+   "from_id": "11",
+   "slug": null,
+   "method": "Static doorway on a building side",
+   "trigger_type": "door",
+   "conditions": "only stable entrance",
+   "confidence": "CONFIRMED",
+   "quote": "the only known stable entrance to Level 263 is located near Base Beta in Level 11"
+  },
+  {
+   "from": "Levels 0, 5, 37, 141, 389 and others",
+   "from_id": "0",
+   "slug": "/level-0",
+   "method": "Sporadic static doors",
+   "trigger_type": "door",
+   "conditions": "unstable",
+   "confidence": "RUMORED+CONDITIONAL",
+   "quote": "entrances have sporadically been seen in numerous other levels"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level the player came from",
+   "to_id": null,
+   "slug": null,
+   "method": "Turn around",
+   "trigger_type": "walk_in",
+   "conditions": "always returns to origin",
+   "risk": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "can easily be exited by simply turning around"
+  }
+ ],
+ "signature_mechanic": "A pink endless hallway whose consciousness speaks through any text display; leaving is simply turning around.",
+ "verticality": "None stated.",
+ "do_not": [
+  "make Pink hostile",
+  "add other creatures",
+  "give the exit a separate location",
+  "use old Untextured version",
+  "turn the hallway into a maze"
+ ],
+ "content_warnings": [
+  "loneliness and pleading tone",
+  "mention of death by exhaustion"
+ ],
+ "source_completeness": "UNUSUAL_FORMAT",
+ "conflicts_notes": "Revisions 1-3 are drafts written by Pink (e.g. 'greatest level', 'doors made of static') and conflict with Revision 4 article (hallway, entrance in Level 11). Treat Rev 4 as article, others as TESTIMONY.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "a seemingly endless, repetitive hallway with large, segmented windows on both sides"
+  },
+  {
+   "section": "Description",
+   "quote": "approximately 55 ft (~17 m) tall, and is pitch-black in color"
+  },
+  {
+   "section": "Description",
+   "quote": "a consciousness that can be spoken to through any device that can display text"
+  },
+  {
+   "section": "Entities",
+   "quote": "Except for Pink herself, there are no entities present on Level 263."
+  },
+  {
+   "section": "Exits",
+   "quote": "can easily be exited by simply turning around"
+  }
+ ]
+}

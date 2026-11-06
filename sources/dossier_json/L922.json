@@ -1,0 +1,72 @@
+{
+ "stable_id": "L922",
+ "level_id": "922",
+ "title": "I finally travelled to the 'True End', and all I got was this fucking staircase.",
+ "survival_class": "not stated",
+ "physical_identity": "An antique brutalist spiral staircase in black and white that only goes up, under a blinding ceiling light that never gets closer, in complete silence.",
+ "scale_topology": "Confined area; endless in the upward direction by loop.",
+ "anomalies": [
+  "Infinite ascent that returns the climber to the start",
+  "Never-closing ceiling light",
+  "Physics laws cease to apply"
+ ],
+ "lighting_sound": "Blinding light on the ceiling; black and white palette; total silence apart from heartbeat and breath.",
+ "entities": [],
+ "entity_policy": "NO ENTITY PER SOURCE",
+ "hazards": [
+  "none per source ('there is no danger')"
+ ],
+ "items_communities": [
+  "not stated"
+ ],
+ "entrances": [],
+ "exits": [
+  {
+   "to": "The starting point (loop)",
+   "to_id": null,
+   "slug": null,
+   "method": "Climbing the stairs loops back to the original starting point",
+   "trigger_type": "walk_in",
+   "conditions": "only as reported by failed trekkers",
+   "risk": "None",
+   "confidence": "UNKNOWN",
+   "quote": "only to return back to their original starting point"
+  }
+ ],
+ "signature_mechanic": "An endless upward spiral staircase that goes nowhere and means nothing; the climber ends back at the start.",
+ "verticality": "Spiral staircase ascending without end (loop).",
+ "do_not": [
+  "Do not add danger, entities, rewards, secret rooms or a payoff at the top.",
+  "Do not invent exits or entrances.",
+  "Do not add colour: the page describes black and white.",
+  "Do not make it long or wide: it is a confined area.",
+  "Do not add narrative explanation of significance; the page says there is none."
+ ],
+ "content_warnings": [
+  "profanity in the page title"
+ ],
+ "source_completeness": "NARRATIVE_FORMAT",
+ "conflicts_notes": "Roster title 'Staircase / True End story' differs from the actual page title. Page begins with Wikidot theme CSS (ignored). Entrances/exits are not stated.",
+ "key_quotes": [
+  {
+   "section": "Body",
+   "quote": "a spiral staircase that begins but never ends"
+  },
+  {
+   "section": "Body",
+   "quote": "A blinding light encases the ceiling, yet no matter how far up one walks, the distance never closes."
+  },
+  {
+   "section": "Body",
+   "quote": "the thumping of every heartbeat and the whistling of every breath"
+  },
+  {
+   "section": "Body",
+   "quote": "There is nothing to be frightened of."
+  },
+  {
+   "section": "Body",
+   "quote": "there is no danger, and there is no reward"
+  }
+ ]
+}

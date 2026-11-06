@@ -1,0 +1,157 @@
+{
+ "stable_id": "L077",
+ "level_id": "77",
+ "title": "Oh, Shenandoah",
+ "survival_class": "Unsafe . / Secure . / Entity Infestation .",
+ "physical_identity": "Foggy 25 km2 rolling hills in permanent daylight, surrounded by a perpetually night-bound deciduous forest holding a giant-spider super-colony of Nguithr'xurh; sheep country.",
+ "scale_topology": "25 km2 central area; surrounding forest of undetermined size; hills up to ~80 m.",
+ "anomalies": [
+  "Bisected day/night",
+  "Uniform steady grass growth",
+  "Sheep absorb fog water",
+  "Forest noclip exit with 65% chance beyond 6 km"
+ ],
+ "lighting_sound": "Constant daylight inside, night in forest; dense fog; sound not stated.",
+ "entities": [
+  {
+   "name": "Nguithr'xurh",
+   "status": "CONFIRMED",
+   "behavior": "Super-colony in the surrounding forest; huge specimens; not in the central area; lethal to unaligned travelers."
+  },
+  {
+   "name": "Shenandoah Sheep",
+   "status": "CONFIRMED",
+   "behavior": "About 15,000 sheep; fog-hydrating; managed by Murphy Estate."
+  },
+  {
+   "name": "Murphy Estate humans (Jacob Murphy, family rumoured)",
+   "status": "CONFIRMED",
+   "behavior": "Only permanent human presence; family rumoured to maintain the herd."
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Nguithr'xurh, Shenandoah Sheep, Murphy Estate humans",
+ "hazards": [
+  "Nguithr'xurh super-colony (95% unaligned travelers die)",
+  "Fog disorientation",
+  "No standing fresh water"
+ ],
+ "items_communities": [
+  "B.N.T.G. (wool, lanolin, mutton, milk, tallow, leather)",
+  "Murphy Estate (Samuel Murphy, Jacob Murphy)"
+ ],
+ "entrances": [
+  {
+   "from": "Level 32",
+   "from_id": "32",
+   "slug": "/level-32",
+   "method": "Walk through a heavily forested section; seamless transition",
+   "trigger_type": "walk_in",
+   "conditions": "arrives in forest ~4 km from central border",
+   "confidence": "CONFIRMED",
+   "quote": "In all instances, travelers were walking through heavily forested sections of these levels when the transition seamlessly occurred."
+  },
+  {
+   "from": "Level 48",
+   "from_id": "48",
+   "slug": "/level-48",
+   "method": "As above",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Level 32 , Level 48 , Level 249 , and Level 415"
+  },
+  {
+   "from": "Level 249",
+   "from_id": "249",
+   "slug": "/level-249",
+   "method": "As above",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Level 249"
+  },
+  {
+   "from": "Level 415",
+   "from_id": "415",
+   "slug": "/level-415",
+   "method": "As above",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Level 415"
+  },
+  {
+   "from": "Any heavily forested level",
+   "from_id": null,
+   "slug": null,
+   "method": "Theorized: any heavy forest",
+   "trigger_type": "walk_in",
+   "conditions": "theory",
+   "confidence": "RUMORED",
+   "quote": "any heavily forested area could potentially lead into Level 77"
+  },
+  {
+   "from": "B.N.T.G.-controlled trade route(s)",
+   "from_id": null,
+   "slug": null,
+   "method": "Established route; details secret",
+   "trigger_type": "unknown",
+   "conditions": "B.N.T.G. secrecy",
+   "confidence": "UNKNOWN",
+   "quote": "B.N.T.G.-controlled trade route(s)"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Any heavily forested level",
+   "to_id": null,
+   "slug": null,
+   "method": "Walk in surrounding forest beyond 6 km; noclip through detritus",
+   "trigger_type": "noclip",
+   "conditions": "distance greater than 6 km; 65% chance",
+   "risk": "Nguithr'xurh territory (95% of unaligned travelers die)",
+   "confidence": "CONDITIONAL+DANGEROUS",
+   "quote": "When walking through the surrounding forest, at any distance greater than 6 km, a traveler will have a 65% chance to no-clip through the detritus"
+  }
+ ],
+ "signature_mechanic": "Fog-bound daylit hills ringed by a night forest of giant Nguithr'xurh; entry is 4 km inside the forest and exit a 65% noclip beyond 6 km.",
+ "verticality": "Hills from under 1 m to nearly 80 m; no towers.",
+ "do_not": [
+  "Do not place Nguithr'xurh in the central area.",
+  "Do not add standing water.",
+  "Do not invent the Murphy Estate layout.",
+  "Do not make the forest daytime.",
+  "Do not add other exits beyond the forest noclip and B.N.T.G. route (unspecified)."
+ ],
+ "content_warnings": [
+  "95% of unaligned travelers do not survive the Nguithr'xurh territory (implied deaths)"
+ ],
+ "source_completeness": "COMPLETE",
+ "conflicts_notes": "Entities section says 'only two' inhabitants but also lists humans of the Murphy Estate. Link list includes Levels 76 and 78 not explained in text.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "Stuck in a bisected diurnal cycle, the central area of Level 77 remains in constant daylight while the surrounding forest appears nightbound."
+  },
+  {
+   "section": "Description",
+   "quote": "Level 77 experiences one consistent atmospheric condition: fog."
+  },
+  {
+   "section": "Entities",
+   "quote": "no Nguithr'xurh have ever been seen in the central area of the level"
+  },
+  {
+   "section": "Entities",
+   "quote": "95% of unaligned travelers do not survive their territory"
+  },
+  {
+   "section": "Entrances and Exits",
+   "quote": "all entrances to the level occur within the forest, approximately 4 km from the border of the central area"
+  },
+  {
+   "section": "Entrances and Exits",
+   "quote": "a traveler will have a 65% chance to no-clip through the detritus"
+  }
+ ]
+}

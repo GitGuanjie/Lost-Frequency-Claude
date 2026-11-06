@@ -1,0 +1,128 @@
+{
+ "stable_id": "L006",
+ "level_id": "6",
+ "title": "Lights Out",
+ "survival_class": "not stated",
+ "physical_identity": "Total darkness and silence in seemingly endless tight hallways of smooth cold material, likely concrete; light sources do not function.",
+ "scale_topology": "Seemingly endless indoor hallway series; structure barely known; stairwell down to Level 7.",
+ "anomalies": [
+  "light sources have no function",
+  "auditory hallucinations (scuttling, breathing, whispering)",
+  "wrong turn may seal exits"
+ ],
+ "lighting_sound": "No light at all; eerily silent like a soundproof room; faint waves near the Level 7 stairwell.",
+ "entities": [],
+ "entity_policy": "NO ENTITY PER SOURCE",
+ "hazards": [
+  "paranoia and dread",
+  "getting trapped by a wrong turn",
+  "few people leave (reason unknown)",
+  "unverified attack testimony"
+ ],
+ "items_communities": [
+  "rumored World's Quietest Room (light switch)",
+  "Mimicry community of about four sound-mimics",
+  "hand-drawn map of unknown origin"
+ ],
+ "entrances": [
+  {
+   "from": "Level 5 (Boiler Room)",
+   "from_id": "5",
+   "slug": "/level-5",
+   "method": "Boiler Room",
+   "trigger_type": "walk_in",
+   "conditions": "recommended base",
+   "confidence": "CONFIRMED",
+   "quote": "accessed through the Boiler Room in Level 5"
+  },
+  {
+   "from": "Level 4 (near Base Omega)",
+   "from_id": "4",
+   "slug": "/level-4",
+   "method": "near Base Omega",
+   "trigger_type": "walk_in",
+   "conditions": "method not stated",
+   "confidence": "CONFIRMED",
+   "quote": "Another entrance is near Base Omega in Level 4"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 7",
+   "to_id": "7",
+   "slug": "/level-7",
+   "method": "stairwell down, found by listening for faint waves",
+   "trigger_type": "stairs",
+   "conditions": "explore deep; wrong turn may block",
+   "risk": "blocking access and return to Level 5",
+   "confidence": "CONDITIONAL",
+   "quote": "listen for the faint sound of waves"
+  },
+  {
+   "to": "Level 129",
+   "to_id": "129",
+   "slug": "/level-129",
+   "method": "rare large extremely cold metal door",
+   "trigger_type": "door",
+   "conditions": "find the door",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "extremely cold will lead to Level 129"
+  },
+  {
+   "to": "Level 6.1",
+   "to_id": "6.1",
+   "slug": "/level-6-1",
+   "method": "accidentally tripping over a wire",
+   "trigger_type": "interact",
+   "conditions": "accidental",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "tripping over a wire can lead to Level 6.1"
+  },
+  {
+   "to": "Level 5",
+   "to_id": "5",
+   "slug": "/level-5",
+   "method": "entrance back, may be blocked after a wrong turn",
+   "trigger_type": "walk_in",
+   "conditions": "not lost",
+   "risk": "cut off",
+   "confidence": "CONDITIONAL",
+   "quote": "the entrance back to Level 5"
+  }
+ ],
+ "signature_mechanic": "Permanent darkness where flashlights fail, near-silence, navigation by touch, rising dread with time; a wrong turn may seal exits.",
+ "verticality": "Only the stairwell down to Level 7; otherwise flat.",
+ "do_not": [
+  "add hostile entities",
+  "let lights work",
+  "treat Archives attacker as confirmed",
+  "make the light switch a safe fix",
+  "add ambient sounds beyond hallucinations and waves"
+ ],
+ "content_warnings": [
+  "injury testimony (missing eye, broken leg, clawing)",
+  "psychological dread"
+ ],
+ "source_completeness": "PARTIAL",
+ "conflicts_notes": "Page is flagged outdated. Description says no entities, but the Archives testimony reports an attacker; page frames the danger as darkness itself. 'Mimicry' humans are not entities.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "light sources brought into the level have no function"
+  },
+  {
+   "section": "Description",
+   "quote": "no entities have been found on this level"
+  },
+  {
+   "section": "Exits",
+   "quote": "listen for the faint sound of waves"
+  },
+  {
+   "section": "Archives",
+   "quote": "Level 6 isn't dangerous because there's something there."
+  }
+ ]
+}

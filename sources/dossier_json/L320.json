@@ -1,0 +1,355 @@
+{
+ "stable_id": "L320",
+ "level_id": "320",
+ "title": "Level 320 - \"The new, and Improved, Entertainland!\" (in-text: Level 320 - \"Entertainland\")",
+ "survival_class": "not stated (header banner lists 'Safe', 'Sustained Economy', 'No Harmful Entities'; no class line)",
+ "physical_identity": "Revived M.E.O.D.-run amusement park resort, formerly Level 32, about 200 m across in the four main directions, plus outside areas (Mountain, High Street/mall). Seasons follow the northern hemisphere; vegetation Earth-like.",
+ "scale_topology": "Finite, outdoor/indoor mix. Car park + plaza with turnstiles -> Entertainland (7 zones) ; Mountain and High Street outside the park. Folding Point has 5 stories + basement. Non-Euclidean interiors/alley.",
+ "anomalies": [
+  "Non-Euclidean shop interiors larger than their exteriors (Main Plaza, Folding Point, queues)",
+  "Dark Alley: straight alley lengthened with twists/intersections; 4th-dimensional overlap; recording shows pursuer set back several metres",
+  "Kiddie Zone deliberately has no Non-Euclidean effects",
+  "Rain scheduled only at closing time",
+  "Level 0/109/253 downscaled non-lethal recreations in Folding Point"
+ ],
+ "lighting_sound": "Day/night cycle with simulated summer sun (testimony); retro ambient speakers in Main Plaza; Folding Point mostly glass for natural light; Dark Alley gets gloomier and mist (TESTIMONY, recording). Sound otherwise not stated.",
+ "entities": [
+  {
+   "name": "Park staff (human, human adjacent or otherwise sentient; mascots, ride operators, guides, cleaners, night guards)",
+   "status": "CONFIRMED",
+   "behavior": "Employed workers; mascots in outfits of existing IP characters and custom ones"
+  },
+  {
+   "name": "MVC",
+   "status": "CONFIRMED",
+   "behavior": "Non-sentient beings living at the park to maintain plant ecosystems (no further description)"
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: park staff/mascots and MVC maintenance beings; header banner says 'No Harmful Entities'; no hostile entity named in the current article",
+ "hazards": [
+  "Rides in Kiddie Zone/others described as safe; no lethal hazards stated for the level",
+  "Dark Alley disorientation (Non-Euclidean separation) per recording",
+  "Pregnancy discouraged in Dark Alley (4th-dimensional overlap)",
+  "Prepaid ticket check; staff patrol deals with guests without valid passes",
+  "Variant tab 2067: ruined Folding Point crater reaching the Blue Channel; hail"
+ ],
+ "items_communities": [
+  "Prepaid cardboard/digital QR tickets; tiers (Holiday Homes needs specific tier)",
+  "Concessions, photos, souvenirs, meals, drying and tanning services paid separately",
+  "Three Holiday Homes hotels, about 50 rooms each",
+  "Camp venue in the Mountain (caravans); boating, rock climbing, parachuting",
+  "Level 118 has a separate 'Camp: Camp' (other level)"
+ ],
+ "entrances": [
+  {
+   "from": "Level 1",
+   "from_id": "1",
+   "slug": null,
+   "method": "Brick archway labelled with the destination, in a commercial/social area of the parent level; two-directional",
+   "trigger_type": "walk_in",
+   "conditions": "none stated for the archway itself (park turnstiles separately need a prepaid QR ticket)",
+   "confidence": "CONFIRMED",
+   "quote": "these entrances resemble brick archways which are labelled with their destination"
+  },
+  {
+   "from": "Level 9",
+   "from_id": "9",
+   "slug": null,
+   "method": "Brick archway labelled with the destination, in a commercial/social area of the parent level; two-directional",
+   "trigger_type": "walk_in",
+   "conditions": "none stated for the archway itself (park turnstiles separately need a prepaid QR ticket)",
+   "confidence": "CONFIRMED",
+   "quote": "these entrances resemble brick archways which are labelled with their destination"
+  },
+  {
+   "from": "Level 11",
+   "from_id": "11",
+   "slug": null,
+   "method": "Brick archway labelled with the destination, in a commercial/social area of the parent level; two-directional",
+   "trigger_type": "walk_in",
+   "conditions": "none stated for the archway itself (park turnstiles separately need a prepaid QR ticket)",
+   "confidence": "CONFIRMED",
+   "quote": "these entrances resemble brick archways which are labelled with their destination"
+  },
+  {
+   "from": "Level 13.1",
+   "from_id": "13.1",
+   "slug": null,
+   "method": "Brick archway labelled with the destination, in a commercial/social area of the parent level; two-directional",
+   "trigger_type": "walk_in",
+   "conditions": "none stated for the archway itself (park turnstiles separately need a prepaid QR ticket)",
+   "confidence": "CONFIRMED",
+   "quote": "these entrances resemble brick archways which are labelled with their destination"
+  },
+  {
+   "from": "Level 48",
+   "from_id": "48",
+   "slug": null,
+   "method": "Brick archway labelled with the destination, in a commercial/social area of the parent level; two-directional",
+   "trigger_type": "walk_in",
+   "conditions": "none stated for the archway itself (park turnstiles separately need a prepaid QR ticket)",
+   "confidence": "CONFIRMED",
+   "quote": "these entrances resemble brick archways which are labelled with their destination"
+  },
+  {
+   "from": "Level 118",
+   "from_id": "118",
+   "slug": null,
+   "method": "Brick archway labelled with the destination, in a commercial/social area of the parent level; two-directional",
+   "trigger_type": "walk_in",
+   "conditions": "none stated for the archway itself (park turnstiles separately need a prepaid QR ticket)",
+   "confidence": "CONFIRMED",
+   "quote": "these entrances resemble brick archways which are labelled with their destination"
+  },
+  {
+   "from": "Level 178",
+   "from_id": "178",
+   "slug": null,
+   "method": "Brick archway labelled with the destination, in a commercial/social area of the parent level; two-directional",
+   "trigger_type": "walk_in",
+   "conditions": "none stated for the archway itself (park turnstiles separately need a prepaid QR ticket)",
+   "confidence": "CONFIRMED",
+   "quote": "these entrances resemble brick archways which are labelled with their destination"
+  },
+  {
+   "from": "Level 186",
+   "from_id": "186",
+   "slug": null,
+   "method": "Brick archway labelled with the destination, in a commercial/social area of the parent level; two-directional",
+   "trigger_type": "walk_in",
+   "conditions": "none stated for the archway itself (park turnstiles separately need a prepaid QR ticket)",
+   "confidence": "CONFIRMED",
+   "quote": "these entrances resemble brick archways which are labelled with their destination"
+  },
+  {
+   "from": "Level 234",
+   "from_id": "234",
+   "slug": null,
+   "method": "Brick archway labelled with the destination, in a commercial/social area of the parent level; two-directional",
+   "trigger_type": "walk_in",
+   "conditions": "none stated for the archway itself (park turnstiles separately need a prepaid QR ticket)",
+   "confidence": "CONFIRMED",
+   "quote": "these entrances resemble brick archways which are labelled with their destination"
+  },
+  {
+   "from": "Level 436",
+   "from_id": "436",
+   "slug": null,
+   "method": "Brick archway labelled with the destination, in a commercial/social area of the parent level; two-directional",
+   "trigger_type": "walk_in",
+   "conditions": "none stated for the archway itself (park turnstiles separately need a prepaid QR ticket)",
+   "confidence": "CONFIRMED",
+   "quote": "these entrances resemble brick archways which are labelled with their destination"
+  },
+  {
+   "from": "Level 608",
+   "from_id": "608",
+   "slug": null,
+   "method": "Brick archway labelled with the destination, in a commercial/social area of the parent level; two-directional",
+   "trigger_type": "walk_in",
+   "conditions": "none stated for the archway itself (park turnstiles separately need a prepaid QR ticket)",
+   "confidence": "CONFIRMED",
+   "quote": "these entrances resemble brick archways which are labelled with their destination"
+  },
+  {
+   "from": "almost all other destination levels",
+   "from_id": null,
+   "slug": null,
+   "method": "Same brick archways",
+   "trigger_type": "walk_in",
+   "conditions": "not stated which levels beyond the listed ones",
+   "confidence": "CONFIRMED",
+   "quote": "as well as almost all other destination levels"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 1",
+   "to_id": "1",
+   "slug": null,
+   "method": "Walk back through the labelled archway in the row of archways in the plaza before the main gates (destination implied by two-directional statement)",
+   "trigger_type": "walk_in",
+   "conditions": "none stated",
+   "risk": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "All of these entrances are two directional, and are used to leave Level 320 also."
+  },
+  {
+   "to": "Level 9",
+   "to_id": "9",
+   "slug": null,
+   "method": "Walk back through the labelled archway in the row of archways in the plaza before the main gates (destination implied by two-directional statement)",
+   "trigger_type": "walk_in",
+   "conditions": "none stated",
+   "risk": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "All of these entrances are two directional, and are used to leave Level 320 also."
+  },
+  {
+   "to": "Level 11",
+   "to_id": "11",
+   "slug": null,
+   "method": "Walk back through the labelled archway in the row of archways in the plaza before the main gates (destination implied by two-directional statement)",
+   "trigger_type": "walk_in",
+   "conditions": "none stated",
+   "risk": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "All of these entrances are two directional, and are used to leave Level 320 also."
+  },
+  {
+   "to": "Level 13.1",
+   "to_id": "13.1",
+   "slug": null,
+   "method": "Walk back through the labelled archway in the row of archways in the plaza before the main gates (destination implied by two-directional statement)",
+   "trigger_type": "walk_in",
+   "conditions": "none stated",
+   "risk": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "All of these entrances are two directional, and are used to leave Level 320 also."
+  },
+  {
+   "to": "Level 48",
+   "to_id": "48",
+   "slug": null,
+   "method": "Walk back through the labelled archway in the row of archways in the plaza before the main gates (destination implied by two-directional statement)",
+   "trigger_type": "walk_in",
+   "conditions": "none stated",
+   "risk": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "All of these entrances are two directional, and are used to leave Level 320 also."
+  },
+  {
+   "to": "Level 118",
+   "to_id": "118",
+   "slug": null,
+   "method": "Walk back through the labelled archway in the row of archways in the plaza before the main gates (destination implied by two-directional statement)",
+   "trigger_type": "walk_in",
+   "conditions": "none stated",
+   "risk": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "All of these entrances are two directional, and are used to leave Level 320 also."
+  },
+  {
+   "to": "Level 178",
+   "to_id": "178",
+   "slug": null,
+   "method": "Walk back through the labelled archway in the row of archways in the plaza before the main gates (destination implied by two-directional statement)",
+   "trigger_type": "walk_in",
+   "conditions": "none stated",
+   "risk": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "All of these entrances are two directional, and are used to leave Level 320 also."
+  },
+  {
+   "to": "Level 186",
+   "to_id": "186",
+   "slug": null,
+   "method": "Walk back through the labelled archway in the row of archways in the plaza before the main gates (destination implied by two-directional statement)",
+   "trigger_type": "walk_in",
+   "conditions": "none stated",
+   "risk": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "All of these entrances are two directional, and are used to leave Level 320 also."
+  },
+  {
+   "to": "Level 234",
+   "to_id": "234",
+   "slug": null,
+   "method": "Walk back through the labelled archway in the row of archways in the plaza before the main gates (destination implied by two-directional statement)",
+   "trigger_type": "walk_in",
+   "conditions": "none stated",
+   "risk": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "All of these entrances are two directional, and are used to leave Level 320 also."
+  },
+  {
+   "to": "Level 436",
+   "to_id": "436",
+   "slug": null,
+   "method": "Walk back through the labelled archway in the row of archways in the plaza before the main gates (destination implied by two-directional statement)",
+   "trigger_type": "walk_in",
+   "conditions": "none stated",
+   "risk": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "All of these entrances are two directional, and are used to leave Level 320 also."
+  },
+  {
+   "to": "Level 608",
+   "to_id": "608",
+   "slug": null,
+   "method": "Walk back through the labelled archway in the row of archways in the plaza before the main gates (destination implied by two-directional statement)",
+   "trigger_type": "walk_in",
+   "conditions": "none stated",
+   "risk": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "All of these entrances are two directional, and are used to leave Level 320 also."
+  },
+  {
+   "to": "Level 320 permanently sealed (variant, tab 'Shortcomings')",
+   "to_id": null,
+   "slug": null,
+   "method": "Entrances from across the Backrooms believed to be deactivated then demolished after final opening day",
+   "trigger_type": "unknown",
+   "conditions": "BlogRooms article dated 19/09/40; belief, not confirmed",
+   "risk": "level becomes inaccessible",
+   "confidence": "RUMORED+ONE-WAY",
+   "quote": "it is believed that Level 320's entrances from across the Backrooms will be first deactivated, and then demolished"
+  }
+ ],
+ "signature_mechanic": "A bright, safe, ticketed theme-park resort reached via labelled brick archways; its identity is the seven themed zones with Non-Euclidean compact interiors (shops/queues bigger inside) and a Dark Alley that quietly loops pursuers. Not a survival level.",
+ "verticality": "Folding Point: five stories plus basement (ride halls span floors 0-4); Mountain with trails; Piering In north on elevated wooden pier platform; Ferris wheel in testimony.",
+ "do_not": [
+  "Do not use the old Level 32 text (offset 0): InfoMan booth, wristband raffle, Facelings, Mr. Bones' Wild Ride are archival/previous iteration",
+  "Do not add hostile entities or combat",
+  "Do not model the ruined 2067 state or closure as the base level (variant tabs only)",
+  "Do not reproduce the abuse storyline; at most ambient flavor",
+  "Do not invent per-zone details not in the article",
+  "Do not claim a survival class"
+ ],
+ "content_warnings": [
+  "Page states: 'Depictions of relationship abuse.' (offset 10 recording: controlling behavior, grabbing causing bruising, stalking in later tabs)",
+  "Grief/death of a parent in tabs 3-6",
+  "Pregnancy mention (Dark Alley)",
+  "Sexual/consent-adjacent remarks in testimony; mild profanity"
+ ],
+ "source_completeness": "UNUSUAL_FORMAT",
+ "conflicts_notes": "Tabbed page, 13 offsets. Offset 10 holds the current Level 320 article woven into an in-universe surveillance narrative; offset 0 is the older Level 32 'wayback' text; offsets 11-12 are later variants (2040 closure, 2067 ruin). Roster title 'The New and Improved Entertainland!' vs page title with comma. Offset-10 article says opening was 'a week ago on the 16th July'; recording dates 27/07/37.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "an amusement park measuring approximately 200 meters across in the four main directions"
+  },
+  {
+   "section": "Description",
+   "quote": "the rain—and the amount of rainfall—is scheduled to occur only during closing time."
+  },
+  {
+   "section": "Description",
+   "quote": "access to Entertainland itself is limited to prepaid bookings only."
+  },
+  {
+   "section": "Main Plaza",
+   "quote": "making the inside of shops larger than their exterior depth"
+  },
+  {
+   "section": "Kiddie Zone",
+   "quote": "no Non-Euclidean properties were punctured into the Kiddie Zone"
+  },
+  {
+   "section": "Folding Point",
+   "quote": "The actual recreations of these levels are non-lethal"
+  },
+  {
+   "section": "Entrances And Exits",
+   "quote": "these entrances resemble brick archways which are labelled with their destination"
+  },
+  {
+   "section": "Entrances And Exits",
+   "quote": "All of these entrances are two directional, and are used to leave Level 320 also."
+  },
+  {
+   "section": "Header banner",
+   "quote": "No Harmful Entities"
+  }
+ ]
+}

@@ -1,0 +1,199 @@
+{
+ "stable_id": "L011_2",
+ "level_id": "11.2",
+ "title": "The Refuge",
+ "survival_class": "not stated (class bullets render as template placeholders {$one} {$two} {$three})",
+ "physical_identity": "Sub-section of Level 11: identical orange and white apartment blocks in snow under a permanent black sky with yellow streetlight tint; about -11 C; former Leaders refuge.",
+ "scale_topology": "Finite outdoor-and-indoor apartment complex on the far outskirts of Level 11; storeys not stated.",
+ "anomalies": [
+  "Fridges restock every other week",
+  "Banner Building invisible impenetrable barrier",
+  "Lit hall with a shadow figure",
+  "Dense reversible gateways",
+  "No facelings"
+ ],
+ "lighting_sound": "Always black sky, no day-night; yellow tint from streetlights; sound not stated.",
+ "entities": [
+  {
+   "name": "Shadow figure in the Banner Building",
+   "status": "REPORTED",
+   "behavior": "Seen sprinting horizontally across the lit hall; not seen since tents were set up."
+  },
+  {
+   "name": "'The thing in the rainbow building' (unnamed)",
+   "status": "REPORTED",
+   "behavior": "Per diary, communicated warnings and promised an impenetrable barrier; nature 'incomprehensible' (TESTIMONY)."
+  },
+  {
+   "name": "Facelings",
+   "status": "REPORTED",
+   "behavior": "Article notes their absence here, unlike Level 11."
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: shadow figure (reported), unnamed 'thing' in Banner Building (diary); facelings absent",
+ "hazards": [
+  "Freezing cold (-11 C)",
+  "Level 11 / unknown level jumps via gateways",
+  "Banner Building (high importance)"
+ ],
+ "items_communities": [
+  "Almond Water and food left behind",
+  "Wooden level-number door signs",
+  "M.E.G. Base Omicron (~250 people)",
+  "Two tents by Banner Building"
+ ],
+ "entrances": [
+  {
+   "from": "Level 11 (via Level 9's entrance to Level 11)",
+   "from_id": "11",
+   "slug": "/level-11",
+   "method": "Wander 876 km north-east; blending zone of darker sky and smaller vacant buildings",
+   "trigger_type": "walk_in",
+   "conditions": "long distance; transition point unknown",
+   "confidence": "CONFIRMED",
+   "quote": "One can find Level 11.2 by wandering 876km north-east of Level 9 's entrance to Level 11 ."
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 11",
+   "to_id": "11",
+   "slug": "/level-11",
+   "method": "Walk away from the apartment complex",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "risk": "Low",
+   "confidence": "CONFIRMED",
+   "quote": "Walking away from the apartment complex leads you back to Level 11."
+  },
+  {
+   "to": "Level 283",
+   "to_id": "283",
+   "slug": "/level-283",
+   "method": "Apartment door",
+   "trigger_type": "door",
+   "conditions": "return through same door",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "Level 11.2 is connected to the following levels through apartment doors"
+  },
+  {
+   "to": "Level 189",
+   "to_id": "189",
+   "slug": "/level-189",
+   "method": "Apartment door",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "The gateways to Level 283 and level-189 have proved especially useful."
+  },
+  {
+   "to": "Level 852",
+   "to_id": "852",
+   "slug": "/level-852",
+   "method": "Apartment door",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "- Level 852"
+  },
+  {
+   "to": "Level 155",
+   "to_id": "155",
+   "slug": "/level-155",
+   "method": "Apartment door",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "- Level 155"
+  },
+  {
+   "to": "Level 36",
+   "to_id": "36",
+   "slug": "/level-36",
+   "method": "Apartment door",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "- Level 36"
+  },
+  {
+   "to": "Level 59",
+   "to_id": "59",
+   "slug": "/level-59",
+   "method": "Apartment door",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "- level-59"
+  },
+  {
+   "to": "Level 121",
+   "to_id": "121",
+   "slug": "/level-121",
+   "method": "Apartment door",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "- Level 121"
+  },
+  {
+   "to": "Level 78",
+   "to_id": "78",
+   "slug": "/level-78",
+   "method": "Apartment door",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "- Level 78"
+  }
+ ],
+ "signature_mechanic": "A snowy night refuge of identical apartment blocks whose doors are labelled gateways to eight levels, with an impenetrable Banner Building at its core.",
+ "verticality": "Apartment buildings; height not stated.",
+ "do_not": [
+  "Do not add facelings: the page says they are absent.",
+  "Do not make the Banner Building enterable.",
+  "Do not add a day-night cycle.",
+  "Do not fill the survival class; it is placeholder text.",
+  "Do not render Emstable as present; they appear only in the diary."
+ ],
+ "content_warnings": [
+  "war/violence implied (diary expects death in an attack; gunshot indents on barricades)",
+  "child soldier / drafting of women and children in diary"
+ ],
+ "source_completeness": "COMPLETE",
+ "conflicts_notes": "Diary calls the place Scene-01.4 while the article names it Scene-01.2; survival class is unfilled placeholders; roster title matches.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "Level 11.2 has no day-night cycle as the sky always has a somber black tone."
+  },
+  {
+   "section": "Description",
+   "quote": "There is also an absence of facelings which usually populate Level 11."
+  },
+  {
+   "section": "Interior and Properties",
+   "quote": "after using each exit, the wanderer can return through the same door"
+  },
+  {
+   "section": "The Banner Building",
+   "quote": "an invisible barrier was found underneath that to this day remains impenetrable"
+  },
+  {
+   "section": "Entrances",
+   "quote": "One can find Level 11.2 by wandering 876km north-east of Level 9 's entrance to Level 11 ."
+  },
+  {
+   "section": "Exits",
+   "quote": "Walking away from the apartment complex leads you back to Level 11 ."
+  }
+ ]
+}

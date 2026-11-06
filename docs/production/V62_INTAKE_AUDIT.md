@@ -32,7 +32,7 @@ when it was built. This audit is the first real-engine execution.
 ## Decision
 - **Rebuild, don't patch.** The shared 48 m cell generator *is* the source of the
   repetition, and the canon identities are wrong for at least five of the 18 worlds. The new
-  project (`lost_frequency/`) keeps the name and the 18 level IDs (Group A). It does not
+  project (the repository root) keeps the name and the 18 level IDs (Group A). It does not
   reuse V62 world code.
 - **Assets not reused.** V62's PNG materials and WAVs (~7 MB) don't fit this repository's
   storage budget, and they have no reviewed provenance record. The rebuild generates all

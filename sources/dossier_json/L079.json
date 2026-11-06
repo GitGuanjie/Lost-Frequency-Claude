@@ -1,0 +1,93 @@
+{
+ "stable_id": "L079",
+ "level_id": "79",
+ "title": "Ghosts in the Machine",
+ "survival_class": "Warning box: Temporal Instability. / Inconsistent Exit. / Unknown Potential for Entities. (no numeric class)",
+ "physical_identity": "A compact mid-century medical research clinic: seven rooms off a main corridor, ending in a machine with 16 clocks.",
+ "scale_topology": "Finite, ~370 m2, indoor, seven rooms (R, L, R, L, R, L, central end room).",
+ "anomalies": [
+  "Temporal instability",
+  "Inconsistent exit (log shows date jumps)",
+  "Machine with 16 different clocks and no-clip-like tremors",
+  "Unknown substance leaking"
+ ],
+ "lighting_sound": "Not stated except the machine's distorted sobbing and knocking.",
+ "entities": [],
+ "entity_policy": "NO ENTITY PER SOURCE",
+ "hazards": [
+  "Spatial/temporal displacement on prolonged stay",
+  "Unknown compounds in cabinet",
+  "Viscera and fluids"
+ ],
+ "items_communities": [
+  "Chalkboard note (Dr. Zohn)",
+  "Medical equipment",
+  "Cabinet drugs and Seer powder",
+  "Youth clothing, handball, crayons, paper"
+ ],
+ "entrances": [
+  {
+   "from": "Any level (as any door)",
+   "from_id": null,
+   "slug": null,
+   "method": "a single door at the start of the main corridor that may appear as any door in any level over unknown time",
+   "trigger_type": "door",
+   "conditions": "appears unpredictably; footnote 18 text not in snapshot",
+   "confidence": "CONDITIONAL",
+   "quote": "theorized to be able to appear as any door within any level across an unknown period of time"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Not stated (log suggests time displacement)",
+   "to_id": null,
+   "slug": null,
+   "method": "the same single door at the beginning of the main corridor",
+   "trigger_type": "door",
+   "conditions": "'Inconsistent Exit' per warning; exit dates in the log differ from entrance dates",
+   "risk": "temporal and spatial displacement",
+   "confidence": "CONFIRMED+DANGEROUS",
+   "quote": "only one known entrance and exit located at the beginning of the main corridor"
+  }
+ ],
+ "signature_mechanic": "A finite clinic whose single door and 30-minute machine tremors make time and position unreliable; do not stay long.",
+ "verticality": "None.",
+ "do_not": [
+  "Do not add ghost or humanoid entities; the page names none.",
+  "Do not add hallways beyond the seven rooms or make the level large; size is ~370 m2.",
+  "Do not state the lighting colour or fixtures; page is silent.",
+  "Do not give a specific exit destination; the page does not.",
+  "Do not make the machine a combat boss; it only ticks, sobs, knocks and leaks.",
+  "Do not treat the 30-minute cycle as article fact beyond what the two first-hand accounts report.",
+  "Do not add Level 78 as an edge; it appears only in the link list."
+ ],
+ "content_warnings": [
+  "Implied experimentation on children",
+  "Viscera and drug lists",
+  "Disfigured arm radiograph"
+ ],
+ "source_completeness": "COMPLETE",
+ "conflicts_notes": "Submission log dates are inconsistent (Mallory Grey exits in 1992). Footnotes 1-18 are absent from the snapshot. Link list has Level 78 not present in the body.",
+ "key_quotes": [
+  {
+   "section": "Warning",
+   "quote": "turn back immediately. Staying within Level 79 for prolonged periods of time may lead to spacial and/or temporal displacement"
+  },
+  {
+   "section": "Description",
+   "quote": "Level 79 consists of seven rooms of seemingly intelligent design"
+  },
+  {
+   "section": "Room 1",
+   "quote": "The experiments were only somewhat successful; don't stay here long."
+  },
+  {
+   "section": "Room 7",
+   "quote": "the forward face of the machine has a total of 16 clocks, each displaying a different time"
+  },
+  {
+   "section": "Entrance and Exit",
+   "quote": "Level 79 has only one known entrance and exit located at the beginning of the main corridor"
+  }
+ ]
+}

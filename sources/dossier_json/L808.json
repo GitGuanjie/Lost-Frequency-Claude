@@ -1,0 +1,37 @@
+{
+ "stable_id": "L808", "level_id": "808", "title": "Synthwave World",
+ "survival_class": "Safe / Secure / Habitable for a Specific Group; body: survival difficulty of this level is classified as 0",
+ "physical_identity": "Synthwave-styled continent of neon gridlines, polygon entities, a pink-particle beach, a Parthenon-style hall and a neon city, under a fixed sunset.",
+ "scale_topology": "Open continent with four formations at stated offsets from the entrance gate (2 km west city, 30 km north hall, SE sea, SW field).",
+ "anomalies": ["bodies emit neon lasers", "grid colour change marks night", "info windows with no volume vanish in 1 hour", "giant light 200 m below the sea"],
+ "lighting_sound": "Neon gridlines, fixed odd sunset sun, laser beams at night; sound not stated.",
+ "entities": [
+  {"name": "Polygon/laser-gridline entities", "status": "CONFIRMED", "behavior": "Inhabit the continent; indistinct low-poly shapes"},
+  {"name": "Facelings, hounds, deathmoths (group-employed)", "status": "CONFIRMED", "behavior": "Work within Backrooms Entertainment, not as hostile"}
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: polygon entities; group-aligned facelings, hounds, deathmoths (non-hostile)",
+ "hazards": ["giant light source 200 m beneath the sea", "unpredictable cult-like group", "M.E.G. military action possible"],
+ "items_communities": ["Backrooms Entertainment main base (1,000+ members)", "B.N.T.G. Trading Post Neon (~20)", "posters by Paul-Simmons"],
+ "entrances": [
+  {"from": "Any level with survival difficulty below 2", "from_id": null, "slug": null, "method": "Neon ENTER gate", "trigger_type": "door", "conditions": "difficulty below 2", "confidence": "CONFIRMED", "quote": "a gate with \"ENTER\" written with neon light in each level"},
+  {"from": "Level 40", "from_id": "40", "slug": "/level-40", "method": "Light blue neon grid gate", "trigger_type": "door", "conditions": "none stated", "confidence": "CONFIRMED", "quote": "Level 40 has a gate with light blue neon grid lines"},
+  {"from": "Level 11", "from_id": "11", "slug": "/level-11", "method": "Door in a large arcade-themed building", "trigger_type": "door", "conditions": "that building", "confidence": "CONFIRMED", "quote": "A door leading to this level can be found in a large arcade-themed building"},
+  {"from": "Level 400", "from_id": "400", "slug": "/level-400", "method": "Lime neon gridline gate", "trigger_type": "door", "conditions": "not recommended", "confidence": "DANGEROUS", "quote": "it is not recommended that wanderers enter Level 808 in this way"}
+ ],
+ "exits": [
+  {"to": "Level 185", "to_id": "185", "slug": "/level-185", "method": "Subway from a TRANSIT station in Sunset City", "trigger_type": "vehicle", "conditions": "station marked TRANSIT", "risk": "low", "confidence": "CONFIRMED", "quote": "Taking a subway at a subway station marked with \"TRANSIT\" in Sunset City will lead to Level 185"}
+ ],
+ "signature_mechanic": "Player body glows as a neon light source on a gridline continent where day and night are only a grid colour swap; a group city is the hub.",
+ "verticality": "City in a valley; no towers required.",
+ "do_not": ["make the group hostile", "move the sun", "add extra exits", "make info windows permanent"],
+ "content_warnings": [],
+ "source_completeness": "PARTIAL",
+ "conflicts_notes": "Header tags say Safe/Secure/Habitable for a Specific Group; text says difficulty 0. Footnotes 1-3 missing. One image noted as non-CC.",
+ "key_quotes": [
+  {"section": "Description", "quote": "their bodies will emit neon lasers"},
+  {"section": "Description", "quote": "the sun is always at sunset"},
+  {"section": "Description", "quote": "an unknown giant light source about 200 meters below the sea"},
+  {"section": "Description", "quote": "the survival difficulty of this level is classified as 0"},
+  {"section": "Exits", "quote": "Taking a subway at a subway station marked with \"TRANSIT\" in Sunset City will lead to Level 185"}
+ ]
+}

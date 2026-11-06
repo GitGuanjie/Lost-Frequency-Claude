@@ -1,0 +1,51 @@
+{
+ "stable_id": "L003", "level_id": "3", "title": "Electrical Station",
+ "survival_class": "not stated",
+ "physical_identity": "Old electrical facility of brick-walled hallways, dusty concrete floors and dim fluorescent lights, with wiring, machinery and black-liquid pipes on the walls; contains special rooms and a large M.E.G. base.",
+ "scale_topology": "Indoor maze of inconsistently sized halls; size unknown because indestructible bars block most of it; largest area several miles wide with a ceiling hundreds of feet tall.",
+ "anomalies": ["indestructible metal bars", "black sludge neurotoxin in pipes", "Purpification (17 cases)", "scopophobia/paranoia hotspots with shared hallucinations", "self-replenishing abundance of objects", "recent unexplained artwork and notebook pages", "Sanctums repel all entities"],
+ "lighting_sound": "Dim fluorescent lights; faint Level 0 hum plus whirring, buzzing, crackling electricity and liquid rushing in pipes; temperature 18-33 C.",
+ "entities": [
+  {"name": "Hounds", "status": "CONFIRMED", "behavior": "Camouflage and ambush; coordinate pursuit by bark pace"},
+  {"name": "Facelings", "status": "CONFIRMED", "behavior": "All hostile, armed, martial arts, all evolved"},
+  {"name": "Wretches", "status": "CONFIRMED", "behavior": "Very rare; keep human anatomy"},
+  {"name": "Deathmoths (incl. Praetorian)", "status": "CONFIRMED", "behavior": "Aggressive swarms, immune to repellent, target mouth"},
+  {"name": "Empress Deathmoths and hive", "status": "REPORTED", "behavior": "Wanderer claim of 3 coequal empresses; never found"},
+  {"name": "Skin-Stealers", "status": "CONFIRMED", "behavior": "Disguise as humans, speak, translucent blood tell"},
+  {"name": "Smilers", "status": "CONFIRMED", "behavior": "Elusive, ignore decoy lights, flashing light works"},
+  {"name": "Clumps", "status": "CONFIRMED", "behavior": "Up to 8 ft, use weapons, bloodthirsty"},
+  {"name": "Death Rats", "status": "CONFIRMED", "behavior": "Capybara-sized, set electrical traps, lead brigades"},
+  {"name": "Entity 71 (The Red Knight)", "status": "CONFIRMED", "behavior": "Single 2017 panicked run through Base Gamma"},
+  {"name": "Shadowy figure behind bars", "status": "REPORTED", "behavior": "Seen in distance by wanderers"}
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Hounds, Facelings, Wretches, Deathmoths, Skin-Stealers, Smilers, Clumps, Death Rats (organised brigades); Entity 71 one-off; Empresses and shadow figure only as reports",
+ "hazards": ["entity brigades", "black sludge burns and brain damage", "exploding generators and fallen wires", "paranoia hotspots", "tight crawl hallways", "Skin-Stealer infiltration"],
+ "items_communities": ["Almond Water and Firesalt abundant", "Assembly Line goods", "M.E.G. Base Gamma", "B.N.T.G. Storage Unit", "Followers of Jerry Blue Salvation", "U.E.C. Scylla Colony", "Ultimate Backrooms Cookbook"],
+ "entrances": [
+  {"from": "Level 2", "from_id": "2", "slug": "/level-2", "method": "Numerous doors, many barricaded", "trigger_type": "door", "conditions": "Not all blocked", "confidence": "CONFIRMED", "quote": "Numerous doors on Level 2 lead to Level 3."},
+  {"from": "Level 4", "from_id": "4", "slug": "/level-4", "method": "Elevator that is not Entity 81", "trigger_type": "elevator", "conditions": "Must not be an Entity 81 instance", "confidence": "CONFIRMED", "quote": "Any elevator that is not an instance of Entity 81 on Level 4 or Level 5 will bring wanderers to Level 3."},
+  {"from": "Level 5", "from_id": "5", "slug": "/level-5", "method": "Elevator that is not Entity 81", "trigger_type": "elevator", "conditions": "Must not be an Entity 81 instance; one elevator is inside Base Gamma", "confidence": "CONFIRMED", "quote": "Any elevator that is not an instance of Entity 81 on Level 4 or Level 5 will bring wanderers to Level 3."},
+  {"from": "Level 11", "from_id": "11", "slug": "/level-11", "method": "Buildings with a brick interior; one leads into Base Gamma", "trigger_type": "door", "conditions": "Brick-interior building", "confidence": "CONFIRMED", "quote": "Buildings on Level 11 with a brick interior will lead to Level 3."}
+ ],
+ "exits": [
+  {"to": "Level 4", "to_id": "4", "slug": "/level-4", "method": "Elevator, destination random between 4 and 5", "trigger_type": "elevator", "conditions": "Not Entity 81", "risk": "low", "confidence": "CONFIRMED", "quote": "Elevators that are not instances of Entity 81 will lead to either Level 4 or Level 5 at random."},
+  {"to": "Level 5", "to_id": "5", "slug": "/level-5", "method": "Elevator, destination random between 4 and 5", "trigger_type": "elevator", "conditions": "Not Entity 81", "risk": "low", "confidence": "CONFIRMED", "quote": "Elevators that are not instances of Entity 81 will lead to either Level 4 or Level 5 at random."},
+  {"to": "Level 11", "to_id": "11", "slug": "/level-11", "method": "Door in Base Gamma to the Level 11 entry point", "trigger_type": "door", "conditions": "Inside Base Gamma", "risk": "low", "confidence": "CONFIRMED", "quote": "There is a door in Base Gamma that will lead one right back to the Base Gamma entry point on Level 11"},
+  {"to": "Level 69", "to_id": "69", "slug": "/level-69", "method": "Enter car in an occasionally appearing room", "trigger_type": "vehicle", "conditions": "Room appears occasionally", "risk": "unknown", "confidence": "CONDITIONAL", "quote": "Occasionally, a room with a car inside may appear."}
+ ],
+ "signature_mechanic": "Bar-gated brick electrical maze with an entity-free Sanctum refuge and a fortress base; hostile entities act as coordinated brigades; paranoia hotspots in dark narrow halls.",
+ "verticality": "Base Gamma has stacked sectors (Public, Residence above, Administration) and tunnels below; the rest is largely single-storey.",
+ "do_not": ["make bars breakable or noclippable", "assign a survival class", "treat notebook claims as fact", "add lone wandering entities", "make Sanctum statues movable"],
+ "content_warnings": ["violence and mass casualties", "torture and brain extraction", "body horror", "repeated LET ME DIE text"],
+ "source_completeness": "COMPLETE",
+ "conflicts_notes": "No survival class line captured. Roster title matches. Notebook pages are unreliable in-universe documents; Empress hive is wanderer claim.",
+ "key_quotes": [
+  {"section": "Description", "quote": "Level 3 is an extremely dangerous old electrical facility."},
+  {"section": "Description", "quote": "impossible to explore on foot or access with current technology"},
+  {"section": "Rooms", "quote": "the resources seem to replenish themselves through unknown means"},
+  {"section": "Rooms", "quote": "the one natural safe haven from entities in Level 3"},
+  {"section": "Indestructible bars", "quote": "none of these experiments have so much as scratched them"},
+  {"section": "Hyper-intelligent Entities", "quote": "Seeing one entity wandering by itself almost never happens on Level 3."},
+  {"section": "Exits", "quote": "Occasionally, a room with a car inside may appear."}
+ ]
+}

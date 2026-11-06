@@ -1,0 +1,33 @@
+{
+ "stable_id": "L009_3", "level_id": "9.3", "title": "Level 9.3 - \"The Overcast Manifold\"",
+ "survival_class": "not stated",
+ "physical_identity": "A static, fog-bound countryside: tall wheat fields forming a labyrinth, grassy hills, forests, one warping highway with a mossy brick wall, and wooden houses on hilltops. Overcast dreamscape.",
+ "scale_topology": "Titanic outdoor Möbius terrain; one continuous folded landscape where forests return to fields; no true outside.",
+ "anomalies": ["Möbius terrain with no boundary", "Photoaltering fog", "Permanent static state, nothing grows or decays", "Highway warps unnoticeably", "Engine noise approaching but never arriving", "Fuzzy outside image in sky"],
+ "lighting_sound": "Overcast dim light, high humidity, fog; weak wind; an engine echo always present, never nearer.",
+ "entities": [],
+ "entity_policy": "NO ENTITY PER SOURCE",
+ "hazards": ["Getting lost", "Psychological dread and hallucination", "Engine noise terror", "Lack of resources"],
+ "items_communities": ["No inhabitants", "House interiors with utensils, furnishings, beams"],
+ "entrances": [
+  {"from": "Level 9 (wheat fields)", "from_id": "9", "slug": "/level-9", "method": "Darkened corner manifests in wheat field and engulfs wanderer", "trigger_type": "condition", "conditions": "Single discovery case while heading toward Level 10", "confidence": "CONFIRMED", "quote": "a darkened corner within the wheat fields manifested, engulfing her"}
+ ],
+ "exits": [
+  {"to": "Same level (grass fields)", "to_id": null, "slug": null, "method": "Break weak back door of a house", "trigger_type": "door", "conditions": "Loops back into fields", "risk": "Psychological", "confidence": "CONFIRMED", "quote": "she once again found herself within grassy fields leading to nowhere"}
+ ],
+ "signature_mechanic": "Static looping foggy landscape with a Möbius fold: no exit, forests loop to fields, and an engine sound that nears but never arrives.",
+ "verticality": "Gentle hills only; hilltop houses.",
+ "do_not": ["Add monsters or animals", "Add a working exit", "Let the engine reach the player", "Add decay or time progression", "Link 9.2/9.4 as exits"],
+ "content_warnings": ["Psychological dread", "Despair"],
+ "source_completeness": "UNUSUAL_FORMAT",
+ "conflicts_notes": "Prose is literary; survival class blank. Parent link implied by 'subsector of the grand Level 9'. Level 9.2/9.4 are only in the link list.",
+ "key_quotes": [
+  {"section": "intro", "quote": "Roads exist with no cars, but the dreadful echo of engines still pervades."},
+  {"section": "intro", "quote": "there is no escape, there is no inhabitant"},
+  {"section": "The Overcast", "quote": "The fog possesses photoaltering properties"},
+  {"section": "The Overcast", "quote": "they eventually lead back to the grassy fields"},
+  {"section": "Entities", "quote": "No life forms exist within Level 9.3"},
+  {"section": "Integrity", "quote": "nothing may grow, fade, or break down"},
+  {"section": "Discovery", "quote": "a darkened corner within the wheat fields manifested, engulfing her"}
+ ]
+}

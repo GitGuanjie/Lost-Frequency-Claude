@@ -1,0 +1,22 @@
+{"stable_id":"L003_5","level_id":"3.5","title":"Electropolis","survival_class":"not stated",
+"physical_identity":"Monochromatic mid-20th-century industrial metropolis of brutalist buildings under a void sky, lit by pulsing floodlights on towers and struck by lightning.",
+"scale_topology":"Hypothetically endless outdoor city plane; skyscrapers with interior rooms; furthest traversal 3.5 km.",
+"anomalies":["High-voltage bolts from the void at unmeasured intervals","Concussive thunder causing disorientation and temporary hearing loss","Windows manifest in skyscraper glass","Throne of Zeus skyscraper structurally disappeared"],
+"lighting_sound":"No stars; floods on exoskeletal towers pulse; constant storm; thunder 'torrential/headsplitting', sternum and skull pressure.",
+"entities":[{"name":"Humans","status":"CONFIRMED","behavior":"Present; struck by discharges"},{"name":"The Windows","status":"CONFIRMED","behavior":"Intermittently appear in reflective glass of skyscrapers; not in interiors"}],
+"entity_policy":"SOURCED ENTITIES ONLY: The Windows (humans also present)",
+"hazards":["Electrostatic discharge strikes","Concussive thunder","Prolonged outdoor exposure is fatal","Windows"],
+"items_communities":["Lightning in a Bottle (object)","Antenna to Heaven outpost (inactive, all personnel dead)","Throne of Zeus (disappeared)","Electrostatic Discharge Power Plant (failure log only)","No active settlements"],
+"entrances":[
+{"from":"Level 3","from_id":"3","slug":"/level-3","method":"Doors in Level 3 lead to a door in skyscrapers here","trigger_type":"door","conditions":"occasionally","confidence":"CONDITIONAL","quote":"Doors within Level 3 may occasionally lead to another door located within the skyscrapers of this level."},
+{"from":"Level 1","from_id":"1","slug":"/level-1","method":"No-clip through concrete","trigger_type":"noclip","conditions":"rarely","confidence":"RUMORED+CONDITIONAL","quote":"No-clipping through the concrete of Level 1 may, rarely, result in your arrival at this level."},
+{"from":"Lightning in a Bottle blast","from_id":null,"slug":"/object-42","method":"Shatter object with electrostatic discharge; blast no-clips everyone inside","trigger_type":"item","conditions":"discharge plus object","confidence":"CONDITIONAL","quote":"will result in a massive explosion that no-clips everyone caught within the blast into this level."}],
+"exits":[
+{"to":"Level 3","to_id":"3","slug":"/level-3","method":"No-clip directly into an electrostatic discharge","trigger_type":"noclip","conditions":"may transport","risk":"lethal strike","confidence":"DANGEROUS+CONDITIONAL","quote":"No-clipping directly into an electrostatic discharge may transport you to Level 3 ."}],
+"signature_mechanic":"Unpredictable lethal lightning strikes with concussive thunder outdoors; skyscraper interiors are safe; only extraction is to enter a discharge.",
+"verticality":"Skyscrapers and a spired tower with interior rooms; no stairs or elevators described.",
+"do_not":["Make outdoors survivable","Add active outposts","Make Throne of Zeus reachable","Add 3.4/3.6/4 edges","Put Windows indoors"],
+"content_warnings":["Mass death of outpost personnel","Lethal lightning"],
+"source_completeness":"PARTIAL",
+"conflicts_notes":"Access section flattened (Entrance/Extraction tabs merged); direction inferred from wording. Level 4, 3.4, 3.6 appear only as link targets.",
+"key_quotes":[{"section":"Description","quote":"hypothetically endless plane that manifests itself as a monochromatic mid-20th-century industrial metropolis"},{"section":"Entities","quote":"Aside from humans , only the Windows are present within the level"},{"section":"Entities","quote":"prolonged exposure outdoors will invariably result in expiration"},{"section":"Access","quote":"successful extraction is considered highly improbable"},{"section":"Access","quote":"No-clipping directly into an electrostatic discharge may transport you to Level 3 ."}]}

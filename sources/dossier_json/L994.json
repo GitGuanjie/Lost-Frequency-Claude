@@ -1,0 +1,38 @@
+{
+ "stable_id": "L994", "level_id": "994", "title": "Exist Here",
+ "survival_class": "Class Pending (Habitable, Undeveloped, Devoid of Entities); final panel: Class Pending - Non-existent",
+ "physical_identity": "A clean empty beach facing a sea to the east, surrounded by mountains; no plants, animals or structures; irregular tides; the sea sounds wrong and shows drowned faces.",
+ "scale_topology": "Finite; ebb exposes at most about 20 km2 of beach; entrance in the western mountain.",
+ "anomalies": ["irregular flood and ebb tides", "sea sounds of machines, voices and prayers (testimony)", "drowned faces under clear water (testimony)", "sudden fog before tide", "level appears to resist base construction"],
+ "lighting_sound": "Quiet beach with waves; near the sea the waves become layered noise (testimony).",
+ "entities": [
+  {"name": "Faces in the sea", "status": "REPORTED", "behavior": "Drowned faces speak a warning in unverified audio"},
+  {"name": "Jeff Brook (possible entity)", "status": "RUMORED", "behavior": "Spencer suspects he is no longer himself"}
+ ],
+ "entity_policy": "NO ENTITY PER SOURCE (article: no entities exist); sea faces only as unverified audio testimony",
+ "hazards": ["tide and fog", "sea proximity", "memory loss and construction loss"],
+ "items_communities": ["pebbles", "no bases or communities"],
+ "entrances": [
+  {"from": "Level 11", "from_id": "11", "slug": null, "method": "Iron gate engraved EXIST", "trigger_type": "door", "conditions": "engraved gate", "confidence": "CONFIRMED", "quote": "Walking through an iron gate engraved with the word \"EXIST\" in Level 11"},
+  {"from": "Level 221", "from_id": "221", "slug": null, "method": "Iron gate engraved EXIST", "trigger_type": "door", "conditions": "engraved gate", "confidence": "CONFIRMED", "quote": "Walking through an iron gate engraved with the word \"EXIST\""},
+  {"from": "Level 422", "from_id": "422", "slug": null, "method": "Iron gate engraved EXIST", "trigger_type": "door", "conditions": "engraved gate", "confidence": "CONFIRMED", "quote": "Walking through an iron gate engraved with the word \"EXIST\""}
+ ],
+ "exits": [
+  {"to": "Origin level (11, 221 or 422)", "to_id": null, "slug": null, "method": "Return through the entrance before the tide arrives", "trigger_type": "timed", "conditions": "leave before the tide", "risk": "tide and fog", "confidence": "CONDITIONAL+DANGEROUS", "quote": "Please just go back to where you came from, the tide is coming"}
+ ],
+ "signature_mechanic": "An empty beach whose irregular tide and wrong-sounding sea force a retreat to the gate before the flood.",
+ "verticality": "None; mountains as boundary, cliff north end.",
+ "do_not": ["build bases", "add visible creatures", "make the tide periodic", "treat audio as verified"],
+ "content_warnings": ["decomposed faces", "absorption into the sea", "memory erasure"],
+ "source_completeness": "NARRATIVE_FORMAT",
+ "conflicts_notes": "Description says devoid of entities, but Spencer calls Jeff a possible entity and audio reports faces. Audio agent absent from personnel database. Final panel says the level does not exist. Slugs for Levels 11, 221, 422 are not in the link list.",
+ "key_quotes": [
+  {"section": "Description", "quote": "irregular flood and ebb tides"},
+  {"section": "Description", "quote": "no animals or plants have been observed"},
+  {"section": "Interview", "quote": "It seems to have an ability to effect reality and our minds."},
+  {"section": "Audio", "quote": "Leave before the tide comes."},
+  {"section": "Bases, Outposts and Communities", "quote": "There are no bases, outposts, or communities on this level."},
+  {"section": "Exits", "quote": "Please just go back to where you came from, the tide is coming"},
+  {"section": "Footer", "quote": "This level doesn't exist."}
+ ]
+}

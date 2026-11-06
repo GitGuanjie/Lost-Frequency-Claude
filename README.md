@@ -12,7 +12,7 @@ passes engine-executed gates. Unbuilt entries appear as **LOCKED / IN DEVELOPMEN
 Requirements: **Godot 4.5.x** (tested with 4.5.1-stable). Forward+ renderer.
 
 ```bash
-godot --path lost_frequency
+godot --path .
 ```
 
 Controls: WASD / mouse, Shift sprint, Ctrl/C crouch (swim down), Space jump (swim up),
@@ -31,7 +31,6 @@ python3 -I tools/fetch_assets.py   # pinned in assets/external/lock.json; proced
 
 ## Test it (real engine)
 ```bash
-cd lost_frequency
 godot --headless --path . --import
 godot --headless --path . --fixed-fps 60 res://tests/QARunner.tscn -- --qa
 ```

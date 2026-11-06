@@ -1,0 +1,34 @@
+{
+ "stable_id": "L965", "level_id": "965", "title": "Colorful Colorless",
+ "survival_class": "SURVIVAL DIFFICULTY CLASS 0 (Exit: 0/5 Guaranteed Exit; Environment: 0/5 No Environmental Risks; Entities: 0/5 No Hostile Entities)",
+ "physical_identity": "Monochrome plain dotted with defunct wind turbines and presumed disused flood barriers, gray plains at the horizon, motionless pale blue sky with wisps.",
+ "scale_topology": "Outdoor open plain; extent not stated; horizon plains visible.",
+ "anomalies": ["draft only: 'impossible barrier of time' visible only in ROYGBIV, overlays vision, blinds with repeated looking", "final entry: rainbow of no inherent effect", "settlers reportedly leave within a day (draft statement)"],
+ "lighting_sound": "Motionless pale blue sky; sound not stated.",
+ "entities": [],
+ "entity_policy": "NO ENTITY PER SOURCE",
+ "hazards": ["none per class line", "draft claims barrier blindness (contradicted by final entry)"],
+ "items_communities": ["no outposts or settlements (draft statement)", "dedicated to Researcher Darrion S. Jent"],
+ "entrances": [
+  {"from": "Not stated", "from_id": null, "slug": null, "method": "No entrance section", "trigger_type": "unknown", "conditions": "unknown", "confidence": "UNKNOWN", "quote": "upon entry, is a monochrome landscape"}
+ ],
+ "exits": [
+  {"to": "Not stated", "to_id": null, "slug": null, "method": "Class line claims a guaranteed exit; no method given", "trigger_type": "unknown", "conditions": "unspecified", "risk": "none", "confidence": "UNKNOWN", "quote": "Exit: 0/5 Guaranteed Exit"},
+  {"to": "Level 964 / Level 966 (rhetorical)", "to_id": null, "slug": "/level-964 and /level-966", "method": "Links on the opening line, not an instruction", "trigger_type": "unknown", "conditions": "rhetorical", "risk": "n/a", "confidence": "UNKNOWN", "quote": "Turn back or move forward"}
+ ],
+ "signature_mechanic": "Near-empty monochrome plain with turbines and flood barriers; the draft's blinding barrier is an unreliable, later-contradicted claim; final entry says nothing else is of note.",
+ "verticality": "None stated.",
+ "do_not": ["treat barrier as confirmed hazard", "add blindness mechanics as fact", "treat 964/966 as exits", "add settlements or entities"],
+ "content_warnings": ["psychological horror", "death wish toward a named researcher", "profanity", "memorial dedication"],
+ "source_completeness": "UNUSUAL_FORMAT",
+ "conflicts_notes": "Draft describes a barrier; the accepted entry omits it and says 'nothing else of note'. Class 0 block repeated twice. No entrance/exit section. Draft is an in-universe unreliable text.",
+ "key_quotes": [
+  {"section": "Class block", "quote": "SURVIVAL DIFFICULTY CLASS 0"},
+  {"section": "Draft", "quote": "a monochrome landscape dotted with defunct wind turbines and structures of unknown purpose"},
+  {"section": "Draft", "quote": "The sky is a motionless pale blue smeared with wisps that can barely be called clouds."},
+  {"section": "Draft", "quote": "It is only mortally perceivable in ROYGBIV."},
+  {"section": "Draft", "quote": "will effectively blind the onlooker in a flurry of colors"},
+  {"section": "Final entry", "quote": "Rainbow in Level 965. Seemingly of no inherent effect."},
+  {"section": "Final entry", "quote": "There is nothing else of note."}
+ ]
+}

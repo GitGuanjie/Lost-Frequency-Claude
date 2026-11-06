@@ -4,7 +4,7 @@ Read this before building a level. The reference implementation is `levels/L000/
 
 ## 0. Canon first
 - The **only** source is the level's dated snapshot (`docs/canon/levels/<SID>.md`
-  dossier; raw text at `/tmp/claude-0/-home-user-claude-EO/b1bbc6d3-61e8-5445-bc39-785c3bc288f0/scratchpad/wiki_text/<SID>.md`).
+  dossier; raw text at `sources/wiki_text/<SID>.md`).
   This is the English Backrooms Wikidot page captured 2026-11-04. No Fandom, Kane Pixels or memory.
 - Every mechanic, material choice, sound, hazard, entity and exit must map to a dossier
   **SOURCE FACT** row, or be explicitly labelled **ADAPTATION** with a one-line reason in

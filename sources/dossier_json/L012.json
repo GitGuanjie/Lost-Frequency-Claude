@@ -1,0 +1,39 @@
+{
+ "stable_id": "L012", "level_id": "12", "title": "Level 12 - \"Matrix\"",
+ "survival_class": "not stated",
+ "physical_identity": "A small brightly lit white-painted room with only a table, a chair and an adjacent locked door; per an expedition log it extends into an infinite white abyss with decaying furniture and copycat doors. It censors recordings.",
+ "scale_topology": "Single small room plus (per testimony) an infinite white expanse; indoor/abstract.",
+ "anomalies": ["Self-censoring recordings become SMPTE test screen", "Infinite white abyss", "Copycat doors return to main room", "Immovable table over inaccessible hole", "Memory fog", "Timed exit ritual"],
+ "lighting_sound": "Bright white light; sound not stated.",
+ "entities": [],
+ "entity_policy": "NO ENTITY PER SOURCE",
+ "hazards": ["Memory fog and mental fogginess", "Being stranded", "Teammate mental change (testimony)"],
+ "items_communities": ["Table, chair, locked door", "Old furniture in the abyss", "No bases, outposts or communities"],
+ "entrances": [
+  {"from": "Level 11", "from_id": "11", "slug": "/level-11", "method": "Use a Window entity as guideline to noclip safely", "trigger_type": "noclip", "conditions": "Several reports; otherwise unknown", "confidence": "CONDITIONAL", "quote": "a Window Entity within Level 11 can be used as a guideline to safely no-clip into the Level"}
+ ],
+ "exits": [
+  {"to": "Level 1", "to_id": "1", "slug": "/level-1", "method": "Chair 15 min, try door, copycat door, wait 1 hour, retry door", "trigger_type": "condition", "conditions": "Timed ritual from Addendum I", "risk": "Mental fogginess afterwards", "confidence": "CONDITIONAL", "quote": "Gab's managed to create a pathway to Level 1"},
+  {"to": "Level 4", "to_id": "4", "slug": "/level-4", "method": "Same ritual", "trigger_type": "condition", "conditions": "Possible destination", "risk": "Same", "confidence": "CONDITIONAL", "quote": "may transport Wanderers to Level 1 , Level 4 , Level 10"},
+  {"to": "Level 10", "to_id": "10", "slug": "/level-10", "method": "Same ritual", "trigger_type": "condition", "conditions": "Possible destination", "risk": "Same", "confidence": "CONDITIONAL", "quote": "Level 10 , Level 19 , Level 23"},
+  {"to": "Level 19", "to_id": "19", "slug": "/level-19", "method": "Same ritual", "trigger_type": "condition", "conditions": "Possible destination", "risk": "Same", "confidence": "CONDITIONAL", "quote": "Level 19 , Level 23 , Level 25"},
+  {"to": "Level 23", "to_id": "23", "slug": "/level-23", "method": "Same ritual", "trigger_type": "condition", "conditions": "Possible destination", "risk": "Same", "confidence": "CONDITIONAL", "quote": "Level 23 , Level 25 , Level 34"},
+  {"to": "Level 25", "to_id": "25", "slug": "/level-25", "method": "Same ritual", "trigger_type": "condition", "conditions": "Possible destination", "risk": "Same", "confidence": "CONDITIONAL", "quote": "Level 25 , Level 34 or Level 287"},
+  {"to": "Level 34", "to_id": "34", "slug": "/level-34", "method": "Same ritual", "trigger_type": "condition", "conditions": "Possible destination", "risk": "Same", "confidence": "CONDITIONAL", "quote": "Level 25 , Level 34 or Level 287"},
+  {"to": "Level 287", "to_id": "287", "slug": "/level-287", "method": "Same ritual", "trigger_type": "condition", "conditions": "Possible destination", "risk": "Same", "confidence": "CONDITIONAL", "quote": "Level 34 or Level 287"}
+ ],
+ "signature_mechanic": "Self-censoring bright white room with an exit ritual: sit about 15 minutes, try the locked door, pass a copycat door, wait exactly one hour, retry the door.",
+ "verticality": "None stated.",
+ "do_not": ["Add entities", "Let the main door open without ritual", "Make copycat doors real exits", "Open the hole under the table", "Invent a Level 13 edge"],
+ "content_warnings": ["Memory loss", "Profanity in log"],
+ "source_completeness": "COMPLETE",
+ "conflicts_notes": "Addendum I (testimony) says the original exit is unknown since Revision 1 differed. Log says destination is 'one of the early Levels' while article lists eight levels including 287. Level 13 appears only in link list.",
+ "key_quotes": [
+  {"section": "Description", "quote": "it censors itself"},
+  {"section": "Description", "quote": "a table and a chair, as well an adjacent locked door"},
+  {"section": "Description", "quote": "no Level 12 Entity sightings have been appended"},
+  {"section": "Addendum I", "quote": "it's an infinite white abyss"},
+  {"section": "Addendum I", "quote": "Wait for exactly one hour, no more, no less"},
+  {"section": "Entrances", "quote": "a Window Entity within Level 11 can be used as a guideline to safely no-clip into the Level"}
+ ]
+}

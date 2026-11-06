@@ -1,0 +1,115 @@
+{
+ "stable_id": "L289",
+ "level_id": "289",
+ "title": "Level 289 - \"Overflow\"",
+ "survival_class": "not stated",
+ "physical_identity": "Flooded basement: team member is waist-high in murky, foul-smelling water (suspected Almond Water), with scaffolding everywhere and a poorly built feel. Dark; the page only gives this via an exploration log.",
+ "scale_topology": "Not stated. Indoor basement; extent unknown; escorted passage through the level took place; hideout made.",
+ "anomalies": [
+  "Unknown entity moves at incredible speed and stops with no momentum",
+  "Victim reports screaming that others cannot hear; he is thrown backward as if time rewound for him only and later found on Level 287",
+  "Only exit leads to a corrupted-number level that loops back to Level 289"
+ ],
+ "lighting_sound": "General dark surroundings; no ambient sound stated except radio contact (voice audible in the water). Smell described as piss/shit-like.",
+ "entities": [
+  {
+   "name": "Unnamed/undocumented entity",
+   "status": "REPORTED",
+   "behavior": "Appears suddenly at very high speed, stops in front of a person; victim hears screaming and burning pain; others hear nothing"
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: one unnamed fast entity, REPORTED via a single M.E.G. log; the log's end note says 'Entity(ies)' and no sign of it during escorted exploration",
+ "hazards": [
+  "Unknown fast entity (screaming effect, displacement)",
+  "Murky contaminated water",
+  "Corrupted exit loop trapping teams (stuck a week)",
+  "Darkness"
+ ],
+ "items_communities": [
+  "M.E.G. Base Alpha supports; backup team sent",
+  "Recording device and app marking location (standard procedure)",
+  "Temporary hideout made by team"
+ ],
+ "entrances": [
+  {
+   "from": "Prior level, not stated (team 'successfully enter'; method not stated)",
+   "from_id": null,
+   "slug": null,
+   "method": "Not stated",
+   "trigger_type": "unknown",
+   "conditions": "Discovery date 03/24/2015, regiment Compass Point 'The Misfits'",
+   "confidence": "UNKNOWN",
+   "quote": "The Misfits successfully enter Level 289."
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 14444444-£÷¥π÷ππ^÷¢|}≠{=/~ (corrupted number)",
+   "to_id": null,
+   "slug": null,
+   "method": "The only exit found by extensive exploration; leads back to Level 289",
+   "trigger_type": "unknown",
+   "conditions": "Location of exit not stated",
+   "risk": "Closed loop; team stuck for a week",
+   "confidence": "CONFIRMED+DANGEROUS",
+   "quote": "the only exit to Level 289 leads to Level 14444444-£÷¥π÷ππ^÷¢|}≠{=/~ which in itself leads back to Level 289"
+  },
+  {
+   "to": "Level 287 (victim relocated there, not an exit per se)",
+   "to_id": "287",
+   "slug": "/level-287",
+   "method": "Victim was found there after the entity encounter",
+   "trigger_type": "unknown",
+   "conditions": "Caused by the entity encounter per the log; how he got there not stated",
+   "risk": "Victim found humming eerily facing wall",
+   "confidence": "CONFIRMED+ONE-WAY",
+   "quote": "they found Andy sitting on the floor with his back turned towards the wall."
+  }
+ ],
+ "signature_mechanic": "A flooded, scaffolded dark basement where an unseen, extremely fast screaming entity strikes one person at a time and relocates them to Level 287; the only exit loops back into the level.",
+ "verticality": "Not stated (basement setting only).",
+ "do_not": [
+  "Do not add rooms, towers or other hazards the log does not mention",
+  "Do not name or describe the entity's body (log says it could not be seen)",
+  "Do not invent an exit other than the looping corrupted-number level",
+  "Do not claim Almond Water: it is only a guess by a team member",
+  "Do not add NPC allies in the level (backup escorted team out of narrative, no detail)"
+ ],
+ "content_warnings": [
+  "Strong profanity",
+  "Screaming/pain from entity; disappearance of a team member",
+  "Psychological distress (victim found humming)"
+ ],
+ "source_completeness": "NARRATIVE_FORMAT",
+ "conflicts_notes": "No Description/Entrances sections; page is a corrupted-shell frame (offset 0) plus an M.E.G. Event Log 1237 (offset 1). Log contradicts itself: 'only exit' leads out and back; Andy in Level 287 despite no exit mentioned. Image filenames only (flooded basement, ancient ceiling, etc.), no captions.",
+ "key_quotes": [
+  {
+   "section": "Event Log",
+   "quote": "They find themselves in what appears to be a flooded basement."
+  },
+  {
+   "section": "Event Log",
+   "quote": "There's, like, scaffolding everywhere. This place was not built very well or something."
+  },
+  {
+   "section": "Event Log",
+   "quote": "moves up to Ale at an incredibly high velocity"
+  },
+  {
+   "section": "Event Log",
+   "quote": "OH GOD, IT'S SCREAMING AT ME! IT FUCKING BURNS"
+  },
+  {
+   "section": "Event Log",
+   "quote": "as if time had rewound itself only for him."
+  },
+  {
+   "section": "Event Log",
+   "quote": "He was just eerily humming to himself."
+  },
+  {
+   "section": "End Log",
+   "quote": "Team Misfits has been stuck in Level 289 for a week."
+  }
+ ]
+}

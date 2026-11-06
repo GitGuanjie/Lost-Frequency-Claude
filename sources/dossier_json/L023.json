@@ -1,0 +1,182 @@
+{
+ "stable_id": "L023",
+ "level_id": "23",
+ "title": "The Petrified Garden",
+ "survival_class": "Unsafe . / Overgrown . / Medium Entity Count .",
+ "physical_identity": "A planetoid-sized tree superorganism with dark dense surface forest, tunnel-cavern glow rooms lit by Sorries, ancient ruins, and a hollow core with Green Giants and a water heart.",
+ "scale_topology": "Planetoid, surface area about Ceres; indoor-like caverns and tunnels, surface forest, hollow core; Green Giants up to 3.2 km.",
+ "anomalies": [
+  "Permanent sunlight, fixed star",
+  "Whispering Sorries",
+  "Ruins of altered Frontrooms landmarks",
+  "Buried sentries triggered by phrase",
+  "Heart of Water exit noclips"
+ ],
+ "lighting_sound": "Surface dim and dense; glow rooms bioluminescent multicolour, damp cool; Sorries whisper 'sorry...'; sentries scream like rusty chainsaws.",
+ "entities": [
+  {
+   "name": "Gardener's Sorries",
+   "status": "CONFIRMED",
+   "behavior": "Bioluminescent glowworm-like light sources that whisper 'sorry...'."
+  },
+  {
+   "name": "Volpes, Hounds, Clumps, Smilers, Death Rats, Deathmoths (male and female), Curabitur Birds",
+   "status": "CONFIRMED",
+   "behavior": "Present, mostly underground; behaviours not described here."
+  },
+  {
+   "name": "Wranglers",
+   "status": "CONFIRMED",
+   "behavior": "Found very rarely."
+  },
+  {
+   "name": "Unknown native glow-room animal-like entities",
+   "status": "REPORTED",
+   "behavior": "Resemble Frontrooms animals; under research."
+  },
+  {
+   "name": "Buried sentries",
+   "status": "CONFIRMED",
+   "behavior": "Trapped in wood and bark; scream when awakened by a phrase."
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Gardener's Sorries, Volpes, Hounds, Clumps, Smilers, Death Rats, Deathmoths, Curabitur Birds, Wranglers, buried sentries",
+ "hazards": [
+  "Unsafe class",
+  "Buried sentry scream bursting eardrums",
+  "Hostile entities underground",
+  "Noclip into mid-ocean at exit"
+ ],
+ "items_communities": [
+  "M.E.G. Base Seedling (Almond Water squirt guns, steady water, limited food)",
+  "Latin artifacts: pottery, paintings, cloth"
+ ],
+ "entrances": [
+  {
+   "from": "Level 37",
+   "from_id": "37",
+   "slug": "/level-37",
+   "method": "Massive hollow trees with conspicuous green bark",
+   "trigger_type": "door",
+   "conditions": "trees noticeably larger than neighbours",
+   "confidence": "CONFIRMED",
+   "quote": "Level 23 can be entered through massive hollow trees found in Level 37 and Level 47 ."
+  },
+  {
+   "from": "Level 47",
+   "from_id": "47",
+   "slug": "/level-47",
+   "method": "Massive hollow trees with green bark",
+   "trigger_type": "door",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "massive hollow trees found in Level 37 and Level 47"
+  },
+  {
+   "from": "Level 135",
+   "from_id": "135",
+   "slug": "/level-135",
+   "method": "Hollow tree entrance leading to Base Seedling",
+   "trigger_type": "door",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "another hollow tree entrance in Level 135 that will lead to Base Seedling"
+  },
+  {
+   "from": "Level 121",
+   "from_id": "121",
+   "slug": "/level-121",
+   "method": "Hollow log-shaped structure",
+   "trigger_type": "door",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "a hollow log-shaped structure in Level 121"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 7 (ocean middle)",
+   "to_id": "7",
+   "slug": "/level-7",
+   "method": "Enter the Heart of Water reservoir; random noclip",
+   "trigger_type": "noclip",
+   "conditions": "random between 7, 121 or 43",
+   "risk": "Deep ocean",
+   "confidence": "CONFIRMED",
+   "quote": "you will be randomly no-clipped into the middle of the ocean in either Level 7 or Level 121"
+  },
+  {
+   "to": "Level 121 (ocean middle)",
+   "to_id": "121",
+   "slug": "/level-121",
+   "method": "Enter the Heart of Water reservoir; random noclip",
+   "trigger_type": "noclip",
+   "conditions": "random",
+   "risk": "Deep ocean",
+   "confidence": "CONFIRMED",
+   "quote": "in either Level 7 or Level 121"
+  },
+  {
+   "to": "Level 43 (exhibit)",
+   "to_id": "43",
+   "slug": "/level-43",
+   "method": "Heart of Water; random chance",
+   "trigger_type": "noclip",
+   "conditions": "chance",
+   "risk": "",
+   "confidence": "CONDITIONAL",
+   "quote": "There is also a chance to no-clip into one of the exhibits in Level 43"
+  },
+  {
+   "to": "Level 135",
+   "to_id": "135",
+   "slug": "/level-135",
+   "method": "Hollow tree at centre of Base Seedling, two-way",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "Low",
+   "confidence": "CONFIRMED",
+   "quote": "This exit serves as a two-way gateway between Level 135 and Level 23 ."
+  }
+ ],
+ "signature_mechanic": "A living planet of trees with glow-room caverns and a water-heart core; speaking a forbidden phrase wakes buried screaming sentries.",
+ "verticality": "Surface canopy, subsurface caverns, hollow core; Green Giants up to 3.2 km.",
+ "do_not": [
+  "Do not add a day/night cycle or time of day.",
+  "Do not add buildings newer than 1000 A.D.",
+  "Do not tamper-with-Green-Giants (no chopping).",
+  "Do not make Base Seedling hostile; it is cleared of hostile entities and sentries.",
+  "Do not invent sentry location markers."
+ ],
+ "content_warnings": [
+  "screams loud enough to burst eardrums (Buried Sentries)"
+ ],
+ "source_completeness": "COMPLETE",
+ "conflicts_notes": "Image credit filenames say level27*; plaque calls it 'Great Sphere of Giza'. Class line includes 'Overgrown' as a descriptor. Level 22 and 24 appear in link list but nothing in text.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "a massive, planetoid-sized superorganism comprised primarily of several intertwining tree specimens"
+  },
+  {
+   "section": "Description",
+   "quote": "There is no day or night cycle on this Level."
+  },
+  {
+   "section": "Glow Rooms",
+   "quote": "sound like voices whispering \"sorry…\""
+  },
+  {
+   "section": "The Buried Sentries",
+   "quote": "it is highly advised that you do not utter the words \"it's only a matter of time.\""
+  },
+  {
+   "section": "The Green Giants",
+   "quote": "These trees are essential to the stability of the Level, and thus must not be tampered with."
+  },
+  {
+   "section": "Exits",
+   "quote": "you will be randomly no-clipped into the middle of the ocean in either Level 7 or Level 121"
+  }
+ ]
+}

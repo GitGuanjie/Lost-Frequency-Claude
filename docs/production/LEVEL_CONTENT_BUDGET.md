@@ -11,11 +11,10 @@
 | Binary assets | none | provenance and size; shaders and synthesis only |
 
 ## Repository storage
-This game lives in a subfolder of a research repository whose policy (`scripts/check_repo.py`)
-caps any file at 512 KiB and the total tracked payload at 5 MiB, and forbids `.log`, `.zip` and
-similar. Full-resolution evidence and logs are therefore kept outside Git. Moving the game to its own
-repository would remove this constraint: `git subtree split --prefix=lost_frequency` preserves its
-history.
+Since 2026-11-06 the game lives in its own repository (`GitGuanjie/Lost-Frequency-Claude`; history imported
+from `GitGuanjie/claude-EO`). It has no 5 MiB research cap. Keep binaries purposeful: CC0 textures (≈24 MB) and
+dated source snapshots are committed for reproducibility. Single files must stay under GitHub's 100 MB limit.
+The two-stills-per-level guideline remains, for review speed.
 
 ## Performance targets (not yet measured)
 Target: 60 FPS at 1080p on an RTX 3060-class GPU, Ryzen 5 5600-class CPU, 16 GB RAM, High preset.

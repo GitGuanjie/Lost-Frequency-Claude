@@ -1,0 +1,159 @@
+{
+ "stable_id": "L022",
+ "level_id": "22",
+ "title": "Ruins Left Behind",
+ "survival_class": "not stated",
+ "physical_identity": "Collapsed multi-storey car park, formerly the micronation Emstable; rubble, girders, rusted car husks, abandoned tents with corpses, deep mining holes.",
+ "scale_topology": "Described as an infinite car park; indoor multi-floor with stratified floors (census to Floor 28); large parts inaccessible after collapse.",
+ "anomalies": [
+  "originally infinite car park",
+  "new exits formed by collapse (holes to Level 21 and 23)",
+  "noclip through cars or debris to Level 817"
+ ],
+ "lighting_sound": "Not stated.",
+ "entities": [],
+ "entity_policy": "NO ENTITY PER SOURCE",
+ "hazards": [
+  "unstable structure and tripping on rubble/rebar",
+  "deep mining holes",
+  "fatal climbing accidents",
+  "corpses in tents"
+ ],
+ "items_communities": [
+  "Emstable (collapsed micronation, only community)",
+  "recovered diary 'Hilda' and census report held by Kalag Institute/M.E.G./B.N.T.G.",
+  "top floor had Wi-Fi, pool, football table, electric cookers"
+ ],
+ "entrances": [
+  {
+   "from": "Level 21",
+   "from_id": "21",
+   "slug": "/level-21",
+   "method": "Holes in Level 21 floor from falling rubble",
+   "trigger_type": "fall",
+   "conditions": "post-collapse",
+   "confidence": "CONFIRMED",
+   "quote": "creating holes in the floor of Level 21 and the ceiling of Level 23"
+  },
+  {
+   "from": "Level 23",
+   "from_id": "23",
+   "slug": "/level-23",
+   "method": "Holes in Level 23 ceiling",
+   "trigger_type": "fall",
+   "conditions": "post-collapse",
+   "confidence": "CONFIRMED",
+   "quote": "Level 22 can be accessed through both Level 21 and Level 23"
+  },
+  {
+   "from": "Level 1",
+   "from_id": "1",
+   "slug": "/level-1",
+   "method": "Glass doors",
+   "trigger_type": "door",
+   "conditions": "rare original entrance",
+   "confidence": "CONDITIONAL",
+   "quote": "finding glass doors within Level 1"
+  },
+  {
+   "from": "Level 69",
+   "from_id": "69",
+   "slug": "/level-69",
+   "method": "Exit ramps",
+   "trigger_type": "walk_in",
+   "conditions": "rare original entrance",
+   "confidence": "CONDITIONAL",
+   "quote": "taking exit ramps off of Level 69"
+  },
+  {
+   "from": "Level 172",
+   "from_id": "172",
+   "slug": null,
+   "method": "Exit in central areas",
+   "trigger_type": "walk_in",
+   "conditions": "rare original entrance",
+   "confidence": "CONDITIONAL",
+   "quote": "an exit in the center areas inside of level-172"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 21",
+   "to_id": "21",
+   "slug": "/level-21",
+   "method": "Reverse of the post-collapse hole entrance (method not detailed)",
+   "trigger_type": "unknown",
+   "conditions": "via post-collapse holes",
+   "risk": "unstable structure",
+   "confidence": "CONFIRMED",
+   "quote": "Level 22 can be exited by using the previously mentioned entrances"
+  },
+  {
+   "to": "Level 23",
+   "to_id": "23",
+   "slug": "/level-23",
+   "method": "Reverse of the post-collapse hole entrance (method not detailed)",
+   "trigger_type": "unknown",
+   "conditions": "via post-collapse holes",
+   "risk": "unstable structure",
+   "confidence": "CONFIRMED",
+   "quote": "Level 22 can be exited by using the previously mentioned entrances"
+  },
+  {
+   "to": "Level 817",
+   "to_id": "817",
+   "slug": "/level-817",
+   "method": "No-clip through cars or debris",
+   "trigger_type": "noclip",
+   "conditions": "successful noclip",
+   "risk": "unstated",
+   "confidence": "CONDITIONAL",
+   "quote": "successfully noclipping through cars or debris can lead to Level 817"
+  }
+ ],
+ "signature_mechanic": "Ruined stacked car-park decks riddled with deep mining shafts; unstable rubble causes injury; collapse holes are the working exits; abandoned tents hold corpses and readable diary/census notes.",
+ "verticality": "Strong: multiple collapsed decks and deep holes, climbing risky.",
+ "do_not": [
+  "add living citizens",
+  "add hostile entities",
+  "make luxury facilities work",
+  "invent original exits"
+ ],
+ "content_warnings": [
+  "corpses",
+  "starvation",
+  "fatal falls"
+ ],
+ "source_completeness": "PARTIAL",
+ "conflicts_notes": "Rewrite banner on page; footnote texts 1-5 missing from snapshot; Entity 1/Entity 40 in links are author-nav only; Level 172 has no link slug; census header says Floor 10 while table lists floors to 29.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "Level 22 was initially nothing special."
+  },
+  {
+   "section": "Description",
+   "quote": "the slow decline of Level 22's structural integrity"
+  },
+  {
+   "section": "Description",
+   "quote": "The ground is littered with rubble and girder poles, creating an extremely unsafe walking ground."
+  },
+  {
+   "section": "Description",
+   "quote": "countless large, gaping holes within Level 22"
+  },
+  {
+   "section": "Description",
+   "quote": "The previously mentioned tents are also known to house the corpses of former inhabitants of Emstable"
+  },
+  {
+   "section": "Bases",
+   "quote": "None have arisen since its collapse."
+  },
+  {
+   "section": "Exits",
+   "quote": "No original exits of Level 22 that existed before the collapse have been found"
+  }
+ ]
+}

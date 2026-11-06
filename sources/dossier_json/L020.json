@@ -1,0 +1,205 @@
+{
+ "stable_id": "L020",
+ "level_id": "20",
+ "title": "Boreas Structure",
+ "survival_class": "Class 4",
+ "physical_identity": "Fun Zone activity palace: office-like Waiting halls (white concrete, brown carpet, vending and Almond Water) and the neon black Electric with game rooms; windows show a starry void.",
+ "scale_topology": "Unknown extent; indoor halls; the Electric slopes imperceptibly downward; M.E.G. log claims it is a structure on a planet.",
+ "anomalies": [
+  "orange gelatinous ooze falls from ceiling",
+  "windows show void and stars and chill 10 m radius",
+  "game rooms reward or punish",
+  "hallucinations of breathing, wind, snowfall",
+  "temperature falls with depth"
+ ],
+ "lighting_sound": "Neon lighting in the Electric; hallucinated breathing and heavy winds; no other audio stated.",
+ "entities": [
+  {
+   "name": "Deathmoths, Clumps, Hounds, Facelings, Skin-Stealers, Nguithr'xurhs, Growlers",
+   "status": "CONFIRMED",
+   "behavior": "minimal in Waiting halls, more in the Electric; repelled by game doors"
+  },
+  {
+   "name": "Wrangler",
+   "status": "CONFIRMED",
+   "behavior": "manifested when Asteroid Blasters is lost"
+  },
+  {
+   "name": "Liquid Pain",
+   "status": "CONFIRMED",
+   "behavior": "floods room when Rock Climbing lost"
+  },
+  {
+   "name": "Blue-flesh sky entity",
+   "status": "REPORTED",
+   "behavior": "eyes and teeth, spits orange ooze (single testimony)"
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Deathmoths, Clumps, Hounds, Facelings, Skin-Stealers, Nguithr'xurhs, Growlers, Wrangler, Liquid Pain; sky entity testimony only",
+ "hazards": [
+  "cold to -27 C (-43 C near windows)",
+  "paranoia",
+  "frostbite",
+  "lost games",
+  "entity maulings"
+ ],
+ "items_communities": [
+  "chocolate and pop in lockers",
+  "Almond Water",
+  "hot chocolate and winter clothing",
+  "Memory Jar",
+  "no settlement; M.E.G. will not build an outpost"
+ ],
+ "entrances": [
+  {
+   "from": "Level 2, 21, 122",
+   "from_id": "2",
+   "slug": "/level-2",
+   "method": "Blue FUN ZONE doors",
+   "trigger_type": "door",
+   "conditions": "none",
+   "confidence": "CONFIRMED",
+   "quote": "Blue doors containing the words \"FUN ZONE\""
+  },
+  {
+   "from": "Level 11",
+   "from_id": "11",
+   "slug": "/level-11",
+   "method": "Enter building named Fun Zone",
+   "trigger_type": "walk_in",
+   "conditions": "none",
+   "confidence": "CONFIRMED",
+   "quote": "named \"Fun Zone\" will lead to Level 20"
+  },
+  {
+   "from": "Level 16",
+   "from_id": "16",
+   "slug": "/level-16",
+   "method": "Look at sky in cold state",
+   "trigger_type": "condition",
+   "conditions": "cold state, chance",
+   "confidence": "CONDITIONAL",
+   "quote": "has a chance of teleporting one to Level 20"
+  },
+  {
+   "from": "Level 19",
+   "from_id": "19",
+   "slug": "/level-19",
+   "method": "Broken or damaged doors",
+   "trigger_type": "door",
+   "conditions": "rare",
+   "confidence": "CONDITIONAL",
+   "quote": "rare chance of leading here"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 2",
+   "to_id": "2",
+   "slug": "/level-2",
+   "method": "Staff-only doors in Waiting halls",
+   "trigger_type": "door",
+   "conditions": "find them",
+   "risk": "low",
+   "confidence": "CONFIRMED",
+   "quote": "staff-only doors within the Waiting halls, these will take you to Level 2"
+  },
+  {
+   "to": "Level 24 or 78",
+   "to_id": "24",
+   "slug": "/level-24",
+   "method": "No-clip through windows",
+   "trigger_type": "noclip",
+   "conditions": "Waiting halls windows",
+   "risk": "cold, paranoia",
+   "confidence": "CONFIRMED",
+   "quote": "no-clipping through the windows"
+  },
+  {
+   "to": "Level 4, 21 or 36",
+   "to_id": "4",
+   "slug": "/level-4",
+   "method": "Game doors with exit sign",
+   "trigger_type": "door",
+   "conditions": "rare chance",
+   "risk": "unknown",
+   "confidence": "CONDITIONAL",
+   "quote": "These doors will always have an exit sign nearby."
+  },
+  {
+   "to": "Level 6",
+   "to_id": "6",
+   "slug": "/level-6",
+   "method": "Lose Asteroid Blasters",
+   "trigger_type": "condition",
+   "conditions": "lose game",
+   "risk": "dangerous",
+   "confidence": "DANGEROUS",
+   "quote": "teleport one to Level 6"
+  },
+  {
+   "to": "Level 7 or 154",
+   "to_id": "7",
+   "slug": "/level-7",
+   "method": "Lasers game",
+   "trigger_type": "condition",
+   "conditions": "listed under win",
+   "risk": "unspecified",
+   "confidence": "CONDITIONAL",
+   "quote": "sent to either Level 7 or Level 154"
+  },
+  {
+   "to": "unspecified dangerous level",
+   "to_id": null,
+   "slug": null,
+   "method": "Fail certain games",
+   "trigger_type": "condition",
+   "conditions": "fail",
+   "risk": "high",
+   "confidence": "DANGEROUS",
+   "quote": "guaranteed to send you to a dangerous level"
+  }
+ ],
+ "signature_mechanic": "Game doors in the Electric: win for supplies, lose for hostile manifestations or dangerous teleports; temperature falls as the halls slowly descend.",
+ "verticality": "Only an imperceptible downward slope in the Electric.",
+ "do_not": [
+  "let entities enter game rooms",
+  "treat planet/sky entity as confirmed article fact",
+  "make the Electric steep",
+  "fix game exit chances"
+ ],
+ "content_warnings": [
+  "character death in logs",
+  "profanity",
+  "cosmic horror",
+  "info-hazard framing"
+ ],
+ "source_completeness": "PARTIAL",
+ "conflicts_notes": "Page says entities stop appearing past -27 yet logs report a Hound at -43 (log, testimony). Lasers game exits listed under 'If Won' column table. Last log is hallucination-affected.",
+ "key_quotes": [
+  {
+   "section": "Intro",
+   "quote": "an activity palace that extends for an unknown distance"
+  },
+  {
+   "section": "Waiting Halls",
+   "quote": "anywhere within a 10-metre radius of these windows"
+  },
+  {
+   "section": "The Electric",
+   "quote": "slowly elevates downward"
+  },
+  {
+   "section": "The Electric",
+   "quote": "the level will manifest a hostile entity"
+  },
+  {
+   "section": "Exits",
+   "quote": "staff-only doors within the Waiting halls, these will take you to Level 2"
+  },
+  {
+   "section": "Log 8/2/2021",
+   "quote": "A sphere of blue flesh, containing the planet inside it."
+  }
+ ]
+}

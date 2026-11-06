@@ -1,0 +1,65 @@
+{
+ "stable_id": "L096",
+ "level_id": "96",
+ "title": "Solace",
+ "survival_class": "not stated",
+ "physical_identity": "A quiet house overlooking vast mountain ranges, with carpet, porcelain pitchers, crumbling-painted doorways, etched windows and dust that only asks to be swept; framed as a refuge from war.",
+ "scale_topology": "One house; extent beyond it not stated.",
+ "anomalies": [
+  "a refuge free of war inside a reality described as perverted",
+  "silence and stillness that do not remember fear"
+ ],
+ "lighting_sound": "Silence and stillness; lighting not stated.",
+ "entities": [],
+ "entity_policy": "NO ENTITY PER SOURCE",
+ "hazards": [
+  "none stated"
+ ],
+ "items_communities": [
+  "porcelain pitchers",
+  "carpet",
+  "etched windows",
+  "dust to sweep"
+ ],
+ "entrances": [],
+ "exits": [],
+ "signature_mechanic": "A small silent memorial house with a mountain view where the dust asks only to be swept; atmosphere not conflict.",
+ "verticality": "None stated.",
+ "do_not": [
+  "add entities or soldiers",
+  "invent entrances or exits",
+  "gamify grief",
+  "add jokes",
+  "depict war inside the house"
+ ],
+ "content_warnings": [
+  "war, shrapnel, explosions",
+  "child death and grief",
+  "religious conflict",
+  "racism mention"
+ ],
+ "source_completeness": "UNUSUAL_FORMAT",
+ "conflicts_notes": "Bilingual English/Arabic prose; Arabic is stated to be a direct translation. Author's note says it draws on the author's own experience. No structural sections or exit data.",
+ "key_quotes": [
+  {
+   "section": "Info",
+   "quote": "it is a direct translation of the English text above it"
+  },
+  {
+   "section": "Body",
+   "quote": "Stay here a while, without having to worry about anything."
+  },
+  {
+   "section": "Body",
+   "quote": "This is a house. It overlooks the vast ranges of mountains."
+  },
+  {
+   "section": "Body",
+   "quote": "it only asks to be swept"
+  },
+  {
+   "section": "Body",
+   "quote": "You will not see home again."
+  }
+ ]
+}

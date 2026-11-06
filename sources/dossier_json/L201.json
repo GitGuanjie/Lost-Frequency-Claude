@@ -1,0 +1,287 @@
+{
+ "stable_id": "L201",
+ "level_id": "201",
+ "title": "A E S T H E T I C",
+ "survival_class": "not stated",
+ "physical_identity": "Vaporwave-styled giant desert of yellow and violet sand with purple marble ruins, a walkable intangible web-like sea on one side and a neon night city on the other, under a striped orange sun and gridded sky.",
+ "scale_topology": "Desert ~10,000,000 km2 enclosed by mountains; ocean at north warm edge, city at south cold edge; sea 500 m deep with Digital Trenches.",
+ "anomalies": [
+  "nearly intangible water that can be breathed",
+  "VHS Effect on recordings",
+  "Tune-Out turning wanderers into Static Ghosts",
+  "per-wanderer background music",
+  "no working compasses",
+  "TV and hyperlink portals"
+ ],
+ "lighting_sound": "Sun stuck at sunset over sea with sky grid; constant night in the city; unknown-source lounge/smooth-jazz music that differs per wanderer.",
+ "entities": [
+  {
+   "name": "Static Ghosts",
+   "status": "CONFIRMED",
+   "behavior": "Harmless static-covered former wanderers; ignore others"
+  },
+  {
+   "name": "Binary Fish",
+   "status": "CONFIRMED",
+   "behavior": "Binary-code fish; bites dematerialise prey"
+  },
+  {
+   "name": "Light Traffic",
+   "status": "CONFIRMED",
+   "behavior": "Red car-light currents; deadly if run over"
+  },
+  {
+   "name": "Windows",
+   "status": "CONFIRMED",
+   "behavior": "Some hotel windows are the entity"
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Static Ghosts, Binary Fish, Light Traffic, Windows; Partygoers stated absent",
+ "hazards": [
+  "Tune-Out",
+  "Binary Fish bites",
+  "Light Traffic",
+  "Windows in hotels",
+  "broken links to the Null",
+  "ball pit trap (garbled text)"
+ ],
+ "items_communities": [
+  "Mach+ VHS tape",
+  "abandoned M.E.G. Research Team Base Zeta with Almond Water, Firesalt and Level Keys",
+  "arcade tokens, vending machines",
+  "free hotel shop items"
+ ],
+ "entrances": [
+  {
+   "from": "Levels 0, 1, 4, 11",
+   "from_id": "0",
+   "slug": "/level-0",
+   "method": "Mach+ VHS tape in player connected to a TV, noclip into the TV",
+   "trigger_type": "item",
+   "conditions": "tape found in many levels; tape disappears after use",
+   "confidence": "CONFIRMED",
+   "quote": "This tape can be found in many levels, especially in Level 0"
+  },
+  {
+   "from": "Level 25",
+   "from_id": "25",
+   "slug": "/level-25",
+   "method": "Arcade machine",
+   "trigger_type": "interact",
+   "conditions": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "You can also enter through an arcade machine on Level 25"
+  },
+  {
+   "from": "Level 18",
+   "from_id": "18",
+   "slug": "/level-18",
+   "method": "Old video camera materialises; view its only video or photo",
+   "trigger_type": "interact",
+   "conditions": "wanderer witnesses the VHS Effect",
+   "confidence": "CONDITIONAL",
+   "quote": "If a Wanderer is able to witness the VHS Effect"
+  },
+  {
+   "from": "Level 33",
+   "from_id": "33",
+   "slug": "/level-33",
+   "method": "Electronics store computer, noclip into it",
+   "trigger_type": "noclip",
+   "conditions": "may instead lead to a Negative Level",
+   "confidence": "CONDITIONAL",
+   "quote": "sometimes this may lead you into a Negative Level"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Any level shown on a city TV",
+   "to_id": null,
+   "slug": null,
+   "method": "Turn on a TV, choose channel, noclip into it",
+   "trigger_type": "noclip",
+   "conditions": "channel showings differ between TVs",
+   "risk": "static distortion",
+   "confidence": "CONFIRMED",
+   "quote": "No-clipping into these TVs will always lead into the level they're currently displaying"
+  },
+  {
+   "to": "The Null",
+   "to_id": null,
+   "slug": null,
+   "method": "No-signal TV channel or broken Trench link",
+   "trigger_type": "noclip",
+   "conditions": "blank channel or broken link",
+   "risk": "white void with 404 chants",
+   "confidence": "DANGEROUS",
+   "quote": "no-clipping into a channel with no signal will lead into the Null"
+  },
+  {
+   "to": "Level 1",
+   "to_id": "1",
+   "slug": "/level-1",
+   "method": "Safe Trench hyperlink",
+   "trigger_type": "interact",
+   "conditions": "listed as safe",
+   "risk": "low",
+   "confidence": "CONFIRMED",
+   "quote": "touching said hyperlink will usually transport its user"
+  },
+  {
+   "to": "Level 3",
+   "to_id": "3",
+   "slug": "/level-3",
+   "method": "Safe Trench hyperlink",
+   "trigger_type": "interact",
+   "conditions": "listed as safe",
+   "risk": "low",
+   "confidence": "CONFIRMED",
+   "quote": "touching said hyperlink will usually transport its user"
+  },
+  {
+   "to": "Level 4",
+   "to_id": "4",
+   "slug": "/level-4",
+   "method": "Safe Trench hyperlink",
+   "trigger_type": "interact",
+   "conditions": "listed as safe",
+   "risk": "low",
+   "confidence": "CONFIRMED",
+   "quote": "touching said hyperlink will usually transport its user"
+  },
+  {
+   "to": "Level 5",
+   "to_id": "5",
+   "slug": "/level-5",
+   "method": "Safe Trench hyperlink",
+   "trigger_type": "interact",
+   "conditions": "listed as safe",
+   "risk": "low",
+   "confidence": "CONFIRMED",
+   "quote": "touching said hyperlink will usually transport its user"
+  },
+  {
+   "to": "Level 7",
+   "to_id": "7",
+   "slug": "/level-7",
+   "method": "Safe Trench hyperlink",
+   "trigger_type": "interact",
+   "conditions": "listed as safe",
+   "risk": "low",
+   "confidence": "CONFIRMED",
+   "quote": "touching said hyperlink will usually transport its user"
+  },
+  {
+   "to": "Level 25",
+   "to_id": "25",
+   "slug": "/level-25",
+   "method": "Safe Trench hyperlink or arcade cabinet noclip",
+   "trigger_type": "interact",
+   "conditions": "listed as safe; cabinet \"may\"",
+   "risk": "low",
+   "confidence": "CONFIRMED",
+   "quote": "No-clipping into an arcade cabinet may also lead to either Level 25 or Level 40."
+  },
+  {
+   "to": "Level 31",
+   "to_id": "31",
+   "slug": "/level-31",
+   "method": "Safe Trench hyperlink",
+   "trigger_type": "interact",
+   "conditions": "listed as safe",
+   "risk": "low",
+   "confidence": "CONFIRMED",
+   "quote": "touching said hyperlink will usually transport its user"
+  },
+  {
+   "to": "Level 87",
+   "to_id": "87",
+   "slug": "/level-87",
+   "method": "Safe Trench hyperlink",
+   "trigger_type": "interact",
+   "conditions": "listed as safe",
+   "risk": "low",
+   "confidence": "CONFIRMED",
+   "quote": "touching said hyperlink will usually transport its user"
+  },
+  {
+   "to": "Level 40",
+   "to_id": "40",
+   "slug": "/level-40",
+   "method": "Noclip into an arcade cabinet",
+   "trigger_type": "noclip",
+   "conditions": "may",
+   "risk": "unknown",
+   "confidence": "CONDITIONAL",
+   "quote": "No-clipping into an arcade cabinet may also lead to either Level 25 or Level 40."
+  },
+  {
+   "to": "Broken-link levels 0, 2, 6, 8, 17, 58 (lead to the Null)",
+   "to_id": null,
+   "slug": null,
+   "method": "Broken Trench hyperlinks",
+   "trigger_type": "interact",
+   "conditions": "listed as broken",
+   "risk": "Null void",
+   "confidence": "DANGEROUS",
+   "quote": "these links will lead to what is called the Null"
+  },
+  {
+   "to": "A Negative Level",
+   "to_id": null,
+   "slug": null,
+   "method": "Noclip anywhere else",
+   "trigger_type": "noclip",
+   "conditions": "may",
+   "risk": "unknown",
+   "confidence": "CONDITIONAL",
+   "quote": "No-clipping anywhere else may lead you to a Negative Level."
+  }
+ ],
+ "signature_mechanic": "Calming per-player music causes Tune-Out into a Static Ghost unless interrupted; portals are TVs and web hyperlinks with a Null for dead links.",
+ "verticality": "Neon City towers and 2-storey malls; 500 m deep sea with trenches; mountains as walls.",
+ "do_not": [
+  "make Static Ghosts hostile",
+  "allow swimming",
+  "add Partygoers",
+  "make broken links work",
+  "make compass work"
+ ],
+ "content_warnings": [
+  "loss of self",
+  "digital dematerialisation",
+  "garbled ball-pit trap text"
+ ],
+ "source_completeness": "PARTIAL",
+ "conflicts_notes": "Outdated banner; class placeholders; footnotes 1 and 2 and ball-pit sentence garbled. Water cannot be swum in yet one can walk and breathe in it. Page says 202nd level.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "fragmented in straight, horizontal lines"
+  },
+  {
+   "section": "Description",
+   "quote": "compasses are completely nonfunctional"
+  },
+  {
+   "section": "Sunset Coast",
+   "quote": "it's also possible to breathe underwater"
+  },
+  {
+   "section": "The Web Sea",
+   "quote": "touching said hyperlink will usually transport its user"
+  },
+  {
+   "section": "Neon City",
+   "quote": "Being ran over by the Light Traffic can be deadly"
+  },
+  {
+   "section": "The Tune-Out",
+   "quote": "permanently become a Static Ghost"
+  },
+  {
+   "section": "Exits",
+   "quote": "no-clipping into a channel with no signal will lead into the Null"
+  }
+ ]
+}

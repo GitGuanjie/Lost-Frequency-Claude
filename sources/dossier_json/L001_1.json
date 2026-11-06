@@ -1,0 +1,42 @@
+{
+ "stable_id": "L001_1", "level_id": "1.1", "title": "Level 1.1 - \"Corrupted Corridor\"",
+ "survival_class": "Varied Safety . Unsecured . Varied Entity Count .",
+ "physical_identity": "A long straight narrow corridor inside Level 1: white-painted cinder block walls, blue tile floor, exposed pipes and ducts, crates of supplies. Degrades through five sectors from stable to glitched.",
+ "scale_topology": "Single corridor, unknown length; Sector 1 ~10-15 mi, Sector 2 est. 5-50 mi; four confirmed sectors plus unconfirmed Sector 5; indoor.",
+ "anomalies": ["Sector 2 slanted floors, colour shifts, repeating hallway sections", "Wall noclip into Level 1 in Sectors 2-3", "Sector 3 unsourced patches of bright light", "Sector 4 undulation, no collision, void below", "Unreadable markings in Sector 2", "Supplies vanish from Outpost 3 shelf"],
+ "lighting_sound": "Fluorescent hum in Sector 1; Sector 3 mostly dark regardless of lights or flashlights, random bright patches; Outpost 2 lights on 16 h / off 8 h timer.",
+ "entities": [
+  {"name": "Smilers", "status": "CONFIRMED", "behavior": "Occasional in Sector 2, common in Sector 3"},
+  {"name": "Hounds", "status": "CONFIRMED", "behavior": "Occasionally appear in Sector 2"},
+  {"name": "Skin-Stealers", "status": "CONFIRMED", "behavior": "Occasional in Sector 2; mutated in Sector 4"},
+  {"name": "Sector 4 floating glitched entities", "status": "CONFIRMED", "behavior": "Float freely, mutated; survivors say they hovered without attacking (TESTIMONY)"},
+  {"name": "Deathmoth-winged Skin-Stealer", "status": "REPORTED", "behavior": "Single explorer's description of mutation"}
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Smilers, Hounds, Skin-Stealers (Sector 2-3), floating glitched mutated entities (Sector 4); none documented in Sector 1",
+ "hazards": ["Darkness in Sector 3", "Sector 4 vertigo, nausea, no collision, void", "Outpost 4 ambush by entities", "Hostile Tunnel Gang (rarely dangerous)", "Supply depletion with distance"],
+ "items_communities": ["Supply crates", "M.E.G. Team Corridor", "Tunnel Gang (leader Blade, 6 members) at Jakob's Hut", "Outposts 1-4, Outpost 5 abandoned"],
+ "entrances": [
+  {"from": "Level 1", "from_id": "1", "slug": "/level-1", "method": "Travel due south of M.E.G. Base Alpha to signed entrance", "trigger_type": "walk_in", "conditions": "Only stated access", "confidence": "CONFIRMED", "quote": "traveling due south of M.E.G. Base Alpha in Level 1"}
+ ],
+ "exits": [
+  {"to": "Level 1", "to_id": "1", "slug": "/level-1", "method": "Backtrack to entrance", "trigger_type": "walk_in", "conditions": "Return along corridor", "risk": "Grows with depth", "confidence": "CONFIRMED", "quote": "escaped by backtracking through the corridor and exiting through the entrance"},
+  {"to": "Level 1 (random area)", "to_id": "1", "slug": "/level-1", "method": "Noclip through wall in Sectors 2-3", "trigger_type": "noclip", "conditions": "Unpredictable, emergency only", "risk": "Unpredictable landing", "confidence": "CONFIRMED", "quote": "Noclipping can also land explorers in a random part of Level 1"},
+  {"to": "Endless void", "to_id": null, "slug": null, "method": "Noclip in Sector 4", "trigger_type": "noclip", "conditions": "Does not return to Level 1", "risk": "Presumed lethal", "confidence": "DANGEROUS+ONE-WAY", "quote": "Noclipping through the level drops one into a presumably endless void."},
+  {"to": "Sector 5 / further level", "to_id": null, "slug": null, "method": "Approach beacon of light", "trigger_type": "unknown", "conditions": "Unconfirmed; testimony only", "risk": "Extreme", "confidence": "RUMORED", "quote": "A doorway out…"}
+ ],
+ "signature_mechanic": "One corridor whose stability degrades sector by sector: supplies thin out, darkness and slope grow, Sector 4 loses collision. Noclip becomes more likely deeper but Sector 4 noclip is void-only.",
+ "verticality": "Slopes and drops in Sector 2; wobble and void in Sector 4; otherwise flat.",
+ "do_not": ["Make Sector 5 reachable", "Add dangerous entities to Sector 1", "Return Sector 4 noclip to Level 1", "Add exits to other levels", "Let flashlights fix Sector 3 darkness"],
+ "content_warnings": ["Body horror (mutations, inside-out)", "Death of sibling", "Strong language in transcript"],
+ "source_completeness": "COMPLETE",
+ "conflicts_notes": "Page flagged outdated. Link list includes Level 1.2 and Level 0 with no exit statement. Interview mentions Levels 2 and 4 only in anecdote.",
+ "key_quotes": [
+  {"section": "Description", "quote": "cinder blocks painted white, and the floor is blue tile"},
+  {"section": "Sector 1", "quote": "no documented dangerous entities in this sector"},
+  {"section": "Sector 3", "quote": "overhead lighting or flashlights do not appear to change this state"},
+  {"section": "Sector 4", "quote": "Much of this sector has no collision."},
+  {"section": "Sector 4", "quote": "Noclipping through the level drops one into a presumably endless void."},
+  {"section": "Entrances and Exits", "quote": "traveling due south of M.E.G. Base Alpha in Level 1"},
+  {"section": "Entrances and Exits", "quote": "There are no documented ways to access levels other than Level 1."}
+ ]
+}

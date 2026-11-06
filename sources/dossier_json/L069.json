@@ -1,0 +1,165 @@
+{
+ "stable_id": "L069",
+ "level_id": "69",
+ "title": "The Road Trip of Affliction",
+ "survival_class": "not stated",
+ "physical_identity": "Deserted infinite highway between tall weathered concrete walls in thick fog and darkness; players wake in a car, the only safe place.",
+ "scale_topology": "Infinite; outdoor road with side walls; flat; no vertical structure.",
+ "anomalies": [
+  "fuel-free cars",
+  "hidden Fragment of Destivinatia under every car repels fog and entities",
+  "shared Whispers",
+  "tunnel exit lasts 17 hours"
+ ],
+ "lighting_sound": "Only self-produced light; fog; sound not stated.",
+ "entities": [
+  {
+   "name": "Smilers",
+   "status": "CONFIRMED",
+   "behavior": "extremely rare, more hostile"
+  },
+  {
+   "name": "Wretches",
+   "status": "CONFIRMED",
+   "behavior": "extremely rare, may break into parked cars"
+  },
+  {
+   "name": "The Beings From Above",
+   "status": "CONFIRMED",
+   "behavior": "leg-like appendages descend when you leave the car; unkillable"
+  },
+  {
+   "name": "The Whispers",
+   "status": "REPORTED",
+   "behavior": "shared intrusive thoughts, not confirmed entity"
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Smilers, Wretches, Beings From Above, The Whispers",
+ "hazards": [
+  "leaving the car",
+  "crashing",
+  "starvation",
+  "car breakdown or fire after tunnel",
+  "parking too long"
+ ],
+ "items_communities": [
+  "no bases or communities",
+  "Fragment Of Destivinatia (Object 69)",
+  "cars"
+ ],
+ "entrances": [
+  {
+   "from": "Level 3",
+   "from_id": "3",
+   "slug": "/level-3",
+   "method": "Enter odd car in octagonal room; vanish 7 s after unconsciousness",
+   "trigger_type": "vehicle",
+   "conditions": "rare unmarked door",
+   "confidence": "CONFIRMED",
+   "quote": "the car and anyone inside will disappear from Level 3 without a trace"
+  },
+  {
+   "from": "Level 6, 8, 23, 33",
+   "from_id": "6",
+   "slug": "/level-6",
+   "method": "Fall through the floor",
+   "trigger_type": "fall",
+   "conditions": "accidental; Level 33 extreme corrosion 500+ miles",
+   "confidence": "CONFIRMED",
+   "quote": "fall through the floor as if it were not there"
+  },
+  {
+   "from": "Almond Water",
+   "from_id": null,
+   "slug": null,
+   "method": "Vanishing after drinking",
+   "trigger_type": "item",
+   "conditions": "under investigation",
+   "confidence": "RUMORED",
+   "quote": "6 reports of people vanishing to Level 69 immediately after drinking Almond Water"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 11",
+   "to_id": "11",
+   "slug": "/level-11",
+   "method": "Perpendicular tunnel, drive about 17 hours, then walk",
+   "trigger_type": "vehicle",
+   "conditions": "find tunnel; car fails at 17 h; do not re-enter",
+   "risk": "car fire if driven when dead",
+   "confidence": "CONFIRMED+ONE-WAY",
+   "quote": "This tunnel leads to Level 11."
+  },
+  {
+   "to": "Level 22",
+   "to_id": "22",
+   "slug": "/level-22",
+   "method": "No-clip through roadside wall",
+   "trigger_type": "noclip",
+   "conditions": "hard to find; car dies",
+   "risk": "time cost",
+   "confidence": "CONFIRMED",
+   "quote": "you will appear in Level 22 with your car parked in a parking space"
+  },
+  {
+   "to": "Level 4",
+   "to_id": "4",
+   "slug": "/level-4",
+   "method": "No-clip through wall on foot",
+   "trigger_type": "noclip",
+   "conditions": "not in a car",
+   "risk": "unknown",
+   "confidence": "RUMORED",
+   "quote": "it is only a rumor for now"
+  },
+  {
+   "to": "Level 0",
+   "to_id": "0",
+   "slug": "/level-0",
+   "method": "Captured by Being From Above",
+   "trigger_type": "death",
+   "conditions": "unproven claims",
+   "risk": "very high",
+   "confidence": "RUMORED",
+   "quote": "wake up back in Level 0"
+  }
+ ],
+ "signature_mechanic": "The car is a moving safe bubble in fog; leaving it summons the Beings From Above. Long safe driving finds a tunnel exit.",
+ "verticality": "None stated.",
+ "do_not": [
+  "add other vehicles or buildings",
+  "add fuel",
+  "make the Beings killable",
+  "make leaving the car safe",
+  "treat rumored exits as confirmed"
+ ],
+ "content_warnings": [
+  "abduction and impaling by entities",
+  "death by crash"
+ ],
+ "source_completeness": "COMPLETE",
+ "conflicts_notes": "Page creator differs from cite authors (Kaixo). Intro says 'stay in the car or perish' while the body allows leaving near the car.",
+ "key_quotes": [
+  {
+   "section": "Intro",
+   "quote": "A deserted, infinite highway shrouded in thick fog and pitch darkness"
+  },
+  {
+   "section": "Starting Out",
+   "quote": "Cars are the only place you will be free from entities and fog."
+  },
+  {
+   "section": "Starting Out",
+   "quote": "the cars in this level do not require any"
+  },
+  {
+   "section": "Entities",
+   "quote": "many will swiftly and silently descend from the darkness above"
+  },
+  {
+   "section": "Exits",
+   "quote": "you must drive through the tunnel for approximately 17 hours"
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "stable_id": "L009", "level_id": "9", "title": "The Suburbs",
+ "survival_class": "not stated",
+ "physical_identity": "Infinite suburban area at midnight: wet unpainted asphalt streets, stone sidewalks, furnished but unpowered houses, dead trees, mostly dead street lamps, intermittent fog.",
+ "scale_topology": "Infinite flat outdoor suburb; grass fields at walkway edges lead to other levels; house interiors and back yards.",
+ "anomalies": ["houses furnished but no power", "two houses clipped inside each other when travelling far", "fog spawns The Mangled", "some street lamps flicker or power on, source unknown", "walkways to grass fields lead to Level 9.1; off-walkway to Level 10"],
+ "lighting_sound": "Midnight darkness like Level 6 but milder; street lamps usually off; fog. Sound not stated.",
+ "entities": [
+  {"name": "The Mangled", "status": "CONFIRMED", "behavior": "Spawned by the fog"},
+  {"name": "The Neighborhood Watch", "status": "CONFIRMED", "behavior": "Level-specific; named only"},
+  {"name": "The Observer", "status": "CONFIRMED", "behavior": "Level-specific; named only"},
+  {"name": "Deathmoths, Smilers, Skin-Stealers, Jerry, Hounds, Transporters, Death Rats, Warning Kites, Wretches", "status": "CONFIRMED", "behavior": "Listed as able to appear; Wretches 'many'"},
+  {"name": "The Frayed, The Arachnids", "status": "REPORTED", "behavior": "Sightings; wandered in from Level 8"}
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: The Mangled (fog), Neighborhood Watch, Observer, plus listed common entities",
+ "hazards": ["streets are the most dangerous area", "fog spawns The Mangled", "mental effects of arrival reported by testimony"],
+ "items_communities": ["Pockets found in houses", "no groups recorded; settling is very dangerous"],
+ "entrances": [
+  {"from": "Level 8", "from_id": "8", "slug": "/level-8", "method": "Fall through the floor", "trigger_type": "fall", "conditions": "random", "confidence": "CONFIRMED", "quote": "falling through the floor randomly in Level 8 is the main method"},
+  {"from": "Level 34", "from_id": "34", "slug": "/level-34", "method": "Crawl up sewer grate", "trigger_type": "interact", "conditions": "none", "confidence": "CONFIRMED", "quote": "Crawling up the sewer grate in Level 34 will lead to Level 9"},
+  {"from": "Level 92", "from_id": "92", "slug": null, "method": "One of many doors", "trigger_type": "door", "conditions": "doors also lead to other levels", "confidence": "CONDITIONAL", "quote": "One of the many doors inside Level 92 can lead to Level 9"},
+  {"from": "Level 40", "from_id": "40", "slug": "/level-40", "method": "Revolving door", "trigger_type": "door", "conditions": "none", "confidence": "CONFIRMED", "quote": "The revolving door in Level 40 will lead to Level 9"},
+  {"from": "Level 25", "from_id": "25", "slug": "/level-25", "method": "Yellow arcade cabinet", "trigger_type": "interact", "conditions": "yellow cabinet (listed twice)", "confidence": "CONFIRMED", "quote": "The yellow arcade cabinet in Level 25 will lead to this Level"},
+  {"from": "Level 54", "from_id": "54", "slug": "/level-54", "method": "One of the doors", "trigger_type": "door", "conditions": "none", "confidence": "CONFIRMED", "quote": "Entering one of the doors in Level 54 will lead to Level 9"},
+  {"from": "Level 94", "from_id": "94", "slug": "/level-94", "method": "Animated houses", "trigger_type": "door", "conditions": "rare", "confidence": "CONDITIONAL", "quote": "The animated houses of Level 94 can rarely bring you to this Level"},
+  {"from": "Level 87", "from_id": "87", "slug": "/level-87", "method": "Break the window", "trigger_type": "interact", "conditions": "break window", "confidence": "CONFIRMED", "quote": "Break the window in Level 87 to enter Level 9"},
+  {"from": "Level 104", "from_id": "104", "slug": "/level-104", "method": "Backyard (sentence truncated in source)", "trigger_type": "unknown", "conditions": "truncated after 'after exiting the'", "confidence": "UNKNOWN", "quote": "The backyard of Level 104 will lead to Level 9"}
+ ],
+ "exits": [
+  {"to": "Level 11", "to_id": "11", "slug": "/level-11", "method": "Follow arrow street signs 100-200 miles", "trigger_type": "walk_in", "conditions": "only while following signs", "risk": "long walk on dangerous streets", "confidence": "CONFIRMED+CONDITIONAL", "quote": "following the arrow street signs will soon lead to Level 11"},
+  {"to": "Level 9.1", "to_id": "9.1", "slug": "/level-9-1", "method": "Walkway into grass field", "trigger_type": "walk_in", "conditions": "walkway", "risk": "unstated", "confidence": "CONFIRMED", "quote": "Any walkways that lead to grass fields will lead to Level 9.1"},
+  {"to": "Level 10", "to_id": "10", "slug": "/level-10", "method": "Wander off the walkway into fields", "trigger_type": "walk_in", "conditions": "off-walkway", "risk": "unstated", "confidence": "CONFIRMED", "quote": "Wandering off the walkway into the fields will for some reason lead to Level 10"},
+  {"to": "Level 60", "to_id": "60", "slug": "/level-60", "method": "No-clip through street floor", "trigger_type": "noclip", "conditions": "street floor", "risk": "unstated", "confidence": "CONFIRMED", "quote": "Level 60 can be accessed by No-Clipping through the street floor"},
+  {"to": "Level 53", "to_id": "53", "slug": "/level-53", "method": "Enter a house", "trigger_type": "door", "conditions": "random chance", "risk": "unstated", "confidence": "CONDITIONAL", "quote": "Entering a house will have a chance to randomly transport you to Level 53"},
+  {"to": "Level 113", "to_id": "113", "slug": "/level-113", "method": "Follow electric powerlines", "trigger_type": "walk_in", "conditions": "chance", "risk": "unstated", "confidence": "CONDITIONAL", "quote": "Following the electric powerlines has a chance to bring you to Level 113"},
+  {"to": "Level 36", "to_id": "36", "slug": "/level-36", "method": "Enter the airport found while following signs", "trigger_type": "door", "conditions": "airport on sign route", "risk": "unstated", "confidence": "CONFIRMED", "quote": "Enter the airport to be transported to Level 36"},
+  {"to": "Negative Levels (first few)", "to_id": null, "slug": null, "method": "No-clipping", "trigger_type": "noclip", "conditions": "placement ambiguous in source", "risk": "unstated", "confidence": "UNKNOWN", "quote": "No-Clipping will lead to the first few Negative Levels."},
+  {"to": "Level 283 (Tubes)", "to_id": "283", "slug": "/level-283", "method": "Crawl through tube with white glowing windows at a playground", "trigger_type": "interact", "conditions": "playground tube", "risk": "unstated", "confidence": "CONDITIONAL", "quote": "commonly teleport to Level 283 's Tubes"}
+ ],
+ "signature_mechanic": "Endless unpowered midnight suburb; fog spawns The Mangled; houses are furnished but dead; many random-roll exits (house door to 53, powerlines to 113) and sign-following walk to Level 11.",
+ "verticality": "None (flat suburb; houses are ordinary).",
+ "do_not": ["power appliances or lamps", "add a community base", "spawn The Mangled without fog", "treat forum post as rules"],
+ "content_warnings": ["death/pain talk in discovery post"],
+ "source_completeness": "COMPLETE",
+ "conflicts_notes": "Level 25 arcade listed twice; Level 104 entrance sentence truncated; Negative Levels no-clip sentence sits in airport line; Level 92 has no slug in link list.",
+ "key_quotes": [
+  {"section": "Description", "quote": "an infinite suburban area at midnight"},
+  {"section": "Description", "quote": "there is no power source for the lighting systems to function"},
+  {"section": "Description", "quote": "two houses weirdly clipped inside of each other"},
+  {"section": "Description", "quote": "The streets of Level 9 are the most dangerous area of the Level."},
+  {"section": "Description", "quote": "the fog being the spawning mechanism for The Mangled"},
+  {"section": "Bases, Outposts and Communities", "quote": "none have been recorded for this Entry at the moment"},
+  {"section": "Entrances And Exits", "quote": "Wandering off the walkway into the fields will for some reason lead to Level 10"}
+ ]
+}

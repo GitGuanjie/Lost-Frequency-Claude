@@ -1,0 +1,241 @@
+{
+ "stable_id": "L036",
+ "level_id": "36",
+ "title": "Timeless Airport",
+ "survival_class": "SURVIVAL DIFFICULTY CLASS 1 (Exit: 1/5 Easy to Exit; Environment: 2/5 Some Environmental Risk; Entities: 0/5 No Hostile Entities)",
+ "physical_identity": "A timeless infinite airport complex: baggage claim, endless check-in, non-Euclidean concourses, shops, travelators, 26 terminals A-Z with infinite gates.",
+ "scale_topology": "Infinite horizontally in the entry zones; remainder a non-Euclidean maze; only known boundary is the baggage-claim wall.",
+ "anomalies": [
+  "Severe time dilation (1 week = 1 second in Level 11)",
+  "Non-Euclidean concourses",
+  "Meeting Place in 47 positions",
+  "Timekeeping devices freeze",
+  "Sleep impossible",
+  "Light distortion"
+ ],
+ "lighting_sound": "Constant machine hum and metal creaking at baggage claim; PA announcements; flickering light distortion; lounges; Wi-Fi.",
+ "entities": [],
+ "entity_policy": "NO ENTITY PER SOURCE (no hostile entities; none named)",
+ "hazards": [
+  "Blind boarding to dangerous levels",
+  "Psychological strain from time dilation",
+  "Getting lost in non-Euclidean maze",
+  "Malfunctioning travelators"
+ ],
+ "items_communities": [
+  "Almond Water, Lucky O' Milk, ChocoBytes, Babel Balm, Worn Sacks (rare)",
+  "BTA main booth; MEG outpost in Concourse M; B.N.T.G. lounges",
+  "Gate 32 Support Group (~150)"
+ ],
+ "entrances": [
+  {
+   "from": "Level 11",
+   "from_id": "11",
+   "slug": "/level-11",
+   "method": "Follow signs with an airplane symbol; noclip arrival by conveyor belt",
+   "trigger_type": "walk_in",
+   "conditions": "several Level 11 entrances map to carousels #9, #28, #147",
+   "confidence": "CONFIRMED",
+   "quote": "Following signs with an airplane symbol on them in Level 11 , Level 9 and Level 159 ."
+  },
+  {
+   "from": "Level 9",
+   "from_id": "9",
+   "slug": "/level-9",
+   "method": "Follow airplane-symbol signs",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Following signs with an airplane symbol on them in Level 11 , Level 9 and Level 159 ."
+  },
+  {
+   "from": "Level 159",
+   "from_id": "159",
+   "slug": "/level-159",
+   "method": "Follow airplane-symbol signs",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Level 159"
+  },
+  {
+   "from": "Level 11.2",
+   "from_id": "11.2",
+   "slug": "/level-11-2",
+   "method": "Apartment doors",
+   "trigger_type": "door",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Apartment doors in Level 11.2 ."
+  },
+  {
+   "from": "The Train Station (Level 185)",
+   "from_id": "185",
+   "slug": "/level-185",
+   "method": "Transport-related levels",
+   "trigger_type": "unknown",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Transport-related levels such as the Train Station , the Metro , the Backway ."
+  },
+  {
+   "from": "The Metro (Level 903)",
+   "from_id": "903",
+   "slug": "/level-903",
+   "method": "Transport-related levels",
+   "trigger_type": "unknown",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "the Metro"
+  },
+  {
+   "from": "The Backway",
+   "from_id": null,
+   "slug": null,
+   "method": "Transport-related levels (no slug in link list)",
+   "trigger_type": "unknown",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "the Backway"
+  },
+  {
+   "from": "Level 864",
+   "from_id": "864",
+   "slug": "/level-864",
+   "method": "Jump off vehicle when passing airport runway fields",
+   "trigger_type": "vehicle",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Jumping off your vehicle in Level 864 when it passes by airport runway fields."
+  },
+  {
+   "from": "Level 902",
+   "from_id": "902",
+   "slug": "/level-902",
+   "method": "Follow a piece of luggage",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Following a piece of luggage in Level 902 ."
+  },
+  {
+   "from": "Level 103",
+   "from_id": "103",
+   "slug": "/level-103",
+   "method": "Climb into a jet",
+   "trigger_type": "interact",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Climbing into a jet in Level 103 ."
+  },
+  {
+   "from": "Level 20",
+   "from_id": "20",
+   "slug": "/level-20",
+   "method": "Exit door in the electric area",
+   "trigger_type": "door",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "An exit door in Level 20 's electric area."
+  }
+ ],
+ "exits": [
+  {
+   "to": "Sublevel 36.1 (the Airplane)",
+   "to_id": "36.1",
+   "slug": "/level-36-1",
+   "method": "Walk through a boarding gate door (flight countdown 1000..0)",
+   "trigger_type": "door",
+   "conditions": "flight must be boarding; closes at 0",
+   "risk": "Unknown destination level afterwards",
+   "confidence": "CONFIRMED",
+   "quote": "Every gate door leads to an instance of Sublevel 36.1 ."
+  },
+  {
+   "to": "Level 828 (via flight 8250XTG8PMI)",
+   "to_id": "828",
+   "slug": "/level-828",
+   "method": "Board gate H85 flight (catalogue)",
+   "trigger_type": "door",
+   "conditions": "flight dependent; stale by reading",
+   "risk": "",
+   "confidence": "CONDITIONAL",
+   "quote": "Level 828"
+  },
+  {
+   "to": "Level 750 (via flight 2953YFH6NEL)",
+   "to_id": "750",
+   "slug": "/level-750",
+   "method": "Board gate Y436 flight (not recommended)",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "Not recommended by BTA",
+   "confidence": "CONDITIONAL",
+   "quote": "Not recommended"
+  },
+  {
+   "to": "Level 186 (via flight 1784XBA8JLP)",
+   "to_id": "186",
+   "slug": "/level-186",
+   "method": "Gate C32 flight; Support Group waiting",
+   "trigger_type": "door",
+   "conditions": "countdown 94612753",
+   "risk": "",
+   "confidence": "CONDITIONAL",
+   "quote": "Level 186"
+  },
+  {
+   "to": "Level 36 itself (gate P252)",
+   "to_id": null,
+   "slug": null,
+   "method": "Catalogue shows a flight labelled Level 36",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "Useless per BTA",
+   "confidence": "UNKNOWN",
+   "quote": "Useless"
+  }
+ ],
+ "signature_mechanic": "A timeless hub where flight countdowns, not clocks, govern time and a flight's gate door is the only exit, to Sublevel 36.1.",
+ "verticality": "Not stated.",
+ "do_not": [
+  "Do not add hostile entities: class says Entities 0/5.",
+  "Do not add a clock, day/night or sleep.",
+  "Do not add a real 'exit' sign exit; page says signs are untrustworthy.",
+  "Do not make Level 36 itself an exit destination.",
+  "Do not treat flight outcomes as fixed: most are unknown.",
+  "Do not give a real elapsed-time scale; use unitless countdown."
+ ],
+ "content_warnings": [
+  "psychological strain from time dilation (derealization, anxiety)",
+  "brief mention of a family separated from husband"
+ ],
+ "source_completeness": "UNUSUAL_FORMAT",
+ "conflicts_notes": "Footnotes (numbered markers) are not captured, so details like destination handling are missing. Catalogue gate P252 labelled 'Level 36'. Link list mentions Levels 35 and 37 and Phenomenon 32 not explained in body text.",
+ "key_quotes": [
+  {
+   "section": "Class",
+   "quote": "Entities: 0/5 No Hostile Entities"
+  },
+  {
+   "section": "Intro",
+   "quote": "the biggest safe hub where every level is only one flight away!"
+  },
+  {
+   "section": "Baggage claim",
+   "quote": "they import every being and object that no-clips into Level 36"
+  },
+  {
+   "section": "Check-in",
+   "quote": "the indicated gate acts as a threshold to the intermediary Sublevel 36.1"
+  },
+  {
+   "section": "Time Dilation",
+   "quote": "spending one week here is equivalent to one second passing in Level 11"
+  },
+  {
+   "section": "Exit",
+   "quote": "Every gate door leads to an instance of Sublevel 36.1 ."
+  }
+ ]
+}

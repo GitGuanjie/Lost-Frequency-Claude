@@ -1,0 +1,85 @@
+{
+ "stable_id": "L090",
+ "level_id": "90",
+ "title": "Newly Renovated Home",
+ "survival_class": "not stated",
+ "physical_identity": "A large newly renovated house, two floors plus attic, two bedrooms, two bathrooms, backyard with an old oak tree, described in a real-estate sales voice.",
+ "scale_topology": "A single house with backyard; indoor/outdoor; two floors and an attic.",
+ "anomalies": [
+  "former torture labyrinth now renovated (claim)",
+  "entered by thinking of 'home'"
+ ],
+ "lighting_sound": "Not stated; only a broken air conditioner mentioned.",
+ "entities": [
+  {
+   "name": "Death Rats",
+   "status": "RUMORED",
+   "behavior": "past infestation, claimed exterminated"
+  }
+ ],
+ "entity_policy": "NO ENTITY PER SOURCE (only claimed-exterminated Death Rats mentioned)",
+ "hazards": [
+  "unreliable renovation claims",
+  "broken air conditioner"
+ ],
+ "items_communities": [
+  "no residents yet; anyone who means well may stay",
+  "air conditioner (broken)"
+ ],
+ "entrances": [
+  {
+   "from": "unspecified",
+   "from_id": null,
+   "slug": null,
+   "method": "Think about 'home'",
+   "trigger_type": "condition",
+   "conditions": "no mechanism given",
+   "confidence": "UNKNOWN",
+   "quote": "think about 'home'. Some cheesy stuff like that"
+  }
+ ],
+ "exits": [
+  {
+   "to": "unspecified",
+   "to_id": null,
+   "slug": null,
+   "method": "Exit near the old oak tree in the backyard",
+   "trigger_type": "walk_in",
+   "conditions": "can return any time",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "There's an exit near the old oak tree in the backyard."
+  }
+ ],
+ "signature_mechanic": "A cheerfully renovated house whose sales-pitch narration implies a worse history; the only exit is near the backyard oak.",
+ "verticality": "House stairs: two floors plus attic.",
+ "do_not": [
+  "trust the sales voice and spawn Death Rats or a labyrinth",
+  "add residents",
+  "invent Level 89/91 exits",
+  "make the house vast"
+ ],
+ "content_warnings": [
+  "none explicit; implied torture labyrinth and infestation"
+ ],
+ "source_completeness": "UNUSUAL_FORMAT",
+ "conflicts_notes": "Unreliable, upbeat narrator; most statements are claims. Level slug appears with empty link text; /level-89 and /level-91 are only neighbour links.",
+ "key_quotes": [
+  {
+   "section": "Intro",
+   "quote": "It's a newly renovated house— we made it just for you!"
+  },
+  {
+   "section": "Description",
+   "quote": "two floors, a pretty big attic, two bedrooms, two bathrooms"
+  },
+  {
+   "section": "Description",
+   "quote": "the ol' torture labyrinth it used to be"
+  },
+  {
+   "section": "Exits",
+   "quote": "There's an exit near the old oak tree in the backyard."
+  }
+ ]
+}

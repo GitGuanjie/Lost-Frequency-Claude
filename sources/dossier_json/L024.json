@@ -1,0 +1,129 @@
+{
+ "stable_id": "L024",
+ "level_id": "24",
+ "title": "The Moon",
+ "survival_class": "not stated",
+ "physical_identity": "A plastic scale model of the Frontrooms solar system; only the Moon is accessible, covered in ~30 m of grey lead paint, under standard gravity.",
+ "scale_topology": "1:1 solar system model, Moon surface ~38 million km2; outdoors, with B.N.T.G. mines at PlasticWorks and Bluehole; surroundings possibly a Victorian-style study.",
+ "anomalies": [
+  "Standard gravity on the Moon",
+  "Weather caused by Beauford",
+  "Giant dust mites",
+  "Possible size transfiguration"
+ ],
+ "lighting_sound": "Not stated (no ambient light/sound description); Beauford vocalisations are heard and felt.",
+ "entities": [
+  {
+   "name": "Moon Mites",
+   "status": "CONFIRMED",
+   "behavior": "Giant harmless dust mites after sandstorms; avoid humans; burrow and lay 25-50 eggs; sometimes eaten by staff."
+  },
+  {
+   "name": "Beauford",
+   "status": "CONFIRMED",
+   "behavior": "Astronomically large humanoid, approaches the model and triggers mist or sandstorm; vocalisations felt."
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Moon Mites, Beauford",
+ "hazards": [
+  "Toxic lemon-scented mist",
+  "Lead-laden sandstorm",
+  "Lead paint and fumes",
+  "Beauford-induced moonquakes"
+ ],
+ "items_communities": [
+  "B.N.T.G. PlasticWorks",
+  "Bluehole ruins",
+  "Hot-Shovel",
+  "Plastic for weapons and electronics"
+ ],
+ "entrances": [
+  {
+   "from": "Level 57",
+   "from_id": "57",
+   "slug": "/level-57",
+   "method": "painting of the Moon",
+   "trigger_type": "interact",
+   "conditions": "the only consistent entrance not controlled by the B.N.T.G.",
+   "confidence": "CONFIRMED",
+   "quote": "through a painting of the Moon found within Level 57"
+  },
+  {
+   "from": "Any level with a full moon (theory)",
+   "from_id": null,
+   "slug": null,
+   "method": "noclip upward toward any full moon",
+   "trigger_type": "noclip",
+   "conditions": "theorised; attempts had varied results",
+   "confidence": "RUMORED",
+   "quote": "noclipping directly upwards towards any full moon can lead to Level 24"
+  },
+  {
+   "from": "B.N.T.G. entrances",
+   "from_id": null,
+   "slug": "/the-b-n-t-g",
+   "method": "closely guarded entrances known only to PlasticWorks affiliates",
+   "trigger_type": "unknown",
+   "conditions": "affiliates of PlasticWorks only; locations not stated",
+   "confidence": "CONDITIONAL",
+   "quote": "closely guarded secret"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Not stated (destination unnamed)",
+   "to_id": null,
+   "slug": null,
+   "method": "follow the road to the PlasticWorks main gate; miners show the way out",
+   "trigger_type": "walk_in",
+   "conditions": "through B.N.T.G. PlasticWorks; destination not stated",
+   "risk": "weather, entity",
+   "confidence": "CONFIRMED",
+   "quote": "just follow the road to the main gate, the miners will show you the way out"
+  }
+ ],
+ "signature_mechanic": "Weather from Beauford: approach produces toxic mist or dust sandstorm; the only known way out is PlasticWorks.",
+ "verticality": "Mine columns and shafts at Bluehole/PlasticWorks; depth not stated; surface otherwise unspecified.",
+ "do_not": [
+  "Do not use low gravity; the page states standard gravity.",
+  "Do not make Beauford a hostile chaser or boss.",
+  "Do not invent other planets as accessible; only the Moon is accessible.",
+  "Do not name the exit destination; the page does not.",
+  "Do not show the Victorian-study surroundings; location and nature remain unknown.",
+  "Do not present B.N.T.G. logs as article-level fact (TESTIMONY).",
+  "Do not add Level 23 or 25 as edges; they appear only in the link list."
+ ],
+ "content_warnings": [
+  "Industrial mass death and burns",
+  "Bodies fused to walls",
+  "Crude language in logs"
+ ],
+ "source_completeness": "COMPLETE",
+ "conflicts_notes": "Footnote texts are not in the snapshot. Link list includes Levels 23 and 25 but body does not mention them. Class box is unrendered placeholders.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "Level 24 is a plastic scale model of the Frontrooms solar system"
+  },
+  {
+   "section": "Description",
+   "quote": "Despite appearing like the Moon, observers experience standard gravity"
+  },
+  {
+   "section": "Entities / Beauford",
+   "quote": "Beauford appears to be an incomprehensibly large humanoid entity."
+  },
+  {
+   "section": "Entities / Moon Mites",
+   "quote": "completely harmless and actively avoid areas with human presence"
+  },
+  {
+   "section": "Entrances and Exits",
+   "quote": "The sole known method of leaving Level 24 is through B.N.T.G. PlasticWorks"
+  },
+  {
+   "section": "Plastic Mines",
+   "quote": "the death of all 24 members of Mining Crew 1"
+  }
+ ]
+}

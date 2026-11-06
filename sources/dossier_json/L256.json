@@ -1,0 +1,78 @@
+{
+ "stable_id": "L256",
+ "level_id": "256",
+ "title": "Demoscene",
+ "survival_class": "not stated (narrator writes 'I gave it class 5')",
+ "physical_identity": "Abandoned technological demonstration and exhibition center with modern interiors, neon blue light, locked doors, game-branded terminals and large windows onto featureless darkness.",
+ "scale_topology": "Entirely indoors; extent not stated; no vertical structure stated.",
+ "anomalies": [
+  "terminals show unrelated content, including distorted views of the viewer",
+  "kicked door reveals wall",
+  "clocks differ when unobserved",
+  "terminals power on by themselves",
+  "nothing moves except screens"
+ ],
+ "lighting_sound": "Neon blue lighting, very dark; loud distorted tones from terminals; otherwise still air.",
+ "entities": [],
+ "entity_policy": "NO ENTITY PER SOURCE",
+ "hazards": [
+  "psychological deterioration",
+  "loud tones",
+  "being trapped with no exit"
+ ],
+ "items_communities": [
+  "no communities",
+  "narrator has water and food",
+  "terminals"
+ ],
+ "entrances": [
+  {
+   "from": "Level 4",
+   "from_id": "4",
+   "slug": "/level-4",
+   "method": "Clipping through Level 4",
+   "trigger_type": "noclip",
+   "conditions": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "Level 256 can be entered by clipping through Level 4."
+  }
+ ],
+ "exits": [],
+ "signature_mechanic": "A silent, still exhibition center of locked doors and haunted terminals; the only change is on the screens, narrated by a deteriorating volunteer.",
+ "verticality": "None stated.",
+ "do_not": [
+  "add monsters or treat the sky as entity",
+  "add survivors",
+  "invent an exit",
+  "make doors open"
+ ],
+ "content_warnings": [
+  "psychological horror",
+  "mental breakdown",
+  "profanity"
+ ],
+ "source_completeness": "UNUSUAL_FORMAT",
+ "conflicts_notes": "Page presents three drafts with different wording; narrator is unreliable; 'Level n' template text in draft 1. Final upload fails.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "abandoned technological demonstration and exhibition center"
+  },
+  {
+   "section": "Description",
+   "quote": "All doors are locked."
+  },
+  {
+   "section": "Entrances",
+   "quote": "Level 256 can be entered by clipping through Level 4."
+  },
+  {
+   "section": "Draft 3",
+   "quote": "nothing ever moves here but the fucking screens"
+  },
+  {
+   "section": "End",
+   "quote": "ERROR: Authentication failed. User isle4 does not exist."
+  }
+ ]
+}

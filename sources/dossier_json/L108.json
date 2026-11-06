@@ -1,0 +1,152 @@
+{
+ "stable_id": "L108",
+ "level_id": "108",
+ "title": "Fertile Grounds",
+ "survival_class": "SURVIVAL CLASS 4",
+ "physical_identity": "Vast mutated primeval forest around a central crater emitting mutagenic mist, ringed by the Hauntwood Expanse of spatially superposed dead trees; safe base New Hereth.",
+ "scale_topology": "Craterwood about 300,000 sq km, outdoor forest with fissures to about 300 m and trees to about 200 m; Hauntwood outer ring.",
+ "anomalies": [
+  "mutagenic mist from crater",
+  "Hauntwood layout set by observation",
+  "floor lifts centimetres over hours",
+  "12 h day and 18 h night",
+  "electronic interference near crater"
+ ],
+ "lighting_sound": "12 h daylight, 18 h dark; sound not stated.",
+ "entities": [
+  {
+   "name": "Dendroids",
+   "status": "CONFIRMED",
+   "behavior": "tree-like hunters, fear fire"
+  },
+  {
+   "name": "Anthosia",
+   "status": "CONFIRMED",
+   "behavior": "flowers with toxic pollen clouds"
+  },
+  {
+   "name": "Grimshells",
+   "status": "CONFIRMED",
+   "behavior": "territorial crab-like creatures in flooded areas"
+  },
+  {
+   "name": "Craterwood Super-organism (Cass)",
+   "status": "CONFIRMED",
+   "behavior": "huge moss entity, collects skeletons"
+  },
+  {
+   "name": "The Black Goat",
+   "status": "REPORTED",
+   "behavior": "stalks and lures toward crater"
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Dendroids, Anthosia, Grimshells, Craterwood Super-organism, The Black Goat, generic mutants",
+ "hazards": [
+  "mutagenic mist",
+  "flooded fissures",
+  "pathogenic water",
+  "hostile entities",
+  "disorientation in Hauntwood"
+ ],
+ "items_communities": [
+  "New Hereth (B.N.T.G., U.E.C., I.M.B.H., about 35-40 people)",
+  "Old Hereth church",
+  "trail guides teal and purple",
+  "respirators",
+  "sealed almond water"
+ ],
+ "entrances": [
+  {
+   "from": "any forested area",
+   "from_id": null,
+   "slug": null,
+   "method": "Theory: forests may lead here",
+   "trigger_type": "condition",
+   "conditions": "unproven",
+   "confidence": "RUMORED",
+   "quote": "any forested area could eventually lead someone to Level 108"
+  },
+  {
+   "from": "Level 32, 35-ID, 39, 48, PL-53, 77, 116, 249, 415",
+   "from_id": "32",
+   "slug": "/level-32",
+   "method": "Reported arrivals",
+   "trigger_type": "unknown",
+   "conditions": "method not stated",
+   "confidence": "CONFIRMED",
+   "quote": "Notable levels on which this has occured include"
+  },
+  {
+   "from": "B.N.T.G. entrances",
+   "from_id": null,
+   "slug": null,
+   "method": "Secret",
+   "trigger_type": "unknown",
+   "conditions": "affiliation",
+   "confidence": "UNKNOWN",
+   "quote": "closely guarded secret and only divulged to internal affiliates"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Craterwood or another level",
+   "to_id": null,
+   "slug": null,
+   "method": "Walk straight out of Hauntwood",
+   "trigger_type": "walk_in",
+   "conditions": "in Hauntwood",
+   "risk": "disorientation",
+   "confidence": "CONDITIONAL",
+   "quote": "either into the Craterwood or to another level entirely"
+  },
+  {
+   "to": "unnamed levels",
+   "to_id": null,
+   "slug": null,
+   "method": "Purple trail guides to known exits; New Hereth help",
+   "trigger_type": "walk_in",
+   "conditions": "follow guides",
+   "risk": "entities, mist",
+   "confidence": "CONFIRMED",
+   "quote": "Purple trail guides also mark the known exits of the level."
+  }
+ ],
+ "signature_mechanic": "Mutagenic mist pulses from the crater; filtered masks are survival; Hauntwood layout only resolves when observed.",
+ "verticality": "Fissures nearly 300 m deep; trees up to about 200 m.",
+ "do_not": [
+  "make Hauntwood dense with monsters",
+  "make mist effects reversible",
+  "invent exit destinations",
+  "treat diary as article fact"
+ ],
+ "content_warnings": [
+  "mutation and body horror",
+  "predation and skeletons",
+  "cult/ritual implications",
+  "child diary"
+ ],
+ "source_completeness": "PARTIAL",
+ "conflicts_notes": "Footnote texts not captured; text says 'New Haven' once instead of New Hereth; Hereth disappearance year 1906.",
+ "key_quotes": [
+  {
+   "section": "Craterwood",
+   "quote": "twelve hours of daylight and eighteen hours of darkness"
+  },
+  {
+   "section": "Hauntwood",
+   "quote": "only \"chooses\" a position when directly observed"
+  },
+  {
+   "section": "Mist",
+   "quote": "immediate and irreversible"
+  },
+  {
+   "section": "Protocols",
+   "quote": "Do not eat or drink anything from the level."
+  },
+  {
+   "section": "Exits",
+   "quote": "Purple trail guides also mark the known exits of the level."
+  }
+ ]
+}

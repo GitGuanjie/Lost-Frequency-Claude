@@ -1,0 +1,150 @@
+{
+ "stable_id": "L114",
+ "level_id": "114",
+ "title": "Sweet Dreams",
+ "survival_class": "not stated as a class; header bullets read: You're Home . / You're Safe . / …Right? .",
+ "physical_identity": "A wanderer's childhood bedroom (about age 9-12) under dim sterile white light with a single bed, inert appliances and an enterable infinite black void behind the door.",
+ "scale_topology": "Small finite room per wanderer plus an infinite void; level is solitary and desynchronous.",
+ "anomalies": [
+  "Spatially desynchronous",
+  "Void with lowered gravity and breathable air",
+  "Inert appliances except the light switch",
+  "Rope that did not de-manifest",
+  "Exit by falling asleep"
+ ],
+ "lighting_sound": "Dim sterile white light, musty smell (testimony); no ambient sound stated.",
+ "entities": [
+  {
+   "name": "Smilers",
+   "status": "CONFIRMED",
+   "behavior": "Hide under the bed/in dark spaces; harmless while lights on; emerge and attack if lights off."
+  },
+  {
+   "name": "Stress Mould",
+   "status": "CONFIRMED",
+   "behavior": "Grows over time; anxiety-inducing; hazardous after ~8 hours."
+  },
+  {
+   "name": "Window entities (malevolent liminal counterparts)",
+   "status": "CONFIRMED",
+   "behavior": "Occasionally replace windows; only if the childhood room had windows."
+  },
+  {
+   "name": "Bed bugs",
+   "status": "CONFIRMED",
+   "behavior": "Infest the bedsheets; bite exposed skin causing rash."
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Smilers, Stress Mould, window entities",
+ "hazards": [
+  "Falling into the void (death by dehydration)",
+  "Stress Mould after ~8 h",
+  "Smilers if lights off",
+  "Bed bug bites",
+  "Malevolent windows"
+ ],
+ "items_communities": [
+  "M.E.G. rope (~137 m)",
+  "No communities"
+ ],
+ "entrances": [
+  {
+   "from": "Level 29 (far beyond its limits)",
+   "from_id": "29",
+   "slug": "/level-29",
+   "method": "Travel far beyond the limits of Level 29",
+   "trigger_type": "walk_in",
+   "conditions": "'supposedly'",
+   "confidence": "RUMORED",
+   "quote": "Travelling far beyond the limits of Level 29 supposedly leads to entry into Level 114 ."
+  },
+  {
+   "from": "Level 109",
+   "from_id": "109",
+   "slug": "/level-109",
+   "method": "Enter any door labelled with an exit sign in corridors",
+   "trigger_type": "door",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Entering any of the doors labelled with an exit sign in Level 109's corridors leads to Level 114."
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 9 (a street)",
+   "to_id": "9",
+   "slug": "/level-9",
+   "method": "Fall asleep in the room",
+   "trigger_type": "sleep",
+   "conditions": "sleep in the room (bed)",
+   "risk": "Low",
+   "confidence": "CONFIRMED",
+   "quote": "Fall asleep in this room, and you will awake on a street on Level 9 ."
+  },
+  {
+   "to": "Level 25",
+   "to_id": "25",
+   "slug": "/level-25",
+   "method": "Say 'I'm so bored...' in a dull voice",
+   "trigger_type": "condition",
+   "conditions": "dull voice phrase",
+   "risk": "Low",
+   "confidence": "CONFIRMED",
+   "quote": "Saying \"I'm so bored…\" in a dull voice leads you to Level 25 ."
+  },
+  {
+   "to": "The black void (not an exit)",
+   "to_id": null,
+   "slug": null,
+   "method": "Doorway to void: infinite drift, death by dehydration",
+   "trigger_type": "fall",
+   "conditions": "falling out of reach of the door",
+   "risk": "Fatal if beyond the rope",
+   "confidence": "DANGEROUS+ONE-WAY",
+   "quote": "wanderers who fall out of reach of the doorway will continue drifting down into the darkness"
+  }
+ ],
+ "signature_mechanic": "A lonely childhood bedroom that must stay lit; the open doorway leads to a drifting void and sleep is the way out.",
+ "verticality": "Void descends endlessly; the room is a single floor.",
+ "do_not": [
+  "Do not add communities or other players.",
+  "Do not make the void a barrier wall; it is enterable.",
+  "Do not let batteries power the room's appliances.",
+  "Do not give a chase/entity in the void; the page says it appears devoid.",
+  "Do not treat interview details (pink stool, Barbie poster) as canonical room contents: they are one wanderer's testimony.",
+  "Do not add windows to every room: only if the childhood room had them."
+ ],
+ "content_warnings": [
+  "psychological distress (interviewee describes infidelity, drinking, job loss)",
+  "implied death in the void by dehydration",
+  "anxiety-inducing mould"
+ ],
+ "source_completeness": "COMPLETE",
+ "conflicts_notes": "Level 114 page says 115th Level of the Backrooms. Interview room details differ from the stated universal bed/sheet. Link list names Levels 113, 115 and 6 not described.",
+ "key_quotes": [
+  {
+   "section": "Intro",
+   "quote": "It takes the form of each wanderer's childhood bedroom, with a black void extending infinitely behind the doorway."
+  },
+  {
+   "section": "Description",
+   "quote": "The only functioning appliance found within the level seems to be the light switch, which is turned on by default."
+  },
+  {
+   "section": "Description",
+   "quote": "Wanderers are advised not to turn off the lights in the room under any circumstances"
+  },
+  {
+   "section": "Properties of The Void",
+   "quote": "it is not possible to swim upwards in the void"
+  },
+  {
+   "section": "Entrances and Exits",
+   "quote": "Fall asleep in this room, and you will awake on a street on Level 9 ."
+  },
+  {
+   "section": "Entrances and Exits",
+   "quote": "Saying \"I'm so bored…\" in a dull voice leads you to Level 25 ."
+  }
+ ]
+}

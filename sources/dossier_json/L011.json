@@ -1,0 +1,881 @@
+{
+ "stable_id": "L011",
+ "level_id": "11",
+ "title": "The City That Never Sleeps",
+ "survival_class": "Safe . / Unsecure . / Low Entity Count . (three bullet lines; no numeric class stated)",
+ "physical_identity": "Vast empty Western-style metropolis: block roads, skyscraper to low-rise districts, parks, subways, canals; indestructible bland buildings; unofficial hub of the Backrooms.",
+ "scale_topology": "Effectively unbounded outdoor city with infinite subways; skyscrapers and underground; page gives population ~129,500.",
+ "anomalies": [
+  "Goods and props noclip/change only when unobserved",
+  "1/3 of buildings unenterable with mirror-like windows",
+  "Fixed, inconspicuous one-way exits to thousands of levels",
+  "'Level 11 Effect' pacifies hostile entities",
+  "Localized evolution/anachronistic settled areas",
+  "No fuel works in cars"
+ ],
+ "lighting_sound": "Not stated: no light level, time of day or ambient sound described. Buildings have working lighting inside.",
+ "entities": [
+  {
+   "name": "Facelings",
+   "status": "CONFIRMED",
+   "behavior": "Among the most numerous entities; foreign to the level; a young Faceling was shot by U.E.C. guard (TESTIMONY transcript)."
+  },
+  {
+   "name": "Hounds",
+   "status": "CONFIRMED",
+   "behavior": "Numerous; M.E.G. explorer died testing the Level 11 Effect near one (TESTIMONY caption)."
+  },
+  {
+   "name": "Lucky Cranes",
+   "status": "CONFIRMED",
+   "behavior": "Rarer; appear less often."
+  },
+  {
+   "name": "Living Pizzas (level-458 native)",
+   "status": "CONFIRMED",
+   "behavior": "Non-zero chance of appearing from connected levels."
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Facelings, Hounds, Lucky Cranes, Living Pizzas (visitors); low entity count",
+ "hazards": [
+  "Accidental one-way exit falls into unknown levels",
+  "Provoked entities / entities unaffected by Level 11 Effect",
+  "U.E.C. kill-on-sight policy toward entities",
+  "Dangerous window-entity noclip to Level 12"
+ ],
+ "items_communities": [
+  "Group communities: Capital, Malt Marters, M.E.G. Base Beta and Camp Amber, B.N.T.G. New Times Square, U.E.C. Thebes, U.B.D.S., G.P.D. B-Team, I.M.B.H., Eternal Repository, The Lost",
+  "Presses (B.N.T.G. coins)",
+  "Tapes for Level 201, brochures for Level 222"
+ ],
+ "entrances": [
+  {
+   "from": "Level 222",
+   "from_id": "222",
+   "slug": "/level-222",
+   "method": "Noclip through its countless mirrors as hasty exit",
+   "trigger_type": "noclip",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Noclipping through Level 222 's countless mirrors can lead to Level 11"
+  },
+  {
+   "from": "Level 600 (and fragments 214, 678, 812, 910)",
+   "from_id": "600",
+   "slug": "/level-600",
+   "method": "Pre-destruction exits in its cities; fragments may retain them",
+   "trigger_type": "unknown",
+   "conditions": "Level 600 destroyed in late 20th century",
+   "confidence": "CONDITIONAL",
+   "quote": "may still contain these exits"
+  },
+  {
+   "from": "Level 990",
+   "from_id": "990",
+   "slug": "/level-990",
+   "method": "Explore intact buildings long enough",
+   "trigger_type": "walk_in",
+   "conditions": "long exploration",
+   "confidence": "CONFIRMED",
+   "quote": "Any intact buildings in Level 990 usually transport people to Level 11 if explored for long enough."
+  },
+  {
+   "from": "Level 6.1",
+   "from_id": "6.1",
+   "slug": "/level-6-1",
+   "method": "Sliding glass doors to a predetermined restaurant; both ways",
+   "trigger_type": "door",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "These exits work both ways."
+  },
+  {
+   "from": "Levels 33, 122, 159",
+   "from_id": "33",
+   "slug": "/level-33",
+   "method": "Mall-exit areas lead to Level 11 mall exteriors",
+   "trigger_type": "door",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Areas in Level 33 that resemble mall exits lead to the exteriors of malls in Level 11."
+  },
+  {
+   "from": "Level 40",
+   "from_id": "40",
+   "slug": "/level-40",
+   "method": "Revolving doors",
+   "trigger_type": "door",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "any revolving doors in Level 40 lead to random revolving doors in Level 11"
+  },
+  {
+   "from": "Level 44",
+   "from_id": "44",
+   "slug": "/level-44",
+   "method": "Metal doors",
+   "trigger_type": "door",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "metal doors in Level 44 lead to Level 11"
+  },
+  {
+   "from": "Level 55",
+   "from_id": "55",
+   "slug": "/level-55",
+   "method": "Main door to select supermarkets",
+   "trigger_type": "door",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "The main door in Level 55 leads to a select few predetermined supermarkets"
+  },
+  {
+   "from": "Level 141",
+   "from_id": "141",
+   "slug": "/level-141",
+   "method": "Random doors",
+   "trigger_type": "door",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Random doors in Level 141 lead to Level 11."
+  },
+  {
+   "from": "Level 330",
+   "from_id": "330",
+   "slug": "/level-330",
+   "method": "Doors",
+   "trigger_type": "door",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "The same is true for doors in Level 330"
+  },
+  {
+   "from": "Level 179",
+   "from_id": "179",
+   "slug": "/level-179",
+   "method": "Exit doors lead to charity/thrift stores",
+   "trigger_type": "door",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "many of the exit doors can lead to Level 11 charity and thrift stores"
+  },
+  {
+   "from": "Level 370",
+   "from_id": "370",
+   "slug": "/level-370",
+   "method": "Glowing doorway on exit",
+   "trigger_type": "door",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Exiting Level 370 can lead to Level 11 if one goes through a glowing doorway."
+  },
+  {
+   "from": "Level 9",
+   "from_id": "9",
+   "slug": "/level-9",
+   "method": "Follow street signs with arrows",
+   "trigger_type": "walk_in",
+   "conditions": "claimed 100-200 miles, unverified",
+   "confidence": "CONFIRMED",
+   "quote": "Following Level 9 street signs with arrows eventually leads to Level 11."
+  },
+  {
+   "from": "Level 10",
+   "from_id": "10",
+   "slug": "/level-10",
+   "method": "Follow any asphalt road long enough",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Any asphalt road on Level 10 leads to Level 11"
+  },
+  {
+   "from": "Level 563",
+   "from_id": "563",
+   "slug": "/level-563",
+   "method": "Walk toward a city for many miles",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Walking towards what resembles a city in level-563 will (after many miles) lead to Level 11."
+  },
+  {
+   "from": "Level 52",
+   "from_id": "52",
+   "slug": "/level-52",
+   "method": "Cave entrance",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Level 52 has an entrance to this level."
+  },
+  {
+   "from": "Level 78",
+   "from_id": "78",
+   "slug": "/level-78",
+   "method": "Noclip through portholes showing a city",
+   "trigger_type": "noclip",
+   "conditions": "view displays a city",
+   "confidence": "CONFIRMED",
+   "quote": "portholes in Level 78 can be noclipped through into Level 11 if their view displays a city"
+  },
+  {
+   "from": "Levels 172 and 957",
+   "from_id": "172",
+   "slug": "/level-172",
+   "method": "Buses",
+   "trigger_type": "vehicle",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Level 172 and Level 957 's buses lead to Level 11"
+  },
+  {
+   "from": "Level 184",
+   "from_id": "184",
+   "slug": "/level-184",
+   "method": "Leave an abandoned structure after entering",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "confidence": "CONFIRMED+CONDITIONAL",
+   "quote": "can lead to this level"
+  },
+  {
+   "from": "Level 213",
+   "from_id": "213",
+   "slug": "/level-213",
+   "method": "Exiting",
+   "trigger_type": "unknown",
+   "conditions": "may go to Level 11 or the Hub",
+   "confidence": "CONDITIONAL",
+   "quote": "Exiting Level 213 can lead to Level 11, or the Hub"
+  },
+  {
+   "from": "Level 414",
+   "from_id": "414",
+   "slug": "/level-414",
+   "method": "Follow dandelions",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "confidence": "CONDITIONAL",
+   "quote": "Following dandelions in Level 414 can lead to this level"
+  },
+  {
+   "from": "Level 25",
+   "from_id": "25",
+   "slug": "/level-25",
+   "method": "Certain arcade cabinets made by the Leaders (late 70s-early 80s)",
+   "trigger_type": "interact",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "certain arcade cabinets in Level 25 lead to Level 11 if interacted with"
+  },
+  {
+   "from": "Level 67",
+   "from_id": "67",
+   "slug": "/level-67",
+   "method": "Eat certain pastries",
+   "trigger_type": "item",
+   "conditions": "",
+   "confidence": "CONDITIONAL",
+   "quote": "certain Level 67 pastries can lead to Level 11 if consumed"
+  },
+  {
+   "from": "Level 168",
+   "from_id": "168",
+   "slug": "/level-168",
+   "method": "Run from entity hide-and-seek in exterior park variant",
+   "trigger_type": "condition",
+   "conditions": "chance",
+   "confidence": "CONDITIONAL",
+   "quote": "has a chance of leading to this level"
+  },
+  {
+   "from": "Level 169",
+   "from_id": "169",
+   "slug": "/level-169",
+   "method": "Jump off cliff",
+   "trigger_type": "fall",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Jumping off of Level 169 's cliff, for whatever reason, leads to this level."
+  },
+  {
+   "from": "Level 266",
+   "from_id": "266",
+   "slug": "/level-266",
+   "method": "Out-of-place elevators to random building interior",
+   "trigger_type": "elevator",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Extremely out-of-place elevators in Level 266 lead to a random Level 11 building interior."
+  },
+  {
+   "from": "Level 707",
+   "from_id": "707",
+   "slug": "/level-707",
+   "method": "Die or enter coma in sleep; wake in a CD store",
+   "trigger_type": "death",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "will revive/awaken the individual and place them inside a CD store"
+  },
+  {
+   "from": "Generic: noclips, doors, gradual transitions, random chance, specific actions",
+   "from_id": null,
+   "slug": null,
+   "method": "Listed categories",
+   "trigger_type": "unknown",
+   "conditions": "",
+   "confidence": "CONFIRMED",
+   "quote": "Level 11 is accessible from almost anywhere at any time, oftentimes by accident."
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 12",
+   "to_id": "12",
+   "slug": "/level-12",
+   "method": "Noclip into window-entity-like windows",
+   "trigger_type": "noclip",
+   "conditions": "",
+   "risk": "Dangerous approach",
+   "confidence": "DANGEROUS",
+   "quote": "certain windows in Level 11 that resemble window entities can lead to Level 12 if noclipped into"
+  },
+  {
+   "to": "Level 63",
+   "to_id": "63",
+   "slug": "/level-63",
+   "method": "Trip and fall into shrubbery",
+   "trigger_type": "fall",
+   "conditions": "patchy",
+   "risk": "",
+   "confidence": "CONDITIONAL",
+   "quote": "tripping and falling into shrubbery can noclip oneself into Level 63"
+  },
+  {
+   "to": "Level 164",
+   "to_id": "164",
+   "slug": "/level-164",
+   "method": "Large plain buildings; random noclip nearby",
+   "trigger_type": "noclip",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "Plain buildings of quite substantial size lead to level-164."
+  },
+  {
+   "to": "Level 178",
+   "to_id": "178",
+   "slug": "/level-178",
+   "method": "Noclip through the ground",
+   "trigger_type": "noclip",
+   "conditions": "potluck",
+   "risk": "",
+   "confidence": "CONDITIONAL",
+   "quote": "many people enter Level 178 after noclipping through the floor"
+  },
+  {
+   "to": "Level 325",
+   "to_id": "325",
+   "slug": "/level-325",
+   "method": "Random noclip zones at construction sites",
+   "trigger_type": "noclip",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "Any construction sites on Level 11 have many random noclip zones to Level 325"
+  },
+  {
+   "to": "Level 470",
+   "to_id": "470",
+   "slug": "/level-470",
+   "method": "Loiter indoors",
+   "trigger_type": "noclip",
+   "conditions": "random",
+   "risk": "",
+   "confidence": "CONDITIONAL",
+   "quote": "loitering in any indoor areas can lead to random noclips to Level 470"
+  },
+  {
+   "to": "Level 740",
+   "to_id": "740",
+   "slug": "/level-740",
+   "method": "Noclip in operational power plants",
+   "trigger_type": "noclip",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "Noclipping inside operational power plants regularly leads to Level 740."
+  },
+  {
+   "to": "Levels 33, 122, 159",
+   "to_id": "33",
+   "slug": "/level-33",
+   "method": "Certain malls (also 122, 159)",
+   "trigger_type": "door",
+   "conditions": "not all malls",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "Certain malls, as already described, can lead to Level 33"
+  },
+  {
+   "to": "Level 67",
+   "to_id": "67",
+   "slug": "/level-67",
+   "method": "Follow scent of a bakery",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "Following the scent of a bakery can lead to level level 67."
+  },
+  {
+   "to": "Level 68",
+   "to_id": "68",
+   "slug": "/level-68",
+   "method": "Go into a movie theater",
+   "trigger_type": "door",
+   "conditions": "chance",
+   "risk": "",
+   "confidence": "CONDITIONAL",
+   "quote": "Going into a movie theater can have a chance to lead you to level 68."
+  },
+  {
+   "to": "Level 109",
+   "to_id": "109",
+   "slug": "/level-109",
+   "method": "Misshapen 'glitched' hospitals",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "Hospitals that appear misshapen and \"glitched\" lead to Level 109."
+  },
+  {
+   "to": "Level 511",
+   "to_id": "511",
+   "slug": "/level-511",
+   "method": "Non-glitched hospitals, explored long enough",
+   "trigger_type": "walk_in",
+   "conditions": "lower chance",
+   "risk": "",
+   "confidence": "CONDITIONAL",
+   "quote": "lower chance of taking one to Level 511"
+  },
+  {
+   "to": "Level 808",
+   "to_id": "808",
+   "slug": "/level-808",
+   "method": "Enter arcade buildings",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "Arcade buildings connect to Level 808 if entered."
+  },
+  {
+   "to": "Level 115",
+   "to_id": "115",
+   "slug": "/level-115",
+   "method": "Marked entrance on a Base Beta building, owned by M.E.G.",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "clearly marked and signposted on the side of a building in Base Beta"
+  },
+  {
+   "to": "Level 119",
+   "to_id": "119",
+   "slug": "/level-119",
+   "method": "Water supply stores",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "Water supply stores in Level 11 lead to Level 119."
+  },
+  {
+   "to": "Level 126",
+   "to_id": "126",
+   "slug": "/level-126",
+   "method": "Buildings with banner 'Mr. Holloway's Grand Exhibit'",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "buildings with banners reading \"Mr. Holloway's Grand Exhibit\" lead to Level 126"
+  },
+  {
+   "to": "Level 55",
+   "to_id": "55",
+   "slug": "/level-55",
+   "method": "Supermarkets reading 'Frivolous Frank's Fabulous Frozen Food' (rare)",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "Frivolous Frank's Fabulous Frozen Food"
+  },
+  {
+   "to": "Level 179",
+   "to_id": "179",
+   "slug": "/level-179",
+   "method": "Charity and thrift shops",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "Any charity and thrift shops lead to Level 179 upon entry."
+  },
+  {
+   "to": "Level 20",
+   "to_id": "20",
+   "slug": "/level-20",
+   "method": "Buildings marked 'Fun Zone'",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "Buildings marked as \"Fun Zone\" lead to Level 20 without fail."
+  },
+  {
+   "to": "Level 232",
+   "to_id": "232",
+   "slug": "/level-232",
+   "method": "Buildings called Caspian's Antiques",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "Caspian's Antiques"
+  },
+  {
+   "to": "Level 458",
+   "to_id": "458",
+   "slug": "/level-458",
+   "method": "Papa Pedro's Pizza Palace of Pleasantries",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "Papa Pedro's Pizza Palace of Pleasantries"
+  },
+  {
+   "to": "Level 212",
+   "to_id": "212",
+   "slug": "/level-212",
+   "method": "Any airport",
+   "trigger_type": "door",
+   "conditions": "rare sight",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "any airport leads to Level 212"
+  },
+  {
+   "to": "Level 213",
+   "to_id": "213",
+   "slug": "/level-213",
+   "method": "Random restaurants",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "Random restaurant buildings lead to Level 213."
+  },
+  {
+   "to": "Level 214",
+   "to_id": "214",
+   "slug": "/level-214",
+   "method": "Random flower shops",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "random flower shops lead to Level 214"
+  },
+  {
+   "to": "Level 304",
+   "to_id": "304",
+   "slug": "/level-304",
+   "method": "Random bakeries",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "random bakeries lead to Level 304"
+  },
+  {
+   "to": "Level 370",
+   "to_id": "370",
+   "slug": "/level-370",
+   "method": "Pubs",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "pubs lead to Level 370"
+  },
+  {
+   "to": "Level 900",
+   "to_id": "900",
+   "slug": "/level-900",
+   "method": "Mattress stores",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "mattress stores lead to Level 900"
+  },
+  {
+   "to": "Level 247",
+   "to_id": "247",
+   "slug": "/level-247",
+   "method": "Modern door in historical-looking building",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "Any modern door in buildings that are more historical in appearance enters to Level 247."
+  },
+  {
+   "to": "Level 402",
+   "to_id": "402",
+   "slug": "/level-402",
+   "method": "Practically any door, small chance",
+   "trigger_type": "door",
+   "conditions": "small chance",
+   "risk": "",
+   "confidence": "CONDITIONAL",
+   "quote": "Practically any door has a small chance of leading to Level 402 if used."
+  },
+  {
+   "to": "Level 603",
+   "to_id": "603",
+   "slug": "/level-603",
+   "method": "Decrepit or non-producing factories",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "usually connect to Level 603"
+  },
+  {
+   "to": "Level 713",
+   "to_id": "713",
+   "slug": "/level-713",
+   "method": "Abandoned buildings",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "Level 713 's entrances work in much the same way"
+  },
+  {
+   "to": "Level 990",
+   "to_id": "990",
+   "slug": "/level-990",
+   "method": "Abandoned building overtaken by greenery",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "it will take one to Level 990 instead of Level 713"
+  },
+  {
+   "to": "Level 901",
+   "to_id": "901",
+   "slug": "/level-901",
+   "method": "Noclip through machinery in intact factories",
+   "trigger_type": "noclip",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "Intact factories connect to Level 901 if one noclips through machinery."
+  },
+  {
+   "to": "Level 138",
+   "to_id": "138",
+   "slug": "/level-138",
+   "method": "Neon-lit grungy alleyways",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "lead to Level 138"
+  },
+  {
+   "to": "Level 215",
+   "to_id": "215",
+   "slug": "/level-215",
+   "method": "Grungy alleyways without neon",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONDITIONAL",
+   "quote": "can lead to Level 215"
+  },
+  {
+   "to": "Level 141",
+   "to_id": "141",
+   "slug": "/level-141",
+   "method": "Buildings with old boilers, explored long enough",
+   "trigger_type": "walk_in",
+   "conditions": "random",
+   "risk": "",
+   "confidence": "CONDITIONAL",
+   "quote": "can randomly lead to Level 141 if explored for long enough"
+  },
+  {
+   "to": "Level 147",
+   "to_id": "147",
+   "slug": "/level-147",
+   "method": "Certain buses in Level 11",
+   "trigger_type": "vehicle",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONDITIONAL",
+   "quote": "riding certain buses in Level 11 can take one to Level 147"
+  },
+  {
+   "to": "Level 158",
+   "to_id": "158",
+   "slug": "/level-158",
+   "method": "Trains in subways or overground lines",
+   "trigger_type": "vehicle",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONDITIONAL",
+   "quote": "Riding the trains in the subways or overground lines can lead to Level 158."
+  },
+  {
+   "to": "Level 25",
+   "to_id": "25",
+   "slug": "/level-25",
+   "method": "Arcade machines in obtuse places",
+   "trigger_type": "interact",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "Arcade machines in obtuse places lead to Level 25 if interacted with in any way."
+  },
+  {
+   "to": "Level 48",
+   "to_id": "48",
+   "slug": "/level-48",
+   "method": "Sleep in a sand-filled room",
+   "trigger_type": "sleep",
+   "conditions": "room covered/filled with sand",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "they will appear in Level 48 upon awakening"
+  },
+  {
+   "to": "Level 49",
+   "to_id": "49",
+   "slug": "/level-49",
+   "method": "Touch military recruitment posters (not tradeable)",
+   "trigger_type": "interact",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "military recruitment posters lead to Level 49 if touched"
+  },
+  {
+   "to": "Level 34 / Level 218",
+   "to_id": "34",
+   "slug": "/level-34",
+   "method": "Fall through loose or open sewer grates",
+   "trigger_type": "fall",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "Sewer grates, particularly loose or open ones that can be fallen through, lead to Level 34 or Level 218."
+  },
+  {
+   "to": "Level 353",
+   "to_id": "353",
+   "slug": "/level-353",
+   "method": "Enter pool back gardens of villas in low-density areas",
+   "trigger_type": "walk_in",
+   "conditions": "",
+   "risk": "",
+   "confidence": "CONFIRMED",
+   "quote": "Any villas with pools in their back gardens"
+  },
+  {
+   "to": "Level 998",
+   "to_id": "998",
+   "slug": "/level-998",
+   "method": "Press buttons of elevators in random places",
+   "trigger_type": "elevator",
+   "conditions": "highly discouraged",
+   "risk": "Discouraged",
+   "confidence": "CONFIRMED",
+   "quote": "elevators in random places (such as on the sides of buildings or streets) always lead to Level 998 if their buttons are pressed"
+  },
+  {
+   "to": "Level 201 / Level 222 (indirect)",
+   "to_id": "201",
+   "slug": "/level-201",
+   "method": "Tapes and brochures obtainable in Level 11 trigger those entrances elsewhere",
+   "trigger_type": "item",
+   "conditions": "entrance not used in Level 11",
+   "risk": "",
+   "confidence": "CONDITIONAL",
+   "quote": "the tapes played to trigger entrance into that level can be found or bought on Level 11"
+  }
+ ],
+ "signature_mechanic": "A fluid, mostly-empty hub city whose unobserved props change and whose building types are one-way doors to other levels; a pacifying 'Level 11 Effect' keeps entities mild.",
+ "verticality": "Skyscraper districts, subways below, canals going underground; interiors sparse.",
+ "do_not": [
+  "Do not make the city a dark liminal horror; page says Low Entity Count and a pacifying effect.",
+  "Do not give cars fuel or working engines.",
+  "Do not invent day/night or weather: not stated.",
+  "Do not treat quote boxes (diary, radio, forum) as article facts; they are TESTIMONY/in-universe artifacts.",
+  "Do not make every building enterable: 1/3 are not (the Capital's remodelled territory is the exception).",
+  "Do not connect Level 790 as an exit: the page calls it a dead-end level."
+ ],
+ "content_warnings": [
+  "entity killing mentioned (U.E.C. kill entities on sight, incl. a young Faceling)",
+  "missing child memorial (noclipped through floor)",
+  "one entity-caused death quoted (Hoy Léi, M.E.G. explorer)"
+ ],
+ "source_completeness": "COMPLETE",
+ "conflicts_notes": "Class given as three bullets not a numeric class. Exits list notes it is non-exhaustive. Level 213 appears both as an entrance and an exit (random restaurants). Level 55 and Level 25 appear both ways.",
+ "key_quotes": [
+  {
+   "section": "Intro",
+   "quote": "Level 11 is an empty metropolis, its architecture taking inspiration from a variety of urban cities."
+  },
+  {
+   "section": "Description",
+   "quote": "1/3 of all buildings are indestructible and unenterable."
+  },
+  {
+   "section": "Description",
+   "quote": "only do so when not observed"
+  },
+  {
+   "section": "As a Hub Level",
+   "quote": "These are almost always a one-way trip"
+  },
+  {
+   "section": "As a Hub Level",
+   "quote": "There does not seem to be a native entity population"
+  },
+  {
+   "section": "The Human Touch",
+   "quote": "causes hostile entities to be less inclined to attack"
+  },
+  {
+   "section": "Further Fluidity",
+   "quote": "no cars have fuel"
+  },
+  {
+   "section": "Entrances and Exits",
+   "quote": "Level 11 is accessible from almost anywhere at any time, oftentimes by accident."
+  }
+ ]
+}

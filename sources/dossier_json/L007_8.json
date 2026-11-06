@@ -1,0 +1,140 @@
+{
+ "stable_id": "L007_8",
+ "level_id": "7.8",
+ "title": "Impaled Ocean",
+ "survival_class": "not stated",
+ "physical_identity": "Endless calm saline sea dotted with wooden stilt houses and villages, drifting vessels, Deep Eye seafloor holes, and giant house-wearing Seawalkers.",
+ "scale_topology": "Boundless outdoor ocean, no discernible end; seafloor 20 m down, holes to 12,000 m; houses on stilts.",
+ "anomalies": [
+  "houses emerge from the sea and self-renew",
+  "snow that never melts on some roofs",
+  "constant time of day (journal)",
+  "Deep Eyes up to 4 km across"
+ ],
+ "lighting_sound": "Bright sun, blue water, calm and barely moving; gulls; constant time of day per journal.",
+ "entities": [
+  {
+   "name": "Seawalkers",
+   "status": "CONFIRMED",
+   "behavior": "40-70 m crab-like giants wearing stilt houses; non-aggressive; groups of 3+"
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Seawalkers (non-aggressive); seagulls and fish are non-entity fauna",
+ "hazards": [
+  "sea more hazardous than houses",
+  "bridges break, stilts snap, buildings collapse",
+  "Seawalkers may take your house",
+  "Deepfallow Corsairs advised avoid",
+  "deep holes"
+ ],
+ "items_communities": [
+  "deserted drifting vessels",
+  "Grand Colony",
+  "Kalag Institute Outpost Leilah",
+  "Deepfallow Corsairs",
+  "stilt villages of many cultures"
+ ],
+ "entrances": [
+  {
+   "from": "Level 7",
+   "from_id": "7",
+   "slug": "/level-7",
+   "method": "from the depths of Level 7",
+   "trigger_type": "swim",
+   "conditions": "easiest way",
+   "confidence": "CONFIRMED",
+   "quote": "The easiest way to do this is from the depths of Level 7"
+  },
+  {
+   "from": "other levels (vessels)",
+   "from_id": null,
+   "slug": null,
+   "method": "mysterious vessels roaming other levels",
+   "trigger_type": "vehicle",
+   "conditions": "mostly willing",
+   "confidence": "RUMORED",
+   "quote": "Most embark on the mysterious vessels that roam other levels"
+  },
+  {
+   "from": "unknown",
+   "from_id": null,
+   "slug": null,
+   "method": "sudden sun and blue water, not recalled",
+   "trigger_type": "unknown",
+   "conditions": "rare",
+   "confidence": "RUMORED",
+   "quote": "bright sun and blue water in a way they cannot quite recall"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 8",
+   "to_id": "8",
+   "slug": "/level-8",
+   "method": "multiple exits in the Deep Eyes",
+   "trigger_type": "dive",
+   "conditions": "locations not detailed",
+   "risk": "deep water",
+   "confidence": "CONFIRMED",
+   "quote": "In the Deep Eyes multiple Level 8 exits were found."
+  },
+  {
+   "to": "Level 7.7",
+   "to_id": "7.7",
+   "slug": "/level-7-7",
+   "method": "entrance in stilt houses with unmelting snow on the roof",
+   "trigger_type": "walk_in",
+   "conditions": "find such a house",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "there is an entrance to Level 7.7"
+  },
+  {
+   "to": "unknown (rifts/ships)",
+   "to_id": null,
+   "slug": null,
+   "method": "voyage into distant waves",
+   "trigger_type": "vehicle",
+   "conditions": "no defined courses or maps",
+   "risk": "There is peril",
+   "confidence": "RUMORED",
+   "quote": "rifts to other realities, ships of incomprehensible size"
+  }
+ ],
+ "signature_mechanic": "Calm endless sea in constant daylight; boats and stilt villages; dive into Deep Eyes for Level 8; non-aggressive Seawalkers wear houses.",
+ "verticality": "Seabed 20 m; Deep Eye holes much deeper (up to 12,000 m); houses a few storeys.",
+ "do_not": [
+  "make Seawalkers hostile",
+  "add day/night or storms",
+  "treat the 1705 journal as article voice",
+  "invent an exit to Level 7",
+  "add real waves"
+ ],
+ "content_warnings": [
+  "none significant"
+ ],
+ "source_completeness": "PARTIAL",
+ "conflicts_notes": "Seawalkers called 'not aggressive' but also an 'unavoidable danger'. Author comment says content was cut and the author is unhappy with the page. Journal entries are in-universe fiction.",
+ "key_quotes": [
+  {
+   "section": "What is this place?",
+   "quote": "the sole safe method of crossing the sea being by boat"
+  },
+  {
+   "section": "Locations",
+   "quote": "The diameter of the largest hole in the seafloor is four kilometers."
+  },
+  {
+   "section": "Life In The Sea",
+   "quote": "They are not aggressive toward humans and will feed on dead coral."
+  },
+  {
+   "section": "Exits",
+   "quote": "In the Deep Eyes multiple Level 8 exits were found."
+  },
+  {
+   "section": "Exits",
+   "quote": "there is an entrance to Level 7.7"
+  }
+ ]
+}

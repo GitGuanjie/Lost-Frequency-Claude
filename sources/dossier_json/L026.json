@@ -1,0 +1,43 @@
+{
+ "stable_id": "L026", "level_id": "26", "title": "The SS Fun =)",
+ "survival_class": "not stated (tags: Unsafe. Unsecure. Entity Infestation.)",
+ "physical_identity": "The Frontrooms cruise ship Adventure (~150 m x 18 m), renamed SS Fun =), trashed by Partygoers; exterior decks follow normal reality, lower decks are infinite party-room labyrinths.",
+ "scale_topology": "Ship exterior finite (top, upper, main decks); interior lower decks infinite from an elevator hub; the ship itself relocates between levels.",
+ "anomalies": ["travels by no-clip inside periodic green fog", "circuits powered with no generators", "interior infinitely larger than hull", "spontaneous item generation and cloned rooms (Liminal Echo, Phenomenon 7)", "party paraphernalia and posters no-clip wanderers", "reversed unfocused poster exits"],
+ "lighting_sound": "Party decor and dark corners; screams echo down corridors; green fog on departure. Other sound not stated.",
+ "entities": [
+  {"name": "Partygoers (Entity 67)", "status": "CONFIRMED", "behavior": "Dominant, organised; HQ here; trap and torture wanderers"},
+  {"name": "Partygoer Zero (Deacon Duncan)", "status": "CONFIRMED", "behavior": "Posts on Partygoer sites; tipster to M.E.G."},
+  {"name": "Carnivorous Balloons (Entity 110)", "status": "CONFIRMED", "behavior": "Infest dark corners; Partygoers pop them"},
+  {"name": "Yellow transformed victims", "status": "REPORTED", "behavior": "Testimony: wanderers become snake-armed toothed entities"},
+  {"name": "Golden egg-like monster (Entity 167 link)", "status": "REPORTED", "behavior": "Testimony: fed living Facelings by Partygoers"},
+  {"name": "Faceling (Entity 9)", "status": "REPORTED", "behavior": "Testimony: seen fed to the monster"}
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Partygoers, Carnivorous Balloons; testimony-only monster/Facelings",
+ "hazards": ["Partygoer capture and torture", "booby-trapped party favors", "touching party items may no-clip you in", "balloon infestation", "getting lost in infinite lower decks"],
+ "items_communities": ["party hats, balloons, decorations, posters as no-clip items", "no friendly bases or communities", "M.E.G. Team Watchdogs observe from Level 246"],
+ "entrances": [
+  {"from": "Any level", "from_id": null, "slug": null, "method": "Touch party paraphernalia (balloons, hats, decorations, posters)", "trigger_type": "item", "conditions": "might no-clip", "confidence": "CONDITIONAL", "quote": "Finding and touching party paraphernalia (balloons, party hats, decorations, and posters) anywhere in the Backrooms might no-clip you here."},
+  {"from": "Wherever the ship materializes", "from_id": null, "slug": null, "method": "Board the ship after it materializes", "trigger_type": "walk_in", "conditions": "ship present", "confidence": "CONDITIONAL", "quote": "You can also board the ship after it materializes."},
+  {"from": "Level 246 Circle of Stones", "from_id": "246", "slug": "/level-246", "method": "Arrivals no-clip into the circle centre (context is Level 246)", "trigger_type": "noclip", "conditions": "ambiguous context", "confidence": "UNKNOWN", "quote": "Arrivals no-clip into its center."}
+ ],
+ "exits": [
+  {"to": "Another level (testimony: Level 4)", "to_id": "4", "slug": "/level-4", "method": "Touch a reversed, out-of-focus party poster", "trigger_type": "item", "conditions": "find such poster", "risk": "passing Partygoers", "confidence": "CONFIRMED", "quote": "Touch a reversed, out-of-focus party poster, and you will no-clip to another level."},
+  {"to": "Overboard", "to_id": null, "slug": null, "method": "Jump overboard", "trigger_type": "fall", "conditions": "outcome not stated", "risk": "unstated", "confidence": "UNKNOWN", "quote": "You can also jump overboard."}
+ ],
+ "signature_mechanic": "A ship that vanishes in green fog and whose lower decks are an infinite party-room maze reached by elevator; poster items no-clip you in or out.",
+ "verticality": "Ship decks up to a sun deck; elevator descends to infinite lower decks.",
+ "do_not": ["make interior finite", "add a friendly base", "add multiple escaped witnesses", "treat essay as mechanics"],
+ "content_warnings": ["graphic gore and torture", "amputation and body horror", "entity transformation of a sibling", "blood"],
+ "source_completeness": "UNUSUAL_FORMAT",
+ "conflicts_notes": "Stone circle section reads as Level 246 context but says entrance/exits for wanderers; the personal entry places the author on Level 246. Escape testimony names Level 4. Adventure appearance list includes Level 246 as land.",
+ "key_quotes": [
+  {"section": "Description", "quote": "Periodically, a green fog will cover the ship like a magician's cape."},
+  {"section": "Exterior", "quote": "These three exterior decks primarily follow reality as we understand it."},
+  {"section": "Interior", "quote": "Lower decks appear infinite, as screams echo down endless corridors"},
+  {"section": "Interior", "quote": "The elevators are the hub of these lower decks"},
+  {"section": "Bases", "quote": "There are no friendly bases, outposts or communities on this constantly moving level."},
+  {"section": "Entrances", "quote": "You can also board the ship after it materializes."},
+  {"section": "Exits", "quote": "Touch a reversed, out-of-focus party poster, and you will no-clip to another level."}
+ ]
+}

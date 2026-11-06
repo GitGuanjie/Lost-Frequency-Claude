@@ -1,0 +1,123 @@
+{
+ "stable_id": "L017",
+ "level_id": "17",
+ "title": "The Carrier",
+ "survival_class": "not stated",
+ "physical_identity": "Plane #17 resembles an early-to-mid-twentieth-century naval vessel interior: 217 identical athwartship passages with bulkhead doors and 42 compartments each.",
+ "scale_topology": "Finite indoor vessel of 217 sectors; passages in series by distance from the entrance; no deck structure stated.",
+ "anomalies": [
+  "Independent time per compartment",
+  "Humans fused to hull in Sector 217",
+  "Machine emitting blue light/tone/knocking",
+  "Occupant replaced by younger copy in 1982",
+  "Whispered prayer from empty closets"
+ ],
+ "lighting_sound": "Not stated generally; Sector 217 machine blue light, high-pitched tone and knocking; Sectors 200-206 cold.",
+ "entities": [
+  {
+   "name": "Human occupants / remains (per sector)",
+   "status": "REPORTED",
+   "behavior": "Varying hostility and cognition; interaction ill advised."
+  },
+  {
+   "name": "Naval-uniformed man, Sector 12",
+   "status": "CONFIRMED",
+   "behavior": "Insists civilians not allowed; does not interfere; cannot leave sector; replaced 1982."
+  },
+  {
+   "name": "Skinless man, Sector 165",
+   "status": "CONFIRMED",
+   "behavior": "Blocks access to the barracks."
+  },
+  {
+   "name": "216 infants (Sector 185) / 216 fused humans (Sector 217)",
+   "status": "CONFIRMED",
+   "behavior": "Living; stationary; infants on the bridge; fused humans in Sector 217."
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: unnamed human occupants incl. Sector 12 officer and skinless man",
+ "hazards": [
+  "Hostile human occupants",
+  "Cold in Sectors 200-206",
+  "Explosion damage Sector 8"
+ ],
+ "items_communities": [
+  "Naval charts",
+  "Project RAINBOW schematics",
+  "No communities stated"
+ ],
+ "entrances": [
+  {
+   "from": "Storage Zone 1 antechamber (closet)",
+   "from_id": null,
+   "slug": null,
+   "method": "Inconspicuous closet",
+   "trigger_type": "door",
+   "conditions": "closet location 'currently' in the Storage Zone 1 antechamber; the only known entrance",
+   "confidence": "CONFIRMED",
+   "quote": "Only known entrance and egress is through an inconspicuous closet, currently located in the Storage Zone 1 antechamber."
+  },
+  {
+   "from": "Level 18 -> Level 17 (stated only on Level 18's page)",
+   "from_id": "18",
+   "slug": "/level-18",
+   "method": "Level 18 page claims a rare consistent entrance on level-17; Level 17's page is silent about Level 18",
+   "trigger_type": "unknown",
+   "conditions": "Cross-page claim, not on this page",
+   "confidence": "UNKNOWN",
+   "quote": "not stated on this page"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Storage Zone 1 antechamber (closet)",
+   "to_id": null,
+   "slug": null,
+   "method": "Same closet as 'egress'",
+   "trigger_type": "door",
+   "conditions": "",
+   "risk": "Passes through up to 217 sectors; hostile occupants",
+   "confidence": "CONFIRMED",
+   "quote": "Only known entrance and egress is through an inconspicuous closet"
+  }
+ ],
+ "signature_mechanic": "A linear sequence of 217 bulkhead-separated passages entered through one closet, each sector offering a single documented anomaly.",
+ "verticality": "Not stated.",
+ "do_not": [
+  "Do not invent entities, hostile AI or chase scenes: the page names none.",
+  "Do not add other exits.",
+  "Do not assert a Level 18 link as article fact.",
+  "Do not state a survival class or give ambient sound text; not stated.",
+  "Do not make the plane a nexus; it is stated as unviable.",
+  "Do not give Project RAINBOW machine function beyond the listed tones/lights."
+ ],
+ "content_warnings": [
+  "corpses (infirmary with innumerable adult male corpses)",
+  "body horror (humans fused to bulkhead, skinless man)",
+  "infants (216 living human infants on the bridge)"
+ ],
+ "source_completeness": "UNUSUAL_FORMAT",
+ "conflicts_notes": "Page uses 'Plane #17' in prose though titled Level 17. Level 18 page claims a rare entrance on Level 17; this page does not mention it.",
+ "key_quotes": [
+  {
+   "section": "Intro",
+   "quote": "Only known entrance and egress is through an inconspicuous closet, currently located in the Storage Zone 1 antechamber."
+  },
+  {
+   "section": "Description",
+   "quote": "Plane #17 comprises a series of 217 athwartship passages of standard early-to-mid twentieth-century design."
+  },
+  {
+   "section": "Description",
+   "quote": "independent temporal operation of the individual compartments"
+  },
+  {
+   "section": "Sector table",
+   "quote": "Appears incapable of leaving Sector 12."
+  },
+  {
+   "section": "Sector table",
+   "quote": "Unknown machine is actively emitting a blue light, a high-pitched tone, and a knocking sound."
+  }
+ ]
+}

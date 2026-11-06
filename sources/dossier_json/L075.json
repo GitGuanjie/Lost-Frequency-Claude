@@ -1,0 +1,112 @@
+{
+ "stable_id": "L075",
+ "level_id": "75",
+ "title": "Liminality",
+ "survival_class": "SURVIVAL CLASS 0 (Resources 5/5 No Drinkable Fluids; Exit 0/5 Guaranteed Exit; Environment 0/5 No Environmental Risks; Entities 0/5 No Hostile Entities)",
+ "physical_identity": "The Sandrooms: corridors and rooms with floors covered in thick yellow sand, cracked blue, cream and red paint, sunlight-like light beams, toys in the sand, perpetual rain sound.",
+ "scale_topology": "Complex of corridors and rooms; extent not stated; impenetrable voidstone ceiling.",
+ "anomalies": [
+  "rain sound with no water (phantom sound)",
+  "light beams despite dead fixtures",
+  "rooms regenerate only over decades",
+  "entry is a random diversion that decreases with age"
+ ],
+ "lighting_sound": "Sunlight-like beams from arbitrary ceiling/wall spots; dead fixtures; constant soothing rain sound; 15 C dry air.",
+ "entities": [],
+ "entity_policy": "NO ENTITY PER SOURCE",
+ "hazards": [
+  "dry eyes and lips from dry air over long stays"
+ ],
+ "items_communities": [
+  "children's toys in the sand",
+  "deteriorated furniture",
+  "no bases, outposts or communities"
+ ],
+ "entrances": [
+  {
+   "from": "any level entrance (random diversion)",
+   "from_id": null,
+   "slug": null,
+   "method": "small chance when going through an entrance",
+   "trigger_type": "condition",
+   "conditions": "probability decreases with age; group average",
+   "confidence": "CONDITIONAL",
+   "quote": "there is a small chance of going to the Sandrooms instead"
+  },
+  {
+   "from": "Level 216 (Hub door)",
+   "from_id": "216",
+   "slug": "/level-216",
+   "method": "door in the Hub",
+   "trigger_type": "door",
+   "conditions": "testimony",
+   "confidence": "CONDITIONAL",
+   "quote": "instead of ending up in the museum, we arrived in some sandy corridor"
+  },
+  {
+   "from": "Level 25",
+   "from_id": "25",
+   "slug": "/level-25",
+   "method": "climbing through a broken window",
+   "trigger_type": "interact",
+   "conditions": "testimony; commenter names Level 40",
+   "confidence": "CONDITIONAL",
+   "quote": "we climbed through a broken window in level 25"
+  },
+  {
+   "from": "Level 1 / Level 2",
+   "from_id": "1",
+   "slug": "/level-1",
+   "method": "doorway to Level 1",
+   "trigger_type": "door",
+   "conditions": "testimony",
+   "confidence": "CONDITIONAL",
+   "quote": "instead of ending up in the concrete warehouse"
+  }
+ ],
+ "exits": [
+  {
+   "to": "the level originally intended",
+   "to_id": null,
+   "slug": null,
+   "method": "door in a sand-free room, or climb through a window",
+   "trigger_type": "door",
+   "conditions": "original destination before diversion",
+   "risk": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "will send the wanderer to the level they would have entered originally"
+  }
+ ],
+ "signature_mechanic": "Harmless nostalgic sand rooms with persistent footprints, rain sound without water and light shafts; exit through a sand-free door or window to the intended level.",
+ "verticality": "None; ceiling is impenetrable voidstone.",
+ "do_not": [
+  "add threats or entities",
+  "add food or water",
+  "add bases",
+  "allow breaking the ceiling",
+  "regenerate rooms in session"
+ ],
+ "content_warnings": [
+  "none significant (comment mentions a death)"
+ ],
+ "source_completeness": "PARTIAL",
+ "conflicts_notes": "A comment calls the destination 'level 40' when entering from Level 25. Exit door text is ambiguous ('room with no sand'). Most of the page is in-universe testimony.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "most of the floor covered by a thick layer of yellow sand"
+  },
+  {
+   "section": "Description",
+   "quote": "the sound of rain can be heard perpetually"
+  },
+  {
+   "section": "Description",
+   "quote": "Devoid of entities, it is peaceful here."
+  },
+  {
+   "section": "Entrances and Exits",
+   "quote": "there is a small chance of going to the Sandrooms instead"
+  }
+ ]
+}

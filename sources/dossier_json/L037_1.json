@@ -1,0 +1,98 @@
+{
+ "stable_id": "L037_1",
+ "level_id": "37.1",
+ "title": "The Sanguine Reservoir",
+ "survival_class": "not stated (class box shows unrendered {$one}, {$two}, {$three})",
+ "physical_identity": "A red-lit, darkened exact copy of the Level 37 tiled pool complex with viscous water and bright red sprouts as light.",
+ "scale_topology": "Same as Level 37; size not separately stated; indoor tiled pools.",
+ "anomalies": [
+  "Light sources attenuate progressively",
+  "Viscous, red-tinted water",
+  "Distant chants draw wanderers",
+  "Alleged rejuvenation/foresight/healing (rumour)"
+ ],
+ "lighting_sound": "Near darkness lit by bright red sprouts; faint distant chants, slithering sounds and whimpers.",
+ "entities": [
+  {
+   "name": "Ambassadors",
+   "status": "CONFIRMED",
+   "behavior": "Occasionally hover at high speed across the level to unknown destinations; usually ignore wanderers."
+  },
+  {
+   "name": "Unnamed elusive entity",
+   "status": "RUMORED",
+   "behavior": "Slithering sounds, whimpers; perhaps source of chants; one glitched frame with a multi-limbed figure."
+  },
+  {
+   "name": "ENTITY_01 / ENTITY_02 (transcript voices)",
+   "status": "REPORTED",
+   "behavior": "Two voices in a recovered camera recording discussing experiments; identity unknown."
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Ambassadors (confirmed); elusive entity rumoured",
+ "hazards": [
+  "Darkness",
+  "Viscous water",
+  "Chant-induced lure to submerge",
+  "Unknown entity (rumour)"
+ ],
+ "items_communities": [
+  "Damaged camera found by Suraj C."
+ ],
+ "entrances": [
+  {
+   "from": "Level 37 (Poolrooms)",
+   "from_id": "37",
+   "slug": "/level-37",
+   "method": "wandering deep through the Poolrooms; faint chanting draws wanderers; lights fade and water thickens",
+   "trigger_type": "walk_in",
+   "conditions": "gradual unnoticed transition; no specific location stated",
+   "confidence": "CONDITIONAL",
+   "quote": "Hidden past many layers of eerie shadows and twisted corridors is Level 37.1"
+  }
+ ],
+ "exits": [],
+ "signature_mechanic": "Crossing from Level 37 is unnoticed: lights fade, water thickens, then the chanting draws wanderers to submerge; no retreat.",
+ "verticality": "Same as Level 37; not separately described.",
+ "do_not": [
+  "Do not invent exits; the page has no Entrances and Exits section.",
+  "Do not make the water's healing or youth effects confirmed; they are rumours.",
+  "Do not make the elusive entity visible, hostile or named; evidence is sparse.",
+  "Do not add Level 37.2 as an edge; it appears only in the link list.",
+  "Do not treat the transcript as article-level fact (TESTIMONY).",
+  "Do not copy the 'black-highlighter / NuTerminal' CSS block into the game as content."
+ ],
+ "content_warnings": [
+  "Bodies in pools",
+  "Implied cult-like lure toward drowning",
+  "Implied experimentation on people"
+ ],
+ "source_completeness": "PARTIAL",
+ "conflicts_notes": "No exits stated. Properties are explicitly unverified rumours. 'Level 37.2' appears in the link list but not in the body.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "Structurally speaking, the level is an exact copy of Level 37"
+  },
+  {
+   "section": "Description",
+   "quote": "the progressive attenuation of all light sources, native or foreign"
+  },
+  {
+   "section": "Description",
+   "quote": "retracing their steps will be useless"
+  },
+  {
+   "section": "Phenomena",
+   "quote": "this information was mainly compiled from rumors and other stories that have not been verified"
+  },
+  {
+   "section": "Entities",
+   "quote": "the Ambassadors usually ignore any wanderers"
+  },
+  {
+   "section": "Discovery",
+   "quote": "We made sure they will come here themselves."
+  }
+ ]
+}

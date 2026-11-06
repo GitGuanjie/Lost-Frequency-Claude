@@ -1,0 +1,38 @@
+{
+ "stable_id": "L029", "level_id": "29", "title": "Hyperian",
+ "survival_class": "SURVIVAL DIFFICULTY CLASS 4; Exit: 4/5 Very Difficult to Exit; Environment: 3/5 High Environmental Risk; Entities: 5/5 Hostile Infestation",
+ "physical_identity": "A large island civilisation ringed by cliffs and mountains in a vast hazardous ocean; wooden towns, farms, a central trade hub (Hyperia), unique red-trunk white-leaf trees.",
+ "scale_topology": "Island of 2 166 000 km2, mountains ~56% of landmass; surrounded by lethal ocean; outer circle and mountain-protected inner circle.",
+ "anomalies": ["ocean destroys vessels", "Kraken magnetic whirlpool", "special wood stronger than aluminium", "Almond Water rivers from mountains", "pale pink sky with everlasting sun"],
+ "lighting_sound": "Pale pink sky with a permanent sun at the sea; rainbows over hills; surf and village life implied, not detailed.",
+ "entities": [
+  {"name": "The Kraken", "status": "CONFIRMED", "behavior": "Sleeps deep offshore; magnetic whirlpool traps boats"},
+  {"name": "~200 ocean entities", "status": "REPORTED", "behavior": "Estimated unique ocean entities, none documented"},
+  {"name": "Strange enormous entities", "status": "REPORTED", "behavior": "Sighted beyond the island"}
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: the Kraken offshore; unnamed ocean entities as reports; no land entities named",
+ "hazards": ["ocean destroys ships", "whirlpool", "mountain terrain and coast lethal temperatures", "inter-society conflicts"],
+ "items_communities": ["Almond Water rivers", "iron and copper veins", "special red wood", "~25,000 inhabitants in Wanderer Nations", "Hyperia trade hub"],
+ "entrances": [
+  {"from": "Level 7", "from_id": "7", "slug": "/level-7", "method": "Sail far beyond the ocean until pale pink sky", "trigger_type": "vehicle", "conditions": "long voyage", "confidence": "CONFIRMED", "quote": "one must traverse far beyond Level 7"},
+  {"from": "Level 25", "from_id": "25", "slug": "/level-25", "method": "Arcade machine", "trigger_type": "interact", "conditions": "none stated", "confidence": "CONFIRMED", "quote": "Alternatively you can enter via an arcade machine on Level 25"}
+ ],
+ "exits": [
+  {"to": "Level 114", "to_id": "114", "slug": "/level-114", "method": "Sail several days away from the island", "trigger_type": "vehicle", "conditions": "theoretical; water destroys ships", "risk": "death in all attempts", "confidence": "DANGEROUS+UNKNOWN", "quote": "all attempts result in the death of the wanderers"},
+  {"to": "Level 284", "to_id": "284", "slug": "/level-284", "method": "Same ocean crossing", "trigger_type": "vehicle", "conditions": "theoretical", "risk": "death in all attempts", "confidence": "DANGEROUS+UNKNOWN", "quote": "one would theoretically end up in Level 114 or Level 284"}
+ ],
+ "signature_mechanic": "Safe civilised island enclosed by an ocean that kills any ship; the only exit is nearly impossible.",
+ "verticality": "Mountain belt and hill watchtowers; no towers.",
+ "do_not": ["make the ocean safely passable", "place the Kraken near the island", "claim a confirmed sea exit", "invent land monsters"],
+ "content_warnings": ["deaths at sea"],
+ "source_completeness": "PARTIAL",
+ "conflicts_notes": "Banner: page being rewritten. Footnotes 1-3 missing. Header says 5/5 Hostile Infestation but only the Kraken and unnamed ocean entities are described. Page calls it the 30th level.",
+ "key_quotes": [
+  {"section": "Description", "quote": "break apart even the strongest boats"},
+  {"section": "The Kraken", "quote": "Any boats passing by will never return"},
+  {"section": "Entities", "quote": "an estimated 200 entities unique to Level 29 that all reside in the ocean"},
+  {"section": "Bases, Communities and Outposts", "quote": "Around 25,000 inhabitants."},
+  {"section": "Entrances and Exits", "quote": "the sky turns into a pale, pink colour"},
+  {"section": "Entrances and Exits", "quote": "all attempts result in the death of the wanderers"}
+ ]
+}

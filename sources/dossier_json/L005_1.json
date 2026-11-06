@@ -1,0 +1,120 @@
+{
+ "stable_id": "L005_1",
+ "level_id": "5.1",
+ "title": "GRAND OPENING OF THE TERROR HOTEL CASINO",
+ "survival_class": "not stated",
+ "physical_identity": "Large Vegas-style casino sub-section inside Level 5's Beverly Room, owned by Entity 18; dim flashing lights, loud games, carpet, bar.",
+ "scale_topology": "Single finite indoor casino, estimated capacity ~5000; no vertical structure stated.",
+ "anomalies": [
+  "Games allegedly rigged/self-malfunctioning (unproven)",
+  "16 h open / 8 h closed cycle",
+  "Visitors who lose Beast's wager become staff, transformed"
+ ],
+ "lighting_sound": "Dim lights that flash periodically; constant machine noise, blaring music, crowd cheering/jeering, clinking chips, A/C breeze.",
+ "entities": [
+  {
+   "name": "Entity 18 (The Beast of Level 5 / 'Mr. Gentleman')",
+   "status": "CONFIRMED",
+   "behavior": "Owner; roams the grounds; offers card-game wagers (riches vs staff servitude); never lost."
+  },
+  {
+   "name": "Entity 135 (The Bellhopper)",
+   "status": "CONFIRMED",
+   "behavior": "Appears in the log making excited bell-ringing noises beside the Beast (TESTIMONY)."
+  },
+  {
+   "name": "Entity 164 (The Barkeeper / Barkeep)",
+   "status": "CONFIRMED",
+   "behavior": "Runs the bar; slow halting speech; sells drinks for bartered goods/chips."
+  },
+  {
+   "name": "Entity 185 (The Comedian)",
+   "status": "REPORTED",
+   "behavior": "Log only: heckled off stage, then put on chip-trading duty (TESTIMONY)."
+  },
+  {
+   "name": "Louie Sulphur (casino manager)",
+   "status": "CONFIRMED",
+   "behavior": "Transformed ex-researcher; roams floors offering food/drink; no prior memory."
+  },
+  {
+   "name": "Casino staff incl. Peg-Leg and Sir Billiard ('Billy')",
+   "status": "CONFIRMED",
+   "behavior": "Humanoid themed staff; Peg-Leg welcomes customers, Billy plays card games (sketch captions)."
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Entity 18, Bellhopper (135), Barkeeper (164), Comedian (185), Louie Sulphur, casino staff",
+ "hazards": [
+  "Addictive games",
+  "Beast wager leads to servitude/transformation",
+  "Unpredictable staff retaliation if provoked"
+ ],
+ "items_communities": [
+  "Poker-like chips (red/blue/yellow/green)",
+  "Trade goods: Almond Water, Memory Jars, Royal Rations, etc.",
+  "No communities or outposts"
+ ],
+ "entrances": [
+  {
+   "from": "Level 5 (The Beverly Room)",
+   "from_id": "5",
+   "slug": "/level-5",
+   "method": "Walk through the casino's front doors.",
+   "trigger_type": "door",
+   "conditions": "Entering and exiting only via front doors; open 16 h / closed 8 h cycle.",
+   "confidence": "CONFIRMED",
+   "quote": "The only way to enter and exit is through the front doors of the casino in Level 5"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 5 (The Beverly Room)",
+   "to_id": "5",
+   "slug": "/level-5",
+   "method": "Leave through the same front doors; chips may be traded for goods when leaving.",
+   "trigger_type": "door",
+   "conditions": "Beast's wager, if lost, binds the player to staff service ('no going back').",
+   "risk": "Gambling losses; losing a Beast wager means servitude/transformation.",
+   "confidence": "CONFIRMED",
+   "quote": "The only way to enter and exit is through the front doors of the casino in Level 5"
+  }
+ ],
+ "signature_mechanic": "Chip-gambling economy under a Beast who never loses: play machines, trade chips for goods, risk a winner-targeted wager that ends in staff servitude.",
+ "verticality": "none stated",
+ "do_not": [
+  "Do not treat the audio log events as article facts; mark as testimony.",
+  "Do not add exits other than the front doors.",
+  "Do not invent a $50 chip as real; it is rumoured only.",
+  "Do not add a survival class; none is stated.",
+  "Do not make staff hostile by default; page says generally passive."
+ ],
+ "content_warnings": [
+  "mind-control / body transformation of a character (eye replaced by billiard ball, limbs by pool sticks)",
+  "gambling addiction theme",
+  "implied death/loss of a researcher"
+ ],
+ "source_completeness": "NARRATIVE_FORMAT",
+ "conflicts_notes": "Page is a layered fiction (log + emails + draft); log is testimony. Roster title 'Grand Opening of the Terror Hotel Casino' vs page title with quotes in caps. Survival class not stated.",
+ "key_quotes": [
+  {
+   "section": "Draft header",
+   "quote": "Level 5.1 is a large casino within Level 5 that is owned by Entity 18."
+  },
+  {
+   "section": "Description",
+   "quote": "The casino is open for a period of 16 hours, and closed for a period of 8 before repeating the cycle."
+  },
+  {
+   "section": "Description",
+   "quote": "the lights are dim and flash periodically, the games constantly emit obnoxious sounds"
+  },
+  {
+   "section": "Entities",
+   "quote": "Thus far, the Beast has never lost a single game."
+  },
+  {
+   "section": "Entrances and Exits",
+   "quote": "The only way to enter and exit is through the front doors of the casino in Level 5"
+  }
+ ]
+}

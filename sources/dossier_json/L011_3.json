@@ -1,0 +1,41 @@
+{
+ "stable_id": "L011_3", "level_id": "11.3", "title": "The Red Light District",
+ "survival_class": "not stated",
+ "physical_identity": "Corrupted night city of steel and glass, a malevolent descendant of the Endless City; moonless sky lit by crimson city lights; psychoactive air; buildings bare and gutted.",
+ "scale_topology": "Outdoor city, size unknown and possibly expanding; low-density outskirts to dense towers at core; bridges over a large body of water at the edge.",
+ "anomalies": ["air causes hallucinations and suggestibility", "masks mitigate it", "red lightning storms", "the Vortex storm-gate (never seen directly)", "no humans exist, any seen is deception"],
+ "lighting_sound": "Moonless sky, crimson light from the city; sweltering damp to icy drizzle with red lightning; a 'sadistic hum' near The Embassy.",
+ "entities": [
+  {"name": "Servants (Entity 187)", "status": "CONFIRMED", "behavior": "Stalk in groups, herd to dead ends, capture and restrain"},
+  {"name": "Ambassadors (Entity 141)", "status": "CONFIRMED", "behavior": "Active around The Embassy; floating cubes per recording"},
+  {"name": "The Daughter", "status": "REPORTED", "behavior": "Named in recording as sending victims via the Vortex"},
+  {"name": "Level 6.2 entity", "status": "REPORTED", "behavior": "Deceives wanderers who end up imprisoned here"}
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Servants, Ambassadors (testimony: The Daughter)",
+ "hazards": ["psychoactive air hallucinations", "Servant stalking and capture", "enclosed spaces", "guarded exit bridges", "fear overwhelm"],
+ "items_communities": ["no communities", "facial coverings/masks mitigate contaminant", "claimed powerful artifacts unproven"],
+ "entrances": [
+  {"from": "Level 11 (Endless City outskirts)", "from_id": "11", "slug": "/level-11", "method": "Find dark alleyways, red-windowed buildings, or guarded bridges at the outskirts", "trigger_type": "walk_in", "conditions": "find specific features", "confidence": "CONFIRMED", "quote": "searching for dark alleyways, buildings with glowing red windows"},
+  {"from": "Level 6.2", "from_id": "6.2", "slug": "/level-6-2", "method": "Seduced by the entity there; imprisoned here via the Vortex", "trigger_type": "condition", "conditions": "deceived by entity", "confidence": "CONDITIONAL", "quote": "Those seduced by Level 6.2 are ultimately imprisoned within the Red Light District"},
+  {"from": "Unknown", "from_id": null, "slug": null, "method": "Other access points", "trigger_type": "unknown", "conditions": "unknown", "confidence": "UNKNOWN", "quote": "additional points of access exist than are currently known"}
+ ],
+ "exits": [
+  {"to": "Level 11", "to_id": "11", "slug": "/level-11", "method": "Bridges over water at the outskirts", "trigger_type": "walk_in", "conditions": "bridges usually guarded", "risk": "capture by guards", "confidence": "CONFIRMED+DANGEROUS", "quote": "they are usually guarded to prevent all escape"},
+  {"to": "Further exits", "to_id": null, "slug": null, "method": "Hypothesised", "trigger_type": "unknown", "conditions": "unknown", "risk": "unknown", "confidence": "UNKNOWN", "quote": "Further exits are hypothesized, but remain undetermined"}
+ ],
+ "signature_mechanic": "Red-lit empty city whose air causes hallucinations (masks mitigate) while Servants stalk at a distance, herd the player into enclosed spaces, then capture; only known way out is guarded outskirts bridges.",
+ "verticality": "Towers exist toward the core; interiors bare. Vortex is high in sky, not reachable.",
+ "do_not": ["add human NPCs", "make Servants instantly hostile", "render Vortex as an exit", "furnish buildings", "fix a map size"],
+ "content_warnings": ["hallucination/mind control theme", "captivity and enslavement threat"],
+ "source_completeness": "PARTIAL",
+ "conflicts_notes": "Page body is a themed (CSS) layout. Link list includes Level 11.2 and 11.4 (navigation) not discussed in body. Interior content and exits are explicitly unknown.",
+ "key_quotes": [
+  {"section": "Description", "quote": "irredeemably corrupted hellscape of steel and glass"},
+  {"section": "Description", "quote": "it can be mitigated by wearing facial coverings or masks"},
+  {"section": "Description", "quote": "Water systems are non-functional throughout Level 11.3"},
+  {"section": "Entities", "quote": "There are no humans in the Red Light District. If you encounter one, it is a deception."},
+  {"section": "Entities", "quote": "Avoid enclosed spaces and do not rest."},
+  {"section": "The Vortex", "quote": "It has never been seen directly"},
+  {"section": "Exits", "quote": "Take caution, as they are usually guarded to prevent all escape."}
+ ]
+}

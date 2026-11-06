@@ -1,0 +1,35 @@
+{
+ "stable_id": "L010", "level_id": "10", "title": "Bumper Crop",
+ "survival_class": "SURVIVAL DIFFICULTY CLASS 1; Exit 2/5 Somewhat Difficult to Exit; Environment 1/5 Low Environmental Risk; Entities 0/5 No Hostile Entities",
+ "physical_identity": "Endless pasture of wheat and barley fields divided into plots by tree and shrub lines, under a permanently overcast sky, with lakes, barns, sheds and dirt tracks.",
+ "scale_topology": "Infinite outdoor plain, flat; soil only one metre deep above a mass of worms; lakes below one consistent elevation.",
+ "anomalies": ["hedges never outgrow each other", "dirt tracks that do not regrow and bear no vehicles", "soil one metre deep over writhing worms", "wheat reported never to decompose (testimony)"],
+ "lighting_sound": "Overcast leaden sky, constant daylight, rare light rain and fog; wind gusts among crops.",
+ "entities": [{"name": "Soil worms", "status": "CONFIRMED", "behavior": "Wormlike, below 1 m of soil; surge out if dug deeper"}],
+ "entity_policy": "SOURCED ENTITIES ONLY: soil worms",
+ "hazards": ["worm surge when digging below 1 m", "difficulty keeping track of time"],
+ "items_communities": ["wood and nails in sheds and barns", "drinkable lake water", "wheat (harvest halted by M.E.G.)", "no dedicated outposts"],
+ "entrances": [
+  {"from": "Level 9", "from_id": "9", "slug": "/level-9", "method": "Walkways leading to grass fields", "trigger_type": "walk_in", "conditions": "may lead", "confidence": "CONDITIONAL", "quote": "Walkways in Level 9 that lead to grass fields may lead one to this level."},
+  {"from": "Level 11", "from_id": "11", "slug": "/level-11", "method": "Back road in certain streets", "trigger_type": "walk_in", "conditions": "certain streets", "confidence": "CONFIRMED", "quote": "you can find a back road that leads to Level 10"},
+  {"from": "Level 25", "from_id": "25", "slug": "/level-25", "method": "Arcade machine", "trigger_type": "interact", "conditions": "none stated", "confidence": "CONFIRMED", "quote": "Enter via an arcade machine in Level 25."}
+ ],
+ "exits": [
+  {"to": "Level 11", "to_id": "11", "slug": "/level-11", "method": "Follow a dirt road a prolonged distance", "trigger_type": "walk_in", "conditions": "prolonged distance", "risk": "low", "confidence": "CONDITIONAL", "quote": "may eventually lead one to Level 11"},
+  {"to": "Level 184", "to_id": "184", "slug": "/level-184", "method": "Enter a canola patch among the wheat", "trigger_type": "walk_in", "conditions": "find a canola patch", "risk": "not stated", "confidence": "CONFIRMED", "quote": "entering it will lead one into Level 184"},
+  {"to": "Aquatic levels (unspecified)", "to_id": null, "slug": null, "method": "Swim into a lake", "trigger_type": "swim", "conditions": "research into destinations is underway", "risk": "not stated", "confidence": "UNKNOWN", "quote": "Swimming into a lake can lead one to a number of aquatic levels"}
+ ],
+ "signature_mechanic": "Calm endless farmland whose only danger is digging below a 1 m soil crust into a worm mass; unused vehicle tracks lead onward.",
+ "verticality": "None; flat plain with single-storey barns.",
+ "do_not": ["spawn vehicles", "let tracks regrow", "add day-night cycle", "add hostile surface entities", "force the narrator story"],
+ "content_warnings": ["implied parental deaths in testimony"],
+ "source_completeness": "COMPLETE",
+ "conflicts_notes": "Interleaved first-person family story mentions entering at Level 1 and passing 4,5,6,8; unreliable. Narrator says wheat never rots while article says it appears safe.",
+ "key_quotes": [
+  {"section": "Description", "quote": "an expansive pasture of wheat and barley fields stretching endlessly in all directions"},
+  {"section": "Description", "quote": "no such vehicles have ever been observed on Level 10"},
+  {"section": "Entities", "quote": "only one meter deep before giving way to the mass of worms"},
+  {"section": "Bases, Communities and Outposts", "quote": "Level 10 has no dedicated outposts within it"},
+  {"section": "Exits", "quote": "entering it will lead one into Level 184"}
+ ]
+}

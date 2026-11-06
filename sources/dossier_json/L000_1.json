@@ -1,0 +1,94 @@
+{
+ "stable_id": "L000_1",
+ "level_id": "0.1",
+ "title": "Zenith Station",
+ "survival_class": "not stated",
+ "physical_identity": "Enormous damaged metal-and-glass space-station megastructure embedded in Level 0; believed to be a thick spherical shell around a hollow centre, with bedrooms, kitchens, gyms, greenhouses.",
+ "scale_topology": "Very large, indoor, believed wholly inside Level 0; spherical shell dozens of city blocks thick; far from fully mapped.",
+ "anomalies": [
+  "Level 0 seen from inside appears as stacked identical floors",
+  "Retains Level 0 hallucinations and impossibility of meeting other wanderers",
+  "Climate extremes by damage zone"
+ ],
+ "lighting_sound": "Mostly bright and about room temperature; damaged parts nearly dark. Sound not stated.",
+ "entities": [],
+ "entity_policy": "NO ENTITY PER SOURCE",
+ "hazards": [
+  "extreme cold or heat unsurvivable in damaged sections",
+  "near-total darkness in damaged sections",
+  "visual/auditory hallucinations",
+  "difficulty leaving"
+ ],
+ "items_communities": [
+  "valuable materials harvested by B.N.T.G. (believed)",
+  "no outposts; not viable to live",
+  "working automatons clean and cook"
+ ],
+ "entrances": [
+  {
+   "from": "Level 0",
+   "from_id": "0",
+   "slug": "/level-0",
+   "method": "walk from one section to another",
+   "trigger_type": "walk_in",
+   "conditions": "extremely unlikely to encounter; B.N.T.G. may have secret method",
+   "confidence": "CONFIRMED",
+   "quote": "simply walking from one section to another"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 0",
+   "to_id": "0",
+   "slug": "/level-0",
+   "method": "travel back to parent level",
+   "trigger_type": "walk_in",
+   "conditions": "none stated",
+   "risk": "Level 0 dangers",
+   "confidence": "CONFIRMED",
+   "quote": "simply travelling back to its parent level"
+  },
+  {
+   "to": "Level 1",
+   "to_id": "1",
+   "slug": "/level-1",
+   "method": "random noclipping",
+   "trigger_type": "noclip",
+   "conditions": "random",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "exited by random noclipping, usually leading to Level 1"
+  }
+ ],
+ "signature_mechanic": "Damaged station modules with per-module light/temperature states (normal, dark, lethal hot/cold) and hallucination cues; sliding doors; no other wanderers.",
+ "verticality": "Not stated beyond the shell structure; keep modest; stacked-floors view of Level 0 is a vista only.",
+ "do_not": [
+  "add populated hub or outposts",
+  "make Ria Valpuri a guaranteed NPC",
+  "treat spherical shape as confirmed",
+  "add hostile robots or named entities"
+ ],
+ "content_warnings": [
+  "none significant"
+ ],
+ "source_completeness": "PARTIAL",
+ "conflicts_notes": "Opening and closing vignette (Ria Valpuri) is narrative; closing paragraph describes Level 0 halls, not the station. Sphere shape is only 'believed'.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "an enormous megastructure found embedded in Level 0"
+  },
+  {
+   "section": "Description",
+   "quote": "extreme cold or heat to the point of unsurvivability"
+  },
+  {
+   "section": "Description",
+   "quote": "the impossibility of coming into contact with other wanderers"
+  },
+  {
+   "section": "Entrances and Exits",
+   "quote": "exited by random noclipping, usually leading to Level 1"
+  }
+ ]
+}

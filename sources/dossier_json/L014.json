@@ -1,0 +1,33 @@
+{
+ "stable_id": "L014", "level_id": "14", "title": "Paradise",
+ "survival_class": "not stated",
+ "physical_identity": "A night forest oasis with crashing waterfalls, crimson dew-wet grass and an eternally starlit sky, narrated in second person as a lure; guests lie in the soil with glistening bones.",
+ "scale_topology": "Not stated; described as a forest basin. No measurements or structures given.",
+ "anomalies": ["voices whisper and a cacophony replaces thought", "bodies lying in soil", "children in rows howling at the moon", "reader is persuaded to surrender"],
+ "lighting_sound": "Starlit night with moonlight; waterfalls, whispering forest, cacophony, beautiful howling.",
+ "entities": [],
+ "entity_policy": "NO ENTITY PER SOURCE",
+ "hazards": ["psychological persuasion to stay", "mind erasure", "no stated exit"],
+ "items_communities": ["no bases or items stated", "a collective speaking as we in the lure text"],
+ "entrances": [
+  {"from": "Not stated", "from_id": null, "slug": null, "method": "Article says keep going; interviewee claims stretching a hole in his brain", "trigger_type": "unknown", "conditions": "none literal", "confidence": "UNKNOWN", "quote": "You know how to get there by now. Just keep going."}
+ ],
+ "exits": [
+  {"to": "Not stated", "to_id": null, "slug": null, "method": "No exit given; interviewee will not say how he left", "trigger_type": "unknown", "conditions": "none stated", "risk": "psychological", "confidence": "UNKNOWN", "quote": "You won’t have to worry about that."}
+ ],
+ "signature_mechanic": "A lovely night forest that coaxes the visitor to surrender and stay; the page withholds entrance and exit.",
+ "verticality": "None stated; waterfalls are scenery only.",
+ "do_not": ["invent a numbered exit", "add hostile chasers", "treat lure prose as a safe haven", "treat the interview as article fact"],
+ "content_warnings": ["bodies and bones", "mind erasure", "suicide-adjacent surrender lure", "children imagery"],
+ "source_completeness": "UNUSUAL_FORMAT",
+ "conflicts_notes": "Prose is second-person and deceptive; interview log is TESTIMONY. Survival class absent. Link list contains author-page navigation only.",
+ "key_quotes": [
+  {"section": "Description", "quote": "The crimson grass, wet with dew."},
+  {"section": "Description", "quote": "The eternally starlit sky."},
+  {"section": "Description", "quote": "their bones glistening in the moonlight"},
+  {"section": "Bases, Outposts, and Communities", "quote": "Children line up in rows."},
+  {"section": "Entrances", "quote": "You know how to get there by now. Just keep going."},
+  {"section": "Exits", "quote": "You won’t have to worry about that."},
+  {"section": "M.E.G. Interview Log", "quote": "You wouldn't want to leave anyway."}
+ ]
+}

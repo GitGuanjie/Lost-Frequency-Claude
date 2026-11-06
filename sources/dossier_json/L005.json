@@ -1,0 +1,58 @@
+{
+ "stable_id": "L005", "level_id": "5", "title": "Terror Hotel",
+ "survival_class": "not stated",
+ "physical_identity": "Infinite 1930s-style hotel complex with 1920s furniture; mahogany/gold wallpaper, wood/marble/carpet floors, self-cleaning surfaces, random smooth jazz. Three accessible areas: Main Hall, Beverly Room, Boiler Room.",
+ "scale_topology": "Infinite indoor hotel; three linked areas; elevators lead to floors 1-382 but 1-12 only move within the level.",
+ "anomalies": ["surfaces clean themselves within minutes", "random jazz from vintage sound system", "wallpaper faces reported (questionable)", "doors with patternless room numbers, some open/close randomly", "elevator floors 13+ mean death or disappearance", "Beverly Room unfinishable Mahjong game repels", "rumored forgotten 'Lobby Room'"],
+ "lighting_sound": "Antique candle holders, some electric lamps that buzz like Level 0; quiet jazz, party chatter behind walls, boiler machinery and dripping.",
+ "entities": [
+  {"name": "Deathmoths", "status": "CONFIRMED", "behavior": "Large population/central hive; swarm halls from dark rooms; Females stay in nests"},
+  {"name": "Hounds, Woodlins, Skin-Stealers, Watchers, Nguithr'xurh, Growlers, Deathrats", "status": "CONFIRMED", "behavior": "Listed as known to appear; no behaviour given"},
+  {"name": "Entity 26 (Samantha)", "status": "REPORTED", "behavior": "Wanders Main Hall; approach with high-quality meat"},
+  {"name": "Entity 89 (Ants)", "status": "REPORTED", "behavior": "Reports only"},
+  {"name": "Wrangler", "status": "REPORTED", "behavior": "One report in Boiler Room"}
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Deathmoths (swarms), plus listed Hounds, Woodlins, Skin-Stealers, Watchers, Nguithr'xurh, Growlers, Deathrats; Entity 26, Entity 89, Wrangler as reports",
+ "hazards": ["elevator floors 13+ death/disappearance", "extreme Boiler Room heat toward Level 6", "Deathmoth swarms", "unseen presence/whispers (reports)"],
+ "items_communities": ["Almond Water in boiler pipes", "M.E.G. Outpost Housekeeping (guides through Boiler Room)", "Homely Hotel (Main Hall hotel service; bases also in Level 11, 230)", "The Originals (~31 members from 1300-1940, in a Beverly Room)", "The Lost Hall Society (remnants in Level 5.3)"],
+ "entrances": [
+  {"from": "Level 3", "from_id": "3", "slug": "/level-3", "method": "Access an elevator", "trigger_type": "elevator", "conditions": "none stated", "confidence": "CONFIRMED", "quote": "Access an elevator in Level 3"},
+  {"from": "Level 25", "from_id": "25", "slug": "/level-25", "method": "Use an arcade", "trigger_type": "interact", "conditions": "none stated", "confidence": "CONFIRMED", "quote": "Use an arcade in Level 25"},
+  {"from": "Level 4", "from_id": "4", "slug": "/level-4", "method": "Old-fashioned stairway", "trigger_type": "stairs", "conditions": "none", "confidence": "CONFIRMED", "quote": "Follow an old-fashioned stairway in Level 4"},
+  {"from": "Level 19", "from_id": "19", "slug": "/level-19", "method": "Damaged door", "trigger_type": "door", "conditions": "find one", "confidence": "CONFIRMED", "quote": "Finding a damaged door in Level 19 will lead you to Level 5"},
+  {"from": "Level 126", "from_id": "126", "slug": null, "method": "Survive the eroded state", "trigger_type": "condition", "conditions": "survive state", "confidence": "CONDITIONAL", "quote": "Survive the 'eroded state' in Level 126 to enter Level 5"},
+  {"from": "Level 54", "from_id": "54", "slug": "/level-54", "method": "Some unlocked doors", "trigger_type": "door", "conditions": "some doors only", "confidence": "CONDITIONAL", "quote": "Some of the unlocked doors in Level 54 can lead to this level"},
+  {"from": "Level 10", "from_id": "10", "slug": "/level-10", "method": "Houses", "trigger_type": "door", "conditions": "may lead", "confidence": "RUMORED", "quote": "Houses in Level 10 may lead to Level 5"},
+  {"from": "Level 82", "from_id": "82", "slug": "/level-82", "method": "Door in entrance hall", "trigger_type": "door", "conditions": "rare", "confidence": "CONDITIONAL", "quote": "can rarely lead to Level 5"},
+  {"from": "Level 92", "from_id": "92", "slug": null, "method": "Some doors; or not leaving an apartment in Event 3", "trigger_type": "door", "conditions": "Event 3 variant", "confidence": "CONDITIONAL", "quote": "Some of the doors in Level 92 will lead to Level 5"},
+  {"from": "Level 4.2", "from_id": "4.2", "slug": null, "method": "Certain doors", "trigger_type": "door", "conditions": "certain doors", "confidence": "CONDITIONAL", "quote": "Certain doors in Level 4.2 can lead to Level 5"}
+ ],
+ "exits": [
+  {"to": "Level 3", "to_id": "3", "slug": "/level-3", "method": "Re-board the elevator", "trigger_type": "elevator", "conditions": "arrived by elevator", "risk": "low", "confidence": "CONFIRMED", "quote": "Get back on the elevator to re-enter Level 3"},
+  {"to": "Level 4", "to_id": "4", "slug": "/level-4", "method": "Return up the stairs", "trigger_type": "stairs", "conditions": "arrived by stairs", "risk": "low", "confidence": "CONFIRMED", "quote": "Return back up the stairs to re-enter Level 4"},
+  {"to": "Level 6", "to_id": "6", "slug": "/level-6", "method": "Travel deep into the Boiler Room", "trigger_type": "walk_in", "conditions": "Boiler Room depth", "risk": "extreme heat", "confidence": "CONFIRMED+DANGEROUS", "quote": "not advised due to the extreme heat"},
+  {"to": "Level 9", "to_id": "9", "slug": "/level-9", "method": "Dark wooden door", "trigger_type": "door", "conditions": "none", "risk": "unstated", "confidence": "CONFIRMED", "quote": "Taking a dark wooden door can lead to Level 9"},
+  {"to": "Level 63", "to_id": "63", "slug": "/level-63", "method": "Open door on wall/floor/ceiling with forest scenery", "trigger_type": "door", "conditions": "forest scenery", "risk": "unstated", "confidence": "CONFIRMED", "quote": "forest scenery will lead to Level 63"},
+  {"to": "Level 98", "to_id": "98", "slug": "/level-98", "method": "Metal door in Main Hall (listed twice)", "trigger_type": "door", "conditions": "Main Hall", "risk": "unstated", "confidence": "CONFIRMED", "quote": "Enter a metal door found in The Main Hall to enter Level 98"},
+  {"to": "Level 427", "to_id": "427", "slug": "/level-427", "method": "Wooden door after lights flicker in unison", "trigger_type": "condition", "conditions": "synchronised flicker", "risk": "unstated", "confidence": "CONDITIONAL", "quote": "If flickering lights occur in unison, then a wooden door will appear"},
+  {"to": "Level 40", "to_id": "40", "slug": "/level-40", "method": "Play arcade cabinet in Boiler Room", "trigger_type": "interact", "conditions": "Boiler Room cabinet", "risk": "unstated", "confidence": "CONFIRMED", "quote": "Playing an arcade cabinet in The Boiler Room will lead you to Level 40"},
+  {"to": "Level 78", "to_id": "78", "slug": "/level-78", "method": "Airlock-like door via Boiler Room", "trigger_type": "door", "conditions": "via Boiler Room", "risk": "unstated", "confidence": "CONFIRMED", "quote": "Enter an airlock-like door within Level 5 via The Boiler Room"},
+  {"to": "Level 84", "to_id": "84", "slug": "/level-84", "method": "Large wooden gate in Beverly Room", "trigger_type": "door", "conditions": "rare", "risk": "unstated", "confidence": "CONDITIONAL", "quote": "A large wooden gate rarely found in The Beverly Room"},
+  {"to": "Level 171", "to_id": "171", "slug": "/level-171", "method": "M.E.G.-secured hotel wing", "trigger_type": "walk_in", "conditions": "M.E.G. wing", "risk": "unstated", "confidence": "CONFIRMED", "quote": "A wing of the hotel secured by M.E.G. will lead to Level 171"}
+ ],
+ "signature_mechanic": "Infinite hotel with floor-numbered elevators: floors 1-12 relocate within the level, 13+ means death/disappearance; Beverly Room hub with many doors leading mostly to Main Hall, sometimes Boiler Room.",
+ "verticality": "None real: elevators for floors 1-12 stay on the same floor; above 12 unknown.",
+ "do_not": ["render floors above 12", "make wallpaper faces real", "make Mahjong game finishable", "invent a Lobby Room", "add unlisted exits"],
+ "content_warnings": ["entity predation implied (Skin-Stealers)", "death by elevator"],
+ "source_completeness": "COMPLETE",
+ "conflicts_notes": "Level 98 metal-door exit listed twice. Level 126, 92, 4.2 have no link slug in the snapshot link list. Page ends with a joke aside to Entity 18's office.",
+ "key_quotes": [
+  {"section": "Description", "quote": "an infinite hotel complex with many rooms and halls"},
+  {"section": "Description", "quote": "It seems to clean itself, as unclean spots disappear only a few minutes after appearing."},
+  {"section": "The Main Hall", "quote": "13 or higher will either result in death or disappearance."},
+  {"section": "The Main Hall", "quote": "It is unknown what is above floor 12."},
+  {"section": "The Beverly Room", "quote": "this object forces a desire to stay away from it"},
+  {"section": "The Boiler Room", "quote": "Maintenance elevators are present, but it is not advised to use them."},
+  {"section": "The Boiler Room", "quote": "Normal entities are fairly scarce in Level 5."}
+ ]
+}

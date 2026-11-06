@@ -1,0 +1,355 @@
+{
+ "stable_id": "L025",
+ "level_id": "25",
+ "title": "Level 25 - \"The Quarter Hub\"",
+ "survival_class": "not stated",
+ "physical_identity": "A long-abandoned, ransacked video game arcade of echoey rooms with maroon walls, dust and wrecked 1980s-style cabinets; rare working cabinets teleport to other levels.",
+ "scale_topology": "Finite indoor rooms and hallways, about 8.5 mi north-south by 9.2 mi east-west (article); notes say 8-10 miles.",
+ "anomalies": [
+  "Working cabinets teleport to predetermined levels",
+  "Return cabinet always within about 100 ft",
+  "Cabinet art unrelated to destination"
+ ],
+ "lighting_sound": "Not stated for light; rooms are echoey; dripping water from pipes (notes).",
+ "entities": [],
+ "entity_policy": "NO ENTITY PER SOURCE",
+ "hazards": [
+  "Mostly broken cabinets",
+  "Patchy functionality",
+  "Mould, faulty outlets (notes)"
+ ],
+ "items_communities": [
+  "Quarters in boxes and corners",
+  "Almond Water and snacks in boilers/boxes",
+  "Notes left by the author near arrival",
+  "No bases, communities or outposts"
+ ],
+ "entrances": [
+  {
+   "from": "Level 4",
+   "from_id": "4",
+   "slug": "/level-4",
+   "method": "Janitor's-closet-like door in isolated small rooms",
+   "trigger_type": "door",
+   "conditions": "Occasionally spotted",
+   "confidence": "CONFIRMED",
+   "quote": "a single door resembling that of a janitors closet can occasionally be spotted"
+  },
+  {
+   "from": "Other levels with tethered arcade cabinets",
+   "from_id": null,
+   "slug": null,
+   "method": "Insert quarter into cabinet",
+   "trigger_type": "item",
+   "conditions": "Cabinet must work",
+   "confidence": "CONFIRMED",
+   "quote": "another arcade machine will always be discoverable either behind the wanderer"
+  },
+  {
+   "from": "Level 12",
+   "from_id": "12",
+   "slug": "/level-12",
+   "method": "Escape route in Level 12",
+   "trigger_type": "condition",
+   "conditions": "Not detailed here",
+   "confidence": "CONDITIONAL",
+   "quote": "Enter via the escape route in Level 12"
+  },
+  {
+   "from": "Level 114",
+   "from_id": "114",
+   "slug": null,
+   "method": "Say a phrase in a dull voice",
+   "trigger_type": "interact",
+   "conditions": "Specific phrase",
+   "confidence": "CONDITIONAL",
+   "quote": "Saying \"I'm so bored…\" in a dull voice in Level 114"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 0",
+   "to_id": "0",
+   "slug": "/level-0",
+   "method": "Working arcade cabinet with a quarter",
+   "trigger_type": "item",
+   "conditions": "About 1 in 1500 cabinets works; return cabinet within ~100 ft",
+   "risk": "Patchy functionality",
+   "confidence": "CONFIRMED",
+   "quote": "working arcade machines have been known to transport to the following levels"
+  },
+  {
+   "to": "Level 5",
+   "to_id": "5",
+   "slug": "/level-5",
+   "method": "Working arcade cabinet with a quarter",
+   "trigger_type": "item",
+   "conditions": "About 1 in 1500 cabinets works; return cabinet within ~100 ft",
+   "risk": "Patchy functionality",
+   "confidence": "CONFIRMED",
+   "quote": "working arcade machines have been known to transport to the following levels"
+  },
+  {
+   "to": "Level 9",
+   "to_id": "9",
+   "slug": "/level-9",
+   "method": "Working arcade cabinet with a quarter",
+   "trigger_type": "item",
+   "conditions": "About 1 in 1500 cabinets works; return cabinet within ~100 ft",
+   "risk": "Patchy functionality",
+   "confidence": "CONFIRMED",
+   "quote": "working arcade machines have been known to transport to the following levels"
+  },
+  {
+   "to": "Level 10",
+   "to_id": "10",
+   "slug": "/level-10",
+   "method": "Working arcade cabinet with a quarter",
+   "trigger_type": "item",
+   "conditions": "About 1 in 1500 cabinets works; return cabinet within ~100 ft",
+   "risk": "Its cabinet is non-functional (water damage)",
+   "confidence": "CONFIRMED+DANGEROUS",
+   "quote": "working arcade machines have been known to transport to the following levels"
+  },
+  {
+   "to": "Level 11",
+   "to_id": "11",
+   "slug": "/level-11",
+   "method": "Working arcade cabinet with a quarter",
+   "trigger_type": "item",
+   "conditions": "About 1 in 1500 cabinets works; return cabinet within ~100 ft",
+   "risk": "Patchy functionality",
+   "confidence": "CONFIRMED",
+   "quote": "working arcade machines have been known to transport to the following levels"
+  },
+  {
+   "to": "Level 19",
+   "to_id": "19",
+   "slug": "/level-19",
+   "method": "Working arcade cabinet with a quarter",
+   "trigger_type": "item",
+   "conditions": "About 1 in 1500 cabinets works; return cabinet within ~100 ft",
+   "risk": "Patchy functionality",
+   "confidence": "CONFIRMED",
+   "quote": "working arcade machines have been known to transport to the following levels"
+  },
+  {
+   "to": "Level 24",
+   "to_id": "24",
+   "slug": "/level-24",
+   "method": "Working arcade cabinet with a quarter",
+   "trigger_type": "item",
+   "conditions": "About 1 in 1500 cabinets works; return cabinet within ~100 ft",
+   "risk": "Patchy functionality",
+   "confidence": "CONFIRMED",
+   "quote": "working arcade machines have been known to transport to the following levels"
+  },
+  {
+   "to": "Level 29",
+   "to_id": "29",
+   "slug": "/level-29",
+   "method": "Working arcade cabinet with a quarter",
+   "trigger_type": "item",
+   "conditions": "About 1 in 1500 cabinets works; return cabinet within ~100 ft",
+   "risk": "Patchy functionality",
+   "confidence": "CONFIRMED",
+   "quote": "working arcade machines have been known to transport to the following levels"
+  },
+  {
+   "to": "Level 37",
+   "to_id": "37",
+   "slug": "/level-37",
+   "method": "Working arcade cabinet with a quarter",
+   "trigger_type": "item",
+   "conditions": "About 1 in 1500 cabinets works; return cabinet within ~100 ft",
+   "risk": "Patchy functionality",
+   "confidence": "CONFIRMED",
+   "quote": "working arcade machines have been known to transport to the following levels"
+  },
+  {
+   "to": "Level 50",
+   "to_id": "50",
+   "slug": "/level-50",
+   "method": "Working arcade cabinet with a quarter",
+   "trigger_type": "item",
+   "conditions": "About 1 in 1500 cabinets works; return cabinet within ~100 ft",
+   "risk": "Patchy functionality",
+   "confidence": "CONFIRMED",
+   "quote": "working arcade machines have been known to transport to the following levels"
+  },
+  {
+   "to": "Level 90",
+   "to_id": "90",
+   "slug": "/level-90",
+   "method": "Working arcade cabinet with a quarter",
+   "trigger_type": "item",
+   "conditions": "About 1 in 1500 cabinets works; return cabinet within ~100 ft",
+   "risk": "Patchy functionality",
+   "confidence": "CONFIRMED",
+   "quote": "working arcade machines have been known to transport to the following levels"
+  },
+  {
+   "to": "Level 108",
+   "to_id": "108",
+   "slug": "/level-108",
+   "method": "Working arcade cabinet with a quarter",
+   "trigger_type": "item",
+   "conditions": "About 1 in 1500 cabinets works; return cabinet within ~100 ft",
+   "risk": "Patchy functionality",
+   "confidence": "CONFIRMED",
+   "quote": "working arcade machines have been known to transport to the following levels"
+  },
+  {
+   "to": "Level 120",
+   "to_id": "120",
+   "slug": "/level-120",
+   "method": "Working arcade cabinet with a quarter",
+   "trigger_type": "item",
+   "conditions": "About 1 in 1500 cabinets works; return cabinet within ~100 ft",
+   "risk": "Patchy functionality",
+   "confidence": "CONFIRMED",
+   "quote": "working arcade machines have been known to transport to the following levels"
+  },
+  {
+   "to": "Level 141",
+   "to_id": "141",
+   "slug": "/level-141",
+   "method": "Working arcade cabinet with a quarter",
+   "trigger_type": "item",
+   "conditions": "About 1 in 1500 cabinets works; return cabinet within ~100 ft",
+   "risk": "Patchy functionality",
+   "confidence": "CONFIRMED",
+   "quote": "working arcade machines have been known to transport to the following levels"
+  },
+  {
+   "to": "Level 150",
+   "to_id": "150",
+   "slug": "/level-150",
+   "method": "Working arcade cabinet with a quarter",
+   "trigger_type": "item",
+   "conditions": "About 1 in 1500 cabinets works; return cabinet within ~100 ft",
+   "risk": "Patchy functionality",
+   "confidence": "CONFIRMED",
+   "quote": "working arcade machines have been known to transport to the following levels"
+  },
+  {
+   "to": "Level 165",
+   "to_id": "165",
+   "slug": "/level-165",
+   "method": "Working arcade cabinet with a quarter",
+   "trigger_type": "item",
+   "conditions": "About 1 in 1500 cabinets works; return cabinet within ~100 ft",
+   "risk": "Patchy functionality",
+   "confidence": "CONFIRMED",
+   "quote": "working arcade machines have been known to transport to the following levels"
+  },
+  {
+   "to": "Level 188",
+   "to_id": "188",
+   "slug": "/level-188",
+   "method": "Working arcade cabinet with a quarter",
+   "trigger_type": "item",
+   "conditions": "About 1 in 1500 cabinets works; return cabinet within ~100 ft",
+   "risk": "Patchy functionality",
+   "confidence": "CONFIRMED",
+   "quote": "working arcade machines have been known to transport to the following levels"
+  },
+  {
+   "to": "Level 201",
+   "to_id": "201",
+   "slug": "/level-201",
+   "method": "Working arcade cabinet with a quarter",
+   "trigger_type": "item",
+   "conditions": "About 1 in 1500 cabinets works; return cabinet within ~100 ft",
+   "risk": "Patchy functionality",
+   "confidence": "CONFIRMED",
+   "quote": "working arcade machines have been known to transport to the following levels"
+  },
+  {
+   "to": "Level 790",
+   "to_id": "790",
+   "slug": "/level-790",
+   "method": "Working arcade cabinet with a quarter",
+   "trigger_type": "item",
+   "conditions": "About 1 in 1500 cabinets works; return cabinet within ~100 ft",
+   "risk": "Patchy functionality",
+   "confidence": "CONFIRMED",
+   "quote": "working arcade machines have been known to transport to the following levels"
+  },
+  {
+   "to": "Level 888",
+   "to_id": "888",
+   "slug": "/level-888",
+   "method": "Working arcade cabinet with a quarter",
+   "trigger_type": "item",
+   "conditions": "About 1 in 1500 cabinets works; return cabinet within ~100 ft",
+   "risk": "Patchy functionality",
+   "confidence": "CONFIRMED",
+   "quote": "working arcade machines have been known to transport to the following levels"
+  },
+  {
+   "to": "Level 40",
+   "to_id": "40",
+   "slug": "/level-40",
+   "method": "Broken window",
+   "trigger_type": "interact",
+   "conditions": "No detail",
+   "risk": "Unknown",
+   "confidence": "CONFIRMED",
+   "quote": "You can exit through a broken window to get to Level 40"
+  },
+  {
+   "to": "Unnamed server level",
+   "to_id": null,
+   "slug": null,
+   "method": "Arcade cabinet (notes)",
+   "trigger_type": "item",
+   "conditions": "Notes only",
+   "risk": "Unknown",
+   "confidence": "RUMORED",
+   "quote": "a server level I'm not all too familiar with"
+  }
+ ],
+ "signature_mechanic": "Quarter-operated arcade cabinets, about 1 in 1500 working, each tethered to a predetermined level with a return cabinet within about 100 ft.",
+ "verticality": "None stated.",
+ "do_not": [
+  "Add monsters or NPC players",
+  "Add bases",
+  "Make every cabinet work",
+  "Add a Level 26 exit",
+  "Revive the Level 10 cabinet"
+ ],
+ "content_warnings": [],
+ "source_completeness": "PARTIAL",
+ "conflicts_notes": "Page is under rewrite. Notes (about 20 working cabinets, 8-10 mi, exits to 19/50/165/5) differ from article (1 in 1500, 8.5x9.2 mi, 20 exits). Level 10 listed as exit yet its cabinet is dead. Level 26 only in link list.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "tall, often maroon-painted walls"
+  },
+  {
+   "section": "Description",
+   "quote": "8.5 miles from north to south, and about 9.2 miles wide"
+  },
+  {
+   "section": "Arcade Cabinets",
+   "quote": "about 1 in every 1500 machines"
+  },
+  {
+   "section": "Arcade Cabinets",
+   "quote": "within around 100ft of their current position"
+  },
+  {
+   "section": "Arcade Cabinets",
+   "quote": "having gone entirely non-functional to water damage"
+  },
+  {
+   "section": "Bases, Outposts, and Communities",
+   "quote": "There are no known bases, communities, or Outposts on this level."
+  },
+  {
+   "section": "Entrances And Exits",
+   "quote": "You can exit through a broken window to get to Level 40"
+  }
+ ]
+}

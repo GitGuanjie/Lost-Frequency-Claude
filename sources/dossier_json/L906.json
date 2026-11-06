@@ -1,0 +1,39 @@
+{
+ "stable_id": "L906", "level_id": "906", "title": "Level 906 - \"The Cygnus Archive\"",
+ "survival_class": "Safe and sound. / Devoid of harm. / It is a pleasure to meet you.",
+ "physical_identity": "A massive, seemingly endless library in gothic, Victorian and baroque style: wooden shelves (some floating), blue velvet carpets with gold ornament, candelabra light, a stained-glass painted ceiling that cannot be reached.",
+ "scale_topology": "Endless-seeming indoor library with a central office, tea room and variable guest rooms.",
+ "anomalies": ["Recording equipment malfunctions", "Floating shelves", "Receding ceiling", "Books spawn and clip in and out", "Variable guest rooms"],
+ "lighting_sound": "Candelabras hanging from a very high ceiling light the whole library; sound not stated.",
+ "entities": [
+  {"name": "Blanche", "status": "CONFIRMED", "behavior": "Unique librarian entity; hosts tea; warns, lectures, immobilises, expels rude visitors"},
+  {"name": "Tom Von Haderach", "status": "CONFIRMED", "behavior": "Blanche's butler and protege; occupies a guest room"},
+  {"name": "Light Guides", "status": "CONFIRMED", "behavior": "Float erratically, flicker, vanish"},
+  {"name": "Witnessing the Beyond", "status": "RUMORED", "behavior": "Rumoured nervous-system harm; no confirmation"}
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Blanche, Tom Von Haderach, Light Guides",
+ "hazards": ["Rumoured Witnessing the Beyond (unconfirmed)", "Immobilisation and expulsion if hostile"],
+ "items_communities": ["Books and scrolls bearing Blanche's signature", "Tea and biscuits", "Wooden ladders", "No bases, communities or outposts; some guests stay weeks or months"],
+ "entrances": [
+  {"from": "Any level containing Blanche's signed book or document", "from_id": null, "slug": null, "method": "Drag index finger over Blanche's signature left to right", "trigger_type": "interact", "conditions": "Sometimes a touch suffices; copies and photos fail", "confidence": "CONFIRMED", "quote": "The only known way to enter the Cygnus Archive"}
+ ],
+ "exits": [
+  {"to": "Safe level of the visitor's choice", "to_id": null, "slug": null, "method": "Politely ask Blanche to leave", "trigger_type": "interact", "conditions": "Chosen level must be safe", "risk": "Low", "confidence": "CONFIRMED+CONDITIONAL", "quote": "politely ask Blanche to leave"},
+  {"to": "Entry level if safe, else a safe level", "to_id": null, "slug": null, "method": "Rude or hostile behaviour", "trigger_type": "condition", "conditions": "After warning, lecture and immobilisation", "risk": "Low to moderate", "confidence": "CONFIRMED", "quote": "forcefully teleported out of the level, back to where you were"}
+ ],
+ "signature_mechanic": "Etiquette-governed hosting: polite visitors get tea and a guided exit; rude ones are warned, lectured, immobilised and expelled. Entry only via Blanche's signature.",
+ "verticality": "Ladders to floating shelves; very high unreachable ceiling.",
+ "do_not": ["Make Blanche hostile", "Add hazards or real Witnessing the Beyond", "Allow photographed signatures", "Send to unsafe levels", "Add bases"],
+ "content_warnings": [],
+ "source_completeness": "COMPLETE",
+ "conflicts_notes": "Log 906-1 is linked, not captured. Levels 905 and 907 appear only in the link list. Class lines are phrases, not a numeric class.",
+ "key_quotes": [
+  {"section": "Description", "quote": "cameras and recording equipment inexplicably malfunction"},
+  {"section": "Description", "quote": "the closer one gets, the farther it seems to be"},
+  {"section": "Description", "quote": "blue velvet carpets with golden ornaments"},
+  {"section": "Entities", "quote": "seems to have full control over the library itself"},
+  {"section": "Notable areas", "quote": "The entry point for any and all who visit Level 906."},
+  {"section": "Entrances", "quote": "The only known way to enter the Cygnus Archive"},
+  {"section": "Exits", "quote": "politely ask Blanche to leave"}
+ ]
+}

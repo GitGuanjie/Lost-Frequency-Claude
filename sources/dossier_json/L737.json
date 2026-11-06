@@ -1,0 +1,166 @@
+{
+ "stable_id": "L737",
+ "level_id": "737",
+ "title": "Dune Eternal",
+ "survival_class": "SURVIVAL DIFFICULTY CLASS 3",
+ "physical_identity": "Endless desert of fine gold dust at 737 C under a fixed zenith yellow dwarf; ruined stone blocks and Frontrooms landmarks stud the dunes around a colossal pyramid.",
+ "scale_topology": "Endless outdoor desert; Great Pyramid of Ilios about 6 km from entries; underground SCARF-lambda facility and abyss chamber.",
+ "anomalies": [
+  "gold dust burns at 737 C",
+  "fixed false sun",
+  "Frontrooms landmarks scattered about",
+  "Golden Gate over nothing",
+  "Big Ben stuck at 07:37",
+  "floorless abyss chamber with hanging immortal"
+ ],
+ "lighting_sound": "Continuous intense golden light; sound not stated.",
+ "entities": [
+  {
+   "name": "Entity 737/1",
+   "status": "CONFIRMED",
+   "behavior": "decapitated immortal hung in the abyss, speaks via EDEN"
+  },
+  {
+   "name": "Fireteam Midas sentinels",
+   "status": "CONFIRMED",
+   "behavior": "human guards who apprehend intruders and erase memories"
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Entity 737/1 (static) and human Repository personnel",
+ "hazards": [
+  "extreme heat third-degree burns",
+  "no shade",
+  "falling into abyss chamber",
+  "apprehension and memory erasure"
+ ],
+ "items_communities": [
+  "UltraSuits",
+  "Provisional Database 737-lambda (dissolved)",
+  "SCARF-lambda facility",
+  "Eternal Repository",
+  "Backrooms Robotics"
+ ],
+ "entrances": [
+  {
+   "from": "Level 50",
+   "from_id": "50",
+   "slug": "/level-50",
+   "method": "The endless passage",
+   "trigger_type": "walk_in",
+   "conditions": "under investigation",
+   "confidence": "CONDITIONAL",
+   "quote": "Level 50 Under Investigation"
+  },
+  {
+   "from": "concealed entrances",
+   "from_id": null,
+   "slug": null,
+   "method": "Hidden behind substituted level skips",
+   "trigger_type": "unknown",
+   "conditions": "classified",
+   "confidence": "UNKNOWN",
+   "quote": "actual entrances and exits are concealed through substituted level skips"
+  }
+ ],
+ "exits": [
+  {
+   "to": "Level 46",
+   "to_id": "46",
+   "slug": "/level-46",
+   "method": "Listed extraction",
+   "trigger_type": "unknown",
+   "conditions": "not stated",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "Level 46 & Level 169"
+  },
+  {
+   "to": "Level 169",
+   "to_id": "169",
+   "slug": null,
+   "method": "Fireteam Midas extraction, then memory erasure",
+   "trigger_type": "unknown",
+   "conditions": "intruder protocol",
+   "risk": "memoricide",
+   "confidence": "CONFIRMED",
+   "quote": "execute an extraction to Level 169"
+  },
+  {
+   "to": "Level 739",
+   "to_id": "739",
+   "slug": "/level-739",
+   "method": "Listed extraction",
+   "trigger_type": "unknown",
+   "conditions": "not stated",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "Level 739"
+  },
+  {
+   "to": "Level 998",
+   "to_id": "998",
+   "slug": "/level-998",
+   "method": "Listed extraction",
+   "trigger_type": "unknown",
+   "conditions": "not stated",
+   "risk": "not stated",
+   "confidence": "CONFIRMED",
+   "quote": "Level 998"
+  },
+  {
+   "to": "unspecified",
+   "to_id": null,
+   "slug": null,
+   "method": "Emergency phone number",
+   "trigger_type": "item",
+   "conditions": "claimed exit method",
+   "risk": "unknown",
+   "confidence": "RUMORED",
+   "quote": "an emergency phone number, respectively"
+  }
+ ],
+ "signature_mechanic": "Constant lethal heat from gold dust; only ruined stone blocks give relief, so travel is block to block toward the Great Pyramid.",
+ "verticality": "Flat desert; pyramid halls 60 m high; bottomless abyss chamber below.",
+ "do_not": [
+  "treat gold as loot",
+  "add sand creatures",
+  "add a day cycle",
+  "make Level 50 route a short door",
+  "ignore fabricated-data claim"
+ ],
+ "content_warnings": [
+  "violence and torture implied",
+  "branding burns and whipping",
+  "memory erasure",
+  "decapitated immortal",
+  "existential dread"
+ ],
+ "source_completeness": "UNUSUAL_FORMAT",
+ "conflicts_notes": "Page claims public documentation of this level (environment, class, entrances/exits) was fabricated, yet states class 3 and lists access. 'Their cradle' link goes to /level-5-3. Final CONDEMN/EXALT prompt not captured.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "an endless desert composed entirely of fine golden particles"
+  },
+  {
+   "section": "Description",
+   "quote": "permanently positioned at the level's zenith"
+  },
+  {
+   "section": "Environment",
+   "quote": "navigate Level 737 by utilizing these structures as stepping points"
+  },
+  {
+   "section": "Great Pyramid",
+   "quote": "approximately 7,373 individual tombs"
+  },
+  {
+   "section": "Access",
+   "quote": "Level 50 Under Investigation"
+  },
+  {
+   "section": "Classification",
+   "quote": "actual entrances and exits are concealed through substituted level skips"
+  }
+ ]
+}

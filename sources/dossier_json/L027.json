@@ -1,0 +1,103 @@
+{
+ "stable_id": "L027",
+ "level_id": "27",
+ "title": "The Bunker Springs",
+ "survival_class": "not stated",
+ "physical_identity": "A tiny limestone cave hot spring (about 18.6 m2) with two waterfalls; warm potable mineral water; no life of any kind.",
+ "scale_topology": "Finite, one small indoor cave; the page says it is the only part of the level left.",
+ "anomalies": [
+  "infinite water source",
+  "beneficial bathing effects",
+  "no bacteria",
+  "cave behind exit tunnel reportedly lies on a Stormstone plain (testimony)"
+ ],
+ "lighting_sound": "Not stated; humid air, waterfalls implied by two small waterfalls feeding the pool.",
+ "entities": [],
+ "entity_policy": "NO ENTITY PER SOURCE",
+ "hazards": [
+  "over two hours bathing causes dizziness and nausea",
+  "other waterfall tunnel leads to nowhere (testimony: Stormstone plain)"
+ ],
+ "items_communities": [
+  "M.E.G. stairway",
+  "no bases, outposts or communities",
+  "popular with Level 11 residents"
+ ],
+ "entrances": [
+  {
+   "from": "Level 11",
+   "from_id": "11",
+   "slug": "/level-11",
+   "method": "most popular way; arrives at tunnel entrance, descend staircase",
+   "trigger_type": "walk_in",
+   "conditions": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "This will always bring you to the tunnel entrance"
+  },
+  {
+   "from": "any functional shower or bath",
+   "from_id": null,
+   "slug": null,
+   "method": "hottest setting, close your eyes inside",
+   "trigger_type": "interact",
+   "conditions": "functional shower or bath",
+   "confidence": "CONFIRMED",
+   "quote": "turning a functional shower or bath to its hottest setting and closing your eyes"
+  }
+ ],
+ "exits": [
+  {
+   "to": "same location you entered from",
+   "to_id": null,
+   "slug": null,
+   "method": "M.E.G. stairway and walk the tunnel with the stream",
+   "trigger_type": "stairs",
+   "conditions": "none",
+   "risk": "none stated",
+   "confidence": "CONFIRMED",
+   "quote": "back into the same location you entered it from"
+  },
+  {
+   "to": "Stormstone Keep (Level 28)",
+   "to_id": "28",
+   "slug": "/level-28",
+   "method": "climb the other waterfall tunnel, crawl through to a Stormstone plain, step forward (log)",
+   "trigger_type": "condition",
+   "conditions": "testimony; page says do not climb",
+   "risk": "Stormstone explosion",
+   "confidence": "DANGEROUS+ONE-WAY",
+   "quote": "Don't climb the other waterfall tunnel. It leads to nowhere."
+  }
+ ],
+ "signature_mechanic": "Safe warm spring with bathing timer (benefits after 1 h, nausea after 2 h); hidden twist exit via the second waterfall into a Stormstone wasteland.",
+ "verticality": "Low; optional cliff climb to the second waterfall opening; stairway to the tunnel.",
+ "do_not": [
+  "add entities or life",
+  "treat Stormstone plain as safe level",
+  "add communities",
+  "let player enter drain tunnel"
+ ],
+ "content_warnings": [
+  "brief near-death scene in log"
+ ],
+ "source_completeness": "NARRATIVE_FORMAT",
+ "conflicts_notes": "Page says the spring houses all entrances and all but one exit; the 'one exit' is the other tunnel leading to nowhere (log says Stormstone Keep). Page flagged outdated.",
+ "key_quotes": [
+  {
+   "section": "Description",
+   "quote": "completely devoid of entities"
+  },
+  {
+   "section": "Description",
+   "quote": "approximately 200 square feet (18.6 square meters) hot spring"
+  },
+  {
+   "section": "Expedition Log No.1",
+   "quote": "It was the only part of the level left."
+  },
+  {
+   "section": "Entrances And Exits",
+   "quote": "Don't climb the other waterfall tunnel. It leads to nowhere."
+  }
+ ]
+}
