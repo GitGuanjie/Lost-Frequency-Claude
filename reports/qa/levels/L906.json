@@ -12,7 +12,7 @@
     "target": "L906>EXT#1",
     "ticks": 526
    },
-   "build_ms": 1326,
+   "build_ms": 1645,
    "collision_shapes": 1948,
    "distinct_layouts_over_3_seeds": 3,
    "dup_profile": {
@@ -130,7 +130,7 @@
    },
    "exits_declared": 2,
    "exits_found": 2,
-   "load_ms": 1540,
+   "load_ms": 1911,
    "nav": {
     "exits": [
      {
@@ -165,7 +165,7 @@
   }
  ],
  "renderer": "headless",
- "started": "2026-11-06T08:00:36",
+ "started": "2026-11-06T08:04:59",
  "suites": {
   "duplication": {
    "checks": [],

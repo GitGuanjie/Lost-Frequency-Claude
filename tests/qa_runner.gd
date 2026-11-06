@@ -42,6 +42,10 @@ func check(ok: bool, suite: String, what: String, detail: Variant = null) -> boo
 func _run() -> void:
 	var suite: String = args.get("suite", "all")
 	await get_tree().process_frame
+	# a broken autoload must fail loudly, never produce an empty "0 failures" run
+	for an in ["Settings", "LevelRegistry", "SessionState", "SaveService", "TransitionService", "MatLib", "AudioSynth", "Overlay"]:
+		var node := get_tree().root.get_node_or_null(an)
+		check(node != null and node.get_script() != null and (node.get_script() as Script).can_instantiate(), "framework", "autoload compiles: " + an)
 	if suite in ["all", "registry"]:
 		_registry_suite()
 	if suite in ["all", "lint"]:
