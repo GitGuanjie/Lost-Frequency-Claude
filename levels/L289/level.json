@@ -1,0 +1,87 @@
+{
+  "stable_id": "L289",
+  "scene": "res://levels/L289/L289.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT_TESTED",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L013",
+    "from_L019",
+    "from_L289"
+  ],
+  "signature": "A dark, endless flooded basement, waist-deep in foul murky water and choked with badly built scaffolding, where something you cannot make out comes at you faster than you can follow, screams in your head and drags you backwards out of the level, and where the one stair that climbs out of the water ends at a door stencilled with a corrupted level number that only leads back down into the same water.",
+  "mechanics": [
+    "chunk_streaming_flooded_basement",
+    "waist_deep_wading_drag",
+    "scaffold_runs_board_walkways",
+    "light_well_stair_towers",
+    "sunken_sumps_swim_oxygen",
+    "collapsed_slab_climb",
+    "fast_entity_rush_stop_dead",
+    "scream_only_target_hears",
+    "time_rewind_relocation_287",
+    "corrupted_number_loop_exit",
+    "purged_entry_terminal_file_retrieval",
+    "radio_voice_in_the_water",
+    "temporary_hideout_checkpoint",
+    "sparse_dying_work_lights"
+  ],
+  "exits": [
+    {
+      "id": "L289>EXT#1",
+      "to": "L289",
+      "to_label": "Level 14444444-£÷¥π÷ππ^÷¢|}≠{=/~ (corrupted number), which leads back to Level 289",
+      "trigger": "walk_in",
+      "label": "Climbed out of the water and through the door stencilled Level 14444444-...",
+      "confidence": "CONFIRMED+DANGEROUS",
+      "basis": "SOURCE",
+      "source_section": "End Log (offset 1)",
+      "source_quote": "the only exit to Level 289 leads to Level 14444444-£÷¥π÷ππ^÷¢|}≠{=/~ which in itself leads back to Level 289",
+      "mechanism_basis": "ADAPTATION",
+      "adaptation_reason": "The log states the exit exists but not where or what it is. A concrete stair core rising out of the water to a steel door stencilled with the corrupted number is ours. The corrupted-number level itself is not described, so its transit is folded into the switch glitch and you come back out of the same door into Level 289.",
+      "conditions": "found only by extensive exploration (story: about 48 m out from the arrival, seeded direction); closed loop",
+      "hint": "Everything here stands in the water. Somewhere a stair climbs out of it, and a steady light burns at the top.",
+      "arrival": "from_L289"
+    },
+    {
+      "id": "L289>L287#2",
+      "to": "L287",
+      "to_label": "Level 287 (victim relocated there, not an exit per se)",
+      "trigger": "condition",
+      "label": "Something screamed in your head and you were carried backwards out of the level",
+      "confidence": "CONFIRMED+ONE-WAY",
+      "basis": "SOURCE",
+      "source_section": "Begin Log (offset 1)",
+      "source_quote": "they found Andy sitting on the floor with his back turned towards the wall.",
+      "conditions": "the entity encounter: it appears up ahead in open water deep in the level, rushes, stops dead in front of you, screams (only you hear it), then you are pulled backwards at its speed; fires at the end of the backward rush",
+      "mechanism_basis": "ADAPTATION",
+      "adaptation_reason": "The log says the victim was carried backwards and later found on Level 287, but not how he got there. The edge fires at the end of the backward rush.",
+      "hint": "The deeper you wade, the less alone you are. Nobody who met it saw what it was.",
+      "arrival": "from_L289"
+    }
+  ],
+  "fail_states": [
+    {
+      "kind": "relocation",
+      "label": "Meeting the entity: screamed at, rewound backwards and relocated to Level 287 (not death)",
+      "basis": "SOURCE",
+      "source_quote": "as if time had rewound itself only for him."
+    },
+    {
+      "kind": "drowning",
+      "label": "The sunken sumps are over your head; the murky water hides the way back up",
+      "basis": "ADAPTATION",
+      "adaptation_reason": "the log has a character fall under and come up gasping; sump depth and the 40 s breath are ours"
+    },
+    {
+      "kind": "stranded",
+      "label": "The only exit loops back into Level 289",
+      "basis": "SOURCE",
+      "source_quote": "Team Misfits has been stuck in Level 289 for a week."
+    }
+  ],
+  "entity_policy": "One REPORTED undocumented entity, presence only. It has no body, name or attack: it shows only as a dark, refracting smear standing in the water up ahead, because the log says its appearance could not be told for its speed and the dark. Behaviour follows the log: it appears out of nowhere, crosses the distance at very high speed, stops dead with no momentum in front of you, and you alone hear a burning scream (the world stays silent). Then you are carried backwards at the same speed and the relocation edge to Level 287 fires. It does not chase, deal damage or kill. It vanishes afterwards and is not met again on this visit. It appears at most once per visit, only in open water at least about 58-80 m from the arrival, after the first 70 s, never near the stair core. No other entities and no people: the Misfits' hideout stands empty and packed up, and the base is only a voice on a waterlogged radio.",
+  "notes": "SOURCE (Event Log 1237, offset 1; offset 0 is the purged-entry shell): a flooded basement; murky, foul, nutty-smelling water at waist height (one explorer guessed Almond Water; never stated as fact here); scaffolding everywhere and the place badly built; dark surroundings; a base radio voice heard in the water; the entity encounter and relocation to Level 287; the team's temporary hideout; a single exit leading to the corrupted-number level, which leads back to 289; the team stuck for a week. The purged-entry framing (seven backup files, files 2-7 corrupted, 'entry errors repaired' and File 2 retrieved at the end of the log) is echoed by the hideout terminal: each pass through the loop exit recovers the next file, and the text is paraphrased. ADAPTATION: (1) the page gives no map. The playable world is a finite streaming window (5x5 chunks of 16 m, radius 2) of a seeded basement grid: 8 m column bays with 3.6 m slab soffits and downstand beams, scaffold runs with board walkways 0.39 m above the water, shoring props (some out of plumb), block partitions, light wells with two-deck stair towers (1.25 m and 4.45 m), sunken sumps 2.4 m deep that you must swim (default 40 s breath), and collapsed slab bays you can climb. (2) Water surface 0.86 m over the floor, so you wade without the swim controller; wading speed 1.9 m/s (sprint 2.7) against 3.1/5.1 on dry boards. (3) Lighting: the page only says dark, so sparse caged work lamps hang on the scaffolding (many dead, some flickering), with a lantern left at the hideout and one steady lamp on the stair-core landing. (4) Entity timings are ours: 2.6 s visible ahead, 0.22 s rush, 3.4 s scream, a backward rush at 24 m/s along your own recorded path (up to 1.8 s), and the encounter distance band. (5) The hideout is an empty, packed-up scaffold deck under a tarp, with a laptop terminal and bedrolls, and is a checkpoint. The radio's lines are paraphrased fragments of the base operator's log lines. (6) Story placement of the stair core: one seeded chunk on the ring 3 chunks out. Its landing wall carries seven chalk tally marks (the team's week) plus one per loop you make. (7) Arrivals: start and from_L013 (no-clip) land face first in the water, as one of the team did on entry; from_L019 steps out of a damaged door in the south partition; from_L289 comes back out of the same door onto the same landing. QA FIXTURE: in QA mode only, the stair core is placed in the chunk east of the arrival (1,0) and the automatic encounter is off. The walker bot wades there, climbs the flight and walks through the door. The encounter and relocation are exercised by qa_self_test.",
+  "fail_states_note": "Relocation is not death: the release-boundary offer appears while Level 287 is unbuilt."
+}

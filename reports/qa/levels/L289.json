@@ -1,0 +1,141 @@
+{
+ "duplication_pairs": [],
+ "engine": "4.5.1-stable (official)",
+ "failures": [],
+ "levels": [
+  {
+   "bot": {
+    "distance_walked": 29.5600496530533,
+    "edge": "L289>EXT#1",
+    "fired": true,
+    "sim_seconds": 15.3333333333333,
+    "target": "L289>EXT#1",
+    "ticks": 920
+   },
+   "build_ms": 675,
+   "collision_shapes": 995,
+   "distinct_layouts_over_3_seeds": 3,
+   "dup_profile": {
+    "boxes": {
+     "-1_-1_-1": 1,
+     "-1_-1_0": 1,
+     "-1_-1_4": 116,
+     "-1_0_0": 6,
+     "-2_-1_-1": 1,
+     "-2_-1_4": 1,
+     "-2_-1_6": 1,
+     "-2_-2_-2": 1,
+     "-2_-2_4": 2,
+     "-2_0_1": 1,
+     "-2_0_2": 1,
+     "-2_0_4": 4,
+     "-2_0_6": 1,
+     "-2_1_1": 2,
+     "-2_1_3": 2,
+     "-2_1_4": 1,
+     "-2_2_4": 1,
+     "-2_3_3": 1,
+     "-2_3_4": 9,
+     "-2_3_5": 1,
+     "-2_3_6": 9,
+     "-2_4_4": 122,
+     "-2_4_5": 1,
+     "-2_4_6": 1,
+     "-2_6_6": 24,
+     "-3_-2_0": 2,
+     "-3_0_1": 3,
+     "-3_0_2": 1,
+     "-3_0_3": 1,
+     "-3_1_1": 4,
+     "-3_1_2": 4,
+     "-3_1_3": 2,
+     "-3_2_2": 1,
+     "-3_2_3": 6,
+     "-3_2_4": 24,
+     "-3_3_3": 6,
+     "-3_3_4": 1,
+     "-4_-3_0": 1,
+     "-5_-1_0": 4,
+     "-5_-5_0": 502,
+     "-5_-5_1": 115,
+     "-5_0_0": 4,
+     "-5_0_2": 32,
+     "-5_0_3": 6,
+     "-5_0_4": 4,
+     "-5_1_3": 27,
+     "-5_1_4": 29,
+     "-5_3_3": 1,
+     "-5_3_4": 4,
+     "-6_0_3": 41,
+     "-6_0_4": 28,
+     "0_0_0": 1,
+     "0_1_1": 1,
+     "1_3_3": 1,
+     "2_2_2": 1
+    },
+    "materials": {
+     "l289_block": 636,
+     "l289_board_wood": 7476,
+     "l289_bulb": 240,
+     "l289_bulb_dead": 156,
+     "l289_bulb_flicker": 84,
+     "l289_cable": 1404,
+     "l289_ceiling": 112,
+     "l289_chalk": 84,
+     "l289_cloth": 48,
+     "l289_door_metal": 108,
+     "l289_prop_rust": 2818,
+     "l289_screen": 12,
+     "l289_silt": 240,
+     "l289_tarp": 12,
+     "l289_tide": 1090,
+     "l289_tube": 21108,
+     "l289_wall": 3308,
+     "void_black": 60
+    }
+   },
+   "exits_declared": 2,
+   "exits_found": 1,
+   "load_ms": 795,
+   "nav": {
+    "exits": [
+     {
+      "edge": "L289>EXT#1",
+      "goal": "(26.6, 3.416389, 2.25)",
+      "path_points": 31,
+      "reachable": true
+     }
+    ],
+    "map_regions": 1,
+    "map_sync_ticks": 7,
+    "nav_polygons": 2184,
+    "start": "(6.0, 0.116389, 12.0)"
+   },
+   "qa_status": "ENGINE_SMOKE_PASS",
+   "save_tested": true,
+   "self_tests": 8,
+   "spawn": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+   },
+   "stable_id": "L289"
+  }
+ ],
+ "renderer": "headless",
+ "started": "2026-11-06T06:45:55",
+ "suites": {
+  "duplication": {
+   "checks": [],
+   "failed": 0,
+   "passed": 1
+  },
+  "level:L289": {
+   "checks": [],
+   "failed": 0,
+   "passed": 25
+  }
+ }
+}
