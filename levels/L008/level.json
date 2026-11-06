@@ -1,0 +1,86 @@
+{
+  "stable_id": "L008",
+  "scene": "res://levels/L008/L008.tscn",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-05, 0 failures); stills reviewed by integrator (AI); human review pending",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L007"
+  ],
+  "signature": "Cold, dripping karst caves: you surface in an underground pool ringed by stalagspikes beside the glowing M.E.G. sign of the 9th Road, a marked route through phreatic tubes, a vadose canyon, a breakdown chamber of floating boulders seen from a high gallery, a laddered shaft and a dip that floods in seconds, while the caves off the road quietly rearrange themselves.",
+  "mechanics": [
+    "ninth_road_markers_entropy",
+    "marker_checkpoints",
+    "offroad_chunk_shifting",
+    "flash_flooding",
+    "cold_wet_drowsiness",
+    "low_gravity_chambers",
+    "floating_rocks_fall_when_touched",
+    "tar_hands",
+    "collapsing_floor",
+    "wrangler_tremors",
+    "caver_flashlight_and_heater",
+    "multi_height_shaft_gallery"
+  ],
+  "exits": [
+    {
+      "id": "L008>L009#1",
+      "to": "L009",
+      "trigger": "walk_in",
+      "label": "Followed the 9th Road to its end, where rock gives way to asphalt",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "M.E.G. Survival Guide, Tip #1",
+      "source_quote": "The Road starts at the entrance pool from Level 6 and runs all the way to the exit at Level 9",
+      "hint": "Follow the glowing markers. Where the stone turns to sand, gravel and then asphalt, walk toward the dim glow.",
+      "arrival": "from_L008"
+    },
+    {
+      "id": "L008>L041#3",
+      "to": "L041",
+      "trigger": "death",
+      "label": "Dragged under by the hands in the tar pool; woke elsewhere",
+      "confidence": "DANGEROUS",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "Entering a tar pit may cause one to be dragged into either Level 41 or Level 91 upon waking",
+      "hint": "A side chamber off the upper road steams and bubbles. Do not wander too close to the black pool.",
+      "arrival": "from_L008"
+    },
+    {
+      "id": "L008>L069#8",
+      "to": "L069",
+      "trigger": "fall",
+      "label": "Fell through a cracked cave floor",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "Falling through the floor has been reported to lead to Level 69",
+      "hint": "South of the breakdown chamber, a side room's floor is pale and fractured. It creaks.",
+      "arrival": "from_L008"
+    }
+  ],
+  "fail_states": [
+    {
+      "kind": "hypothermia",
+      "label": "Wet and freezing, stop moving and you fall asleep for good",
+      "basis": "SOURCE",
+      "source_quote": "victims of hypothermia (freezing to death, that is) tend to die because they give in to exhaustion"
+    },
+    {
+      "kind": "drowning",
+      "label": "Chambers flood in seconds",
+      "basis": "SOURCE",
+      "source_quote": "Bone-dry chambers may be completely submerged in a matter of seconds."
+    },
+    {
+      "kind": "floating_rock",
+      "label": "Touched floating rocks come crashing down",
+      "basis": "SOURCE",
+      "source_quote": "the slightest prod can cause them to come crashing down"
+    }
+  ],
+  "entity_policy": "Hands of tar (CONFIRMED) act at the tar pool. Wranglers (CONFIRMED) are felt only as tremors and grinding in the rock: no body is shown. Arachnids, chittering and clicking stay unseen (audio only). No settlement NPCs, light guides, wretches or other named regions are built (Hyperspace Lane, Rottnest Jungle, Handyland, outposts are beyond this slice). The dead caver is the page's own vignette (a body with a pack holding a flashlight and battery heater).",
+  "notes": "ADAPTATION: the 9th Road (page: 14 km to the first M.E.G. outpost, then on to Level 9) is compressed to ~360 m of authored road through 30 m streamed cave columns (SDF + surface nets); the playable world is a finite streaming window. Markers every ~50 m use the sign's glittering paint; they decay fast once seen and then left unobserved (page: entropy, markers degrade). Off-road chunks re-roll their chamber when unobserved (page: same path twice may lead to a different chamber); border passages never change, so the caves always reconnect. Gravity changes magnitude only (0.4x in low-gravity chambers): the shared player controller has no gravity vector, so direction flips are not built. Multi-height: road floors span -8 m to +5 m, a 12 m laddered shaft (ladder is an ADAPTATION: M.E.G. fixture), a ramp gallery to a ledge 9 m above the breakdown chamber floor, and a narrow high bypass over the flood dip. The cracked-floor affordance and the tar pool's steam are ours (page gives no cue). from_L007 arrives underwater at the mouth of a flooded tunnel under the entrance pool (the page opens with surfacing from a lake; it names the pool's link as Level 6, the Level 7 page names the cave). QA FIXTURE: in QA mode only, the road-end trigger is placed 24 m into the first tube and the far exits are not built; the real routes are verified by levels/L008/route_test.gd."
+}

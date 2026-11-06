@@ -1,0 +1,56 @@
+{
+  "stable_id": "L014",
+  "scene": "res://levels/L014/L014.tscn",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-06, 22/22); stills reviewed by integrator (AI); human review pending",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L049"
+  ],
+  "signature": "A forest oasis shimmering at night under an eternally starlit sky: crimson grass wet with dew, crashing twin waterfalls, trees whose limbs strain up toward the stars, guests lying in the soil with their bones glinting in the moonlight, rows of small silhouettes howling at the moon, and a lure that makes all of it lovelier the longer you stay.",
+  "mechanics": [
+    "chunk_streaming_night_forest",
+    "authored_clearing_basin_falls_gully",
+    "lure_perceptual_state",
+    "beauty_intensifies_with_lure",
+    "heading_drift_toward_clearing",
+    "lightness_float",
+    "whispers_choir_cacophony",
+    "forest_falls_silent",
+    "unobserved_changes_rows_and_feast",
+    "rows_dissolve_when_approached",
+    "resolve_walk_away_dont_look_back",
+    "truth_drains_beauty",
+    "surrender_fail_state",
+    "no_entity_per_source"
+  ],
+  "exits": [
+    {
+      "id": "L014>EXT#1",
+      "to": "EXT",
+      "to_label": "Not stated (the page gives no destination)",
+      "trigger": "condition",
+      "label": "Walked away from Paradise without looking back until the voices could no longer be heard",
+      "confidence": "UNKNOWN",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "You won’t have to worry about that.",
+      "mechanism_basis": "ADAPTATION",
+      "adaptation_reason": "The page states no exit and the interviewee refuses to say how he left; he says only that after leaving he could no longer hear the voices. The dossier advises the way out be the player's own conduct (turn away). Mechanism is ours: resolve fills only while you walk away from the Clearing with your back to it (about 14-22 s of unbroken walking, slower the deeper the lure), looking back drains most of it, and it only counts once the lure has once reached 0.5 ('you have heard them'). When you can no longer hear them, at least 40 m from the Clearing, the edge fires. The destination is unnamed, so 'to' is the placeholder EXT and the route reports as not built.",
+      "conditions": "lure peak >= 0.5; resolve full; >= 40 m from the Clearing",
+      "hint": "The singing is always in front of you. Something in you knows which way is out, and that you must not turn around.",
+      "arrival": "from_L014"
+    }
+  ],
+  "fail_states": [
+    {
+      "kind": "surrender",
+      "label": "Stopped resisting and lay down in the crimson grass with the other guests",
+      "basis": "SOURCE",
+      "source_quote": "All you need to do is surrender yourself."
+    }
+  ],
+  "entity_policy": "NO ENTITY PER SOURCE. Nothing hunts, touches or follows the player; no NPCs, chasers or combat. The children in rows, the guests in the soil and the singing voices are unclassified lure imagery (dossier): the rows are silhouettes on the basin slope that dissolve as you approach and come and go only while unobserved; the guests are bones only.",
+  "notes": "SOURCE (article, lure voice): forest oasis at night, shimmering; crashing waterfalls; crimson grass wet with dew; eternally starlit sky; branches reaching up toward it; the forest whispers; everyone else is content; a cacophony that lifts the burden of thought; feeling light, almost floating away; guests lying peacefully in the soil, bones glistening in the moonlight; children in rows howling at the moon; minds 'leaking'/being fixed; a promised feast; entrance 'keep going'; no exit given. TESTIMONY (Lynn, unreliable, used only as atmosphere): voices sang in the night and were gone after he left; he will not say how he left. ADAPTATION: (1) the playable world is a finite streaming window (32 m chunks, radius 2) of an unbounded forest; depth fog (7-60 m) matched to the sky horizon and dense trees hide its edge; (2) layout is ours (the page gives no map): an authored basin with an open Clearing floor, slopes up to a forested rim, an 8.5 m craggy cliff on the north side with two waterfalls into two plunge pools and a tiered meadow above it, an authored Gully ravine leaving west, and seeded hills plus seeded ravines beyond ~100 m; tree, grass and guest scatter is seeded; (3) lure state (0-1): starts at 0.25 ('you know how to get there by now'), rises with time, nearness to the Clearing, looking at it or up at the stars, and standing still; it saturates colours, brightens stars and the milky band, deepens the crimson, sharpens dew glints, glows, makes the limbs of the trees strain up and lean toward the Clearing, silences crickets and wind under whispers, a choir pad and (above ~0.65) a dissonant cacophony with static, drifts your heading toward the Clearing, makes walking in easier and walking out harder, lowers gravity ('almost float away'), and above ~0.75 adds brief screen tears ('mind leaking'); (4) resolve (0-1) is the counter-state: it rises only while walking away with your back turned, and drains beauty toward the truth (duller brown grass, desaturation, dimmer stars, sharper bone glints, fainter voices); (5) the rows of children (24 dark silhouettes in four rows on the basin's north-east slope, facing the moon, rim-lit; they dissolve within ~13-22 m) and a feast table in the Clearing (shown only above lure 0.55) change only while you are not looking; the table dissolves on approach into a long mound of soil with bones; guests lie in bare hollows of dark soil so their bones can be seen; (6) the surrender fail state: at full lure for 3 s you lie down, float, black out (non-graphic); (7) arrival from_L049: L049's page says specific rusted bunker doors lead here; we set one into the Gully wall, grown over by roots, and it does not open from this side (no exit is documented); (8) flashlight allowed (page silent); (9) captions are our paraphrases, never long page quotes. Not built: Lynn's 'everyone I have ever known, beckoning' (testimony only), the brain-hole entrance (testimony). QA fixture (QA mode only): the exit is a fixed 14 m region 60 m uphill, directly away from the Clearing from the start; the lure-peak requirement is pre-satisfied so the walker bot can fire it by walking there with its back to the Clearing."
+}

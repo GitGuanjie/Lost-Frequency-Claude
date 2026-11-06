@@ -1,0 +1,127 @@
+{
+  "stable_id": "L012",
+  "scene": "res://levels/L012/L012.tscn",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-06, 43/43); stills reviewed by integrator (AI); human review pending",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L011",
+    "from_L019"
+  ],
+  "signature": "A small, brightly lit white room (a table over an unreachable hole, a chair, a locked door) whose nooks open onto an infinite white abyss of old sunken furniture and copycat doors; the footage censors itself and the mind fogs the further you go.",
+  "mechanics": [
+    "self_censoring_footage",
+    "censored_rec_overlay",
+    "smpte_censored_screenshots",
+    "breakdown_with_distance",
+    "memory_fog_non_permanent",
+    "timed_exit_ritual",
+    "compressed_level_clock_wristwatch",
+    "copycat_door_loop",
+    "immovable_table_hole",
+    "white_abyss_streaming",
+    "isolation_no_entities"
+  ],
+  "exits": [
+    {
+      "id": "L012>L001#1",
+      "to": "L001",
+      "trigger": "condition",
+      "label": "Turned the main door's handle at the one-hour mark; it opened onto Level 1",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Addendum I",
+      "source_quote": "Gab's managed to create a pathway to Level 1",
+      "hint": "Someone typed up the expedition's procedure. It lies on the table. Your watch keeps the time.",
+      "arrival": "from_L012"
+    },
+    {
+      "id": "L012>L004#2",
+      "to": "L004",
+      "trigger": "condition",
+      "label": "Turned the main door's handle at the one-hour mark; it opened onto Level 4",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "may transport Wanderers to Level 1 , Level 4 , Level 10 , Level 19 , Level 23 , Level 25 , Level 34 or Level 287",
+      "hint": "Someone typed up the expedition's procedure. It lies on the table. Your watch keeps the time.",
+      "arrival": "from_L012"
+    },
+    {
+      "id": "L012>L010#3",
+      "to": "L010",
+      "trigger": "condition",
+      "label": "Turned the main door's handle at the one-hour mark; it opened onto Level 10",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "may transport Wanderers to Level 1 , Level 4 , Level 10 , Level 19 , Level 23 , Level 25 , Level 34 or Level 287",
+      "hint": "Someone typed up the expedition's procedure. It lies on the table. Your watch keeps the time.",
+      "arrival": "from_L012"
+    },
+    {
+      "id": "L012>L019#4",
+      "to": "L019",
+      "trigger": "condition",
+      "label": "Turned the main door's handle at the one-hour mark; it opened onto Level 19",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "may transport Wanderers to Level 1 , Level 4 , Level 10 , Level 19 , Level 23 , Level 25 , Level 34 or Level 287",
+      "hint": "Someone typed up the expedition's procedure. It lies on the table. Your watch keeps the time.",
+      "arrival": "from_L012"
+    },
+    {
+      "id": "L012>L023#5",
+      "to": "L023",
+      "trigger": "condition",
+      "label": "Turned the main door's handle at the one-hour mark; it opened onto Level 23",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "may transport Wanderers to Level 1 , Level 4 , Level 10 , Level 19 , Level 23 , Level 25 , Level 34 or Level 287",
+      "hint": "Someone typed up the expedition's procedure. It lies on the table. Your watch keeps the time.",
+      "arrival": "from_L012"
+    },
+    {
+      "id": "L012>L025#6",
+      "to": "L025",
+      "trigger": "condition",
+      "label": "Turned the main door's handle at the one-hour mark; it opened onto Level 25",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "may transport Wanderers to Level 1 , Level 4 , Level 10 , Level 19 , Level 23 , Level 25 , Level 34 or Level 287",
+      "hint": "Someone typed up the expedition's procedure. It lies on the table. Your watch keeps the time.",
+      "arrival": "from_L012"
+    },
+    {
+      "id": "L012>L034#7",
+      "to": "L034",
+      "trigger": "condition",
+      "label": "Turned the main door's handle at the one-hour mark; it opened onto Level 34",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "may transport Wanderers to Level 1 , Level 4 , Level 10 , Level 19 , Level 23 , Level 25 , Level 34 or Level 287",
+      "hint": "Someone typed up the expedition's procedure. It lies on the table. Your watch keeps the time.",
+      "arrival": "from_L012"
+    },
+    {
+      "id": "L012>L287#8",
+      "to": "L287",
+      "trigger": "condition",
+      "label": "Turned the main door's handle at the one-hour mark; it opened onto Level 287",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "may transport Wanderers to Level 1 , Level 4 , Level 10 , Level 19 , Level 23 , Level 25 , Level 34 or Level 287",
+      "hint": "Someone typed up the expedition's procedure. It lies on the table. Your watch keeps the time.",
+      "arrival": "from_L012"
+    }
+  ],
+  "fail_states": [],
+  "entity_policy": "NO ENTITY PER SOURCE: no Level 12 entity sightings in the M.E.G. database; the expedition saw no entities in the white. The Window entity of Level 11 is only an entrance guideline and is not spawned.",
+  "notes": "SOURCE: self-censorship (white image / static; uploaded footage becomes a colourless SMPTE screen; filenames censored), the white room with table, chair and locked door, the infinite white abyss, breakdown with distance from the table and chair, old beaten lamps/chairs/tables/drawers some halfway through the floor, non-permanent memory fog, the hole under the immovable table, copycat doors that return you to the main room, no entities, the exit ritual and the eight listed destinations (chosen uniformly when the door opens; the log's own success was Level 1). ADAPTATION: (1) the player's view is the recording, so censorship is graded and intermittent (white-outs, static, colour drain growing with distance and fog; reduce-motion softens flashes); the REC overlay's time and label are blanked; the screenshot key saves a colourless SMPTE frame under a censored file name. (2) Level time runs compressed (x12 standing, x60 seated) and is read off a wristwatch HUD; the ritual accepts 'about fifteen minutes' as >= 13.5 level minutes seated and 'exactly one hour' as within +-2.5 level minutes; an early or late try resets the ritual ('repeat the steps'); a rare 2% lucky opening at the first try is the page's 'If it opens, lucky you'. (3) The room's nooks are alcoves whose back is half open onto the white; the door opens inward onto darkness (the page never says what lies beyond it). (4) The abyss is a finite streaming window of 32 m chunks in white fog with light from no visible source; breakdown rings change the floor finish and, far out (>~140 m), break it into shifted plates (<= 0.26 m), more and more sunken/tilted furniture and pieces clipping through each other; furniture layout and copycat placement are ours (two copycat doors and six pieces near the room are hand-placed anchors). (5) Memory fog rises in the white and fades in the room; it hazes the view, thickens the fog, garbles the wristwatch and blanks words of the typed transcript. (6) The typed transcript on the table paraphrases Addendum I as a clue device. QA fixture: in QA mode the ritual is pre-completed and the door stands open on Gab's Level 1 route. Not built: Revision 1's original exit (unknown per page), Level 13 (link list only), companions."
+}

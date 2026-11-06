@@ -1,0 +1,57 @@
+{
+  "stable_id": "L974",
+  "scene": "res://levels/L974/L974.tscn",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-05, 0 failures); stills reviewed by integrator (AI); human review pending",
+  "procedural": false,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "A small Baker-Miller-pink home with no door out and painted coquette 'windows', where a 3.2 m faceless matt-black figure called Kitty stoops under the ceiling and follows you, harmless, until you hand her the cute thing that brought you here.",
+  "mechanics": [
+    "kitty_stalker_never_hostile",
+    "gift_exit_pre_visit_cute_item",
+    "dreamsleep_computer",
+    "bed_only_sleep_exit",
+    "pink_sanity_drift",
+    "self_restocking_food_sugar_decay",
+    "childhood_meal_smell",
+    "fuzzy_memories",
+    "aggression_or_damage_withdrawal",
+    "split_level_house",
+    "tailored_decor_by_seed"
+  ],
+  "exits": [
+    {
+      "id": "L974>EXT#2",
+      "to": "EXT",
+      "to_label": "an unnamed safe level",
+      "trigger": "interact",
+      "label": "Gave Kitty your cute keepsake and fell asleep",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "Upon handing the gift to Kitty, you will immediately fall asleep and wake up in a safe level.",
+      "conditions": "the cute item must have been obtained before the visit; any time during the stay",
+      "hint": "You arrived holding something cute. Kitty is always somewhere near you.",
+      "arrival": "from_L974"
+    },
+    {
+      "id": "L974>L974_1#1",
+      "to": "L974_1",
+      "to_label": "Level 974.1",
+      "trigger": "interact",
+      "label": "Ran DreamSleep and slept in the bed",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Description",
+      "source_quote": "Sleeping on the bed will allow the Wanderer to enter the sub-section, 974.1 .",
+      "conditions": "DreamSleep must finish loading (about a minute); only the bedroom bed works",
+      "hint": "The old computer in the bedroom has a program that prepares your dreams.",
+      "arrival": "from_L974"
+    }
+  ],
+  "fail_states": [],
+  "entity_policy": "SOURCED ENTITY ONLY: Kitty (stalks, never hostile, withdraws after aggression or house damage). The Owner is not spawned (appears only after actions in 974.1, which is not built).",
+  "notes": "Developer-accessible only: the page's entrance is a slight chance when no-clipping while carrying a 'cute' item; no story edge reaches it. SOURCE: ~970 sq ft pink home; no physical door outdoors; windows are coquette outdoor artwork; rooms = bedroom, master bedroom, two bathrooms, living room, kitchen/dining; only dining room and bedroom furnished; master bedroom empty but for a pink-and-white cat bed at the back wall; pink wooden banquette wrapping two sides of the table; twin bed between two jutting walls; open closet with a dresser of cute clothes next to the door; plushies and cute posters; desk with an old Windows-95-like computer parallel to the bed; Owner (locked) / Guest profiles; Mail (first-boot email from an unknown sender), Internet (redacted / vague / cryptic), DreamSleep (~1 min load, then 'Your dreams are ready, sleep to start'); only the bed leads to 974.1; Baker Miller pink calming short-term, anxiety and sanity loss long-term; fridge/pantry food that replaces itself and turns to mostly sugar on long stays; childhood-meal smells, rarely a real meal on the table; fuzzy childhood memories; Kitty: 3.2 m, lanky limbs without hands or feet, matt mosou-black, faceless, smooth and swift, appears close by, stalks, never hostile, stops stalking after aggression or house damage and the food and much sanity vanish; 'A foggy lullaby' audio. ADAPTATION: exact floor plan (12 x 8 m); a sunken living room (two 0.18 m risers) and a master bedroom one step up for natural vertical variation (guide section 9); bathroom fixtures and everyday clutter (outlets, switches, vents, utensils, curtains, clock) - fixtures are plumbing, not furniture; the keepsake: arriving requires a cute item on your person, so the wanderer always holds the one that brought them (shown as a small plush charm) and that is the gift - items taken from the house never count; Kitty stoops under the 2.6 m ceiling and moves on a waypoint graph (1.5 m/s seen, 3.6 m/s unseen), gives way when crowded, and 'aggression' is shoving her at a sprint; 'house damage' is smashing a window's glass (third attempt); sanity: calm vignette for 4 min, then -0.12/s with vignette/desaturation/lullaby wobble, no death (Safe class); food restocks in 75 s, sugar after 10 min; the real meal appears on 12% of seeds; posters are generic cute motifs (no Sanrio/San-X characters); seeded tailoring: empty photo frames, plush colours, utensils, poster palettes; the email body is blank in the snapshot and is shown as 'will not display', never invented; Internet answers are only redacted/unavailable/cryptic glyphs; the child variant (nurturing Kitty) is not implemented because the wanderer is an adult. The gift destination is unnamed in the source ('a safe level'), so 'to' is the placeholder EXT and the route reports as not built. QA fixture: in QA mode Kitty waits by her cat bed instead of stalking."
+}

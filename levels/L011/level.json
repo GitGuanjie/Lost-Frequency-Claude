@@ -1,0 +1,80 @@
+{
+  "stable_id": "L011",
+  "scene": "res://levels/L011/L011.tscn",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (full-suite run 2026-11-05, 0 failures); stills reviewed by integrator (AI); human review pending",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L009",
+    "from_L025"
+  ],
+  "signature": "An empty, fully powered night metropolis: block grid, canals under bridges, suburban lots in the west and skyscraper blocks in the east, one building in three sealed behind black-mirror glass, lit shops with no one in them, streets that rearrange themselves while unobserved, and residents' barricades around streets dense with one-way exits.",
+  "mechanics": [
+    "chunk_streaming_city",
+    "density_districts",
+    "far_skyline_lod",
+    "sealed_one_third_mirror_buildings",
+    "open_ground_floor_public_rooms",
+    "street_fluidity_unobserved",
+    "parked_cars_no_fuel",
+    "working_traffic_signals",
+    "canal_bridges_swim_ladders",
+    "barricade_memorial_spray_trail",
+    "exit_street_hub",
+    "malt_marters_supply_note"
+  ],
+  "exits": [
+    {
+      "id": "L011>L025#39",
+      "to": "L025",
+      "trigger": "interact",
+      "label": "Played an arcade machine standing in the middle of the road",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Arcade machines in obtuse places lead to Level 25 if interacted with in any way.",
+      "hint": "South of the first intersection, past the residents' barricade, a jingle plays where no machine should be.",
+      "arrival": "from_L011"
+    },
+    {
+      "id": "L011>L808#13",
+      "to": "L808",
+      "trigger": "walk_in",
+      "label": "Walked into a lit arcade",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Arcade buildings connect to Level 808 if entered.",
+      "hint": "A pink neon sign on the barricaded street. Residents do not go in.",
+      "arrival": "from_L011"
+    },
+    {
+      "id": "L011>L998#44",
+      "to": "L998",
+      "trigger": "interact",
+      "label": "Pressed the call button of an elevator set into a blank wall",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "elevators in random places (such as on the sides of buildings or streets) always lead to Level 998 if their buttons are pressed",
+      "hint": "Steel doors where no lobby is. Someone has sprayed a warning beside them.",
+      "arrival": "from_L011"
+    },
+    {
+      "id": "L011>L049#41",
+      "to": "L049",
+      "trigger": "interact",
+      "label": "Touched a military recruitment poster",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "military recruitment posters lead to Level 49 if touched",
+      "hint": "An olive poster on a blank wall of the barricaded street.",
+      "arrival": "from_L011"
+    }
+  ],
+  "fail_states": [],
+  "entity_policy": "LOW ENTITY COUNT, none spawned in this slice: the page's entities are visitors (Facelings, Hounds, Lucky Cranes, Living Pizzas) and the Level 11 Effect makes them unlikely to attack; the slice carries no combat. Residents are present only as traces (barricades, memorial, spray trails, a supply drop and its note).",
+  "notes": "ADAPTATION: the playable world is a finite streaming window (80 m chunks, radius 2) plus a far skyline LOD (240 m chunks, radius 3) built from the same deterministic building plans. Night is our choice: the page states no time of day; night makes the sourced working lighting (open buildings, the level's own electricity) and the black-mirror sealed buildings legible. Districts follow the page's gradual density change (suburban lots resembling Level 9 in the west, skyscraper blocks in the east, noise in between); street layout, facades and room plans are ours. Street lights and traffic signals work (the level generates its own electricity); signals cycle for no traffic. Open ground floors are public rooms (shops, laundromats, offices, lobbies) with sparse furnishing; upper floors and suburban houses are not enterable in this slice. Sealed buildings (one third, per page) have black-mirror windows and locked doors. Fluidity (cars between kerb and car park, ads changing or fading, roadworks appearing) only happens to things outside the camera view. Canal: one sourced canal following a road line, with bridges, swimmable water and wall ladders. The exit street near spawn (barricade, memorial, painted safe-route trail, arcade machine in the road, arcade building, out-of-place elevator, recruitment poster) is authored; farther out, arcade buildings, street elevators and arcade machines in plazas/parks recur procedurally. The memorial is generic (no names); the supply note paraphrases the Malt Marters practice. Arrivals: from_L009 on a western suburban street (page: arrivals in suburban lots mistake it for Level 9); from_L025 beside the arcade machine in the road. Not built: the ~40 other documented exits (they remain documented in transitions.json), communities (Capital, New Times Square, Base Beta and others: their locations are not given), subways and trains."
+}

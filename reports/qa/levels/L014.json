@@ -1,0 +1,80 @@
+{
+ "duplication_pairs": [],
+ "engine": "4.5.1-stable (official)",
+ "failures": [],
+ "levels": [
+  {
+   "bot": {
+    "distance_walked": 55.3209280800074,
+    "edge": "L014>EXT#1",
+    "fired": true,
+    "sim_seconds": 18.9166666666667,
+    "target": "L014>EXT#1",
+    "ticks": 1135
+   },
+   "build_ms": 1794,
+   "collision_shapes": 1026,
+   "distinct_layouts_over_3_seeds": 3,
+   "dup_profile": {
+    "boxes": {
+     "-1_-1_2": 1163,
+     "-1_0_2": 1,
+     "-2_-2_2": 170,
+     "-3_-3_1": 1,
+     "-4_-3_2": 2,
+     "-4_0_2": 1,
+     "5_5_6": 1
+    },
+    "materials": {
+     "l14_cloth": 60,
+     "l14_flame": 60,
+     "l14_gold": 192,
+     "l14_plate": 1312,
+     "l14_rust": 60
+    }
+   },
+   "exits_declared": 1,
+   "exits_found": 1,
+   "load_ms": 1903,
+   "nav": {
+    "exits": [
+     {
+      "edge": "L014>EXT#1",
+      "goal": "(31.03895, 15.31687, 78.55798)",
+      "path_points": 82,
+      "reachable": true
+     }
+    ],
+    "map_regions": 1,
+    "map_sync_ticks": 2,
+    "nav_polygons": 8415,
+    "start": "(8.968945, 4.61192, 22.9285)"
+   },
+   "qa_status": "ENGINE_SMOKE_PASS",
+   "save_tested": true,
+   "self_tests": 5,
+   "spawn": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+   },
+   "stable_id": "L014"
+  }
+ ],
+ "renderer": "headless",
+ "started": "2026-11-06T05:36:00",
+ "suites": {
+  "duplication": {
+   "checks": [],
+   "failed": 0,
+   "passed": 1
+  },
+  "level:L014": {
+   "checks": [],
+   "failed": 0,
+   "passed": 22
+  }
+ }
+}

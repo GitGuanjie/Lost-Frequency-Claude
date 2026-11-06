@@ -1,0 +1,63 @@
+{
+ "engine": "4.5.1-stable (official)",
+ "failures": [
+  "story: bot used L009>L011#1 in story mode { \"fired\": false, \"ticks\": 9000, \"sim_seconds\": 150.0, \"edge\": \"\", \"distance_walked\": 163.251533693205, \"target\": \"L009>L011#1\" }"
+ ],
+ "levels": [],
+ "renderer": "headless",
+ "started": "2026-11-05T20:12:42",
+ "story_chain": [
+  {
+   "arrival": "from_L000",
+   "bot_fired": true,
+   "edge": "L000>L001#1",
+   "from": "L000",
+   "sim_seconds": 18.2,
+   "to": "L001"
+  },
+  {
+   "arrival": "from_L001",
+   "bot_fired": true,
+   "edge": "L001>L019#10",
+   "from": "L001",
+   "sim_seconds": 11.65,
+   "to": "L019"
+  },
+  {
+   "arrival": "from_L019",
+   "bot_fired": true,
+   "edge": "L019>L005#6",
+   "from": "L019",
+   "sim_seconds": 13.0666666666667,
+   "to": "L005"
+  },
+  {
+   "arrival": "from_L005",
+   "bot_fired": true,
+   "edge": "L005>L009#4",
+   "from": "L005",
+   "sim_seconds": 126.016666666667,
+   "to": "L009"
+  },
+  {
+   "bot_fired": false,
+   "edge": "L009>L011#1",
+   "from": "L009",
+   "sim_seconds": 150.0,
+   "to": "L011"
+  }
+ ],
+ "suites": {
+  "story": {
+   "checks": [
+    {
+     "detail": "{ \"fired\": false, \"ticks\": 9000, \"sim_seconds\": 150.0, \"edge\": \"\", \"distance_walked\": 163.251533693205, \"target\": \"L009>L011#1\" }",
+     "ok": false,
+     "what": "bot used L009>L011#1 in story mode"
+    }
+   ],
+   "failed": 1,
+   "passed": 28
+  }
+ }
+}

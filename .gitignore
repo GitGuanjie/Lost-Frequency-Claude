@@ -1,0 +1,5 @@
+# Godot editor/import cache and local user data
+.godot/
+*.tmp
+export/
+build/

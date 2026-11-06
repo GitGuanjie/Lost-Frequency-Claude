@@ -1,0 +1,64 @@
+{
+  "adapter": "llvmpipe (LLVM 20.1.2, 256 bits)",
+  "captured": "2026-11-06T00:50:37",
+  "driver": "vulkan",
+  "engine": "4.5.1-stable (official)",
+  "levels": [
+    {
+      "seed": 1001,
+      "shots": [
+        {
+          "file": "res://reports/screenshots/L011_avenue.jpg",
+          "frame_ms_mean": 133.034522692362,
+          "pos": "(110.0, 1.82, 18.0)",
+          "shot": "avenue"
+        },
+        {
+          "file": "res://reports/screenshots/L011_exitstreet.jpg",
+          "frame_ms_mean": 133.561184565226,
+          "pos": "(92.5, 1.8, 7.0)",
+          "shot": "exitstreet"
+        },
+        {
+          "file": "res://reports/screenshots/L011_cabinet.jpg",
+          "frame_ms_mean": 133.507707913717,
+          "pos": "(92.4, 1.5, -33.5)",
+          "shot": "cabinet"
+        },
+        {
+          "file": "res://reports/screenshots/L011_arcade.jpg",
+          "frame_ms_mean": 132.652942339579,
+          "pos": "(87.0, 1.7, -17.0)",
+          "shot": "arcade"
+        },
+        {
+          "file": "res://reports/screenshots/L011_elevator.jpg",
+          "frame_ms_mean": 134.027777036031,
+          "pos": "(86.0, 1.62, -47.0)",
+          "shot": "elevator"
+        },
+        {
+          "file": "res://reports/screenshots/L011_canal.jpg",
+          "frame_ms_mean": 132.63888835907,
+          "pos": "(90.0, 1.8, 92.0)",
+          "shot": "canal"
+        },
+        {
+          "file": "res://reports/screenshots/L011_suburb.jpg",
+          "frame_ms_mean": 133.585901260376,
+          "pos": "(-290.0, 1.7, 10.0)",
+          "shot": "suburb"
+        },
+        {
+          "file": "res://reports/screenshots/L011_downtown.jpg",
+          "frame_ms_mean": 133.080763498942,
+          "pos": "(330.0, 1.7, 10.0)",
+          "shot": "downtown"
+        }
+      ],
+      "stable_id": "L011"
+    }
+  ],
+  "note": "Software rasteriser timings (llvmpipe/lavapipe) are NOT representative of GPU performance.",
+  "vendor": "Unknown"
+}

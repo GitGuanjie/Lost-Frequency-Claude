@@ -1,0 +1,89 @@
+{
+  "stable_id": "L006",
+  "scene": "res://levels/L006/L006.tscn",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (full-suite run 2026-11-05, 0 failures); stills reviewed by integrator (AI); human review pending",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L005"
+  ],
+  "signature": "Total darkness and total silence in endless tight concrete hallways: nothing lights up, you only know the walls your hands have just touched, and the one thing to follow is the faint sound of waves.",
+  "mechanics": [
+    "total_darkness_no_light_sources",
+    "touch_memory_navigation",
+    "soundproof_silence",
+    "dread_after_minutes",
+    "auditory_hallucinations",
+    "waves_wayfinding_along_halls",
+    "wrong_turn_blocks_level7_and_return",
+    "mimicry_footsteps_audio_only",
+    "tight_hall_chunk_streaming",
+    "rare_cold_metal_door",
+    "trip_wire"
+  ],
+  "exits": [
+    {
+      "id": "L006>L007#1",
+      "to": "L007",
+      "trigger": "walk_in",
+      "label": "Followed the faint sound of waves down a stairwell",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "The easiest way to find this stairwell is to listen for the faint sound of waves",
+      "conditions": "Deep in the level (seeded chunk three chunks out). Unavailable once a wrong turn has been taken.",
+      "hint": "In the silence, something sounds like surf. It comes along the halls, not through the walls.",
+      "arrival": "from_L006"
+    },
+    {
+      "id": "L006>L005#4",
+      "to": "L005",
+      "trigger": "walk_in",
+      "label": "Climbed back up into the Boiler Room heat",
+      "confidence": "CONDITIONAL",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "may block off access to Level 7 and, indeed, the entrance back to Level 5",
+      "conditions": "The stairs you came down; gone after a wrong turn.",
+      "hint": "The walls near the stairs you came down are warm to the touch.",
+      "arrival": "from_L006"
+    },
+    {
+      "id": "L006>L129#2",
+      "to": "L129",
+      "trigger": "interact",
+      "label": "Pushed through a large, freezing metal door",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "Finding a rare, large metal door that feels extremely cold will lead to Level 129",
+      "conditions": "Rare (about 1 in 20 halls three or more chunks out).",
+      "hint": "One wall is not concrete, and it is painfully cold.",
+      "arrival": "from_L006"
+    },
+    {
+      "id": "L006>L006_1#3",
+      "to": "L006_1",
+      "trigger": "condition",
+      "label": "Tripped over a wire in the dark",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "accidently tripping over a wire can lead to Level 6.1",
+      "conditions": "Rare wire strung across a straight hall; walking into it at pace trips you.",
+      "hint": "Nobody sees the wire. Some feel it with their feet first.",
+      "arrival": "from_L006"
+    }
+  ],
+  "fail_states": [
+    {
+      "kind": "lost",
+      "label": "A wrong turn: the stairwell and the way back are gone",
+      "basis": "SOURCE",
+      "source_quote": "Taking a wrong turn at an indeterminate point in the level may block off access"
+    }
+  ],
+  "entity_policy": "NO ENTITY PER SOURCE ('no entities have been found on this level'). Nothing is spawned and nothing attacks. Scuttling, breathing and whispering are hallucinations with no source (reported by witnesses after minutes in the dark). Mimicry (about four people who mimic any sound) appears only as your own footsteps echoed back once you stop, never as a body or an attacker. The Archives attacker is unverified testimony and is not implemented. The World's Quietest Room (rumoured; light switch 'advised not to flip') is not implemented, so no light switch exists.",
+  "notes": "Flashlight rule = 'none': the page says light sources brought into the level have no function ('fails' would emit light for seconds). Nothing in the level is lit or emissive; ambient and fog are zero. ADAPTATION: feeling one's way is shown as a fading touch-memory imprint (unshaded shader, no light cast): rays at arm's length (0.95 m) and footsteps record what you touched; imprints fade in ~8 s, faster as dread rises. ADAPTATION: tight-hall grammar (1.3 m halls on a 2.4 m grid, randomized DFS biased to long straight runs plus a few loops) streamed in 24 m chunks; the playable level is a finite streaming window. ADAPTATION: wave sound is placed a few halls ahead on the shortest corridor route to the stairwell (BFS over loaded halls) so it can be followed around corners. ADAPTATION: wrong turn = straying 5-6 chunks from the entrance while 3+ from the stairwell (or 12 minutes without finding it); afterwards the entrance and stairwell chunks are rebuilt as plain halls. ADAPTATION: tactile tints: warmth near the stairs up to the Boiler Room, damp near the stairwell, cold at the metal door. ADAPTATION: dread starts after 2.5 minutes, slows walking slightly, and resets near the entrance (page: Boiler Room as base, frequent return missions). ADAPTATION: walking pace is slower than default (feeling the way). Arrivals: start and from_L005 are the landing at the top of the stairs down from the Boiler Room (also a checkpoint)."
+}

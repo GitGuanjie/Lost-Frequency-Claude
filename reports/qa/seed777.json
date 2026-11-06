@@ -1,0 +1,120 @@
+{
+ "duplication_pairs": [],
+ "engine": "4.5.1-stable (official)",
+ "failures": [],
+ "levels": [
+  {
+   "bot": {
+    "distance_walked": 25.7071211072616,
+    "edge": "L000>L001#1",
+    "fired": true,
+    "sim_seconds": 9.6,
+    "target": "L000>L001#1",
+    "ticks": 576
+   },
+   "build_ms": 580,
+   "collision_shapes": 2887,
+   "distinct_layouts_over_3_seeds": 3,
+   "dup_profile": {
+    "boxes": {
+     "-1_-1_2": 376,
+     "-2_2_4": 3,
+     "-2_2_6": 2,
+     "-2_4_4": 7,
+     "-2_4_5": 5,
+     "-2_4_6": 5,
+     "-2_5_6": 3,
+     "-2_6_6": 55,
+     "-3_-1_2": 4,
+     "-3_0_4": 20,
+     "-3_1_2": 14,
+     "-3_2_2": 1,
+     "-3_4_5": 2,
+     "-3_4_6": 2,
+     "-4_-1_0": 325,
+     "-4_-1_1": 244,
+     "-4_-1_2": 317,
+     "-4_-2_0": 38,
+     "-4_-2_1": 24,
+     "-4_-2_2": 6,
+     "-4_-3_-1": 128,
+     "-4_-3_-2": 64,
+     "-4_-3_0": 32,
+     "-4_0_2": 797,
+     "-4_0_5": 4,
+     "-4_1_2": 111,
+     "-4_2_2": 653,
+     "-4_2_3": 9,
+     "-4_2_4": 9,
+     "-5_-1_1": 100,
+     "-5_-4_2": 28,
+     "-5_-5_2": 6,
+     "-5_0_2": 44,
+     "-5_1_1": 5,
+     "-5_1_2": 4,
+     "-5_1_4": 1,
+     "-5_2_2": 26,
+     "-5_2_3": 34,
+     "-5_2_4": 68,
+     "-5_2_5": 68,
+     "-5_2_6": 32,
+     "-6_-2_-2": 1,
+     "1_2_2": 1
+    },
+    "materials": {
+     "l0_carpet": 644,
+     "l0_carpet_deep": 2,
+     "l0_carpet_dry": 14,
+     "l0_ceiling": 68,
+     "l0_panel": 4032,
+     "l0_wall_flicker": 12,
+     "l0_wallpaper": 26488,
+     "l0_wallpaper_pale": 3032,
+     "l0_wallpaper_rough": 40
+    }
+   },
+   "exits_declared": 1,
+   "exits_found": 1,
+   "load_ms": 676,
+   "nav": {
+    "exits": [
+     {
+      "edge": "L000>L001#1",
+      "goal": "(28.83785, 0.116389, 10.51877)",
+      "path_points": 31,
+      "reachable": true
+     }
+    ],
+    "map_regions": 1,
+    "map_sync_ticks": 3,
+    "nav_polygons": 2852,
+    "start": "(10.5, 0.116389, 10.5)"
+   },
+   "qa_status": "ENGINE_SMOKE_PASS",
+   "save_tested": true,
+   "self_tests": 4,
+   "spawn": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+   },
+   "stable_id": "L000"
+  }
+ ],
+ "renderer": "headless",
+ "started": "2026-11-05T20:12:26",
+ "suites": {
+  "duplication": {
+   "checks": [],
+   "failed": 0,
+   "passed": 1
+  },
+  "level:L000": {
+   "checks": [],
+   "failed": 0,
+   "passed": 21
+  }
+ }
+}

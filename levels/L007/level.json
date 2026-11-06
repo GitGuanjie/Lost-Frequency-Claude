@@ -1,0 +1,96 @@
+{
+  "stable_id": "L007",
+  "scene": "res://levels/L007/L007.tscn",
+  "status": "PLAYABLE",
+  "qa_status": "ENGINE_SMOKE_PASS (full-suite run 2026-11-05, 0 failures); stills reviewed by integrator (AI); human review pending",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L006"
+  ],
+  "signature": "A small furnished room with a puddled carpet, built sideways into the concrete ceiling of an endless dim ocean: the doorway shows the sea face-on, gravity turns toward it, and a rope ladder is the only way back up from the water 4.5 m below.",
+  "mechanics": [
+    "sideways_room_gravity_flip",
+    "rope_ladder_return",
+    "long_breath_oxygen",
+    "depth_light_zones",
+    "cold_exposure",
+    "tiny_hearing_territory",
+    "thing_light_sensitive_territory",
+    "abyss_blackout",
+    "cave_current",
+    "chunk_streaming_ceiling_and_abyss"
+  ],
+  "exits": [
+    {
+      "id": "L007>L008#1",
+      "to": "L008",
+      "trigger": "dive",
+      "label": "Swam into the underwater cave in the side of the seamount",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "underwater cave on the side of a particularly tall mountain toward the bottom of the Midnight Zone",
+      "hint": "The mountain stands almost straight below the doorway. Far down, past where the light ends, the water is being drawn into its flank.",
+      "arrival": "from_L007"
+    },
+    {
+      "id": "L007>L009#3",
+      "to": "L009",
+      "trigger": "door",
+      "label": "Opened the wooden door in the floor of the stone platform",
+      "confidence": "CONFIRMED+DANGEROUS",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "a wooden door built into the floor of a circular stone platform",
+      "hint": "West of the doorway and well below the surface, massive pipes and pillars stand in a ring. Something lives there that hears everything.",
+      "arrival": "from_L007"
+    },
+    {
+      "id": "L007>L083#2",
+      "to": "L083",
+      "trigger": "sleep",
+      "label": "Blacked out in the Abyss",
+      "confidence": "CONFIRMED+DANGEROUS",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
+      "source_quote": "diving into the Abyss and going unconscious leads directly to Level 83",
+      "hint": "Nobody has lasted much more than two minutes in the deepest water.",
+      "arrival": "from_L007"
+    }
+  ],
+  "fail_states": [
+    {
+      "kind": "entity",
+      "label": "Tiny (Daylight/Twilight Zones, mostly at his ring) - a fight is a death sentence",
+      "basis": "SOURCE",
+      "source_quote": "a fight with either entity is a death sentence"
+    },
+    {
+      "kind": "entity",
+      "label": "The Thing On Level 7 (Midnight Zone and upper Abyss) - a fight is a death sentence",
+      "basis": "SOURCE",
+      "source_quote": "the Thing makes its home in the Midnight Zone and upper Abyss"
+    },
+    {
+      "kind": "drowning",
+      "label": "Breath runs out (long, but finite)",
+      "basis": "SOURCE",
+      "source_quote": "almost 30 minutes in some cases"
+    },
+    {
+      "kind": "cold",
+      "label": "Cold is lethal only after very long exposure",
+      "basis": "SOURCE",
+      "source_quote": "not lethal except in cases of extremely long-term exposure"
+    },
+    {
+      "kind": "stranded",
+      "label": "Falling through the doorway without a rope ladder leaves no way back up",
+      "basis": "SOURCE",
+      "source_quote": "the only conceivable way to climb back up to safety"
+    }
+  ],
+  "entity_policy": "Two CONFIRMED entities as presences only: the page never describes what Tiny or the Thing look like, so neither has a body. Tiny: confined to the Daylight and Twilight Zones, concentrated at his ring; strong hearing (fast swimming is loud; striking a rusted pipe is a loud noise that subdues him). The Thing: Midnight Zone and upper Abyss; light-sensitive eyes (flashlight subdues it). Neither leaves its zone (their mutual agreement). No other life: skeletons only. Fort Surrender worshippers are RUMORED and are not spawned; their tar-and-furniture shelter stands empty.",
+  "notes": "ADAPTATION: depth compressed for play: Daylight 0-180 m, Twilight 180-320 m, Midnight 320-500 m, Abyss below 500 m (page: twilight ~1 km, midnight ~4 km, abyss >7 km); the cave mouth sits at ~470 m on the seamount's east ridge and the Level 9 platform keeps the page's ~150 m west / ~150 m down. Breath capacity 450 s (page: almost 30 minutes in some cases), scaled with the compressed depths. The entrance room is walkable in its own frame; the doorway shows the sea face-on and a sideways copy of the room is visible through the ceiling hatch from the water. The coiled rope ladder by the doorframe is an ADAPTATION (the page says a rope or ladder is essential; we leave one for the player to tie). Stairs up to Level 6 end in total darkness: no documented route back up. Islands, abyss piles and bone scatter are seeded; the seamount, hatch, ring, cave and Fort Surrender are authored. Playable world is a finite streaming window (150 m ceiling/abyss chunks); the ocean volume spans 12 km. QA FIXTURE: in QA mode only, a copy of the Level 9 floor door is placed in the entrance-room floor and the deep exits are not built; the real dive and door routes are verified by levels/L007/route_test.gd."
+}

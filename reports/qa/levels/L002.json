@@ -1,0 +1,5260 @@
+{
+  "counters": {
+    "accepted": 0,
+    "blocked_source": 0,
+    "playable": 11,
+    "requested": 100,
+    "source_audited": 100,
+    "spawnable": 12
+  },
+  "duplication_pairs": [],
+  "engine": "4.5.1-stable (official)",
+  "failures": [
+    "story: story save on disk advanced to L001 [\"L000\", \"L000\", \"\"]",
+    "story: story save on disk advanced to L019 [\"L000\", \"L000\", \"\"]",
+    "story: story save on disk advanced to L009 [\"L005\", \"L005\", \"\"]",
+    "story: bot used L009>L011#1 in story mode { \"fired\": false, \"ticks\": 9000, \"sim_seconds\": 150.0, \"edge\": \"\", \"distance_walked\": 162.105100238034, \"target\": \"L009>L011#1\" }"
+  ],
+  "legacy_save_found_on_machine": true,
+  "levels": [
+    {
+      "bot": {
+        "distance_walked": 116.440491224639,
+        "edge": "L002>L998#13",
+        "fired": true,
+        "sim_seconds": 40.8,
+        "target": "L002>L998#13",
+        "ticks": 2448
+      },
+      "build_ms": 596,
+      "collision_shapes": 1433,
+      "distinct_layouts_over_3_seeds": 3,
+      "dup_profile": {
+        "boxes": {
+          "-1_-1_0": 6,
+          "-1_-1_1": 25,
+          "-1_-1_2": 3,
+          "-1_0_1": 12,
+          "-1_0_2": 7,
+          "-1_1_1": 30,
+          "-1_1_2": 30,
+          "-1_2_2": 2,
+          "-2_-1_-1": 1,
+          "-2_-2_0": 18,
+          "-2_-2_1": 2,
+          "-2_-2_2": 3,
+          "-2_14_14": 1,
+          "-2_1_2": 5,
+          "-2_1_3": 6,
+          "-2_1_4": 21,
+          "-2_1_5": 4,
+          "-2_2_2": 3,
+          "-2_2_3": 14,
+          "-2_2_4": 61,
+          "-2_2_5": 13,
+          "-2_3_3": 12,
+          "-2_4_4": 66,
+          "-2_5_5": 16,
+          "-3_-1_1": 3,
+          "-3_-1_2": 97,
+          "-3_-1_3": 13,
+          "-3_-1_4": 30,
+          "-3_-1_5": 4,
+          "-3_-2_1": 2,
+          "-3_-2_2": 88,
+          "-3_-2_3": 10,
+          "-3_-2_4": 3,
+          "-3_-3_0": 1,
+          "-3_-3_2": 32,
+          "-3_0_0": 1,
+          "-3_0_1": 120,
+          "-3_0_2": 93,
+          "-3_0_3": 5,
+          "-3_0_4": 20,
+          "-3_0_5": 4,
+          "-3_1_1": 31,
+          "-3_1_2": 92,
+          "-3_1_3": 36,
+          "-3_1_4": 34,
+          "-3_1_5": 4,
+          "-3_2_2": 122,
+          "-3_2_3": 97,
+          "-3_2_4": 204,
+          "-3_2_5": 39,
+          "-3_3_3": 4,
+          "-3_3_4": 12,
+          "-3_4_4": 24,
+          "-4_-3_2": 44,
+          "-4_-3_3": 6,
+          "-4_0_2": 1,
+          "-4_1_3": 1,
+          "-4_1_4": 5,
+          "-4_2_2": 2,
+          "-5_-4_0": 2,
+          "-5_0_4": 2,
+          "-5_1_4": 4,
+          "-5_2_4": 1,
+          "-6_-1_0": 24,
+          "-6_-1_2": 6,
+          "-6_-2_0": 2,
+          "-6_-3_0": 1,
+          "-6_0_1": 80,
+          "-6_0_2": 4,
+          "-6_0_3": 2,
+          "-6_0_4": 10,
+          "0_0_1": 3,
+          "0_1_1": 2,
+          "0_1_2": 7
+        },
+        "materials": {
+          "l2_alu": 1728,
+          "l2_amber": 12,
+          "l2_beige": 216,
+          "l2_block": 840,
+          "l2_brass": 1264,
+          "l2_brick": 1816,
+          "l2_bulb": 192,
+          "l2_cabinet": 408,
+          "l2_cardboard": 264,
+          "l2_ceiling": 358,
+          "l2_copper": 2672,
+          "l2_cord": 7048,
+          "l2_cord_orange": 3200,
+          "l2_dialface": 828,
+          "l2_door_blue": 12,
+          "l2_door_cream": 2292,
+          "l2_door_grey": 1020,
+          "l2_door_white": 1140,
+          "l2_doorway_glow": 4,
+          "l2_drum_blue": 384,
+          "l2_drum_red": 288,
+          "l2_drum_rust": 432,
+          "l2_elevator": 24,
+          "l2_fixture": 2460,
+          "l2_floor": 330,
+          "l2_frame": 2940,
+          "l2_glass_bits": 2538,
+          "l2_grate": 326,
+          "l2_insul": 4254,
+          "l2_louvre": 852,
+          "l2_machine": 876,
+          "l2_machine_dark": 1648,
+          "l2_pipe_green": 3740,
+          "l2_pipe_rust": 3296,
+          "l2_pipe_yellow": 2060,
+          "l2_rail_yellow": 2868,
+          "l2_railsteel": 96,
+          "l2_red": 4396,
+          "l2_rubber": 1920,
+          "l2_screen": 216,
+          "l2_sign": 12,
+          "l2_sleeper": 336,
+          "l2_sludge": 396,
+          "l2_stair": 1932,
+          "l2_steel": 54130,
+          "l2_tube_amber": 20,
+          "l2_tube_dead": 46,
+          "l2_tube_white": 332,
+          "l2_violet": 12,
+          "l2_voidfloor": 2,
+          "l2_wall": 5936,
+          "l2_woodbox": 300,
+          "paper": 972,
+          "void_black": 84
+        }
+      },
+      "exits_declared": 17,
+      "exits_found": 3,
+      "load_ms": 833,
+      "nav": {
+        "exits": [
+          {
+            "edge": "L002>L998#13",
+            "goal": "(45.08561, 4.31639, 5.085608)",
+            "path_points": 77,
+            "reachable": true
+          },
+          {
+            "edge": "L002>L175#9",
+            "goal": "(17.6, 0.116389, 9.3)",
+            "path_points": 14,
+            "reachable": true
+          },
+          {
+            "edge": "L002>L001#1",
+            "goal": "(6.853375, 0.116389, 13.14663)",
+            "path_points": 2,
+            "reachable": true
+          }
+        ],
+        "map_regions": 1,
+        "map_sync_ticks": 7,
+        "nav_polygons": 1464,
+        "start": "(8.2, 0.116389, 11.6)"
+      },
+      "qa_status": "ENGINE_SMOKE_PASS",
+      "save_tested": true,
+      "self_tests": 6,
+      "spawn": {
+        "floor_hit": true,
+        "offset": 0.0,
+        "requested_arrival": "start",
+        "spawn_ok": true,
+        "used_arrival": "start"
+      },
+      "stable_id": "L002"
+    }
+  ],
+  "renderer": "headless",
+  "started": "2026-11-05T19:19:37",
+  "story_chain": [
+    {
+      "arrival": "from_L000",
+      "bot_fired": true,
+      "edge": "L000>L001#1",
+      "from": "L000",
+      "sim_seconds": 18.2,
+      "to": "L001"
+    },
+    {
+      "arrival": "from_L001",
+      "bot_fired": true,
+      "edge": "L001>L019#10",
+      "from": "L001",
+      "sim_seconds": 11.65,
+      "to": "L019"
+    },
+    {
+      "arrival": "from_L019",
+      "bot_fired": true,
+      "edge": "L019>L005#6",
+      "from": "L019",
+      "sim_seconds": 13.0666666666667,
+      "to": "L005"
+    },
+    {
+      "arrival": "from_L005",
+      "bot_fired": true,
+      "edge": "L005>L009#4",
+      "from": "L005",
+      "sim_seconds": 7.51666666666667,
+      "to": "L009"
+    },
+    {
+      "bot_fired": false,
+      "edge": "L009>L011#1",
+      "from": "L009",
+      "sim_seconds": 150.0,
+      "to": "L011"
+    }
+  ],
+  "suites": {
+    "duplication": {
+      "checks": [
+        {
+          "detail": "",
+          "ok": true,
+          "what": "fewer than two levels profiled (nothing to compare)"
+        }
+      ],
+      "failed": 0,
+      "passed": 1
+    },
+    "level:L002": {
+      "checks": [
+        {
+          "detail": "",
+          "ok": true,
+          "what": "scene loads and builds"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "player spawned"
+        },
+        {
+          "detail": "{ \"requested_arrival\": \"start\", \"used_arrival\": \"start\", \"spawn_ok\": true, \"offset\": 0.0, \"floor_hit\": true }",
+          "ok": true,
+          "what": "spawn clear of collision and on a floor"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "floor (or water) under spawn"
+        },
+        {
+          "detail": "1433",
+          "ok": true,
+          "what": "non-null collision"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "environment present"
+        },
+        {
+          "detail": "[0.02455555461347, 0.01638888753951]",
+          "ok": true,
+          "what": "player stable on floor after 30 ticks"
+        },
+        {
+          "detail": "3",
+          "ok": true,
+          "what": "at least one physical exit present near start"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "physical exit is declared in manifest L002>L998#13"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "physical exit is declared in manifest L002>L175#9"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "physical exit is declared in manifest L002>L001#1"
+        },
+        {
+          "detail": "{ \"edge\": \"L002>L998#13\", \"reachable\": true, \"path_points\": 77, \"goal\": (45.08561, 4.31639, 5.085608), \"path\": [(8.199999, 0.116389, 11.6), (8.73658, 0.116389, 10.93658), (8.886578, 0.116389, 10.63658), (9.439209, 0.116389, 5.38658), (9.440578, 0.116389, 5.37358), (9.558007, 0.116389, 4.258006), (9.565525, 0.116389, 4.186579), (10.08658, 0.116389, -0.763422), (10.53658, 0.116389, -7.063421), (10.53658, 0.116389, -7.063421), (12.43016, 0.116389, -8.838652), (12.78658, 0.116389, -9.172794), (12.82466, 0.116389, -9.208497), (12.93658, 0.116389, -9.313421), (13.98658, 0.116389, -9.413952), (14.14911, 0.116389, -9.429513), (15.20033, 0.116389, -9.530162), (18.84877, 0.116389, -9.87948), (19.73022, 0.116389, -9.963875), (20.6782, 0.116389, -10.05464), (21.17871, 0.116389, -10.10256), (24.94546, 0.116389, -10.46321), (25.98658, 0.116389, -10.56289), (27.03658, 0.116389, -10.66342), (27.18658, 0.116389, -10.82414), (27.32878, 0.116389, -10.97649), (27.43805, 0.116389, -11.09357), (27.67571, 0.116389, -11.3482), (29.13658, 0.116389, -12.91342), (29.27776, 0.116389, -14.01931), (29.28977, 0.116389, -14.11342), (29.31546, 0.116389, -14.31466), (29.33798, 0.116389, -14.49104), (29.69526, 0.116389, -17.28977), (29.82594, 0.116389, -18.31342), (29.91919, 0.116389, -19.04386), (29.98564, 0.116389, -19.56437), (30.02914, 0.116389, -19.90516), (30.07054, 0.116389, -20.22946), (30.20511, 0.116389, -21.28354), (30.70051, 0.116389, -25.16424), (30.78339, 0.116389, -25.81342), (30.7954, 0.116389, -25.90754), (30.93658, 0.116389, -27.01342), (31.15733, 0.116389, -27.3021), (31.97448, 0.116389, -28.37068), (32.66857, 0.116389, -29.27833), (32.88658, 0.116389, -29.56342), (33.48658, 0.21639, -29.63842), (34.08658, 0.616389, -29.71342), (39.24659, 4.01639, -29.71342), (40.10659, 4.31639, -29.71342), (46.98658, 4.31639, -29.71342), (49.38658, 4.31639, -27.16342), (49.80781, 4.31639, -26.48945), (50.05763, 4.31639, -26.08974), (50.13658, 4.31639, -25.96342), (50.13658, 4.31639, -25.06342), (50.13658, 4.31639, -21.31342), (50.13658, 4.31639, -19.51342), (50.13658, 4.31639, -16.81342), (50.13658, 4.31639, -15.46342), (50.12084, 4.31639, -12.91342), (50.12039, 4.31639, -12.84045), (50.11816, 4.31639, -12.47998), (50.11576, 4.31639, -12.09087), (50.10888, 4.31639, -10.9769), (50.08566, 4.31639, -7.213423), (50.08508, 4.31639, -7.120349), (50.08472, 4.31639, -7.063421), (50.08252, 4.31639, -6.706317), (50.07824, 4.31639, -6.013422), (49.98658, 4.31639, 8.83658), (49.08658, 4.31639, 8.986578), (47.47111, 4.31639, 7.411483), (46.33514, 4.31639, 6.303913), (45.08561, 4.31639, 5.085608)] }",
+          "ok": true,
+          "what": "exit reachable on navmesh L002>L998#13"
+        },
+        {
+          "detail": "{ \"edge\": \"L002>L175#9\", \"reachable\": true, \"path_points\": 14, \"goal\": (17.6, 0.116389, 9.3), \"path\": [(8.199999, 0.116389, 11.6), (8.64797, 0.116389, 11.49039), (8.818513, 0.116389, 11.44866), (9.112078, 0.116389, 11.37683), (9.342853, 0.116389, 11.32037), (9.582083, 0.116389, 11.26183), (10.21336, 0.116389, 11.10737), (14.06712, 0.116389, 10.16443), (14.37358, 0.116389, 10.08944), (14.73658, 0.116389, 10.00062), (15.48217, 0.116389, 9.818192), (15.93658, 0.116389, 9.707006), (16.96927, 0.116389, 9.454329), (17.6, 0.116389, 9.3)] }",
+          "ok": true,
+          "what": "exit reachable on navmesh L002>L175#9"
+        },
+        {
+          "detail": "{ \"edge\": \"L002>L001#1\", \"reachable\": true, \"path_points\": 2, \"goal\": (6.853375, 0.116389, 13.14663), \"path\": [(8.199999, 0.116389, 11.6), (6.853375, 0.116389, 13.14663)] }",
+          "ok": true,
+          "what": "exit reachable on navmesh L002>L001#1"
+        },
+        {
+          "detail": "{ \"fired\": true, \"ticks\": 2448, \"sim_seconds\": 40.8, \"edge\": \"L002>L998#13\", \"distance_walked\": 116.440491224639, \"target\": \"L002>L998#13\" }",
+          "ok": true,
+          "what": "walker bot physically triggers an exit"
+        },
+        {
+          "detail": "L002>L998#13",
+          "ok": true,
+          "what": "bot fired a declared exit"
+        },
+        {
+          "detail": "81",
+          "ok": true,
+          "what": "self-test: every junction in a 9x9 window is reachable on foot from the arrival"
+        },
+        {
+          "detail": "[5, 11, 2]",
+          "ok": true,
+          "what": "self-test: two walkable decks: stairs, stacked corridors and a gallery stream in"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "self-test: corridors leave junctions only at multiples of 45 degrees"
+        },
+        {
+          "detail": "[\"0,-1,0\", 19, 4]",
+          "ok": true,
+          "what": "self-test: breaking one light kills its whole series circuit"
+        },
+        {
+          "detail": "19",
+          "ok": true,
+          "what": "self-test: a circuit spans a 3x3..6x6-ish block of fixtures"
+        },
+        {
+          "detail": "(45.30106, 4.200958, 4.995655)",
+          "ok": true,
+          "what": "self-test: void room is lightless and the doorway leads back"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "pause menu opens on this level"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "resume unpauses on this level"
+        },
+        {
+          "detail": "{ \"arrival\": \"qa_checkpoint\", \"level\": \"L002\", \"pitch\": 0.0, \"pos\": [45.2782936096191, 4.21753168106079, 4.97345542907715], \"yaw\": -3.14159250259399 }",
+          "ok": true,
+          "what": "checkpoint saves and reloads with this level"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "same seed reproduces identical layout"
+        },
+        {
+          "detail": "3",
+          "ok": true,
+          "what": "three seeds give three distinct layouts"
+        }
+      ],
+      "failed": 0,
+      "passed": 27
+    },
+    "lint": {
+      "checks": [
+        {
+          "detail": "",
+          "ok": true,
+          "what": "transitions.json parses"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L000>L001#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L000>L001#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L000>L001#1"
+        },
+        {
+          "detail": "[\"L001\", \"L001\"]",
+          "ok": true,
+          "what": "destination matches source L000>L001#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L000>L001#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L000>L001#1"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L001>L019#10"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L001>L019#10"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L001>L019#10"
+        },
+        {
+          "detail": "[\"L019\", \"L019\"]",
+          "ok": true,
+          "what": "destination matches source L001>L019#10"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L001>L019#10"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L001>L019#10"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L001>L002#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L001>L002#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L001>L002#1"
+        },
+        {
+          "detail": "[\"L002\", \"L002\"]",
+          "ok": true,
+          "what": "destination matches source L001>L002#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L001>L002#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L001>L002#1"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L001>L800#14"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L001>L800#14"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L001>L800#14"
+        },
+        {
+          "detail": "[\"L800\", \"L800\"]",
+          "ok": true,
+          "what": "destination matches source L001>L800#14"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L001>L800#14"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L001>L800#14"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L002>L001#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L002>L001#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L002>L001#1"
+        },
+        {
+          "detail": "[\"L001\", \"L001\"]",
+          "ok": true,
+          "what": "destination matches source L002>L001#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L002>L001#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L002>L001#1"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L002>L031#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L002>L031#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L002>L031#2"
+        },
+        {
+          "detail": "[\"L031\", \"L031\"]",
+          "ok": true,
+          "what": "destination matches source L002>L031#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L002>L031#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L002>L031#2"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L002>L137#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L002>L137#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L002>L137#3"
+        },
+        {
+          "detail": "[\"L137\", \"L137\"]",
+          "ok": true,
+          "what": "destination matches source L002>L137#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L002>L137#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L002>L137#3"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L002>L070#4"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L002>L070#4"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L002>L070#4"
+        },
+        {
+          "detail": "[\"L070\", \"L070\"]",
+          "ok": true,
+          "what": "destination matches source L002>L070#4"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L002>L070#4"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L002>L070#4"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L002>L283#5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L002>L283#5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L002>L283#5"
+        },
+        {
+          "detail": "[\"L283\", \"L283\"]",
+          "ok": true,
+          "what": "destination matches source L002>L283#5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L002>L283#5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L002>L283#5"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L002>L101#6"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L002>L101#6"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L002>L101#6"
+        },
+        {
+          "detail": "[\"L101\", \"L101\"]",
+          "ok": true,
+          "what": "destination matches source L002>L101#6"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L002>L101#6"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L002>L101#6"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L002>L126#7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L002>L126#7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L002>L126#7"
+        },
+        {
+          "detail": "[\"L126\", \"L126\"]",
+          "ok": true,
+          "what": "destination matches source L002>L126#7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L002>L126#7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L002>L126#7"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L002>L141#8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L002>L141#8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L002>L141#8"
+        },
+        {
+          "detail": "[\"L141\", \"L141\"]",
+          "ok": true,
+          "what": "destination matches source L002>L141#8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L002>L141#8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L002>L141#8"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L002>L175#9"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L002>L175#9"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L002>L175#9"
+        },
+        {
+          "detail": "[\"L175\", \"L175\"]",
+          "ok": true,
+          "what": "destination matches source L002>L175#9"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L002>L175#9"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L002>L175#9"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L002>L997#10"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L002>L997#10"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L002>L997#10"
+        },
+        {
+          "detail": "[\"L997\", \"L997\"]",
+          "ok": true,
+          "what": "destination matches source L002>L997#10"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L002>L997#10"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L002>L997#10"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L002>L811#11"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L002>L811#11"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L002>L811#11"
+        },
+        {
+          "detail": "[\"L811\", \"L811\"]",
+          "ok": true,
+          "what": "destination matches source L002>L811#11"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L002>L811#11"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L002>L811#11"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L002>L916#12"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L002>L916#12"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L002>L916#12"
+        },
+        {
+          "detail": "[\"L916\", \"L916\"]",
+          "ok": true,
+          "what": "destination matches source L002>L916#12"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L002>L916#12"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L002>L916#12"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L002>L998#13"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L002>L998#13"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L002>L998#13"
+        },
+        {
+          "detail": "[\"L998\", \"L998\"]",
+          "ok": true,
+          "what": "destination matches source L002>L998#13"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L002>L998#13"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L002>L998#13"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L002>L064#17"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L002>L064#17"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L002>L064#17"
+        },
+        {
+          "detail": "[\"L064\", \"L064\"]",
+          "ok": true,
+          "what": "destination matches source L002>L064#17"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L002>L064#17"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L002>L064#17"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L002>L127#18"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L002>L127#18"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L002>L127#18"
+        },
+        {
+          "detail": "[\"L127\", \"L127\"]",
+          "ok": true,
+          "what": "destination matches source L002>L127#18"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L002>L127#18"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L002>L127#18"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L002>L158#19"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L002>L158#19"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L002>L158#19"
+        },
+        {
+          "detail": "[\"L158\", \"L158\"]",
+          "ok": true,
+          "what": "destination matches source L002>L158#19"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L002>L158#19"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L002>L158#19"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L002>L902#20"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L002>L902#20"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L002>L902#20"
+        },
+        {
+          "detail": "[\"L902\", \"L902\"]",
+          "ok": true,
+          "what": "destination matches source L002>L902#20"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L002>L902#20"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L002>L902#20"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L005>L006#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L005>L006#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L005>L006#3"
+        },
+        {
+          "detail": "[\"L006\", \"L006\"]",
+          "ok": true,
+          "what": "destination matches source L005>L006#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L005>L006#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L005>L006#3"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L005>L009#4"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L005>L009#4"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L005>L009#4"
+        },
+        {
+          "detail": "[\"L009\", \"L009\"]",
+          "ok": true,
+          "what": "destination matches source L005>L009#4"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L005>L009#4"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L005>L009#4"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L005>L003#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L005>L003#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L005>L003#1"
+        },
+        {
+          "detail": "[\"L003\", \"L003\"]",
+          "ok": true,
+          "what": "destination matches source L005>L003#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L005>L003#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L005>L003#1"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L005>L040#8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L005>L040#8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L005>L040#8"
+        },
+        {
+          "detail": "[\"L040\", \"L040\"]",
+          "ok": true,
+          "what": "destination matches source L005>L040#8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L005>L040#8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L005>L040#8"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L005>L427#7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L005>L427#7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L005>L427#7"
+        },
+        {
+          "detail": "[\"L427\", \"L427\"]",
+          "ok": true,
+          "what": "destination matches source L005>L427#7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L005>L427#7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L005>L427#7"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L006>L007#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L006>L007#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L006>L007#1"
+        },
+        {
+          "detail": "[\"L007\", \"L007\"]",
+          "ok": true,
+          "what": "destination matches source L006>L007#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L006>L007#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L006>L007#1"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L006>L005#4"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L006>L005#4"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L006>L005#4"
+        },
+        {
+          "detail": "[\"L005\", \"L005\"]",
+          "ok": true,
+          "what": "destination matches source L006>L005#4"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L006>L005#4"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L006>L005#4"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L006>L129#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L006>L129#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L006>L129#2"
+        },
+        {
+          "detail": "[\"L129\", \"L129\"]",
+          "ok": true,
+          "what": "destination matches source L006>L129#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L006>L129#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L006>L129#2"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L006>L006_1#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L006>L006_1#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L006>L006_1#3"
+        },
+        {
+          "detail": "[\"L006_1\", \"L006_1\"]",
+          "ok": true,
+          "what": "destination matches source L006>L006_1#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L006>L006_1#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L006>L006_1#3"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L007>L008#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L007>L008#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L007>L008#1"
+        },
+        {
+          "detail": "[\"L008\", \"L008\"]",
+          "ok": true,
+          "what": "destination matches source L007>L008#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L007>L008#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L007>L008#1"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L007>L009#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L007>L009#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L007>L009#3"
+        },
+        {
+          "detail": "[\"L009\", \"L009\"]",
+          "ok": true,
+          "what": "destination matches source L007>L009#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L007>L009#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L007>L009#3"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L007>L083#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L007>L083#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L007>L083#2"
+        },
+        {
+          "detail": "[\"L083\", \"L083\"]",
+          "ok": true,
+          "what": "destination matches source L007>L083#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L007>L083#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L007>L083#2"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L009>L011#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L009>L011#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L009>L011#1"
+        },
+        {
+          "detail": "[\"L011\", \"L011\"]",
+          "ok": true,
+          "what": "destination matches source L009>L011#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L009>L011#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L009>L011#1"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L009>L036#7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L009>L036#7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L009>L036#7"
+        },
+        {
+          "detail": "[\"L036\", \"L036\"]",
+          "ok": true,
+          "what": "destination matches source L009>L036#7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L009>L036#7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L009>L036#7"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L009>L009_1#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L009>L009_1#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L009>L009_1#2"
+        },
+        {
+          "detail": "[\"L009_1\", \"L009_1\"]",
+          "ok": true,
+          "what": "destination matches source L009>L009_1#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L009>L009_1#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L009>L009_1#2"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L009>L010#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L009>L010#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L009>L010#3"
+        },
+        {
+          "detail": "[\"L010\", \"L010\"]",
+          "ok": true,
+          "what": "destination matches source L009>L010#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L009>L010#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L009>L010#3"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L009>L053#5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L009>L053#5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L009>L053#5"
+        },
+        {
+          "detail": "[\"L053\", \"L053\"]",
+          "ok": true,
+          "what": "destination matches source L009>L053#5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L009>L053#5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L009>L053#5"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L009>L283#9"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L009>L283#9"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L009>L283#9"
+        },
+        {
+          "detail": "[\"L283\", \"L283\"]",
+          "ok": true,
+          "what": "destination matches source L009>L283#9"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L009>L283#9"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L009>L283#9"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L011>L025#39"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L011>L025#39"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L011>L025#39"
+        },
+        {
+          "detail": "[\"L025\", \"L025\"]",
+          "ok": true,
+          "what": "destination matches source L011>L025#39"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L011>L025#39"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L011>L025#39"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L011>L808#13"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L011>L808#13"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L011>L808#13"
+        },
+        {
+          "detail": "[\"L808\", \"L808\"]",
+          "ok": true,
+          "what": "destination matches source L011>L808#13"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L011>L808#13"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L011>L808#13"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L011>L998#44"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L011>L998#44"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L011>L998#44"
+        },
+        {
+          "detail": "[\"L998\", \"L998\"]",
+          "ok": true,
+          "what": "destination matches source L011>L998#44"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L011>L998#44"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L011>L998#44"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L011>L049#41"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L011>L049#41"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L011>L049#41"
+        },
+        {
+          "detail": "[\"L049\", \"L049\"]",
+          "ok": true,
+          "what": "destination matches source L011>L049#41"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L011>L049#41"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L011>L049#41"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L019>L005#6"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L019>L005#6"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L019>L005#6"
+        },
+        {
+          "detail": "[\"L005\", \"L005\"]",
+          "ok": true,
+          "what": "destination matches source L019>L005#6"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L019>L005#6"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L019>L005#6"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L019>L289#5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L019>L289#5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L019>L289#5"
+        },
+        {
+          "detail": "[\"L289\", \"L289\"]",
+          "ok": true,
+          "what": "destination matches source L019>L289#5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L019>L289#5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L019>L289#5"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L019>L012#7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L019>L012#7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L019>L012#7"
+        },
+        {
+          "detail": "[\"L012\", \"L012\"]",
+          "ok": true,
+          "what": "destination matches source L019>L012#7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L019>L012#7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L019>L012#7"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L019>L020#8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L019>L020#8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L019>L020#8"
+        },
+        {
+          "detail": "[\"L020\", \"L020\"]",
+          "ok": true,
+          "what": "destination matches source L019>L020#8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L019>L020#8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L019>L020#8"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L019>L038#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L019>L038#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L019>L038#1"
+        },
+        {
+          "detail": "[\"L038\", \"L038\"]",
+          "ok": true,
+          "what": "destination matches source L019>L038#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L019>L038#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L019>L038#1"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L019>L202#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L019>L202#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L019>L202#2"
+        },
+        {
+          "detail": "[\"L202\", \"L202\"]",
+          "ok": true,
+          "what": "destination matches source L019>L202#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L019>L202#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L019>L202#2"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L019>L432#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L019>L432#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L019>L432#3"
+        },
+        {
+          "detail": "[\"L432\", \"L432\"]",
+          "ok": true,
+          "what": "destination matches source L019>L432#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L019>L432#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L019>L432#3"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L019>L654#4"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L019>L654#4"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L019>L654#4"
+        },
+        {
+          "detail": "[\"L654\", \"L654\"]",
+          "ok": true,
+          "what": "destination matches source L019>L654#4"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L019>L654#4"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L019>L654#4"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L019>L040#9"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L019>L040#9"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L019>L040#9"
+        },
+        {
+          "detail": "[\"L040\", \"L040\"]",
+          "ok": true,
+          "what": "destination matches source L019>L040#9"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L019>L040#9"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L019>L040#9"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L019>L212#10"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L019>L212#10"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L019>L212#10"
+        },
+        {
+          "detail": "[\"L212\", \"L212\"]",
+          "ok": true,
+          "what": "destination matches source L019>L212#10"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L019>L212#10"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L019>L212#10"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L037>L043#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L037>L043#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L037>L043#2"
+        },
+        {
+          "detail": "[\"L043\", \"L043\"]",
+          "ok": true,
+          "what": "destination matches source L037>L043#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L037>L043#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L037>L043#2"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L037>L130#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L037>L130#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L037>L130#1"
+        },
+        {
+          "detail": "[\"L130\", \"L130\"]",
+          "ok": true,
+          "what": "destination matches source L037>L130#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L037>L130#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L037>L130#1"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L037>L233#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L037>L233#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L037>L233#3"
+        },
+        {
+          "detail": "[\"L233\", \"L233\"]",
+          "ok": true,
+          "what": "destination matches source L037>L233#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L037>L233#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L037>L233#3"
+        },
+        {
+          "detail": "ADAPTATION",
+          "ok": true,
+          "what": "exit basis labelled L037>L025#A1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L037>L025#A1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "ADAPTATION exit justified L037>L025#A1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L037>L025#A1"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L188>EXT#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L188>EXT#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L188>EXT#1"
+        },
+        {
+          "detail": "[<null>, \"@origin\"]",
+          "ok": true,
+          "what": "destination matches source L188>EXT#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L188>EXT#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L188>EXT#1"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L188>L001_5#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L188>L001_5#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L188>L001_5#2"
+        },
+        {
+          "detail": "[\"L001_5\", \"L001_5\"]",
+          "ok": true,
+          "what": "destination matches source L188>L001_5#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L188>L001_5#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L188>L001_5#2"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L025>L000#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L025>L000#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L025>L000#1"
+        },
+        {
+          "detail": "[\"L000\", \"L000\"]",
+          "ok": true,
+          "what": "destination matches source L025>L000#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L025>L000#1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L025>L000#1"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L025>L005#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L025>L005#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L025>L005#2"
+        },
+        {
+          "detail": "[\"L005\", \"L005\"]",
+          "ok": true,
+          "what": "destination matches source L025>L005#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L025>L005#2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L025>L005#2"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L025>L009#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L025>L009#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L025>L009#3"
+        },
+        {
+          "detail": "[\"L009\", \"L009\"]",
+          "ok": true,
+          "what": "destination matches source L025>L009#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L025>L009#3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L025>L009#3"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L025>L011#5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L025>L011#5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L025>L011#5"
+        },
+        {
+          "detail": "[\"L011\", \"L011\"]",
+          "ok": true,
+          "what": "destination matches source L025>L011#5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L025>L011#5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L025>L011#5"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L025>L019#6"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L025>L019#6"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L025>L019#6"
+        },
+        {
+          "detail": "[\"L019\", \"L019\"]",
+          "ok": true,
+          "what": "destination matches source L025>L019#6"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L025>L019#6"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L025>L019#6"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L025>L037#9"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L025>L037#9"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L025>L037#9"
+        },
+        {
+          "detail": "[\"L037\", \"L037\"]",
+          "ok": true,
+          "what": "destination matches source L025>L037#9"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L025>L037#9"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L025>L037#9"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L025>L188#17"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L025>L188#17"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L025>L188#17"
+        },
+        {
+          "detail": "[\"L188\", \"L188\"]",
+          "ok": true,
+          "what": "destination matches source L025>L188#17"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L025>L188#17"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L025>L188#17"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L025>L024#7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L025>L024#7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L025>L024#7"
+        },
+        {
+          "detail": "[\"L024\", \"L024\"]",
+          "ok": true,
+          "what": "destination matches source L025>L024#7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L025>L024#7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L025>L024#7"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L025>L029#8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L025>L029#8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L025>L029#8"
+        },
+        {
+          "detail": "[\"L029\", \"L029\"]",
+          "ok": true,
+          "what": "destination matches source L025>L029#8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L025>L029#8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L025>L029#8"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L025>L050#10"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L025>L050#10"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L025>L050#10"
+        },
+        {
+          "detail": "[\"L050\", \"L050\"]",
+          "ok": true,
+          "what": "destination matches source L025>L050#10"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L025>L050#10"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L025>L050#10"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L025>L090#11"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L025>L090#11"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L025>L090#11"
+        },
+        {
+          "detail": "[\"L090\", \"L090\"]",
+          "ok": true,
+          "what": "destination matches source L025>L090#11"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L025>L090#11"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L025>L090#11"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L025>L108#12"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L025>L108#12"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L025>L108#12"
+        },
+        {
+          "detail": "[\"L108\", \"L108\"]",
+          "ok": true,
+          "what": "destination matches source L025>L108#12"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L025>L108#12"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L025>L108#12"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L025>L120#13"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L025>L120#13"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L025>L120#13"
+        },
+        {
+          "detail": "[\"L120\", \"L120\"]",
+          "ok": true,
+          "what": "destination matches source L025>L120#13"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L025>L120#13"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L025>L120#13"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L025>L141#14"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L025>L141#14"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L025>L141#14"
+        },
+        {
+          "detail": "[\"L141\", \"L141\"]",
+          "ok": true,
+          "what": "destination matches source L025>L141#14"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L025>L141#14"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L025>L141#14"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L025>L150#15"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L025>L150#15"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L025>L150#15"
+        },
+        {
+          "detail": "[\"L150\", \"L150\"]",
+          "ok": true,
+          "what": "destination matches source L025>L150#15"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L025>L150#15"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L025>L150#15"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L025>L165#16"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L025>L165#16"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L025>L165#16"
+        },
+        {
+          "detail": "[\"L165\", \"L165\"]",
+          "ok": true,
+          "what": "destination matches source L025>L165#16"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L025>L165#16"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L025>L165#16"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L025>L201#18"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L025>L201#18"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L025>L201#18"
+        },
+        {
+          "detail": "[\"L201\", \"L201\"]",
+          "ok": true,
+          "what": "destination matches source L025>L201#18"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L025>L201#18"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L025>L201#18"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L025>L790#19"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L025>L790#19"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L025>L790#19"
+        },
+        {
+          "detail": "[\"L790\", \"L790\"]",
+          "ok": true,
+          "what": "destination matches source L025>L790#19"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L025>L790#19"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L025>L790#19"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L025>L888#20"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L025>L888#20"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L025>L888#20"
+        },
+        {
+          "detail": "[\"L888\", \"L888\"]",
+          "ok": true,
+          "what": "destination matches source L025>L888#20"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L025>L888#20"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L025>L888#20"
+        },
+        {
+          "detail": "SOURCE",
+          "ok": true,
+          "what": "exit basis labelled L025>L040#21"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit id starts at its level L025>L040#21"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "SOURCE exit matches a documented edge L025>L040#21"
+        },
+        {
+          "detail": "[\"L040\", \"L040\"]",
+          "ok": true,
+          "what": "destination matches source L025>L040#21"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "exit carries source quote L025>L040#21"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "no debug-only edge in story manifest L025>L040#21"
+        }
+      ],
+      "failed": 0,
+      "passed": 473
+    },
+    "registry": {
+      "checks": [
+        {
+          "detail": "",
+          "ok": true,
+          "what": "roster loads"
+        },
+        {
+          "detail": "100",
+          "ok": true,
+          "what": "exactly 100 roster entries"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L000"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L000"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L000"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L000"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "unique scene path res://levels/L000/L000.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "scene path encodes stable id res://levels/L000/L000.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L001"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L001"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L001"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L001"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "unique scene path res://levels/L001/L001.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "scene path encodes stable id res://levels/L001/L001.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L002"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L002"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L002"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L002"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "unique scene path res://levels/L002/L002.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "scene path encodes stable id res://levels/L002/L002.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L003"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L003"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L003"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L003"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L004"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L004"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L004"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L004"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L005"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L005"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L005"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L005"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "unique scene path res://levels/L005/L005.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "scene path encodes stable id res://levels/L005/L005.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L006"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L006"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L006"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L006"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "unique scene path res://levels/L006/L006.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "scene path encodes stable id res://levels/L006/L006.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L007"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L007"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L007"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L007"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "unique scene path res://levels/L007/L007.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "scene path encodes stable id res://levels/L007/L007.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L008"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L008"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L008"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L008"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L009"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L009"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L009"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L009"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "unique scene path res://levels/L009/L009.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "scene path encodes stable id res://levels/L009/L009.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L010"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L010"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L010"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L010"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L011"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L011"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L011"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L011"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "unique scene path res://levels/L011/L011.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "scene path encodes stable id res://levels/L011/L011.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L012"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L012"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L012"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L012"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L013"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L013"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L013"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L013"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L014"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L014"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L014"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L014"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L019"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L019"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L019"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L019"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "unique scene path res://levels/L019/L019.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "scene path encodes stable id res://levels/L019/L019.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L037"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L037"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L037"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L037"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "unique scene path res://levels/L037/L037.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "scene path encodes stable id res://levels/L037/L037.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L188"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L188"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L188"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L188"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "unique scene path res://levels/L188/L188.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "scene path encodes stable id res://levels/L188/L188.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L015"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L015"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L015"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L015"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L016"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L016"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L016"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L016"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L017"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L017"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L017"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L017"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L018"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L018"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L018"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L018"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L020"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L020"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L020"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L020"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L022"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L022"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L022"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L022"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L023"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L023"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L023"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L023"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L024"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L024"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L024"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L024"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L025"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L025"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L025"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L025"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "unique scene path res://levels/L025/L025.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "scene path encodes stable id res://levels/L025/L025.tscn"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L026"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L026"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L026"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L026"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L027"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L027"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L027"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L027"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L028"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L028"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L028"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L028"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L029"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L029"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L029"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L029"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L030"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L030"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L030"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L030"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L031"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L031"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L031"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L031"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L036"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L036"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L036"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L036"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L048"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L048"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L048"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L048"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L049"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L049"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L049"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L049"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L053"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L053"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L053"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L053"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L069"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L069"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L069"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L069"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L071"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L071"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L071"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L071"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L073"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L073"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L073"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L073"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L075"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L075"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L075"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L075"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L079"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L079"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L079"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L079"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L094"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L094"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L094"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L094"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L200"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L200"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L200"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L200"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L256"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L256"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L256"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L256"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L289"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L289"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L289"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L289"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L404"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L404"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L404"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L404"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L601"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L601"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L601"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L601"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L906"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L906"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L906"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L906"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L974"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L974"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L974"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L974"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L000_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L000_1"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L000_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L000_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L000_2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L000_2"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L000_2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L000_2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L000_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L000_3"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L000_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L000_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L001_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L001_1"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L001_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L001_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L001_2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L001_2"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L001_2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L001_2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L001_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L001_3"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L001_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L001_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L001_5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L001_5"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L001_5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L001_5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L003_5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L003_5"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L003_5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L003_5"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L005_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L005_1"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L005_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L005_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L006_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L006_1"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L006_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L006_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L007_7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L007_7"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L007_7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L007_7"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L010_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L010_1"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L010_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L010_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L011_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L011_3"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L011_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L011_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L037_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L037_1"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L037_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L037_1"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L055"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L055"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L055"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L055"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L058"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L058"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L058"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L058"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L060"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L060"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L060"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L060"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L083"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L083"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L083"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L083"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L090"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L090"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L090"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L090"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L096"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L096"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L096"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L096"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L808"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L808"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L808"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L808"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L922"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L922"
+        },
+        {
+          "detail": "RESOLVED_TITLE_DIFFERS",
+          "ok": true,
+          "what": "source resolved L922"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L922"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L965"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L965"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L965"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L965"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L994"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L994"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L994"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L994"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L999"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L999"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L999"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L999"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L005_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L005_3"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L005_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L005_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L007_8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L007_8"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L007_8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L007_8"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L009_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L009_3"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L009_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L009_3"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L011_2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L011_2"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L011_2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L011_2"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L021"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L021"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L021"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L021"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L032"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L032"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L032"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L032"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L041"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L041"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L041"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L041"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L050"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L050"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L050"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L050"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L052"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L052"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L052"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L052"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L077"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L077"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L077"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L077"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L085"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L085"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L085"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L085"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L100"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L100"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L100"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L100"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L101"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L101"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L101"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L101"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L108"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L108"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L108"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L108"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L114"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L114"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L114"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L114"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L140"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L140"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L140"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L140"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L149"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L149"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L149"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L149"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L160"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L160"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L160"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L160"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L197"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L197"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L197"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L197"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L201"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L201"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L201"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L201"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L263"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L263"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L263"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L263"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L320"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L320"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L320"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L320"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L737"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L737"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L737"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L737"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L899"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L899"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L899"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L899"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "page title captured L998"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "cite authors captured L998"
+        },
+        {
+          "detail": "RESOLVED",
+          "ok": true,
+          "what": "source resolved L998"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "dossier exists L998"
+        },
+        {
+          "detail": "100",
+          "ok": true,
+          "what": "100 unique stable ids"
+        },
+        {
+          "detail": "100",
+          "ok": true,
+          "what": "100 unique source URLs"
+        }
+      ],
+      "failed": 0,
+      "passed": 428
+    },
+    "save": {
+      "checks": [
+        {
+          "detail": "",
+          "ok": true,
+          "what": "story save writes (atomic)"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "story file exists"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "second save writes"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "backup kept"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "developer mode cannot write story save"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "story file unchanged by developer session"
+        },
+        {
+          "detail": "backup",
+          "ok": true,
+          "what": "corrupted primary falls back"
+        },
+        {
+          "detail": "backup",
+          "ok": true,
+          "what": "fallback used backup"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "backup content intact"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "V62 legacy save imports"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "legacy seed carried"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "legacy visit list mapped to stable ids"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "unknown legacy version refused"
+        },
+        {
+          "detail": "temp",
+          "ok": true,
+          "what": "interrupted write recovers from .tmp"
+        }
+      ],
+      "failed": 0,
+      "passed": 14
+    },
+    "story": {
+      "checks": [
+        {
+          "detail": "{ \"fired\": true, \"ticks\": 1092, \"sim_seconds\": 18.2, \"edge\": \"L000>L001#1\", \"distance_walked\": 50.6166720036417, \"target\": \"L000>L001#1\" }",
+          "ok": true,
+          "what": "bot used L000>L001#1 in story mode"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "story transition L000>L001#1 loaded L001"
+        },
+        {
+          "detail": "from_L000",
+          "ok": true,
+          "what": "arrived at sourced arrival point from_L000 in L001"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "safe spawn after story transition into L001"
+        },
+        {
+          "detail": "[\"L000\", \"L000\", \"\"]",
+          "ok": false,
+          "what": "story save on disk advanced to L001"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "journal records witnessed route L000>L001#1"
+        },
+        {
+          "detail": "{ \"fired\": true, \"ticks\": 699, \"sim_seconds\": 11.65, \"edge\": \"L001>L019#10\", \"distance_walked\": 30.0489297965541, \"target\": \"L001>L019#10\" }",
+          "ok": true,
+          "what": "bot used L001>L019#10 in story mode"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "story transition L001>L019#10 loaded L019"
+        },
+        {
+          "detail": "from_L001",
+          "ok": true,
+          "what": "arrived at sourced arrival point from_L001 in L019"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "safe spawn after story transition into L019"
+        },
+        {
+          "detail": "[\"L000\", \"L000\", \"\"]",
+          "ok": false,
+          "what": "story save on disk advanced to L019"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "journal records witnessed route L001>L019#10"
+        },
+        {
+          "detail": "{ \"fired\": true, \"ticks\": 784, \"sim_seconds\": 13.0666666666667, \"edge\": \"L019>L005#6\", \"distance_walked\": 37.4745712392032, \"target\": \"L019>L005#6\" }",
+          "ok": true,
+          "what": "bot used L019>L005#6 in story mode"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "story transition L019>L005#6 loaded L005"
+        },
+        {
+          "detail": "from_L019",
+          "ok": true,
+          "what": "arrived at sourced arrival point from_L019 in L005"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "safe spawn after story transition into L005"
+        },
+        {
+          "detail": "[\"L005\", \"L005\", \"\"]",
+          "ok": true,
+          "what": "story save on disk advanced to L005"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "journal records witnessed route L019>L005#6"
+        },
+        {
+          "detail": "{ \"fired\": true, \"ticks\": 451, \"sim_seconds\": 7.51666666666667, \"edge\": \"L005>L009#4\", \"distance_walked\": 22.0449067018926, \"target\": \"L005>L009#4\" }",
+          "ok": true,
+          "what": "bot used L005>L009#4 in story mode"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "story transition L005>L009#4 loaded L009"
+        },
+        {
+          "detail": "from_L005",
+          "ok": true,
+          "what": "arrived at sourced arrival point from_L005 in L009"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "safe spawn after story transition into L009"
+        },
+        {
+          "detail": "[\"L005\", \"L005\", \"\"]",
+          "ok": false,
+          "what": "story save on disk advanced to L009"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "journal records witnessed route L005>L009#4"
+        },
+        {
+          "detail": "{ \"fired\": false, \"ticks\": 9000, \"sim_seconds\": 150.0, \"edge\": \"\", \"distance_walked\": 162.105100238034, \"target\": \"L009>L011#1\" }",
+          "ok": false,
+          "what": "bot used L009>L011#1 in story mode"
+        }
+      ],
+      "failed": 4,
+      "passed": 21
+    },
+    "ui": {
+      "checks": [
+        {
+          "detail": "",
+          "ok": true,
+          "what": "panel attached to UI tree: pause_menu"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "panel attached to UI tree: dev_browser"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "panel attached to UI tree: settings_panel"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "panel attached to UI tree: journal_panel"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "panel attached to UI tree: credits_panel"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "panel attached to UI tree: note_panel"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "panel attached to UI tree: death_panel"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "panel attached to UI tree: confirm_panel"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "Esc opens pause menu (visible in tree)"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "Esc pauses gameplay"
+        },
+        {
+          "detail": "0",
+          "ok": true,
+          "what": "mouse released in pause"
+        },
+        {
+          "detail": "8",
+          "ok": true,
+          "what": "pause menu has its buttons"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "pause menu takes keyboard focus"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "Esc again resumes"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "F3 opens developer browser (visible in tree)"
+        },
+        {
+          "detail": "100",
+          "ok": true,
+          "what": "browser lists all 100 entries"
+        },
+        {
+          "detail": "[\"L023\", \"L027\", \"L073\", \"L974\", \"L010_1\", \"L083\"]",
+          "ok": true,
+          "what": "search finds Kitty's House"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "Locked filter shows only unbuilt entries"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "Esc closes browser and resumes"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "F4 does nothing in story mode"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "F7 flycam refused in story mode"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "F7 flycam in developer mode"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "flycam exit rolls back to safe player position"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "J opens journal (visible in tree)"
+        },
+        {
+          "detail": "",
+          "ok": true,
+          "what": "Esc closes journal"
+        }
+      ],
+      "failed": 0,
+      "passed": 25
+    }
+  }
+}
