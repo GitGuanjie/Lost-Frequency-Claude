@@ -1,0 +1,74 @@
+{
+ "duplication_pairs": [],
+ "engine": "4.5.1-stable (official)",
+ "failures": [],
+ "levels": [
+  {
+   "build_ms": 674,
+   "collision_shapes": 424,
+   "distinct_layouts_over_3_seeds": 3,
+   "dup_profile": {
+    "boxes": {
+     "-2_-2_-2": 1,
+     "-2_0_1": 3,
+     "-2_1_1": 22,
+     "-2_1_2": 354,
+     "-2_2_2": 5,
+     "-2_2_3": 16,
+     "-2_4_4": 1,
+     "-2_4_5": 1,
+     "-2_5_5": 4,
+     "-2_5_6": 3,
+     "0_0_1": 1,
+     "0_10_10": 4,
+     "1_1_1": 3,
+     "1_3_3": 1
+    },
+    "materials": {
+     "disc": 9366,
+     "disc_deep": 7134,
+     "plane": 204,
+     "plane_b": 36,
+     "sky": 12
+    }
+   },
+   "exits_declared": 0,
+   "exits_found": 0,
+   "load_ms": 803,
+   "nav": {
+    "exits": [],
+    "map": "RID(8242042241024)",
+    "map_regions": 1,
+    "map_sync_ticks": 8,
+    "nav_polygons": 599,
+    "region": "RID(8246337208320)",
+    "start": "(0.002131, 0.147539, -3.200684)"
+   },
+   "qa_status": "ENGINE_SMOKE_PASS",
+   "save_tested": true,
+   "self_tests": 10,
+   "spawn": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+   },
+   "stable_id": "L404"
+  }
+ ],
+ "renderer": "headless",
+ "started": "2026-11-06T06:39:52",
+ "suites": {
+  "duplication": {
+   "checks": [],
+   "failed": 0,
+   "passed": 1
+  },
+  "level:L404": {
+   "checks": [],
+   "failed": 0,
+   "passed": 23
+  }
+ }
+}

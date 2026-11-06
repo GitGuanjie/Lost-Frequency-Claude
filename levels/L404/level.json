@@ -1,0 +1,43 @@
+{
+  "stable_id": "L404",
+  "scene": "res://levels/L404/L404.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-06, levels suite 23/23 + duplication 1/1, 0 failures; 10 level self-tests); stills captured, awaiting integrator review",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "An empty pastel paradise inside a literal skybox: a pearl platter-circle that frays into holes over a dim copy of itself, grid planes and pieces of sky intersecting it, one straight walk out to a broken corner of the sky, and a voice in lower case that lives in your head - the more you remember her, the more the world errors, until you cut the thought out with the sharpest piece of the sky and forget her.",
+  "mechanics": [
+    "awareness_consciousness_system",
+    "cut_it_out_with_the_sharpest_piece_of_the_sky",
+    "forgetting_her_persists",
+    "stillness_clouds_mind_and_stills_hands",
+    "paradise_heals_while_you_stay",
+    "every_leaving_returns_home",
+    "ground_flickers_real_missing_tiles",
+    "sweet_air_slow_fall",
+    "cannot_think_straight_heading_drift",
+    "cannot_think_in_circles_skip",
+    "mesh_glitch_vertex_stutter",
+    "lowercase_second_person_voice_ui",
+    "datamosh_screen_with_awareness",
+    "memory_fragments",
+    "literal_skybox_with_seams",
+    "isolation_no_entities"
+  ],
+  "exits": [],
+  "no_exit_reason": "The page states no exit: its exits section is only the rhetorical question \"why would you ever want to leave paradise?\" (transitions.json L404>EXT#1: to null, trigger unknown, confidence UNKNOWN). No story exit is built. Every in-world attempt to leave (walking into the broken corner of the sky, falling through the holes) returns you to the centre of the circle (ADAPTATION of that question; it is not an edge). The non-canon release boundary is the framework's own: Pause -> Main menu.",
+  "content_warnings": [
+    "dissociation",
+    "catatonia (the stated way in)",
+    "loss of a loved one / forgetting someone",
+    "isolation",
+    "drowning imagery (\"drowning on sweet air\"; rendered as a slow, harmless fall)",
+    "an instruction to cut a consciousness out of one's head (self-harm-adjacent metaphor; kept figurative: a flash of white and a glassy sound, no gore)",
+    "glitching / flashing screen effects (softened by Reduce motion)"
+  ],
+  "fail_states": [],
+  "entity_policy": "NO ENTITY PER SOURCE: the page says there is no one else around. The remembered girl is never shown, voiced or spawned; she exists only as three memory fragments in the wanderer's own words and as a hexadecimal laugh written on the sky (68 61 68 61). The narrator is the wanderer's own mind (bases: 'you - your memories, your own mind'), presented as on-screen text, not as a character.",
+  "notes": "SOURCE (article, rev 79): 'the 404th circle of heaven'; planes intersect, bisect and bend like a suffering hard drive; you may develop a consciousness, cut it out of your head with the sharpest piece of the sky; things are broken but it's your home; unable to think straight, unable to think in circles; hushed whispers about her; the ground flickers beneath your feet; 'you like it here, the geometry whispers'; the 3d mesh glitches, memories cloud your mind and still your hands; a lovely day outside, a walk 'you and i', no one else around, just you and the erroring landscape; drowning on sweet air like a surface waiting for holes; a childhood digital heaven, a girl who laughed in hexadecimal and guided you to the skybox, then forgotten forever; 'your empty paradise. come home.'; bases: you, your memories, your own mind; entrance: entering catatonia; exits: rhetorical question only. Captions credit three glitch-art images (fragment1 'A Spomenik', fragment2 'Apparition', fragment3 'deeper', Rosa Menkman, CC BY 2.0) - not shipped; only their titles inform the three memory panels' abstract patterns (monument, ghosted band, frames within frames) and the dim copy of the circle 'deeper' below. ADAPTATION (the page has no map): the circle is a 26 m pearl platter of ring tiles (concentric tracks = 'circle' + hard drive), whole within ~8 m ('home') and fraying into seeded missing sectors outward; a bent ramp-plane (12 banked segments, ~19 deg) rises to a broken, gently bent upper ring at ~6 m (guide section 9 verticality); 6-9 grid slabs and four big pieces of sky intersect the disc and each other (one shallow slab is a second walkable rise to ~6 m); the skybox is a literal 128 m cube with pixel clouds that do not match across its seams and a flat square sun, enclosing everything (the world edge is the page's own skybox, never an invisible wall); one straight tile walk leads from the circle to a broken corner of the sky (missing-texture checker) where the pieces of sky lie and the sharpest one can be taken; a dim visual-only copy of the circle 34 m below is seen through the holes and is intentionally unreachable (falls are caught at -21 m). Systems: awareness ('a consciousness') rises with distance, the walk, straight lines, leaving attempts and remembering; it drives datamosh, missing sky tiles, tile flicker, mesh stutter, whispers and hard-drive ticks; above 0.35 real tiles near you vanish for 2-3 s (collision off), above 0.82 even the one under you outside home. Home and stillness dissolve awareness; stillness (>5 s) heals paradise (saturation, calm pad, milky haze) while the hands still (movement scales down to 30%, recovers when you walk) - staying is rewarded and costs agency. With the shard and awareness >0.2 a prompt sits in front of the eyes: cutting resets awareness to zero and permanently blanks every memory panel you had read and the non-home words (story flag 'forgot'). Walking straight for >3.5 s adds a slow heading drift (off with Reduce motion); turning a full circle within 14 s skips you forward 1.2 m. Falling is slow (gravity 2.6) through pink fog and ends at home; walking into the broken corner also returns you home and raises awareness. Every narrated line is our own lower-case paraphrase in the page's register (short echoes of a few words only: 'the 404th circle', 'come home', 'you like it here', 'she laughed in hexadecimal'); the voice types itself into the frame and slips into hex digits with awareness. Arrival 'start' plays the catatonic entrance (milky view, stilled hands, the voice already talking). Audio: a soft major-seventh pad ('sweet air'), room tone, whispers, hard-drive ticks, a faint byte-laugh near the broken sky (chiptune emitter, ADAPTATION of 'laughed in hexadecimal'); no music is claimed as source. No roster edge enters L404 (the entrance is a state, not a level edge), so the only arrival is 'start'. QA: no exit means no walker-bot route; level self-tests verify the systems instead."
+}
