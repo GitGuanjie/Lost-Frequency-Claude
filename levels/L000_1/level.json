@@ -1,0 +1,62 @@
+{
+  "stable_id": "L000_1",
+  "scene": "res://levels/L000_1/L000_1.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-06, 35/35 level checks incl. 16 self-tests; bot fired L000_1>L000#1); stills pending integrator review",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "A wrecked metal-and-glass station embedded in Level 0: from its torn outer hull, Level 0 is an endless cliff of identical yellow floors stacked vertically across a gulf; a radial lift through the kilometres-thick shell opens onto four decks leaning out over a hollow sphere 2.8 km across, its walls lit deck by deck, dark where the damage is worst, with frozen and overheated wings that kill if you linger.",
+  "mechanics": [
+    "nested_in_level0_stacked_floor_vista",
+    "spherical_shell_cavity_vista",
+    "overhanging_decks_atrium_stairs_gantry",
+    "radial_lift_between_outer_ring_and_inner_gallery",
+    "automatic_sliding_doors_working_jammed_stuck_stuttering",
+    "lethal_hot_cold_wings_exposure",
+    "dark_damaged_wings_exposed_wires",
+    "level0_hallucinations_audio_visual",
+    "automaton_props_cleaning_cooking",
+    "isolation_no_npcs_no_entities",
+    "flickering_wall_noclip"
+  ],
+  "exits": [
+    {
+      "id": "L000_1>L000#1",
+      "to": "L000",
+      "trigger": "walk_in",
+      "label": "Walked back across the yellow hallway into Level 0",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "simply travelling back to its parent level",
+      "conditions": "Outer Ring: out through the hull breach, along the Level 0 hallway that spans the gulf, into the stacked floors.",
+      "hint": "The buzz of fluorescent tubes comes from the torn hole in the hull. The yellow hallway beyond it goes home.",
+      "arrival": "from_L000_1"
+    },
+    {
+      "id": "L000_1>L001#2",
+      "to": "L001",
+      "trigger": "noclip",
+      "label": "Pushed through a flickering wall",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "exited by random noclipping, usually leading to Level 1",
+      "conditions": "Seeded: one flickering, crackling wall panel on a side wall of the Outer Ring concourse, and one on a side wall inside an Inner Gallery room on decks 1-3 (normal or dark wing). Push or sprint into it.",
+      "hint": "Like the walls in Level 0, some panels here flicker like dying tubes and crackle with static.",
+      "arrival": "from_L000_1"
+    }
+  ],
+  "fail_states": [
+    {
+      "kind": "climate",
+      "label": "Lingered in a frozen or overheated wing",
+      "basis": "SOURCE",
+      "source_quote": "some sections display extreme cold or heat to the point of unsurvivability"
+    }
+  ],
+  "entity_policy": "NO ENTITY PER SOURCE. The page names no entity. Automatons are props: a heptapedal cleaning bot (from the vignette) roams a deck and stops beside the player, kitchen cooking arms move only where they still work, dead automatons lie where they stopped. None is hostile. Level 0's isolation applies: no other wanderer is ever met; hallucinated footsteps, a phantom door, a far automated voice and a moment of Level 0 buzz and yellow light are sound and light only and spawn nothing. B.N.T.G. harvesters are present only as one harvest tag.",
+  "notes": "ADAPTATION (layout): the page gives no map. Two authored places joined by a lift: the Outer Ring (start) on the hull, and the Inner Gallery on the cavity wall. The shell is 'dozens of city blocks' thick, so the slice puts them ~1.9 km apart along the same radius and a working radial lift (page: 'some' automatic systems still work) carries you between them in seven seconds; the shell between is not walkable. Exit triggers stream with the slice the player is in (like chunk exits), since the two slices are joined only by the lift. ADAPTATION (shape): the page only BELIEVES the level is a spherical shell around a hollow centre. We show it that way, as the page's own working model: the cavity is a 1.4 km-radius sphere drawn by a shader (deck rows, white plating after the vignette's 'white walls', dark damaged districts, rare red-hot or blue-frozen districts, structural ribs), with real overhanging facade geometry for ~260 m around the gallery. The gallery sits at latitude 25 degrees, so each deck juts ~2.1 m past the one below. ADAPTATION (nesting): the page says Level 0 'appears to be a series of nearly identical floors stacked vertically' when seen from the sub-section, and the vignette sees 'an enormous lattice of dimly lit rooms' from an outer window. We show 121 identical cut-open Level 0 floors (3.4 m pitch) across a 54 m gulf from the hull windows (a gulf is ours: the page implies sightlines both ways, e.g. its photo of 0.1 taken from Level 0). One Level 0 hallway bridges the gulf to a torn breach in the hull: walking back along it is the sourced exit. ADAPTATION (rooms): bedrooms, kitchens, gyms and hydroponic greenhouses are 10 m modules behind the decks; about a third are sealed behind jammed doors; per-seed damage states: normal (bright), dark (dead panels, hanging wires, sparks, stuttering or stuck doors), cold or hot (lethal). Exposure builds in a cold/hot wing (~8 s to full) and hurts once past a third; leaving lets it fade. ADAPTATION (no-clip): the page says 'random noclipping ... similarly to Level 0' without a method; we reuse Level 0's flickering-wall affordance, placed by seed. ADAPTATION: the harvest tag paraphrases the page's B.N.T.G. harvesting belief and its warnings; it names no person. The vignette characters (Ria Valpuri) are not present. Verticality: four walkable decks with three alternating stair flights through a four-storey atrium behind slanted glass, a cantilevered gantry over the cavity, the breach steps down onto the Level 0 hallway. Known gaps: no inbound edge from Level 0 exists in transitions.json, so only 'start' is provided; Level 0 has no from_L000_1 arrival, so walking back lands at Level 0's start. Playable space is finite (two slices); far geometry is visual only."
+}
