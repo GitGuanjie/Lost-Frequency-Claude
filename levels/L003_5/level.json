@@ -2,17 +2,23 @@
   "stable_id": "L003_5",
   "scene": "res://levels/L003_5/L003_5.tscn",
   "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
+  "qa_status": "NOT_TESTED",
   "procedural": true,
   "arrivals": [
     "start",
     "from_L003"
   ],
-  "signature": "Void-sky electrostatic tower cluster, intermittent discharge and extraction",
+  "signature": "A starless, monochrome brutalist city under a constant electrical storm: discharges from the void strike pylons, masts and people at unpredictable moments, the floodlights on exoskeletal towers pulse, and the only safety is indoors, starting with the dead M.E.G. outpost tower you arrive in.",
   "mechanics": [
-    "electrostatic_towers",
-    "lightning_cycle",
-    "sheltered_interior"
+    "streamed_brutalist_city",
+    "storm_strike_scheduler",
+    "outdoor_exposure_escalation",
+    "concussion_hearing_loss_disorientation",
+    "shelter_indoors",
+    "pylon_discharge_exit_may",
+    "windows_in_glass_during_flashes",
+    "pulsing_floodlights",
+    "outpost_tower_four_storeys"
   ],
   "exits": [
     {
@@ -23,9 +29,22 @@
       "method": "No-clip directly into an electrostatic discharge",
       "source_quote": "No-clipping directly into an electrostatic discharge may transport you to Level 3 .",
       "source_url": "https://backrooms-wiki.wikidot.com/level-3-5",
-      "trigger_type": "noclip"
+      "trigger_type": "noclip",
+      "trigger": "walk_in",
+      "label": "Walked into a grounded discharge on a struck pylon",
+      "source_section": "Access",
+      "hint": "When a discharge strikes a pylon it crawls down the lattice for a few seconds.",
+      "arrival": "from_L003_5"
     }
   ],
-  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
-  "entity_policy": "SOURCED ENTITIES ONLY: The Windows (humans also present)"
+  "notes": "SOURCE: hypothetically endless plane; monochromatic mid-20th-century industrial metropolis of brutalist buildings; void sky with no stars, lit by pulsing floodlights on exoskeletal towers; constant storm, discharges at unmeasured intervals striking pylons, skyscrapers and humans unpredictably; each strike's concussive wave causes disorientation and temporary hearing loss, pressure in sternum and skull; furthest traversal 3.5 km; shelter inside the skyscrapers advised, prolonged outdoor exposure fatal; the Windows manifest in skyscraper glass, never in interiors; outpost 'Antenna to Heaven' (spired skyscraper, labs/utility/quarters, 16 researchers, 5 guards, 1 director, all expired, inactive); Throne of Zeus disappeared; power plant failure log; entry easy, extraction highly improbable; exit by no-clipping directly into a discharge may lead to Level 3. ADAPTATION: the playable world is a finite streaming window of seeded 48 m blocks (tower, slab block or pylon plaza; floodlight towers on corners); every building has one open lobby as shelter; the outpost tower layout (four reachable storeys, switchback stair, sealed above F3) and its contents; arrival from Level 3 is a steel door inside the outpost lobby (page: a door into a door within the skyscrapers); strike interval 3-9 s; outdoors, the chance a strike targets you rises from 10% and its miss distance falls from 16 m to 0 over ~70 s of exposure (indoors resets it); a 0.45 s sky flicker precedes strikes aimed at you (dossier allows a brief flash); damage 22-55 within 8 m, death within 2.4 m; hearing loss is a Master-bus low-pass for ~6 s plus camera roll; the Windows are pale figures shown in nearby glass only during flashes; the exit: a strike on a pylon leaves a grounded discharge for 2.6 s, walking into it takes you to Level 3 with 60% chance ('may'), otherwise it strikes you down; QA mode keeps one persistent, always-taking discharge on the plaza pylon east of the outpost. Not built: Throne of Zeus (disappeared), the power plant (only its log), Lightning in a Bottle, the Level 1 entrance (handled by the source levels).",
+  "entity_policy": "SOURCED ENTITIES ONLY: The Windows (humans also present)",
+  "fail_states": [
+    {
+      "kind": "hazard",
+      "label": "Struck by an electrostatic discharge outdoors",
+      "basis": "SOURCE",
+      "source_quote": "prolonged exposure outdoors will invariably result in expiration"
+    }
+  ]
 }
