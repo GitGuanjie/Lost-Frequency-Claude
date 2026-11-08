@@ -276,6 +276,8 @@ func _slot_point(key: String, local: Vector3) -> Vector3:
 # ---------------------------------------------------------------- interactions
 
 func _serve(i: int) -> void:
+	if not is_instance_valid(player):
+		return
 	var c: Dictionary = S.counters[i]
 	if c["stock"] <= 0:
 		Overlay.subtitle("[nothing left here until the restock]", 2.0)
@@ -383,6 +385,7 @@ func qa_self_test() -> Array:
 	var out: Array = []
 	out.append({"what": "free-food counters and vending machines are stocked", "ok": S.counters.size() >= 8 and K.vending.size() >= 15, "detail": [S.counters.size(), K.vending.size()]})
 	out.append({"what": "restaurant back doors lead to a different restaurant", "ok": _warp_map.size() >= 4 and not _warp_map.has(-1) and range(_warp_map.size()).all(func(i): return _warp_map[i] != i), "detail": _warp_map})
-	_serve(0)
-	out.append({"what": "serving reduces stock (no payment)", "ok": meals == 1, "detail": S.counters[0]["stock"]})
+	if is_instance_valid(player) and not S.counters.is_empty():
+		_serve(0)
+	out.append({"what": "serving reduces stock (no payment)", "ok": meals == 1, "detail": S.counters[0]["stock"] if not S.counters.is_empty() else -1})
 	return out

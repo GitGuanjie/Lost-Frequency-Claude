@@ -545,7 +545,8 @@ func _prep_lasers() -> void:
 func qa_self_test() -> Array:
 	await get_tree().process_frame
 	var out: Array = []
-	out.append({"what": "Waiting halls are 7 C away from the windows", "ok": absf(temp_c - 7.0) < 1.5 or player.global_position.y < -0.1, "detail": temp_c})
+	var py: float = player.global_position.y if is_instance_valid(player) else 0.0
+	out.append({"what": "Waiting halls are 7 C away from the windows", "ok": absf(temp_c - 7.0) < 1.5 or py < -0.1, "detail": temp_c})
 	out.append({"what": "four playable game rooms built", "ok": E.rooms.size() == 4 and G.hexes.size() > 10 and G.platforms.size() == 12, "detail": E.rooms.keys()})
 	out.append({"what": "lockers stocked by distance from the entrance", "ok": H.lockers.size() > 60, "detail": H.lockers.size()})
 	return out
