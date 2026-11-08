@@ -2,70 +2,92 @@
   "stable_id": "L737",
   "scene": "res://levels/L737/L737.tscn",
   "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
+  "qa_status": "NOT_TESTED (v2.0 rebuild)",
   "procedural": true,
   "arrivals": [
     "start"
   ],
-  "signature": "Dune Eternal: sun-struck ruins and monumental pyramid",
+  "signature": "Dune Eternal: an endless desert of burning gold dust under a false sun nailed to the zenith, Frontrooms landmarks drowning in it, and at the end of the endless passage the ruined city of New Ephyra and the Great Pyramid of Ilios, whose bottomless core holds a tombstone and something that cannot die.",
   "mechanics": [
-    "gold_dust",
-    "extreme_heat",
-    "pyramid",
-    "known_path_to_L998"
+    "gold_dust_heat_exposure",
+    "stepping_stones_cool",
+    "ultrasuit_item",
+    "pyramid_refuge",
+    "fixed_zenith_sun",
+    "midas_surrender_extraction",
+    "emergency_phone",
+    "named_tomb_gallery",
+    "floorless_core_chamber",
+    "spine_extraction_bay"
   ],
   "exits": [
     {
-      "id": "L737>L046#1",
-      "to": "L046",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "method": "Listed extraction",
-      "source_quote": "Level 46 & Level 169",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-737",
-      "trigger_type": "unknown"
-    },
-    {
       "id": "L737>L169#2",
       "to": "L169",
+      "trigger": "walk_in",
+      "label": "Gave yourself up to Fireteam Midas: extraction to Level 169",
       "basis": "SOURCE",
       "confidence": "CONFIRMED",
-      "method": "Fireteam Midas extraction, then memory erasure",
-      "source_quote": "execute an extraction to Level 169",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-737",
-      "trigger_type": "unknown"
+      "source_section": "Classification Procedures",
+      "source_quote": "Fireteam \"Midas\" will swiftly secure them and execute an extraction to Level 169 .",
+      "hint": "Navy-and-gold sentinels stand on a stone block west of the avenue.",
+      "arrival": "from_L737"
+    },
+    {
+      "id": "L737>EXT#5",
+      "to": null,
+      "to_label": "Fireteam Midas response (extraction to Level 169)",
+      "trigger": "condition",
+      "label": "Dialled the emergency number",
+      "basis": "SOURCE",
+      "confidence": "RUMORED",
+      "source_section": "Classification Procedures",
+      "source_quote": "actual entrances and exits are concealed through substituted level skips and an emergency phone number, respectively",
+      "hint": "A ruggedised phone on the field desk of the dissolved outpost.",
+      "arrival": "from_L737"
+    },
+    {
+      "id": "L737>L046#1",
+      "to": "L046",
+      "trigger": "interact",
+      "label": "Extraction to Level 46 from the SCARF-λ Spine",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "source_section": "Extraction",
+      "source_quote": "Level 46 & Level 169",
+      "hint": "The blast portal at the pyramid's base, east of the main door.",
+      "arrival": "from_L737"
     },
     {
       "id": "L737>L739#3",
       "to": "L739",
+      "trigger": "interact",
+      "label": "Extraction to Level 739 from the SCARF-λ Spine",
       "basis": "SOURCE",
       "confidence": "CONFIRMED",
-      "method": "Listed extraction",
+      "source_section": "Extraction",
       "source_quote": "Level 739",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-737",
-      "trigger_type": "unknown"
+      "hint": "The blast portal at the pyramid's base, east of the main door.",
+      "arrival": "from_L737"
     },
     {
       "id": "L737>L998#4",
       "to": "L998",
+      "trigger": "interact",
+      "label": "Extraction to Level 998 from the SCARF-λ Spine",
       "basis": "SOURCE",
       "confidence": "CONFIRMED",
-      "method": "Listed extraction",
+      "source_section": "Extraction",
       "source_quote": "Level 998",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-737",
-      "trigger_type": "unknown"
-    },
-    {
-      "id": "L737>EXT#5",
-      "to": "EXT",
-      "basis": "SOURCE",
-      "confidence": "RUMORED",
-      "method": "Emergency phone number",
-      "source_quote": "an emergency phone number, respectively",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-737",
-      "trigger_type": "item"
+      "hint": "The blast portal at the pyramid's base, east of the main door.",
+      "arrival": "from_L737"
     }
   ],
-  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
-  "entity_policy": "SOURCED ENTITIES ONLY: Entity 737/1 (static) and human Repository personnel"
+  "notes": "ADAPTATION: the endless desert is a heightfield of ~600 m closed by sheer dune walls and haze; New Ephyra (~6 km out on the page) is brought to the pyramid's foot; the great hall is 48 m (page: up to 60 m); the 7,373 tombs are sampled by one gallery of named niches; the page lists the extraction levels without a method, so they are built as an extraction bay behind the SCARF-λ Spine portal; the spare UltraSuit is placed at the dissolved outpost. The page states that public data on this level is fabricated; the notes say so. Seeds move the stepping stones only. Canon: docs/canon/levels/L737.md; CC BY-SA 3.0. Not yet PLAYABLE.",
+  "entity_policy": "SOURCE_ONLY. Entity 737/1 as a static chained silhouette (non-graphic). Sentinels of Fireteam Midas as a static post (humans; approaching them is a surrender, not combat). No creatures (1/5 minimal).",
+  "legacy_overlays": false,
+  "fail_states": [
+    "burns from the gold dust (heat exposure past the threshold)",
+    "falling into the abyss of the core chamber"
+  ]
 }
