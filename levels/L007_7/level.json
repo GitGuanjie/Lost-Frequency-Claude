@@ -2,37 +2,49 @@
   "stable_id": "L007_7",
   "scene": "res://levels/L007_7/L007_7.tscn",
   "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
-  "procedural": true,
+  "qa_status": "ENGINE_SMOKE_PASS seeds 1001/2002/3003, walker bot fires L007_7>L007#1 (QA fixture) (r1b, 2026-11-08); stills self-reviewed; integrator review pending",
+  "procedural": false,
   "arrivals": [
     "start",
     "from_L007",
     "from_L007_8"
   ],
-  "signature": "Solitary 47m lighthouse, narrow upper stairs and dark ocean",
+  "signature": "A lone concrete lighthouse on a narrow, wet rock 47 m above a calm grey sea under an empty grey sky; inside it is bigger than outside, the upper floor is rust and sealed pipes, the Lamp Zone is dead glass and consoles, and the pressure keeps rising until gas, explosion and fire leave only the jump.",
   "mechanics": [
-    "lighthouse",
-    "vertical_stairs",
-    "ocean_boundary"
+    "solitary_rock_47m",
+    "bigger_inside_ground_floor",
+    "door_light_and_stair_light",
+    "pressure_clock",
+    "gas_leak_hazard",
+    "lamp_zone_explosion_fire_spread",
+    "valve_effect_unstated",
+    "dead_control_panels",
+    "wind_gusts_unbalance",
+    "fall_damage_jump",
+    "currents_near_rock",
+    "swim_out_of_sight_exit"
   ],
   "exits": [
     {
       "id": "L007_7>L007#1",
       "to": "L007",
-      "basis": "SOURCE",
+      "trigger": "condition",
+      "label": "Jumped from the rock and swam until it was out of sight",
       "confidence": "CONDITIONAL+DANGEROUS",
-      "method": "jump from rock then swim several hours once rock is out of sight",
+      "basis": "SOURCE",
+      "source_section": "Exits / Discovery",
       "source_quote": "swimming through the Ocean for several hours in an undetermined direction",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-7-7",
-      "trigger_type": "swim"
+      "hint": "There is no way down the rock. There is only the water, a long way below.",
+      "arrival": "from_L007_7"
     }
   ],
-  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
-  "entity_policy": "NO ENTITY PER SOURCE",
-  "arrival_aliases": [
-    "from_L007_8"
+  "fail_states": [
+    "toxic gas",
+    "fire",
+    "fell on the rock",
+    "hit the water from too high",
+    "drowned"
   ],
-  "provisional_arrival_notes": [
-    "dev7: from_L007_8 currently maps to safe start position; not a dedicated architectural ingress."
-  ]
+  "entity_policy": "NO ENTITY PER SOURCE ('completely devoid of life'). No birds, fish, people or NPCs. Samantha and the M.E.G. researchers exist only in recovered recordings (TESTIMONY).",
+  "notes": "SOURCE: Geolith rock with high thermal conductivity, moist air, narrow uneven walkable top, lighthouse 47 m above the ocean, rock fixed to the sea floor; sole man-made building of shabby concrete with some wood and metal; Ground Floor without windows, dead switches, burned-out lamps barely hanging, worn furniture, mouldy tables, withered plants, indiscernible paintings, light from the stairs and the door (which can be opened); Upper Floor with windows, oxidized metal everywhere, enclosed pipes of toxic gas (blurry vision, bleeding, damage), stairs to the Ceiling; Ceiling with decaying white floor and the Lamp Zone (giant bulb, fragile ancient glass, damaged consoles incl. radio transmitter, no cables, no effect); calm ocean with small tides and dangerous currents near the Geolith; empty light-grey sky lit from an unknown source, never night, gusts that only unbalance; wave sound. TESTIMONY (audio log / MP3): one wanderer at a time, the level rebuilds itself per wanderer (fixed layout, seed-independent), a valve raises the pressure until the panels implode, gas leaks, the Lamp Zone explodes and fire spreads to the rock; the valve's effect is unanswered (turning it changes nothing visible, as in the 1/22/2022 report). ADAPTATION: square tower plan, room layout, the bigger-inside effect (the tower's outer shell is swapped for a wider, deeper set of rooms when you cross the door threshold; the ground floor has no windows so it is never seen from outside); timeline 480 s to the leak, 560 s to the explosion, fire stages over ~100 s; the east spur is the one place a jump clears the rock; water-entry damage 30-65 HP from that height, rock landing is far worse; 'several hours' of swimming compressed to reaching 450 m from the rock (where the haze hides it); lifebuoy by the door is nautical dressing. Arrival from Level 7 (blinding light) puts you in front of the lighthouse; from Level 7.8's entrance (and the sailor-door no-clip) you arrive just inside the door. QA FIXTURE: in QA mode only, a walk-in copy of L007_7>L007#1 sits on the spur tip so the walker bot can fire the edge; the story exit is the condition trigger over the open sea."
 }
