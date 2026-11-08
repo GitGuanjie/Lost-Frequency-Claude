@@ -570,10 +570,18 @@ func _bot_walk(lvl: LevelBase, nav: Dictionary, found: Array, want_edge: String 
 			misses.append({"edge": nav_exit.get("edge", ""), "path_points": nav_exit.get("path_points", 0), "snap_error": nav_exit.get("snap_error", -1), "start_projection_error": nav_exit.get("start_projection_error", -1)})
 		_nav_free(nav)
 		return {"fired": false, "reason": "no reachable exit / invalid navmesh projection", "nav_candidates": misses}
+	# Several triggers can share one edge id; pair with the one nearest the
+	# navmesh path's end, not simply the last match in the list.
 	var trig: Dictionary = {}
+	var tpath: Array = target.get("path", [])
+	var path_end: Vector3 = tpath[tpath.size() - 1] if tpath.size() > 0 else lvl.player.global_position
+	var best_d := INF
 	for x in found:
 		if x["edge"] == target["edge"]:
-			trig = x
+			var dd: float = (x["pos"] as Vector3).distance_to(path_end)
+			if dd < best_d:
+				best_d = dd
+				trig = x
 	var p := lvl.player
 	p.qa_active = true
 	var path: Array = target["path"]
