@@ -31,7 +31,7 @@ extends LevelBase
 ## - ABSENT: entities of any kind (warning says only "Unknown Potential"), combat, a named
 ##   destination, Level 78.
 
-const Rooms := preload("res://levels/L079/L079_rooms.gd")
+const Rooms := preload("res://levels/L079/L079_clinic.gd")
 const PERIOD := 150.0
 const MACHINE := Vector3(0.0, -0.9, -32.6)
 
