@@ -2,17 +2,29 @@
   "stable_id": "L011_2",
   "scene": "res://levels/L011_2/L011_2.tscn",
   "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003 40/40 each; bot fired L011_2>L283#2); stills reviewed by builder (AI); integrator review pending",
   "procedural": true,
   "arrivals": [
     "start",
-    "from_L011"
+    "from_L011",
+    "from_L283",
+    "from_L189",
+    "from_L852",
+    "from_L155",
+    "from_L036",
+    "from_L059",
+    "from_L121",
+    "from_L078"
   ],
-  "signature": "Refuge apartment district beneath black winter sky",
+  "signature": "A snowed-in estate of identical orange-and-white apartment blocks under a black sky and yellow streetlights, with the colourful, sealed Banner Building at its heart and a corridor of signed doors to other levels",
   "mechanics": [
-    "winter_apartments",
-    "scattered_gates",
-    "cold"
+    "identical_panel_blocks_snow_black_sky",
+    "signed_gateway_doors_with_return_arrivals",
+    "fridge_two_week_restock",
+    "banner_building_invisible_barrier",
+    "reported_shadow_figure_lit_hall",
+    "blending_zone_sky_and_shrinking_level11_buildings",
+    "walk_away_to_level11"
   ],
   "exits": [
     {
@@ -23,7 +35,12 @@
       "method": "Walk away from the apartment complex",
       "source_quote": "Walking away from the apartment complex leads you back to Level 11.",
       "source_url": "https://backrooms-wiki.wikidot.com/level-11-2",
-      "trigger_type": "walk_in"
+      "trigger_type": "walk_in",
+      "trigger": "walk_in",
+      "label": "Walked away from the apartment complex, down the road past the shrinking empty buildings",
+      "hint": "South, the road out: the buildings get bigger and the sky less black.",
+      "arrival": "from_L011_2",
+      "source_section": "Entrances, Exits and Gateways"
     },
     {
       "id": "L011_2>L283#2",
@@ -33,7 +50,13 @@
       "method": "Apartment door",
       "source_quote": "Level 11.2 is connected to the following levels through apartment doors",
       "source_url": "https://backrooms-wiki.wikidot.com/level-11-2",
-      "trigger_type": "door"
+      "trigger_type": "door",
+      "trigger": "interact",
+      "label": "Opened the apartment door with a wooden sign reading 283",
+      "hint": "Block C corridor: a scrap of board nailed beside a door, a number painted on it.",
+      "arrival": "from_L011_2",
+      "conditions": "return through the same door",
+      "source_section": "Interior and Properties / Gateways"
     },
     {
       "id": "L011_2>L189#3",
@@ -43,7 +66,13 @@
       "method": "Apartment door",
       "source_quote": "The gateways to Level 283 and level-189 have proved especially useful.",
       "source_url": "https://backrooms-wiki.wikidot.com/level-11-2",
-      "trigger_type": "door"
+      "trigger_type": "door",
+      "trigger": "interact",
+      "label": "Opened the apartment door with a wooden sign reading 189",
+      "hint": "Block C corridor: a scrap of board nailed beside a door, a number painted on it.",
+      "arrival": "from_L011_2",
+      "conditions": "return through the same door",
+      "source_section": "Interior and Properties / Gateways"
     },
     {
       "id": "L011_2>L852#4",
@@ -53,7 +82,13 @@
       "method": "Apartment door",
       "source_quote": "- Level 852",
       "source_url": "https://backrooms-wiki.wikidot.com/level-11-2",
-      "trigger_type": "door"
+      "trigger_type": "door",
+      "trigger": "interact",
+      "label": "Opened the apartment door with a wooden sign reading 852",
+      "hint": "Block C corridor: a scrap of board nailed beside a door, a number painted on it.",
+      "arrival": "from_L011_2",
+      "conditions": "return through the same door",
+      "source_section": "Interior and Properties / Gateways"
     },
     {
       "id": "L011_2>L155#5",
@@ -63,7 +98,13 @@
       "method": "Apartment door",
       "source_quote": "- Level 155",
       "source_url": "https://backrooms-wiki.wikidot.com/level-11-2",
-      "trigger_type": "door"
+      "trigger_type": "door",
+      "trigger": "interact",
+      "label": "Opened the apartment door with a wooden sign reading 155",
+      "hint": "Block C corridor: a scrap of board nailed beside a door, a number painted on it.",
+      "arrival": "from_L011_2",
+      "conditions": "return through the same door",
+      "source_section": "Interior and Properties / Gateways"
     },
     {
       "id": "L011_2>L036#6",
@@ -73,7 +114,13 @@
       "method": "Apartment door",
       "source_quote": "- Level 36",
       "source_url": "https://backrooms-wiki.wikidot.com/level-11-2",
-      "trigger_type": "door"
+      "trigger_type": "door",
+      "trigger": "interact",
+      "label": "Opened the apartment door with a wooden sign reading 36",
+      "hint": "Block C corridor: a scrap of board nailed beside a door, a number painted on it.",
+      "arrival": "from_L011_2",
+      "conditions": "return through the same door",
+      "source_section": "Interior and Properties / Gateways"
     },
     {
       "id": "L011_2>L059#7",
@@ -83,7 +130,13 @@
       "method": "Apartment door",
       "source_quote": "- level-59",
       "source_url": "https://backrooms-wiki.wikidot.com/level-11-2",
-      "trigger_type": "door"
+      "trigger_type": "door",
+      "trigger": "interact",
+      "label": "Opened the apartment door with a wooden sign reading 59",
+      "hint": "Block C corridor: a scrap of board nailed beside a door, a number painted on it.",
+      "arrival": "from_L011_2",
+      "conditions": "return through the same door",
+      "source_section": "Interior and Properties / Gateways"
     },
     {
       "id": "L011_2>L121#8",
@@ -93,7 +146,13 @@
       "method": "Apartment door",
       "source_quote": "- Level 121",
       "source_url": "https://backrooms-wiki.wikidot.com/level-11-2",
-      "trigger_type": "door"
+      "trigger_type": "door",
+      "trigger": "interact",
+      "label": "Opened the apartment door with a wooden sign reading 121",
+      "hint": "Block C corridor: a scrap of board nailed beside a door, a number painted on it.",
+      "arrival": "from_L011_2",
+      "conditions": "return through the same door",
+      "source_section": "Interior and Properties / Gateways"
     },
     {
       "id": "L011_2>L078#9",
@@ -103,9 +162,16 @@
       "method": "Apartment door",
       "source_quote": "- Level 78",
       "source_url": "https://backrooms-wiki.wikidot.com/level-11-2",
-      "trigger_type": "door"
+      "trigger_type": "door",
+      "trigger": "interact",
+      "label": "Opened the apartment door with a wooden sign reading 78",
+      "hint": "Block C corridor: a scrap of board nailed beside a door, a number painted on it.",
+      "arrival": "from_L011_2",
+      "conditions": "return through the same door",
+      "source_section": "Interior and Properties / Gateways"
     }
   ],
-  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
-  "entity_policy": "SOURCED ENTITIES ONLY: shadow figure (reported), unnamed 'thing' in Banner Building (diary); facelings absent"
+  "notes": "SOURCE: identical orange-and-white apartment buildings in snow under a black sky, ~-11 C, yellow streetlights, no day-night cycle; starts at the apartments; Level 11 buildings smaller and more vacant near the complex; no facelings; black metal barricades, gunshot dents on the Level 11 side; apartments, classrooms, lounges, infirmaries; fridges restock every other week with random Frontrooms food; wooden number signs beside gateway doors, return through the same door; Base Omicron (~250 people, linked to Base Epsilon on 283); Banner Building with geometric shapes and painted banners, only lit building, impenetrable invisible barrier, reported shadow figure, two tents and a constant watch; Jane's diary; walking away from the complex leads to Level 11; eight door gateways. ADAPTATION: layout (inner ring A-D around the courtyard, outer ring of identical blocks and sheet-metal barricades closing the gaps, approach road to the south) and 64 x 13 m 9-storey block size are ours; Block C's ground and first floors are the enterable interior and hold all eight gateway doors (room plan ours); the fridge cycle uses the real calendar (14 days) and taken food stays taken within a cycle (+15 HP, item 'frontrooms_food'); the specific foods are illustrative; base residents are not rendered (lit windows, generators, tents, radio and notices stand for them); the shadow figure appears on ~50% of 2-5 min checks when you stand south of the Banner Building within 60 m; sky and fog lighten toward Level 11 along the approach road; snowfall particles follow the player outdoors; sodium lamp heads are emissive panels on Poly Haven street lamps. QA fixture: none needed; the 283 door (first exit) is reachable from start through the Block C entrance.",
+  "entity_policy": "SOURCED ENTITIES ONLY. Facelings ABSENT per the article. The shadow figure is REPORTED: a dark silhouette rarely crosses the Banner Building's lit hall (never in QA, never interactive). 'The thing in the rainbow building' appears only in Jane's diary (TESTIMONY) and through its barrier. No Emstable, no combat, no NPCs.",
+  "fail_states": []
 }
