@@ -385,9 +385,9 @@ func _glitch_wall(k: GeoKit, node: Node3D, n: int, kl: int, side: float) -> void
 	var z := geo.seg_z0(gi) - 3.0
 	var y := geo.floor_at(-z)
 	k.box(Vector3(side * (hw - 0.01), y + 1.15, z), Vector3(0.02, 2.2, 1.6), "l11_glitch", GeoKit.ALL, false)
-	var t := make_exit("L001_1>L001#2", "noclip", Vector3(side * (hw - 0.3), y + 1.1, z), Vector3(0.9, 2.2, 1.6), "Push into the glitching wall", node)
+	var t := make_exit("L001_1>L001#2", "noclip", Vector3(side * hw, y + 1.1, z), Vector3(1.2, 2.2, 1.6), "Push into the glitching wall", node)
 	if t:
-		t.hold_seconds = 2.2
+		t.hold_seconds = 2.0
 	sound.emitter("static", Vector3(side * hw, y + 1.2, z), {}, -18.0, 8.0).reparent(node)
 
 
