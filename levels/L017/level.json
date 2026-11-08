@@ -1,19 +1,41 @@
 {
-  "stable_id": "L017",
-  "scene": "res://levels/L017/L017.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
-  "procedural": true,
-  "arrivals": [
-    "start"
-  ],
-  "signature": "Carrier ship: repeating bulkheads, sector clocks, closet threshold and cold machinery",
-  "mechanics": [
-    "industrial_ship",
-    "clock_sectors",
-    "compartment_exploration"
-  ],
-  "exits": [],
-  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
-  "entity_policy": "SOURCED ENTITIES ONLY: unnamed human occupants incl. Sector 12 officer and skinless man"
+ "stable_id": "L017",
+ "scene": "res://levels/L017/L017.tscn",
+ "status": "IN_DEVELOPMENT",
+ "qa_status": "NOT_TESTED",
+ "procedural": true,
+ "arrivals": [
+  "start"
+ ],
+ "signature": "Plane #17: 217 identical athwartship sectors of a 1940s naval ship, each behind its own watertight bulkhead door, two decks deep, every compartment keeping its own time, with the survey's observations at their sector numbers and the only active machine at the end.",
+ "mechanics": [
+  "217_streamed_sectors_two_decks",
+  "watertight_doors_open_by_hand_and_swing_shut",
+  "independent_compartment_clocks",
+  "upkeep_and_occupancy_vary_per_sector",
+  "sector_table_anchors",
+  "cold_sectors_200_206",
+  "machine_and_fused_crew_217",
+  "closet_entrance_and_egress"
+ ],
+ "exits": [
+  {
+   "id": "L017>EXT#1",
+   "to": "EXT",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "trigger": "interact",
+   "trigger_type": "door",
+   "method": "Same closet as 'egress'",
+   "label": "Stepped back into the stores closet in sector 1",
+   "to_label": "Storage Zone 1 antechamber (closet)",
+   "source_section": "Intro",
+   "source_quote": "Only known entrance and egress is through an inconspicuous closet, currently located in the Storage Zone 1 antechamber.",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-17",
+   "hint": "The stores closet you came through still stands open in the aft bulkhead."
+  }
+ ],
+ "notes": "SOURCE: Plane #17 (current iteration since Nov 1943); 217 athwartship passages of early-to-mid 20th-century design, identical except for sanitation, upkeep and occupancy; compartments with naval furnishings (barracks, kitchens, communication centres, engineering stations); each passageway separated by a reinforced bulkhead door; compartments run on independent time (clocks); occupants or remains of varying hostility, not to be engaged; sector table: 1 oily writing 'We co me to th El ri ge' by the first bulkhead door, 8 Mk. 6 depth-charge blast, 12 uniformed man (civilians not allowed, cannot leave), 33 charts and harbor registries, 47 whispered Lord's Prayer from a storage closet that is empty when opened, 67 etched mathematics on nearly every surface, 104 infirmary of adult male dead with the door stuck ajar, 156 Project RAINBOW title page (schematics in all sectors), 165 skinless man barring the barracks, 185 bridge with 216 living infants (noise and smell), 200-206 cold (-6 to 10 C), 217 active machine (blue light, high tone, knocking) and 216 living humans fused to bulkhead, deck and deckhead; the closet in the Storage Zone 1 antechamber is the only entrance and egress (EXT, not built). ADAPTATION: sector plan and size (12 x 22 m, two decks joined by two inclined ladders), compartment mix per sector (seeded), labels and frame numbers, door handling (open by hand, self-closing behind you), clock rates, lighting, sound (the page describes none), streaming window of four sectors; the entrance closet is placed in sector 1's aft bulkhead; Sector 4's photo caption is not modelled separately. No hangar is built: the page describes passages and compartments only. Bodies, infants and fused people are implied (sheets, sounds, shapes under the plating), never shown in detail.",
+ "entity_policy": "SOURCED ENTITIES ONLY, as still scripted presences, never combat: the uniformed man of sector 12 (speaks, watches, never leaves), the skinless man barring the sector 165 barracks, unnamed occupants and remains in some sectors; the sector 185 infants are heard behind the bridge door; the 216 fused crew of sector 217 are breathing shapes in the plating.",
+ "legacy_overlays": false
 }
