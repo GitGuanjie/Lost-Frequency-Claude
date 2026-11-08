@@ -251,7 +251,7 @@ func _drip(node: Node3D, floor_p: Vector3, tip: Vector3) -> void:
 	pud.position = floor_p + Vector3(0, 0.02, 0)
 	pud.scale = Vector3(1.0, 1.0, 0.7)
 	node.add_child(pud)
-	var e := sound.emitter("drip", tip, {"freq": 1100.0 + absf(tip.x) * 7.0}, -14.0, 14.0)
+	var e := sound.emitter("drip", tip, {"freq": [980.0, 1150.0, 1320.0][absi(int(tip.x)) % 3]}, -14.0, 14.0)
 	if e:
 		e.reparent(node)
 	make_interactable(floor_p + Vector3(0, 0.6, 0), Vector3(1.0, 1.2, 1.0), "Catch the drips from the stalactite", func(_p: Player) -> void:
