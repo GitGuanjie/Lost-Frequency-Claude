@@ -2,17 +2,29 @@
   "stable_id": "L026",
   "scene": "res://levels/L026/L026.tscn",
   "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev5 source candidate",
+  "qa_status": "NOT_TESTED",
   "procedural": true,
   "arrivals": [
     "start"
   ],
-  "signature": "Cruise liner with double-height decks, branching cabin halls, party rooms and an anomalous poster",
+  "signature": "The cruise liner Adventure, its name crudely painted over as SS Fun =): a trashed, blood-spattered party ship with every light burning, forty occupied staterooms, a crimson pool and a sun deck of broken loungers and posters, whose elevators open onto lower decks of party rooms that go on forever, and which a green fog periodically carries somewhere else.",
   "mechanics": [
-    "multi_deck_cruise",
-    "party_halls",
-    "fog_shift",
-    "stair_access"
+    "three_exterior_decks_with_stairs",
+    "forty_staterooms_some_open",
+    "crimson_pool",
+    "restaurant_bar_lounge_deckhouse",
+    "sun_deck_posters",
+    "all_circuits_powered",
+    "green_fog_relocation",
+    "elevator_hub_to_infinite_lower_decks",
+    "themed_party_rooms",
+    "cloned_room_hallway",
+    "unwatched_chunks_regenerate",
+    "booby_trapped_favours",
+    "carnivorous_balloons_in_dark",
+    "partygoer_presences_noclip_away",
+    "reversed_poster_exit",
+    "overboard_gate_exit"
   ],
   "exits": [
     {
@@ -23,7 +35,12 @@
       "method": "Touch a reversed, out-of-focus party poster",
       "source_quote": "Touch a reversed, out-of-focus party poster, and you will no-clip to another level.",
       "source_url": "https://backrooms-wiki.wikidot.com/level-26",
-      "trigger_type": "item"
+      "trigger_type": "item",
+      "trigger": "interact",
+      "label": "Touched a reversed, out-of-focus party poster on the sun deck",
+      "source_section": "Entrances And Exits",
+      "hint": "One poster up top reads wrong, as if seen from the back, and your eyes will not focus on it.",
+      "arrival": "from_L026"
     },
     {
       "id": "L026>EXT#2",
@@ -33,9 +50,15 @@
       "method": "Jump overboard",
       "source_quote": "You can also jump overboard.",
       "source_url": "https://backrooms-wiki.wikidot.com/level-26",
-      "trigger_type": "fall"
+      "trigger_type": "fall",
+      "trigger": "fall",
+      "label": "Jumped overboard through the open boarding gate",
+      "source_section": "Entrances And Exits",
+      "to_label": "Overboard (outcome not stated)",
+      "hint": "The gangway is gone; the gate in the starboard rail stands open over the water."
     }
   ],
-  "notes": "Compact exploration adaptation. Runtime Godot and Windows verification required; no automatic PLAYABLE promotion.",
-  "entity_policy": "SOURCED ENTITIES ONLY: Partygoers, Carnivorous Balloons; testimony-only monster/Facelings"
+  "notes": "SOURCE: the Frontrooms cruise liner Adventure (~150 x 18 m), name crudely crossed out and replaced by 'SS Fun =)'; travels by no-clipping: periodically a green fog covers it and it is gone; electricity powers every circuit without generators; exterior = top, upper and main decks, following normal reality, trashed by a perpetual frat party, blood spatter, cabins turned garbage dumps, a crimson pool on the upper deck and traces of a restaurant, bar and lounge; interior lower decks appear infinite: endless corridors and party rooms (typical decor, movie or holiday themes, booby-trapped favours), the elevators are the hub with hallways to every compass point; Liminal Echo: spontaneous generation of items and replication of areas, one party room cloned 38 times along a hallway; Carnivorous Balloons in the darkest corners; Partygoers dominant, HQ here; no friendly bases. TESTIMONY (April Showers): ~40 staterooms on the main deck, 20 a side, all occupied; from the elevator a deck two floors down went on forever; the sun deck is the top, empty of Partygoers, with an open-air bar, broken lounge furniture and posters; a reversed, out-of-focus poster there took her to Level 4; she could not swim, ruling out jumping overboard. ADAPTATION: exact deck plan and dimensions (148 m hull; main deck 0 m, upper 3.2 m, sun deck 6.4 m; stairs, lobby, promenades, foredeck, lifeboats are ours); the ship floats on an unnamed sea at start; the green fog cycle (~210 s of play, 30 s of fog) moves it between four unnamed locations (two seas, a plain, a desert: the page lists water and land appearances without saying which); the lower decks are a finite ChunkWorld window (24 m crossings, themed rooms, the birthday room repeating along the hub hallway, unwatched chunks rebuilt), reached only by elevator; the trapped favour stings for 10 health; blood is a toned-down stain; the pool's victims are described, not shown; party poster texts other than 'TIME 4 FUN' are ours; overboard is the starboard boarding gate with its gangway gone (outcome not stated: EXT release boundary). Level 246 stone circle not modelled (ambiguous context).",
+  "entity_policy": "SOURCED ENTITIES ONLY, as scripted presences, never combat: Partygoers (yellow, Gumby-like figures on the main and upper decks and at corridor ends below, which no-clip away when approached or watched; none on the sun deck, per testimony) and Carnivorous Balloons (clusters in the darkest party rooms that creep toward you while your light is off). Testimony-only beings (golden egg monster, Facelings, transformed victims) are not shown.",
+  "legacy_overlays": false
 }
