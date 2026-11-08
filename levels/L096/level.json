@@ -2,18 +2,23 @@
   "stable_id": "L096",
   "scene": "res://levels/L096/L096.tscn",
   "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
-  "procedural": true,
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003, 29/29 each; no exit by design); stills reviewed by builder (AI); integrator review pending",
+  "procedural": false,
+  "legacy_overlays": false,
   "arrivals": [
     "start"
   ],
-  "signature": "Quiet mountain house with porcelain, dust and a restorative interior",
+  "signature": "One quiet stone house on a ledge above a deep valley, mountain ranges on every horizon: filled porcelain pitchers, crumbling painted doorframes, etched windows, carpet underfoot, and dust that only asks to be swept",
   "mechanics": [
-    "single_quiet_house",
-    "sweep_dust",
-    "mountain_overlook"
+    "single_house_mountain_overlook",
+    "sweep_the_dust_house_settles",
+    "sit_a_while",
+    "no_exit_by_design"
   ],
   "exits": [],
-  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
-  "entity_policy": "NO ENTITY PER SOURCE"
+  "no_exit_reason": "The page documents no entrance and no exit; it is a refuge ('Stay here a while'). No door out is invented: the player leaves only by their own choice through the pause menu.",
+  "fail_states": [],
+  "entity_policy": "NO ENTITY PER SOURCE. The page names no entity, inhabitant or threat; nothing is spawned and no sound implies one.",
+  "content_note": "The source page describes war, shrapnel, explosions and the deaths of children (author's warning). None of it is depicted; an arrival toast says so.",
+  "notes": "SOURCE: a house overlooking vast mountain ranges; porcelain pitchers sit filled; doorways with crumbling but steadfast paint; windows etched with intricate patterns; dust not from ruins or weapons, it only asks to be swept; carpet underfoot, coffee on a warm midsummer night, the dinner table, the drive home through the mountains (memories, used as notes and interaction text); silence and stillness; 'Stay here a while'. The Arabic text is the author's direct translation of the English; it is not treated as separate content. ADAPTATION: the layout (central hall with a triple-arched etched-glass front, sitting room, kitchen, dining room, bedroom, front terrace, outside stair to a roof terrace at +3.6 m, a lower overlook at -1.8 m, garden ledge with parapets and a retaining wall) is ours; the stone-house style follows the page's image credits, but no place is named in game. Evening light (low sun, lamps lit) and the soundscape (wind, crickets, room tone, a faint pad) are ours. The dust mechanic: seven patches chosen by the seed from fixed candidate spots; the broom by the back door sweeps them; when all are gone the lamps warm and the page's last line appears. Nothing is scored or timed. Landscape: one heightfield (fine near the house) plus two far ridge rings and scrub on the slopes; no roads, villages or people. Notes paraphrase the page."
 }
