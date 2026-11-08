@@ -2,30 +2,43 @@
   "stable_id": "L011_3",
   "scene": "res://levels/L011_3/L011_3.tscn",
   "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
-  "procedural": true,
+  "qa_status": "NOT_TESTED",
+  "procedural": false,
+  "legacy_overlays": false,
   "arrivals": [
     "start",
     "from_L011"
   ],
-  "signature": "Red-fog gutted urban avenues, guarded perimeter bridges and mask cue",
+  "signature": "A gutted steel-and-glass city under a moonless sky stained crimson by its own windows: the air breeds hallucinations unless you cover your face, Servants keep to the street ends behind you and close in on anyone who rests or hides, the Embassy dome hums at the end of the avenue, and the only way out is a guarded bridge that runs into red fog over endless water.",
   "mechanics": [
-    "red_air",
-    "urban_alleys",
-    "perimeter_bridge"
+    "contaminant_exposure_and_mask",
+    "false_humans_hallucination",
+    "servant_stalkers_pressure",
+    "guarded_bridges_chase",
+    "embassy_patrol",
+    "damp_or_drizzle_weather_red_lightning",
+    "gutted_three_storey_shell"
   ],
   "exits": [
     {
       "id": "L011_3>L011#1",
       "to": "L011",
+      "trigger": "walk_in",
+      "label": "Walked out along a guarded bridge over the water",
       "basis": "SOURCE",
       "confidence": "CONFIRMED+DANGEROUS",
-      "method": "Bridges over water at the outskirts",
-      "source_quote": "they are usually guarded to prevent all escape",
+      "source_section": "Exits",
+      "source_quote": "Bridges can be found that stretch out into infinity over a large body of water.",
       "source_url": "https://backrooms-wiki.wikidot.com/level-11-3",
-      "trigger_type": "walk_in"
+      "hint": "Follow the waterfront until the road runs out over the water. The figures at the bridgehead will turn.",
+      "arrival": "from_L011_3"
     }
   ],
-  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
-  "entity_policy": "SOURCED ENTITIES ONLY: Servants, Ambassadors (testimony: The Daughter)"
+  "fail_states": [
+    "taken_by_servants (resting or lingering in enclosed space until they close in)",
+    "taken_on_the_bridge (guards catch you before you get across)",
+    "taken_at_the_embassy (entering the plaza)"
+  ],
+  "entity_policy": "SOURCED ENTITIES ONLY, as scripted presences, never combat: Servants (Entity 187, CONFIRMED) as faceless dark silhouettes that stalk from afar, guard the bridgeheads and patrol the Embassy plaza; Ambassadors (Entity 141, CONFIRMED; floating cube per the 2017 recording) hovering at the Embassy and over the central bridgehead. No humans: the only human figure is a hallucination that vanishes when approached. The Daughter and the Level 6.2 entity are referenced in text only. The Vortex is never shown.",
+  "notes": "SOURCE: corrupted steel-and-glass descendant of Level 11; moonless sky stained by crimson city lights; psychoactive air (hallucinations, suggestibility) mitigated by masks; damp to icy drizzle, rain with red lightning; outskirts of apartments, warehouses and shops giving way to office towers and high-rises; electricity works in places, water systems do not; buildings bare and gutted; no humans; Servants stalk in groups from afar, pin wanderers in dead ends or buildings, capture on opportunity; 'avoid enclosed spaces and do not rest'; the Embassy (domed, city-hall-like, Ambassadors, patrolling Servants, a sadistic hum); bridges over a large body of water at the outskirts lead to Level 11 and are usually guarded; the 2017 recording and the closing 'We shall begin, Mother' text. ADAPTATION: the playable city is a finite authored district (~350 x 600 m) closed by a continuous ring of buildings, the water and fog; the page gives no size. Block grammar, heights and the gutted three-storey shell (dog-leg stair, two upper floors) are ours. Exposure: unmasked it rises over ~3.5 min outdoors (half as fast indoors) and drives red tint, whispers, false humans and the footer chorus; the respirator in the arrival alley (facial covering, SOURCE) lowers it. Servant pressure builds while you rest (15 s still) or stay in the alley or the shell, and capture follows warnings; bridge guards follow at 3.45 m/s once you step onto a bridge (outpace them, sprinting helps); entering the Embassy plaza draws its patrol. Servants' appearance is not described on the page: they are faceless silhouettes. Weather alternates damp mist and drizzle with red lightning every 14-38 s. QA mode disables stalkers, guards, patrol and hallucinations so the walker bot can cross the central bridge. Not built: the Vortex (never seen directly), Embassy interiors ('twisted halls', rarely seen), artifacts (unproven), further exits (undetermined). Content note: hallucination and mind-influence themes, capture and enslavement implied through text and presences; nothing graphic. Canon: docs/canon/levels/L011_3.md; page by Noctilucian and VivamusLudio, CC BY-SA 3.0."
 }
