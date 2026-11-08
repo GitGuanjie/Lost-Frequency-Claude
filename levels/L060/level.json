@@ -2,14 +2,36 @@
   "stable_id": "L060",
   "scene": "res://levels/L060/L060.tscn",
   "status": "IN_DEVELOPMENT",
-  "qa_status": "UNVERIFIED, Godot runtime and screenshot review pending",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003, 26/26 each; bot fired L060>L007#1); stills reviewed by builder (AI); integrator review pending",
   "procedural": true,
-  "arrivals": ["start", "from_L085"],
-  "signature": "Perpetually dark bay: a new concrete Upper Area high above an unfinished dirt Lower Area, lit stairs, broken lamps, a shallow entrance sea and an intermittent anomalous sea portal.",
-  "mechanics": ["dual_elevation_baywalk", "three_stair_links_at_100m_intervals", "mostly_broken_lamps", "sea_entry_and_swim", "time_varying_four_sea_characteristics", "stable_probability_portal", "painless_death_warning_only"],
-  "exits": [{
-    "id": "L060>L007#1", "to": "L007", "trigger": "condition", "label": "An intermittent sea characteristic forms a portal toward Level 7", "confidence": "CONDITIONAL", "basis": "SOURCE", "source_section": "Exits / The Sea", "source_quote": "you have a chance of being sent to Level 7", "arrival": "from_L060", "hint": "The sea does not behave the same way every time. Portal periods are rare."
-  }],
-  "entity_policy": "NO SPAWNED ENTITIES IN THIS CANDIDATE. The documented Smilers on the upper tier and Brave group are deferred; none can appear on the Lower Area.",
-  "notes": "Source dossier docs/canon/levels/L060.md; CC BY-SA 3.0 D34TH_0000. SOURCE: dark upper concrete promenade, lower unfinished dirt path, stair lights and broken lamps, sea with four characteristics, conditional Level 7 portal. ADAPTATION: 260m finite region, timed sea-characteristic sequence, approximate 23% stable roll at Portal change, warning-only Painless Death. NOT a complete playable scene until physics navigation, Smiler behavior, state handling and GPU review are verified."
+  "legacy_overlays": false,
+  "arrivals": ["start", "from_L085", "from_L009"],
+  "signature": "A pitch-dark bay walk without end: a new concrete promenade with dead street lamps and grinning Smilers over an unfinished dirt path of abandoned construction gear, a lit staircase every hundred metres, and a four-foot sea that sometimes drains, deepens, or pulls you somewhere else, while the breeze tries to calm you to death",
+  "mechanics": ["streamed_two_tier_baywalk", "stairs_every_100m_with_working_lamp", "mostly_broken_lamps", "arrive_in_the_sea", "four_sea_characteristics_cycle", "portal_sea_to_level_7", "ocean_downward_current", "low_tide_black_sand", "painless_death_calm_meter", "the_guide_keep_moving", "brave_slap_cure", "smilers_drawn_to_light_upper_only", "sleep_upper_rumoured_level_61"],
+  "exits": [
+    {
+      "id": "L060>L007#1", "to": "L007", "trigger": "condition", "basis": "SOURCE", "confidence": "CONDITIONAL",
+      "method": "Touch The Sea while it is in its second characteristic (Portal)",
+      "label": "The sea that was not water pulled you under, and you came up somewhere else",
+      "source_section": "Entrances and Exits / Characteristics of The Sea",
+      "source_quote": "By jumping into \"The Sea\" in its second characteristic, you have a chance of being sent to Level 7",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-60",
+      "hint": "Sometimes the waves go quiet and the water stops moving. The Brave's chart says what that means.",
+      "arrival": "from_L060"
+    },
+    {
+      "id": "L060>L061#2", "to": "L061", "trigger": "interact", "basis": "SOURCE", "confidence": "RUMORED+DANGEROUS",
+      "method": "Sleep in the Upper Area (theorised, unproven, strongly discouraged)",
+      "label": "Fell asleep on a bench on the upper bay walk",
+      "source_section": "Entrances and Exits",
+      "source_quote": "if you sleep at the upper segment, you'll wake up at Level 61",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-60",
+      "hint": "The benches up on the walk. Nobody who knows this place would recommend it.",
+      "arrival": "from_L060"
+    }
+  ],
+  "fail_states": ["the Painless Death: full calm while facing the breeze", "drowning in the Ocean characteristic's downward current", "Smilers in the Upper Area"],
+  "entity_policy": "SOURCED ENTITIES ONLY. Smilers (CONFIRMED) are scripted grins in the Upper Area's dark stretches, gathered at the edges of lamp pools and drawn toward light; they hurt on contact, never descend to the Lower Area, and one may stand on the exposed shore at low tide. The Brave (CONFIRMED human group, no leader, mostly hidden) are not shown: their hiding spot, radio and notes, and an unseen hand that slaps you out of the Painless Death near their camp.",
+  "content_note": "The page reports deaths by drowning and by the calm called the Painless Death. Expressed through mechanics and notes only.",
+  "notes": "SOURCE: outdoors next to a bay; infinitely long, newly built, well-kept concrete pathway; street lights mostly broken or off; no daylight; Upper Area = main bay walk, no food or water, Smilers concentrated in darker areas and drawn to light, Painless Death strongest; Lower Area = unfinished dirt path below with construction equipment, no barriers to the sea, no entities, safer; stairs between the areas about 100 m apart, safe, lamps at the stairs mostly working; arrival always in The Sea; the sea is identical to the Frontrooms sea and changes characteristic (Normal about 4 ft deep and the only gateway; Portal pulls you in, mostly to Level 7; Low-Tide no water, black sand, Painless Death stops, a Smiler may be met; Ocean about 3,740 m with a downward current); the Guide (keep moving, do not meditate, slap the victim); The Brave (about 10, no leader, hidden, friendly traders, weekly updates to M.E.G., camp moves, signal weakens with distance). ADAPTATION: the streaming window (100 m chunks, radius 2; the coast is not simulated to infinity); cross-section heights (Upper +5.0 m, Lower +1.0 m, sea surface 0, bed -1.22 m); the timed sea cycle (Normal 2-4 min, then 40-80 s of Portal 30%, Low-Tide 35% or Ocean 35%); the Portal roll (75% Level 7, otherwise you are dropped back on the sand: other sea levels have no documented edge); the calm meter's rates and the fear proxy (Upper Area, Smilers within 25 m, recent harm, low health); the slap near the hiding spot; the Brave's hiding spot position is seeded among four places on the first chunk; lamp states and equipment scatter are seeded per chunk. Exit 2 (L060>L061#2, a documented RUMORED+DANGEROUS edge) was added in this rebuild. from_L009 (edge L009>L060#4) arrives in the sea like every other arrival."
 }
