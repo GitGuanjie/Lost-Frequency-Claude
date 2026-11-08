@@ -2,45 +2,74 @@
   "stable_id": "L022",
   "scene": "res://levels/L022/L022.tscn",
   "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev4 source candidate",
-  "procedural": true,
+  "qa_status": "NOT_TESTED",
+  "procedural": false,
+  "legacy_overlays": false,
   "arrivals": [
     "start",
     "from_L001",
     "from_L069"
   ],
-  "signature": "Three-tier collapsed car park, actual stair flights and mine shafts",
+  "signature": "Three gutted decks of the collapsed car park that was Emstable: rubble and girder poles, rusted 1950s car husks, shopping trolleys, shacks of wood and mined concrete, tents that still hold the dead, a deck fallen into a ramp, and deep mining holes down to Level 23 and up through the roof to Level 21.",
   "mechanics": [
-    "multi_storey",
-    "collapse_gaps",
-    "notes",
-    "stairs"
+    "three_decks_car_ramp_stair_core_debris_ramp",
+    "deep_mining_shaft_fall_to_level_23",
+    "rope_through_roof_hole_to_level_21",
+    "noclip_through_car_husk_to_level_817",
+    "unstable_footing_trip_on_rebar",
+    "debris_drops_from_ceiling",
+    "census_floor_labels_and_diary"
   ],
   "exits": [
     {
-      "id": "L022>L021#1",
-      "to": "L021",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "method": "Reverse of the post-collapse hole entrance (method not detailed)",
-      "source_quote": "Level 22 can be exited by using the previously mentioned entrances",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-22",
-      "trigger_type": "unknown"
-    },
-    {
       "id": "L022>L023#2",
       "to": "L023",
+      "trigger": "fall",
+      "label": "Dropped down a deep mining hole toward the ceiling of Level 23",
       "basis": "SOURCE",
       "confidence": "CONFIRMED",
       "method": "Reverse of the post-collapse hole entrance (method not detailed)",
+      "source_section": "Entrances and Exits",
       "source_quote": "Level 22 can be exited by using the previously mentioned entrances",
       "source_url": "https://backrooms-wiki.wikidot.com/level-22",
-      "trigger_type": "unknown"
+      "trigger_type": "unknown",
+      "hint": "The deepest of the mining holes, on the lowest deck.",
+      "arrival": "from_L022",
+      "implemented_as": "fall trigger inside the open mining shaft below deck A (the page's Level 23 entrance is holes in that level's ceiling)"
+    },
+    {
+      "id": "L022>L021#1",
+      "to": "L021",
+      "trigger": "walk_in",
+      "label": "Climbed a rope up through a hole in the roof toward Level 21",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Reverse of the post-collapse hole entrance (method not detailed)",
+      "source_section": "Entrances and Exits",
+      "source_quote": "Level 22 can be exited by using the previously mentioned entrances",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-22",
+      "trigger_type": "unknown",
+      "hint": "Grey light falls through a hole in the top deck's ceiling.",
+      "arrival": "from_L022",
+      "implemented_as": "rope (LadderVolume) up through the roof hole above deck C; fires once you are two metres up the rope (the page's Level 21 entrance is holes in that level's floor)"
+    },
+    {
+      "id": "L022>L817#3",
+      "to": "L817",
+      "trigger": "noclip",
+      "label": "Pushed through a rusted car husk and no-clipped",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL",
+      "method": "No-clip through cars or debris",
+      "source_section": "Entrances and Exits",
+      "source_quote": "successfully noclipping through cars or debris can lead to Level 817",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-22",
+      "trigger_type": "noclip",
+      "hint": "Some of the wrecks feel thinner than they look if you keep pushing.",
+      "arrival": "from_L022",
+      "implemented_as": "noclip trigger on one car husk on deck B (hold against it for 3 s); added from data/canon/transitions.json"
     }
   ],
-  "notes": "Uses a compact prototype scale. Godot/Windows gameplay and performance not yet verified; no promotion to PLAYABLE. Dev6: new inbound provisional start-position aliases (from_L069) are not custom-designed entrance geometry.",
-  "entity_policy": "NO ENTITY PER SOURCE",
-  "arrival_aliases": [
-    "from_L069"
-  ]
+  "entity_policy": "NO ENTITY PER SOURCE. The page names none; the dead in the tents are only implied (sleeping bags, an examine line).",
+  "notes": "SOURCE: an infinite, average-looking 20th-century multi-storey car park with parked cars and shopping trolleys, discovered 1925; Emstable micronation from 1987, sealed by 1990, trade with the M.E.G. (2012) and B.N.T.G. (2016); caste of families, each floor passing a fraction upward; top floor lavish (Wi-Fi, pool, football table, cookers), floors 10-15 from the top tents and shacks of wood or mined concrete and a few cookers, below the 16th floor starvation and sleeping in the open; collapse from societal flaws and concrete mining/scavenging; now rubble and girder poles, rusty dusty 50s car husks, abandoned tents with corpses (more on lower floors), countless deep mining holes, climbing them heavily unadvised with recorded deaths; the 'Hilda' diary; the Floor 10 census (floors 1-28, material designations). Exits: the post-collapse holes back to Level 21 (above) and Level 23 (below), and noclipping through cars or debris to Level 817 (CONDITIONAL; added from transitions.json as L022>L817#3). Arrivals: Level 1 glass doors and Level 69 exit ramps ('your car parked in a parking space'). ADAPTATION: the slice is three walkable decks (labelled Floors 8, 9 and 10 with their census designations) under a broken roof, 64 x 48 m with an 8 m grid and 3.0 m floor to floor; collapse rubble chokes the edges and the decks visibly carry on into the dark ('large parts of the level are inaccessible'); the hole exits use a fall into a deep shaft and a rope through the roof (the page does not detail the method); the stair core and the fallen deck ramp are ours; the trip and falling-debris mechanics express the page's unstable footing; the top-floor pool, football table and Wi-Fi are not in this slice (and are never functional). Canon: docs/canon/levels/L022.md; author credited there under CC BY-SA 3.0. Not yet PLAYABLE."
 }
