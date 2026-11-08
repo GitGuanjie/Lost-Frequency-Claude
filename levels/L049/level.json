@@ -1,63 +1,101 @@
 {
-  "stable_id": "L049",
-  "scene": "res://levels/L049/L049.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev4 source candidate",
-  "procedural": true,
-  "arrivals": [
-    "start",
-    "from_L011",
-    "from_L048"
-  ],
-  "signature": "Mud-filled WWI trench network with two bunkers and time-dependent storm exits",
-  "mechanics": [
-    "trench",
-    "weather",
-    "bunkers",
-    "flood_exit"
-  ],
-  "exits": [
-    {
-      "id": "L049>L014#1",
-      "to": "L014",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "method": "specific rusted bunker doors",
-      "source_quote": "Specific rusted doors in the bunkers serve as access points to Level 14, Level 65, or Level 50",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-49",
-      "trigger_type": "door"
-    },
-    {
-      "id": "L049>L050#3",
-      "to": "L050",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "method": "specific rusted bunker doors",
-      "source_quote": "Specific rusted doors in the bunkers serve as access points to Level 14, Level 65, or Level 50",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-49",
-      "trigger_type": "door"
-    },
-    {
-      "id": "L049>L003#4",
-      "to": "L003",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED+DANGEROUS",
-      "method": "struck by lightning during rainstorm",
-      "source_quote": "Being struck by lightning during a rainstorm phenomenon results in an immediate no-clip to Level 3",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-49",
-      "trigger_type": "condition"
-    },
-    {
-      "id": "L049>L007#5",
-      "to": "L007",
-      "basis": "SOURCE",
-      "confidence": "CONDITIONAL",
-      "method": "follow a water-filled tunnel opened by severe flooding",
-      "source_quote": "a water-filled tunnel may become accessible. Following this tunnel will lead you to Level 7",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-49",
-      "trigger_type": "swim"
-    }
-  ],
-  "notes": "Uses a compact prototype scale. Godot/Windows gameplay and performance not yet verified; no promotion to PLAYABLE.",
-  "entity_policy": "SOURCED ENTITIES ONLY: Trenchcleaners (49/1), unseen entities"
+ "stable_id": "L049",
+ "scene": "res://levels/L049/L049.tscn",
+ "status": "IN_DEVELOPMENT",
+ "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003 28/28 each; bot fired L049>L014#1 at the rusted door of the first Gutter Bunker); stills reviewed by builder (AI); integrator review pending",
+ "procedural": true,
+ "arrivals": [
+  "start",
+  "from_L011",
+  "from_L048"
+ ],
+ "signature": "An endless abandoned WWI trench system of mud, planks, iron and sandbags: keep your head below the parapet, shelter in the dugouts, hear the war you never see, and keep out of the Trenchcleaner's sight; three specific rusted doors in the Gutter Bunkers lead out",
+ "mechanics": [
+  "streamed_zigzag_trenches",
+  "parapet_sniper_rule",
+  "gutter_bunkers_rusted_doors",
+  "dugouts_below_trench",
+  "day_night_double_length",
+  "fog_episodes",
+  "storm_flood_lightning",
+  "flooded_culvert_tunnel",
+  "shells_and_bomber_leads",
+  "trenchcleaner_presence",
+  "almond_water_rations_medkits"
+ ],
+ "exits": [
+  {
+   "id": "L049>L014#1",
+   "to": "L014",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "method": "specific rusted bunker doors",
+   "source_quote": "Specific rusted doors in the bunkers serve as access points to Level 14, Level 65, or Level 50",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-49",
+   "trigger_type": "door",
+   "source_section": "Entrances And Exits",
+   "trigger": "interact",
+   "label": "Forced a specific rusted door in the Gutter Bunkers",
+   "hint": "Down in the M.E.G. dugouts, the rusted doors at the back."
+  },
+  {
+   "id": "L049>L065#2",
+   "to": "L065",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "method": "specific rusted bunker doors",
+   "source_quote": "Specific rusted doors in the bunkers serve as access points to Level 14, Level 65, or Level 50",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-49",
+   "trigger_type": "door",
+   "source_section": "Entrances And Exits",
+   "trigger": "interact",
+   "label": "Forced a specific rusted door in the Gutter Bunkers",
+   "hint": "Down in the M.E.G. dugouts, the rusted doors at the back."
+  },
+  {
+   "id": "L049>L050#3",
+   "to": "L050",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "method": "specific rusted bunker doors",
+   "source_quote": "Specific rusted doors in the bunkers serve as access points to Level 14, Level 65, or Level 50",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-49",
+   "trigger_type": "door",
+   "source_section": "Entrances And Exits",
+   "trigger": "interact",
+   "label": "Forced a specific rusted door in the Gutter Bunkers",
+   "hint": "Down in the M.E.G. dugouts, the rusted doors at the back."
+  },
+  {
+   "id": "L049>L003#4",
+   "to": "L003",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED+DANGEROUS",
+   "method": "struck by lightning during rainstorm",
+   "source_quote": "Being struck by lightning during a rainstorm phenomenon results in an immediate no-clip to Level 3",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-49",
+   "trigger_type": "condition",
+   "source_section": "Entrances And Exits",
+   "trigger": "condition",
+   "label": "Struck by lightning in the open trench during a storm",
+   "hint": "In a storm, if the air starts to smell of metal, move."
+  },
+  {
+   "id": "L049>L007#5",
+   "to": "L007",
+   "basis": "SOURCE",
+   "confidence": "CONDITIONAL",
+   "method": "follow a water-filled tunnel opened by severe flooding",
+   "source_quote": "a water-filled tunnel may become accessible. Following this tunnel will lead you to Level 7",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-49",
+   "trigger_type": "swim",
+   "source_section": "Entrances And Exits",
+   "trigger": "walk_in",
+   "label": "Followed the water-filled tunnel the flood opened under the parapet",
+   "hint": "When the trench floods, the grated drain by the Gutter Bunkers gives way."
+  }
+ ],
+ "notes": "SOURCE: endless WWI-like battlefield, only the abandoned trench system accessible; complex Euclidean layout with random twists; planks, corroded iron sheets, worn sandbags, rusted barbed wire; narrow paths to wide gun emplacements, artillery stations with mortars of non-human make, damp bunkers (some collapsed) with beds, tables, chairs, uniforms, ammunition crates, rations; thick damp soil; eerie silence and distant gunfire; leaving the trench = precise headshot; escalating fire; rare bombers and L.E.A.D.S.; shells at random; day and night twice Frontrooms length, less gunfire at night; sudden dense fog; rare storms flooding to waist level, lightning -> Level 3, flooded tunnel -> Level 7; half-empty Almond Water, canned food, used medical kits, uniforms, empty rifles, notes and books; M.E.G. Gutter Bunkers (three connected bunkers) whose specific rusted doors lead to Levels 14, 65 and 50; Entity 49/1 Trenchcleaner; letters, logs, test log, report (TESTIMONY). ADAPTATION: streamed 32 m chunks of 2 m cells carved into zig-zag trenches (row 0 a continuous fire trench, every third column a communication trench, other edges random) with per-chunk features (covered emplacement with a 1 m fire-step, artillery pit, dugout bunker, collapsed dugout); trench floor 2.4 m below ground with sandbag parapets; dugouts 2.8 m lower; chunk (0,0) is the Gutter Bunkers: three dugouts joined by a tunnel, each with a rusted back door (L14, L65, L50; L049>L065#2 added from data/canon/transitions.json) and a jammed side door, and a grated drainage culvert. Parapet rule: eyes above ground level for 0.7 s -> fatal shot (a crack past the ear at 0.25 s). Time: 80-minute day/night cycle; fog 4-8 min; storm 5 min with a flood rising to waist height (dugouts fill), lightning near the player (2 s warning; struck -> L003), the culvert grate gives way above 0.8 m of water and the tunnel exit (L007) exists only then; shells every 45-130 s, a bomber every 18-28 min (hurts the upright and uncovered). Trenchcleaner: one scripted presence every 6-12 min that stalks along the trenches to ~13 m, sweeps and withdraws; it fires a burst only with a clear line of sight to a moving, upright or lit player (40 damage); never fought. The L666 edge (killing a wanderer) is not implemented: there are no other wanderers. QA: weather, shelling and the Trenchcleaner are off in QA mode; the bot fires the L014 door. Canon: docs/canon/levels/L049.md; author exotichive credited there under CC BY-SA 3.0. Not yet PLAYABLE.",
+ "entity_policy": "Entity 49/1 Trenchcleaner (CONFIRMED) appears as a scripted, non-combat presence; one at a time (Falcon's 'only one' vs Lancaster's three is left open in the documents). The unseen entities beyond no man's land are never modelled: only gunfire, shells, a bomber's engines and the sniper's shot. Nuvaria and Hagsten appear only in letters (RUMORED).",
+ "legacy_overlays": false
 }
