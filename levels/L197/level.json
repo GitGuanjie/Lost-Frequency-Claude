@@ -2,21 +2,38 @@
   "stable_id": "L197",
   "scene": "res://levels/L197/L197.tscn",
   "status": "IN_DEVELOPMENT",
-  "qa_status": "UNVERIFIED Godot import, walker, GPU capture and human review pending",
+  "qa_status": "NOT_TESTED",
   "procedural": false,
+  "legacy_overlays": false,
   "arrivals": [
     "start",
     "from_L197"
   ],
-  "signature": "Four mineral districts of an expansive crystal cave, from tranquil turquoise water to dark onyx passages.",
+  "signature": "One continuous crystal cave folded through three mineral zones: smooth turquoise tunnels lit by crystal bunches, M.E.G. Outpost \"Good Feels\" and the hidden Meditation Cove fountain; a narrow amethyst passage whose way back grows shut behind you; red-hot ruby bores, a rope chimney up to the Crimson Fortress and an unlit tunnel buzzing like Level 0.",
   "mechanics": [
-    "four_distinct_zones",
-    "mineral_crystals",
-    "cove_distilled_water",
-    "ruby_and_onyx",
-    "source_self_loop_exits"
+    "amethyst_wall_grows_behind_you_then_the_way_back_shatters_and_tightens",
+    "zone2_disease_gas_mask",
+    "zone3_heat_searing_rubies",
+    "turquoise_crystals_calm_and_daze_an_enraged_roamer_then_detonate",
+    "meditation_cove_distilled_water_fountain",
+    "breach_rope_to_graphite_layer",
+    "83_degree_chimney_rope_to_crimson_fortress",
+    "obsidian_bridge_platform_on_nothing_cold_hall_ruby_chest",
+    "per_zone_light_fog_and_sound"
   ],
   "exits": [
+    {
+      "id": "L197>L000#5",
+      "to": "L000",
+      "trigger": "walk_in",
+      "label": "Followed a fluorescent buzz down an unlit tunnel in the Ruby Zone",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL",
+      "source_section": "Zone 3 - Entrances and Exits",
+      "source_quote": "will send any wanderers back to Level 0",
+      "arrival": "from_L197",
+      "hint": "Past the junction with the chimney, one bore has no rubies at all, and something at the end of it buzzes."
+    },
     {
       "id": "L197>L197#1",
       "to": "L197",
@@ -24,10 +41,11 @@
       "label": "Lit Zone 1 path",
       "basis": "SOURCE",
       "confidence": "CONFIRMED",
-      "source_section": "Dated canonical snapshot; exits",
-      "source_quote": "lit path in Zone 1",
+      "source_section": "Zone 1 - Entrances and Exits",
+      "source_quote": "Continuing down the lit path of Zone 1 will lead to Zone 2.",
       "arrival": "from_L197",
-      "hint": "Lit Zone 1 path"
+      "hint": "Lit Zone 1 path",
+      "implemented_as": "in-level threshold: the lit path runs on into Zone 2 inside the same continuous cave; crossing it is journaled (SaveService.record_edge) and starts the amethyst wall instead of reloading the level"
     },
     {
       "id": "L197>L197#2",
@@ -36,24 +54,13 @@
       "label": "Path through Zone 2",
       "basis": "SOURCE",
       "confidence": "CONFIRMED",
-      "source_section": "Dated canonical snapshot; exits",
-      "source_quote": "through Zone 2",
+      "source_section": "Zone 3 - Entrances",
+      "source_quote": "The only way to enter Zone 3 is to go through Zone 2.",
       "arrival": "from_L197",
-      "hint": "Path through Zone 2"
-    },
-    {
-      "id": "L197>L000#5",
-      "to": "L000",
-      "trigger": "interact",
-      "label": "Fluorescent tunnel to Level 0",
-      "basis": "SOURCE",
-      "confidence": "CONDITIONAL",
-      "source_section": "Dated canonical snapshot; exits",
-      "source_quote": "unlit tunnel with fluorescent buzz in Zone 3",
-      "arrival": "from_L197",
-      "hint": "Fluorescent tunnel to Level 0"
+      "hint": "Path through Zone 2",
+      "implemented_as": "in-level threshold: the Zone 2 passage opens into the Zone 3 bores in the same cave; crossing it is journaled, no reload"
     }
   ],
-  "entity_policy": "Unknown Zone 4 entity reports not modelled",
-  "notes": "ADAPTATION: four finite 50m zones approximate much larger underdocumented cave. The rumored far cavern exit is not implemented. Canon: docs/canon/levels/L197.md; authors credited there under CC BY-SA 3.0. Not yet PLAYABLE."
+  "entity_policy": "Entities only as sound and subtitles, never bodies or combat. Zone 1: none (the two Smiler reports are unconfirmed and not modelled); the Entranced (CONFIRMED community of ~125 passive wanderers) are shown by their identical rows of bedrolls and a murmur in unison. Zone 2: Deathmoth swarms heard in the pitch-black grooves. Zone 3: one scripted enraged roamer (sound and subtitles) that a turquoise crystal dazes before the crystal detonates; things heard in the Fortress rooms. Zone 4 and the Dark Sovereign are unconfirmed and appear only in the anonymous note.",
+  "notes": "SOURCE: expansive crystal cave in four known zones; Zone 1 15 ft x 17 ft smooth cylindrical tunnels of unbreakable diabase-like rock, slow drips, round smoothed stalagmites, lit by crystal bunches, calming turquoise that keeps its effect, rare safe distilled water from broken crystals that cannot leave the level, the hard-to-find Meditation Cove (30 ft radius, ~30 ft crystal pouring distilled water like a fountain), M.E.G. Outpost 'Good Feels' near the entrance (excavation for Level 11, The Hub, Level 901; ~53 operatives; gas masks for Zone 2), the Entranced, a rumoured unlit path; Zone 2 haphazard 7 ft x 5 ft brittle passage, dim fading amethysts, fast diseases, masks and Almond Water advised, the growing amethyst wall, the shattering and the narrowing dead-end way back, grooves with Deathmoths, chem-lights in small green pouches, a breach ~10 ft down to a graphite second layer with ropes entities cannot climb; Zone 3 10 ft x 10 ft red-lit, unbearably hot bores, searing rubies, 83-degree inclines, enraged roamers dazed by turquoise which then detonates, the Crimson Fortress (four 4 ft wide, 1 inch thin obsidian bridges to a platform on nothing, ~700 ft high, cold inside, stairs, rooms, ruby chests with cooling cloths and cold almond water), contradictory exits (Level 8; a fluorescent buzz down an unlit tunnel to Level 0). ADAPTATION: the cave layout is ours (the page gives no map) and is folded into a U so the documented Level 0 exit is ~65 m from the arrival; zone borders are planes in the rock; the Crimson Fortress bridges are 90 m and the platform 44 m square (page: ~1000 ft, ~100,000 sq ft) and only one gate hall is enterable; the 83-degree incline is a rope chimney (LadderVolume); the breach drop is ~3.8 m; the outpost's operatives are away (the page gives no NPC behaviour); Zone 4 is not built (unconfirmed); the rumoured Level 108 unlit path and the Level 8 exit are not built (rumoured/contradicted), the unlit path simply continues into the dark. Disease, heat and the roamer are paced for play (minutes, not hours). The two self-loop zone edges are in-level thresholds (see implemented_as). Canon: docs/canon/levels/L197.md; authors credited there under CC BY-SA 3.0. Not yet PLAYABLE."
 }
