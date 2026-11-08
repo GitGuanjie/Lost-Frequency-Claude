@@ -1,7 +1,7 @@
 {
  "stable_id": "L055",
  "scene": "res://levels/L055/L055.tscn",
- "status": "IN_DEVELOPMENT",
+ "status": "PLAYABLE",
  "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003 24/24 each; bot fired the QA-only timed-return fixture L055>EXT#1 in the Safe Room); stills reviewed by builder (AI); integrator review pending",
  "procedural": true,
  "arrivals": [
@@ -37,5 +37,10 @@
  ],
  "entity_policy": "NO ENTITY PER SOURCE ('no signs of life anywhere'). Hallucinations are sounds and captions only; the narrator's father appears only in a testimony note.",
  "notes": "SOURCE: infinite segmented rooms like an abandoned rustic restaurant joined by halls and corridors; counters, kitchens, rows of seating, rare bathrooms; cracked brick, flaking wallpaper, creaking floorboards, thick dust; the Safe Room is the only entry; outskirts look the same; Frontrooms food and plain water, no Almond Water; eerily quiet (no hum, no machinery, no life); humid and cool; hallucinations with long stays; unobserved outskirts rooms move without new rooms appearing; sunlight from an unperceivable source at various angles in every room, drowsiness for the exhausted; M.E.G. supplies (phones, pamphlets); no conventional exits, automatic no-clip back to the level of entry after a random duration, awareness that time is limited; zero re-entries. ADAPTATION: a finite streaming window of 24 m chunks (one 18 m room each, four doorways, short corridors; door offsets alternate so no sightline crosses three rooms); rooms are drawn from a seeded finite set of 32 designs (diner with booths, tavern with long tables and a raised dais, cafe, dining room with cloths) and an unseen chunk is rebuilt as another design (ChunkWorld peripheral shift, 25 s unseen; the Safe Room at chunk (0,0) never shifts); sunbeams are spot lights with dusty shafts that begin in mid-air; the stay is compressed to a hidden 20-45 minutes; sitting in a sunbeam passes 6-12 minutes with a memory fragment from the page's narrative (TESTIMONY); standing in light deepens a drowsy vignette; hallucinations (a murmur, a faint choir, rain on glass) begin after 7 minutes; the harsh-light ejection follows the narrative's 'the light grows harsher'. Menu boards list ordinary dishes (ours). QA fixture: in QA mode only, the timed return is a condition volume in the Safe Room with the timer at zero. Re-entry is not blocked by the game state yet (no global flag API); see report. Canon: docs/canon/levels/L055.md; author bird_stalwart055 credited there under CC BY-SA 3.0. Not yet PLAYABLE.",
- "legacy_overlays": false
+ "legacy_overlays": false,
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

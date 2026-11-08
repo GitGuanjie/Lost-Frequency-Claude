@@ -1,7 +1,7 @@
 {
  "stable_id": "L049",
  "scene": "res://levels/L049/L049.tscn",
- "status": "IN_DEVELOPMENT",
+ "status": "PLAYABLE",
  "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003 28/28 each; bot fired L049>L014#1 at the rusted door of the first Gutter Bunker); stills reviewed by builder (AI); integrator review pending",
  "procedural": true,
  "arrivals": [
@@ -97,5 +97,10 @@
  ],
  "notes": "SOURCE: endless WWI-like battlefield, only the abandoned trench system accessible; complex Euclidean layout with random twists; planks, corroded iron sheets, worn sandbags, rusted barbed wire; narrow paths to wide gun emplacements, artillery stations with mortars of non-human make, damp bunkers (some collapsed) with beds, tables, chairs, uniforms, ammunition crates, rations; thick damp soil; eerie silence and distant gunfire; leaving the trench = precise headshot; escalating fire; rare bombers and L.E.A.D.S.; shells at random; day and night twice Frontrooms length, less gunfire at night; sudden dense fog; rare storms flooding to waist level, lightning -> Level 3, flooded tunnel -> Level 7; half-empty Almond Water, canned food, used medical kits, uniforms, empty rifles, notes and books; M.E.G. Gutter Bunkers (three connected bunkers) whose specific rusted doors lead to Levels 14, 65 and 50; Entity 49/1 Trenchcleaner; letters, logs, test log, report (TESTIMONY). ADAPTATION: streamed 32 m chunks of 2 m cells carved into zig-zag trenches (row 0 a continuous fire trench, every third column a communication trench, other edges random) with per-chunk features (covered emplacement with a 1 m fire-step, artillery pit, dugout bunker, collapsed dugout); trench floor 2.4 m below ground with sandbag parapets; dugouts 2.8 m lower; chunk (0,0) is the Gutter Bunkers: three dugouts joined by a tunnel, each with a rusted back door (L14, L65, L50; L049>L065#2 added from data/canon/transitions.json) and a jammed side door, and a grated drainage culvert. Parapet rule: eyes above ground level for 0.7 s -> fatal shot (a crack past the ear at 0.25 s). Time: 80-minute day/night cycle; fog 4-8 min; storm 5 min with a flood rising to waist height (dugouts fill), lightning near the player (2 s warning; struck -> L003), the culvert grate gives way above 0.8 m of water and the tunnel exit (L007) exists only then; shells every 45-130 s, a bomber every 18-28 min (hurts the upright and uncovered). Trenchcleaner: one scripted presence every 6-12 min that stalks along the trenches to ~13 m, sweeps and withdraws; it fires a burst only with a clear line of sight to a moving, upright or lit player (40 damage); never fought. The L666 edge (killing a wanderer) is not implemented: there are no other wanderers. QA: weather, shelling and the Trenchcleaner are off in QA mode; the bot fires the L014 door. Canon: docs/canon/levels/L049.md; author exotichive credited there under CC BY-SA 3.0. Not yet PLAYABLE.",
  "entity_policy": "Entity 49/1 Trenchcleaner (CONFIRMED) appears as a scripted, non-combat presence; one at a time (Falcon's 'only one' vs Lancaster's three is left open in the documents). The unseen entities beyond no man's land are never modelled: only gunfire, shells, a bomber's engines and the sniper's shot. Nuvaria and Hagsten appear only in letters (RUMORED).",
- "legacy_overlays": false
+ "legacy_overlays": false,
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }
