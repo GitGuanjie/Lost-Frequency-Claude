@@ -1,8 +1,8 @@
 # Quality scoreboard
 
-Generated 2026-11-08 20:56 UTC by `tools/build_reports.py` from engine artefacts.
+Generated 2026-11-08 20:59 UTC by `tools/build_reports.py` from engine artefacts.
 
-**100 requested / 100 source-audited / 100 built scenes / 56 playable-in-engine / 66 lore-validated (AI review) / 0 fully accepted / 24 story-reachable**
+**100 requested / 100 source-audited / 100 built scenes / 61 playable-in-engine / 72 lore-validated (AI review) / 0 fully accepted / 30 story-reachable**
 
 Definitions: *playable-in-engine* means the scene loads in Godot, spawns safely, and a walker bot physically triggered a sourced exit. *Lore-validated* means the integrator reviewed the stills and manifest against the dossier (Claude, not a human). *Fully accepted* needs human sign-off and real-GPU performance evidence, so it is 0 by design until those exist. *Story-reachable* means reachable from Level 0 through implemented story exits between playable levels.
 
@@ -36,7 +36,7 @@ Definitions: *playable-in-engine* means the scene loads in Godot, spawns safely,
 | L011 | PLAYABLE | ENGINE_SMOKE_PASS | 29/29 | L011>L025#39 (23.5) | ok | ok | 18 | yes |
 | L012 | PLAYABLE | ENGINE_SMOKE_PASS | 44/44 | L012>L001#1 (1.6) | ok | ok | 2 | yes |
 | L013 | PLAYABLE | ENGINE_SMOKE_PASS | 30/30 | L013>L000#1 (3.6) | ok | ok | 2 | no |
-| L014 | PLAYABLE | ENGINE_SMOKE_PASS | 23/23 | L014>EXT#1 (18.9) | ok | ok | 2 | no |
+| L014 | PLAYABLE | ENGINE_SMOKE_PASS | 23/23 | L014>EXT#1 (18.9) | ok | ok | 2 | yes |
 | L019 | PLAYABLE | ENGINE_SMOKE_PASS | 48/48 | L019>L005#6 (8.1) | ok | ok | 2 | yes |
 | L037 | PLAYABLE | ENGINE_SMOKE_PASS | 24/24 | L037>L043#2 (7.7) | ok | ok | 6 | yes |
 | L188 | PLAYABLE | ENGINE_SMOKE_PASS | 20/20 | L188>EXT#1 (0.2) | ok | ok | 2 | yes |
@@ -45,7 +45,7 @@ Definitions: *playable-in-engine* means the scene loads in Godot, spawns safely,
 | L017 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |
 | L018 | PLAYABLE | ENGINE_SMOKE_PASS | 23/23 | L018>L019#1 (1.3) | ok | ok | 4 | no |
 | L020 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |
-| L022 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 2 | no |
+| L022 | PLAYABLE | ENGINE_SMOKE_PASS | 26/26 | L022>L023#2 (16.2) | ok | ok | 4 | yes |
 | L023 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |
 | L024 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |
 | L025 | PLAYABLE | ENGINE_SMOKE_PASS | 32/32 | L025>L000#1 (6.6) | ok | ok | 2 | yes |
@@ -57,10 +57,10 @@ Definitions: *playable-in-engine* means the scene loads in Godot, spawns safely,
 | L031 | PLAYABLE | ENGINE_SMOKE_PASS | 29/29 | L031>L040#1 (22.6) | ok | ok | 4 | yes |
 | L036 | PLAYABLE | ENGINE_SMOKE_PASS | 27/27 | L036>L036_1#1 (50.0) | ok | ok | 4 | yes |
 | L048 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |
-| L049 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 2 | no |
+| L049 | PLAYABLE | ENGINE_SMOKE_PASS | 29/29 | L049>L014#1 (3.9) | ok | ok | 4 | yes |
 | L053 | PLAYABLE | ENGINE_SMOKE_PASS | 23/23 | L053>L009#1 (4.1) | ok | ok | 4 | yes |
 | L069 | PLAYABLE | ENGINE_SMOKE_PASS | 28/28 | L069>L011#1 (12.6) | ok | ok | 4 | yes |
-| L071 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 2 | no |
+| L071 | PLAYABLE | ENGINE_SMOKE_PASS | 19/19 | — | ok | ok | 4 | yes |
 | L073 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |
 | L075 | PLAYABLE | ENGINE_SMOKE_PASS | 26/26 | L075>EXT#1 (36.0) | ok | ok | 4 | no |
 | L079 | PLAYABLE | ENGINE_SMOKE_PASS | 20/20 | L079>EXT#1 (0.8) | ok | ok | 4 | no |
@@ -86,11 +86,11 @@ Definitions: *playable-in-engine* means the scene loads in Godot, spawns safely,
 | L010_1 | PLAYABLE | ENGINE_SMOKE_PASS | 24/24 | L010_1>L010#2 (15.3) | ok | ok | 0 | no |
 | L011_3 | PLAYABLE | ENGINE_SMOKE_PASS | 27/27 | L011_3>L011#1 (48.2) | ok | ok | 0 | no |
 | L037_1 | PLAYABLE | ENGINE_SMOKE_PASS | 18/18 | — | ok | ok | 0 | no |
-| L055 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |
+| L055 | PLAYABLE | ENGINE_SMOKE_PASS | 25/25 | L055>EXT#1 (1.6) | ok | ok | 4 | no |
 | L058 | PLAYABLE | ENGINE_SMOKE_PASS | 28/28 | L058>L001#2 (43.2) | ok | ok | 4 | no |
 | L060 | PLAYABLE | ENGINE_SMOKE_PASS | 27/27 | L060>L007#1 (1.5) | ok | ok | 4 | no |
 | L083 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |
-| L090 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |
+| L090 | PLAYABLE | ENGINE_SMOKE_PASS | 23/23 | L090>EXT#1 (10.3) | ok | ok | 4 | yes |
 | L096 | PLAYABLE | ENGINE_SMOKE_PASS | 21/21 | — | ok | ok | 4 | no |
 | L808 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 2 | no |
 | L922 | PLAYABLE | ENGINE_SMOKE_PASS | 22/22 | — | ok | ok | 4 | no |
@@ -101,7 +101,7 @@ Definitions: *playable-in-engine* means the scene loads in Godot, spawns safely,
 | L007_8 | PLAYABLE | ENGINE_SMOKE_PASS | 30/30 | L007_8>L007_7#2 (17.5) | ok | ok | 0 | no |
 | L009_3 | PLAYABLE | ENGINE_SMOKE_PASS | 23/23 | L009_3>EXT#1 (19.6) | ok | ok | 0 | no |
 | L011_2 | PLAYABLE | ENGINE_SMOKE_PASS | 41/41 | L011_2>L283#2 (25.3) | ok | ok | 0 | no |
-| L021 | PLAYABLE | ENGINE_SMOKE_PASS | 67/67 | L021>L000#1 (1.1) | ok | ok | 5 | no |
+| L021 | PLAYABLE | ENGINE_SMOKE_PASS | 67/67 | L021>L000#1 (1.1) | ok | ok | 5 | yes |
 | L032 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |
 | L041 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |
 | L050 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 2 | no |
@@ -115,7 +115,7 @@ Definitions: *playable-in-engine* means the scene loads in Godot, spawns safely,
 | L140 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |
 | L149 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |
 | L160 | PLAYABLE | ENGINE_SMOKE_PASS | 22/22 | L160>EXT#1 (21.5) | ok | ok | 6 | no |
-| L197 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |
+| L197 | PLAYABLE | ENGINE_SMOKE_PASS | 23/23 | L197>L000#5 (59.8) | ok | ok | 4 | no |
 | L201 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |
 | L263 | PLAYABLE | ENGINE_SMOKE_PASS | 22/22 | L263>EXT#1 (1.4) | ok | ok | 4 | no |
 | L320 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |

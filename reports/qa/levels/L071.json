@@ -1,0 +1,90 @@
+{
+ "duplication_pairs": [],
+ "engine": "4.5.1-stable (official)",
+ "failures": [],
+ "levels": [
+  {
+   "build_ms": 984,
+   "collision_shapes": 1177,
+   "distinct_layouts_over_3_seeds": 3,
+   "dup_profile": {
+    "boxes": {
+     "-2_-2_2": 350,
+     "-2_2_3": 6,
+     "-2_4_4": 400,
+     "-3_-1_-1": 6,
+     "-3_-1_2": 2,
+     "-3_-2_2": 1,
+     "-3_-3_-3": 2,
+     "-3_-3_0": 108,
+     "-3_0_1": 14,
+     "-3_0_2": 26,
+     "-3_0_3": 7,
+     "-3_0_4": 14,
+     "-3_1_2": 56,
+     "-3_2_2": 100,
+     "-3_2_3": 35,
+     "-3_2_4": 30,
+     "-3_3_4": 2,
+     "-4_-2_-2": 1,
+     "-5_-1_0": 12,
+     "-5_1_2": 7,
+     "-5_1_3": 1,
+     "1_2_2": 1
+    },
+    "materials": {
+     "l71_block": 4308,
+     "l71_ceiling": 5340,
+     "l71_concrete": 6804,
+     "l71_duct": 252,
+     "l71_floor": 4800,
+     "l71_pipe": 4416,
+     "metal": 8544
+    }
+   },
+   "exits_declared": 0,
+   "exits_found": 0,
+   "load_ms": 1066,
+   "nav": {
+    "exits": [],
+    "map_regions": 1,
+    "map_sync_ticks": 2,
+    "nav_polygons": 1287,
+    "spawn_on_navmesh": true,
+    "spawn_projection_error": 0.0999999195337296,
+    "start": "(1.7, 0.101973, 0.8)"
+   },
+   "qa_status": "ENGINE_SMOKE_PASS",
+   "save_tested": true,
+   "self_tests": 5,
+   "spawn": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+   },
+   "stable_id": "L071"
+  }
+ ],
+ "renderer": "headless",
+ "started": "2026-11-08T20:58:59",
+ "suites": {
+  "duplication": {
+   "checks": [],
+   "failed": 0,
+   "passed": 1
+  },
+  "framework": {
+   "checks": [],
+   "failed": 0,
+   "passed": 8
+  },
+  "level:L071": {
+   "checks": [],
+   "failed": 0,
+   "passed": 19
+  }
+ }
+}

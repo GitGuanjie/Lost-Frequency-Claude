@@ -1,27 +1,32 @@
 {
-  "stable_id": "L071",
-  "scene": "res://levels/L071/L071.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT_TESTED",
-  "procedural": true,
-  "legacy_overlays": false,
-  "arrivals": [
-    "start",
-    "from_L004"
-  ],
-  "signature": "An endless, cold, almost lightless concrete basement at the foot of a stair whose door from Level 4 slams into blank wall behind you; its entry data will not load (Error 0071), a few caged bulbs still burn, sand drifts in the bays, and the longer you stay the more you fade.",
-  "mechanics": [
-    "streamed_infinite_basement_seeded_bays",
-    "level4_door_closes_behind_you",
-    "error_0071_reload_fails",
-    "failed_to_load_bays_show_the_void",
-    "fade_meter_desaturation_failing_torch_leetspeak",
-    "unseen_basement_folds_into_new_layouts",
-    "file_corrupted_ending",
-    "sunken_bays_and_plinths"
-  ],
-  "exits": [],
-  "no_exit_reason": "The Level 71 page states no exit: its Exit section is only the fading monologue ('I am stuck... fading into nothing.') and data/canon/transitions.json records L071>EXT#1 with no destination. No exit is built; the Level 4 entrance closes behind the player as the page says. A full fade ends the run with the page's file-corrupted notice (death screen, restart from the stair-foot checkpoint).",
-  "entity_policy": "NO ENTITY PER SOURCE. 'Who are you?' in the monologue stays an unanswered line; nothing is ever shown.",
-  "notes": "SOURCE: 'It appears to be an infinite basement.'; entry data fails to load, Error 0071, reload via the Description and Group categories; the entrance from a basement found in Level 4 (stairs leading to a basement, L004>L071#4) is closed soon after; Exit section (TESTIMONY, unreliable): dark, cold, cannot feel arms or side of body, can still walk, 'Who are you? Who am I?', fading into the shade, layers of reality collapsing 'like folding of laundry', dust and sand, 'Fade into the Sh4de', the file reaches 500 MB and is corrupted. ADAPTATION: the page describes no rooms, so the basement is built only from generic basement fabric (slab, 2.7 m ceiling on beams, columns, block partitions with doorways, ducts, pipe runs, cable trays, drains, caged bulbs mostly dead, sunken bays with steps, bare machine plinths) and seeded per 24 m chunk; no items or furniture (ABSENT per dossier). The fade meter is ours: about 15 minutes to full, faster without light; it drains colour, weakens the torch, corrupts subtitles and notes into leetspeak, lets unseen chunks fold into new layouts, and ends with the corrupted-file notice. Monologue lines appear as whispered subtitles and pencil scraps (short quotes, attributed as unreliable narration). The playable world is a finite streaming window (5 x 5 chunks) with stable coordinates. Canon: docs/canon/levels/L071.md; author credited there under CC BY-SA 3.0. Not yet PLAYABLE."
+ "stable_id": "L071",
+ "scene": "res://levels/L071/L071.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": true,
+ "legacy_overlays": false,
+ "arrivals": [
+  "start",
+  "from_L004"
+ ],
+ "signature": "An endless, cold, almost lightless concrete basement at the foot of a stair whose door from Level 4 slams into blank wall behind you; its entry data will not load (Error 0071), a few caged bulbs still burn, sand drifts in the bays, and the longer you stay the more you fade.",
+ "mechanics": [
+  "streamed_infinite_basement_seeded_bays",
+  "level4_door_closes_behind_you",
+  "error_0071_reload_fails",
+  "failed_to_load_bays_show_the_void",
+  "fade_meter_desaturation_failing_torch_leetspeak",
+  "unseen_basement_folds_into_new_layouts",
+  "file_corrupted_ending",
+  "sunken_bays_and_plinths"
+ ],
+ "exits": [],
+ "no_exit_reason": "The Level 71 page states no exit: its Exit section is only the fading monologue ('I am stuck... fading into nothing.') and data/canon/transitions.json records L071>EXT#1 with no destination. No exit is built; the Level 4 entrance closes behind the player as the page says. A full fade ends the run with the page's file-corrupted notice (death screen, restart from the stair-foot checkpoint).",
+ "entity_policy": "NO ENTITY PER SOURCE. 'Who are you?' in the monologue stays an unanswered line; nothing is ever shown.",
+ "notes": "SOURCE: 'It appears to be an infinite basement.'; entry data fails to load, Error 0071, reload via the Description and Group categories; the entrance from a basement found in Level 4 (stairs leading to a basement, L004>L071#4) is closed soon after; Exit section (TESTIMONY, unreliable): dark, cold, cannot feel arms or side of body, can still walk, 'Who are you? Who am I?', fading into the shade, layers of reality collapsing 'like folding of laundry', dust and sand, 'Fade into the Sh4de', the file reaches 500 MB and is corrupted. ADAPTATION: the page describes no rooms, so the basement is built only from generic basement fabric (slab, 2.7 m ceiling on beams, columns, block partitions with doorways, ducts, pipe runs, cable trays, drains, caged bulbs mostly dead, sunken bays with steps, bare machine plinths) and seeded per 24 m chunk; no items or furniture (ABSENT per dossier). The fade meter is ours: about 15 minutes to full, faster without light; it drains colour, weakens the torch, corrupts subtitles and notes into leetspeak, lets unseen chunks fold into new layouts, and ends with the corrupted-file notice. Monologue lines appear as whispered subtitles and pencil scraps (short quotes, attributed as unreliable narration). The playable world is a finite streaming window (5 x 5 chunks) with stable coordinates. Canon: docs/canon/levels/L071.md; author credited there under CC BY-SA 3.0. Not yet PLAYABLE.",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

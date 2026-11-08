@@ -25,7 +25,7 @@ digraph LostFrequency {
   L017 [label="L17\nThe Carrier", fillcolor="#f9a825", fontcolor="black"];
   L018 [label="L18\nMemories", fillcolor="#2e7d32", fontcolor="white"];
   L020 [label="L20\nBoreas Structure", fillcolor="#f9a825", fontcolor="black"];
-  L022 [label="L22\nRuins Left Behind", fillcolor="#f9a825", fontcolor="black"];
+  L022 [label="L22\nRuins Left Behind", fillcolor="#2e7d32", fontcolor="white"];
   L023 [label="L23\nThe Petrified Garden", fillcolor="#f9a825", fontcolor="black"];
   L024 [label="L24\nThe Moon", fillcolor="#f9a825", fontcolor="black"];
   L025 [label="L25\nThe Quarter Hub", fillcolor="#2e7d32", fontcolor="white"];
@@ -37,10 +37,10 @@ digraph LostFrequency {
   L031 [label="L31\nThe Roller Rink", fillcolor="#2e7d32", fontcolor="white"];
   L036 [label="L36\nTimeless Airport", fillcolor="#2e7d32", fontcolor="white"];
   L048 [label="L48\nThe Sunset Beach", fillcolor="#f9a825", fontcolor="black"];
-  L049 [label="L49\nThe Unfilled River of Ph", fillcolor="#f9a825", fontcolor="black"];
+  L049 [label="L49\nThe Unfilled River of Ph", fillcolor="#2e7d32", fontcolor="white"];
   L053 [label="L53\nAlone", fillcolor="#2e7d32", fontcolor="white"];
   L069 [label="L69\nThe Road Trip of Afflict", fillcolor="#2e7d32", fontcolor="white"];
-  L071 [label="L71\nVoid Basement", fillcolor="#f9a825", fontcolor="black"];
+  L071 [label="L71\nVoid Basement", fillcolor="#2e7d32", fontcolor="white"];
   L073 [label="L73\nThe Redlands", fillcolor="#f9a825", fontcolor="black"];
   L075 [label="L75\nLiminality", fillcolor="#2e7d32", fontcolor="white"];
   L079 [label="L79\nGhosts in the Machine", fillcolor="#2e7d32", fontcolor="white"];
@@ -66,11 +66,11 @@ digraph LostFrequency {
   L010_1 [label="L10.1\nCorpse Lake", fillcolor="#2e7d32", fontcolor="white"];
   L011_3 [label="L11.3\nThe Red Light District", fillcolor="#2e7d32", fontcolor="white"];
   L037_1 [label="L37.1\nThe Sanguine Reservoir", fillcolor="#2e7d32", fontcolor="white"];
-  L055 [label="L55\nPit Stop", fillcolor="#f9a825", fontcolor="black"];
+  L055 [label="L55\nPit Stop", fillcolor="#2e7d32", fontcolor="white"];
   L058 [label="L58\nWater Wonder", fillcolor="#2e7d32", fontcolor="white"];
   L060 [label="L60\nThe Baywalk", fillcolor="#2e7d32", fontcolor="white"];
   L083 [label="L83\nThe Sunken Submarine", fillcolor="#f9a825", fontcolor="black"];
-  L090 [label="L90\nNewly Renovated Home", fillcolor="#f9a825", fontcolor="black"];
+  L090 [label="L90\nNewly Renovated Home", fillcolor="#2e7d32", fontcolor="white"];
   L096 [label="L96\nSolace", fillcolor="#2e7d32", fontcolor="white"];
   L808 [label="L808\nSynthwave World", fillcolor="#f9a825", fontcolor="black"];
   L922 [label="L922\nI finally travelled to t", fillcolor="#2e7d32", fontcolor="white"];
@@ -95,7 +95,7 @@ digraph LostFrequency {
   L140 [label="L140\nHoney", fillcolor="#f9a825", fontcolor="black"];
   L149 [label="L149\nThe Coconut Isles", fillcolor="#f9a825", fontcolor="black"];
   L160 [label="L160\nThe City Of Promised Mem", fillcolor="#2e7d32", fontcolor="white"];
-  L197 [label="L197\nCrystal Caverns", fillcolor="#f9a825", fontcolor="black"];
+  L197 [label="L197\nCrystal Caverns", fillcolor="#2e7d32", fontcolor="white"];
   L201 [label="L201\nA E S T H E T I C", fillcolor="#f9a825", fontcolor="black"];
   L263 [label="L263\nPretty Pink", fillcolor="#2e7d32", fontcolor="white"];
   L320 [label="L320\nThe new, and Improved, E", fillcolor="#f9a825", fontcolor="black"];
