@@ -31,6 +31,7 @@ extends LevelBase
 ## Helper: L011_3_city.gd (materials, blocks, bridges, Embassy, gutted shell).
 
 const CK := preload("res://levels/L011_3/L011_3_city.gd")
+const FG := preload("res://levels/L011_3/L011_3_figures.gd")
 const START := Vector3(-27.0, 0.15, 119.2)
 const GUT := AABB(Vector3(-24.5, 0.0, 90.0), Vector3(14.5, 11.0, 32.0))
 const ALLEY := AABB(Vector3(-29.5, 0.0, 86.0), Vector3(5.0, 8.0, 38.0))
@@ -216,10 +217,10 @@ func _lamps(d: Node3D) -> void:
 		lights.add_anchor(l[0], Color(1.0, 0.24, 0.13), 3.0, 18.0)
 	lights.add_anchor(Vector3(0.0, 6.0, 152.0), Color(1.0, 0.1, 0.07), 1.6, 15.0)
 	# the alley's one red security light, red spill inside the shell
-	lights.add_anchor(Vector3(-25.9, 2.6, 118.0), Color(1.0, 0.12, 0.08), 0.55, 7.0, 0.08)
+	lights.add_anchor(Vector3(-25.9, 2.6, 118.0), Color(1.0, 0.12, 0.08), 0.35, 6.0, 0.08)
 	for f in 3:
-		lights.add_anchor(Vector3(-11.6, CK.BASE + f * CK.ST + 2.4, 104.0), Color(0.9, 0.12, 0.08), 0.9, 9.0)
-		lights.add_anchor(Vector3(-11.6, CK.BASE + f * CK.ST + 2.4, 116.0), Color(0.9, 0.12, 0.08), 0.7, 8.0)
+		lights.add_anchor(Vector3(-8.6, CK.BASE + f * CK.ST + 2.0, 104.0), Color(0.9, 0.12, 0.08), 0.6, 8.0)
+		lights.add_anchor(Vector3(-8.6, CK.BASE + f * CK.ST + 2.0, 116.0), Color(0.9, 0.12, 0.08), 0.5, 7.0)
 	# the Embassy floodlights
 	for i in 6:
 		lights.add_anchor(Vector3(-30.0 + i * 12.0, 3.0, CK.EMBASSY.z + 33.0), Color(1.0, 0.14, 0.08), 6.0, 30.0)
@@ -252,54 +253,11 @@ func _face(n: Node3D, at: Vector3) -> void:
 # ---------------------------------------------------------------- presences
 
 func _humanoid(mat: Material) -> Node3D:
-	var n := Node3D.new()
-	var parts := [[CapsuleMesh.new(), Vector3(0, 0.98, 0), Vector3(0.24, 1.5, 0)], [SphereMesh.new(), Vector3(0, 1.86, 0.02), Vector3(0.13, 0.27, 0)],
-		[CapsuleMesh.new(), Vector3(-0.33, 1.08, 0), Vector3(0.06, 0.95, 0)], [CapsuleMesh.new(), Vector3(0.33, 1.08, 0), Vector3(0.06, 0.95, 0)]]
-	for pp in parts:
-		var mi := MeshInstance3D.new()
-		var m: PrimitiveMesh = pp[0]
-		var dims: Vector3 = pp[2]
-		if m is CapsuleMesh:
-			(m as CapsuleMesh).radius = dims.x
-			(m as CapsuleMesh).height = dims.y
-		else:
-			(m as SphereMesh).radius = dims.x
-			(m as SphereMesh).height = dims.y
-		mi.mesh = m
-		mi.material_override = mat
-		mi.position = pp[1]
-		mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-		n.add_child(mi)
-	add_child(n)
-	return n
+	return FG.humanoid(self, mat)
 
 
 func _ambassador(pos: Vector3) -> Node3D:
-	var n := Node3D.new()
-	var mi := MeshInstance3D.new()
-	var bm := BoxMesh.new()
-	bm.size = Vector3(1.1, 1.1, 1.1)
-	mi.mesh = bm
-	mi.material_override = MatLib.standard(Color(0.02, 0.018, 0.02), 0.2, 0.8)
-	n.add_child(mi)
-	var em := MatLib.get_mat("l113_win_red")
-	for ax in 3:
-		for sa in [-1.0, 1.0]:
-			for sb in [-1.0, 1.0]:
-				var e := MeshInstance3D.new()
-				var eb := BoxMesh.new()
-				var sz := Vector3(0.05, 0.05, 0.05)
-				sz[ax] = 1.14
-				eb.size = sz
-				e.mesh = eb
-				e.material_override = em
-				var p := Vector3(sa * 0.55, sb * 0.55, 0)
-				if ax == 0:
-					p = Vector3(0, sa * 0.55, sb * 0.55)
-				elif ax == 1:
-					p = Vector3(sa * 0.55, 0, sb * 0.55)
-				e.position = p
-				n.add_child(e)
+	var n := FG.cube()
 	n.position = pos
 	add_child(n)
 	ambassadors.append({"node": n, "base": pos, "phase": float(ambassadors.size()) * 1.7})
@@ -342,28 +300,7 @@ func _presences() -> void:
 
 
 func _rain() -> void:
-	rain = CPUParticles3D.new()
-	rain.name = "Drizzle"
-	rain.amount = 1000
-	rain.lifetime = 1.2
-	rain.preprocess = 1.2
-	rain.emission_shape = CPUParticles3D.EMISSION_SHAPE_BOX
-	rain.emission_box_extents = Vector3(16, 0.5, 16)
-	rain.direction = Vector3(0.08, -1, 0.04)
-	rain.spread = 3.0
-	rain.gravity = Vector3(0, -9.0, 0)
-	rain.initial_velocity_min = 11.0
-	rain.initial_velocity_max = 15.0
-	rain.local_coords = false
-	var qm := QuadMesh.new()
-	qm.size = Vector2(0.006, 0.34)
-	var m := StandardMaterial3D.new()
-	m.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-	m.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-	m.albedo_color = Color(0.7, 0.45, 0.42, 0.16)
-	m.billboard_mode = BaseMaterial3D.BILLBOARD_FIXED_Y
-	qm.material = m
-	rain.mesh = qm
+	rain = FG.rain()
 	rain.position = START + Vector3(0, 12, 0)
 	add_child(rain)
 
