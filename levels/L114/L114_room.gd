@@ -200,9 +200,9 @@ func fragment() -> void:
 	var zm := (frag_z0 + frag_z1) * 0.5
 	if y > 0.0:
 		var n := int(round(y / 0.18))
-		k.stairs(Vector3(hx - 0.28 * n + 0.05, 0.0, zm), Vector3(1, 0, 0), frag_z1 - frag_z0 - 0.06, 0.18, n, "l114_frag_floor")
+		k.stairs(Vector3(hx - 0.28 * n + 0.05, 0.0, zm), Vector3(1, 0, 0), frag_z1 - frag_z0 - 0.06, y, n, "l114_frag_floor")
 	else:
-		k.stairs(Vector3(x0 + 0.28 * 2 + 0.02, y, zm), Vector3(-1, 0, 0), frag_z1 - frag_z0 - 0.06, 0.18, 2, "l114_frag_floor")
+		k.stairs(Vector3(x0 + 0.28 * 2 + 0.02, y, zm), Vector3(-1, 0, 0), frag_z1 - frag_z0 - 0.06, -y, 2, "l114_frag_floor")
 	# a protruding stub of the other room's wall, cutting into this one at an odd angle
 	var stub := Transform3D(Basis(Vector3.UP, deg_to_rad(9.0)), Vector3(hx - 0.32, H * 0.5, frag_z0 - 0.08))
 	k.box_xf(stub, Vector3(0.62, H, T), "l114_frag_wall")
