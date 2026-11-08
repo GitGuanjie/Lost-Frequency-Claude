@@ -1,39 +1,48 @@
 {
-  "stable_id": "L075",
-  "scene": "res://levels/L075/L075.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "UNVERIFIED - initial source-faithful candidate; Godot 4.5.x engine QA, screenshots and human review required",
-  "procedural": true,
-  "arrivals": [
-    "start",
-    "from_L008"
-  ],
-  "signature": "A harmless, rain-sounding maze of cool sandrooms. Old child-sized impressions and toys persist in thick yellow sand; dying paint, false sunbeams and an impenetrable voidstone roof make the silence feel remembered.",
-  "mechanics": [
-    "seeded_connected_30_chamber_spanning_maze",
-    "permanent_sand_footprints_with_bounded_multimesh",
-    "inert_buried_toys",
-    "blue_cream_rare_red_peeling_paint",
-    "impenetrable_voidstone_ceiling",
-    "dead_fixture_no_electrical_light",
-    "synthetic_perpetual_rain_no_water",
-    "sand_free_door_to_unidentified_original_destination"
-  ],
-  "exits": [
-    {
-      "id": "L075>EXT#1",
-      "to": "EXT",
-      "to_label": "The originally intended level (not specified on the page)",
-      "trigger": "interact",
-      "label": "Opened a doorway in a room with no sand",
-      "confidence": "CONFIRMED",
-      "basis": "SOURCE",
-      "source_section": "Entrances and Exits",
-      "source_quote": "will send the wanderer to the level they would have entered originally",
-      "arrival": "from_L075",
-      "hint": "Seek a room where the yellow sand does not cover the floor. An ordinary door may lead out."
-    }
-  ],
-  "entity_policy": "NONE. Level 75 is explicitly devoid of entities. No NPC, enemies, resources, consumables or hazards are spawned.",
-  "notes": "SOURCE: sand-filled rooms and corridors, peeling painted blue/cream/rare-red walls, dead lighting fixtures, light beams from arbitrary ceiling/wall spots, phantom rain with no water, a cool dry 15°C interior, immovable voidstone roof, old footprints and toys in inert sand, rooms may take decades to regenerate. ADAPTATION: finite 6×5 seeded spanning-tree maze with occasional short loops, each cell 10×10 m, no regeneration during an expedition; footprints use a bounded 512-instance MultiMesh and thus remain until an actual level reload; the unique sand-free exit room is guaranteed reachable by maze topology, but its destination is intentionally unspecified (EXT release boundary) rather than invented. SOURCE L008>L075#4 supplies an arrival. QA PENDING."
+ "stable_id": "L075",
+ "scene": "res://levels/L075/L075.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": true,
+ "arrivals": [
+  "start",
+  "from_L008"
+ ],
+ "signature": "A peaceful complex of sky-blue, cream and rarely red painted rooms and corridors, cracked and peeling, floored in thick yellow sand that keeps decades of children's footprints, holes, castles and toys, lit only by beams of sunlight-like glow from nowhere while rain falls on a roof you cannot see.",
+ "mechanics": [
+  "seeded_spanning_tree_rooms_and_corridors",
+  "split_floor_levels_with_sand_steps",
+  "windows_between_rooms",
+  "sand_choked_outer_doorways",
+  "dead_fixtures_and_phantom_sunbeams",
+  "phantom_rain_no_water",
+  "persistent_old_marks_in_sand",
+  "your_footprints_stay",
+  "dig_for_toys",
+  "voidstone_behind_the_ceiling",
+  "sand_free_room_door_or_window_exit"
+ ],
+ "exits": [
+  {
+   "id": "L075>EXT#1",
+   "to": "EXT",
+   "to_label": "The originally intended level (not specified on the page)",
+   "trigger": "interact",
+   "label": "Opened a door (or climbed through a window) in the room with no sand",
+   "confidence": "CONFIRMED",
+   "basis": "SOURCE",
+   "source_section": "Entrances and Exits",
+   "source_quote": "will send the wanderer to the level they would have entered originally",
+   "arrival": "from_L075",
+   "hint": "Look for the one room where the floor is bare. Its door, or its window, should take you where you were going."
+  }
+ ],
+ "entity_policy": "NONE. 'Devoid of entities, it is peaceful here' (survival class 0). No NPC, threat, hazard, food, water or working light.",
+ "notes": "SOURCE: complex of corridors and rooms, most floors under thick yellow sand; walls blue, cream and rarer red, cracked and peeling to plaster or corroded steel; all ceiling fixtures dead; beams of sunlight-like glow from arbitrary ceiling and wall spots light most rooms; dry, constant 15 C; perpetual soothing rain heard from the ceiling with no water anywhere; ceiling backed by impenetrable voidstone; devoid of entities; children's toys embedded in the sand (shovels, buckets, toy cars, dolls); occasional deteriorated furniture; no wind or water so marks persist (children's footprints, small-hand patterns, dug holes, sandcastle attempts, toy-car tracks); rooms regenerate only over decades; exit by a door in a room with no sand or through a window, to the level originally intended. TESTIMONY: arrivals in 'some sandy corridor'; digging and searching for toys (Darren Joubert letter); the 'Playlist for Exploring Liminality' photographs. ADAPTATION: a seeded 6 x 5 grid of 9 m cells (spanning tree plus short loops), some cells corridors with 2.95 m ceilings; floor levels 0.54 m apart joined by three sand-covered steps (the page states no storeys; natural variation only); windows between unjoined rooms; outer doorways choked with sand to the lintel as the diegetic boundary (finite window of a complex that continues); beams are additive light shafts with warm light anchors at their pools; your own prints are a bounded 1200-instance ring kept until the level reloads; nine dig spots each yield one toy and leave a hole; the voidstone appears in one room where the plaster was broken; the exit's destination is not specified (EXT release boundary) and is offered on both the door and the window of the unique sand-free room. SOURCE L008>L075#4 supplies the from_L008 arrival (in the starting corridor). No regeneration during a visit.",
+ "legacy_overlays": false,
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

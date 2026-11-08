@@ -1,0 +1,71 @@
+{
+ "duplication_pairs": [],
+ "engine": "4.5.1-stable (official)",
+ "failures": [],
+ "levels": [
+  {
+   "build_ms": 999,
+   "collision_shapes": 43,
+   "distinct_layouts_over_3_seeds": 3,
+   "dup_profile": {
+    "boxes": {
+     "-1_-1_-1": 2,
+     "-1_0_0": 2,
+     "-6_-2_-2": 2,
+     "0_0_0": 5,
+     "0_0_1": 2,
+     "0_1_1": 2,
+     "0_1_2": 2,
+     "0_2_2": 1,
+     "1_1_1": 10
+    },
+    "materials": {
+
+    }
+   },
+   "exits_declared": 0,
+   "exits_found": 0,
+   "load_ms": 1113,
+   "nav": {
+    "exits": [],
+    "map_regions": 1,
+    "map_sync_ticks": 2,
+    "nav_polygons": 83,
+    "spawn_on_navmesh": true,
+    "spawn_projection_error": 0.100000150501728,
+    "start": "(-33.4, 0.116389, 0.4)"
+   },
+   "qa_status": "ENGINE_SMOKE_PASS",
+   "save_tested": true,
+   "self_tests": 5,
+   "spawn": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+   },
+   "stable_id": "L052"
+  }
+ ],
+ "renderer": "headless",
+ "started": "2026-11-08T19:49:58",
+ "suites": {
+  "duplication": {
+   "checks": [],
+   "failed": 0,
+   "passed": 1
+  },
+  "framework": {
+   "checks": [],
+   "failed": 0,
+   "passed": 8
+  },
+  "level:L052": {
+   "checks": [],
+   "failed": 0,
+   "passed": 18
+  }
+ }
+}

@@ -1,19 +1,31 @@
 {
-  "stable_id": "L030",
-  "scene": "res://levels/L030/L030.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
-  "procedural": true,
-  "arrivals": [
-    "start"
-  ],
-  "signature": "Daylight floating grass islands above vast void; no confirmed escape",
-  "mechanics": [
-    "floating_islands",
-    "void_bridges_uncertain",
-    "audio_lure"
-  ],
-  "exits": [],
-  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
-  "entity_policy": "SOURCED ENTITIES ONLY: Memory Lurkers, level voice, Wormlings; Smiler and The Birds as rare/rumored"
+ "stable_id": "L030",
+ "scene": "res://levels/L030/L030.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": false,
+ "legacy_overlays": false,
+ "arrivals": [
+  "start"
+ ],
+ "signature": "A flat grass island hanging in a bright daytime skybox, other islands impossibly far across the sky, squid-like Memory Lurkers drifting at the rim: let one touch you and the same island turns dark and plastic, its bridges clipping through each other into the void, while the level itself talks to you about your regrets. Realise it is all fake and you die, and wake on the grass again, as if alive.",
+ "mechanics": [
+  "two_false_forms_trance",
+  "memory_lurker_grab_and_sneak",
+  "level_voice_from_everywhere",
+  "dead_zone_wake_loop",
+  "plastic_drift_per_loop",
+  "clipping_bridges_void_and_blue_glow",
+  "wormlings_under_dirt"
+ ],
+ "exits": [],
+ "no_exit_reason": "The page states 'Exits: Unknown.' in both the original block and the M.E.G. notice. The draft block's bridges (some to The Blue Channel, some into the void) are, per the M.E.G. notice, part of the false form a Memory Lurker shows you; they are built only inside the trance, the blue glow recedes when approached, and no edge is fired. No exit is invented.",
+ "fail_states": [],
+ "entity_policy": "SOURCED ENTITIES ONLY, scripted, never combat: Memory Lurkers (CONFIRMED in all blocks; small squid-like flyers that lurk around the island and grab the head), the level itself as a voice (CONFIRMED in block C, subtitles only), Wormlings (CONFIRMED in block A; shown only as moving mounds under three dirt patches, with sound). Not shown: the occasional Smiler and the unconfirmed Birds (optional/rumoured), converted 'robotic' people (testimony).",
+ "notes": "SOURCE: block A (large daytime skybox with clusters of flat islands, thin grass over stone and rocks; memory-altering Memory Lurkers that grab the head and reshape the surroundings; Wormlings in the dirt; a destroyed outpost whose notes must not be trusted); block B (first-person draft: a dark island with bridges clipping into each other, some to The Blue Channel, some into the void, so dark; the level speaks from everywhere about past and regrets and calls the Lurkers 'The Gateway To Paradise'; a friend turned robotic; everything feels fake, 2D, plastic, like a VR headset; 'the truth was in my eyes'); block C (M.E.G. notice: two forms, false form shown through Lurkers, unknown true form; Lurkers kill instantly and make you think you are still alive; realising everything is fake kills you; the level is a sentient, speaking entity; no bases; class lines include Unsafe and Time Dilation). ADAPTATION: island size (the page's 2,000 sq mi is shown as one ~220 m island with others far across the sky, unreachable at 0.7-2.2 km); the north shelf and rock causeway with the outpost remains; the trance trigger (touching a Lurker, or one sneaking up after ~25 s standing still); the painted backdrop at the end of one bridge is where the 'realisation' happens; dying (realisation or falling off either form) wakes you on the grass, the dead-zone loop; each loop raises saturation and gloss (more plastic) and turns the voice unkind (memories and nostalgia turning to fear and disgust). Time Dilation (class line only) is not simulated. QA mode disables the sneak, the voice and the fall/wake handler. Content note: mind control, loss of self, and a death loop are implied through text, light and sound; nothing graphic. Canon: docs/canon/levels/L030.md; page by i like computer, CC BY-SA 3.0.",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

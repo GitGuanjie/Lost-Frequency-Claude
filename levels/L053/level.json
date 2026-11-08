@@ -1,49 +1,69 @@
 {
-  "stable_id": "L053",
-  "scene": "res://levels/L053/L053.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev4 source candidate",
-  "procedural": true,
-  "arrivals": [
-    "from_L009",
-    "from_L053",
-    "from_L094",
-    "start"
-  ],
-  "signature": "A single furnished looping house, accessible basement and sealed rescue door",
-  "mechanics": [
-    "house",
-    "basement",
-    "looping_exit",
-    "letters",
-    "supply_timer"
-  ],
-  "exits": [
-    {
-      "id": "L053>L009#1",
-      "to": "L009",
-      "basis": "SOURCE",
-      "confidence": "CONDITIONAL",
-      "method": "Red wooden door breached by M.E.G.",
-      "source_quote": "It is unknown why the door was locked on one side but not the other.",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-53",
-      "trigger_type": "door"
-    },
-    {
-      "id": "L053>L053#3",
-      "to": "L053",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "method": "Front door or broken window",
-      "source_quote": "it just led back to my house",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-53",
-      "trigger_type": "door"
-    }
-  ],
-  "notes": "Uses a compact prototype scale. Godot/Windows gameplay and performance not yet verified; no promotion to PLAYABLE.",
-  "entity_policy": "SOURCED ENTITIES ONLY: faceless visitors (testimony, harmless)",
-  "arrival_aliases": [
-    "from_L053",
-    "from_L094"
-  ]
+ "stable_id": "L053",
+ "scene": "res://levels/L053/L053.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003, 22/22 each; bot fired L053>L009#1); stills reviewed by builder (AI); integrator review pending",
+ "procedural": false,
+ "legacy_overlays": false,
+ "arrivals": [
+  "start",
+  "from_L009",
+  "from_L053",
+  "from_L094"
+ ],
+ "signature": "An ordinary suburban house on an endless seven-in-the-morning, Christmas decorations still up and glass on the carpet, where the front door and the broken window both lead back inside, food turns up on the basement floor, faceless visitors sit on the couch, and the only way out is a letter through the mail slot",
+ "mechanics": [
+  "authored_two_storey_house_with_basement",
+  "front_door_loops_back_inside",
+  "broken_window_loops_back_inside",
+  "random_basement_food_pile_carry_to_fridge",
+  "fridge_filter_pitcher_water_only",
+  "cooking",
+  "faceless_visitors_move_when_unseen",
+  "visitor_sits_beside_you_at_the_tv",
+  "street_walkers_and_staring_crowd",
+  "clock_423_sky_always_7am",
+  "mail_slot_attempt_53_meg_breach"
+ ],
+ "exits": [
+  {
+   "id": "L053>L009#1",
+   "to": "L009",
+   "basis": "SOURCE",
+   "confidence": "CONDITIONAL",
+   "method": "Red wooden door breached by M.E.G.",
+   "source_quote": "It is unknown why the door was locked on one side but not the other.",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-53",
+   "source_section": "M.E.G. Report 8734",
+   "trigger_type": "door",
+   "trigger": "walk_in",
+   "label": "Walked out through the breached red door onto a Level 9 street",
+   "hint": "Allen's letter reached someone once. The mail slot is the only thing that goes out.",
+   "arrival": "from_L053"
+  },
+  {
+   "id": "L053>L053#3",
+   "to": "L053",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "method": "Front door or broken window",
+   "source_quote": "it just led back to my house",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-53",
+   "source_section": "Attempt 53",
+   "trigger_type": "door",
+   "trigger": "in_level_loop",
+   "label": "The front door led back into the house",
+   "hint": "Try the front door.",
+   "arrival": "from_L053"
+  }
+ ],
+ "fail_states": [],
+ "entity_policy": "SOURCED ONLY, never hostile. Faceless visitors (tall, slender, no face; REPORTED in TESTIMONY) sit at the table, on the couch, stand at windows, and once sit beside you at the TV; they relocate only when unobserved. People in the street (TESTIMONY) walk past and never respond; once, a group stops and stares. After the breach, one M.E.G. operative (ARTICLE report) stands on the porch. Louie the mouse lives in the old hamster cage.",
+ "content_note": "Isolation and despair are the page's theme (a man trapped alone for years). Expressed through the empty house and notes; nothing graphic.",
+ "notes": "TESTIMONY (Allen Grady's letter): his own house, December 2008, decorations still up; the house fell and he woke to glass and objects on the floor; the outside world still visible through the windows; the front door led back to the house; bedrooms, bathroom, kitchen, devices, basement; the sky never got dark, always about 7 AM; the clock works and read 4:23 AM; he rarely needed sleep; food edible, water drinkable only from the fridge with a filter pitcher; a pile of food in the basement on the concrete floor in the middle of the room, restocking at random (once not for weeks), carried to the fridge and cabinets and washed; Louie the mouse in an old hamster cage; faceless tall slender visitors who sit at the table, on the couch, look out of windows, sit beside him at the TV, no danger; TV works but no cable; Wi-Fi barely works; kitchen utensils work, cooking (steak); a nice neighbourhood with people walking who never respond, once a group staring; a window that finally broke led back into the house; letters pushed through the mail slot never appear on the other side. ARTICLE (M.E.G. Report 8734): the note 'Attempt 53' found on Level 9 in front of the red-painted wooden door of a small house; the operatives breached the door, locked on one side but not the other, and rescued him to Base Alpha (Level 0); later he could come and go at will. ADAPTATION: the floor plan, sizes and furniture are ours; the outside is built street scenery that cannot be reached (glass with collision, loop triggers at the door and the broken window); L053>L053#3 is realised as a seamless in-level loop (no reload) so the house's state persists; the rescue is compressed: your first letter is Attempt 53 (Allen sent 52) and the M.E.G. knock 70-150 s after it goes through; the restock timer (1-4 minutes, 12% chance of a very long wait); the staring crowd appears after about 7 s of watching the street from a front window; the basement's ambient is dimmed in code because the sky light reaches everywhere. The QA fixture starts with the door already breached. The rescue to Base Alpha (L053>L000#2) is not built as its own exit: you walk out onto Level 9 where the operatives found the note.",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }
