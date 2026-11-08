@@ -1,5 +1,5 @@
 {
-  "build_ms": 1363,
+  "build_ms": 1308,
   "engine_native": true,
   "level": "L027",
   "manifest_status": "IN_DEVELOPMENT",
@@ -10,13 +10,13 @@
     "footprint_x": 34.0,
     "footprint_y": 19.6,
     "footprint_z": 59.7,
-    "glb_models": 7,
+    "glb_models": 8,
     "interactables": 4,
     "lights": 8,
-    "materials": 23,
+    "materials": 26,
     "mesh_instances": 40,
     "multimesh_instances": 0,
-    "triangles": 167836
+    "triangles": 119968
   },
   "reason": "loaded via real developer transition, safe player spawn, 15 physics ticks",
   "scene": "res://levels/L027/L027.tscn",

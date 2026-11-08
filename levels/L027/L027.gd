@@ -340,7 +340,7 @@ func _dressing() -> void:
 		var p := Vector3(cos(a) * 6.4 * q, 0, sin(a) * 5.4 * q)
 		if _pool_e(p.x, p.z) < 1.3 or (p.x > 2.0 and p.z < 2.4):
 			continue
-		Props.place(self, d, "ph/rock_07", Vector3(p.x, _floor_h(p.x, p.z) - 0.02, p.z), r.randf_range(0, 360), r.randf_range(0.08, 0.22), false, false)
+		Props.place(self, d, ["kenney/nature-kit/rock-smalla", "kenney/nature-kit/rock-smallb", "kenney/nature-kit/rock-smalld"][i % 3], Vector3(p.x, _floor_h(p.x, p.z) - 0.02, p.z), r.randf_range(0, 360), r.randf_range(0.1, 0.25), false, false)
 	# M.E.G. fittings: two caged work lamps, cable, a lamp post at the foot of the stair
 	Props.place(self, d, "ph/caged_hanging_light", Vector3(2.5, 4.95, -4.55), 15.0)
 	Props.place(self, d, "ph/caged_hanging_light", tube_a[3] + Vector3(0.2, 2.0, 0.0), 60.0)
