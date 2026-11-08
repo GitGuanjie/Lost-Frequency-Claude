@@ -446,7 +446,7 @@ func _elevated_walkway(k: GeoKit, node: Node3D, ox: float, oz: float, group: Str
 	k.stairs(right, Vector3.LEFT, 3.2, rise, steps, "l11_canal_wall", run)
 	k.slab(mid.x - 12.0, mid.z - 1.7, mid.x + 12.0, mid.z + 1.7, upper_y, 0.24, "l11_plaza")
 	for side in [-1.0, 1.0]:
-		var rz := mid.z + side * 1.78
+		var rz: float = mid.z + side * 1.78
 		# The northern railing has a 3.2m opening for the NEW upper stair.
 		if side < 0.0:
 			for offset in [-6.8, 6.8]:
@@ -527,7 +527,7 @@ func _skywalk_fourth(k: GeoKit, node: Node3D, mid: Vector3, base_y: float, group
 	k.slab(mid.x - 11.0, z - 14.5, mid.x + 11.0, z - 11.8,
 		upper, 0.25, "l11_plaza")
 	for side in [-1.0, 1.0]:
-		var xc := mid.x + side * 9.0
+		var xc: float = mid.x + side * 9.0
 		k.slab(xc - 1.65, z - 11.8, xc + 1.65, z - 7.9,
 			upper, 0.25, "l11_plaza")
 		# Outer and inner rails frame a shaft; don't block the stair mouths.

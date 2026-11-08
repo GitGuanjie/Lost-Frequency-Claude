@@ -144,19 +144,19 @@ static func hub_pit(g, meta: Dictionary) -> void:
 ## stair-pit hub, with an intact low doorway on their west and east interfaces.
 ## The water remains below y=0, no entities or extra lore-breaking exits.
 static func hub_annex(g, meta: Dictionary, second: bool = false) -> void:
-    g.rect(1, 1, Cells.N - 1, Cells.N - 1, WALK, 10.5)
-    # Deep open basin, but keep the entire perimeter dry/wadeable for the
-    # ground-level access circuit. Both sets of physical stairs lie outside it.
-    g.rect(5, 5, 13, 12, -7.75 if second else -6.50, 10.5)
-    g.reserve(2, 2, 15, 14)
-    # Contrasting submerged side chambers, still no underwater labyrinth exits.
-    g.rect(7, 8, 11, 11, -8.25 if second else -7.25, 10.5)
-    # Open floor and catwalks deliberately remain unobstructed; a tiled
-    # deep basin supplies the primary spatial contrast instead of pillars.
-    g.lights.append({"t": "slit", "p": Vector3(16.0, 8.7, 2.02), "n": Vector3(0, 0, 1), "len": 12.0, "h": 0.6, "e": 1.6})
-    for pos in [Vector3(16, -4, 21.99), Vector3(22, -5, 15.99)]:
-        g.lights.append({"t": "uw", "p": pos, "n": Vector3(0, 0, -1), "e": 1.8})
-    meta["dev17_annex"] = "four-tier south loop" if second else "three-tier upper-lower loops"
+	g.rect(1, 1, Cells.N - 1, Cells.N - 1, WALK, 10.5)
+	# Deep open basin, but keep the entire perimeter dry/wadeable for the
+	# ground-level access circuit. Both sets of physical stairs lie outside it.
+	g.rect(5, 5, 13, 12, -7.75 if second else -6.50, 10.5)
+	g.reserve(2, 2, 15, 14)
+	# Contrasting submerged side chambers, still no underwater labyrinth exits.
+	g.rect(7, 8, 11, 11, -8.25 if second else -7.25, 10.5)
+	# Open floor and catwalks deliberately remain unobstructed; a tiled
+	# deep basin supplies the primary spatial contrast instead of pillars.
+	g.lights.append({"t": "slit", "p": Vector3(16.0, 8.7, 2.02), "n": Vector3(0, 0, 1), "len": 12.0, "h": 0.6, "e": 1.6})
+	for pos in [Vector3(16, -4, 21.99), Vector3(22, -5, 15.99)]:
+		g.lights.append({"t": "uw", "p": pos, "n": Vector3(0, 0, -1), "e": 1.8})
+	meta["dev17_annex"] = "four-tier south loop" if second else "three-tier upper-lower loops"
 
 
 # ========================================================= procedural kinds

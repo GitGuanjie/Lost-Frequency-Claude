@@ -102,7 +102,7 @@ func configure_optional(pa: Vector3, pb: Vector3, mat: Material, accent: Materia
     for endpoint in [pa,pb]:
         var inward: Vector3 = pb-pa if endpoint==pa else pa-pb
         inward = inward.normalized()
-        var at := endpoint + inward*4.95 + Vector3.UP*.58
+        var at: Vector3 = endpoint + inward*4.95 + Vector3.UP*.58
         var size := Vector3(.15,1.16,3.2) if along_x else Vector3(3.2,1.16,.15)
         barriers.append(_physical_box("ExpeditionRetractableSafetyRail",at,size,accent))
     bridge_active = false

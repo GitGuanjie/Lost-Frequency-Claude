@@ -508,7 +508,7 @@ func _night_garage_roof(k: GeoKit, node: Node3D, ox: float, oz: float, group: St
 	# Cantilever observation balcony over the edge of the older garage.
 	k.slab(ox + 25.0, oz + 43.2, ox + 32.0, oz + 46.2, y, 0.22, "l9_metal_dark")
 	for xx in [ox + 25.0, ox + 60.0]:
-		var left := xx == ox + 25.0
+		var left: bool = xx == ox + 25.0
 		k.box(Vector3(xx, y + 0.58, oz + 44.7), Vector3(0.11, 1.16, 3.0 if left else 15.0), "l9_metal_dark")
 	for zz in [oz + 36.0, oz + 52.0]:
 		k.box(Vector3(ox + 46.0, y + 0.58, zz), Vector3(28.0, 1.16, 0.11), "l9_metal_dark")

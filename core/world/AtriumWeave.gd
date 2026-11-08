@@ -176,9 +176,9 @@ static func install(owner: LevelBase, tag: String) -> Dictionary:
                     if direction == "north": rr -= 1
                     if direction == "south": rr += 1
                     var open_bridge: bool = occupied.has(_cell_key(cc, rr)) and doors.has(_edge_key(c, r, cc, rr))
-                    var external_access := (direction == "west" and c == 0 and
+                    var external_access: bool = (direction == "west" and c == 0 and
                         (_portal("west", tier, r) or (tier == 1 and r == 1))) or (direction == "east" and c == COLUMNS - 1 and _portal("east", tier, r))
-                    var terrace_access := (direction == "north" and c == 2 and r == 0)
+                    var terrace_access: bool = (direction == "north" and c == 2 and r == 0)
                     _open_guard(k, center, direction, open_bridge or external_access or terrace_access, accent)
         # DEV21: two cantilevered survey terraces with real collision. The
         # outer end has rails; the back end joins the north cell opening.

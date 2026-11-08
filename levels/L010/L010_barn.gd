@@ -196,7 +196,7 @@ func watchtower() -> void:
 		for z in [5.3, 16.4]:
 			bx(Vector3(x, -0.5, z - 0.11), Vector3(x + 0.2, 8.7, z + 0.11), rail)
 	# Each deck has a protected outward edge, while its stair entry stays open.
-	for a, b in [
+	for ab in [
 		[Vector3(12.9, 2.9, 15.55), Vector3(18.5, 4.0, 15.65)],
 		[Vector3(12.9, 2.9, 12.0), Vector3(13.02, 4.0, 15.6)],
 		[Vector3(15.6, 5.8, 9.45), Vector3(20.5, 6.9, 9.55)],
@@ -205,7 +205,7 @@ func watchtower() -> void:
 		[Vector3(16.1, 8.7, 12.4), Vector3(16.2, 9.8, 16.7)],
 		[Vector3(21.3, 8.7, 12.4), Vector3(21.4, 9.8, 16.7)]
 	]:
-		bx(a, b, rail)
+		bx(ab[0], ab[1], rail)
 	# Bracing is decorative only: avoid collision shapes through the stair lanes.
 	for z in [6.5, 10.0, 13.7]:
 		bx(Vector3(13.7, 0.8, z), Vector3(13.82, 8.1, z + 0.12), metal, false)

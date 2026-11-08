@@ -92,7 +92,7 @@ func configure_bridge(a: Vector3,b: Vector3, mat: Material, trim: Material) -> v
     bridge_shape.disabled=true
     for side in [a,b]:
         var toward := dir if side==a else -dir
-        var pos := side+toward*4.03+Vector3(0,.64,0)
+        var pos: Vector3 = side+toward*4.03+Vector3(0,.64,0)
         var rail_size := Vector3(.15,1.28,3.25) if along_x else Vector3(3.25,1.28,.15)
         stop_rails.append(_solid_box("DEV25_Closed_Gap_Rail",pos,rail_size,trim))
 

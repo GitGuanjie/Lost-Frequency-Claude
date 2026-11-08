@@ -42,7 +42,7 @@ func _cavern() -> void:
     for x in [-19.0, 19.0]:
         k.box(Vector3(x, 7.6, 43), Vector3(0.5, 15.2, 204), "l197_rock")
     for i in 4:
-        var colour := ["l197_turquoise", "l197_amethyst", "l197_ruby", "l197_onyx"][i]
+        var colour: String = ["l197_turquoise", "l197_amethyst", "l197_ruby", "l197_onyx"][i]
         var z0 := -57.0 + float(i) * 50.0
         for j in 28:
             var z := z0 + rng.randf_range(4.0, 45.0)

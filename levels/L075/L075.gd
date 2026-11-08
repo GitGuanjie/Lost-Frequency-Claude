@@ -103,7 +103,7 @@ func _plan() -> void:
 		for x in NX:
 			var a := Vector2i(x, z)
 			for d in [Vector2i(1, 0), Vector2i(0, 1)]:
-				var b := a + d
+				var b: Vector2i = a + d
 				if b.x < NX and b.y < NZ and not _connected(a, b) and rng.randf() < 0.13:
 					carved[_edge_key(a, b)] = true
 

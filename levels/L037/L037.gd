@@ -33,16 +33,16 @@ const SKY_COL := Color(0.93, 0.99, 1.0)
 const UW_COL := Color(0.45, 0.92, 1.0)
 const IMMERSE_S := 7.0
 const HUB := {Vector2i(0, 0): "hub_hall", Vector2i(1, 0): "hub_pit",
-    Vector2i(2, 0): "hub_annex_a", Vector2i(3, 0): "hub_annex_b",
-    Vector2i(4, 0): "hub_colonnade", Vector2i(5, 0): "hub_twilight"}
+	Vector2i(2, 0): "hub_annex_a", Vector2i(3, 0): "hub_annex_b",
+	Vector2i(4, 0): "hub_colonnade", Vector2i(5, 0): "hub_twilight"}
 ## Fixed openings around the authored hub: "ax,az,axis" -> [[t0, width, ceiling]].
 const HUB_BORDERS := {
 	"-1,0,x": [], "0,-1,z": [[8, 2, 3.6]], "0,0,z": [[10, 2, 3.6]], "0,0,x": [[6, 3, 4.4]],
 	"1,-1,z": [[4, 2, 3.4]], "1,0,x": [[9, 2, 3.6]], "1,0,z": [[11, 2, 3.4]],
-    "2,-1,z": [], "2,0,z": [], "2,0,x": [[9, 2, 3.6]],
-    "3,-1,z": [], "3,0,z": [], "3,0,x": [[9, 2, 3.6]],
-    "4,-1,z": [], "4,0,z": [], "4,0,x": [[9, 2, 3.6]],
-    "5,-1,z": [], "5,0,z": [], "5,0,x": [[9, 2, 3.6]],
+	"2,-1,z": [], "2,0,z": [], "2,0,x": [[9, 2, 3.6]],
+	"3,-1,z": [], "3,0,z": [], "3,0,x": [[9, 2, 3.6]],
+	"4,-1,z": [], "4,0,z": [], "4,0,x": [[9, 2, 3.6]],
+	"5,-1,z": [], "5,0,z": [], "5,0,x": [[9, 2, 3.6]],
 }
 
 var world: ChunkWorld
@@ -454,7 +454,7 @@ func _submerged_stair_pit_terraces(k: GeoKit, o: Vector3, group: String) -> void
 	var l1 := o + Vector3(14.0, bottom, 22.6)
 	k.ramp(l0, l1, 1.6, 0.17, "l37_tile")
 	for p in [Vector3(13.2, -1.3, 19.2), Vector3(20.1, -4.0, 22.7), Vector3(14.0, -6.7, 22.6)]:
-		var at := o + p
+		var at: Vector3 = o + p
 		k.box(at, Vector3(0.28, 0.18, 0.28), "l37_panel_uw", GeoKit.ALL, false)
 		lights.add_anchor(at, UW_COL, 1.1, 5.2, 0.0, group)
 

@@ -271,7 +271,9 @@ func _suspended_inspection_bridge(k: GeoKit, node: Node3D, group: String) -> voi
 	k.slab(7.1, 8.0, 22.1, 22.0, 8.35, 0.22, "l4_ceiling", GeoKit.NY)
 	# Guardrails along bridge edges, leaving a wide turn into the south spur.
 	for z in [13.14, 14.86]:
-		for xa, xb in [[9.6, 12.5], [15.7, 19.2]]:
+		for span in [[9.6, 12.5], [15.7, 19.2]]:
+			var xa: float = span[0]
+			var xb: float = span[1]
 			k.box(Vector3((xa + xb) * 0.5, high + 0.48, z),
 				Vector3(xb - xa, 0.96, 0.08), "l4_rail")
 	for x in [13.19, 15.01]:

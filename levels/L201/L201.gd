@@ -67,7 +67,7 @@ func _trench() -> void:
         lights.add_anchor(Vector3(x, 2.8, 23), Color(0.3, 0.91, 0.91), 0.75, 6.0, 0.9, "l201_kiosk")
     k.commit()
     for i in _terminals.size():
-        var dest := ["L001", "L003", "L004", "L025"][i]
+        var dest: String = ["L001", "L003", "L004", "L025"][i]
         add_interactable(_terminals[i], Vector3(2.4, 1.5, 1.0), "Trench: select %s" % dest, func(): _select(dest))
     add_note("trench", "TRENCH / SAFE LINKS", "Select a working hyperlink on a nearby console. Broken and unknown links have not been configured here.", Vector3(-8, 0.8, 21))
 

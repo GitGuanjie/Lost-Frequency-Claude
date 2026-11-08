@@ -10,7 +10,7 @@ static func dress_terrace(k: GeoKit, sid: String, xc: float, zfront: float,
     # existing level's defined procedural materials, not unrelated textures.
     var side := 1.0 if tier == 0 else -1.0
     for sign in [-1.0, 1.0]:
-        var x := xc + sign * 1.61
+        var x: float = xc + sign * 1.61
         match sid:
             "L028": # Stormstone Keep masonry watchpoint
                 k.cylinder(Vector3(x, y + 1.12, zfront + 1.10), 0.23, 2.24, mat, 8)

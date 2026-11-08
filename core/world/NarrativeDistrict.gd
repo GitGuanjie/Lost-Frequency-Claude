@@ -254,10 +254,10 @@ static func install(owner: LevelBase, tag: String, wing_x0: float, wing_z0: floa
                     elif side=="north": s-=1
                     else: s+=1
                     var link := cells.has(_key(d,s)) and edges.has(_edge(c,r,d,s))
-                    var stair := ((side=="west" or side=="east") and
+                    var stair: bool = ((side=="west" or side=="east") and
                         (c==0 if side=="west" else c==3) and _portal(side,tier,r,tiers))
-                    var entrance := side=="south" and tier==0 and c==2 and r==3
-                    var landmark := side=="north" and tier==0 and c==1 and r==0
+                    var entrance: bool = side=="south" and tier==0 and c==2 and r==3
+                    var landmark: bool = side=="north" and tier==0 and c==1 and r==0
                     _guard(k,p,side,link or stair or entrance or landmark,accent)
         # Stair landings extend outwards exactly to the real east/west treads.
         for side in ["west","east"]:

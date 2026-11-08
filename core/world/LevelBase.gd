@@ -133,21 +133,21 @@ func _install_dev27_field_sectors() -> void:
 ## DEV28: varied authored investigation points in existing, traversable spaces.
 ## No canonical exits or arrival spawn points are touched.
 func _install_dev28_story_rooms() -> void:
-    const PATH = "res://data/dev28_story_rooms.json"
-    if not FileAccess.file_exists(PATH):
-        return
-    var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(PATH))
-    if not (parsed is Dictionary):
-        push_warning("DEV28 story-room data malformed")
-        return
-    for entry in parsed.get("sites", []):
-        if str(entry.get("id", "")) != stable_id:
-            continue
-        var story := preload("res://core/world/StoryRooms28.gd").new()
-        story.name = "DEV28_InteractiveStoryRooms"
-        add_child(story)
-        story.setup(self, entry)
-        return
+	const PATH = "res://data/dev28_story_rooms.json"
+	if not FileAccess.file_exists(PATH):
+		return
+	var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(PATH))
+	if not (parsed is Dictionary):
+		push_warning("DEV28 story-room data malformed")
+		return
+	for entry in parsed.get("sites", []):
+		if str(entry.get("id", "")) != stable_id:
+			continue
+		var story := preload("res://core/world/StoryRooms28.gd").new()
+		story.name = "DEV28_InteractiveStoryRooms"
+		add_child(story)
+		story.setup(self, entry)
+		return
 
 ## Source-defined inbound edges without a hand-authored arrival receive an explicit
 ## start-position alias. The alias is recorded in the manifest and QA; it is NOT

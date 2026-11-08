@@ -108,10 +108,10 @@ func _build_static_geometry() -> void:
             _geometry(k,c,side,bool(opening[side]),accent)
     # All four walk edges are physically generated. An optional middle chord
     # (dynamic geometry) is NOT needed to reach any of the four platforms.
-    var a := corners[0]
-    var b := corners[1]
-    var c := corners[2]
-    var d := corners[3]
+    var a: Vector3 = corners[0]
+    var b: Vector3 = corners[1]
+    var c: Vector3 = corners[2]
+    var d: Vector3 = corners[3]
     k.slab(a.x+3.55,a.z-1.48,b.x-3.55,b.z+1.48,_height,.32,floor_mat)
     k.slab(b.x-1.48,b.z+3.55,c.x+1.48,c.z-3.55,_height,.32,floor_mat)
     k.slab(d.x+3.55,d.z-1.48,c.x-3.55,c.z+1.48,_height,.32,floor_mat)
@@ -172,7 +172,7 @@ func _build_spurs(k: GeoKit, floor_mat: String, accent: String) -> void:
         # Terminal island safely guards the other three sides and leaves
         # a 3-m-wide central portal on the approach from its parent plaza.
         for side in ["north","south","west","east"]:
-            var is_open := side == entry
+            var is_open: bool = side == entry
             if side=="north" or side=="south":
                 var z := dst.z+(2.82 if side=="north" else -2.82)
                 if is_open:

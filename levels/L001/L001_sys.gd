@@ -171,7 +171,7 @@ func _hunt(delta: float, p: Player) -> void:
 		var to := cam - smiler.global_position
 		# Unlike the old direct-position chase, the presence cannot pass through
 		# warehouse walls, crate stacks or a closed corridor door.
-		var space := L.get_world_3d().direct_space_state
+		var space: PhysicsDirectSpaceState3D = L.get_world_3d().direct_space_state
 		var ray := PhysicsRayQueryParameters3D.create(smiler.global_position, cam, 1)
 		ray.exclude = [p.get_rid()]
 		var clear: bool = space.intersect_ray(ray).is_empty()
@@ -213,7 +213,7 @@ func _spawn_smiler(p: Player) -> void:
 	f.y = 0.0
 	f = f.normalized().rotated(Vector3.UP, rt.randf_range(-0.25, 0.25))
 	var d := 14.0
-	var space := L.get_world_3d().direct_space_state
+	var space: PhysicsDirectSpaceState3D = L.get_world_3d().direct_space_state
 	var found := false
 	# Try several directions. Never instantiate the face inside nearby walls.
 	for offset in [0.0, -0.65, 0.65, -1.2, 1.2]:

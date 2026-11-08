@@ -919,12 +919,12 @@ func _vertical_dev15_suite() -> void:
 		var space := g.get_world_3d().direct_space_state
 		var deck := _dev14_surface(space, Vector3(-20,12,20))
 		var top := _dev14_surface(space, Vector3(-30,12,45))
-		var void := not _dev14_surface(space, Vector3(-30,12,25))
+		var shaft_void := not _dev14_surface(space, Vector3(-30,12,25))
 		var lower := _dev14_surface(space, Vector3(-30,8,25))
-		var ok := deck and top and void and lower
+		var ok := deck and top and shaft_void and lower
 		check(ok, suite, "L022 supported 4th deck / landing / genuinely open ascent slot")
 		evidence["L022"] = {"all_ok": ok, "checks": 4, "fourth_deck": deck,
-			"landing": top, "shaft_open": void, "lower_deck": lower}
+			"landing": top, "shaft_open": shaft_void, "lower_deck": lower}
 		_free_level(g)
 		await get_tree().process_frame
 	else:
@@ -1157,7 +1157,7 @@ func _story_suite() -> void:
 				var before_progress: int = int(lvl.get("qa_prog")) if lvl.stable_id == "L009" else -1
 				var wx := [{"edge": "waypoint", "kind": "waypoint", "pos": wp, "size": Vector3(2.0, 3.0, 2.0)}]
 				var wnav := await _nav_check(lvl, wx)
-				var reachable := not wnav.get("exits", []).is_empty() and wnav["exits"][0].get("reachable", false)
+				var reachable: bool = not wnav.get("exits", []).is_empty() and wnav["exits"][0].get("reachable", false)
 				var wr := await _bot_walk(lvl, wnav, wx, "waypoint", true)
 				var after_progress: int = int(lvl.get("qa_prog")) if lvl.stable_id == "L009" else -1
 				waypoint_evidence.append({"target": str(wp), "start": str(before_pos),
@@ -1316,113 +1316,113 @@ func _vertical_dev16_suite() -> void:
 ## This suite can run only with Godot 4.5.1. It NEVER writes a success marker
 ## merely because a design graph is connected; ray evidence comes from physics.
 func _dev17_floor(space: PhysicsDirectSpaceState3D, p: Vector3,
-        above: float = 1.25, below: float = 1.8) -> Dictionary:
-    var q := PhysicsRayQueryParameters3D.create(p + Vector3.UP * above,
-        p - Vector3.UP * below, 1)
-    return space.intersect_ray(q)
+		above: float = 1.25, below: float = 1.8) -> Dictionary:
+	var q := PhysicsRayQueryParameters3D.create(p + Vector3.UP * above,
+		p - Vector3.UP * below, 1)
+	return space.intersect_ray(q)
 
 func _vertical_dev17_suite() -> void:
-    var suite := "vertical_dev17"
-    var cave: Variant = JSON.parse_string(FileAccess.get_file_as_string(
-        "res://data/dev17_cave_braids.json"))
-    var pool: Variant = JSON.parse_string(FileAccess.get_file_as_string(
-        "res://data/dev17_pool_annexes.json"))
-    if not check(cave is Dictionary and pool is Dictionary, suite,
-            "DEV17 runtime geometry contracts present"):
-        return
-    var evidence := {"L008": {"checks": 0, "all_ok": false},
-        "L037": {"checks": 0, "all_ok": false}}
-    var cave_level: LevelBase = await _instance("L008", 1001)
-    if check(cave_level != null, suite, "L008 SDF cave scene built"):
-        var world: ChunkWorld = cave_level.get("world") as ChunkWorld
-        var space := cave_level.get_world_3d().direct_space_state
-        var valid := check(world != null, suite, "L008 streaming chunk builder present")
-        if world != null:
-            world.set_process(false) # test probes distant SDF chunks without player-driven unloading
-        var checked := 0
-        if world != null:
-            for path in cave["braids"]:
-                var pts: Array = path["floor_nodes"]
-                # Build just the chunks owning each feature probe. Outer regions
-                # are sampled separately rather than loading the entire cave.
-                for idx in range(1, pts.size() - 1):
-                    var pt: Array = pts[idx]
-                    var p := Vector3(float(pt[0]), float(pt[1]), float(pt[2]))
-                    for k in world.chunks.keys():
-                        if (k - world.key_at(p)).length_squared() > 4:
-                            world._unload(k)
-                    world.build_around(p, 0)
-                    await get_tree().physics_frame
-                    var hit := _dev17_floor(space, p, 1.5, 2.25)
-                    var good := not hit.is_empty() and absf(float(hit["position"].y) - p.y) < 2.25
-                    valid = check(good, suite, "L008 carved floor %s node %d" % [path["id"], idx], hit) and valid
-                    checked += 1
-            for path in cave["links"]:
-                var pp: Array = path["floor_nodes"]
-                for idx in range(1, pp.size() - 1):
-                    var pt: Array = pp[idx]
-                    var p := Vector3(float(pt[0]), float(pt[1]), float(pt[2]))
-                    for k in world.chunks.keys():
-                        if (k - world.key_at(p)).length_squared() > 4:
-                            world._unload(k)
-                    world.build_around(p, 0)
-                    await get_tree().physics_frame
-                    var hit := _dev17_floor(space, p, 1.5, 2.25)
-                    var good := not hit.is_empty() and absf(float(hit["position"].y) - p.y) < 2.25
-                    valid = check(good, suite, "L008 side-corridor floor %s node %d" % [path["id"], idx]) and valid
-                    checked += 1
-        evidence["L008"] = {"checks": checked, "all_ok": valid,
-            "scope": "SDF mesh raycasts at internal route points, not body traversal"}
-        _free_level(cave_level)
-        await get_tree().process_frame
-    var pool_level: LevelBase = await _instance("L037", 1001)
-    if check(pool_level != null, suite, "L037 connected Poolrooms scene built"):
-        var world: ChunkWorld = pool_level.get("world") as ChunkWorld
-        var space := pool_level.get_world_3d().direct_space_state
-        var valid := check(world != null, suite, "L037 streaming hub builder present")
-        var checked := 0
-        if world != null:
-            for name in ["annex_a", "annex_b"]:
-                var site: Dictionary = pool["annexes"][name]
-                var cx: int = int(site["chunk"][0])
-                var cz: int = int(site["chunk"][1])
-                var xoff := float(cx) * 32.0
-                var zoff := float(cz) * 32.0
-                var tiers: int = int(site["tiers"])
-                var rise: float = float(site["rise_m"])
-                world.build_around(Vector3(xoff + 16.0, 0, zoff + 16.0), 0)
-                await get_tree().physics_frame
-                var built := world.meta_of(Vector2i(cx, cz))
-                valid = check(built.get("kind") == "hub_" + name,
-                    suite, "L037 authored annex streamed " + name, built) and valid
-                checked += 1
-                for f in range(1, tiers):
-                    var y := -0.18 + float(f) * rise
-                    var z := 18.5 if f % 2 == 1 else 4.5
-                    for x in [5.5, 17.5, 28.5]:
-                        var p := Vector3(xoff + x, y, zoff + z)
-                        var hit := _dev17_floor(space, p, 0.6, 0.65)
-                        var good := not hit.is_empty() and absf(float(hit["position"].y) - y) < 0.6
-                        valid = check(good, suite, "%s mezzanine tier %d x=%.1f" % [name, f, x], hit) and valid
-                        checked += 1
-                for f in range(tiers - 1):
-                    var y := -0.18 + (float(f) + 0.5) * rise
-                    for x in [5.5, 28.5]:
-                        var p := Vector3(xoff + x, y, zoff + 11.5)
-                        var hit := _dev17_floor(space, p, 0.6, 0.7)
-                        var good := not hit.is_empty() and absf(float(hit["position"].y) - y) < 0.7
-                        valid = check(good, suite, "%s mid-stair %d x=%.1f" % [name, f, x]) and valid
-                        checked += 1
-                var deep := Vector3(xoff + 21.0, float(site["basin_floor_m"]), zoff + 21.0)
-                var deep_hit := _dev17_floor(space, deep, 0.6, 0.8)
-                valid = check(not deep_hit.is_empty(), suite, name + " basin floor truly collides") and valid
-                checked += 1
-        evidence["L037"] = {"checks": checked, "all_ok": valid,
-            "scope": "physical deck/stair/basin raycasts; no manual exploration"}
-        _free_level(pool_level)
-        await get_tree().process_frame
-    results["vertical_dev17_evidence"] = {"levels": evidence,
-        "scope": "Physical Godot probe samples only; NO full path or Windows verification"}
+	var suite := "vertical_dev17"
+	var cave: Variant = JSON.parse_string(FileAccess.get_file_as_string(
+		"res://data/dev17_cave_braids.json"))
+	var pool: Variant = JSON.parse_string(FileAccess.get_file_as_string(
+		"res://data/dev17_pool_annexes.json"))
+	if not check(cave is Dictionary and pool is Dictionary, suite,
+			"DEV17 runtime geometry contracts present"):
+		return
+	var evidence := {"L008": {"checks": 0, "all_ok": false},
+		"L037": {"checks": 0, "all_ok": false}}
+	var cave_level: LevelBase = await _instance("L008", 1001)
+	if check(cave_level != null, suite, "L008 SDF cave scene built"):
+		var world: ChunkWorld = cave_level.get("world") as ChunkWorld
+		var space := cave_level.get_world_3d().direct_space_state
+		var valid := check(world != null, suite, "L008 streaming chunk builder present")
+		if world != null:
+			world.set_process(false) # test probes distant SDF chunks without player-driven unloading
+		var checked := 0
+		if world != null:
+			for path in cave["braids"]:
+				var pts: Array = path["floor_nodes"]
+				# Build just the chunks owning each feature probe. Outer regions
+				# are sampled separately rather than loading the entire cave.
+				for idx in range(1, pts.size() - 1):
+					var pt: Array = pts[idx]
+					var p := Vector3(float(pt[0]), float(pt[1]), float(pt[2]))
+					for k in world.chunks.keys():
+						if (k - world.key_at(p)).length_squared() > 4:
+							world._unload(k)
+					world.build_around(p, 0)
+					await get_tree().physics_frame
+					var hit := _dev17_floor(space, p, 1.5, 2.25)
+					var good := not hit.is_empty() and absf(float(hit["position"].y) - p.y) < 2.25
+					valid = check(good, suite, "L008 carved floor %s node %d" % [path["id"], idx], hit) and valid
+					checked += 1
+			for path in cave["links"]:
+				var pp: Array = path["floor_nodes"]
+				for idx in range(1, pp.size() - 1):
+					var pt: Array = pp[idx]
+					var p := Vector3(float(pt[0]), float(pt[1]), float(pt[2]))
+					for k in world.chunks.keys():
+						if (k - world.key_at(p)).length_squared() > 4:
+							world._unload(k)
+					world.build_around(p, 0)
+					await get_tree().physics_frame
+					var hit := _dev17_floor(space, p, 1.5, 2.25)
+					var good := not hit.is_empty() and absf(float(hit["position"].y) - p.y) < 2.25
+					valid = check(good, suite, "L008 side-corridor floor %s node %d" % [path["id"], idx]) and valid
+					checked += 1
+		evidence["L008"] = {"checks": checked, "all_ok": valid,
+			"scope": "SDF mesh raycasts at internal route points, not body traversal"}
+		_free_level(cave_level)
+		await get_tree().process_frame
+	var pool_level: LevelBase = await _instance("L037", 1001)
+	if check(pool_level != null, suite, "L037 connected Poolrooms scene built"):
+		var world: ChunkWorld = pool_level.get("world") as ChunkWorld
+		var space := pool_level.get_world_3d().direct_space_state
+		var valid := check(world != null, suite, "L037 streaming hub builder present")
+		var checked := 0
+		if world != null:
+			for name in ["annex_a", "annex_b"]:
+				var site: Dictionary = pool["annexes"][name]
+				var cx: int = int(site["chunk"][0])
+				var cz: int = int(site["chunk"][1])
+				var xoff := float(cx) * 32.0
+				var zoff := float(cz) * 32.0
+				var tiers: int = int(site["tiers"])
+				var rise: float = float(site["rise_m"])
+				world.build_around(Vector3(xoff + 16.0, 0, zoff + 16.0), 0)
+				await get_tree().physics_frame
+				var built := world.meta_of(Vector2i(cx, cz))
+				valid = check(built.get("kind") == "hub_" + name,
+					suite, "L037 authored annex streamed " + name, built) and valid
+				checked += 1
+				for f in range(1, tiers):
+					var y := -0.18 + float(f) * rise
+					var z := 18.5 if f % 2 == 1 else 4.5
+					for x in [5.5, 17.5, 28.5]:
+						var p := Vector3(xoff + x, y, zoff + z)
+						var hit := _dev17_floor(space, p, 0.6, 0.65)
+						var good := not hit.is_empty() and absf(float(hit["position"].y) - y) < 0.6
+						valid = check(good, suite, "%s mezzanine tier %d x=%.1f" % [name, f, x], hit) and valid
+						checked += 1
+				for f in range(tiers - 1):
+					var y := -0.18 + (float(f) + 0.5) * rise
+					for x in [5.5, 28.5]:
+						var p := Vector3(xoff + x, y, zoff + 11.5)
+						var hit := _dev17_floor(space, p, 0.6, 0.7)
+						var good := not hit.is_empty() and absf(float(hit["position"].y) - y) < 0.7
+						valid = check(good, suite, "%s mid-stair %d x=%.1f" % [name, f, x]) and valid
+						checked += 1
+				var deep := Vector3(xoff + 21.0, float(site["basin_floor_m"]), zoff + 21.0)
+				var deep_hit := _dev17_floor(space, deep, 0.6, 0.8)
+				valid = check(not deep_hit.is_empty(), suite, name + " basin floor truly collides") and valid
+				checked += 1
+		evidence["L037"] = {"checks": checked, "all_ok": valid,
+			"scope": "physical deck/stair/basin raycasts; no manual exploration"}
+		_free_level(pool_level)
+		await get_tree().process_frame
+	results["vertical_dev17_evidence"] = {"levels": evidence,
+		"scope": "Physical Godot probe samples only; NO full path or Windows verification"}
 
 
 # DEV18 live engine checks for streamed, physical E-interaction hitboxes.
@@ -1655,565 +1655,565 @@ func _vertical_dev19_suite() -> void:
 ## It always loads the actual level scene and checks colliding floors / stair
 ## midpoints, the entrance deck and real stateful gate/light components.
 func _vertical_dev20_suite() -> void:
-    var suite := "vertical_dev20"
-    var data: Variant = JSON.parse_string(FileAccess.get_file_as_string(
-        "res://data/dev20_atrium_blueprints.json"))
-    var evidence := {"levels": {}, "scope": "Godot 4.5.1 native surfaces, stairs and state controls; NOT complete player traversal"}
-    if not check(data is Dictionary and data.get("wings", []).size() == 10, suite,
-            "Ten DEV20 data-driven building sites loaded"):
-        results["vertical_dev20_evidence"] = evidence
-        return
-    for entry in data["wings"]:
-        var sid: String = str(entry["id"])
-        var tag: String = str(entry["anchor"])
-        var level: LevelBase = await _instance(sid, 2020)
-        var good := check(level != null, suite, sid + " actual Godot level instantiated")
-        var count := 0
-        var samples := 0
-        if level == null:
-            evidence["levels"][sid] = {"all_ok": false, "checks": 0, "samples": 0}
-            continue
-        var state: Node = level.get_node_or_null("DEV20_Wing_" + tag)
-        good = check(state != null, suite, sid + " wing state node exists") and good
-        if state != null:
-            var lamps: Array = state.get("lamps")
-            good = check(lamps.size() == 3 and (lamps[1] as Array).size() == 2,
-                suite, sid + " two real light nodes per floor") and good
-            state.call("toggle_circuit", null, 1)
-            if lamps.size() == 3:
-                var lit := true
-                for light in lamps[1]:
-                    lit = lit and light is OmniLight3D and light.light_energy > 1.35
-                good = check(lit, suite, sid + " real light energy changed by interaction") and good
-            state.call("toggle_circuit", null, 1)
-            if lamps.size() == 3:
-                var dim := true
-                for light in lamps[1]:
-                    dim = dim and light is OmniLight3D and light.light_energy < 0.2
-                good = check(dim, suite, sid + " circuit switches back off") and good
-            var shape: CollisionShape3D = state.get("shutter_shape") as CollisionShape3D
-            var visual: MeshInstance3D = state.get("shutter_visual") as MeshInstance3D
-            good = check(shape != null and visual != null and not shape.disabled and visual.visible,
-                suite, sid + " closed shortcut has a real colliding body") and good
-            if shape != null and visual != null:
-                state.call("toggle_shutter", null)
-                await get_tree().physics_frame
-                good = check(shape.disabled and not visual.visible, suite, sid + " opened shortcut drops collision and mesh") and good
-                state.call("toggle_shutter", null)
-                await get_tree().physics_frame
-                good = check(not shape.disabled and visual.visible, suite, sid + " shortcut closes again") and good
-        var origin_data: Array = entry["origin"]
-        var o := Vector3(float(origin_data[0]),float(origin_data[1]),float(origin_data[2]))
-        var rise: float = float(entry["rise"])
-        var x0: float = o.x + 32.5
-        var z0: float = o.z - 14.0
-        var space := level.get_world_3d().direct_space_state
-        for tier in 3:
-            var plan: Dictionary = entry["floors"][tier]
-            var cells: Array = plan["cells"]
-            for index in [0, cells.size() - 1]:
-                var cell: Array = cells[index]
-                var floor_y: float = o.y + float(tier + 1) * rise
-                var p := Vector3(x0 + (float(cell[0]) + 0.5) * 7.0, floor_y,
-                    z0 + (float(cell[1]) + 0.5) * 7.0)
-                var hit := _dev17_floor(space, p, 1.0, 1.2)
-                var collision_ok := not hit.is_empty() and absf(float(hit["position"].y) - floor_y) < 0.45
-                good = check(collision_ok, suite, sid + " tier %d physical room floor " % tier + str(cell)) and good
-                samples += 1
-        var entrance_y: float = o.y + 2.0 * rise
-        var access := Vector3(o.x + 24.5, entrance_y, o.z - 1.1)
-        var access_hit := _dev17_floor(space, access, 1.0, 1.2)
-        good = check(not access_hit.is_empty() and absf(float(access_hit["position"].y) - entrance_y) < 0.45,
-            suite, sid + " real connecting bridge floor") and good
-        samples += 1
-        for tier in 2:
-            var y: float = o.y + float(tier + 1) * rise + rise * 0.5
-            var stair_mid := Vector3(x0 + 37.5, y, z0 + 14.0)
-            var hit := _dev17_floor(space, stair_mid, 1.0, 1.0)
-            good = check(not hit.is_empty() and absf(float(hit["position"].y) - y) < 0.6,
-                suite, sid + " real eastern stair ramp tier " + str(tier)) and good
-            samples += 1
-        count = samples + 5
-        evidence["levels"][sid] = {"all_ok": good, "checks": count, "samples": samples}
-        _free_level(level)
-        await get_tree().process_frame
-    results["vertical_dev20_evidence"] = evidence
+	var suite := "vertical_dev20"
+	var data: Variant = JSON.parse_string(FileAccess.get_file_as_string(
+		"res://data/dev20_atrium_blueprints.json"))
+	var evidence := {"levels": {}, "scope": "Godot 4.5.1 native surfaces, stairs and state controls; NOT complete player traversal"}
+	if not check(data is Dictionary and data.get("wings", []).size() == 10, suite,
+			"Ten DEV20 data-driven building sites loaded"):
+		results["vertical_dev20_evidence"] = evidence
+		return
+	for entry in data["wings"]:
+		var sid: String = str(entry["id"])
+		var tag: String = str(entry["anchor"])
+		var level: LevelBase = await _instance(sid, 2020)
+		var good := check(level != null, suite, sid + " actual Godot level instantiated")
+		var count := 0
+		var samples := 0
+		if level == null:
+			evidence["levels"][sid] = {"all_ok": false, "checks": 0, "samples": 0}
+			continue
+		var state: Node = level.get_node_or_null("DEV20_Wing_" + tag)
+		good = check(state != null, suite, sid + " wing state node exists") and good
+		if state != null:
+			var lamps: Array = state.get("lamps")
+			good = check(lamps.size() == 3 and (lamps[1] as Array).size() == 2,
+				suite, sid + " two real light nodes per floor") and good
+			state.call("toggle_circuit", null, 1)
+			if lamps.size() == 3:
+				var lit := true
+				for light in lamps[1]:
+					lit = lit and light is OmniLight3D and light.light_energy > 1.35
+				good = check(lit, suite, sid + " real light energy changed by interaction") and good
+			state.call("toggle_circuit", null, 1)
+			if lamps.size() == 3:
+				var dim := true
+				for light in lamps[1]:
+					dim = dim and light is OmniLight3D and light.light_energy < 0.2
+				good = check(dim, suite, sid + " circuit switches back off") and good
+			var shape: CollisionShape3D = state.get("shutter_shape") as CollisionShape3D
+			var visual: MeshInstance3D = state.get("shutter_visual") as MeshInstance3D
+			good = check(shape != null and visual != null and not shape.disabled and visual.visible,
+				suite, sid + " closed shortcut has a real colliding body") and good
+			if shape != null and visual != null:
+				state.call("toggle_shutter", null)
+				await get_tree().physics_frame
+				good = check(shape.disabled and not visual.visible, suite, sid + " opened shortcut drops collision and mesh") and good
+				state.call("toggle_shutter", null)
+				await get_tree().physics_frame
+				good = check(not shape.disabled and visual.visible, suite, sid + " shortcut closes again") and good
+		var origin_data: Array = entry["origin"]
+		var o := Vector3(float(origin_data[0]),float(origin_data[1]),float(origin_data[2]))
+		var rise: float = float(entry["rise"])
+		var x0: float = o.x + 32.5
+		var z0: float = o.z - 14.0
+		var space := level.get_world_3d().direct_space_state
+		for tier in 3:
+			var plan: Dictionary = entry["floors"][tier]
+			var cells: Array = plan["cells"]
+			for index in [0, cells.size() - 1]:
+				var cell: Array = cells[index]
+				var floor_y: float = o.y + float(tier + 1) * rise
+				var p := Vector3(x0 + (float(cell[0]) + 0.5) * 7.0, floor_y,
+					z0 + (float(cell[1]) + 0.5) * 7.0)
+				var hit := _dev17_floor(space, p, 1.0, 1.2)
+				var collision_ok := not hit.is_empty() and absf(float(hit["position"].y) - floor_y) < 0.45
+				good = check(collision_ok, suite, sid + " tier %d physical room floor " % tier + str(cell)) and good
+				samples += 1
+		var entrance_y: float = o.y + 2.0 * rise
+		var access := Vector3(o.x + 24.5, entrance_y, o.z - 1.1)
+		var access_hit := _dev17_floor(space, access, 1.0, 1.2)
+		good = check(not access_hit.is_empty() and absf(float(access_hit["position"].y) - entrance_y) < 0.45,
+			suite, sid + " real connecting bridge floor") and good
+		samples += 1
+		for tier in 2:
+			var y: float = o.y + float(tier + 1) * rise + rise * 0.5
+			var stair_mid := Vector3(x0 + 37.5, y, z0 + 14.0)
+			var hit := _dev17_floor(space, stair_mid, 1.0, 1.0)
+			good = check(not hit.is_empty() and absf(float(hit["position"].y) - y) < 0.6,
+				suite, sid + " real eastern stair ramp tier " + str(tier)) and good
+			samples += 1
+		count = samples + 5
+		evidence["levels"][sid] = {"all_ok": good, "checks": count, "samples": samples}
+		_free_level(level)
+		await get_tree().process_frame
+	results["vertical_dev20_evidence"] = evidence
 
 
 # =================================================== DEV21 model / runtime state audit
 # Godot-only! Validates actual imported GLBs, spawned collision areas, material
 # marker feedback and floors under new terraces. No fake Windows certification.
 func _scenario_dev21_suite() -> void:
-    var suite := "scenario_dev21"
-    var raw: Variant = JSON.parse_string(FileAccess.get_file_as_string("res://data/dev21_wing_scenarios.json"))
-    var plans: Variant = JSON.parse_string(FileAccess.get_file_as_string("res://data/dev20_atrium_blueprints.json"))
-    var evidence := {"levels":{}, "scope":"Godot scene and physics smoke only, NOT actual player traversal"}
-    if not check(raw is Dictionary and plans is Dictionary, suite, "Scenario records parse"):
-        results["scenario_dev21_evidence"] = evidence
-        return
-    for entry in raw["wings"]:
-        var sid: String = str(entry["id"])
-        var tag: String = str(entry["anchor"])
-        var blueprint: Dictionary = {}
-        for b in plans["wings"]:
-            if b["id"] == sid:
-                blueprint = b
-                break
-        var level: LevelBase = await _instance(sid, 2121)
-        var good := check(level != null, suite, sid + " level built")
-        var count := 0
-        if level == null:
-            evidence["levels"][sid] = {"all_ok":false,"checks":0}
-            continue
-        var group := level.get_node_or_null("DEV21_DressedRooms_" + tag)
-        var state := level.get_node_or_null("DEV20_Wing_" + tag)
-        good = check(group != null and state != null, suite, sid + " dressed wing and state created") and good
-        count += 1
-        if group != null:
-            var models := 0
-            var inspectables := 0
-            var markers := 0
-            for child in group.get_children():
-                if child.name.begins_with("GLB_"):
-                    models += 1
-                if child is Interactable:
-                    inspectables += 1
-                    if str(child.prompt) in entry["station_prompts"]:
-                        markers += 1
-            good = check(models == entry["models"].size(), suite, sid + " original GLB props instantiated", models) and good
-            good = check(inspectables == 6 and markers == 3, suite, sid + " physical E colliders (3 inspect + 3 markers)", [inspectables,markers]) and good
-            good = check(group.get_node_or_null("DEV21_Ambience_" + tag) != null, suite, sid + " positional ambience node") and good
-            count += 3
-        if state != null:
-            var lights: Array = state.get("marker_lights")
-            good = check(lights.size() == 3, suite, sid + " real survey light nodes") and good
-            if lights.size() == 3:
-                for tier in 3:
-                    var marker_area: Interactable = null
-                    if group != null:
-                        for child in group.get_children():
-                            if child is Interactable and child.prompt == str(entry["station_prompts"][tier]):
-                                marker_area = child as Interactable
-                                break
-                    good = check(marker_area != null, suite, sid + " tier %d has E action" % tier) and good
-                    if marker_area != null:
-                        # Invoke the real Interactable callback, not state.call:
-                        # previously the player's argument broke bound handlers.
-                        marker_area.interact(null)
-                    var lit: bool = lights[tier] is OmniLight3D and lights[tier].light_energy > 1.9
-                    good = check(lit, suite, sid + " tier %d E action illuminates" % tier) and good
-                    count += 2
-                good = check(state.get("marker_found") == [true,true,true], suite, sid + " route discoveries registered") and good
-                count += 1
-            count += 1
-        var origin: Array = blueprint.get("origin", [])
-        if origin.size() == 3:
-            var o := Vector3(float(origin[0]),float(origin[1]),float(origin[2]))
-            var rise: float = float(blueprint["rise"])
-            var xc: float = o.x + 32.5 + 17.5
-            var z0: float = o.z - 14.0
-            var space := level.get_world_3d().direct_space_state
-            await get_tree().physics_frame
-            for tier in [0,2]:
-                var y: float = o.y + float(tier+1) * rise
-                var probe := Vector3(xc, y, z0 - 3.0)
-                var hit := _dev17_floor(space, probe, 0.75, 1.2)
-                good = check(not hit.is_empty() and absf(float(hit["position"].y) - y)<0.5,
-                    suite,sid + " terrace tier%d is physically supported" % tier) and good
-                count += 1
-        evidence["levels"][sid] = {"all_ok":good, "checks":count,
-            "model_instances":entry["models"].size()}
-        _free_level(level)
-        await get_tree().process_frame
-    results["scenario_dev21_evidence"] = evidence
+	var suite := "scenario_dev21"
+	var raw: Variant = JSON.parse_string(FileAccess.get_file_as_string("res://data/dev21_wing_scenarios.json"))
+	var plans: Variant = JSON.parse_string(FileAccess.get_file_as_string("res://data/dev20_atrium_blueprints.json"))
+	var evidence := {"levels":{}, "scope":"Godot scene and physics smoke only, NOT actual player traversal"}
+	if not check(raw is Dictionary and plans is Dictionary, suite, "Scenario records parse"):
+		results["scenario_dev21_evidence"] = evidence
+		return
+	for entry in raw["wings"]:
+		var sid: String = str(entry["id"])
+		var tag: String = str(entry["anchor"])
+		var blueprint: Dictionary = {}
+		for b in plans["wings"]:
+			if b["id"] == sid:
+				blueprint = b
+				break
+		var level: LevelBase = await _instance(sid, 2121)
+		var good := check(level != null, suite, sid + " level built")
+		var count := 0
+		if level == null:
+			evidence["levels"][sid] = {"all_ok":false,"checks":0}
+			continue
+		var group := level.get_node_or_null("DEV21_DressedRooms_" + tag)
+		var state := level.get_node_or_null("DEV20_Wing_" + tag)
+		good = check(group != null and state != null, suite, sid + " dressed wing and state created") and good
+		count += 1
+		if group != null:
+			var models := 0
+			var inspectables := 0
+			var markers := 0
+			for child in group.get_children():
+				if child.name.begins_with("GLB_"):
+					models += 1
+				if child is Interactable:
+					inspectables += 1
+					if str(child.prompt) in entry["station_prompts"]:
+						markers += 1
+			good = check(models == entry["models"].size(), suite, sid + " original GLB props instantiated", models) and good
+			good = check(inspectables == 6 and markers == 3, suite, sid + " physical E colliders (3 inspect + 3 markers)", [inspectables,markers]) and good
+			good = check(group.get_node_or_null("DEV21_Ambience_" + tag) != null, suite, sid + " positional ambience node") and good
+			count += 3
+		if state != null:
+			var lights: Array = state.get("marker_lights")
+			good = check(lights.size() == 3, suite, sid + " real survey light nodes") and good
+			if lights.size() == 3:
+				for tier in 3:
+					var marker_area: Interactable = null
+					if group != null:
+						for child in group.get_children():
+							if child is Interactable and child.prompt == str(entry["station_prompts"][tier]):
+								marker_area = child as Interactable
+								break
+					good = check(marker_area != null, suite, sid + " tier %d has E action" % tier) and good
+					if marker_area != null:
+						# Invoke the real Interactable callback, not state.call:
+						# previously the player's argument broke bound handlers.
+						marker_area.interact(null)
+					var lit: bool = lights[tier] is OmniLight3D and lights[tier].light_energy > 1.9
+					good = check(lit, suite, sid + " tier %d E action illuminates" % tier) and good
+					count += 2
+				good = check(state.get("marker_found") == [true,true,true], suite, sid + " route discoveries registered") and good
+				count += 1
+			count += 1
+		var origin: Array = blueprint.get("origin", [])
+		if origin.size() == 3:
+			var o := Vector3(float(origin[0]),float(origin[1]),float(origin[2]))
+			var rise: float = float(blueprint["rise"])
+			var xc: float = o.x + 32.5 + 17.5
+			var z0: float = o.z - 14.0
+			var space := level.get_world_3d().direct_space_state
+			await get_tree().physics_frame
+			for tier in [0,2]:
+				var y: float = o.y + float(tier+1) * rise
+				var probe := Vector3(xc, y, z0 - 3.0)
+				var hit := _dev17_floor(space, probe, 0.75, 1.2)
+				good = check(not hit.is_empty() and absf(float(hit["position"].y) - y)<0.5,
+					suite,sid + " terrace tier%d is physically supported" % tier) and good
+				count += 1
+		evidence["levels"][sid] = {"all_ok":good, "checks":count,
+			"model_instances":entry["models"].size()}
+		_free_level(level)
+		await get_tree().process_frame
+	results["scenario_dev21_evidence"] = evidence
 
 # ================================================== DEV22 district physical QA
 # Only real Godot may pass this suite. Distinguish static graph reachability
 # from native raycast samples and E callback/collision state. This does NOT
 # certify full player traversal, long-session stability, GPU FPS or Windows.
 func _district_dev22_suite() -> void:
-    var suite := "district_dev22"
-    var raw: Variant = JSON.parse_string(FileAccess.get_file_as_string(
-        "res://data/dev22_narrative_districts.json"))
-    var evidence := {"levels":{}, "scope":"Godot collision-ray, GLB instantiation, actual E callback and optional hatch physics only; no whole-player traversals"}
-    if not check(raw is Dictionary and raw.get("districts", []).size() == 10,
-            suite,"All ten DEV22 site records loaded"):
-        results["district_dev22_evidence"] = evidence
-        return
-    for rec in raw["districts"]:
-        var sid: String = str(rec["id"])
-        var tag: String = str(rec["anchor"])
-        var level: LevelBase = await _instance(sid, 2222)
-        var good := check(level != null, suite, sid+" constructed")
-        var checks := 0
-        var sample_count := 0
-        if level == null:
-            evidence["levels"][sid] = {"all_ok":false,"checks":0,"samples":0}
-            continue
-        var state: Node = level.get_node_or_null("DEV22_DistrictState_"+tag)
-        var group: Node = level.get_node_or_null("DEV22_ExistingGLBDetails_"+tag)
-        good = check(state != null and group != null, suite, sid+" new physical district nodes exist") and good
-        checks += 1
-        var loc: Array = rec["origin"]
-        var x0 := float(loc[0])
-        var ybase := float(loc[1])
-        var z0 := float(loc[2])
-        var rise := float(rec["rise"])
-        var tiers := int(rec["tiers"])
-        var space := level.get_world_3d().direct_space_state
-        await get_tree().physics_frame
-        # Actual floor colliders: test more than one unique real cell per tier.
-        for tier in tiers:
-            var floor: Dictionary = rec["floors"][tier]
-            for idx in [0, floor["cells"].size()-1]:
-                var cell: Array = floor["cells"][idx]
-                var y := ybase+float(tier)*rise
-                var pos := Vector3(x0+(float(cell[0])+0.5)*7.0,y,
-                    z0+(float(cell[1])+0.5)*7.0)
-                var hit := _dev17_floor(space,pos,0.9,1.1)
-                var point: Vector3 = hit.get("position",Vector3.ZERO)
-                good = check(not hit.is_empty() and absf(point.y-y)<0.5,
-                    suite,sid+" tier%d floor %s ray" % [tier,str(cell)]) and good
-                checks += 1
-                sample_count += 1
-        # The bridge must be real at its centre AND must match the tier-1 door
-        # on the pre-existing DEV20 wing, not stop at an exterior guardrail.
-        var bridge := Vector3(x0+17.5,ybase,z0+35.5)
-        var bhit := _dev17_floor(space,bridge,0.9,1.1)
-        var bridge_contact: Vector3 = bhit.get("position",Vector3.ZERO)
-        good = check(not bhit.is_empty() and absf(bridge_contact.y-ybase)<0.5,
-            suite,sid+" north-bridge collidable surface") and good
-        checks += 1
-        sample_count += 1
-        var terrace := Vector3(x0+10.5,ybase,z0-8.0)
-        var thit := _dev17_floor(space,terrace,0.9,1.1)
-        var terrace_contact: Vector3 = thit.get("position",Vector3.ZERO)
-        good = check(not thit.is_empty() and absf(terrace_contact.y-ybase)<0.5,
-            suite,sid+" distinctive landmark terrace physical floor") and good
-        checks += 1
-        sample_count += 1
-        # Both opposed flights have continuous, collidable sloping surfaces.
-        for tier in tiers-1:
-            var mid_y := ybase+(float(tier)+0.5)*rise
-            for x in [x0-3.1,x0+31.1]:
-                var stair := Vector3(x,mid_y,z0+14.0)
-                var hit := _dev17_floor(space,stair,0.9,1.0)
-                var stair_contact: Vector3 = hit.get("position",Vector3.ZERO)
-                good = check(not hit.is_empty() and absf(stair_contact.y-mid_y)<0.6,
-                    suite,sid+" external stair ramp contact tier%d" % tier) and good
-                checks += 1
-                sample_count += 1
-        if group != null:
-            var model_count := 0
-            for child in group.get_children():
-                if child.name.begins_with("GLB_"):
-                    model_count += 1
-            good = check(model_count == rec["models"].size()+rec["landmark_models"].size(),
-                suite,sid+" imported GLB scene instances",model_count) and good
-            checks += 1
-        if state != null:
-            var lamps: Array = state.get("signal_lights")
-            var flashes: Array = state.get("ambient_lights")
-            good = check(lamps.size() == tiers and flashes.size() == tiers,
-                suite,sid+" independent per-storey visible lights") and good
-            checks += 1
-            var signals: Array = []
-            var ambient_controls: Array = []
-            var gate_area: Interactable = null
-            for child in level.get_children():
-                if not child is Interactable:
-                    continue
-                var it := child as Interactable
-                if it.prompt.begins_with("Record the ") and it.prompt.ends_with(" elevation signal"):
-                    if absf(it.position.x-(x0+3.5-1.78))<1.0:
-                        signals.append(it)
-                elif it.prompt == "Adjust local environmental lighting":
-                    if absf(it.position.x-(x0+24.5+1.74))<1.0:
-                        ambient_controls.append(it)
-                elif it.prompt == "Release the optional return hatch":
-                    gate_area = it
-            signals.sort_custom(func(a,b): return a.position.y < b.position.y)
-            ambient_controls.sort_custom(func(a,b): return a.position.y < b.position.y)
-            good = check(signals.size()==tiers and ambient_controls.size()==tiers and gate_area!=null,
-                suite,sid+" physical E trigger colliders per storey",[signals.size(),ambient_controls.size()]) and good
-            checks += 1
-            var shape: CollisionShape3D = state.get("gate_shape") as CollisionShape3D
-            var visual: MeshInstance3D = state.get("gate_visual") as MeshInstance3D
-            good = check(shape!=null and visual!=null and not shape.disabled and visual.visible,
-                suite,sid+" optional hatch initially collides") and good
-            checks += 1
-            if gate_area != null:
-                gate_area.interact(null)
-                good = check(not state.get("gate_open"),suite,sid+" hatch remains locked without route observations") and good
-                checks += 1
-            for tier in mini(signals.size(),tiers):
-                (signals[tier] as Interactable).interact(null)
-                good = check(lamps[tier] is OmniLight3D and lamps[tier].light_energy>1.9,
-                    suite,sid+" E action illuminates route signal %d" % tier) and good
-                checks += 1
-            if ambient_controls.size()>0:
-                (ambient_controls[0] as Interactable).interact(null)
-                good = check(flashes[0] is OmniLight3D and flashes[0].light_energy>2.3,
-                    suite,sid+" true lighting control changes energy") and good
-                checks += 1
-            if gate_area != null and shape != null and visual != null:
-                gate_area.interact(null)
-                await get_tree().physics_frame
-                good = check(shape.disabled and not visual.visible,
-                    suite,sid+" completed investigation physically opens optional hatch") and good
-                checks += 1
-        evidence["levels"][sid] = {"all_ok":good,"checks":checks,
-            "samples":sample_count,"model_instances_expected":rec["models"].size()+2}
-        _free_level(level)
-        await get_tree().process_frame
-    results["district_dev22_evidence"] = evidence
+	var suite := "district_dev22"
+	var raw: Variant = JSON.parse_string(FileAccess.get_file_as_string(
+		"res://data/dev22_narrative_districts.json"))
+	var evidence := {"levels":{}, "scope":"Godot collision-ray, GLB instantiation, actual E callback and optional hatch physics only; no whole-player traversals"}
+	if not check(raw is Dictionary and raw.get("districts", []).size() == 10,
+			suite,"All ten DEV22 site records loaded"):
+		results["district_dev22_evidence"] = evidence
+		return
+	for rec in raw["districts"]:
+		var sid: String = str(rec["id"])
+		var tag: String = str(rec["anchor"])
+		var level: LevelBase = await _instance(sid, 2222)
+		var good := check(level != null, suite, sid+" constructed")
+		var checks := 0
+		var sample_count := 0
+		if level == null:
+			evidence["levels"][sid] = {"all_ok":false,"checks":0,"samples":0}
+			continue
+		var state: Node = level.get_node_or_null("DEV22_DistrictState_"+tag)
+		var group: Node = level.get_node_or_null("DEV22_ExistingGLBDetails_"+tag)
+		good = check(state != null and group != null, suite, sid+" new physical district nodes exist") and good
+		checks += 1
+		var loc: Array = rec["origin"]
+		var x0 := float(loc[0])
+		var ybase := float(loc[1])
+		var z0 := float(loc[2])
+		var rise := float(rec["rise"])
+		var tiers := int(rec["tiers"])
+		var space := level.get_world_3d().direct_space_state
+		await get_tree().physics_frame
+		# Actual floor colliders: test more than one unique real cell per tier.
+		for tier in tiers:
+			var floor: Dictionary = rec["floors"][tier]
+			for idx in [0, floor["cells"].size()-1]:
+				var cell: Array = floor["cells"][idx]
+				var y := ybase+float(tier)*rise
+				var pos := Vector3(x0+(float(cell[0])+0.5)*7.0,y,
+					z0+(float(cell[1])+0.5)*7.0)
+				var hit := _dev17_floor(space,pos,0.9,1.1)
+				var point: Vector3 = hit.get("position",Vector3.ZERO)
+				good = check(not hit.is_empty() and absf(point.y-y)<0.5,
+					suite,sid+" tier%d floor %s ray" % [tier,str(cell)]) and good
+				checks += 1
+				sample_count += 1
+		# The bridge must be real at its centre AND must match the tier-1 door
+		# on the pre-existing DEV20 wing, not stop at an exterior guardrail.
+		var bridge := Vector3(x0+17.5,ybase,z0+35.5)
+		var bhit := _dev17_floor(space,bridge,0.9,1.1)
+		var bridge_contact: Vector3 = bhit.get("position",Vector3.ZERO)
+		good = check(not bhit.is_empty() and absf(bridge_contact.y-ybase)<0.5,
+			suite,sid+" north-bridge collidable surface") and good
+		checks += 1
+		sample_count += 1
+		var terrace := Vector3(x0+10.5,ybase,z0-8.0)
+		var thit := _dev17_floor(space,terrace,0.9,1.1)
+		var terrace_contact: Vector3 = thit.get("position",Vector3.ZERO)
+		good = check(not thit.is_empty() and absf(terrace_contact.y-ybase)<0.5,
+			suite,sid+" distinctive landmark terrace physical floor") and good
+		checks += 1
+		sample_count += 1
+		# Both opposed flights have continuous, collidable sloping surfaces.
+		for tier in tiers-1:
+			var mid_y := ybase+(float(tier)+0.5)*rise
+			for x in [x0-3.1,x0+31.1]:
+				var stair := Vector3(x,mid_y,z0+14.0)
+				var hit := _dev17_floor(space,stair,0.9,1.0)
+				var stair_contact: Vector3 = hit.get("position",Vector3.ZERO)
+				good = check(not hit.is_empty() and absf(stair_contact.y-mid_y)<0.6,
+					suite,sid+" external stair ramp contact tier%d" % tier) and good
+				checks += 1
+				sample_count += 1
+		if group != null:
+			var model_count := 0
+			for child in group.get_children():
+				if child.name.begins_with("GLB_"):
+					model_count += 1
+			good = check(model_count == rec["models"].size()+rec["landmark_models"].size(),
+				suite,sid+" imported GLB scene instances",model_count) and good
+			checks += 1
+		if state != null:
+			var lamps: Array = state.get("signal_lights")
+			var flashes: Array = state.get("ambient_lights")
+			good = check(lamps.size() == tiers and flashes.size() == tiers,
+				suite,sid+" independent per-storey visible lights") and good
+			checks += 1
+			var signals: Array = []
+			var ambient_controls: Array = []
+			var gate_area: Interactable = null
+			for child in level.get_children():
+				if not child is Interactable:
+					continue
+				var it := child as Interactable
+				if it.prompt.begins_with("Record the ") and it.prompt.ends_with(" elevation signal"):
+					if absf(it.position.x-(x0+3.5-1.78))<1.0:
+						signals.append(it)
+				elif it.prompt == "Adjust local environmental lighting":
+					if absf(it.position.x-(x0+24.5+1.74))<1.0:
+						ambient_controls.append(it)
+				elif it.prompt == "Release the optional return hatch":
+					gate_area = it
+			signals.sort_custom(func(a,b): return a.position.y < b.position.y)
+			ambient_controls.sort_custom(func(a,b): return a.position.y < b.position.y)
+			good = check(signals.size()==tiers and ambient_controls.size()==tiers and gate_area!=null,
+				suite,sid+" physical E trigger colliders per storey",[signals.size(),ambient_controls.size()]) and good
+			checks += 1
+			var shape: CollisionShape3D = state.get("gate_shape") as CollisionShape3D
+			var visual: MeshInstance3D = state.get("gate_visual") as MeshInstance3D
+			good = check(shape!=null and visual!=null and not shape.disabled and visual.visible,
+				suite,sid+" optional hatch initially collides") and good
+			checks += 1
+			if gate_area != null:
+				gate_area.interact(null)
+				good = check(not state.get("gate_open"),suite,sid+" hatch remains locked without route observations") and good
+				checks += 1
+			for tier in mini(signals.size(),tiers):
+				(signals[tier] as Interactable).interact(null)
+				good = check(lamps[tier] is OmniLight3D and lamps[tier].light_energy>1.9,
+					suite,sid+" E action illuminates route signal %d" % tier) and good
+				checks += 1
+			if ambient_controls.size()>0:
+				(ambient_controls[0] as Interactable).interact(null)
+				good = check(flashes[0] is OmniLight3D and flashes[0].light_energy>2.3,
+					suite,sid+" true lighting control changes energy") and good
+				checks += 1
+			if gate_area != null and shape != null and visual != null:
+				gate_area.interact(null)
+				await get_tree().physics_frame
+				good = check(shape.disabled and not visual.visible,
+					suite,sid+" completed investigation physically opens optional hatch") and good
+				checks += 1
+		evidence["levels"][sid] = {"all_ok":good,"checks":checks,
+			"samples":sample_count,"model_instances_expected":rec["models"].size()+2}
+		_free_level(level)
+		await get_tree().process_frame
+	results["district_dev22_evidence"] = evidence
 
 # =================================================== DEV23 landmark spur QA
 # Engine-only floor-ray/independent stair/actual E action/GLB/crossbridge checks.
 # A passed suite is NOT a substitute for 100-level human traversal or FPS QA.
 func _dev23_point(raw: Array) -> Vector3:
-    return Vector3(float(raw[0]),float(raw[1]),float(raw[2]))
+	return Vector3(float(raw[0]),float(raw[1]),float(raw[2]))
 
 func _landmark_dev23_suite() -> void:
-    var suite := "landmark_dev23"
-    var raw: Variant = JSON.parse_string(FileAccess.get_file_as_string(
-        "res://data/dev23_landmark_spurs.json"))
-    var evidence := {"levels":{},"scope":"Actual Godot floor/stair rays, 16 GLB instances/site, E interactions and dynamic cross-gallery shape; NOT player-controlled traversal"}
-    if not check(raw is Dictionary and raw.get("sites",[]).size()==10,
-            suite,"DEV23 ten explicit theme sites present"):
-        results["landmark_dev23_evidence"] = evidence
-        return
-    for rec in raw["sites"]:
-        var sid: String = str(rec["id"])
-        var level: LevelBase = await _instance(sid,2323)
-        var good := check(level != null,suite,sid+" constructs")
-        var checks := 0
-        var samples := 0
-        if level == null:
-            evidence["levels"][sid]={"all_ok":false,"checks":0,"samples":0}
-            continue
-        var state: Node = level.get_node_or_null("DEV23_InteractiveRouteState_"+sid)
-        var dressing: Node = level.get_node_or_null("DEV23_ExistingModels_"+sid)
-        good = check(state != null and dressing != null,suite,sid+" landmark nodes exist") and good
-        checks += 1
-        var space := level.get_world_3d().direct_space_state
-        await get_tree().physics_frame
-        var positions: Dictionary = rec["node_positions"]
-        for site in ["hub","west","east"]:
-            var pos := _dev23_point(positions[site])
-            var hit := _dev17_floor(space,pos,0.9,1.1)
-            var collision: Vector3 = hit.get("position",Vector3.ZERO)
-            good = check(not hit.is_empty() and absf(collision.y-pos.y)<0.5,
-                suite,sid+" has real walkable "+site+" floor") and good
-            checks += 1
-            samples += 1
-        if bool(rec["lower"]):
-            var low := _dev23_point(positions["lower"])
-            var lhit := _dev17_floor(space,low,.9,1.1)
-            var lc: Vector3 = lhit.get("position",Vector3.ZERO)
-            good = check(not lhit.is_empty() and absf(lc.y-low.y)<0.5,
-                suite,sid+" collidable lower gallery") and good
-            checks += 1
-            samples += 1
-        var loc: Array = rec["origin"]
-        var mid_z: float = float(loc[2])-34.5
-        var mid_y: float = float(loc[1])+float(rec["rise"])*.5
-        for flank in [-1.0,1.0]:
-            var at := Vector3(float(loc[0])+10.5+flank*4.5,mid_y,mid_z)
-            var hit := _dev17_floor(space,at,.9,1.1)
-            var contact: Vector3 = hit.get("position",Vector3.ZERO)
-            good = check(not hit.is_empty() and absf(contact.y-mid_y)<0.6,
-                suite,sid+" independent upper stair ramp") and good
-            checks += 1
-            samples += 1
-        if bool(rec["lower"]):
-            var low_mid := Vector3(float(loc[0])+10.5-15,
-                float(loc[1])-float(rec["rise"])*.5,float(loc[2])-21)
-            var hit := _dev17_floor(space,low_mid,.9,1.1)
-            var point: Vector3 = hit.get("position",Vector3.ZERO)
-            good = check(not hit.is_empty() and absf(point.y-low_mid.y)<0.6,
-                suite,sid+" lower stair physical ramp") and good
-            checks += 1
-            samples += 1
-        if dressing != null:
-            var instances := 0
-            for child in dressing.get_children():
-                if child.name.begins_with("GLB_"):
-                    instances+=1
-            good = check(instances==rec["props"].size(),suite,
-                sid+" loaded all existing GLB model instances",instances) and good
-            checks += 1
-        if state != null:
-            var lights: Array = state.get("lights")
-            var shape: CollisionShape3D = state.get("bridge_collision") as CollisionShape3D
-            var visual: MeshInstance3D = state.get("bridge_mesh") as MeshInstance3D
-            good = check(lights.size()==3 and shape != null and visual != null,
-                suite,sid+" physical lights and switchable cross-gallery") and good
-            checks += 1
-            good = check(shape!=null and visual!=null and shape.disabled and not visual.visible,
-                suite,sid+" optional bridge physically absent initially") and good
-            checks += 1
-            var triggers: Array = []
-            var switch_area: Interactable = null
-            for child in level.get_children():
-                if not child is Interactable:
-                    continue
-                var area := child as Interactable
-                if area.prompt.begins_with("Survey the "):
-                    triggers.append(area)
-                elif area.prompt=="Operate the optional return crossing":
-                    switch_area=area
-            good = check(triggers.size()==3 and switch_area!=null,
-                suite,sid+" exactly three survey E triggers and one return control",triggers.size()) and good
-            checks += 1
-            if switch_area != null:
-                switch_area.interact(null)
-                good = check(not state.get("bridge_live"),suite,
-                    sid+" crossing stays unavailable before survey") and good
-                checks += 1
-            for trigger in triggers:
-                (trigger as Interactable).interact(null)
-            await get_tree().physics_frame
-            good = check(not state.get("marked").has(false) and state.get("bridge_live") and
-                shape!=null and not shape.disabled and visual!=null and visual.visible,
-                suite,sid+" E actions energize real bridge and its collision") and good
-            checks += 1
-            var cross := Vector3(float(loc[0])+10.5,mid_y+float(rec["rise"])*.5,
-                float(loc[2])-45)
-            var bhit := _dev17_floor(space,cross,.9,1.1)
-            var bridge_hit_point: Vector3 = bhit.get("position",Vector3.ZERO)
-            good = check(not bhit.is_empty() and absf(bridge_hit_point.y-cross.y)<.55,
-                suite,sid+" powered bridge has central walkable collider") and good
-            checks += 1
-            samples += 1
-        evidence["levels"][sid] = {"all_ok":good,"checks":checks,
-            "samples":samples,"expected_models":rec["props"].size()}
-        _free_level(level)
-        await get_tree().process_frame
-    results["landmark_dev23_evidence"] = evidence
+	var suite := "landmark_dev23"
+	var raw: Variant = JSON.parse_string(FileAccess.get_file_as_string(
+		"res://data/dev23_landmark_spurs.json"))
+	var evidence := {"levels":{},"scope":"Actual Godot floor/stair rays, 16 GLB instances/site, E interactions and dynamic cross-gallery shape; NOT player-controlled traversal"}
+	if not check(raw is Dictionary and raw.get("sites",[]).size()==10,
+			suite,"DEV23 ten explicit theme sites present"):
+		results["landmark_dev23_evidence"] = evidence
+		return
+	for rec in raw["sites"]:
+		var sid: String = str(rec["id"])
+		var level: LevelBase = await _instance(sid,2323)
+		var good := check(level != null,suite,sid+" constructs")
+		var checks := 0
+		var samples := 0
+		if level == null:
+			evidence["levels"][sid]={"all_ok":false,"checks":0,"samples":0}
+			continue
+		var state: Node = level.get_node_or_null("DEV23_InteractiveRouteState_"+sid)
+		var dressing: Node = level.get_node_or_null("DEV23_ExistingModels_"+sid)
+		good = check(state != null and dressing != null,suite,sid+" landmark nodes exist") and good
+		checks += 1
+		var space := level.get_world_3d().direct_space_state
+		await get_tree().physics_frame
+		var positions: Dictionary = rec["node_positions"]
+		for site in ["hub","west","east"]:
+			var pos := _dev23_point(positions[site])
+			var hit := _dev17_floor(space,pos,0.9,1.1)
+			var collision: Vector3 = hit.get("position",Vector3.ZERO)
+			good = check(not hit.is_empty() and absf(collision.y-pos.y)<0.5,
+				suite,sid+" has real walkable "+site+" floor") and good
+			checks += 1
+			samples += 1
+		if bool(rec["lower"]):
+			var low := _dev23_point(positions["lower"])
+			var lhit := _dev17_floor(space,low,.9,1.1)
+			var lc: Vector3 = lhit.get("position",Vector3.ZERO)
+			good = check(not lhit.is_empty() and absf(lc.y-low.y)<0.5,
+				suite,sid+" collidable lower gallery") and good
+			checks += 1
+			samples += 1
+		var loc: Array = rec["origin"]
+		var mid_z: float = float(loc[2])-34.5
+		var mid_y: float = float(loc[1])+float(rec["rise"])*.5
+		for flank in [-1.0,1.0]:
+			var at := Vector3(float(loc[0])+10.5+flank*4.5,mid_y,mid_z)
+			var hit := _dev17_floor(space,at,.9,1.1)
+			var contact: Vector3 = hit.get("position",Vector3.ZERO)
+			good = check(not hit.is_empty() and absf(contact.y-mid_y)<0.6,
+				suite,sid+" independent upper stair ramp") and good
+			checks += 1
+			samples += 1
+		if bool(rec["lower"]):
+			var low_mid := Vector3(float(loc[0])+10.5-15,
+				float(loc[1])-float(rec["rise"])*.5,float(loc[2])-21)
+			var hit := _dev17_floor(space,low_mid,.9,1.1)
+			var point: Vector3 = hit.get("position",Vector3.ZERO)
+			good = check(not hit.is_empty() and absf(point.y-low_mid.y)<0.6,
+				suite,sid+" lower stair physical ramp") and good
+			checks += 1
+			samples += 1
+		if dressing != null:
+			var instances := 0
+			for child in dressing.get_children():
+				if child.name.begins_with("GLB_"):
+					instances+=1
+			good = check(instances==rec["props"].size(),suite,
+				sid+" loaded all existing GLB model instances",instances) and good
+			checks += 1
+		if state != null:
+			var lights: Array = state.get("lights")
+			var shape: CollisionShape3D = state.get("bridge_collision") as CollisionShape3D
+			var visual: MeshInstance3D = state.get("bridge_mesh") as MeshInstance3D
+			good = check(lights.size()==3 and shape != null and visual != null,
+				suite,sid+" physical lights and switchable cross-gallery") and good
+			checks += 1
+			good = check(shape!=null and visual!=null and shape.disabled and not visual.visible,
+				suite,sid+" optional bridge physically absent initially") and good
+			checks += 1
+			var triggers: Array = []
+			var switch_area: Interactable = null
+			for child in level.get_children():
+				if not child is Interactable:
+					continue
+				var area := child as Interactable
+				if area.prompt.begins_with("Survey the "):
+					triggers.append(area)
+				elif area.prompt=="Operate the optional return crossing":
+					switch_area=area
+			good = check(triggers.size()==3 and switch_area!=null,
+				suite,sid+" exactly three survey E triggers and one return control",triggers.size()) and good
+			checks += 1
+			if switch_area != null:
+				switch_area.interact(null)
+				good = check(not state.get("bridge_live"),suite,
+					sid+" crossing stays unavailable before survey") and good
+				checks += 1
+			for trigger in triggers:
+				(trigger as Interactable).interact(null)
+			await get_tree().physics_frame
+			good = check(not state.get("marked").has(false) and state.get("bridge_live") and
+				shape!=null and not shape.disabled and visual!=null and visual.visible,
+				suite,sid+" E actions energize real bridge and its collision") and good
+			checks += 1
+			var cross := Vector3(float(loc[0])+10.5,mid_y+float(rec["rise"])*.5,
+				float(loc[2])-45)
+			var bhit := _dev17_floor(space,cross,.9,1.1)
+			var bridge_hit_point: Vector3 = bhit.get("position",Vector3.ZERO)
+			good = check(not bhit.is_empty() and absf(bridge_hit_point.y-cross.y)<.55,
+				suite,sid+" powered bridge has central walkable collider") and good
+			checks += 1
+			samples += 1
+		evidence["levels"][sid] = {"all_ok":good,"checks":checks,
+			"samples":samples,"expected_models":rec["props"].size()}
+		_free_level(level)
+		await get_tree().process_frame
+	results["landmark_dev23_evidence"] = evidence
 
 # ================================================ DEV24 expedition Godot QA
 # This is a real runtime physics + Interactable E callback test. It tests 100
 # physical decks, 10 stairs and 10 optional dynamic crossings, but NOT a human
 # traversal playthrough nor GPU framerate on Windows.
 func _expedition_dev24_suite() -> void:
-    var suite := "expedition_dev24"
-    var raw: Variant = JSON.parse_string(FileAccess.get_file_as_string(
-        "res://data/dev24_expeditions.json"))
-    var evidence := {"levels":{},"scope":"Native headless Godot: floor/stair collision, physical entrance, imported GLBs, E control of 3 lights and optional safe bridge. Human FPS and traversal pending."}
-    if not check(raw is Dictionary and raw.get("sites",[]).size()==10,
-            suite,"DEV24 ten distinct biome manifests loaded"):
-        results["expedition_dev24_evidence"] = evidence
-        return
-    for rec in raw["sites"]:
-        var sid := str(rec["id"])
-        var level: LevelBase = await _instance(sid,2424)
-        var good := check(level!=null,suite,sid+" loads without runtime errors")
-        var checks := 0
-        var samples := 0
-        if level==null:
-            evidence["levels"][sid]={"all_ok":false,"checks":0,"samples":0}
-            continue
-        var state: Node = level.get_node_or_null("DEV24_ExpeditionState_"+sid)
-        var dress: Node = level.get_node_or_null("DEV24_ExistingGLB_"+sid)
-        good = check(state!=null and dress!=null,suite,sid+" state and local GLB decoration instanced") and good
-        checks+=1
-        var space := level.get_world_3d().direct_space_state
-        await get_tree().physics_frame
-        var node_positions: Dictionary = rec["nodes"]
-        for key in node_positions:
-            var pos := _dev23_point(node_positions[key])
-            var hit := _dev17_floor(space,pos,1.1,1.4)
-            var y: Vector3 = hit.get("position",Vector3.ZERO)
-            good = check(not hit.is_empty() and absf(y.y-pos.y)<.48,
-                suite,sid+" has genuine colliding platform "+str(key)) and good
-            checks+=1
-            samples+=1
-        # A floor ray at the connection from DEV23's east gallery to b0.
-        var gallery := _dev23_point(rec["entry_gallery"])
-        var base := _dev23_point(node_positions["b0"])
-        var corridor_pos := (gallery+base)*.5
-        var corridor_hit := _dev17_floor(space,corridor_pos,1.1,1.4)
-        var cp: Vector3 = corridor_hit.get("position",Vector3.ZERO)
-        good = check(not corridor_hit.is_empty() and absf(cp.y-base.y)<.48,
-            suite,sid+" physically connected from dev23 gallery") and good
-        checks+=1
-        samples+=1
-        for link in rec["links"]:
-            if str(link["kind"])!="stair":
-                continue
-            var low := _dev23_point(node_positions[str(link["a"])])
-            var high := _dev23_point(node_positions[str(link["b"])])
-            var ramp_at := (low+high)*.5-Vector3.RIGHT*1.0
-            var ramp_hit := _dev17_floor(space,ramp_at,.9,1.3)
-            var rp: Vector3 = ramp_hit.get("position",Vector3.ZERO)
-            good = check(not ramp_hit.is_empty() and absf(rp.y-ramp_at.y)<.65,
-                suite,sid+" physical 21m gradual ascent") and good
-            checks+=1
-            samples+=1
-        if dress != null:
-            var instances := 0
-            for child in dress.get_children():
-                if child.name.begins_with("GLB_"):
-                    instances+=1
-            good = check(instances==rec["props"].size(),suite,
-                sid+" existing models actually load and instantiate",instances) and good
-            checks+=1
-        if state != null:
-            var floor_shape: CollisionShape3D = state.get("floor_shape") as CollisionShape3D
-            var floor_mesh: MeshInstance3D = state.get("floor_mesh") as MeshInstance3D
-            var rails: Array = state.get("barriers")
-            var lights: Array = state.get("lamps")
-            good = check(floor_shape!=null and floor_mesh!=null and lights.size()==3 and rails.size()==2,
-                suite,sid+" real switchable physics, safety rails and three panel lights") and good
-            checks+=1
-            if floor_shape!=null and floor_mesh!=null:
-                good = check(floor_shape.disabled and not floor_mesh.visible,
-                    suite,sid+" optional bridge begins physically OFF") and good
-                checks+=1
-            var markers: Array = []
-            var manual: Interactable = null
-            var lighting: Array = []
-            for child in level.get_children():
-                if not child is Interactable:
-                    continue
-                var it: Interactable = child as Interactable
-                if it.prompt=="Map the local expedition marker":markers.append(it)
-                if it.prompt=="Operate the alternate physical crossing":manual=it
-                if it.prompt=="Toggle local observation lights":lighting.append(it)
-            good = check(markers.size()==3 and manual!=null and lighting.size()==2,
-                suite,sid+" has 3 mapping E zones, bridge control and 2 light switches") and good
-            checks+=1
-            if manual!=null:
-                manual.interact(null)
-                good = check(not state.get("bridge_active"),suite,
-                    sid+" manual bridge remains locked before surveys") and good
-                checks+=1
-            for toggle in lighting:
-                (toggle as Interactable).interact(null)
-            var local: Array = state.get("ambient_lamps")
-            good = check(local.size()==2 and local[0].light_energy>1.0 and local[1].light_energy>1.0,
-                suite,sid+" E action changes actual local lights") and good
-            checks+=1
-            for marker in markers:
-                (marker as Interactable).interact(null)
-            await get_tree().physics_frame
-            good = check(not state.get("surveyed").has(false) and state.get("bridge_active") and
-                floor_shape!=null and not floor_shape.disabled and floor_mesh!=null and floor_mesh.visible,
-                suite,sid+" three E actions unlock visible + colliding crossing") and good
-            checks+=1
-            var opt: Array = rec["optional_edge"]
-            var a := _dev23_point(node_positions[str(opt[0])])
-            var b := _dev23_point(node_positions[str(opt[1])])
-            var cross := (a+b)*.5
-            var cross_hit := _dev17_floor(space,cross,1.0,1.5)
-            var hp: Vector3 = cross_hit.get("position",Vector3.ZERO)
-            good = check(not cross_hit.is_empty() and absf(hp.y-cross.y)<.55,
-                suite,sid+" unlocked return bridge supports physics ray") and good
-            checks+=1
-            samples+=1
-        evidence["levels"][sid]={"all_ok":good,"checks":checks,"samples":samples,
-            "loaded_glb_recipes":rec["props"].size()}
-        _free_level(level)
-        await get_tree().process_frame
-    results["expedition_dev24_evidence"] = evidence
+	var suite := "expedition_dev24"
+	var raw: Variant = JSON.parse_string(FileAccess.get_file_as_string(
+		"res://data/dev24_expeditions.json"))
+	var evidence := {"levels":{},"scope":"Native headless Godot: floor/stair collision, physical entrance, imported GLBs, E control of 3 lights and optional safe bridge. Human FPS and traversal pending."}
+	if not check(raw is Dictionary and raw.get("sites",[]).size()==10,
+			suite,"DEV24 ten distinct biome manifests loaded"):
+		results["expedition_dev24_evidence"] = evidence
+		return
+	for rec in raw["sites"]:
+		var sid := str(rec["id"])
+		var level: LevelBase = await _instance(sid,2424)
+		var good := check(level!=null,suite,sid+" loads without runtime errors")
+		var checks := 0
+		var samples := 0
+		if level==null:
+			evidence["levels"][sid]={"all_ok":false,"checks":0,"samples":0}
+			continue
+		var state: Node = level.get_node_or_null("DEV24_ExpeditionState_"+sid)
+		var dress: Node = level.get_node_or_null("DEV24_ExistingGLB_"+sid)
+		good = check(state!=null and dress!=null,suite,sid+" state and local GLB decoration instanced") and good
+		checks+=1
+		var space := level.get_world_3d().direct_space_state
+		await get_tree().physics_frame
+		var node_positions: Dictionary = rec["nodes"]
+		for key in node_positions:
+			var pos := _dev23_point(node_positions[key])
+			var hit := _dev17_floor(space,pos,1.1,1.4)
+			var y: Vector3 = hit.get("position",Vector3.ZERO)
+			good = check(not hit.is_empty() and absf(y.y-pos.y)<.48,
+				suite,sid+" has genuine colliding platform "+str(key)) and good
+			checks+=1
+			samples+=1
+		# A floor ray at the connection from DEV23's east gallery to b0.
+		var gallery := _dev23_point(rec["entry_gallery"])
+		var base := _dev23_point(node_positions["b0"])
+		var corridor_pos := (gallery+base)*.5
+		var corridor_hit := _dev17_floor(space,corridor_pos,1.1,1.4)
+		var cp: Vector3 = corridor_hit.get("position",Vector3.ZERO)
+		good = check(not corridor_hit.is_empty() and absf(cp.y-base.y)<.48,
+			suite,sid+" physically connected from dev23 gallery") and good
+		checks+=1
+		samples+=1
+		for link in rec["links"]:
+			if str(link["kind"])!="stair":
+				continue
+			var low := _dev23_point(node_positions[str(link["a"])])
+			var high := _dev23_point(node_positions[str(link["b"])])
+			var ramp_at := (low+high)*.5-Vector3.RIGHT*1.0
+			var ramp_hit := _dev17_floor(space,ramp_at,.9,1.3)
+			var rp: Vector3 = ramp_hit.get("position",Vector3.ZERO)
+			good = check(not ramp_hit.is_empty() and absf(rp.y-ramp_at.y)<.65,
+				suite,sid+" physical 21m gradual ascent") and good
+			checks+=1
+			samples+=1
+		if dress != null:
+			var instances := 0
+			for child in dress.get_children():
+				if child.name.begins_with("GLB_"):
+					instances+=1
+			good = check(instances==rec["props"].size(),suite,
+				sid+" existing models actually load and instantiate",instances) and good
+			checks+=1
+		if state != null:
+			var floor_shape: CollisionShape3D = state.get("floor_shape") as CollisionShape3D
+			var floor_mesh: MeshInstance3D = state.get("floor_mesh") as MeshInstance3D
+			var rails: Array = state.get("barriers")
+			var lights: Array = state.get("lamps")
+			good = check(floor_shape!=null and floor_mesh!=null and lights.size()==3 and rails.size()==2,
+				suite,sid+" real switchable physics, safety rails and three panel lights") and good
+			checks+=1
+			if floor_shape!=null and floor_mesh!=null:
+				good = check(floor_shape.disabled and not floor_mesh.visible,
+					suite,sid+" optional bridge begins physically OFF") and good
+				checks+=1
+			var markers: Array = []
+			var manual: Interactable = null
+			var lighting: Array = []
+			for child in level.get_children():
+				if not child is Interactable:
+					continue
+				var it: Interactable = child as Interactable
+				if it.prompt=="Map the local expedition marker":markers.append(it)
+				if it.prompt=="Operate the alternate physical crossing":manual=it
+				if it.prompt=="Toggle local observation lights":lighting.append(it)
+			good = check(markers.size()==3 and manual!=null and lighting.size()==2,
+				suite,sid+" has 3 mapping E zones, bridge control and 2 light switches") and good
+			checks+=1
+			if manual!=null:
+				manual.interact(null)
+				good = check(not state.get("bridge_active"),suite,
+					sid+" manual bridge remains locked before surveys") and good
+				checks+=1
+			for toggle in lighting:
+				(toggle as Interactable).interact(null)
+			var local: Array = state.get("ambient_lamps")
+			good = check(local.size()==2 and local[0].light_energy>1.0 and local[1].light_energy>1.0,
+				suite,sid+" E action changes actual local lights") and good
+			checks+=1
+			for marker in markers:
+				(marker as Interactable).interact(null)
+			await get_tree().physics_frame
+			good = check(not state.get("surveyed").has(false) and state.get("bridge_active") and
+				floor_shape!=null and not floor_shape.disabled and floor_mesh!=null and floor_mesh.visible,
+				suite,sid+" three E actions unlock visible + colliding crossing") and good
+			checks+=1
+			var opt: Array = rec["optional_edge"]
+			var a := _dev23_point(node_positions[str(opt[0])])
+			var b := _dev23_point(node_positions[str(opt[1])])
+			var cross := (a+b)*.5
+			var cross_hit := _dev17_floor(space,cross,1.0,1.5)
+			var hp: Vector3 = cross_hit.get("position",Vector3.ZERO)
+			good = check(not cross_hit.is_empty() and absf(hp.y-cross.y)<.55,
+				suite,sid+" unlocked return bridge supports physics ray") and good
+			checks+=1
+			samples+=1
+		evidence["levels"][sid]={"all_ok":good,"checks":checks,"samples":samples,
+			"loaded_glb_recipes":rec["props"].size()}
+		_free_level(level)
+		await get_tree().process_frame
+	results["expedition_dev24_evidence"] = evidence

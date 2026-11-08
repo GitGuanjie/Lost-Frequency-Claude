@@ -50,7 +50,7 @@ static func _walk(k: GeoKit, a: Vector3, b: Vector3, mat: String, accent: String
         k.slab(mid.x-1.6,minf(start.z,end.z),mid.x+1.6,maxf(start.z,end.z),a.y,.25,mat)
     var length := distance-8.0
     for sign in [-1.0,1.0]:
-        var lateral := Vector3(-dir.z,0,dir.x)*1.68*sign
+        var lateral: Vector3 = Vector3(-dir.z,0,dir.x)*1.68*sign
         k.box(mid+lateral+Vector3(0,.62,0),
             Vector3(length,1.24,.12) if across_z else Vector3(.12,1.24,length),accent)
 
@@ -68,7 +68,7 @@ static func _connector(k: GeoKit, entry: Vector3, first: Vector3, mat: String, a
     else:
         k.slab(mid.x-1.6,minf(begin.z,finish.z),mid.x+1.6,maxf(begin.z,finish.z),entry.y,.25,mat)
     for sign in [-1.0,1.0]:
-        var lateral := Vector3(-dir.z,0,dir.x)*1.7*sign
+        var lateral: Vector3 = Vector3(-dir.z,0,dir.x)*1.7*sign
         k.box(mid+lateral+Vector3(0,.61,0),
             Vector3(length,1.22,.12) if along_x else Vector3(.12,1.22,length),accent)
 
@@ -83,7 +83,7 @@ static func _stair(k: GeoKit, low: Vector3, high: Vector3, mat: String, accent: 
         var t := (float(step)+.5)/5.0
         var mid := base+dir*(run*t)+Vector3(0,3.5*t+.65,0)
         for sign in [-1.0,1.0]:
-            var lateral := Vector3(-dir.z,0,dir.x)*1.52*sign
+            var lateral: Vector3 = Vector3(-dir.z,0,dir.x)*1.52*sign
             k.box_xf(Transform3D(Basis(Vector3.UP,0),mid+lateral),
                 Vector3(3.9,1.3,.13) if absf(dir.x)>.5 else Vector3(.13,1.3,3.9),accent,GeoKit.ALL,false)
 
