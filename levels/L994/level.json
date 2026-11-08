@@ -2,29 +2,50 @@
   "stable_id": "L994",
   "scene": "res://levels/L994/L994.tscn",
   "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003 23/23 each; bot fired L994>EXT#1); stills reviewed by builder (AI); integrator review pending",
   "procedural": true,
   "arrivals": [
-    "start"
+    "start",
+    "from_L011",
+    "from_L221",
+    "from_L422"
   ],
-  "signature": "Tidal beach surrounded by rock mountains; east-facing anomalous sea",
+  "signature": "A clean, empty beach facing a clear east sea inside a ring of mountains; the waves sound wrong up close, and when the beach fogs over the tide comes for whoever is still on it",
   "mechanics": [
-    "irregular_tide",
-    "nonhostile_unnerving_sea",
-    "return_before_tide"
+    "irregular_tide_clock",
+    "proximity_sea_distortion_15_30_40m",
+    "fog_then_flood_race",
+    "iron_exist_gate_return",
+    "pebble_without_splash",
+    "clear_water_debris_testimony"
   ],
   "exits": [
     {
       "id": "L994>EXT#1",
-      "to": "EXT",
-      "basis": "SOURCE",
+      "to": "@origin",
+      "to_label": "Where you came from (Level 11, 221 or 422)",
+      "trigger": "interact",
+      "trigger_type": "timed",
+      "label": "Went back through the iron gate engraved EXIST before the tide came",
       "confidence": "CONDITIONAL+DANGEROUS",
+      "basis": "SOURCE",
+      "source_section": "Entrances And Exits",
       "method": "Return through the entrance before the tide arrives",
       "source_quote": "Please just go back to where you came from, the tide is coming",
       "source_url": "https://backrooms-wiki.wikidot.com/level-994",
-      "trigger_type": "timed"
+      "conditions": "only while the gate ledge is above the water",
+      "hint": "West, in a gorge in the mountain: iron bars that creak in the wind.",
+      "arrival": "from_L994"
     }
   ],
-  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
-  "entity_policy": "NO ENTITY PER SOURCE (article: no entities exist); sea faces only as unverified audio testimony"
+  "notes": "SOURCE: east-facing beach, mountains on all other sides, no plants/animals/structures, irregular flood and ebb tides, iron gate engraved EXIST as the entrance, entrance on the west mountain (audio log), clean beach without tools, pebbles, north end is a cliff of nothing but sand, wave sound that turns into machines/tracks/jets/talking/crying/praying near the water, clear water with rust, building debris and daily necessities, safe distances 15/30/40 m, sudden fog then the tide, 'go back to where you came from'. ADAPTATION: bay scaled to ~0.6 x 0.2 km (page: up to ~20 km2 at ebb), closed by a mountain ring and headlands with the open sea to the east (sea plane to the horizon, haze); a gorge with a 13 % slope climbs to the gate ledge (~7.6 m, second walkable height); the gate's stone piers, M.E.G. notice wired to it and the creak that guides you in fog are ours; tide = noise-driven sea level between -0.6 and +0.55 m, one flood event triggered by standing within 3 m of the water (as in the audio log) or after an irregular 6-12 min, 32 s haze then a flood that accelerates to ~0.19 m/s up to +11 m; drowning when water is 1.15 m above the feet during the flood; the pebble interaction mirrors the log's missing splash; terrain uses CC0 Poly Haven coast_sand_01 / aerial_rocks_02 textures through a level shader. QA fixture: the flood never starts in QA mode; the gate exit is ~8 m from start.",
+  "entity_policy": "NO ENTITY PER SOURCE ('no entities exist in this level'). The faces in the sea are TESTIMONY from an audio log of unverifiable authenticity: they are never modelled, only heard (whispers under the surf) and described in a caption when the player stands within 3 m of the water. No Jeff Brook NPC.",
+  "fail_states": [
+    {
+      "kind": "drowning",
+      "label": "Caught on the beach when the flood tide arrives",
+      "basis": "SOURCE",
+      "source_quote": "you must leave before the tide comes"
+    }
+  ]
 }
