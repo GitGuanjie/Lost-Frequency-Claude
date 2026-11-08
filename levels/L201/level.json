@@ -1,0 +1,73 @@
+{
+  "stable_id": "L201",
+  "scene": "res://levels/L201/L201.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "UNVERIFIED Godot import, walker, GPU capture and human review pending",
+  "procedural": false,
+  "arrivals": [
+    "start",
+    "from_L001",
+    "from_L011",
+    "from_L025"
+  ],
+  "signature": "A surreal sand sea between violet city towers and a fixed horizontal sunset, with selectable Trench escape links.",
+  "mechanics": [
+    "permanent_sunset",
+    "white_sky_grid",
+    "city_and_ocean",
+    "selectable_trench_links",
+    "audio_ambience"
+  ],
+  "exits": [
+    {
+      "id": "L201>L001#3",
+      "to": "L001",
+      "trigger": "interact",
+      "label": "Trench link to Level 1",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "source_section": "Dated canonical snapshot; exits",
+      "source_quote": "Safe Trench hyperlink",
+      "arrival": "from_L201",
+      "hint": "Trench link to Level 1"
+    },
+    {
+      "id": "L201>L003#4",
+      "to": "L003",
+      "trigger": "interact",
+      "label": "Trench link to Level 3",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "source_section": "Dated canonical snapshot; exits",
+      "source_quote": "Safe Trench hyperlink",
+      "arrival": "from_L201",
+      "hint": "Trench link to Level 3"
+    },
+    {
+      "id": "L201>L004#5",
+      "to": "L004",
+      "trigger": "interact",
+      "label": "Trench link to Level 4",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "source_section": "Dated canonical snapshot; exits",
+      "source_quote": "Safe Trench hyperlink",
+      "arrival": "from_L201",
+      "hint": "Trench link to Level 4"
+    },
+    {
+      "id": "L201>L025#8",
+      "to": "L025",
+      "trigger": "interact",
+      "label": "Trench link to Level 25",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "source_section": "Dated canonical snapshot; exits",
+      "source_quote": "Safe Trench hyperlink or arcade cabinet noclip",
+      "arrival": "from_L201",
+      "hint": "Trench link to Level 25"
+    }
+  ],
+  "entity_policy": "Source Tune-Out not implemented, no unsubstantiated AI entities",
+  "notes": "ADAPTATION: 420m curated world and four working Trench links only. The enormous sun and grid are scenic, not celestial physics. Music is synthesized original ambience, not existing copyrighted work. Canon: docs/canon/levels/L201.md; authors credited there under CC BY-SA 3.0. Not yet PLAYABLE."
+}

@@ -1,0 +1,2157 @@
+{
+  "schema": "lf.dev23.landmark_spurs.v1",
+  "version": "1.5.0-dev23",
+  "source": "Prior dev22 curated themes and owned Kenney GLB resources; original gameplay adaptations",
+  "sites": [
+    {
+      "id": "L028",
+      "anchor": "StormstoneUpperShelves",
+      "style": "keep_forge",
+      "title": "Stormstone lower forge and blue watch bridge",
+      "origin": [
+        92.5,
+        7.0,
+        -92.0
+      ],
+      "rise": 3.5,
+      "lower": true,
+      "mat": "l28_blue",
+      "accent": "l28_iron",
+      "open_air": false,
+      "discovery": "Beyond the keep, blue metalwork records the storm rather than stopping it.",
+      "ambient_caption": "Metal echoes from the abandoned forge.",
+      "sound": "pipe_clank",
+      "props": [
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": 5,
+          "pack": "mini-dungeon",
+          "model": "banner",
+          "height": 1.7,
+          "yaw": 308
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": 5,
+          "pack": "mini-dungeon",
+          "model": "chair",
+          "height": 1.7,
+          "yaw": 355
+        },
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": 1.0,
+          "pack": "mini-dungeon",
+          "model": "wood-structure",
+          "height": 1.7,
+          "yaw": 42
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": 1.0,
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "height": 1.4,
+          "yaw": 89
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": -4.55,
+          "pack": "mini-dungeon",
+          "model": "column",
+          "height": 1.7,
+          "yaw": 136
+        },
+        {
+          "site": "west",
+          "dx": 4.55,
+          "dz": -4.55,
+          "pack": "mini-dungeon",
+          "model": "chest",
+          "height": 1.7,
+          "yaw": 183
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": 4.55,
+          "pack": "furniture-kit",
+          "model": "radio",
+          "height": 1.4126,
+          "yaw": 230
+        },
+        {
+          "site": "west",
+          "dx": 4.55,
+          "dz": 4.55,
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "height": 1.7,
+          "yaw": 277
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": -3.85,
+          "pack": "mini-dungeon",
+          "model": "banner",
+          "height": 1.7,
+          "yaw": 324
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": -4.55,
+          "pack": "mini-dungeon",
+          "model": "chair",
+          "height": 1.7,
+          "yaw": 11
+        },
+        {
+          "site": "east",
+          "dx": -4.55,
+          "dz": -4.55,
+          "pack": "mini-dungeon",
+          "model": "wood-structure",
+          "height": 1.7,
+          "yaw": 58
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": 4.55,
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "height": 1.4,
+          "yaw": 105
+        },
+        {
+          "site": "east",
+          "dx": -4.55,
+          "dz": 4.55,
+          "pack": "mini-dungeon",
+          "model": "column",
+          "height": 1.7,
+          "yaw": 152
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": 3.85,
+          "pack": "mini-dungeon",
+          "model": "chest",
+          "height": 1.7,
+          "yaw": 199
+        },
+        {
+          "site": "lower",
+          "dx": -4.5,
+          "dz": -1.0,
+          "pack": "furniture-kit",
+          "model": "radio",
+          "height": 1.4126,
+          "yaw": 246
+        },
+        {
+          "site": "lower",
+          "dx": 4.5,
+          "dz": -1.0,
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "height": 1.7,
+          "yaw": 293
+        }
+      ],
+      "links": [
+        [
+          "old_vista",
+          "hub",
+          "walk"
+        ],
+        [
+          "hub",
+          "west",
+          "stair"
+        ],
+        [
+          "hub",
+          "east",
+          "stair"
+        ],
+        [
+          "hub",
+          "lower",
+          "stair"
+        ],
+        [
+          "west",
+          "east",
+          "unlockable_bridge"
+        ]
+      ],
+      "node_positions": {
+        "old_vista": [
+          103.0,
+          7.0,
+          -103.0
+        ],
+        "hub": [
+          103.0,
+          7.0,
+          -111.0
+        ],
+        "west": [
+          88.5,
+          10.5,
+          -137.0
+        ],
+        "east": [
+          117.5,
+          10.5,
+          -137.0
+        ],
+        "lower": [
+          71.5,
+          3.5,
+          -113.0
+        ]
+      }
+    },
+    {
+      "id": "L032",
+      "anchor": "NightCanopyBranchedWalk",
+      "style": "canopy",
+      "title": "The suspended bone-canopy passage",
+      "origin": [
+        112.5,
+        6.8,
+        -17.0
+      ],
+      "rise": 3.4,
+      "lower": false,
+      "mat": "d7_trunk",
+      "accent": "d7_bone",
+      "open_air": true,
+      "discovery": "A pale marker hangs where the canopy should open to the sky.",
+      "ambient_caption": "Wood creaks above the skeleton-dark forest.",
+      "sound": "creak",
+      "props": [
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": 5,
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 1.7,
+          "yaw": 352
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": 5,
+          "pack": "graveyard-kit",
+          "model": "fence-damaged",
+          "height": 1.2092,
+          "yaw": 39
+        },
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": 1.0,
+          "pack": "graveyard-kit",
+          "model": "lightpost-single",
+          "height": 1.7,
+          "yaw": 86
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": 1.0,
+          "pack": "graveyard-kit",
+          "model": "grave",
+          "height": 0.2828,
+          "yaw": 133
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": -4.55,
+          "pack": "nature-kit",
+          "model": "rock-tallc",
+          "height": 1.7,
+          "yaw": 180
+        },
+        {
+          "site": "west",
+          "dx": 4.55,
+          "dz": -4.55,
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "height": 0.9728,
+          "yaw": 227
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": 4.55,
+          "pack": "graveyard-kit",
+          "model": "debris",
+          "height": 0.6414,
+          "yaw": 274
+        },
+        {
+          "site": "west",
+          "dx": 4.55,
+          "dz": 4.55,
+          "pack": "graveyard-kit",
+          "model": "stone-wall-damaged",
+          "height": 1.4137,
+          "yaw": 321
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": -3.85,
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 1.7,
+          "yaw": 8
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": -4.55,
+          "pack": "graveyard-kit",
+          "model": "fence-damaged",
+          "height": 1.2092,
+          "yaw": 55
+        },
+        {
+          "site": "east",
+          "dx": -4.55,
+          "dz": -4.55,
+          "pack": "graveyard-kit",
+          "model": "lightpost-single",
+          "height": 1.7,
+          "yaw": 102
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": 4.55,
+          "pack": "graveyard-kit",
+          "model": "grave",
+          "height": 0.2828,
+          "yaw": 149
+        },
+        {
+          "site": "east",
+          "dx": -4.55,
+          "dz": 4.55,
+          "pack": "nature-kit",
+          "model": "rock-tallc",
+          "height": 1.7,
+          "yaw": 196
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": 3.85,
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "height": 0.9728,
+          "yaw": 243
+        },
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": -1.0,
+          "pack": "graveyard-kit",
+          "model": "debris",
+          "height": 0.6414,
+          "yaw": 290
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": -1.0,
+          "pack": "graveyard-kit",
+          "model": "stone-wall-damaged",
+          "height": 1.4137,
+          "yaw": 337
+        }
+      ],
+      "links": [
+        [
+          "old_vista",
+          "hub",
+          "walk"
+        ],
+        [
+          "hub",
+          "west",
+          "stair"
+        ],
+        [
+          "hub",
+          "east",
+          "stair"
+        ],
+        [
+          "west",
+          "east",
+          "unlockable_bridge"
+        ]
+      ],
+      "node_positions": {
+        "old_vista": [
+          123.0,
+          6.8,
+          -28.0
+        ],
+        "hub": [
+          123.0,
+          6.8,
+          -36.0
+        ],
+        "west": [
+          108.5,
+          10.2,
+          -62.0
+        ],
+        "east": [
+          137.5,
+          10.2,
+          -62.0
+        ]
+      }
+    },
+    {
+      "id": "L050",
+      "anchor": "DesertRoadSignalDeck",
+      "style": "highway",
+      "title": "Road signs above a buried service spur",
+      "origin": [
+        99.5,
+        7.0,
+        8.0
+      ],
+      "rise": 3.5,
+      "lower": true,
+      "mat": "l50_sand",
+      "accent": "l50_vehicle",
+      "open_air": true,
+      "discovery": "Both service routes lead back to the same highway sign.",
+      "ambient_caption": "Wind rasps against an unpowered warning sign.",
+      "sound": "wind",
+      "props": [
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": 5,
+          "pack": "city-kit-roads",
+          "model": "construction-barrier",
+          "height": 1.56,
+          "yaw": 190
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": 5,
+          "pack": "city-kit-roads",
+          "model": "electricity-pole",
+          "height": 1.7,
+          "yaw": 237
+        },
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": 1.0,
+          "pack": "city-kit-roads",
+          "model": "road-sign-warning",
+          "height": 1.7,
+          "yaw": 284
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": 1.0,
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "height": 1.7,
+          "yaw": 331
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": -4.55,
+          "pack": "prototype-kit",
+          "model": "crate",
+          "height": 1.7,
+          "yaw": 18
+        },
+        {
+          "site": "west",
+          "dx": 4.55,
+          "dz": -4.55,
+          "pack": "city-kit-roads",
+          "model": "sign-highway",
+          "height": 1.3794,
+          "yaw": 65
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": 4.55,
+          "pack": "city-kit-roads",
+          "model": "traffic-light",
+          "height": 1.7,
+          "yaw": 112
+        },
+        {
+          "site": "west",
+          "dx": 4.55,
+          "dz": 4.55,
+          "pack": "city-kit-roads",
+          "model": "construction-light",
+          "height": 1.7,
+          "yaw": 159
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": -3.85,
+          "pack": "city-kit-roads",
+          "model": "construction-barrier",
+          "height": 1.56,
+          "yaw": 206
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": -4.55,
+          "pack": "city-kit-roads",
+          "model": "electricity-pole",
+          "height": 1.7,
+          "yaw": 253
+        },
+        {
+          "site": "east",
+          "dx": -4.55,
+          "dz": -4.55,
+          "pack": "city-kit-roads",
+          "model": "road-sign-warning",
+          "height": 1.7,
+          "yaw": 300
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": 4.55,
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "height": 1.7,
+          "yaw": 347
+        },
+        {
+          "site": "east",
+          "dx": -4.55,
+          "dz": 4.55,
+          "pack": "prototype-kit",
+          "model": "crate",
+          "height": 1.7,
+          "yaw": 34
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": 3.85,
+          "pack": "city-kit-roads",
+          "model": "sign-highway",
+          "height": 1.3794,
+          "yaw": 81
+        },
+        {
+          "site": "lower",
+          "dx": -4.5,
+          "dz": -1.0,
+          "pack": "city-kit-roads",
+          "model": "traffic-light",
+          "height": 1.7,
+          "yaw": 128
+        },
+        {
+          "site": "lower",
+          "dx": 4.5,
+          "dz": -1.0,
+          "pack": "city-kit-roads",
+          "model": "construction-light",
+          "height": 1.7,
+          "yaw": 175
+        }
+      ],
+      "links": [
+        [
+          "old_vista",
+          "hub",
+          "walk"
+        ],
+        [
+          "hub",
+          "west",
+          "stair"
+        ],
+        [
+          "hub",
+          "east",
+          "stair"
+        ],
+        [
+          "hub",
+          "lower",
+          "stair"
+        ],
+        [
+          "west",
+          "east",
+          "unlockable_bridge"
+        ]
+      ],
+      "node_positions": {
+        "old_vista": [
+          110.0,
+          7.0,
+          -3.0
+        ],
+        "hub": [
+          110.0,
+          7.0,
+          -11.0
+        ],
+        "west": [
+          95.5,
+          10.5,
+          -37.0
+        ],
+        "east": [
+          124.5,
+          10.5,
+          -37.0
+        ],
+        "lower": [
+          78.5,
+          3.5,
+          -13.0
+        ]
+      }
+    },
+    {
+      "id": "L073",
+      "anchor": "CrimsonKeepBoundary",
+      "style": "red_keep",
+      "title": "Crimson outworks and forgotten magazine",
+      "origin": [
+        64.5,
+        7.0,
+        -96.0
+      ],
+      "rise": 3.5,
+      "lower": true,
+      "mat": "d6_darkstone",
+      "accent": "d6_redwood",
+      "open_air": false,
+      "discovery": "The red parapet conceals a return gallery.",
+      "ambient_caption": "A hollow knock answers from the red wall.",
+      "sound": "knock",
+      "props": [
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": 5,
+          "pack": "mini-dungeon",
+          "model": "chest",
+          "height": 1.7,
+          "yaw": 83
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": 5,
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "height": 1.4,
+          "yaw": 130
+        },
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": 1.0,
+          "pack": "mini-dungeon",
+          "model": "rocks",
+          "height": 0.975,
+          "yaw": 177
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": 1.0,
+          "pack": "mini-dungeon",
+          "model": "column",
+          "height": 1.7,
+          "yaw": 224
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": -4.55,
+          "pack": "graveyard-kit",
+          "model": "stone-wall-damaged",
+          "height": 1.4137,
+          "yaw": 271
+        },
+        {
+          "site": "west",
+          "dx": 4.55,
+          "dz": -4.55,
+          "pack": "mini-dungeon",
+          "model": "banner",
+          "height": 1.7,
+          "yaw": 318
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": 4.55,
+          "pack": "mini-dungeon",
+          "model": "wood-support",
+          "height": 1.7,
+          "yaw": 5
+        },
+        {
+          "site": "west",
+          "dx": 4.55,
+          "dz": 4.55,
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 1.7,
+          "yaw": 52
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": -3.85,
+          "pack": "mini-dungeon",
+          "model": "chest",
+          "height": 1.7,
+          "yaw": 99
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": -4.55,
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "height": 1.4,
+          "yaw": 146
+        },
+        {
+          "site": "east",
+          "dx": -4.55,
+          "dz": -4.55,
+          "pack": "mini-dungeon",
+          "model": "rocks",
+          "height": 0.975,
+          "yaw": 193
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": 4.55,
+          "pack": "mini-dungeon",
+          "model": "column",
+          "height": 1.7,
+          "yaw": 240
+        },
+        {
+          "site": "east",
+          "dx": -4.55,
+          "dz": 4.55,
+          "pack": "graveyard-kit",
+          "model": "stone-wall-damaged",
+          "height": 1.4137,
+          "yaw": 287
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": 3.85,
+          "pack": "mini-dungeon",
+          "model": "banner",
+          "height": 1.7,
+          "yaw": 334
+        },
+        {
+          "site": "lower",
+          "dx": -4.5,
+          "dz": -1.0,
+          "pack": "mini-dungeon",
+          "model": "wood-support",
+          "height": 1.7,
+          "yaw": 21
+        },
+        {
+          "site": "lower",
+          "dx": 4.5,
+          "dz": -1.0,
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 1.7,
+          "yaw": 68
+        }
+      ],
+      "links": [
+        [
+          "old_vista",
+          "hub",
+          "walk"
+        ],
+        [
+          "hub",
+          "west",
+          "stair"
+        ],
+        [
+          "hub",
+          "east",
+          "stair"
+        ],
+        [
+          "hub",
+          "lower",
+          "stair"
+        ],
+        [
+          "west",
+          "east",
+          "unlockable_bridge"
+        ]
+      ],
+      "node_positions": {
+        "old_vista": [
+          75.0,
+          7.0,
+          -107.0
+        ],
+        "hub": [
+          75.0,
+          7.0,
+          -115.0
+        ],
+        "west": [
+          60.5,
+          10.5,
+          -141.0
+        ],
+        "east": [
+          89.5,
+          10.5,
+          -141.0
+        ],
+        "lower": [
+          43.5,
+          3.5,
+          -117.0
+        ]
+      }
+    },
+    {
+      "id": "L077",
+      "anchor": "ShepherdNightOutlook",
+      "style": "fog_trail",
+      "title": "The vanishing survey ridge",
+      "origin": [
+        159.5,
+        7.0,
+        -69.0
+      ],
+      "rise": 3.5,
+      "lower": false,
+      "mat": "d7_farm",
+      "accent": "d7_nightwood",
+      "open_air": true,
+      "discovery": "The ridge marker reappears on the wrong side of the mist.",
+      "ambient_caption": "A sudden gust muffles the distant route.",
+      "sound": "wind",
+      "props": [
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": 5,
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 1.7,
+          "yaw": 127
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": 5,
+          "pack": "nature-kit",
+          "model": "rock-tallc",
+          "height": 1.7,
+          "yaw": 174
+        },
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": 1.0,
+          "pack": "graveyard-kit",
+          "model": "shovel",
+          "height": 1.7,
+          "yaw": 221
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": 1.0,
+          "pack": "nature-kit",
+          "model": "cliff-rock",
+          "height": 1.7,
+          "yaw": 268
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": -4.55,
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "height": 0.9728,
+          "yaw": 315
+        },
+        {
+          "site": "west",
+          "dx": 4.55,
+          "dz": -4.55,
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "height": 0.6961,
+          "yaw": 2
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": 4.55,
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "height": 1.7,
+          "yaw": 49
+        },
+        {
+          "site": "west",
+          "dx": 4.55,
+          "dz": 4.55,
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "height": 1.1128,
+          "yaw": 96
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": -3.85,
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 1.7,
+          "yaw": 143
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": -4.55,
+          "pack": "nature-kit",
+          "model": "rock-tallc",
+          "height": 1.7,
+          "yaw": 190
+        },
+        {
+          "site": "east",
+          "dx": -4.55,
+          "dz": -4.55,
+          "pack": "graveyard-kit",
+          "model": "shovel",
+          "height": 1.7,
+          "yaw": 237
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": 4.55,
+          "pack": "nature-kit",
+          "model": "cliff-rock",
+          "height": 1.7,
+          "yaw": 284
+        },
+        {
+          "site": "east",
+          "dx": -4.55,
+          "dz": 4.55,
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "height": 0.9728,
+          "yaw": 331
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": 3.85,
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "height": 0.6961,
+          "yaw": 18
+        },
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": -1.0,
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "height": 1.7,
+          "yaw": 65
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": -1.0,
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "height": 1.1128,
+          "yaw": 112
+        }
+      ],
+      "links": [
+        [
+          "old_vista",
+          "hub",
+          "walk"
+        ],
+        [
+          "hub",
+          "west",
+          "stair"
+        ],
+        [
+          "hub",
+          "east",
+          "stair"
+        ],
+        [
+          "west",
+          "east",
+          "unlockable_bridge"
+        ]
+      ],
+      "node_positions": {
+        "old_vista": [
+          170.0,
+          7.0,
+          -80.0
+        ],
+        "hub": [
+          170.0,
+          7.0,
+          -88.0
+        ],
+        "west": [
+          155.5,
+          10.5,
+          -114.0
+        ],
+        "east": [
+          184.5,
+          10.5,
+          -114.0
+        ]
+      }
+    },
+    {
+      "id": "L085",
+      "anchor": "AbandonedSunsetTerraces",
+      "style": "shelter",
+      "title": "Sealed upper residences and lower service room",
+      "origin": [
+        125.5,
+        7.0,
+        -108.0
+      ],
+      "rise": 3.5,
+      "lower": true,
+      "mat": "d7_luxury",
+      "accent": "d7_road",
+      "open_air": false,
+      "discovery": "The service-room lamp glows beneath empty rooms.",
+      "ambient_caption": "A pipe clicks within the supposedly sealed residence.",
+      "sound": "pipe_clank",
+      "props": [
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": 5,
+          "pack": "furniture-kit",
+          "model": "bedbunk",
+          "height": 1.5137,
+          "yaw": 215
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": 5,
+          "pack": "furniture-kit",
+          "model": "radio",
+          "height": 1.4126,
+          "yaw": 262
+        },
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": 1.0,
+          "pack": "furniture-kit",
+          "model": "lamproundfloor",
+          "height": 1.7,
+          "yaw": 309
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": 1.0,
+          "pack": "furniture-kit",
+          "model": "books",
+          "height": 1.7,
+          "yaw": 356
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": -4.55,
+          "pack": "furniture-kit",
+          "model": "cardboardboxclosed",
+          "height": 1.7,
+          "yaw": 43
+        },
+        {
+          "site": "west",
+          "dx": 4.55,
+          "dz": -4.55,
+          "pack": "furniture-kit",
+          "model": "laptop",
+          "height": 1.3295,
+          "yaw": 90
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": 4.55,
+          "pack": "furniture-kit",
+          "model": "cabinettelevision",
+          "height": 0.7556,
+          "yaw": 137
+        },
+        {
+          "site": "west",
+          "dx": 4.55,
+          "dz": 4.55,
+          "pack": "furniture-kit",
+          "model": "bookcaseclosed",
+          "height": 1.7,
+          "yaw": 184
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": -3.85,
+          "pack": "furniture-kit",
+          "model": "bedbunk",
+          "height": 1.5137,
+          "yaw": 231
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": -4.55,
+          "pack": "furniture-kit",
+          "model": "radio",
+          "height": 1.4126,
+          "yaw": 278
+        },
+        {
+          "site": "east",
+          "dx": -4.55,
+          "dz": -4.55,
+          "pack": "furniture-kit",
+          "model": "lamproundfloor",
+          "height": 1.7,
+          "yaw": 325
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": 4.55,
+          "pack": "furniture-kit",
+          "model": "books",
+          "height": 1.7,
+          "yaw": 12
+        },
+        {
+          "site": "east",
+          "dx": -4.55,
+          "dz": 4.55,
+          "pack": "furniture-kit",
+          "model": "cardboardboxclosed",
+          "height": 1.7,
+          "yaw": 59
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": 3.85,
+          "pack": "furniture-kit",
+          "model": "laptop",
+          "height": 1.3295,
+          "yaw": 106
+        },
+        {
+          "site": "lower",
+          "dx": -4.5,
+          "dz": -1.0,
+          "pack": "furniture-kit",
+          "model": "cabinettelevision",
+          "height": 0.7556,
+          "yaw": 153
+        },
+        {
+          "site": "lower",
+          "dx": 4.5,
+          "dz": -1.0,
+          "pack": "furniture-kit",
+          "model": "bookcaseclosed",
+          "height": 1.7,
+          "yaw": 200
+        }
+      ],
+      "links": [
+        [
+          "old_vista",
+          "hub",
+          "walk"
+        ],
+        [
+          "hub",
+          "west",
+          "stair"
+        ],
+        [
+          "hub",
+          "east",
+          "stair"
+        ],
+        [
+          "hub",
+          "lower",
+          "stair"
+        ],
+        [
+          "west",
+          "east",
+          "unlockable_bridge"
+        ]
+      ],
+      "node_positions": {
+        "old_vista": [
+          136.0,
+          7.0,
+          -119.0
+        ],
+        "hub": [
+          136.0,
+          7.0,
+          -127.0
+        ],
+        "west": [
+          121.5,
+          10.5,
+          -153.0
+        ],
+        "east": [
+          150.5,
+          10.5,
+          -153.0
+        ],
+        "lower": [
+          104.5,
+          3.5,
+          -129.0
+        ]
+      }
+    },
+    {
+      "id": "L094",
+      "anchor": "ImpossibleTownArcades",
+      "style": "toy_town",
+      "title": "Mismatched scalehouse balconies",
+      "origin": [
+        102.5,
+        7.0,
+        3.0
+      ],
+      "rise": 3.5,
+      "lower": false,
+      "mat": "l94_house",
+      "accent": "l94_roof",
+      "open_air": false,
+      "discovery": "A tiny lamp throws the shadow of a huge window.",
+      "ambient_caption": "A toy-sized door creaks far below.",
+      "sound": "creak",
+      "props": [
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": 5,
+          "pack": "furniture-kit",
+          "model": "books",
+          "height": 1.7,
+          "yaw": 314
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": 5,
+          "pack": "furniture-kit",
+          "model": "plantsmall1",
+          "height": 1.7,
+          "yaw": 1
+        },
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": 1.0,
+          "pack": "mini-dungeon",
+          "model": "column",
+          "height": 1.7,
+          "yaw": 48
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": 1.0,
+          "pack": "furniture-kit",
+          "model": "coatrackstanding",
+          "height": 1.7,
+          "yaw": 95
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": -4.55,
+          "pack": "furniture-kit",
+          "model": "loungechair",
+          "height": 1.7,
+          "yaw": 142
+        },
+        {
+          "site": "west",
+          "dx": 4.55,
+          "dz": -4.55,
+          "pack": "furniture-kit",
+          "model": "table",
+          "height": 0.7571,
+          "yaw": 189
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": 4.55,
+          "pack": "furniture-kit",
+          "model": "chairrounded",
+          "height": 1.7,
+          "yaw": 236
+        },
+        {
+          "site": "west",
+          "dx": 4.55,
+          "dz": 4.55,
+          "pack": "furniture-kit",
+          "model": "bench",
+          "height": 1.7,
+          "yaw": 283
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": -3.85,
+          "pack": "furniture-kit",
+          "model": "books",
+          "height": 1.7,
+          "yaw": 330
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": -4.55,
+          "pack": "furniture-kit",
+          "model": "plantsmall1",
+          "height": 1.7,
+          "yaw": 17
+        },
+        {
+          "site": "east",
+          "dx": -4.55,
+          "dz": -4.55,
+          "pack": "mini-dungeon",
+          "model": "column",
+          "height": 1.7,
+          "yaw": 64
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": 4.55,
+          "pack": "furniture-kit",
+          "model": "coatrackstanding",
+          "height": 1.7,
+          "yaw": 111
+        },
+        {
+          "site": "east",
+          "dx": -4.55,
+          "dz": 4.55,
+          "pack": "furniture-kit",
+          "model": "loungechair",
+          "height": 1.7,
+          "yaw": 158
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": 3.85,
+          "pack": "furniture-kit",
+          "model": "table",
+          "height": 0.7571,
+          "yaw": 205
+        },
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": -1.0,
+          "pack": "furniture-kit",
+          "model": "chairrounded",
+          "height": 1.7,
+          "yaw": 252
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": -1.0,
+          "pack": "furniture-kit",
+          "model": "bench",
+          "height": 1.7,
+          "yaw": 299
+        }
+      ],
+      "links": [
+        [
+          "old_vista",
+          "hub",
+          "walk"
+        ],
+        [
+          "hub",
+          "west",
+          "stair"
+        ],
+        [
+          "hub",
+          "east",
+          "stair"
+        ],
+        [
+          "west",
+          "east",
+          "unlockable_bridge"
+        ]
+      ],
+      "node_positions": {
+        "old_vista": [
+          113.0,
+          7.0,
+          -8.0
+        ],
+        "hub": [
+          113.0,
+          7.0,
+          -16.0
+        ],
+        "west": [
+          98.5,
+          10.5,
+          -42.0
+        ],
+        "east": [
+          127.5,
+          10.5,
+          -42.0
+        ]
+      }
+    },
+    {
+      "id": "L108",
+      "anchor": "CraterwoodCanopyCircuit",
+      "style": "roots",
+      "title": "The fractured root span",
+      "origin": [
+        140.5,
+        7.0,
+        15.0
+      ],
+      "rise": 3.5,
+      "lower": true,
+      "mat": "d7_trunk",
+      "accent": "d7_mutant",
+      "open_air": true,
+      "discovery": "A root arches above a fissure that has no visible bottom.",
+      "ambient_caption": "Roots scratch across unseen stone.",
+      "sound": "scratch",
+      "props": [
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": 5,
+          "pack": "nature-kit",
+          "model": "rock-talle",
+          "height": 1.6428,
+          "yaw": 88
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": 5,
+          "pack": "graveyard-kit",
+          "model": "stone-wall-damaged",
+          "height": 1.4137,
+          "yaw": 135
+        },
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": 1.0,
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "height": 0.6961,
+          "yaw": 182
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": 1.0,
+          "pack": "nature-kit",
+          "model": "cliff-half-rock",
+          "height": 0.975,
+          "yaw": 229
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": -4.55,
+          "pack": "nature-kit",
+          "model": "rock-smalld",
+          "height": 1.0576,
+          "yaw": 276
+        },
+        {
+          "site": "west",
+          "dx": 4.55,
+          "dz": -4.55,
+          "pack": "nature-kit",
+          "model": "rock-smallflata",
+          "height": 0.708,
+          "yaw": 323
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": 4.55,
+          "pack": "nature-kit",
+          "model": "cliff-large-rock",
+          "height": 1.7,
+          "yaw": 10
+        },
+        {
+          "site": "west",
+          "dx": 4.55,
+          "dz": 4.55,
+          "pack": "nature-kit",
+          "model": "cliff-rock",
+          "height": 1.7,
+          "yaw": 57
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": -3.85,
+          "pack": "nature-kit",
+          "model": "rock-talle",
+          "height": 1.6428,
+          "yaw": 104
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": -4.55,
+          "pack": "graveyard-kit",
+          "model": "stone-wall-damaged",
+          "height": 1.4137,
+          "yaw": 151
+        },
+        {
+          "site": "east",
+          "dx": -4.55,
+          "dz": -4.55,
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "height": 0.6961,
+          "yaw": 198
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": 4.55,
+          "pack": "nature-kit",
+          "model": "cliff-half-rock",
+          "height": 0.975,
+          "yaw": 245
+        },
+        {
+          "site": "east",
+          "dx": -4.55,
+          "dz": 4.55,
+          "pack": "nature-kit",
+          "model": "rock-smalld",
+          "height": 1.0576,
+          "yaw": 292
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": 3.85,
+          "pack": "nature-kit",
+          "model": "rock-smallflata",
+          "height": 0.708,
+          "yaw": 339
+        },
+        {
+          "site": "lower",
+          "dx": -4.5,
+          "dz": -1.0,
+          "pack": "nature-kit",
+          "model": "cliff-large-rock",
+          "height": 1.7,
+          "yaw": 26
+        },
+        {
+          "site": "lower",
+          "dx": 4.5,
+          "dz": -1.0,
+          "pack": "nature-kit",
+          "model": "cliff-rock",
+          "height": 1.7,
+          "yaw": 73
+        }
+      ],
+      "links": [
+        [
+          "old_vista",
+          "hub",
+          "walk"
+        ],
+        [
+          "hub",
+          "west",
+          "stair"
+        ],
+        [
+          "hub",
+          "east",
+          "stair"
+        ],
+        [
+          "hub",
+          "lower",
+          "stair"
+        ],
+        [
+          "west",
+          "east",
+          "unlockable_bridge"
+        ]
+      ],
+      "node_positions": {
+        "old_vista": [
+          151.0,
+          7.0,
+          4.0
+        ],
+        "hub": [
+          151.0,
+          7.0,
+          -4.0
+        ],
+        "west": [
+          136.5,
+          10.5,
+          -30.0
+        ],
+        "east": [
+          165.5,
+          10.5,
+          -30.0
+        ],
+        "lower": [
+          119.5,
+          3.5,
+          -6.0
+        ]
+      }
+    },
+    {
+      "id": "L320",
+      "anchor": "SilentRideWestTransit",
+      "style": "attraction",
+      "title": "The closed ride queue and overhead arcade",
+      "origin": [
+        -27.5,
+        7.0,
+        -107.0
+      ],
+      "rise": 3.5,
+      "lower": false,
+      "mat": "l320_path",
+      "accent": "l320_paint",
+      "open_air": false,
+      "discovery": "The park lights still guide visitors around a ride that never starts.",
+      "ambient_caption": "An empty queue rail rattles in the distance.",
+      "sound": "creak",
+      "props": [
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": 5,
+          "pack": "city-kit-roads",
+          "model": "traffic-light",
+          "height": 1.7,
+          "yaw": 220
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": 5,
+          "pack": "furniture-kit",
+          "model": "bench",
+          "height": 1.7,
+          "yaw": 267
+        },
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": 1.0,
+          "pack": "food-kit",
+          "model": "soda-bottle",
+          "height": 1.7,
+          "yaw": 314
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": 1.0,
+          "pack": "food-kit",
+          "model": "fries-empty",
+          "height": 1.7,
+          "yaw": 1
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": -4.55,
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "height": 1.7,
+          "yaw": 48
+        },
+        {
+          "site": "west",
+          "dx": 4.55,
+          "dz": -4.55,
+          "pack": "food-kit",
+          "model": "pizza-box",
+          "height": 1.7,
+          "yaw": 95
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": 4.55,
+          "pack": "city-kit-roads",
+          "model": "construction-fence",
+          "height": 0.936,
+          "yaw": 142
+        },
+        {
+          "site": "west",
+          "dx": 4.55,
+          "dz": 4.55,
+          "pack": "furniture-kit",
+          "model": "trashcan",
+          "height": 1.7,
+          "yaw": 189
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": -3.85,
+          "pack": "city-kit-roads",
+          "model": "traffic-light",
+          "height": 1.7,
+          "yaw": 236
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": -4.55,
+          "pack": "furniture-kit",
+          "model": "bench",
+          "height": 1.7,
+          "yaw": 283
+        },
+        {
+          "site": "east",
+          "dx": -4.55,
+          "dz": -4.55,
+          "pack": "food-kit",
+          "model": "soda-bottle",
+          "height": 1.7,
+          "yaw": 330
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": 4.55,
+          "pack": "food-kit",
+          "model": "fries-empty",
+          "height": 1.7,
+          "yaw": 17
+        },
+        {
+          "site": "east",
+          "dx": -4.55,
+          "dz": 4.55,
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "height": 1.7,
+          "yaw": 64
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": 3.85,
+          "pack": "food-kit",
+          "model": "pizza-box",
+          "height": 1.7,
+          "yaw": 111
+        },
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": -1.0,
+          "pack": "city-kit-roads",
+          "model": "construction-fence",
+          "height": 0.936,
+          "yaw": 158
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": -1.0,
+          "pack": "furniture-kit",
+          "model": "trashcan",
+          "height": 1.7,
+          "yaw": 205
+        }
+      ],
+      "links": [
+        [
+          "old_vista",
+          "hub",
+          "walk"
+        ],
+        [
+          "hub",
+          "west",
+          "stair"
+        ],
+        [
+          "hub",
+          "east",
+          "stair"
+        ],
+        [
+          "west",
+          "east",
+          "unlockable_bridge"
+        ]
+      ],
+      "node_positions": {
+        "old_vista": [
+          -17.0,
+          7.0,
+          -118.0
+        ],
+        "hub": [
+          -17.0,
+          7.0,
+          -126.0
+        ],
+        "west": [
+          -31.5,
+          10.5,
+          -152.0
+        ],
+        "east": [
+          -2.5,
+          10.5,
+          -152.0
+        ]
+      }
+    },
+    {
+      "id": "L808",
+      "anchor": "NeonOuterCityOverpass",
+      "style": "neon",
+      "title": "The magenta relay deck",
+      "origin": [
+        80.5,
+        7.0,
+        -123.0
+      ],
+      "rise": 3.5,
+      "lower": true,
+      "mat": "l808_city",
+      "accent": "l808_magenta",
+      "open_air": true,
+      "discovery": "The far city changes color when the return bridge energizes.",
+      "ambient_caption": "A distant machine hums beneath the neon grid.",
+      "sound": "pipe_clank",
+      "props": [
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": 5,
+          "pack": "space-kit",
+          "model": "desk-computer",
+          "height": 1.3929,
+          "yaw": 88
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": 5,
+          "pack": "prototype-kit",
+          "model": "lever-single",
+          "height": 1.7,
+          "yaw": 135
+        },
+        {
+          "site": "hub",
+          "dx": -4.5,
+          "dz": 1.0,
+          "pack": "space-kit",
+          "model": "desk-computerscreen",
+          "height": 1.7,
+          "yaw": 182
+        },
+        {
+          "site": "hub",
+          "dx": 4.5,
+          "dz": 1.0,
+          "pack": "space-kit",
+          "model": "machine-generator",
+          "height": 1.1143,
+          "yaw": 229
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": -4.55,
+          "pack": "space-kit",
+          "model": "pipe-ring",
+          "height": 1.56,
+          "yaw": 276
+        },
+        {
+          "site": "west",
+          "dx": 4.55,
+          "dz": -4.55,
+          "pack": "space-kit",
+          "model": "machine-barrel",
+          "height": 1.7,
+          "yaw": 323
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": 4.55,
+          "pack": "space-kit",
+          "model": "machine-wireless",
+          "height": 1.56,
+          "yaw": 10
+        },
+        {
+          "site": "west",
+          "dx": 4.55,
+          "dz": 4.55,
+          "pack": "prototype-kit",
+          "model": "shape-hollow-hexagon",
+          "height": 1.7,
+          "yaw": 57
+        },
+        {
+          "site": "west",
+          "dx": -4.55,
+          "dz": -3.85,
+          "pack": "space-kit",
+          "model": "desk-computer",
+          "height": 1.3929,
+          "yaw": 104
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": -4.55,
+          "pack": "prototype-kit",
+          "model": "lever-single",
+          "height": 1.7,
+          "yaw": 151
+        },
+        {
+          "site": "east",
+          "dx": -4.55,
+          "dz": -4.55,
+          "pack": "space-kit",
+          "model": "desk-computerscreen",
+          "height": 1.7,
+          "yaw": 198
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": 4.55,
+          "pack": "space-kit",
+          "model": "machine-generator",
+          "height": 1.1143,
+          "yaw": 245
+        },
+        {
+          "site": "east",
+          "dx": -4.55,
+          "dz": 4.55,
+          "pack": "space-kit",
+          "model": "pipe-ring",
+          "height": 1.56,
+          "yaw": 292
+        },
+        {
+          "site": "east",
+          "dx": 4.55,
+          "dz": 3.85,
+          "pack": "space-kit",
+          "model": "machine-barrel",
+          "height": 1.7,
+          "yaw": 339
+        },
+        {
+          "site": "lower",
+          "dx": -4.5,
+          "dz": -1.0,
+          "pack": "space-kit",
+          "model": "machine-wireless",
+          "height": 1.56,
+          "yaw": 26
+        },
+        {
+          "site": "lower",
+          "dx": 4.5,
+          "dz": -1.0,
+          "pack": "prototype-kit",
+          "model": "shape-hollow-hexagon",
+          "height": 1.7,
+          "yaw": 73
+        }
+      ],
+      "links": [
+        [
+          "old_vista",
+          "hub",
+          "walk"
+        ],
+        [
+          "hub",
+          "west",
+          "stair"
+        ],
+        [
+          "hub",
+          "east",
+          "stair"
+        ],
+        [
+          "hub",
+          "lower",
+          "stair"
+        ],
+        [
+          "west",
+          "east",
+          "unlockable_bridge"
+        ]
+      ],
+      "node_positions": {
+        "old_vista": [
+          91.0,
+          7.0,
+          -134.0
+        ],
+        "hub": [
+          91.0,
+          7.0,
+          -142.0
+        ],
+        "west": [
+          76.5,
+          10.5,
+          -168.0
+        ],
+        "east": [
+          105.5,
+          10.5,
+          -168.0
+        ],
+        "lower": [
+          59.5,
+          3.5,
+          -144.0
+        ]
+      }
+    }
+  ]
+}

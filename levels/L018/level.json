@@ -1,0 +1,31 @@
+{
+  "stable_id": "L018",
+  "scene": "res://levels/L018/L018.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L019"
+  ],
+  "signature": "Childhood daycare, low furniture, plush dinosaur memory and quiet return",
+  "mechanics": [
+    "childhood_daycare",
+    "regret_whispers",
+    "nonhostile_exploration"
+  ],
+  "exits": [
+    {
+      "id": "L018>L019#1",
+      "to": "L019",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Turn around and leave",
+      "source_quote": "the most simple method is to turn around and leave, which will take you to Level 19",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-18",
+      "trigger_type": "walk_in"
+    }
+  ],
+  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
+  "entity_policy": "SOURCED ENTITIES ONLY: The Plush Dino"
+}

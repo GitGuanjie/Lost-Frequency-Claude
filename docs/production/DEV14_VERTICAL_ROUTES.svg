@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1140" viewBox="0 0 1440 1140">
+<rect width="1440" height="1140" fill="#08111e"/>
+<text x="50" y="58" font-family="sans-serif" font-size="33" font-weight="bold" fill="white">LOST FREQUENCY  /  DEV14 VERTICAL ROUTES</text>
+<text x="50" y="90" font-family="sans-serif" font-size="19" fill="#b0bed1">Design connectivity sketches · not Godot collision or playable-path certification</text>
+<rect x="50" y="115" width="650" height="455" rx="18" fill="#152337" stroke="#3b526b" stroke-width="2"/>
+<text x="72" y="157" font-family="sans-serif" font-size="27" fill="white" font-weight="bold">L000</text>
+<text x="72" y="187" font-family="sans-serif" font-size="16" fill="#b4ccdc">5 elevations  •  21 nodes  •  24 links  •  4 loops  •  12.75 m rise</text>
+<line x1="315.6" y1="394.0" x2="342.2" y2="338.0" stroke="#f2bb65" stroke-width="3.5" opacity=".92" stroke-dasharray="8 6"/>
+<line x1="342.2" y1="338.0" x2="297.4" y2="330.6" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="297.4" y1="330.6" x2="267.4" y2="317.5" stroke="#f2bb65" stroke-width="3.5" opacity=".92" stroke-dasharray="8 6"/>
+<line x1="267.4" y1="317.5" x2="281.7" y2="338.4" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="281.7" y1="338.4" x2="401.7" y2="388.8" stroke="#9dbee4" stroke-width="2.3" opacity=".92"/>
+<line x1="401.7" y1="388.8" x2="435.2" y2="402.9" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="435.2" y1="402.9" x2="475.8" y2="370.1" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="475.8" y1="370.1" x2="440.7" y2="361.1" stroke="#f2bb65" stroke-width="3.5" opacity=".92" stroke-dasharray="8 6"/>
+<line x1="440.7" y1="361.1" x2="419.7" y2="336.9" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="419.7" y1="336.9" x2="299.7" y2="286.6" stroke="#9dbee4" stroke-width="2.3" opacity=".92"/>
+<line x1="299.7" y1="286.6" x2="273.2" y2="275.4" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="273.2" y1="275.4" x2="295.8" y2="257.1" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="440.7" y1="361.1" x2="412.0" y2="380.0" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="412.0" y1="380.0" x2="273.2" y2="275.4" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="273.2" y1="275.4" x2="314.5" y2="242.0" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="314.5" y1="242.0" x2="440.7" y2="361.1" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="295.8" y1="257.1" x2="260.7" y2="248.1" stroke="#f2bb65" stroke-width="3.5" opacity=".92" stroke-dasharray="8 6"/>
+<line x1="260.7" y1="248.1" x2="299.7" y2="249.2" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="299.7" y1="249.2" x2="419.7" y2="299.6" stroke="#9dbee4" stroke-width="2.3" opacity=".92"/>
+<line x1="419.7" y1="299.6" x2="453.2" y2="313.6" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="453.2" y1="313.6" x2="412.0" y2="342.6" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="412.0" y1="342.6" x2="260.7" y2="248.1" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="260.7" y1="248.1" x2="314.5" y2="204.7" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="314.5" y1="204.7" x2="453.2" y2="313.6" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<circle cx="315.6" cy="394.0" r="6.1" fill="#53c8be" stroke="#fff" stroke-width=".75"/>
+<text x="323.6" y="386.0" font-family="sans-serif" font-size="13" fill="#e0ebf6">floor0</text>
+<circle cx="342.2" cy="338.0" r="6.1" fill="#dfc272" stroke="#fff" stroke-width=".75"/>
+<text x="350.2" y="330.0" font-family="sans-serif" font-size="13" fill="#e0ebf6">floor1</text>
+<circle cx="297.4" cy="330.6" r="6.1" fill="#dfc272" stroke="#fff" stroke-width=".75"/>
+<circle cx="267.4" cy="317.5" r="6.1" fill="#a2a1ff" stroke="#fff" stroke-width=".75"/>
+<circle cx="281.7" cy="338.4" r="6.1" fill="#a2a1ff" stroke="#fff" stroke-width=".75"/>
+<circle cx="401.7" cy="388.8" r="6.1" fill="#a2a1ff" stroke="#fff" stroke-width=".75"/>
+<circle cx="435.2" cy="402.9" r="6.1" fill="#a2a1ff" stroke="#fff" stroke-width=".75"/>
+<circle cx="475.8" cy="370.1" r="6.1" fill="#a2a1ff" stroke="#fff" stroke-width=".75"/>
+<circle cx="440.7" cy="361.1" r="6.1" fill="#ef899c" stroke="#fff" stroke-width=".75"/>
+<circle cx="419.7" cy="336.9" r="6.1" fill="#ef899c" stroke="#fff" stroke-width=".75"/>
+<circle cx="299.7" cy="286.6" r="6.1" fill="#ef899c" stroke="#fff" stroke-width=".75"/>
+<circle cx="273.2" cy="275.4" r="6.1" fill="#ef899c" stroke="#fff" stroke-width=".75"/>
+<circle cx="295.8" cy="257.1" r="6.1" fill="#ef899c" stroke="#fff" stroke-width=".75"/>
+<circle cx="412.0" cy="380.0" r="6.1" fill="#ef899c" stroke="#fff" stroke-width=".75"/>
+<circle cx="314.5" cy="242.0" r="6.1" fill="#ef899c" stroke="#fff" stroke-width=".75"/>
+<circle cx="260.7" cy="248.1" r="6.1" fill="#8fd1ef" stroke="#fff" stroke-width=".75"/>
+<circle cx="299.7" cy="249.2" r="6.1" fill="#8fd1ef" stroke="#fff" stroke-width=".75"/>
+<circle cx="419.7" cy="299.6" r="6.1" fill="#8fd1ef" stroke="#fff" stroke-width=".75"/>
+<circle cx="453.2" cy="313.6" r="6.1" fill="#8fd1ef" stroke="#fff" stroke-width=".75"/>
+<text x="461.2" y="305.6" font-family="sans-serif" font-size="13" fill="#e0ebf6">floor4 east</text>
+<circle cx="412.0" cy="342.6" r="6.1" fill="#8fd1ef" stroke="#fff" stroke-width=".75"/>
+<circle cx="314.5" cy="204.7" r="6.1" fill="#8fd1ef" stroke="#fff" stroke-width=".75"/>
+<circle cx="76" cy="540" r="6" fill="#53c8be"/><text x="90" y="545" font-family="sans-serif" font-size="15" fill="#e1e7ee">0 m</text>
+<circle cx="200" cy="540" r="6" fill="#dfc272"/><text x="214" y="545" font-family="sans-serif" font-size="15" fill="#e1e7ee">3 m</text>
+<circle cx="324" cy="540" r="6" fill="#a2a1ff"/><text x="338" y="545" font-family="sans-serif" font-size="15" fill="#e1e7ee">6.25 m</text>
+<circle cx="448" cy="540" r="6" fill="#ef899c"/><text x="462" y="545" font-family="sans-serif" font-size="15" fill="#e1e7ee">9.5 m</text>
+<circle cx="572" cy="540" r="6" fill="#8fd1ef"/><text x="586" y="545" font-family="sans-serif" font-size="15" fill="#e1e7ee">12.75 m</text>
+<rect x="750" y="115" width="650" height="455" rx="18" fill="#152337" stroke="#3b526b" stroke-width="2"/>
+<text x="772" y="157" font-family="sans-serif" font-size="27" fill="white" font-weight="bold">L001</text>
+<text x="772" y="187" font-family="sans-serif" font-size="16" fill="#b4ccdc">3 elevations  •  11 nodes  •  12 links  •  2 loops  •  6.5 m rise</text>
+<line x1="946.5" y1="363.2" x2="1034.5" y2="351.9" stroke="#f2bb65" stroke-width="3.5" opacity=".92" stroke-dasharray="8 6"/>
+<line x1="1034.5" y1="351.9" x2="1086.3" y2="380.1" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="1086.3" y1="380.1" x2="1175.3" y2="392.2" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="1175.3" y1="392.2" x2="1137.9" y2="396.0" stroke="#f2bb65" stroke-width="3.5" opacity=".92" stroke-dasharray="8 6"/>
+<line x1="1137.9" y1="396.0" x2="1100.3" y2="391.4" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="1137.9" y1="396.0" x2="1159.3" y2="416.2" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="1100.3" y1="391.4" x2="1046.1" y2="343.1" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="1046.1" y1="343.1" x2="1114.7" y2="336.8" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="1159.3" y1="416.2" x2="1186.1" y2="401.9" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="1186.1" y1="401.9" x2="1208.7" y2="376.3" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="1114.7" y1="336.8" x2="1208.7" y2="376.3" stroke="#9dbee4" stroke-width="2.3" opacity=".92"/>
+<line x1="1100.3" y1="391.4" x2="1159.3" y2="416.2" stroke="#9dbee4" stroke-width="2.3" opacity=".92"/>
+<circle cx="946.5" cy="363.2" r="6.1" fill="#53c8be" stroke="#fff" stroke-width=".75"/>
+<text x="954.5" y="355.2" font-family="sans-serif" font-size="13" fill="#e0ebf6">warehouse floor</text>
+<circle cx="1034.5" cy="351.9" r="6.1" fill="#dfc272" stroke="#fff" stroke-width=".75"/>
+<text x="1042.5" y="343.9" font-family="sans-serif" font-size="13" fill="#e0ebf6">mezzanine landing</text>
+<circle cx="1086.3" cy="380.1" r="6.1" fill="#dfc272" stroke="#fff" stroke-width=".75"/>
+<circle cx="1175.3" cy="392.2" r="6.1" fill="#dfc272" stroke="#fff" stroke-width=".75"/>
+<circle cx="1137.9" cy="396.0" r="6.1" fill="#a2a1ff" stroke="#fff" stroke-width=".75"/>
+<text x="1145.9" y="388.0" font-family="sans-serif" font-size="13" fill="#e0ebf6">upper landing</text>
+<circle cx="1100.3" cy="391.4" r="6.1" fill="#a2a1ff" stroke="#fff" stroke-width=".75"/>
+<circle cx="1114.7" cy="336.8" r="6.1" fill="#a2a1ff" stroke="#fff" stroke-width=".75"/>
+<circle cx="1208.7" cy="376.3" r="6.1" fill="#a2a1ff" stroke="#fff" stroke-width=".75"/>
+<circle cx="1159.3" cy="416.2" r="6.1" fill="#a2a1ff" stroke="#fff" stroke-width=".75"/>
+<circle cx="1046.1" cy="343.1" r="6.1" fill="#a2a1ff" stroke="#fff" stroke-width=".75"/>
+<circle cx="1186.1" cy="401.9" r="6.1" fill="#a2a1ff" stroke="#fff" stroke-width=".75"/>
+<circle cx="776" cy="540" r="6" fill="#53c8be"/><text x="790" y="545" font-family="sans-serif" font-size="15" fill="#e1e7ee">0 m</text>
+<circle cx="900" cy="540" r="6" fill="#dfc272"/><text x="914" y="545" font-family="sans-serif" font-size="15" fill="#e1e7ee">4.2 m</text>
+<circle cx="1024" cy="540" r="6" fill="#a2a1ff"/><text x="1038" y="545" font-family="sans-serif" font-size="15" fill="#e1e7ee">6.5 m</text>
+<rect x="50" y="615" width="650" height="455" rx="18" fill="#152337" stroke="#3b526b" stroke-width="2"/>
+<text x="72" y="657" font-family="sans-serif" font-size="27" fill="white" font-weight="bold">L009</text>
+<text x="72" y="687" font-family="sans-serif" font-size="16" fill="#b4ccdc">4 elevations  •  12 nodes  •  12 links  •  1 loops  •  10.02 m rise</text>
+<line x1="243.9" y1="811.2" x2="329.4" y2="810.1" stroke="#f2bb65" stroke-width="3.5" opacity=".92" stroke-dasharray="8 6"/>
+<line x1="329.4" y1="810.1" x2="524.2" y2="879.5" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="524.2" y1="879.5" x2="473.7" y2="881.2" stroke="#f2bb65" stroke-width="3.5" opacity=".92" stroke-dasharray="8 6"/>
+<line x1="473.7" y1="881.2" x2="492.3" y2="913.9" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="492.3" y1="913.9" x2="406.8" y2="838.8" stroke="#f2bb65" stroke-width="3.5" opacity=".92" stroke-dasharray="8 6"/>
+<line x1="406.8" y1="838.8" x2="336.8" y2="809.4" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="336.8" y1="809.4" x2="291.3" y2="846.2" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="291.3" y1="846.2" x2="476.0" y2="923.7" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="476.0" y1="923.7" x2="511.4" y2="895.2" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="511.4" y1="895.2" x2="404.5" y2="850.3" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="404.5" y1="850.3" x2="406.8" y2="838.8" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="291.3" y1="846.2" x2="206.1" y2="783.7" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<circle cx="243.9" cy="811.2" r="6.1" fill="#53c8be" stroke="#fff" stroke-width=".75"/>
+<text x="251.9" y="803.2" font-family="sans-serif" font-size="13" fill="#e0ebf6">street</text>
+<circle cx="329.4" cy="810.1" r="6.1" fill="#dfc272" stroke="#fff" stroke-width=".75"/>
+<text x="337.4" y="802.1" font-family="sans-serif" font-size="13" fill="#e0ebf6">deck1</text>
+<circle cx="524.2" cy="879.5" r="6.1" fill="#dfc272" stroke="#fff" stroke-width=".75"/>
+<circle cx="473.7" cy="881.2" r="6.1" fill="#a2a1ff" stroke="#fff" stroke-width=".75"/>
+<circle cx="492.3" cy="913.9" r="6.1" fill="#a2a1ff" stroke="#fff" stroke-width=".75"/>
+<circle cx="406.8" cy="838.8" r="6.1" fill="#ef899c" stroke="#fff" stroke-width=".75"/>
+<circle cx="336.8" cy="809.4" r="6.1" fill="#ef899c" stroke="#fff" stroke-width=".75"/>
+<circle cx="291.3" cy="846.2" r="6.1" fill="#ef899c" stroke="#fff" stroke-width=".75"/>
+<circle cx="476.0" cy="923.7" r="6.1" fill="#ef899c" stroke="#fff" stroke-width=".75"/>
+<circle cx="511.4" cy="895.2" r="6.1" fill="#ef899c" stroke="#fff" stroke-width=".75"/>
+<circle cx="404.5" cy="850.3" r="6.1" fill="#ef899c" stroke="#fff" stroke-width=".75"/>
+<circle cx="206.1" cy="783.7" r="6.1" fill="#ef899c" stroke="#fff" stroke-width=".75"/>
+<text x="214.1" y="775.7" font-family="sans-serif" font-size="13" fill="#e0ebf6">roof spur</text>
+<circle cx="76" cy="1040" r="6" fill="#53c8be"/><text x="90" y="1045" font-family="sans-serif" font-size="15" fill="#e1e7ee">0.18 m</text>
+<circle cx="200" cy="1040" r="6" fill="#dfc272"/><text x="214" y="1045" font-family="sans-serif" font-size="15" fill="#e1e7ee">3.4 m</text>
+<circle cx="324" cy="1040" r="6" fill="#a2a1ff"/><text x="338" y="1045" font-family="sans-serif" font-size="15" fill="#e1e7ee">6.8 m</text>
+<circle cx="448" cy="1040" r="6" fill="#ef899c"/><text x="462" y="1045" font-family="sans-serif" font-size="15" fill="#e1e7ee">10.2 m</text>
+<rect x="750" y="615" width="650" height="455" rx="18" fill="#152337" stroke="#3b526b" stroke-width="2"/>
+<text x="772" y="657" font-family="sans-serif" font-size="27" fill="white" font-weight="bold">L011</text>
+<text x="772" y="687" font-family="sans-serif" font-size="16" fill="#b4ccdc">4 elevations  •  12 nodes  •  12 links  •  1 loops  •  10.5 m rise</text>
+<line x1="844.3" y1="921.2" x2="924.3" y2="913.4" stroke="#f2bb65" stroke-width="3.5" opacity=".92" stroke-dasharray="8 6"/>
+<line x1="924.3" y1="913.4" x2="1044.3" y2="963.8" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="1044.3" y1="963.8" x2="1085.9" y2="890.0" stroke="#f2bb65" stroke-width="3.5" opacity=".92" stroke-dasharray="8 6"/>
+<line x1="1085.9" y1="890.0" x2="995.9" y2="852.2" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="1085.9" y1="890.0" x2="1175.9" y2="927.8" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="995.9" y1="852.2" x2="1041.7" y2="815.2" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="1175.9" y1="927.8" x2="1221.7" y2="890.8" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="1041.7" y1="815.2" x2="1079.1" y2="745.9" stroke="#f2bb65" stroke-width="3.5" opacity=".92" stroke-dasharray="8 6"/>
+<line x1="1221.7" y1="890.8" x2="1259.1" y2="821.5" stroke="#f2bb65" stroke-width="3.5" opacity=".92" stroke-dasharray="8 6"/>
+<line x1="1079.1" y1="745.9" x2="1105.7" y2="724.4" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="1259.1" y1="821.5" x2="1285.7" y2="800.0" stroke="#455d74" stroke-width="2.3" opacity=".92"/>
+<line x1="1105.7" y1="724.4" x2="1285.7" y2="800.0" stroke="#9dbee4" stroke-width="2.3" opacity=".92"/>
+<circle cx="844.3" cy="921.2" r="6.1" fill="#53c8be" stroke="#fff" stroke-width=".75"/>
+<text x="852.3" y="913.2" font-family="sans-serif" font-size="13" fill="#e0ebf6">street west</text>
+<circle cx="924.3" cy="913.4" r="6.1" fill="#dfc272" stroke="#fff" stroke-width=".75"/>
+<text x="932.3" y="905.4" font-family="sans-serif" font-size="13" fill="#e0ebf6">lower bridge west</text>
+<circle cx="1044.3" cy="963.8" r="6.1" fill="#dfc272" stroke="#fff" stroke-width=".75"/>
+<circle cx="1085.9" cy="890.0" r="6.1" fill="#a2a1ff" stroke="#fff" stroke-width=".75"/>
+<circle cx="995.9" cy="852.2" r="6.1" fill="#a2a1ff" stroke="#fff" stroke-width=".75"/>
+<circle cx="1175.9" cy="927.8" r="6.1" fill="#a2a1ff" stroke="#fff" stroke-width=".75"/>
+<circle cx="1041.7" cy="815.2" r="6.1" fill="#a2a1ff" stroke="#fff" stroke-width=".75"/>
+<circle cx="1221.7" cy="890.8" r="6.1" fill="#a2a1ff" stroke="#fff" stroke-width=".75"/>
+<circle cx="1079.1" cy="745.9" r="6.1" fill="#ef899c" stroke="#fff" stroke-width=".75"/>
+<text x="1087.1" y="737.9" font-family="sans-serif" font-size="13" fill="#e0ebf6">top west</text>
+<circle cx="1259.1" cy="821.5" r="6.1" fill="#ef899c" stroke="#fff" stroke-width=".75"/>
+<circle cx="1105.7" cy="724.4" r="6.1" fill="#ef899c" stroke="#fff" stroke-width=".75"/>
+<text x="1113.7" y="716.4" font-family="sans-serif" font-size="13" fill="#e0ebf6">top bridge west</text>
+<circle cx="1285.7" cy="800.0" r="6.1" fill="#ef899c" stroke="#fff" stroke-width=".75"/>
+<circle cx="776" cy="1040" r="6" fill="#53c8be"/><text x="790" y="1045" font-family="sans-serif" font-size="15" fill="#e1e7ee">0.15 m</text>
+<circle cx="900" cy="1040" r="6" fill="#dfc272"/><text x="914" y="1045" font-family="sans-serif" font-size="15" fill="#e1e7ee">3.75 m</text>
+<circle cx="1024" cy="1040" r="6" fill="#a2a1ff"/><text x="1038" y="1045" font-family="sans-serif" font-size="15" fill="#e1e7ee">7.25 m</text>
+<circle cx="1148" cy="1040" r="6" fill="#ef899c"/><text x="1162" y="1045" font-family="sans-serif" font-size="15" fill="#e1e7ee">10.65 m</text>
+<text x="50" y="1122" font-family="sans-serif" fill="#9db0c2" font-size="15">Yellow dashed = stair rise · blue = bridge · grey = deck · position is an illustrative oblique graph (not a geometry screenshot)</text>
+</svg>

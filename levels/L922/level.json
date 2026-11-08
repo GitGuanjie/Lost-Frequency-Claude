@@ -1,0 +1,30 @@
+{
+ "stable_id": "L922",
+ "scene": "res://levels/L922/L922.tscn",
+ "status": "PLAYABLE",
+ "procedural": false,
+ "arrivals": [
+  "start"
+ ],
+ "signature": "A round brutalist concrete shaft in black and white with a spiral stair that begins on a black floor and only goes up, toward a blinding light that never comes closer, in a silence where you hear your own heart and breath; a few flights later you are at the first step again.",
+ "mechanics": [
+  "helical_stair_round_open_well",
+  "seamless_one_turn_wrap",
+  "return_to_starting_point_after_3_5_turns",
+  "light_kept_at_constant_distance",
+  "black_and_white_grade",
+  "silence_heartbeat_breath_exertion",
+  "no_exit"
+ ],
+ "exits": [],
+ "notes": "SOURCE: Escherian Stairwell; brutalist; a spiral staircase that begins but never ends; only upward; trekkers return to their original starting point; a blinding light on the ceiling whose distance never closes; black and white; silence, heartbeat and breath; nothing to fear, no danger, no reward, no significance; a confined area. ADAPTATION: the shaft is 11.2 m across with a 4 m well, 24 steps (0.175 m risers) per 4.2 m turn, 14 turns built; the light is a disc kept 38 m above the player; above turn 2 the player is moved down one identical turn while not looking down the well, and after 3-5 turns climbed the move instead returns them to the first steps over the floor. Heartbeat and breath follow climbing exertion (procedural audio). Three descriptive interactions restate the page (look up the well, lean over the rail, touch the wall); no notes or items because the page has none. Entrance is not stated: 'start' is an engine spawn on the floor at the foot of the stair, not a canon entrance.",
+ "entity_policy": "NO ENTITY PER SOURCE: the page names none and says there is no danger.",
+ "no_exit_reason": "No sourced, traversable inter-level exit; omitted rather than invented.",
+ "legacy_overlays": false,
+ "qa_status": "NOT_TESTED",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
+}

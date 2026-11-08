@@ -274,6 +274,55 @@ func _core(k: GeoKit, node: Node3D) -> void:
 	# --- the marked working machines
 	for w in CORE_WORK:
 		P.working(self, k, node, w[1], w[2], w[0], "hub")
+	_arcade_mezzanine(k, node)
+
+
+## DEV12: an authored split-level inspection balcony in the 5.8 m-tall main
+## playroom. The ascent is continuous, real collision; it is NOT a teleport.
+## Keep it clear of numbered cabinets, the 37 exit and the two original doors.
+## ADAPTATION: maintenance catwalks above the abandoned arcade machines.
+func _arcade_mezzanine(k: GeoKit, node: Node3D) -> void:
+	var z := 24.6
+	var y := 2.82
+	var start := Vector3(17.5, 0.0, z)
+	# Two 15-riser flights with a rest landing, total 10.8 m horizontal run.
+	k.stairs(start, Vector3.RIGHT, 1.75, 1.41, 15, "l25_metal", 0.36)
+	k.slab(22.80, z - 1.08, 23.85, z + 1.08, 1.41, 0.19, "l25_metal")
+	k.stairs(Vector3(23.80, 1.41, z), Vector3.RIGHT, 1.75, 1.41, 15, "l25_metal", 0.36)
+	# Main spine, side viewing arm, and a return viewing platform: not a dead-end ladder.
+	var decks := [
+		Rect2(Vector2(29.0, z - 1.15), Vector2(15.2, 2.3)),
+		Rect2(Vector2(40.9, 13.2), Vector2(2.3, 12.0)),
+		Rect2(Vector2(33.0, 15.1), Vector2(9.7, 2.3)),
+		Rect2(Vector2(31.8, 15.0), Vector2(3.5, 4.0)),
+		Rect2(Vector2(33.0, 18.5), Vector2(2.3, 6.2))
+	]
+	for rc in decks:
+		k.slab(rc.position.x, rc.position.y, rc.end.x, rc.end.y, y, 0.20, "l25_metal")
+	# Balcony guards are thin collision boxes so players cannot walk off.
+	# The stair threshold and deck junctions are deliberately open.
+	for rail in [
+		# Return-route opening at x=33..35 on the north edge of the main span.
+		[Vector3(30.8, y + 0.65, 23.36), Vector3(3.6, 1.30, 0.09)],
+		[Vector3(38.8, y + 0.65, 23.36), Vector3(7.0, 1.30, 0.09)],
+		[Vector3(35.9, y + 0.65, 25.84), Vector3(13.5, 1.30, 0.09)],
+		[Vector3(44.25, y + 0.65, 19.0), Vector3(0.09, 1.30, 11.6)],
+		[Vector3(40.0, y + 0.65, 13.05), Vector3(8.0, 1.30, 0.09)],
+		[Vector3(35.8, y + 0.65, 14.98), Vector3(4.4, 1.30, 0.09)],
+		[Vector3(31.68, y + 0.65, 17.25), Vector3(0.09, 1.30, 4.0)],
+		# Inner exposed edge of the closed elevated loop.
+		[Vector3(40.78, y + 0.65, 20.25), Vector3(0.09, 1.30, 5.8)],
+		[Vector3(35.42, y + 0.65, 20.55), Vector3(0.09, 1.30, 5.5)],
+		[Vector3(38.0, y + 0.65, 17.54), Vector3(5.5, 1.30, 0.09)]
+	]:
+		k.box(rail[0], rail[1], "l25_metal")
+	for p in [Vector3(30, y, z), Vector3(41.5, y, 17), Vector3(34.5, y, 16.5)]:
+		k.box(p + Vector3(0, -1.4, 0), Vector3(0.16, 2.70, 0.16), "l25_metal", GeoKit.ALL, false)
+	add_note("l25_upper_work_log", "Inspection log above the cabinets",
+		"The arcade extends beyond the visible room. These maintenance bridges were added after the ceiling had started to leak. The numbered machines still stand where they always stood. A narrow passage carries every footstep farther than it should.",
+		Vector3(36.4, y + 0.38, z - 0.25), Vector3(0.46, 0.10, 0.46))
+	add_landmark("Elevated arcade maintenance loop", Vector3(41.8, y, 17.2))
+	add_shot("arcade_upper_deck", Vector3(36.5, y + 1.62, 24.6), Vector3(42.0, 1.0, 17.0))
 
 
 ## One stretch of the hub's outer wall; the outer face takes the neighbouring block's paint.
@@ -700,3 +749,15 @@ func _leaks(delta: float) -> void:
 	_drop.visible = _drop_t >= 0.0
 	var ff := clampf(f, 0.0, 1.0)
 	_drop.global_position = Vector3(top.x, lerpf(top.y, 0.03, ff * ff), top.z)
+
+
+## DEV12 engine-level geometry evidence, not a replacement for human walking.
+func qa_self_test() -> Array:
+	var checks: Array = []
+	await get_tree().physics_frame
+	var space := get_world_3d().direct_space_state
+	var upper := space.intersect_ray(PhysicsRayQueryParameters3D.create(Vector3(36.0, 3.8, 24.6), Vector3(36.0, 2.1, 24.6), 1))
+	checks.append({"what": "arcade upper balcony is physical at 2.82m", "ok": not upper.is_empty() and absf(float(upper.get("position", Vector3.ZERO).y) - 2.82) < 0.13, "detail": upper.get("position", Vector3.ZERO)})
+	var stair := space.intersect_ray(PhysicsRayQueryParameters3D.create(Vector3(25.5, 3.2, 24.6), Vector3(25.5, 0.5, 24.6), 1))
+	checks.append({"what": "arcade second stair has ramp collision between the floors", "ok": not stair.is_empty() and float(stair.get("position", Vector3.ZERO).y) > 1.55 and float(stair.get("position", Vector3.ZERO).y) < 2.45, "detail": stair.get("position", Vector3.ZERO)})
+	return checks

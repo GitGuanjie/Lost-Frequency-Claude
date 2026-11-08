@@ -1,0 +1,31 @@
+{
+  "stable_id": "L011_3",
+  "scene": "res://levels/L011_3/L011_3.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L011"
+  ],
+  "signature": "Red-fog gutted urban avenues, guarded perimeter bridges and mask cue",
+  "mechanics": [
+    "red_air",
+    "urban_alleys",
+    "perimeter_bridge"
+  ],
+  "exits": [
+    {
+      "id": "L011_3>L011#1",
+      "to": "L011",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED+DANGEROUS",
+      "method": "Bridges over water at the outskirts",
+      "source_quote": "they are usually guarded to prevent all escape",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-11-3",
+      "trigger_type": "walk_in"
+    }
+  ],
+  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Servants, Ambassadors (testimony: The Daughter)"
+}

@@ -1,0 +1,41 @@
+{
+  "stable_id": "L108",
+  "scene": "res://levels/L108/L108.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L025"
+  ],
+  "signature": "Mutant forest with crater mist and safer settlement",
+  "mechanics": [
+    "craterwood",
+    "hauntwood",
+    "purple_trail"
+  ],
+  "exits": [
+    {
+      "id": "L108>EXT#1",
+      "to": "EXT",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL",
+      "method": "Walk straight out of Hauntwood",
+      "source_quote": "either into the Craterwood or to another level entirely",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-108",
+      "trigger_type": "walk_in"
+    },
+    {
+      "id": "L108>EXT#2",
+      "to": "EXT",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Purple trail guides to known exits; New Hereth help",
+      "source_quote": "Purple trail guides also mark the known exits of the level.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-108",
+      "trigger_type": "walk_in"
+    }
+  ],
+  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Dendroids, Anthosia, Grimshells, Craterwood Super-organism, The Black Goat, generic mutants"
+}

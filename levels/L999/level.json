@@ -1,0 +1,39 @@
+{
+  "stable_id": "L999",
+  "scene": "res://levels/L999/L999.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "UNVERIFIED; initial source-faithful scene, Godot 4.5.x QA, screenshot evidence and human review pending",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_EXT"
+  ],
+  "signature": "A silent frozen greyscale island floating above an inverted stony pyramid in a starry void; a still tropical forest, derelict houses, motionless rocks, and a single trapdoor among benches at the exact epicenter.",
+  "mechanics": [
+    "unchanging_greyscale_island",
+    "inverted_stony_pyramid",
+    "sparse_motionless_grey_palm_forest",
+    "stars_in_fixed_void",
+    "silent_derelict_houses",
+    "constant_synthetic_wind_without_tree_motion",
+    "single_epicenter_trapdoor_exit",
+    "no_entities_or_collectibles"
+  ],
+  "exits": [
+    {
+      "id": "L999>EXT#1",
+      "to": "EXT",
+      "to_label": "The halls that echo (not numbered in the source)",
+      "trigger": "interact",
+      "label": "Open the central trapdoor among the benches",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances/Exits",
+      "source_quote": "The only method of exit is to return to the echoing halls through venturing to the epicenter",
+      "arrival": "from_L999",
+      "hint": "At the exact center of the island, among motionless benches, is the only trapdoor."
+    }
+  ],
+  "entity_policy": "NONE. No entities, NPCs or other wanderers are spawned.",
+  "notes": "SOURCE: flat greyscale tropical island in a starry space-like void, dark floating sand and rocks, fixed grey palm trees and rough soil without grass, cold but steadily lit, sparse vacant houses near the center, inverted rocky pyramid underside, the ultimate unchanged world, only exit via single center trapdoor to unnumbered echoing halls. ADAPTATION: finite circular island radius 72 m, stationary MultiMesh starfield, four sparse houses and about 90 stationary trees, clipped safety at rim to avoid inventing a fatal fall. The exit target is deliberately EXT because the source does not identify any numbered level. No new lore or time-changing elements. QA PENDING."
+}

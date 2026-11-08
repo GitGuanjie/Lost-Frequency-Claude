@@ -172,6 +172,46 @@ func barn(red: bool) -> Dictionary:
 		"loft": P(w * 0.5, ly, d - 4.0), "size": Vector2(w, d), "eave": eave}
 
 
+## DEV12 SOURCE-RESPECTING ADAPTATION: weathered outdoor grain-inspection
+## scaffold at the home barn, not an invented destination or a new settlement.
+## Three offset walkable decks (2.9/5.8/8.7m), connected by physical stairs.
+## Called only for the authored home barn; never generated for distant farms.
+func watchtower() -> void:
+	var deck := "l10_loft_wood"
+	var rail := "l10_beam_wood"
+	var metal := "l10_nails_metal"
+	# A little ground-level threshold bridges the graded barnyard to stair one.
+	bx(Vector3(12.8, -0.15, 4.7), Vector3(15.3, 0.0, 8.0), deck)
+	# Stage 1: climb north along the outer wall of the barn.
+	k.stairs(P(14.1, 0.0, 5.7), xf.basis * Vector3.BACK, 1.3, 2.9, 18, deck, 0.36)
+	bx(Vector3(12.9, 2.70, 12.0), Vector3(18.5, 2.9, 15.6), deck)
+	# Stage 2 doubles back (switchback), reached from the first landing.
+	k.stairs(P(16.7, 2.9, 12.5), xf.basis * Vector3.FORWARD, 1.3, 2.9, 18, deck, 0.36)
+	bx(Vector3(15.6, 5.6, 5.4), Vector3(20.5, 5.8, 9.5), deck)
+	# Stage 3 climbs out over the crops; the railings do not close the stair exit.
+	k.stairs(P(19.0, 5.8, 6.1), xf.basis * Vector3.BACK, 1.3, 2.9, 18, deck, 0.36)
+	bx(Vector3(16.1, 8.5, 12.4), Vector3(21.4, 8.7, 16.7), deck)
+	# Sparse external posts, not full-width solid walls blocking the barn door.
+	for x in [13.1, 20.7]:
+		for z in [5.3, 16.4]:
+			bx(Vector3(x, -0.5, z - 0.11), Vector3(x + 0.2, 8.7, z + 0.11), rail)
+	# Each deck has a protected outward edge, while its stair entry stays open.
+	for ab in [
+		[Vector3(12.9, 2.9, 15.55), Vector3(18.5, 4.0, 15.65)],
+		[Vector3(12.9, 2.9, 12.0), Vector3(13.02, 4.0, 15.6)],
+		[Vector3(15.6, 5.8, 9.45), Vector3(20.5, 6.9, 9.55)],
+		[Vector3(20.4, 5.8, 5.4), Vector3(20.5, 6.9, 9.5)],
+		[Vector3(16.1, 8.7, 16.60), Vector3(21.4, 9.8, 16.7)],
+		[Vector3(16.1, 8.7, 12.4), Vector3(16.2, 9.8, 16.7)],
+		[Vector3(21.3, 8.7, 12.4), Vector3(21.4, 9.8, 16.7)]
+	]:
+		bx(ab[0], ab[1], rail)
+	# Bracing is decorative only: avoid collision shapes through the stair lanes.
+	for z in [6.5, 10.0, 13.7]:
+		bx(Vector3(13.7, 0.8, z), Vector3(13.82, 8.1, z + 0.12), metal, false)
+
+
+
 func stable() -> Dictionary:
 	var w := 8.0
 	var d := 21.0

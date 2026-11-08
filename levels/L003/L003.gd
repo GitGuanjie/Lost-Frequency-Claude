@@ -310,4 +310,11 @@ func qa_capture_plan() -> Array:
 
 
 func qa_self_test() -> Array:
-	return await sys.self_test()
+	var checks: Array = await sys.self_test()
+	await get_tree().physics_frame
+	var space := get_world_3d().direct_space_state
+	var upper := space.intersect_ray(PhysicsRayQueryParameters3D.create(Vector3(59.0, 7.2, 21.0), Vector3(59.0, 5.7, 21.0), 1))
+	checks.append({"what": "assembly hall third-level grated cross-bridge is collidable", "ok": not upper.is_empty() and absf(float(upper.get("position", Vector3.ZERO).y) - 6.2) < 0.14, "detail": upper.get("position", Vector3.ZERO)})
+	var ramp := space.intersect_ray(PhysicsRayQueryParameters3D.create(Vector3(48.0, 6.5, 37.0), Vector3(48.0, 3.3, 37.0), 1))
+	checks.append({"what": "assembly upper stair is physically sloped between 3.6m and 6.2m", "ok": not ramp.is_empty() and float(ramp.get("position", Vector3.ZERO).y) > 4.4 and float(ramp.get("position", Vector3.ZERO).y) < 5.6, "detail": ramp.get("position", Vector3.ZERO)})
+	return checks

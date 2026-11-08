@@ -1,0 +1,20 @@
+{
+  "stable_id": "L079",
+  "scene": "res://levels/L079/L079.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev4 source candidate",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "Seven-room research clinic with timed mechanical tremor and uncertain exit",
+  "mechanics": [
+    "seven_rooms",
+    "medical_equipment",
+    "tremor_timer",
+    "unresolved_boundary"
+  ],
+  "exits": [],
+  "notes": "Uses a compact prototype scale. Godot/Windows gameplay and performance not yet verified; no promotion to PLAYABLE.",
+  "entity_policy": "NO ENTITY PER SOURCE"
+}

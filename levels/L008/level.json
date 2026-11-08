@@ -6,7 +6,8 @@
   "procedural": true,
   "arrivals": [
     "start",
-    "from_L007"
+    "from_L007",
+    "from_L007_8"
   ],
   "signature": "Cold, dripping karst caves: you surface in an underground pool ringed by stalagspikes beside the glowing M.E.G. sign of the 9th Road, a marked route through phreatic tubes, a vadose canyon, a breakdown chamber of floating boulders seen from a high gallery, a laddered shaft and a dip that floods in seconds, while the caves off the road quietly rearrange themselves.",
   "mechanics": [
@@ -82,5 +83,11 @@
     }
   ],
   "entity_policy": "Hands of tar (CONFIRMED) act at the tar pool. Wranglers (CONFIRMED) are felt only as tremors and grinding in the rock: no body is shown. Arachnids, chittering and clicking stay unseen (audio only). No settlement NPCs, light guides, wretches or other named regions are built (Hyperspace Lane, Rottnest Jungle, Handyland, outposts are beyond this slice). The dead caver is the page's own vignette (a body with a pack holding a flashlight and battery heater).",
-  "notes": "ADAPTATION: the 9th Road (page: 14 km to the first M.E.G. outpost, then on to Level 9) is compressed to ~360 m of authored road through 30 m streamed cave columns (SDF + surface nets); the playable world is a finite streaming window. Markers every ~50 m use the sign's glittering paint; they decay fast once seen and then left unobserved (page: entropy, markers degrade). Off-road chunks re-roll their chamber when unobserved (page: same path twice may lead to a different chamber); border passages never change, so the caves always reconnect. Gravity changes magnitude only (0.4x in low-gravity chambers): the shared player controller has no gravity vector, so direction flips are not built. Multi-height: road floors span -8 m to +5 m, a 12 m laddered shaft (ladder is an ADAPTATION: M.E.G. fixture), a ramp gallery to a ledge 9 m above the breakdown chamber floor, and a narrow high bypass over the flood dip. The cracked-floor affordance and the tar pool's steam are ours (page gives no cue). from_L007 arrives underwater at the mouth of a flooded tunnel under the entrance pool (the page opens with surfacing from a lake; it names the pool's link as Level 6, the Level 7 page names the cave). QA FIXTURE: in QA mode only, the road-end trigger is placed 24 m into the first tube and the far exits are not built; the real routes are verified by levels/L008/route_test.gd."
+  "notes": "ADAPTATION: the 9th Road (page: 14 km to the first M.E.G. outpost, then on to Level 9) is compressed to ~360 m of authored road through 30 m streamed cave columns (SDF + surface nets); the playable world is a finite streaming window. Markers every ~50 m use the sign's glittering paint; they decay fast once seen and then left unobserved (page: entropy, markers degrade). Off-road chunks re-roll their chamber when unobserved (page: same path twice may lead to a different chamber); border passages never change, so the caves always reconnect. Gravity changes magnitude only (0.4x in low-gravity chambers): the shared player controller has no gravity vector, so direction flips are not built. Multi-height: road floors span -8 m to +5 m, a 12 m laddered shaft (ladder is an ADAPTATION: M.E.G. fixture), a ramp gallery to a ledge 9 m above the breakdown chamber floor, and a narrow high bypass over the flood dip. The cracked-floor affordance and the tar pool's steam are ours (page gives no cue). from_L007 arrives underwater at the mouth of a flooded tunnel under the entrance pool (the page opens with surfacing from a lake; it names the pool's link as Level 6, the Level 7 page names the cave). QA FIXTURE: in QA mode only, the road-end trigger is placed 24 m into the first tube and the far exits are not built; the real routes are verified by levels/L008/route_test.gd.",
+  "arrival_aliases": [
+    "from_L007_8"
+  ],
+  "provisional_arrival_notes": [
+    "dev7: from_L007_8 currently maps to safe start position; not a dedicated architectural ingress."
+  ]
 }

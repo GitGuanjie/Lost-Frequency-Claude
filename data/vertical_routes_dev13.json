@@ -1,0 +1,272 @@
+{
+  "version": "1.5.0-dev13",
+  "provenance": "Authored design graph, not confirmed by Godot navigation or player walking",
+  "levels": {
+    "L004": {
+      "name": "Upper gallery / suspended inspection bridge",
+      "ceiling_old_y": 6.4,
+      "ceiling_new_under_y": 8.13,
+      "handrail_top_y": 4.66,
+      "bridge_top_y": 5.1,
+      "nodes": {
+        "west_gallery": [
+          8.15,
+          3.6,
+          8.8
+        ],
+        "west_top": [
+          8.15,
+          5.1,
+          14
+        ],
+        "center": [
+          14.1,
+          5.1,
+          14
+        ],
+        "east_top": [
+          20.65,
+          5.1,
+          14
+        ],
+        "east_gallery": [
+          20.65,
+          3.6,
+          19.2
+        ],
+        "overlook": [
+          14.1,
+          5.1,
+          18.9
+        ]
+      },
+      "edges": [
+        [
+          "west_gallery",
+          "west_top",
+          "ramp",
+          1.5
+        ],
+        [
+          "west_top",
+          "center",
+          "deck",
+          1.5
+        ],
+        [
+          "center",
+          "east_top",
+          "deck",
+          1.5
+        ],
+        [
+          "east_top",
+          "east_gallery",
+          "ramp",
+          1.5
+        ],
+        [
+          "center",
+          "overlook",
+          "deck",
+          1.6
+        ]
+      ]
+    },
+    "L005": {
+      "name": "West B1 inspection annex / two-door descent circuit",
+      "floor_y": -8.1,
+      "ceiling_y": -1.6,
+      "nodes": {
+        "door_a": [
+          3.05,
+          -5,
+          15
+        ],
+        "a_entry": [
+          -3,
+          -5,
+          15
+        ],
+        "a_turn": [
+          -3,
+          -6.5,
+          22
+        ],
+        "a_bottom": [
+          -10,
+          -8.1,
+          22
+        ],
+        "door_b": [
+          3.05,
+          -5,
+          19.5
+        ],
+        "b_entry": [
+          -1,
+          -5,
+          19.5
+        ],
+        "b_turn": [
+          -1,
+          -6.5,
+          27
+        ],
+        "b_bottom": [
+          -10,
+          -8.1,
+          27
+        ]
+      },
+      "edges": [
+        [
+          "door_a",
+          "a_entry",
+          "deck",
+          1.4
+        ],
+        [
+          "a_entry",
+          "a_turn",
+          "ramp",
+          1.4
+        ],
+        [
+          "a_turn",
+          "a_bottom",
+          "ramp",
+          1.4
+        ],
+        [
+          "a_bottom",
+          "b_bottom",
+          "deck",
+          2.0
+        ],
+        [
+          "b_bottom",
+          "b_turn",
+          "ramp",
+          1.4
+        ],
+        [
+          "b_turn",
+          "b_entry",
+          "ramp",
+          1.4
+        ],
+        [
+          "b_entry",
+          "door_b",
+          "deck",
+          1.4
+        ]
+      ]
+    },
+    "L037": {
+      "name": "Underwater terraces at the existing stair pit",
+      "nodes": {
+        "stair_edge": [
+          44,
+          -1.6,
+          17.9
+        ],
+        "upper": [
+          45.4,
+          -1.6,
+          19
+        ],
+        "middle": [
+          52.1,
+          -4.35,
+          22.6
+        ],
+        "pit_bottom": [
+          46,
+          -7.5,
+          22.6
+        ]
+      },
+      "edges": [
+        [
+          "stair_edge",
+          "upper",
+          "deck",
+          1.6
+        ],
+        [
+          "upper",
+          "middle",
+          "ramp",
+          1.6
+        ],
+        [
+          "middle",
+          "pit_bottom",
+          "ramp",
+          1.6
+        ]
+      ],
+      "danger": "Deep water; not assumed safe to walk without swimming controls"
+    },
+    "L002": {
+      "name": "Double-ramp service loop over existing 4.2m pipe gallery deck",
+      "ceiling_under_y": 7.9,
+      "nodes": {
+        "central_south": [
+          51.3,
+          4.2,
+          8.9
+        ],
+        "high_south": [
+          55.4,
+          5.0,
+          8.9
+        ],
+        "high_north": [
+          55.4,
+          5.0,
+          11.1
+        ],
+        "central_north": [
+          51.3,
+          4.2,
+          11.1
+        ]
+      },
+      "edges": [
+        [
+          "central_south",
+          "high_south",
+          "ramp",
+          1.25
+        ],
+        [
+          "high_south",
+          "high_north",
+          "deck",
+          1.3
+        ],
+        [
+          "high_north",
+          "central_north",
+          "ramp",
+          1.25
+        ],
+        [
+          "central_north",
+          "central_south",
+          "existing_deck",
+          2.2
+        ]
+      ]
+    }
+  },
+  "baseline_manifest_sha256": {
+    "L004": "bb0b82c22b4049616c58707ed9ac6a4bad0105fc5fd0086387c4dd6e9dd75531",
+    "L005": "50abbde83890e59f6578365d6639898e02fa1231f4771027f80e8dd5f2175230",
+    "L037": "a5b98faefaaad35640f0e8b493b66218c856e3571157ae15aa9131a237524116",
+    "L002": "b57d5bd72fe0a6e437954db9fb906d86855ae44aa59b0047e3227761568fa831"
+  }
+}

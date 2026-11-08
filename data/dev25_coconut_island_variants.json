@@ -1,0 +1,514 @@
+{
+  "islands": [
+    {
+      "id": 0,
+      "palms": 3,
+      "pos": [
+        -36,
+        0,
+        -4
+      ],
+      "props": [
+        {
+          "height": 1.1,
+          "model": "rock-smalla",
+          "pack": "nature-kit",
+          "x": -30.617,
+          "y": 0,
+          "yaw": 63,
+          "z": -1.49
+        },
+        {
+          "height": 1.3,
+          "model": "cliff-rock",
+          "pack": "nature-kit",
+          "x": -40.2,
+          "y": 0,
+          "yaw": 60,
+          "z": 0.2
+        },
+        {
+          "height": 1.5,
+          "model": "rock-smallc",
+          "pack": "nature-kit",
+          "x": -38.51,
+          "y": 0,
+          "yaw": 9,
+          "z": -9.383
+        }
+      ],
+      "radius": 9
+    },
+    {
+      "id": 1,
+      "palms": 4,
+      "pos": [
+        -55,
+        0.8,
+        -5
+      ],
+      "props": [
+        {
+          "height": 1.1,
+          "model": "rock-smalld",
+          "pack": "nature-kit",
+          "x": -50.586,
+          "y": 0.8,
+          "yaw": 265,
+          "z": -1.025
+        },
+        {
+          "height": 1.3,
+          "model": "rock-smalla",
+          "pack": "nature-kit",
+          "x": -60.245,
+          "y": 0.8,
+          "yaw": 290,
+          "z": -2.211
+        },
+        {
+          "height": 1.5,
+          "model": "cliff-rock",
+          "pack": "nature-kit",
+          "x": -55.827,
+          "y": 0.8,
+          "yaw": 266,
+          "z": -10.882
+        }
+      ],
+      "radius": 9
+    },
+    {
+      "id": 2,
+      "palms": 5,
+      "pos": [
+        -74,
+        1.2,
+        1
+      ],
+      "props": [
+        {
+          "height": 1.1,
+          "model": "rock-tallc",
+          "pack": "nature-kit",
+          "x": -70.941,
+          "y": 1.2,
+          "yaw": 101,
+          "z": 6.092
+        },
+        {
+          "height": 1.3,
+          "model": "rock-smalld",
+          "pack": "nature-kit",
+          "x": -79.831,
+          "y": 1.2,
+          "yaw": 2,
+          "z": 2.133
+        },
+        {
+          "height": 1.5,
+          "model": "rock-smalla",
+          "pack": "nature-kit",
+          "x": -73.071,
+          "y": 1.2,
+          "yaw": 149,
+          "z": -4.867
+        }
+      ],
+      "radius": 9
+    },
+    {
+      "id": 3,
+      "palms": 6,
+      "pos": [
+        -93,
+        2,
+        7
+      ],
+      "props": [
+        {
+          "height": 1.1,
+          "model": "rock-smallb",
+          "pack": "nature-kit",
+          "x": -91.403,
+          "y": 2,
+          "yaw": 211,
+          "z": 13.404
+        },
+        {
+          "height": 1.3,
+          "model": "rock-tallc",
+          "pack": "nature-kit",
+          "x": -99.564,
+          "y": 2,
+          "yaw": 311,
+          "z": 6.31
+        },
+        {
+          "height": 1.5,
+          "model": "rock-smalld",
+          "pack": "nature-kit",
+          "x": -90.107,
+          "y": 2,
+          "yaw": 150,
+          "z": 1.068
+        }
+      ],
+      "radius": 10
+    },
+    {
+      "id": 4,
+      "palms": 3,
+      "pos": [
+        -113,
+        2.7,
+        6
+      ],
+      "props": [
+        {
+          "height": 1.1,
+          "model": "rock-smallflata",
+          "pack": "nature-kit",
+          "x": -113.345,
+          "y": 2.7,
+          "yaw": 24,
+          "z": 12.591
+        },
+        {
+          "height": 1.3,
+          "model": "rock-smallb",
+          "pack": "nature-kit",
+          "x": -119.075,
+          "y": 2.7,
+          "yaw": 104,
+          "z": 3.421
+        },
+        {
+          "height": 1.5,
+          "model": "rock-tallc",
+          "pack": "nature-kit",
+          "x": -108.499,
+          "y": 2.7,
+          "yaw": 351,
+          "z": 1.173
+        }
+      ],
+      "radius": 10
+    },
+    {
+      "id": 5,
+      "palms": 4,
+      "pos": [
+        -134,
+        3.2,
+        -1
+      ],
+      "props": [
+        {
+          "height": 1.1,
+          "model": "rock-talle",
+          "pack": "nature-kit",
+          "x": -136.483,
+          "y": 3.2,
+          "yaw": 345,
+          "z": 5.822
+        },
+        {
+          "height": 1.3,
+          "model": "rock-smallflata",
+          "pack": "nature-kit",
+          "x": -139.561,
+          "y": 3.2,
+          "yaw": 161,
+          "z": -5.667
+        },
+        {
+          "height": 1.5,
+          "model": "rock-smallb",
+          "pack": "nature-kit",
+          "x": -127.713,
+          "y": 3.2,
+          "yaw": 105,
+          "z": -4.63
+        }
+      ],
+      "radius": 11
+    },
+    {
+      "id": 6,
+      "palms": 5,
+      "pos": [
+        -157,
+        2.2,
+        -8
+      ],
+      "props": [
+        {
+          "height": 1.1,
+          "model": "rock-smallc",
+          "pack": "nature-kit",
+          "x": -161.766,
+          "y": 2.2,
+          "yaw": 329,
+          "z": -1.675
+        },
+        {
+          "height": 1.3,
+          "model": "rock-talle",
+          "pack": "nature-kit",
+          "x": -161.314,
+          "y": 2.2,
+          "yaw": 271,
+          "z": -14.642
+        },
+        {
+          "height": 1.5,
+          "model": "rock-smallflata",
+          "pack": "nature-kit",
+          "x": -149.283,
+          "y": 2.2,
+          "yaw": 27,
+          "z": -9.782
+        }
+      ],
+      "radius": 12
+    },
+    {
+      "id": 7,
+      "palms": 6,
+      "pos": [
+        -179,
+        1.3,
+        -2
+      ],
+      "props": [
+        {
+          "height": 1.1,
+          "model": "cliff-rock",
+          "pack": "nature-kit",
+          "x": -184.873,
+          "y": 1.3,
+          "yaw": 100,
+          "z": 2.267
+        },
+        {
+          "height": 1.3,
+          "model": "rock-smallc",
+          "pack": "nature-kit",
+          "x": -181.001,
+          "y": 1.3,
+          "yaw": 350,
+          "z": -8.979
+        },
+        {
+          "height": 1.5,
+          "model": "rock-talle",
+          "pack": "nature-kit",
+          "x": -171.758,
+          "y": 1.3,
+          "yaw": 68,
+          "z": -1.494
+        }
+      ],
+      "radius": 11
+    },
+    {
+      "id": 8,
+      "palms": 3,
+      "pos": [
+        -199,
+        0.7,
+        7
+      ],
+      "props": [
+        {
+          "height": 1.1,
+          "model": "rock-smalla",
+          "pack": "nature-kit",
+          "x": -205.864,
+          "y": 0.7,
+          "yaw": 93,
+          "z": 9.364
+        },
+        {
+          "height": 1.3,
+          "model": "cliff-rock",
+          "pack": "nature-kit",
+          "x": -198.873,
+          "y": 0.7,
+          "yaw": 186,
+          "z": -0.259
+        },
+        {
+          "height": 1.5,
+          "model": "rock-smallc",
+          "pack": "nature-kit",
+          "x": -192.222,
+          "y": 0.7,
+          "yaw": 348,
+          "z": 9.602
+        }
+      ],
+      "radius": 11
+    },
+    {
+      "id": 9,
+      "palms": 4,
+      "pos": [
+        -220,
+        1.9,
+        6
+      ],
+      "props": [
+        {
+          "height": 1.1,
+          "model": "rock-smalld",
+          "pack": "nature-kit",
+          "x": -227.256,
+          "y": 1.9,
+          "yaw": 71,
+          "z": 6.253
+        },
+        {
+          "height": 1.3,
+          "model": "rock-smalla",
+          "pack": "nature-kit",
+          "x": -217.757,
+          "y": 1.9,
+          "yaw": 312,
+          "z": -0.905
+        },
+        {
+          "height": 1.5,
+          "model": "cliff-rock",
+          "pack": "nature-kit",
+          "x": -214.279,
+          "y": 1.9,
+          "yaw": 45,
+          "z": 10.47
+        }
+      ],
+      "radius": 11
+    },
+    {
+      "id": 10,
+      "palms": 5,
+      "pos": [
+        -92,
+        1.8,
+        25
+      ],
+      "props": [
+        {
+          "height": 1.1,
+          "model": "rock-tallc",
+          "pack": "nature-kit",
+          "x": -98.375,
+          "y": 1.8,
+          "yaw": 167,
+          "z": 23.292
+        },
+        {
+          "height": 1.3,
+          "model": "rock-smalld",
+          "pack": "nature-kit",
+          "x": -88.214,
+          "y": 1.8,
+          "yaw": 111,
+          "z": 19.594
+        },
+        {
+          "height": 1.5,
+          "model": "rock-smalla",
+          "pack": "nature-kit",
+          "x": -88.214,
+          "y": 1.8,
+          "yaw": 245,
+          "z": 30.406
+        }
+      ],
+      "radius": 10
+    },
+    {
+      "id": 11,
+      "palms": 6,
+      "pos": [
+        -113,
+        2.2,
+        29
+      ],
+      "props": [
+        {
+          "height": 1.1,
+          "model": "rock-smallb",
+          "pack": "nature-kit",
+          "x": -119.157,
+          "y": 2.2,
+          "yaw": 252,
+          "z": 25.153
+        },
+        {
+          "height": 1.3,
+          "model": "rock-tallc",
+          "pack": "nature-kit",
+          "x": -107.279,
+          "y": 2.2,
+          "yaw": 278,
+          "z": 24.53
+        },
+        {
+          "height": 1.5,
+          "model": "rock-smalld",
+          "pack": "nature-kit",
+          "x": -110.757,
+          "y": 2.2,
+          "yaw": 121,
+          "z": 35.905
+        }
+      ],
+      "radius": 11
+    },
+    {
+      "id": 12,
+      "palms": 3,
+      "pos": [
+        -150,
+        3.0,
+        13
+      ],
+      "props": [
+        {
+          "height": 1.1,
+          "model": "rock-smallflata",
+          "pack": "nature-kit",
+          "x": -155.196,
+          "y": 3.0,
+          "yaw": 336,
+          "z": 7.023
+        },
+        {
+          "height": 1.3,
+          "model": "rock-smallb",
+          "pack": "nature-kit",
+          "x": -142.606,
+          "y": 3.0,
+          "yaw": 0,
+          "z": 10.162
+        },
+        {
+          "height": 1.5,
+          "model": "rock-tallc",
+          "pack": "nature-kit",
+          "x": -149.862,
+          "y": 3.0,
+          "yaw": 29,
+          "z": 20.919
+        }
+      ],
+      "radius": 12
+    }
+  ],
+  "level": "L149",
+  "notes": "Optional natural island field. All original exits and Barrier probability unchanged.",
+  "version": 25
+}

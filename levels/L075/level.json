@@ -1,0 +1,39 @@
+{
+  "stable_id": "L075",
+  "scene": "res://levels/L075/L075.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "UNVERIFIED - initial source-faithful candidate; Godot 4.5.x engine QA, screenshots and human review required",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L008"
+  ],
+  "signature": "A harmless, rain-sounding maze of cool sandrooms. Old child-sized impressions and toys persist in thick yellow sand; dying paint, false sunbeams and an impenetrable voidstone roof make the silence feel remembered.",
+  "mechanics": [
+    "seeded_connected_30_chamber_spanning_maze",
+    "permanent_sand_footprints_with_bounded_multimesh",
+    "inert_buried_toys",
+    "blue_cream_rare_red_peeling_paint",
+    "impenetrable_voidstone_ceiling",
+    "dead_fixture_no_electrical_light",
+    "synthetic_perpetual_rain_no_water",
+    "sand_free_door_to_unidentified_original_destination"
+  ],
+  "exits": [
+    {
+      "id": "L075>EXT#1",
+      "to": "EXT",
+      "to_label": "The originally intended level (not specified on the page)",
+      "trigger": "interact",
+      "label": "Opened a doorway in a room with no sand",
+      "confidence": "CONFIRMED",
+      "basis": "SOURCE",
+      "source_section": "Entrances and Exits",
+      "source_quote": "will send the wanderer to the level they would have entered originally",
+      "arrival": "from_L075",
+      "hint": "Seek a room where the yellow sand does not cover the floor. An ordinary door may lead out."
+    }
+  ],
+  "entity_policy": "NONE. Level 75 is explicitly devoid of entities. No NPC, enemies, resources, consumables or hazards are spawned.",
+  "notes": "SOURCE: sand-filled rooms and corridors, peeling painted blue/cream/rare-red walls, dead lighting fixtures, light beams from arbitrary ceiling/wall spots, phantom rain with no water, a cool dry 15°C interior, immovable voidstone roof, old footprints and toys in inert sand, rooms may take decades to regenerate. ADAPTATION: finite 6×5 seeded spanning-tree maze with occasional short loops, each cell 10×10 m, no regeneration during an expedition; footprints use a bounded 512-instance MultiMesh and thus remain until an actual level reload; the unique sand-free exit room is guaranteed reachable by maze topology, but its destination is intentionally unspecified (EXT release boundary) rather than invented. SOURCE L008>L075#4 supplies an arrival. QA PENDING."
+}

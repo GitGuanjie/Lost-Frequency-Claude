@@ -1,0 +1,47 @@
+{
+  "version": "1.5.0-dev24",
+  "base": "LostFrequency_v1.5.0-dev23_SOURCE.zip",
+  "added": [
+    "3/DEV24_README_FIRST_CN.md",
+    "3/EXPORT_DEV24_WINDOWS.ps1",
+    "3/RUN_DEV24_QA_WINDOWS.ps1",
+    "3/core/world/ExpeditionBiomes.gd",
+    "3/core/world/ExpeditionState.gd",
+    "3/data/dev24_expeditions.json",
+    "3/docs/production/DEV24_ExpeditionMorphologies.png",
+    "3/docs/production/DEV24_开发报告.md",
+    "3/reports/qa/v150_dev24/import.log",
+    "3/reports/qa/v150_dev24/summary.json",
+    "3/tests/static/test_dev24_expedition_biomes.py",
+    "3/tools/generate_dev24_expeditions.py",
+    "3/tools/render_dev24_expeditions.py",
+    "3/tools/run_dev24_qa.py"
+  ],
+  "modified": [
+    "3/README.md",
+    "3/core/world/LandmarkSpurs.gd",
+    "3/project.godot",
+    "3/tests/qa_runner.gd"
+  ],
+  "deleted": [],
+  "checksums": {
+    "3/DEV24_README_FIRST_CN.md": "94341b9798c3c579f6aad9524ba15f7e3140e9212c0d68a6ba2a291db2235c02",
+    "3/EXPORT_DEV24_WINDOWS.ps1": "ac932a7b7f00eb6583b3a1578201b858bb82b16d2c19afb7922c51952b8409c8",
+    "3/README.md": "c3d8992cfc1ec941f6e320d279ea24933e5cfe07119bbf326f4bde0fd58506c7",
+    "3/RUN_DEV24_QA_WINDOWS.ps1": "345bc738100c98708408b6dbd545bacab212fa8c669bc871a9ee0f6b26558922",
+    "3/core/world/ExpeditionBiomes.gd": "6e4af5241ea7fac81207d691f67e0d2ba600e846836ba470a97aba60f5bc98e9",
+    "3/core/world/ExpeditionState.gd": "3b1b9b2a4ed8b725a14ac6e1006046aefd48157bc77ce4ff55668bce58bcff96",
+    "3/core/world/LandmarkSpurs.gd": "fea4ecf847b3283296c854f3c89530022d6ff66a5f87611dbdd3947adf70a191",
+    "3/data/dev24_expeditions.json": "ea6adfa11a3a0f21eb8d9bd33117098ff0140e42e3219354a30572ec07c5d114",
+    "3/docs/production/DEV24_ExpeditionMorphologies.png": "a95ef0bc9f6948896df5a8d8c9e965362f5e25c825ed750da3ebff808a3e664c",
+    "3/docs/production/DEV24_开发报告.md": "d9d9b343aa948a94caea0132e066b161d517073d84eb8f1a4a0278b11765e7b3",
+    "3/project.godot": "6fd085d884a554587e8cc22340fa3eec033c58ad1960c78cc4cff3505236bee6",
+    "3/reports/qa/v150_dev24/import.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "3/reports/qa/v150_dev24/summary.json": "d879611e710108b1362ea805c4161baa3fe26ae8ff7d4bcbf37233021cb142b7",
+    "3/tests/qa_runner.gd": "8457a5ed4323d8b26ee4b5a8410920174c50a19413a604b23443b515e8d372da",
+    "3/tests/static/test_dev24_expedition_biomes.py": "04aa5eaabe0258148c70fed1a0cb0838c549173742e9738a286c469b794053db",
+    "3/tools/generate_dev24_expeditions.py": "0528b06995a94ff3beb3fb98fd6f324607e2047c834da8e43d3eb10d37375a54",
+    "3/tools/render_dev24_expeditions.py": "317d12e8428ec64286efc3499118d8f27c16cef8fd28caf102f7daf11f2d5e80",
+    "3/tools/run_dev24_qa.py": "4e3dcd57ddd4bf23489498e787c65cb1f42afdf9f2d4cffa70183d2af641cb4c"
+  }
+}

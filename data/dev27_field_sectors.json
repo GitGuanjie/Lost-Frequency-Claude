@@ -1,0 +1,3859 @@
+{
+  "version": "dev27.1",
+  "description": "optional physical exploration sectors, no exit changes",
+  "sites": [
+    {
+      "id": "L016",
+      "style": "canopy",
+      "title": "Twilight Canopy Observatory",
+      "anchor": [
+        -18.0,
+        -16.0
+      ],
+      "half": [
+        15,
+        11
+      ],
+      "floor": "l16_wood",
+      "accent": "l16_leaf",
+      "tint": [
+        0.5,
+        0.8,
+        0.57
+      ],
+      "sound": "wind",
+      "observation": "The sunrise seems unchanged on both sides of the weather boundary.",
+      "points": {
+        "ground": [
+          0,
+          0,
+          0
+        ],
+        "sw_foot": [
+          -15,
+          0,
+          -23
+        ],
+        "ne_foot": [
+          15,
+          0,
+          23
+        ],
+        "sw": [
+          -15,
+          3.6,
+          -11
+        ],
+        "se": [
+          15,
+          3.6,
+          -11
+        ],
+        "ne": [
+          15,
+          3.6,
+          11
+        ],
+        "nw": [
+          -15,
+          3.6,
+          11
+        ],
+        "north_mid": [
+          0,
+          3.6,
+          11
+        ],
+        "south_mid": [
+          0,
+          3.6,
+          -11
+        ]
+      },
+      "links": [
+        [
+          "ground",
+          "sw_foot",
+          "ground"
+        ],
+        [
+          "ground",
+          "ne_foot",
+          "ground"
+        ],
+        [
+          "sw_foot",
+          "sw",
+          "stair"
+        ],
+        [
+          "ne_foot",
+          "ne",
+          "stair"
+        ],
+        [
+          "sw",
+          "south_mid",
+          "walk"
+        ],
+        [
+          "south_mid",
+          "se",
+          "walk"
+        ],
+        [
+          "se",
+          "ne",
+          "walk"
+        ],
+        [
+          "ne",
+          "north_mid",
+          "walk"
+        ],
+        [
+          "north_mid",
+          "nw",
+          "walk"
+        ],
+        [
+          "nw",
+          "sw",
+          "walk"
+        ],
+        [
+          "north_mid",
+          "south_mid",
+          "optional"
+        ],
+        [
+          "nw",
+          "spur0",
+          "walk"
+        ],
+        [
+          "se",
+          "spur1",
+          "walk"
+        ],
+        [
+          "ne",
+          "spur2",
+          "walk"
+        ]
+      ],
+      "spurs": [
+        {
+          "id": "spur0",
+          "from": "nw",
+          "direction": "west",
+          "gap": 8.0,
+          "pos": [
+            -29.3,
+            3.6,
+            11.0
+          ]
+        },
+        {
+          "id": "spur1",
+          "from": "se",
+          "direction": "east",
+          "gap": 7.0,
+          "pos": [
+            28.3,
+            3.6,
+            -11.0
+          ]
+        },
+        {
+          "id": "spur2",
+          "from": "ne",
+          "direction": "north",
+          "gap": 9.0,
+          "pos": [
+            15.0,
+            3.6,
+            26.3
+          ]
+        }
+      ],
+      "props": [
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "pos": [
+            -12.55,
+            3.6,
+            -13.45
+          ],
+          "height": 0.82,
+          "yaw": 0.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "shovel",
+          "pos": [
+            -17.45,
+            3.6,
+            -8.55
+          ],
+          "height": 0.7,
+          "yaw": 270.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "pos": [
+            -12.55,
+            3.6,
+            -8.55
+          ],
+          "height": 0.79,
+          "yaw": 0.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallc",
+          "pos": [
+            12.55,
+            3.6,
+            -13.45
+          ],
+          "height": 0.66,
+          "yaw": 0.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "pos": [
+            12.55,
+            3.6,
+            -8.55
+          ],
+          "height": 0.73,
+          "yaw": 270.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "shovel",
+          "pos": [
+            17.45,
+            3.6,
+            -8.55
+          ],
+          "height": 0.84,
+          "yaw": 0.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalld",
+          "pos": [
+            12.55,
+            3.6,
+            8.55
+          ],
+          "height": 0.57,
+          "yaw": 90.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalld",
+          "pos": [
+            17.45,
+            3.6,
+            8.55
+          ],
+          "height": 0.57,
+          "yaw": 270.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-top-rock",
+          "pos": [
+            17.45,
+            3.6,
+            13.45
+          ],
+          "height": 0.81,
+          "yaw": 90.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "pos": [
+            -17.45,
+            3.6,
+            8.55
+          ],
+          "height": 0.74,
+          "yaw": 180.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalld",
+          "pos": [
+            -12.55,
+            3.6,
+            8.55
+          ],
+          "height": 0.72,
+          "yaw": 180.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "shovel",
+          "pos": [
+            -17.45,
+            3.6,
+            13.45
+          ],
+          "height": 0.6,
+          "yaw": 0.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "pos": [
+            -21.0,
+            0.0,
+            0.0
+          ],
+          "height": 0.63,
+          "yaw": 270.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "pos": [
+            21.0,
+            0.0,
+            0.0
+          ],
+          "height": 0.7,
+          "yaw": 135.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalld",
+          "pos": [
+            0.0,
+            0.0,
+            -18.0
+          ],
+          "height": 0.84,
+          "yaw": 270.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "pos": [
+            0.0,
+            0.0,
+            18.0
+          ],
+          "height": 0.6,
+          "yaw": 45.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "pos": [
+            -22.0,
+            0.0,
+            -13.0
+          ],
+          "height": 0.64,
+          "yaw": 270.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "pos": [
+            22.0,
+            0.0,
+            13.0
+          ],
+          "height": 0.64,
+          "yaw": 270.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallc",
+          "pos": [
+            -22.0,
+            0.0,
+            13.0
+          ],
+          "height": 0.75,
+          "yaw": 270.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-top-rock",
+          "pos": [
+            22.0,
+            0.0,
+            -13.0
+          ],
+          "height": 0.6,
+          "yaw": 180.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "pos": [
+            -21.0,
+            0.0,
+            7.0
+          ],
+          "height": 0.77,
+          "yaw": 270.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "pos": [
+            21.0,
+            0.0,
+            -7.0
+          ],
+          "height": 0.76,
+          "yaw": 45.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "pos": [
+            21.0,
+            0.0,
+            7.0
+          ],
+          "height": 0.67,
+          "yaw": 0.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallc",
+          "pos": [
+            -21.0,
+            0.0,
+            -7.0
+          ],
+          "height": 0.84,
+          "yaw": 225.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallc",
+          "pos": [
+            -31.2,
+            3.6,
+            9.1
+          ],
+          "height": 0.64,
+          "yaw": 180.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "shovel",
+          "pos": [
+            -27.400000000000002,
+            3.6,
+            12.9
+          ],
+          "height": 0.51,
+          "yaw": 180.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "shovel",
+          "pos": [
+            26.400000000000002,
+            3.6,
+            -12.9
+          ],
+          "height": 0.67,
+          "yaw": 0.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalld",
+          "pos": [
+            30.2,
+            3.6,
+            -9.1
+          ],
+          "height": 0.53,
+          "yaw": 270.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "pos": [
+            13.1,
+            3.6,
+            24.400000000000002
+          ],
+          "height": 0.68,
+          "yaw": 0.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-rock",
+          "pos": [
+            16.9,
+            3.6,
+            28.2
+          ],
+          "height": 0.67,
+          "yaw": 180.0
+        }
+      ],
+      "canonical_exits_unchanged": true,
+      "source": "ADAPTATION"
+    },
+    {
+      "id": "L024",
+      "style": "mine",
+      "title": "PlasticWorks Service Spines",
+      "anchor": [
+        46.0,
+        32.0
+      ],
+      "half": [
+        12,
+        16
+      ],
+      "floor": "l24_steel",
+      "accent": "l24_plastic",
+      "tint": [
+        0.39,
+        0.75,
+        0.95
+      ],
+      "sound": "room_tone",
+      "observation": "An unfinished conveyor runs into the unpainted horizon.",
+      "points": {
+        "ground": [
+          0,
+          0,
+          0
+        ],
+        "sw_foot": [
+          -12,
+          0,
+          -28
+        ],
+        "ne_foot": [
+          12,
+          0,
+          28
+        ],
+        "sw": [
+          -12,
+          3.6,
+          -16
+        ],
+        "se": [
+          12,
+          3.6,
+          -16
+        ],
+        "ne": [
+          12,
+          3.6,
+          16
+        ],
+        "nw": [
+          -12,
+          3.6,
+          16
+        ],
+        "north_mid": [
+          0,
+          3.6,
+          16
+        ],
+        "south_mid": [
+          0,
+          3.6,
+          -16
+        ]
+      },
+      "links": [
+        [
+          "ground",
+          "sw_foot",
+          "ground"
+        ],
+        [
+          "ground",
+          "ne_foot",
+          "ground"
+        ],
+        [
+          "sw_foot",
+          "sw",
+          "stair"
+        ],
+        [
+          "ne_foot",
+          "ne",
+          "stair"
+        ],
+        [
+          "sw",
+          "south_mid",
+          "walk"
+        ],
+        [
+          "south_mid",
+          "se",
+          "walk"
+        ],
+        [
+          "se",
+          "ne",
+          "walk"
+        ],
+        [
+          "ne",
+          "north_mid",
+          "walk"
+        ],
+        [
+          "north_mid",
+          "nw",
+          "walk"
+        ],
+        [
+          "nw",
+          "sw",
+          "walk"
+        ],
+        [
+          "north_mid",
+          "south_mid",
+          "optional"
+        ],
+        [
+          "nw",
+          "spur0",
+          "walk"
+        ],
+        [
+          "sw",
+          "spur1",
+          "walk"
+        ]
+      ],
+      "spurs": [
+        {
+          "id": "spur0",
+          "from": "nw",
+          "direction": "north",
+          "gap": 8.0,
+          "pos": [
+            -12.0,
+            3.6,
+            30.3
+          ]
+        },
+        {
+          "id": "spur1",
+          "from": "sw",
+          "direction": "west",
+          "gap": 7.0,
+          "pos": [
+            -25.3,
+            3.6,
+            -16.0
+          ]
+        }
+      ],
+      "props": [
+        {
+          "pack": "city-kit-roads",
+          "model": "construction-barrier",
+          "pos": [
+            -9.55,
+            3.6,
+            -18.45
+          ],
+          "height": 0.84,
+          "yaw": 270.0
+        },
+        {
+          "pack": "prototype-kit",
+          "model": "column-low",
+          "pos": [
+            -14.45,
+            3.6,
+            -13.55
+          ],
+          "height": 0.82,
+          "yaw": 270.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "pos": [
+            -9.55,
+            3.6,
+            -13.55
+          ],
+          "height": 0.7,
+          "yaw": 180.0
+        },
+        {
+          "pack": "space-kit",
+          "model": "desk-computer",
+          "pos": [
+            9.55,
+            3.6,
+            -18.45
+          ],
+          "height": 0.82,
+          "yaw": 270.0
+        },
+        {
+          "pack": "prototype-kit",
+          "model": "pipe-corner",
+          "pos": [
+            9.55,
+            3.6,
+            -13.55
+          ],
+          "height": 0.85,
+          "yaw": 0.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "construction-barrier",
+          "pos": [
+            14.45,
+            3.6,
+            -13.55
+          ],
+          "height": 0.62,
+          "yaw": 270.0
+        },
+        {
+          "pack": "space-kit",
+          "model": "barrels",
+          "pos": [
+            9.55,
+            3.6,
+            13.55
+          ],
+          "height": 0.7,
+          "yaw": 180.0
+        },
+        {
+          "pack": "space-kit",
+          "model": "barrels",
+          "pos": [
+            14.45,
+            3.6,
+            13.55
+          ],
+          "height": 0.64,
+          "yaw": 270.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "construction-light",
+          "pos": [
+            14.45,
+            3.6,
+            18.45
+          ],
+          "height": 0.64,
+          "yaw": 180.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "pos": [
+            -14.45,
+            3.6,
+            13.55
+          ],
+          "height": 0.74,
+          "yaw": 180.0
+        },
+        {
+          "pack": "space-kit",
+          "model": "barrels",
+          "pos": [
+            -9.55,
+            3.6,
+            13.55
+          ],
+          "height": 0.6,
+          "yaw": 0.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "dumpster",
+          "pos": [
+            -14.45,
+            3.6,
+            18.45
+          ],
+          "height": 0.59,
+          "yaw": 270.0
+        },
+        {
+          "pack": "space-kit",
+          "model": "barrel",
+          "pos": [
+            -18.0,
+            0.0,
+            0.0
+          ],
+          "height": 0.72,
+          "yaw": 315.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "construction-barrier",
+          "pos": [
+            18.0,
+            0.0,
+            0.0
+          ],
+          "height": 0.61,
+          "yaw": 0.0
+        },
+        {
+          "pack": "space-kit",
+          "model": "barrels",
+          "pos": [
+            0.0,
+            0.0,
+            -23.0
+          ],
+          "height": 0.6,
+          "yaw": 135.0
+        },
+        {
+          "pack": "space-kit",
+          "model": "desk-computer",
+          "pos": [
+            0.0,
+            0.0,
+            23.0
+          ],
+          "height": 0.74,
+          "yaw": 270.0
+        },
+        {
+          "pack": "prototype-kit",
+          "model": "column-low",
+          "pos": [
+            -19.0,
+            0.0,
+            -18.0
+          ],
+          "height": 0.79,
+          "yaw": 225.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "construction-light",
+          "pos": [
+            19.0,
+            0.0,
+            18.0
+          ],
+          "height": 0.62,
+          "yaw": 270.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "dumpster",
+          "pos": [
+            -19.0,
+            0.0,
+            18.0
+          ],
+          "height": 0.79,
+          "yaw": 225.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "dumpster",
+          "pos": [
+            19.0,
+            0.0,
+            -18.0
+          ],
+          "height": 0.78,
+          "yaw": 315.0
+        },
+        {
+          "pack": "space-kit",
+          "model": "barrels",
+          "pos": [
+            -18.0,
+            0.0,
+            7.0
+          ],
+          "height": 0.88,
+          "yaw": 180.0
+        },
+        {
+          "pack": "space-kit",
+          "model": "barrel",
+          "pos": [
+            18.0,
+            0.0,
+            -7.0
+          ],
+          "height": 0.7,
+          "yaw": 180.0
+        },
+        {
+          "pack": "space-kit",
+          "model": "desk-computerscreen",
+          "pos": [
+            18.0,
+            0.0,
+            7.0
+          ],
+          "height": 0.72,
+          "yaw": 315.0
+        },
+        {
+          "pack": "space-kit",
+          "model": "desk-chair",
+          "pos": [
+            -18.0,
+            0.0,
+            -7.0
+          ],
+          "height": 0.65,
+          "yaw": 135.0
+        },
+        {
+          "pack": "prototype-kit",
+          "model": "pipe-corner",
+          "pos": [
+            -13.9,
+            3.6,
+            28.400000000000002
+          ],
+          "height": 0.6,
+          "yaw": 90.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "construction-barrier",
+          "pos": [
+            -10.1,
+            3.6,
+            32.2
+          ],
+          "height": 0.6,
+          "yaw": 0.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "dumpster",
+          "pos": [
+            -27.2,
+            3.6,
+            -17.9
+          ],
+          "height": 0.68,
+          "yaw": 90.0
+        },
+        {
+          "pack": "space-kit",
+          "model": "barrel",
+          "pos": [
+            -23.400000000000002,
+            3.6,
+            -14.1
+          ],
+          "height": 0.72,
+          "yaw": 180.0
+        }
+      ],
+      "canonical_exits_unchanged": true,
+      "source": "ADAPTATION"
+    },
+    {
+      "id": "L029",
+      "style": "harbor",
+      "title": "Hyperian Weathered Harbour",
+      "anchor": [
+        -56.0,
+        -45.0
+      ],
+      "half": [
+        14,
+        12
+      ],
+      "floor": "l29_wood",
+      "accent": "l29_rock",
+      "tint": [
+        0.88,
+        0.7,
+        0.48
+      ],
+      "sound": "wind",
+      "observation": "The wooden walkways face a sea that never approaches.",
+      "points": {
+        "ground": [
+          0,
+          0,
+          0
+        ],
+        "sw_foot": [
+          -14,
+          0,
+          -24
+        ],
+        "ne_foot": [
+          14,
+          0,
+          24
+        ],
+        "sw": [
+          -14,
+          3.6,
+          -12
+        ],
+        "se": [
+          14,
+          3.6,
+          -12
+        ],
+        "ne": [
+          14,
+          3.6,
+          12
+        ],
+        "nw": [
+          -14,
+          3.6,
+          12
+        ],
+        "north_mid": [
+          0,
+          3.6,
+          12
+        ],
+        "south_mid": [
+          0,
+          3.6,
+          -12
+        ]
+      },
+      "links": [
+        [
+          "ground",
+          "sw_foot",
+          "ground"
+        ],
+        [
+          "ground",
+          "ne_foot",
+          "ground"
+        ],
+        [
+          "sw_foot",
+          "sw",
+          "stair"
+        ],
+        [
+          "ne_foot",
+          "ne",
+          "stair"
+        ],
+        [
+          "sw",
+          "south_mid",
+          "walk"
+        ],
+        [
+          "south_mid",
+          "se",
+          "walk"
+        ],
+        [
+          "se",
+          "ne",
+          "walk"
+        ],
+        [
+          "ne",
+          "north_mid",
+          "walk"
+        ],
+        [
+          "north_mid",
+          "nw",
+          "walk"
+        ],
+        [
+          "nw",
+          "sw",
+          "walk"
+        ],
+        [
+          "north_mid",
+          "south_mid",
+          "optional"
+        ],
+        [
+          "sw",
+          "spur0",
+          "walk"
+        ],
+        [
+          "ne",
+          "spur1",
+          "walk"
+        ],
+        [
+          "nw",
+          "spur2",
+          "walk"
+        ]
+      ],
+      "spurs": [
+        {
+          "id": "spur0",
+          "from": "sw",
+          "direction": "south",
+          "gap": 7.0,
+          "pos": [
+            -14.0,
+            3.6,
+            -25.3
+          ]
+        },
+        {
+          "id": "spur1",
+          "from": "ne",
+          "direction": "east",
+          "gap": 9.0,
+          "pos": [
+            29.3,
+            3.6,
+            12.0
+          ]
+        },
+        {
+          "id": "spur2",
+          "from": "nw",
+          "direction": "north",
+          "gap": 8.0,
+          "pos": [
+            -14.0,
+            3.6,
+            26.3
+          ]
+        }
+      ],
+      "props": [
+        {
+          "pack": "mini-dungeon",
+          "model": "chest",
+          "pos": [
+            -11.55,
+            3.6,
+            -14.45
+          ],
+          "height": 0.6,
+          "yaw": 270.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallc",
+          "pos": [
+            -16.45,
+            3.6,
+            -9.55
+          ],
+          "height": 0.57,
+          "yaw": 180.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "bag",
+          "pos": [
+            -11.55,
+            3.6,
+            -9.55
+          ],
+          "height": 0.79,
+          "yaw": 180.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "barrel",
+          "pos": [
+            11.55,
+            3.6,
+            -14.45
+          ],
+          "height": 0.69,
+          "yaw": 0.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "mug",
+          "pos": [
+            11.55,
+            3.6,
+            -9.55
+          ],
+          "height": 0.71,
+          "yaw": 270.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "mug",
+          "pos": [
+            16.45,
+            3.6,
+            -9.55
+          ],
+          "height": 0.73,
+          "yaw": 270.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "barrel",
+          "pos": [
+            11.55,
+            3.6,
+            9.55
+          ],
+          "height": 0.59,
+          "yaw": 270.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "carton",
+          "pos": [
+            16.45,
+            3.6,
+            9.55
+          ],
+          "height": 0.77,
+          "yaw": 90.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalld",
+          "pos": [
+            16.45,
+            3.6,
+            14.45
+          ],
+          "height": 0.84,
+          "yaw": 90.0
+        },
+        {
+          "pack": "mini-dungeon",
+          "model": "rocks",
+          "pos": [
+            -16.45,
+            3.6,
+            9.55
+          ],
+          "height": 0.72,
+          "yaw": 180.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "glass",
+          "pos": [
+            -11.55,
+            3.6,
+            9.55
+          ],
+          "height": 0.75,
+          "yaw": 270.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallc",
+          "pos": [
+            -16.45,
+            3.6,
+            14.45
+          ],
+          "height": 0.74,
+          "yaw": 180.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "cup",
+          "pos": [
+            -20.0,
+            0.0,
+            0.0
+          ],
+          "height": 0.76,
+          "yaw": 180.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "bag",
+          "pos": [
+            20.0,
+            0.0,
+            0.0
+          ],
+          "height": 0.67,
+          "yaw": 45.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "cup",
+          "pos": [
+            0.0,
+            0.0,
+            -19.0
+          ],
+          "height": 0.64,
+          "yaw": 135.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "pos": [
+            0.0,
+            0.0,
+            19.0
+          ],
+          "height": 0.75,
+          "yaw": 90.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "barrel",
+          "pos": [
+            -21.0,
+            0.0,
+            -14.0
+          ],
+          "height": 0.66,
+          "yaw": 45.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-top-rock",
+          "pos": [
+            21.0,
+            0.0,
+            14.0
+          ],
+          "height": 0.57,
+          "yaw": 270.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalld",
+          "pos": [
+            -21.0,
+            0.0,
+            14.0
+          ],
+          "height": 0.81,
+          "yaw": 135.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-top-rock",
+          "pos": [
+            21.0,
+            0.0,
+            -14.0
+          ],
+          "height": 0.69,
+          "yaw": 90.0
+        },
+        {
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "pos": [
+            -20.0,
+            0.0,
+            7.0
+          ],
+          "height": 0.89,
+          "yaw": 135.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-top-rock",
+          "pos": [
+            20.0,
+            0.0,
+            -7.0
+          ],
+          "height": 0.69,
+          "yaw": 180.0
+        },
+        {
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "pos": [
+            20.0,
+            0.0,
+            7.0
+          ],
+          "height": 0.86,
+          "yaw": 135.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "glass",
+          "pos": [
+            -20.0,
+            0.0,
+            -7.0
+          ],
+          "height": 0.81,
+          "yaw": 90.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-top-rock",
+          "pos": [
+            -15.9,
+            3.6,
+            -27.2
+          ],
+          "height": 0.69,
+          "yaw": 90.0
+        },
+        {
+          "pack": "mini-dungeon",
+          "model": "stones",
+          "pos": [
+            -12.1,
+            3.6,
+            -23.400000000000002
+          ],
+          "height": 0.67,
+          "yaw": 0.0
+        },
+        {
+          "pack": "mini-dungeon",
+          "model": "rocks",
+          "pos": [
+            27.400000000000002,
+            3.6,
+            10.1
+          ],
+          "height": 0.69,
+          "yaw": 180.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "mug",
+          "pos": [
+            31.2,
+            3.6,
+            13.9
+          ],
+          "height": 0.55,
+          "yaw": 270.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-rock",
+          "pos": [
+            -15.9,
+            3.6,
+            24.400000000000002
+          ],
+          "height": 0.62,
+          "yaw": 270.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "pos": [
+            -12.1,
+            3.6,
+            28.2
+          ],
+          "height": 0.53,
+          "yaw": 0.0
+        }
+      ],
+      "canonical_exits_unchanged": true,
+      "source": "ADAPTATION"
+    },
+    {
+      "id": "L077",
+      "style": "pasture",
+      "title": "Pasture Listening Walk",
+      "anchor": [
+        -40.0,
+        68.0
+      ],
+      "half": [
+        16,
+        11
+      ],
+      "floor": "d7_farm",
+      "accent": "d7_pasture",
+      "tint": [
+        0.55,
+        0.74,
+        0.38
+      ],
+      "sound": "wind",
+      "observation": "The distant tree line feels much closer from above.",
+      "points": {
+        "ground": [
+          0,
+          0,
+          0
+        ],
+        "sw_foot": [
+          -16,
+          0,
+          -23
+        ],
+        "ne_foot": [
+          16,
+          0,
+          23
+        ],
+        "sw": [
+          -16,
+          3.6,
+          -11
+        ],
+        "se": [
+          16,
+          3.6,
+          -11
+        ],
+        "ne": [
+          16,
+          3.6,
+          11
+        ],
+        "nw": [
+          -16,
+          3.6,
+          11
+        ],
+        "north_mid": [
+          0,
+          3.6,
+          11
+        ],
+        "south_mid": [
+          0,
+          3.6,
+          -11
+        ]
+      },
+      "links": [
+        [
+          "ground",
+          "sw_foot",
+          "ground"
+        ],
+        [
+          "ground",
+          "ne_foot",
+          "ground"
+        ],
+        [
+          "sw_foot",
+          "sw",
+          "stair"
+        ],
+        [
+          "ne_foot",
+          "ne",
+          "stair"
+        ],
+        [
+          "sw",
+          "south_mid",
+          "walk"
+        ],
+        [
+          "south_mid",
+          "se",
+          "walk"
+        ],
+        [
+          "se",
+          "ne",
+          "walk"
+        ],
+        [
+          "ne",
+          "north_mid",
+          "walk"
+        ],
+        [
+          "north_mid",
+          "nw",
+          "walk"
+        ],
+        [
+          "nw",
+          "sw",
+          "walk"
+        ],
+        [
+          "north_mid",
+          "south_mid",
+          "optional"
+        ],
+        [
+          "ne",
+          "spur0",
+          "walk"
+        ],
+        [
+          "nw",
+          "spur1",
+          "walk"
+        ]
+      ],
+      "spurs": [
+        {
+          "id": "spur0",
+          "from": "ne",
+          "direction": "east",
+          "gap": 8.0,
+          "pos": [
+            30.3,
+            3.6,
+            11.0
+          ]
+        },
+        {
+          "id": "spur1",
+          "from": "nw",
+          "direction": "north",
+          "gap": 9.0,
+          "pos": [
+            -16.0,
+            3.6,
+            26.3
+          ]
+        }
+      ],
+      "props": [
+        {
+          "pack": "city-kit-suburban",
+          "model": "path-stones-messy",
+          "pos": [
+            -13.55,
+            3.6,
+            -13.45
+          ],
+          "height": 0.64,
+          "yaw": 270.0
+        },
+        {
+          "pack": "city-kit-suburban",
+          "model": "path-stones-messy",
+          "pos": [
+            -18.45,
+            3.6,
+            -8.55
+          ],
+          "height": 0.66,
+          "yaw": 270.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-top-rock",
+          "pos": [
+            -13.55,
+            3.6,
+            -8.55
+          ],
+          "height": 0.72,
+          "yaw": 90.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-rock",
+          "pos": [
+            13.55,
+            3.6,
+            -13.45
+          ],
+          "height": 0.69,
+          "yaw": 180.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalld",
+          "pos": [
+            13.55,
+            3.6,
+            -8.55
+          ],
+          "height": 0.83,
+          "yaw": 180.0
+        },
+        {
+          "pack": "city-kit-suburban",
+          "model": "path-stones-messy",
+          "pos": [
+            18.45,
+            3.6,
+            -8.55
+          ],
+          "height": 0.68,
+          "yaw": 180.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "pos": [
+            13.55,
+            3.6,
+            8.55
+          ],
+          "height": 0.63,
+          "yaw": 270.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "pos": [
+            18.45,
+            3.6,
+            8.55
+          ],
+          "height": 0.74,
+          "yaw": 180.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "pos": [
+            18.45,
+            3.6,
+            13.45
+          ],
+          "height": 0.65,
+          "yaw": 270.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallc",
+          "pos": [
+            -18.45,
+            3.6,
+            8.55
+          ],
+          "height": 0.81,
+          "yaw": 0.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "pos": [
+            -13.55,
+            3.6,
+            8.55
+          ],
+          "height": 0.77,
+          "yaw": 0.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallc",
+          "pos": [
+            -18.45,
+            3.6,
+            13.45
+          ],
+          "height": 0.83,
+          "yaw": 180.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "pos": [
+            -22.0,
+            0.0,
+            0.0
+          ],
+          "height": 0.56,
+          "yaw": 315.0
+        },
+        {
+          "pack": "city-kit-suburban",
+          "model": "path-stones-messy",
+          "pos": [
+            22.0,
+            0.0,
+            0.0
+          ],
+          "height": 0.74,
+          "yaw": 0.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "shovel",
+          "pos": [
+            0.0,
+            0.0,
+            -18.0
+          ],
+          "height": 0.81,
+          "yaw": 90.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-top-rock",
+          "pos": [
+            0.0,
+            0.0,
+            18.0
+          ],
+          "height": 0.78,
+          "yaw": 270.0
+        },
+        {
+          "pack": "city-kit-suburban",
+          "model": "path-stones-messy",
+          "pos": [
+            -23.0,
+            0.0,
+            -13.0
+          ],
+          "height": 0.79,
+          "yaw": 180.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-rock",
+          "pos": [
+            23.0,
+            0.0,
+            13.0
+          ],
+          "height": 0.69,
+          "yaw": 180.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "pos": [
+            -23.0,
+            0.0,
+            13.0
+          ],
+          "height": 0.73,
+          "yaw": 225.0
+        },
+        {
+          "pack": "city-kit-suburban",
+          "model": "path-stones-messy",
+          "pos": [
+            23.0,
+            0.0,
+            -13.0
+          ],
+          "height": 0.77,
+          "yaw": 180.0
+        },
+        {
+          "pack": "city-kit-suburban",
+          "model": "path-stones-messy",
+          "pos": [
+            -22.0,
+            0.0,
+            7.0
+          ],
+          "height": 0.56,
+          "yaw": 0.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallc",
+          "pos": [
+            22.0,
+            0.0,
+            -7.0
+          ],
+          "height": 0.63,
+          "yaw": 225.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "pos": [
+            22.0,
+            0.0,
+            7.0
+          ],
+          "height": 0.75,
+          "yaw": 225.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "shovel",
+          "pos": [
+            -22.0,
+            0.0,
+            -7.0
+          ],
+          "height": 0.8,
+          "yaw": 0.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-top-rock",
+          "pos": [
+            28.400000000000002,
+            3.6,
+            9.1
+          ],
+          "height": 0.69,
+          "yaw": 180.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "pos": [
+            32.2,
+            3.6,
+            12.9
+          ],
+          "height": 0.59,
+          "yaw": 0.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-top-rock",
+          "pos": [
+            -17.9,
+            3.6,
+            24.400000000000002
+          ],
+          "height": 0.5,
+          "yaw": 0.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-rock",
+          "pos": [
+            -14.1,
+            3.6,
+            28.2
+          ],
+          "height": 0.56,
+          "yaw": 90.0
+        }
+      ],
+      "canonical_exits_unchanged": true,
+      "source": "ADAPTATION"
+    },
+    {
+      "id": "L140",
+      "style": "sunflower",
+      "title": "Honey Field Observatory",
+      "anchor": [
+        130.0,
+        -130.0
+      ],
+      "half": [
+        11,
+        14
+      ],
+      "floor": "l140_house",
+      "accent": "l140_grass",
+      "tint": [
+        1,
+        0.79,
+        0.22
+      ],
+      "sound": "crickets",
+      "observation": "A seam in the sunflowers reveals the wrong direction of the wind.",
+      "points": {
+        "ground": [
+          0,
+          0,
+          0
+        ],
+        "sw_foot": [
+          -11,
+          0,
+          -26
+        ],
+        "ne_foot": [
+          11,
+          0,
+          26
+        ],
+        "sw": [
+          -11,
+          3.6,
+          -14
+        ],
+        "se": [
+          11,
+          3.6,
+          -14
+        ],
+        "ne": [
+          11,
+          3.6,
+          14
+        ],
+        "nw": [
+          -11,
+          3.6,
+          14
+        ],
+        "north_mid": [
+          0,
+          3.6,
+          14
+        ],
+        "south_mid": [
+          0,
+          3.6,
+          -14
+        ]
+      },
+      "links": [
+        [
+          "ground",
+          "sw_foot",
+          "ground"
+        ],
+        [
+          "ground",
+          "ne_foot",
+          "ground"
+        ],
+        [
+          "sw_foot",
+          "sw",
+          "stair"
+        ],
+        [
+          "ne_foot",
+          "ne",
+          "stair"
+        ],
+        [
+          "sw",
+          "south_mid",
+          "walk"
+        ],
+        [
+          "south_mid",
+          "se",
+          "walk"
+        ],
+        [
+          "se",
+          "ne",
+          "walk"
+        ],
+        [
+          "ne",
+          "north_mid",
+          "walk"
+        ],
+        [
+          "north_mid",
+          "nw",
+          "walk"
+        ],
+        [
+          "nw",
+          "sw",
+          "walk"
+        ],
+        [
+          "north_mid",
+          "south_mid",
+          "optional"
+        ],
+        [
+          "sw",
+          "spur0",
+          "walk"
+        ]
+      ],
+      "spurs": [
+        {
+          "id": "spur0",
+          "from": "sw",
+          "direction": "west",
+          "gap": 7.0,
+          "pos": [
+            -24.3,
+            3.6,
+            -14.0
+          ]
+        }
+      ],
+      "props": [
+        {
+          "pack": "food-kit",
+          "model": "cup",
+          "pos": [
+            -8.55,
+            3.6,
+            -16.45
+          ],
+          "height": 0.8,
+          "yaw": 90.0
+        },
+        {
+          "pack": "furniture-kit",
+          "model": "cardboardboxopen",
+          "pos": [
+            -13.45,
+            3.6,
+            -11.55
+          ],
+          "height": 0.71,
+          "yaw": 180.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "cup",
+          "pos": [
+            -8.55,
+            3.6,
+            -11.55
+          ],
+          "height": 0.82,
+          "yaw": 180.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "carton",
+          "pos": [
+            8.55,
+            3.6,
+            -16.45
+          ],
+          "height": 0.66,
+          "yaw": 90.0
+        },
+        {
+          "pack": "furniture-kit",
+          "model": "bench",
+          "pos": [
+            8.55,
+            3.6,
+            -11.55
+          ],
+          "height": 0.66,
+          "yaw": 90.0
+        },
+        {
+          "pack": "furniture-kit",
+          "model": "cardboardboxclosed",
+          "pos": [
+            13.45,
+            3.6,
+            -11.55
+          ],
+          "height": 0.57,
+          "yaw": 90.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "mug",
+          "pos": [
+            8.55,
+            3.6,
+            11.55
+          ],
+          "height": 0.64,
+          "yaw": 270.0
+        },
+        {
+          "pack": "furniture-kit",
+          "model": "cardboardboxclosed",
+          "pos": [
+            13.45,
+            3.6,
+            11.55
+          ],
+          "height": 0.59,
+          "yaw": 270.0
+        },
+        {
+          "pack": "furniture-kit",
+          "model": "chair",
+          "pos": [
+            13.45,
+            3.6,
+            16.45
+          ],
+          "height": 0.85,
+          "yaw": 90.0
+        },
+        {
+          "pack": "furniture-kit",
+          "model": "cardboardboxclosed",
+          "pos": [
+            -13.45,
+            3.6,
+            11.55
+          ],
+          "height": 0.63,
+          "yaw": 270.0
+        },
+        {
+          "pack": "furniture-kit",
+          "model": "bench",
+          "pos": [
+            -8.55,
+            3.6,
+            11.55
+          ],
+          "height": 0.63,
+          "yaw": 180.0
+        },
+        {
+          "pack": "furniture-kit",
+          "model": "cardboardboxclosed",
+          "pos": [
+            -13.45,
+            3.6,
+            16.45
+          ],
+          "height": 0.84,
+          "yaw": 270.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalld",
+          "pos": [
+            -17.0,
+            0.0,
+            0.0
+          ],
+          "height": 0.78,
+          "yaw": 45.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-top-rock",
+          "pos": [
+            17.0,
+            0.0,
+            0.0
+          ],
+          "height": 0.85,
+          "yaw": 135.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "barrel",
+          "pos": [
+            0.0,
+            0.0,
+            -21.0
+          ],
+          "height": 0.62,
+          "yaw": 135.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "glass",
+          "pos": [
+            0.0,
+            0.0,
+            21.0
+          ],
+          "height": 0.78,
+          "yaw": 0.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "mug",
+          "pos": [
+            -18.0,
+            0.0,
+            -16.0
+          ],
+          "height": 0.8,
+          "yaw": 180.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "pos": [
+            18.0,
+            0.0,
+            16.0
+          ],
+          "height": 0.7,
+          "yaw": 90.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "carton",
+          "pos": [
+            -18.0,
+            0.0,
+            16.0
+          ],
+          "height": 0.83,
+          "yaw": 0.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "barrel",
+          "pos": [
+            18.0,
+            0.0,
+            -16.0
+          ],
+          "height": 0.82,
+          "yaw": 180.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "pos": [
+            -17.0,
+            0.0,
+            7.0
+          ],
+          "height": 0.74,
+          "yaw": 90.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "cup",
+          "pos": [
+            17.0,
+            0.0,
+            -7.0
+          ],
+          "height": 0.7,
+          "yaw": 270.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "carton",
+          "pos": [
+            17.0,
+            0.0,
+            7.0
+          ],
+          "height": 0.6,
+          "yaw": 225.0
+        },
+        {
+          "pack": "furniture-kit",
+          "model": "chair",
+          "pos": [
+            -17.0,
+            0.0,
+            -7.0
+          ],
+          "height": 0.86,
+          "yaw": 135.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "cup",
+          "pos": [
+            -26.2,
+            3.6,
+            -15.9
+          ],
+          "height": 0.58,
+          "yaw": 270.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "pos": [
+            -22.400000000000002,
+            3.6,
+            -12.1
+          ],
+          "height": 0.51,
+          "yaw": 180.0
+        }
+      ],
+      "canonical_exits_unchanged": true,
+      "source": "ADAPTATION"
+    },
+    {
+      "id": "L737",
+      "style": "ruins",
+      "title": "Golden Ruins Traversal",
+      "anchor": [
+        -90.0,
+        -18.0
+      ],
+      "half": [
+        14,
+        16
+      ],
+      "floor": "d7_ruin",
+      "accent": "d7_dune",
+      "tint": [
+        0.98,
+        0.78,
+        0.32
+      ],
+      "sound": "wind",
+      "observation": "The ruin stone is cooler than the gold dust around it.",
+      "points": {
+        "ground": [
+          0,
+          0,
+          0
+        ],
+        "sw_foot": [
+          -14,
+          0,
+          -28
+        ],
+        "ne_foot": [
+          14,
+          0,
+          28
+        ],
+        "sw": [
+          -14,
+          3.6,
+          -16
+        ],
+        "se": [
+          14,
+          3.6,
+          -16
+        ],
+        "ne": [
+          14,
+          3.6,
+          16
+        ],
+        "nw": [
+          -14,
+          3.6,
+          16
+        ],
+        "north_mid": [
+          0,
+          3.6,
+          16
+        ],
+        "south_mid": [
+          0,
+          3.6,
+          -16
+        ]
+      },
+      "links": [
+        [
+          "ground",
+          "sw_foot",
+          "ground"
+        ],
+        [
+          "ground",
+          "ne_foot",
+          "ground"
+        ],
+        [
+          "sw_foot",
+          "sw",
+          "stair"
+        ],
+        [
+          "ne_foot",
+          "ne",
+          "stair"
+        ],
+        [
+          "sw",
+          "south_mid",
+          "walk"
+        ],
+        [
+          "south_mid",
+          "se",
+          "walk"
+        ],
+        [
+          "se",
+          "ne",
+          "walk"
+        ],
+        [
+          "ne",
+          "north_mid",
+          "walk"
+        ],
+        [
+          "north_mid",
+          "nw",
+          "walk"
+        ],
+        [
+          "nw",
+          "sw",
+          "walk"
+        ],
+        [
+          "north_mid",
+          "south_mid",
+          "optional"
+        ],
+        [
+          "ne",
+          "spur0",
+          "walk"
+        ],
+        [
+          "se",
+          "spur1",
+          "walk"
+        ],
+        [
+          "nw",
+          "spur2",
+          "walk"
+        ]
+      ],
+      "spurs": [
+        {
+          "id": "spur0",
+          "from": "ne",
+          "direction": "east",
+          "gap": 10.0,
+          "pos": [
+            30.3,
+            3.6,
+            16.0
+          ]
+        },
+        {
+          "id": "spur1",
+          "from": "se",
+          "direction": "south",
+          "gap": 8.0,
+          "pos": [
+            14.0,
+            3.6,
+            -30.3
+          ]
+        },
+        {
+          "id": "spur2",
+          "from": "nw",
+          "direction": "north",
+          "gap": 7.0,
+          "pos": [
+            -14.0,
+            3.6,
+            29.3
+          ]
+        }
+      ],
+      "props": [
+        {
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "pos": [
+            -11.55,
+            3.6,
+            -18.45
+          ],
+          "height": 0.69,
+          "yaw": 90.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "pos": [
+            -16.45,
+            3.6,
+            -13.55
+          ],
+          "height": 0.61,
+          "yaw": 0.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "pos": [
+            -11.55,
+            3.6,
+            -13.55
+          ],
+          "height": 0.71,
+          "yaw": 0.0
+        },
+        {
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "pos": [
+            11.55,
+            3.6,
+            -18.45
+          ],
+          "height": 0.58,
+          "yaw": 0.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-top-rock",
+          "pos": [
+            11.55,
+            3.6,
+            -13.55
+          ],
+          "height": 0.83,
+          "yaw": 180.0
+        },
+        {
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "pos": [
+            16.45,
+            3.6,
+            -13.55
+          ],
+          "height": 0.64,
+          "yaw": 180.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "shovel",
+          "pos": [
+            11.55,
+            3.6,
+            13.55
+          ],
+          "height": 0.63,
+          "yaw": 270.0
+        },
+        {
+          "pack": "mini-dungeon",
+          "model": "rocks",
+          "pos": [
+            16.45,
+            3.6,
+            13.55
+          ],
+          "height": 0.6,
+          "yaw": 270.0
+        },
+        {
+          "pack": "mini-dungeon",
+          "model": "stones",
+          "pos": [
+            16.45,
+            3.6,
+            18.45
+          ],
+          "height": 0.73,
+          "yaw": 0.0
+        },
+        {
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "pos": [
+            -16.45,
+            3.6,
+            13.55
+          ],
+          "height": 0.77,
+          "yaw": 180.0
+        },
+        {
+          "pack": "mini-dungeon",
+          "model": "chest",
+          "pos": [
+            -11.55,
+            3.6,
+            13.55
+          ],
+          "height": 0.73,
+          "yaw": 270.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-top-rock",
+          "pos": [
+            -16.45,
+            3.6,
+            18.45
+          ],
+          "height": 0.8,
+          "yaw": 180.0
+        },
+        {
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "pos": [
+            -20.0,
+            0.0,
+            0.0
+          ],
+          "height": 0.58,
+          "yaw": 225.0
+        },
+        {
+          "pack": "mini-dungeon",
+          "model": "rocks",
+          "pos": [
+            20.0,
+            0.0,
+            0.0
+          ],
+          "height": 0.73,
+          "yaw": 315.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalld",
+          "pos": [
+            0.0,
+            0.0,
+            -23.0
+          ],
+          "height": 0.81,
+          "yaw": 315.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-top-rock",
+          "pos": [
+            0.0,
+            0.0,
+            23.0
+          ],
+          "height": 0.82,
+          "yaw": 45.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallc",
+          "pos": [
+            -21.0,
+            0.0,
+            -18.0
+          ],
+          "height": 0.65,
+          "yaw": 135.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "pos": [
+            21.0,
+            0.0,
+            18.0
+          ],
+          "height": 0.88,
+          "yaw": 225.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "pos": [
+            -21.0,
+            0.0,
+            18.0
+          ],
+          "height": 0.58,
+          "yaw": 270.0
+        },
+        {
+          "pack": "mini-dungeon",
+          "model": "chest",
+          "pos": [
+            21.0,
+            0.0,
+            -18.0
+          ],
+          "height": 0.65,
+          "yaw": 135.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-top-rock",
+          "pos": [
+            -20.0,
+            0.0,
+            7.0
+          ],
+          "height": 0.87,
+          "yaw": 225.0
+        },
+        {
+          "pack": "mini-dungeon",
+          "model": "coin",
+          "pos": [
+            20.0,
+            0.0,
+            -7.0
+          ],
+          "height": 0.79,
+          "yaw": 270.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallc",
+          "pos": [
+            20.0,
+            0.0,
+            7.0
+          ],
+          "height": 0.62,
+          "yaw": 135.0
+        },
+        {
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "pos": [
+            -20.0,
+            0.0,
+            -7.0
+          ],
+          "height": 0.89,
+          "yaw": 225.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallc",
+          "pos": [
+            28.400000000000002,
+            3.6,
+            14.1
+          ],
+          "height": 0.6,
+          "yaw": 270.0
+        },
+        {
+          "pack": "mini-dungeon",
+          "model": "chest",
+          "pos": [
+            32.2,
+            3.6,
+            17.9
+          ],
+          "height": 0.5,
+          "yaw": 180.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "pos": [
+            12.1,
+            3.6,
+            -32.2
+          ],
+          "height": 0.56,
+          "yaw": 90.0
+        },
+        {
+          "pack": "mini-dungeon",
+          "model": "column",
+          "pos": [
+            15.9,
+            3.6,
+            -28.400000000000002
+          ],
+          "height": 0.65,
+          "yaw": 270.0
+        },
+        {
+          "pack": "mini-dungeon",
+          "model": "chest",
+          "pos": [
+            -15.9,
+            3.6,
+            27.400000000000002
+          ],
+          "height": 0.57,
+          "yaw": 90.0
+        },
+        {
+          "pack": "mini-dungeon",
+          "model": "column",
+          "pos": [
+            -12.1,
+            3.6,
+            31.2
+          ],
+          "height": 0.59,
+          "yaw": 180.0
+        }
+      ],
+      "canonical_exits_unchanged": true,
+      "source": "ADAPTATION"
+    },
+    {
+      "id": "L899",
+      "style": "settlement",
+      "title": "Yonder Spring Garden Walk",
+      "anchor": [
+        -50.0,
+        0.0
+      ],
+      "half": [
+        12,
+        12
+      ],
+      "floor": "d7_hut",
+      "accent": "d7_mushroom",
+      "tint": [
+        0.76,
+        0.66,
+        0.93
+      ],
+      "sound": "",
+      "observation": "At the settlement, time seems to stay at nine in the morning.",
+      "points": {
+        "ground": [
+          0,
+          0,
+          0
+        ],
+        "sw_foot": [
+          -12,
+          0,
+          -24
+        ],
+        "ne_foot": [
+          12,
+          0,
+          24
+        ],
+        "sw": [
+          -12,
+          3.6,
+          -12
+        ],
+        "se": [
+          12,
+          3.6,
+          -12
+        ],
+        "ne": [
+          12,
+          3.6,
+          12
+        ],
+        "nw": [
+          -12,
+          3.6,
+          12
+        ],
+        "north_mid": [
+          0,
+          3.6,
+          12
+        ],
+        "south_mid": [
+          0,
+          3.6,
+          -12
+        ]
+      },
+      "links": [
+        [
+          "ground",
+          "sw_foot",
+          "ground"
+        ],
+        [
+          "ground",
+          "ne_foot",
+          "ground"
+        ],
+        [
+          "sw_foot",
+          "sw",
+          "stair"
+        ],
+        [
+          "ne_foot",
+          "ne",
+          "stair"
+        ],
+        [
+          "sw",
+          "south_mid",
+          "walk"
+        ],
+        [
+          "south_mid",
+          "se",
+          "walk"
+        ],
+        [
+          "se",
+          "ne",
+          "walk"
+        ],
+        [
+          "ne",
+          "north_mid",
+          "walk"
+        ],
+        [
+          "north_mid",
+          "nw",
+          "walk"
+        ],
+        [
+          "nw",
+          "sw",
+          "walk"
+        ],
+        [
+          "north_mid",
+          "south_mid",
+          "optional"
+        ],
+        [
+          "nw",
+          "spur0",
+          "walk"
+        ],
+        [
+          "sw",
+          "spur1",
+          "walk"
+        ]
+      ],
+      "spurs": [
+        {
+          "id": "spur0",
+          "from": "nw",
+          "direction": "west",
+          "gap": 7.0,
+          "pos": [
+            -25.3,
+            3.6,
+            12.0
+          ]
+        },
+        {
+          "id": "spur1",
+          "from": "sw",
+          "direction": "south",
+          "gap": 8.0,
+          "pos": [
+            -12.0,
+            3.6,
+            -26.3
+          ]
+        }
+      ],
+      "props": [
+        {
+          "pack": "food-kit",
+          "model": "glass",
+          "pos": [
+            -9.55,
+            3.6,
+            -14.45
+          ],
+          "height": 0.83,
+          "yaw": 0.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-rock",
+          "pos": [
+            -14.45,
+            3.6,
+            -9.55
+          ],
+          "height": 0.59,
+          "yaw": 90.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-top-rock",
+          "pos": [
+            -9.55,
+            3.6,
+            -9.55
+          ],
+          "height": 0.75,
+          "yaw": 270.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-top-rock",
+          "pos": [
+            9.55,
+            3.6,
+            -14.45
+          ],
+          "height": 0.78,
+          "yaw": 90.0
+        },
+        {
+          "pack": "furniture-kit",
+          "model": "bench",
+          "pos": [
+            9.55,
+            3.6,
+            -9.55
+          ],
+          "height": 0.6,
+          "yaw": 0.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-rock",
+          "pos": [
+            14.45,
+            3.6,
+            -9.55
+          ],
+          "height": 0.79,
+          "yaw": 0.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-rock",
+          "pos": [
+            9.55,
+            3.6,
+            9.55
+          ],
+          "height": 0.8,
+          "yaw": 270.0
+        },
+        {
+          "pack": "furniture-kit",
+          "model": "cardboardboxclosed",
+          "pos": [
+            14.45,
+            3.6,
+            9.55
+          ],
+          "height": 0.6,
+          "yaw": 0.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "pos": [
+            14.45,
+            3.6,
+            14.45
+          ],
+          "height": 0.55,
+          "yaw": 270.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "pos": [
+            -14.45,
+            3.6,
+            9.55
+          ],
+          "height": 0.56,
+          "yaw": 0.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "pos": [
+            -9.55,
+            3.6,
+            9.55
+          ],
+          "height": 0.73,
+          "yaw": 270.0
+        },
+        {
+          "pack": "furniture-kit",
+          "model": "cardboardboxopen",
+          "pos": [
+            -14.45,
+            3.6,
+            14.45
+          ],
+          "height": 0.76,
+          "yaw": 0.0
+        },
+        {
+          "pack": "furniture-kit",
+          "model": "bench",
+          "pos": [
+            -18.0,
+            0.0,
+            0.0
+          ],
+          "height": 0.65,
+          "yaw": 315.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalld",
+          "pos": [
+            18.0,
+            0.0,
+            0.0
+          ],
+          "height": 0.78,
+          "yaw": 0.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "mug",
+          "pos": [
+            0.0,
+            0.0,
+            -19.0
+          ],
+          "height": 0.84,
+          "yaw": 270.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "barrel",
+          "pos": [
+            0.0,
+            0.0,
+            19.0
+          ],
+          "height": 0.71,
+          "yaw": 315.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-top-rock",
+          "pos": [
+            -19.0,
+            0.0,
+            -14.0
+          ],
+          "height": 0.89,
+          "yaw": 45.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalld",
+          "pos": [
+            19.0,
+            0.0,
+            14.0
+          ],
+          "height": 0.87,
+          "yaw": 90.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smalld",
+          "pos": [
+            -19.0,
+            0.0,
+            14.0
+          ],
+          "height": 0.8,
+          "yaw": 315.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-rock",
+          "pos": [
+            19.0,
+            0.0,
+            -14.0
+          ],
+          "height": 0.9,
+          "yaw": 135.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallc",
+          "pos": [
+            -18.0,
+            0.0,
+            7.0
+          ],
+          "height": 0.84,
+          "yaw": 270.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-rock",
+          "pos": [
+            18.0,
+            0.0,
+            -7.0
+          ],
+          "height": 0.62,
+          "yaw": 180.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "carton",
+          "pos": [
+            18.0,
+            0.0,
+            7.0
+          ],
+          "height": 0.66,
+          "yaw": 225.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "mug",
+          "pos": [
+            -18.0,
+            0.0,
+            -7.0
+          ],
+          "height": 0.66,
+          "yaw": 90.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "cliff-top-rock",
+          "pos": [
+            -27.2,
+            3.6,
+            10.1
+          ],
+          "height": 0.55,
+          "yaw": 0.0
+        },
+        {
+          "pack": "food-kit",
+          "model": "bag",
+          "pos": [
+            -23.400000000000002,
+            3.6,
+            13.9
+          ],
+          "height": 0.63,
+          "yaw": 270.0
+        },
+        {
+          "pack": "furniture-kit",
+          "model": "books",
+          "pos": [
+            -13.9,
+            3.6,
+            -28.2
+          ],
+          "height": 0.54,
+          "yaw": 270.0
+        },
+        {
+          "pack": "nature-kit",
+          "model": "rock-smallc",
+          "pos": [
+            -10.1,
+            3.6,
+            -24.400000000000002
+          ],
+          "height": 0.59,
+          "yaw": 270.0
+        }
+      ],
+      "canonical_exits_unchanged": true,
+      "source": "ADAPTATION"
+    },
+    {
+      "id": "L998",
+      "style": "stormfront",
+      "title": "Three-Cloud Weather Observatory",
+      "anchor": [
+        -55.0,
+        -15.0
+      ],
+      "half": [
+        16,
+        14
+      ],
+      "floor": "d7_office",
+      "accent": "d7_greycloud",
+      "tint": [
+        0.7,
+        0.78,
+        0.86
+      ],
+      "sound": "wind",
+      "observation": "The white and grey strata disagree about how close the storm is.",
+      "points": {
+        "ground": [
+          0,
+          0,
+          0
+        ],
+        "sw_foot": [
+          -16,
+          0,
+          -26
+        ],
+        "ne_foot": [
+          16,
+          0,
+          26
+        ],
+        "sw": [
+          -16,
+          3.6,
+          -14
+        ],
+        "se": [
+          16,
+          3.6,
+          -14
+        ],
+        "ne": [
+          16,
+          3.6,
+          14
+        ],
+        "nw": [
+          -16,
+          3.6,
+          14
+        ],
+        "north_mid": [
+          0,
+          3.6,
+          14
+        ],
+        "south_mid": [
+          0,
+          3.6,
+          -14
+        ]
+      },
+      "links": [
+        [
+          "ground",
+          "sw_foot",
+          "ground"
+        ],
+        [
+          "ground",
+          "ne_foot",
+          "ground"
+        ],
+        [
+          "sw_foot",
+          "sw",
+          "stair"
+        ],
+        [
+          "ne_foot",
+          "ne",
+          "stair"
+        ],
+        [
+          "sw",
+          "south_mid",
+          "walk"
+        ],
+        [
+          "south_mid",
+          "se",
+          "walk"
+        ],
+        [
+          "se",
+          "ne",
+          "walk"
+        ],
+        [
+          "ne",
+          "north_mid",
+          "walk"
+        ],
+        [
+          "north_mid",
+          "nw",
+          "walk"
+        ],
+        [
+          "nw",
+          "sw",
+          "walk"
+        ],
+        [
+          "north_mid",
+          "south_mid",
+          "optional"
+        ],
+        [
+          "se",
+          "spur0",
+          "walk"
+        ],
+        [
+          "ne",
+          "spur1",
+          "walk"
+        ]
+      ],
+      "spurs": [
+        {
+          "id": "spur0",
+          "from": "se",
+          "direction": "east",
+          "gap": 9.0,
+          "pos": [
+            31.3,
+            3.6,
+            -14.0
+          ]
+        },
+        {
+          "id": "spur1",
+          "from": "ne",
+          "direction": "north",
+          "gap": 7.0,
+          "pos": [
+            16.0,
+            3.6,
+            27.3
+          ]
+        }
+      ],
+      "props": [
+        {
+          "pack": "city-kit-roads",
+          "model": "dumpster",
+          "pos": [
+            -13.55,
+            3.6,
+            -16.45
+          ],
+          "height": 0.62,
+          "yaw": 270.0
+        },
+        {
+          "pack": "space-kit",
+          "model": "barrels",
+          "pos": [
+            -18.45,
+            3.6,
+            -11.55
+          ],
+          "height": 0.75,
+          "yaw": 90.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "dumpster",
+          "pos": [
+            -13.55,
+            3.6,
+            -11.55
+          ],
+          "height": 0.62,
+          "yaw": 0.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "dumpster",
+          "pos": [
+            13.55,
+            3.6,
+            -16.45
+          ],
+          "height": 0.57,
+          "yaw": 270.0
+        },
+        {
+          "pack": "prototype-kit",
+          "model": "pipe-half-section",
+          "pos": [
+            13.55,
+            3.6,
+            -11.55
+          ],
+          "height": 0.58,
+          "yaw": 90.0
+        },
+        {
+          "pack": "prototype-kit",
+          "model": "column-low",
+          "pos": [
+            18.45,
+            3.6,
+            -11.55
+          ],
+          "height": 0.78,
+          "yaw": 0.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "road-sign-warning",
+          "pos": [
+            13.55,
+            3.6,
+            11.55
+          ],
+          "height": 0.72,
+          "yaw": 180.0
+        },
+        {
+          "pack": "prototype-kit",
+          "model": "lever-single",
+          "pos": [
+            18.45,
+            3.6,
+            11.55
+          ],
+          "height": 0.81,
+          "yaw": 90.0
+        },
+        {
+          "pack": "space-kit",
+          "model": "barrels",
+          "pos": [
+            18.45,
+            3.6,
+            16.45
+          ],
+          "height": 0.83,
+          "yaw": 90.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "construction-light",
+          "pos": [
+            -18.45,
+            3.6,
+            11.55
+          ],
+          "height": 0.73,
+          "yaw": 270.0
+        },
+        {
+          "pack": "space-kit",
+          "model": "barrels",
+          "pos": [
+            -13.55,
+            3.6,
+            11.55
+          ],
+          "height": 0.73,
+          "yaw": 270.0
+        },
+        {
+          "pack": "prototype-kit",
+          "model": "column-triangle-low",
+          "pos": [
+            -18.45,
+            3.6,
+            16.45
+          ],
+          "height": 0.66,
+          "yaw": 0.0
+        },
+        {
+          "pack": "prototype-kit",
+          "model": "crate",
+          "pos": [
+            -22.0,
+            0.0,
+            0.0
+          ],
+          "height": 0.8,
+          "yaw": 225.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "construction-light",
+          "pos": [
+            22.0,
+            0.0,
+            0.0
+          ],
+          "height": 0.71,
+          "yaw": 135.0
+        },
+        {
+          "pack": "prototype-kit",
+          "model": "column-low",
+          "pos": [
+            0.0,
+            0.0,
+            -21.0
+          ],
+          "height": 0.67,
+          "yaw": 0.0
+        },
+        {
+          "pack": "space-kit",
+          "model": "barrels",
+          "pos": [
+            0.0,
+            0.0,
+            21.0
+          ],
+          "height": 0.88,
+          "yaw": 0.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "road-sign-warning",
+          "pos": [
+            -23.0,
+            0.0,
+            -16.0
+          ],
+          "height": 0.8,
+          "yaw": 135.0
+        },
+        {
+          "pack": "prototype-kit",
+          "model": "pipe-corner",
+          "pos": [
+            23.0,
+            0.0,
+            16.0
+          ],
+          "height": 0.87,
+          "yaw": 225.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "dumpster",
+          "pos": [
+            -23.0,
+            0.0,
+            16.0
+          ],
+          "height": 0.85,
+          "yaw": 315.0
+        },
+        {
+          "pack": "space-kit",
+          "model": "desk-chair",
+          "pos": [
+            23.0,
+            0.0,
+            -16.0
+          ],
+          "height": 0.6,
+          "yaw": 180.0
+        },
+        {
+          "pack": "prototype-kit",
+          "model": "crate",
+          "pos": [
+            -22.0,
+            0.0,
+            7.0
+          ],
+          "height": 0.68,
+          "yaw": 135.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "road-sign-warning",
+          "pos": [
+            22.0,
+            0.0,
+            -7.0
+          ],
+          "height": 0.79,
+          "yaw": 225.0
+        },
+        {
+          "pack": "space-kit",
+          "model": "desk-chair",
+          "pos": [
+            22.0,
+            0.0,
+            7.0
+          ],
+          "height": 0.87,
+          "yaw": 0.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "road-sign-warning",
+          "pos": [
+            -22.0,
+            0.0,
+            -7.0
+          ],
+          "height": 0.89,
+          "yaw": 90.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "pos": [
+            29.400000000000002,
+            3.6,
+            -15.9
+          ],
+          "height": 0.59,
+          "yaw": 180.0
+        },
+        {
+          "pack": "prototype-kit",
+          "model": "column-low",
+          "pos": [
+            33.2,
+            3.6,
+            -12.1
+          ],
+          "height": 0.68,
+          "yaw": 270.0
+        },
+        {
+          "pack": "space-kit",
+          "model": "desk-computer",
+          "pos": [
+            14.1,
+            3.6,
+            25.400000000000002
+          ],
+          "height": 0.69,
+          "yaw": 180.0
+        },
+        {
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "pos": [
+            17.9,
+            3.6,
+            29.2
+          ],
+          "height": 0.64,
+          "yaw": 0.0
+        }
+      ],
+      "canonical_exits_unchanged": true,
+      "source": "ADAPTATION"
+    }
+  ],
+  "static_only_note": "Real Godot F3 and physics acceptance required"
+}

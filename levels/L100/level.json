@@ -1,0 +1,43 @@
+{
+ "stable_id": "L100",
+ "scene": "res://levels/L100/L100.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "ENGINE_SMOKE_PASS seeds 1001/2002/3003, walker bot fires L100>L004#1 (QA fixture) (r1b, 2026-11-08); stills self-reviewed; integrator review pending",
+ "procedural": false,
+ "arrivals": [
+  "start",
+  "from_L048"
+ ],
+ "signature": "A thin, straight strip of pale tropical sand running forever through a turquoise sea that is still as glass beyond the shore, with your own headstone where you wake and, hours along, three new graves; swim out until you sink and a tall black being carries you away.",
+ "mechanics": [
+  "endless_sand_strip_streaming",
+  "shore_only_waves_glass_sea",
+  "own_grave_arrival",
+  "graves_with_epitaphs_and_accessories",
+  "swim_exhaustion_no_pushback",
+  "drowning_triggers_being",
+  "being_cutscene_one_way_exit"
+ ],
+ "exits": [
+  {
+   "id": "L100>L004#1",
+   "to": "L004",
+   "trigger": "condition",
+   "label": "Swam out until you sank; something tall and black carried you away",
+   "confidence": "ONE-WAY+DANGEROUS",
+   "basis": "SOURCE",
+   "source_section": "Flashback (testimony)",
+   "source_quote": "gently wrapped its tendrils around her waist",
+   "hint": "Beyond the little waves the water is still as glass. Nobody has walked off the end of the sand.",
+   "arrival": "from_L100"
+  }
+ ],
+ "fail_states": [],
+ "entity_policy": "One non-hostile tall black being (REPORTED, single witness), shown only in the rescue scene after you sink or drown: about 3 m, dress-like jet-black form on a chess-piece base, tendril arms to the knees, featureless head. It nods, never speaks, never harms. No other entities.",
+ "notes": "SOURCE (all TESTIMONY from Holly Clove): thin straight strip of sand in an infinite, nearly static ocean; soft pale tropical sand, turquoise water, tropical summer sky with a basic blue gradient, clear unrelenting sun, no clouds, tide never rises or falls, wind stagnant; waves only close to the trail, glass-still beyond; arrival buried about three inches deep under a headstone with one's own name; hours along, three brand new headstones with 2018 dates, epitaphs and accessories such as photographs (Joseph Arwell, Rebecca Cantor, Veronika Feher, epitaphs paraphrased with short quotes); swimming out the static water gives no pushback, the strip becomes a needle, limbs fail and she sinks; the black being reaches her, she wakes beside it at an open grave with a body, it nods, cannot speak, and carries her to 'this office world' (Level 4). ADAPTATION: the strip is a 64 m ChunkWorld window (radius 4) along z; its 34 m cross-section (crest, slope, wet band, wading shelf, sheer submerged flank) and the low decorative drifts are ours; 'hours' of walking compressed to ~175 m between your grave and the three stones; fatigue = ~70 s of swimming beyond the shelf (more the farther out), then you sink; drowning anywhere also triggers the being; the working site is staged where you were taken. The player's own name is never shown (the stone says it is yours). The cliff, Bristol and Base Omega scenes are flashback/frame material and are not geometry. QA FIXTURE: in QA mode only, a walk-in copy of L100>L004#1 sits at the waterline 22 m from start so the walker bot can fire the edge; the story exit is the condition trigger created at the being's site.",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
+}

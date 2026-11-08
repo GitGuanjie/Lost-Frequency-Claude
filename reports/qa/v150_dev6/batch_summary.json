@@ -1,0 +1,18 @@
+{
+  "utc": "2026-11-07T10:40:58.117619+00:00",
+  "godot": "godot",
+  "evidence_level": "headless engine only; neither GPU nor manual play is proven",
+  "stages": [
+    {
+      "name": "import",
+      "status": "FAIL",
+      "elapsed_s": 0.0,
+      "reason": "engine unavailable/timeout: [Errno 2] No such file or directory: 'godot'",
+      "exit_code": null,
+      "levels_recorded": [],
+      "suite_counts": {},
+      "failures": []
+    }
+  ],
+  "status": "FAIL"
+}

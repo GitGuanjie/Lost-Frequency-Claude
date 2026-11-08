@@ -47,6 +47,7 @@ var cold := 0.0
 var _flip_cd := 0.0
 var _said: Dictionary = {}
 var _under := false
+var _last_depth_zone := -1
 var _beds: Dictionary = {}
 var _groan_t := 8.0
 var _boom_t := 20.0
@@ -82,6 +83,10 @@ func build() -> void:
 	Build.seamount(self, geo, level_seed)
 	Build.ring(self, geo)
 	Build.fort(self, geo)
+	# SOURCE: Tiny is especially sensitive to noise near the pipe-and-pillar ring.
+	# The interaction is physical; no button in the home room repels him remotely.
+	add_interactable(RING + Vector3(2.6, 1.15, 0.0), Vector3(1.6, 1.6, 1.6),
+		"Strike the rusted pipe (sound travels through water)", func(p): _strike_pipe(p, RING + Vector3(2.6, 1.15, 0.0)))
 	world = ChunkWorld.new()
 	world.name = "Chunks"
 	world.chunk_size = CS
@@ -372,6 +377,7 @@ func level_process(delta: float) -> void:
 			_flip_to_room()
 			return
 		_env_ocean(ry)
+		_depth_zone_tick(ry)
 		if player.swimming:
 			cold += delta * (1.0 + clampf(-ry / 200.0, 0.0, 2.0))
 		else:
@@ -388,6 +394,28 @@ func level_process(delta: float) -> void:
 		_shake = maxf(0.0, _shake - delta)
 		player.camera.h_offset = randf_range(-0.03, 0.03) * _shake
 		player.camera.v_offset = randf_range(-0.03, 0.03) * _shake
+
+
+## Navigational feedback for the already-authored 500 m descent. Source zones
+## are warnings, not automatic exits or substitute paths.
+func _depth_zone_tick(relative_y: float) -> void:
+	if relative_y > 0.0:
+		_last_depth_zone = -1
+		return
+	var zone := 0
+	if relative_y <= Z_MID:
+		zone = 3
+	elif relative_y <= Z_TWI:
+		zone = 2
+	elif relative_y <= Z_DAY:
+		zone = 1
+	if zone != _last_depth_zone:
+		_last_depth_zone = zone
+		match zone:
+			0: Overlay.subtitle("[faint natural light reaches the surface water]", 3.0)
+			1: Overlay.subtitle("[twilight water; the world above is a shrinking pale disc]", 4.0)
+			2: Overlay.subtitle("[midnight water; a light may be the only defence]", 4.0)
+			3: Overlay.subtitle("[the abyss begins beneath the last visible rock]", 4.0)
 
 
 func _entities(delta: float, eye: Vector3, ry: float) -> void:

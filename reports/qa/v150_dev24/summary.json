@@ -1,0 +1,16 @@
+{
+  "version": "1.5.0-dev24",
+  "started_utc": "2026-11-08T01:30:21.929052+00:00",
+  "status": "FAIL",
+  "engine_certified": false,
+  "release_ready": false,
+  "stages": [
+    {
+      "name": "import",
+      "status": "FAIL",
+      "error": "Godot unavailable or timed out: [Errno 2] No such file or directory: 'godot'",
+      "returncode": null,
+      "duration_s": 0.0
+    }
+  ]
+}

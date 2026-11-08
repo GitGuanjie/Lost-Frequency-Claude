@@ -1,0 +1,23 @@
+{
+  "stable_id": "L140",
+  "scene": "res://levels/L140/L140.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "UNVERIFIED Godot import, walker, GPU capture and human review pending",
+  "procedural": false,
+  "arrivals": [
+    "start",
+    "from_L019",
+    "from_L149"
+  ],
+  "signature": "A quiet horizon of sunflowers and honey under a changing sky, framed as a personal testimony rather than a quest.",
+  "mechanics": [
+    "sunflower_multimesh",
+    "day_night_cycle",
+    "lobby_with_honey",
+    "testimony_notes",
+    "no_invented_exits"
+  ],
+  "exits": [],
+  "entity_policy": "SOURCE testimony only; no invented enemies",
+  "notes": "ADAPTATION: finite field and accelerated day-night cycle. Distant voice reports are testimony only, no additional creature is invented. Canon: docs/canon/levels/L140.md; authors credited there under CC BY-SA 3.0. Not yet PLAYABLE."
+}

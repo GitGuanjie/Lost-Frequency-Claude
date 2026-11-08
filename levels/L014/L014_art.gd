@@ -4,7 +4,7 @@ extends RefCounted
 ## a starlit sky with a moon, waterfalls and mist, the guests' bones and the
 ## small silhouettes that stand in rows on the falls meadow.
 
-const SKY := "shader_type sky;
+const SKY := """shader_type sky;
 uniform vec3 zenith : source_color = vec3(0.006, 0.008, 0.03);
 uniform vec3 horizon : source_color = vec3(0.05, 0.03, 0.065);
 uniform float star_gain = 1.0;
@@ -42,9 +42,9 @@ void sky() {
 	col = mix(col, vec3(1.0, 0.98, 0.9) * (2.4 - 0.9 * maria), disc);
 	col += vec3(0.45, 0.5, 0.65) * exp(-md * 18.0) * 0.35 + vec3(0.18, 0.16, 0.26) * exp(-md * 4.0) * 0.18;
 	COLOR = col;
-}"
+}"""
 
-const GROUND := "shader_type spatial;
+const GROUND := """shader_type spatial;
 render_mode diffuse_burley, specular_disabled;
 uniform float lure = 0.0;
 uniform vec3 moon_dir = vec3(-0.27, 0.44, -0.86);
@@ -84,9 +84,9 @@ void fragment() {
 }
 void light() {
 	DIFFUSE_LIGHT += clamp(dot(NORMAL, LIGHT), 0.0, 1.0) * ATTENUATION * LIGHT_COLOR / PI;
-}"
+}"""
 
-const GRASS := "shader_type spatial;
+const GRASS := """shader_type spatial;
 render_mode cull_disabled, diffuse_burley, specular_disabled;
 uniform vec3 moon_dir = vec3(-0.27, 0.44, -0.86);
 uniform float lure = 0.0;
@@ -120,9 +120,9 @@ void light() {
 	float nl = dot(NORMAL, LIGHT);
 	// diffuse, plus red light passing through blades lit from behind
 	DIFFUSE_LIGHT += (clamp(nl, 0.0, 1.0) + clamp(-nl, 0.0, 1.0) * 0.45 * tip) * ATTENUATION * LIGHT_COLOR / PI;
-}"
+}"""
 
-const TREE := "shader_type spatial;
+const TREE := """shader_type spatial;
 render_mode cull_disabled, diffuse_burley, specular_disabled;
 uniform float lure = 0.0;
 uniform float truth = 0.0;
@@ -159,9 +159,9 @@ void fragment() {
 		BACKLIGHT = vec3(0.04, 0.05, 0.06);
 	}
 	if (!FRONT_FACING) { NORMAL = -NORMAL; }
-}"
+}"""
 
-const FIGURE := "shader_type spatial;
+const FIGURE := """shader_type spatial;
 render_mode unshaded, fog_disabled, cull_disabled;
 uniform float presence = 1.0;
 uniform vec3 fogc : source_color = vec3(0.05, 0.03, 0.065);
@@ -174,9 +174,9 @@ void fragment() {
 	if (a < th) discard;
 	float rim = pow(1.0 - clamp(abs(dot(NORMAL, VIEW)), 0.0, 1.0), 4.5);
 	ALBEDO = mix(vec3(0.004, 0.003, 0.008), fogc, smoothstep(30.0, 140.0, dist) * 0.55) + vec3(0.45, 0.5, 0.75) * rim * 0.55;
-}"
+}"""
 
-const ROCK := "shader_type spatial;
+const ROCK := """shader_type spatial;
 render_mode diffuse_burley, specular_disabled;
 uniform float truth = 0.0;
 varying vec3 wp;
@@ -194,9 +194,9 @@ void fragment() {
 	ALBEDO = mix(rock, mix(vec3(0.2, 0.01, 0.025), vec3(0.15, 0.08, 0.05), truth), moss);
 	ROUGHNESS = mix(0.7, 0.95, n2);
 	SPECULAR = 0.15;
-}"
+}"""
 
-const FALLS := "shader_type spatial;
+const FALLS := """shader_type spatial;
 render_mode unshaded, cull_disabled, depth_draw_never, blend_mix;
 uniform float gain = 1.0;
 float h1(vec2 p) { return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453); }
@@ -212,9 +212,9 @@ void fragment() {
 	a = mix(a, 1.0, smoothstep(0.82, 1.0, y) * edge * 0.6);
 	ALBEDO = mix(vec3(0.42, 0.5, 0.62), vec3(0.9, 0.94, 1.0), streak) * gain;
 	ALPHA = a * 0.88;
-}"
+}"""
 
-const MIST := "shader_type spatial;
+const MIST := """shader_type spatial;
 render_mode unshaded, cull_disabled, depth_draw_never, blend_mix;
 uniform float gain = 0.16;
 void fragment() {
@@ -222,7 +222,7 @@ void fragment() {
 	float a = (1.0 - smoothstep(0.1, 1.0, length(q))) * (0.75 + 0.25 * sin(TIME * 0.7 + UV.x * 3.0));
 	ALBEDO = vec3(0.62, 0.68, 0.82);
 	ALPHA = a * a * gain;
-}"
+}"""
 
 
 static func shader_mat(code: String) -> ShaderMaterial:

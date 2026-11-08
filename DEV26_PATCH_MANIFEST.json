@@ -1,0 +1,31 @@
+{
+  "from": "v1.5.0-dev25",
+  "to": "v1.5.0-dev26",
+  "base_file": "LostFrequency_v1.5.0-dev25_SOURCE.zip",
+  "base_sha256": "8d2b84c52716f66252c0c88e39605f3898fbe68d3af7d61f1bb77b8b8113d530",
+  "changed": [
+    "3/README.md",
+    "3/core/world/LevelBase.gd",
+    "3/levels/L197/L197.gd",
+    "3/project.godot"
+  ],
+  "added": [
+    "3/DEV26_README_FIRST_CN.md",
+    "3/RUN_DEV26_NATIVE_QA_WINDOWS.ps1",
+    "3/core/world/CaveGallery26.gd",
+    "3/core/world/CuratedAtmospheres26.gd",
+    "3/data/dev26_curated_vignettes.json",
+    "3/docs/production/DEV26_CrystalGallery_Design.png",
+    "3/tests/Dev26ExperienceProbe.gd",
+    "3/tests/Dev26ExperienceProbe.tscn",
+    "3/tests/static/test_dev26_curated_atmospheres.py",
+    "3/tools/draw_dev26_gallery.py",
+    "3/tools/generate_dev26_vignettes.py",
+    "3/DEV26_PATCH_MANIFEST.json"
+  ],
+  "purpose": "Curated interactive scenes and four physical mineral gallery loops",
+  "engine_acceptance": "NOT TESTED: Godot executable absent",
+  "static_unittest": "231/231 PASS",
+  "entry_static": "100/100 PASS",
+  "instructions": "Back up dev25, extract PATCH.zip next to folder 3/ (overwrite), then run RUN_DEV26_NATIVE_QA_WINDOWS.ps1 with Godot 4.5.1."
+}

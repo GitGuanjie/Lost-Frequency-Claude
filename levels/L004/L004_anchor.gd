@@ -21,6 +21,10 @@ const STAIRS_DOWN := Rect2(2.4, 2.4, 9.6, 6.6)  # L5 + L6 stairways (F0 only)
 const CORE := Rect2(2.4, 13.2, 4.8, 6.6)       # fire stair F0 <-> F1
 const BREAK := Rect2(12.0, 2.4, 7.2, 7.2)
 const BASE := Rect2(19.2, 2.4, 4.8, 21.6)      # Base Omega (closed)
+# Carved out of the second-storey ceiling. The upper suspended walkway must
+# have real 2m+ headroom; merely adding a high slab beneath the old ceiling
+# would make it impossible to walk across.
+const BRIDGE_CANOPY := Rect2(7.1, 8.0, 15.0, 14.0)
 
 
 func _init(level: Node3D, p: RefCounted, o: RefCounted) -> void:
@@ -47,7 +51,7 @@ func build(k: GeoKit, node: Node3D, o: Vector3, meta: Dictionary) -> void:
 	P.ceil_rects(k, P.cut(corr + block, [ATR, CORE, STAIRS_DOWN]), CH, "l4_ceiling")
 	P.floor_rects(k, corr, FY[1], 0.8, "l4_carpet_corr")
 	P.floor_rects(k, P.cut(block, [ATR, CORE]), FY[1], 0.8, "l4_carpet")
-	P.ceil_rects(k, P.cut(corr + block, [CORE]), FY[1] + CH, "l4_ceiling")
+	P.ceil_rects(k, P.cut(corr + block, [CORE, BRIDGE_CANOPY]), FY[1] + CH, "l4_ceiling")
 	for f in 2:
 		office._corridor_lights(k, o, FY[f], group, r)
 	# ---- the two exit stairways and the fire stair
@@ -84,6 +88,7 @@ func build(k: GeoKit, node: Node3D, o: Vector3, meta: Dictionary) -> void:
 	_walls_f1(k, node, o, r)
 	_base_omega(k, node)
 	_atrium(k, node, group)
+	_suspended_inspection_bridge(k, node, group)
 	# ---- break room: the supplies wanderers stock up on before Levels 5 and 6
 	var spots := [["vending", Vector3(12.05, 0, 2.4 + T * 0.5)], ["vending", Vector3(13.25, 0, 2.4 + T * 0.5)], ["cooler", Vector3(15.5, 0, 2.4 + T * 0.5)]]
 	var i := 0
@@ -240,3 +245,46 @@ func _atrium(k: GeoKit, node: Node3D, group: String) -> void:
 	# columns along the gallery edge carry the upper floor
 	for p in [Vector3(9.3, 0, 10.5), Vector3(9.3, 0, 21.9)]:
 		k.box(p + Vector3(0, CH * 0.5, 0), Vector3(0.45, CH, 0.45), "l4_wall", GeoKit.SIDES)
+
+
+## DEV13 optional adaptation: a raised inspection crossing, NOT a new portal.
+## Two independent gallery landings, a high-level transverse bridge, and a
+## south-pointing overlook create a local route with a meaningful height change.
+## The old second-storey ceiling is cut above this route before the roof is
+## raised; the M.E.G. shutters and all canonical exits are untouched.
+func _suspended_inspection_bridge(k: GeoKit, node: Node3D, group: String) -> void:
+	var low := 3.6
+	var high := 5.10
+	# The west/east approaches are outside the atrium void, while the middle
+	# span passes above (not through) the existing 1 m glass balcony rail.
+	var west_a := Vector3(8.15, low, 8.8)
+	var west_b := Vector3(8.15, high, 14.0)
+	var east_a := Vector3(20.65, high, 14.0)
+	var east_b := Vector3(20.65, low, 19.2)
+	k.ramp(west_a, west_b, 1.5, 0.16, "l4_steel")
+	k.slab(8.0, 13.2, 20.8, 14.8, high, 0.18, "l4_steel")
+	k.ramp(east_a, east_b, 1.5, 0.16, "l4_steel")
+	# A dead-end spur over the atrium creates a second sightline to the lobby.
+	k.slab(13.25, 14.0, 14.95, 19.35, high, 0.18, "l4_steel")
+	# Raise the roof over the complete route instead of walking into the
+	# previous 6.4 m office ceiling (which gave only 1.3 m clearance).
+	k.slab(7.1, 8.0, 22.1, 22.0, 8.35, 0.22, "l4_ceiling", GeoKit.NY)
+	# Guardrails along bridge edges, leaving a wide turn into the south spur.
+	for z in [13.14, 14.86]:
+		for span in [[9.6, 12.5], [15.7, 19.2]]:
+			var xa: float = span[0]
+			var xb: float = span[1]
+			k.box(Vector3((xa + xb) * 0.5, high + 0.48, z),
+				Vector3(xb - xa, 0.96, 0.08), "l4_rail")
+	for x in [13.19, 15.01]:
+		k.box(Vector3(x, high + 0.48, 17.3), Vector3(0.08, 0.96, 4.0), "l4_rail")
+	k.box(Vector3(14.10, high + 0.48, 19.40), Vector3(1.95, 0.96, 0.09), "l4_rail")
+	for p in [Vector3(10.8, 7.9, 14.0), Vector3(18.2, 7.9, 14.0)]:
+		k.panel(p, 0.55, 1.2, "l4_panel", 3.0, 0.0)
+		lvl.lights.add_anchor(p + Vector3.DOWN * 0.8,
+			Color(0.79, 0.91, 1.0), 0.8, 6.2, 0.0, group)
+	lvl.add_interactable(Vector3(14.1, 6.0, 18.55), Vector3(1.1, 1.3, 1.0),
+		"Read the elevated inspection stamp", func(_p):
+			Overlay.toast("A numbered floor is listed above the office ceiling. There is no staircase to it.", 5.0))
+	lvl.add_landmark("Suspended inspection bridge over the office atrium", Vector3(14.1, high, 14.0))
+	lvl.add_landmark("South overlook, elevated inspection circuit", Vector3(14.1, high, 18.9))

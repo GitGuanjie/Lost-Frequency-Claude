@@ -2,14 +2,18 @@
   "stable_id": "L009",
   "scene": "res://levels/L009/L009.tscn",
   "status": "PLAYABLE",
-  "qa_status": "ENGINE_SMOKE_PASS (full-suite run 2026-11-05, 0 failures); stills reviewed by integrator (AI); human review pending",
+  "qa_status": "DEV8_REWORK_UNVERIFIED: fresh Godot physics, trigger and Windows playtest required",
   "procedural": true,
   "arrivals": [
-    "start",
     "from_L005",
     "from_L007",
     "from_L008",
-    "from_L025"
+    "from_L025",
+    "from_L053",
+    "from_L094",
+    "from_L114",
+    "from_L320",
+    "start"
   ],
   "signature": "An endless midnight suburb of wet, unpainted streets and dead trees: every house different, furnished and powerless, most street lamps dead, mist that brings The Mangled, and arrow street signs whose next lamp wakes as you follow them toward Level 11.",
   "mechanics": [
@@ -111,5 +115,12 @@
     }
   ],
   "entity_policy": "SOURCED ONLY, as phenomena: The Mangled exist only during mist events, as an exposure hazard on open ground with sounds and a glimpsed dark shape that is never fought (page: fog is their spawning mechanism; streets are the most dangerous area). The other listed entities (Deathmoths, Smilers, Hounds, Neighborhood Watch, Observer and others) are not spawned in this slice. No groups or bases (page: none recorded).",
-  "notes": "ADAPTATION: the playable world is a finite streaming window (64 m chunks, radius 2) of the infinite suburb. Street grid, lot layout, house styles and room plans are ours (page gives no map). The 100-200 mile sign walk is compressed to ten signs at intersections with a required unbroken chain of eight; the lamp at the next sign powers on as you follow (page: power origin unknown), and the last blocks thicken into blank mid-rise slabs under a distant lit skyline, because Level 11's page says its suburban lots are mistaken for Level 9. The Mangled are modelled as fog exposure (page gives no behaviour). 'Felt watched' and 'TV static in my brain' come from the discovery testimony and drive a dread/static layer, not a rule. Houses are shelter and set a checkpoint. Kitchen drawers sometimes hold a flashlight (page: useful objects can be found in houses). Arrival points: from_L008 on the street (testimony: fell and landed on a street), from_L005 on a porch with a dark wooden door, from_L007 beside a backyard cellar hatch, from_L025 beside a dead yellow arcade cabinet (page: powered items do not work). Midnight per page; fog and lamp colours are ours. QA fixture (QA mode only): three arrow signs on the spawn street lead west to a compressed route end. Not built: Level 60 street-floor no-clip, Level 113 powerline chance, negative-level no-clip (placement ambiguous in source)."
+  "notes": "ADAPTATION: the playable world is a finite streaming window (64 m chunks, radius 2) of the infinite suburb. Street grid, lot layout, house styles and room plans are ours (page gives no map). The 100-200 mile sign walk is compressed to ten signs at intersections with a required unbroken chain of eight; the lamp at the next sign powers on as you follow (page: power origin unknown), and the last blocks thicken into blank mid-rise slabs under a distant lit skyline, because Level 11's page says its suburban lots are mistaken for Level 9. The Mangled are modelled as fog exposure (page gives no behaviour). 'Felt watched' and 'TV static in my brain' come from the discovery testimony and drive a dread/static layer, not a rule. Houses are shelter and set a checkpoint. Kitchen drawers sometimes hold a flashlight (page: useful objects can be found in houses). Arrival points: from_L008 on the street (testimony: fell and landed on a street), from_L005 on a porch with a dark wooden door, from_L007 beside a backyard cellar hatch, from_L025 beside a dead yellow arcade cabinet (page: powered items do not work). Midnight per page; fog and lamp colours are ours. QA fixture (QA mode only): three arrow signs on the spawn street lead west to a compressed route end. Not built: Level 60 street-floor no-clip, Level 113 powerline chance, negative-level no-clip (placement ambiguous in source).",
+  "arrival_aliases": [
+    "from_L053",
+    "from_L094",
+    "from_L114",
+    "from_L320"
+  ],
+  "qa_prior_status": "ENGINE_SMOKE_PASS (full-suite run 2026-11-05, 0 failures); stills reviewed by integrator (AI); human review pending"
 }

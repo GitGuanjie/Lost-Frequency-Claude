@@ -1,0 +1,158 @@
+{
+  "version": "1.5.0-dev27",
+  "static_tests": {
+    "passed": 237,
+    "total": 237
+  },
+  "level_entry_static": {
+    "passed": 100,
+    "total": 100
+  },
+  "world_manifest": {
+    "levels": 100,
+    "declared_exits": 235,
+    "issues": 0
+  },
+  "godot_native": {
+    "status": "NOT_RUN",
+    "reason": "Godot executable unavailable"
+  },
+  "native_level_entry": {
+    "status": "NOT_VERIFIED",
+    "levels": 100
+  },
+  "status_counts": {
+    "PLAYABLE": 27,
+    "IN_DEVELOPMENT": 73
+  },
+  "sites": [
+    {
+      "level": "L016",
+      "theme": "canopy",
+      "title": "Twilight Canopy Observatory",
+      "side_spurs": 3,
+      "raised_plazas": 7,
+      "physical_stairs": 2,
+      "optional_bridge": 1,
+      "glb_placements": 30,
+      "surveys": 3,
+      "switches": 2,
+      "bridge_control": 1,
+      "ambient_cues": 3,
+      "source": "ADAPTATION",
+      "native_engine": "NOT_RUN"
+    },
+    {
+      "level": "L024",
+      "theme": "mine",
+      "title": "PlasticWorks Service Spines",
+      "side_spurs": 2,
+      "raised_plazas": 6,
+      "physical_stairs": 2,
+      "optional_bridge": 1,
+      "glb_placements": 28,
+      "surveys": 3,
+      "switches": 2,
+      "bridge_control": 1,
+      "ambient_cues": 3,
+      "source": "ADAPTATION",
+      "native_engine": "NOT_RUN"
+    },
+    {
+      "level": "L029",
+      "theme": "harbor",
+      "title": "Hyperian Weathered Harbour",
+      "side_spurs": 3,
+      "raised_plazas": 7,
+      "physical_stairs": 2,
+      "optional_bridge": 1,
+      "glb_placements": 30,
+      "surveys": 3,
+      "switches": 2,
+      "bridge_control": 1,
+      "ambient_cues": 3,
+      "source": "ADAPTATION",
+      "native_engine": "NOT_RUN"
+    },
+    {
+      "level": "L077",
+      "theme": "pasture",
+      "title": "Pasture Listening Walk",
+      "side_spurs": 2,
+      "raised_plazas": 6,
+      "physical_stairs": 2,
+      "optional_bridge": 1,
+      "glb_placements": 28,
+      "surveys": 3,
+      "switches": 2,
+      "bridge_control": 1,
+      "ambient_cues": 3,
+      "source": "ADAPTATION",
+      "native_engine": "NOT_RUN"
+    },
+    {
+      "level": "L140",
+      "theme": "sunflower",
+      "title": "Honey Field Observatory",
+      "side_spurs": 1,
+      "raised_plazas": 5,
+      "physical_stairs": 2,
+      "optional_bridge": 1,
+      "glb_placements": 26,
+      "surveys": 3,
+      "switches": 2,
+      "bridge_control": 1,
+      "ambient_cues": 3,
+      "source": "ADAPTATION",
+      "native_engine": "NOT_RUN"
+    },
+    {
+      "level": "L737",
+      "theme": "ruins",
+      "title": "Golden Ruins Traversal",
+      "side_spurs": 3,
+      "raised_plazas": 7,
+      "physical_stairs": 2,
+      "optional_bridge": 1,
+      "glb_placements": 30,
+      "surveys": 3,
+      "switches": 2,
+      "bridge_control": 1,
+      "ambient_cues": 3,
+      "source": "ADAPTATION",
+      "native_engine": "NOT_RUN"
+    },
+    {
+      "level": "L899",
+      "theme": "settlement",
+      "title": "Yonder Spring Garden Walk",
+      "side_spurs": 2,
+      "raised_plazas": 6,
+      "physical_stairs": 2,
+      "optional_bridge": 1,
+      "glb_placements": 28,
+      "surveys": 3,
+      "switches": 2,
+      "bridge_control": 1,
+      "ambient_cues": 3,
+      "source": "ADAPTATION",
+      "native_engine": "NOT_RUN"
+    },
+    {
+      "level": "L998",
+      "theme": "stormfront",
+      "title": "Three-Cloud Weather Observatory",
+      "side_spurs": 2,
+      "raised_plazas": 6,
+      "physical_stairs": 2,
+      "optional_bridge": 1,
+      "glb_placements": 28,
+      "surveys": 3,
+      "switches": 2,
+      "bridge_control": 1,
+      "ambient_cues": 3,
+      "source": "ADAPTATION",
+      "native_engine": "NOT_RUN"
+    }
+  ]
+}

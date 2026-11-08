@@ -44,6 +44,7 @@ const DEFAULT_KEYS := {
 	"journal": [KEY_J, KEY_TAB],
 	"pause": [KEY_ESCAPE],
 	"dev_browser": [KEY_F3],
+	"world_map": [KEY_F6],
 	"dev_next": [KEY_F4],
 	"dev_flycam": [KEY_F7],
 	"screenshot": [KEY_F12],

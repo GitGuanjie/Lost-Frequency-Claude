@@ -97,6 +97,9 @@ static func shell(k: GeoKit) -> void:
 	# sunken living room: two 0.18 m risers at both openings
 	k.stairs(Vector3(4.0, B, 4.76), Vector3(0, 0, -1), 1.2, -B, 2, "l974_wood_floor", 0.28)
 	k.stairs(Vector3(4.64, B, 5.2), Vector3(1, 0, 0), 1.4, -B, 2, "l974_wood_floor", 0.28)
+	# master bedroom: two 0.09 m risers in the doorway (a single 0.18 m lip inside the
+	# wall thickness snagged the player's step-up; found by the stricter walker bot)
+	k.stairs(Vector3(3.5, 0.0, 3.34), Vector3(0, 0, -1), 0.9, MASTER, 2, "l974_wood_floor", 0.17)
 	# trims: door casings and baseboards
 	for d in [[3.5, 3.0, true], [5.15, 3.0, true], [6.9, 3.0, true], [10.95, 3.0, true], [7.9, 4.2, true]]:
 		_casing(k, d[0], d[1])

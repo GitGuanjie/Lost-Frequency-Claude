@@ -2,11 +2,20 @@
   "stable_id": "L001",
   "scene": "res://levels/L001/L001.tscn",
   "status": "PLAYABLE",
-  "qa_status": "ENGINE_SMOKE_PASS (full-suite run 2026-11-05, 0 failures); stills reviewed by integrator (AI); human review pending",
+  "qa_status": "DEV8_REWORK_UNVERIFIED: fresh Godot physics, trigger and Windows playtest required",
   "procedural": true,
   "arrivals": [
+    "from_L000",
+    "from_L000_1",
+    "from_L001_1",
+    "from_L001_2",
+    "from_L002",
+    "from_L012",
+    "from_L058",
+    "from_L201",
+    "from_L320",
     "start",
-    "from_L000"
+    "from_L001_3"
   ],
   "signature": "Endless grey parking-garage/warehouse halls of huge concrete pillars, leaking ceiling pipes and wooden crates, with green EXIT lights over pushable doors into safe Euclidean corridors; random Flickering blackouts make light and running in the halls deadly.",
   "mechanics": [
@@ -79,6 +88,18 @@
     }
   ],
   "entity_policy": "SOURCED ENTITIES ONLY. Smilers (page entity table: 'Bright animalistic faces attracted by light (and noise once having spotted their prey)') appear only in the halls during a Flickering blackout, and only when the wanderer uses a light (or keeps running once seen); switching the light off and moving quietly loses them, and entering a corridor ends the hunt. Other listed entities are sound-only presences during Flickering (bare feet on concrete, claws, something in the vents). Nothing enters the corridors. No NPCs: M.E.G. patrols, Base Alpha and settlements appear only as their landmarks.",
-  "notes": "SOURCE: halls as parking lot/warehouse chimera with pillars, discoloured walls, ceiling pipes leaking onto the floor; sectors (Aquila grey with huge pillars and leaks, Gild more lights and crates, Gothic arches and round pillars); Flickering (random total blackouts, green exit lights, no light sources, do not run, corridors safe); crates (appear behind your back or after Flickering, vanish unobserved, contents from food and Almond Water to glass/chemicals/solid nitrogen; 'Headlights or flashlight' listed among crate objects, hence the arrival supply crate that grants the flashlight); corridors behind single/double pushable doors with exit signs, Euclidean, dim, purposeless rooms (office with old computer and hanging bulb, brick cell, infirmary bed, rubber room with chair sometimes clipped into the floor, painting room), restful; painting on the floor before the doors that vanishes unobserved; M.E.G. landmark cloth with Almond Water and a note that you take down after taking the contents; Base Alpha in the Aquila Sector; a ceiling hole just off Base Alpha's north exit plus 15 more (Level 19 page). ADAPTATION: 32 m chunk grammar on an 8 m bay grid, sector map and the pipes-and-dials direction are ours (the page gives no map); non-Euclidean geometry is a disorientation meter that grows while walking without a landmark in view and then 'folds' the hall by whole structural bays (16-32 m) so pillars line up but features do not; Smiler attention rates and the 1.5 m catch distance are ours; crate vanish timing (35 s unobserved, 50%) and appearance timing are ours; Base Alpha's north exit is barred from inside because the base belongs to a separate article and no NPCs are spawned; ceiling holes get a bolted steel ladder (the page does not say how one climbs); the ventilation duct sits at floor level; the arrival crate is held until opened. The playable world is a finite streaming window (5x5 chunks loaded) with stable coordinates; canonical infinity is not simulated. QA fixture: in QA mode only the authored Base Alpha hole and duct exist (no seeded holes, no Level 2 threshold, no Flickering or folds), and the walker bot climbs the hole's ladder. RELEASE BOUNDARY: a fired climb exit disarms until you climb back down, so declining the 'not built' prompt does not repeat it.",
-  "fail_states_note": "Death returns to the last checkpoint (corridor rest)."
+  "notes": "SOURCE: halls as parking lot/warehouse chimera with pillars, discoloured walls, ceiling pipes leaking onto the floor; sectors (Aquila grey with huge pillars and leaks, Gild more lights and crates, Gothic arches and round pillars); Flickering (random total blackouts, green exit lights, no light sources, do not run, corridors safe); crates (appear behind your back or after Flickering, vanish unobserved, contents from food and Almond Water to glass/chemicals/solid nitrogen; 'Headlights or flashlight' listed among crate objects, hence the arrival supply crate that grants the flashlight); corridors behind single/double pushable doors with exit signs, Euclidean, dim, purposeless rooms (office with old computer and hanging bulb, brick cell, infirmary bed, rubber room with chair sometimes clipped into the floor, painting room), restful; painting on the floor before the doors that vanishes unobserved; M.E.G. landmark cloth with Almond Water and a note that you take down after taking the contents; Base Alpha in the Aquila Sector; a ceiling hole just off Base Alpha's north exit plus 15 more (Level 19 page). ADAPTATION: 32 m chunk grammar on an 8 m bay grid, sector map and the pipes-and-dials direction are ours (the page gives no map); non-Euclidean geometry is a disorientation meter that grows while walking without a landmark in view and then 'folds' the hall by whole structural bays (16-32 m) so pillars line up but features do not; Smiler attention rates and the 1.5 m catch distance are ours; crate vanish timing (35 s unobserved, 50%) and appearance timing are ours; Base Alpha's north exit is barred from inside because the base belongs to a separate article and no NPCs are spawned; ceiling holes get a bolted steel ladder (the page does not say how one climbs); the ventilation duct sits at floor level; the arrival crate is held until opened. The playable world is a finite streaming window (5x5 chunks loaded) with stable coordinates; canonical infinity is not simulated. QA fixture: in QA mode only the authored Base Alpha hole and duct exist (no seeded holes, no Level 2 threshold, no Flickering or folds), and the walker bot climbs the hole's ladder. RELEASE BOUNDARY: a fired climb exit disarms until you climb back down, so declining the 'not built' prompt does not repeat it. Dev6: new inbound provisional start-position aliases (from_L001_3) are not custom-designed entrance geometry.",
+  "fail_states_note": "Death returns to the last checkpoint (corridor rest).",
+  "arrival_aliases": [
+    "from_L000_1",
+    "from_L001_1",
+    "from_L001_2",
+    "from_L002",
+    "from_L012",
+    "from_L058",
+    "from_L201",
+    "from_L320",
+    "from_L001_3"
+  ],
+  "qa_prior_status": "ENGINE_SMOKE_PASS (full-suite run 2026-11-05, 0 failures); stills reviewed by integrator (AI); human review pending"
 }

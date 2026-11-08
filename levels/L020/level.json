@@ -1,0 +1,59 @@
+{
+  "stable_id": "L020",
+  "scene": "res://levels/L020/L020.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "UNVERIFIED Godot import, walker, GPU capture and human review pending",
+  "procedural": false,
+  "arrivals": [
+    "start",
+    "from_L011",
+    "from_L019"
+  ],
+  "signature": "A complex activity palace with quiet waiting halls and a second, electrically lit arcade district.",
+  "mechanics": [
+    "two_distinct_regions",
+    "interactive_three_console_sequence",
+    "staff_only_exit",
+    "arcade_ambient"
+  ],
+  "exits": [
+    {
+      "id": "L020>L002#1",
+      "to": "L002",
+      "trigger": "interact",
+      "label": "Staff-only door",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "source_section": "Dated canonical snapshot; exits",
+      "source_quote": "Staff-only doors in Waiting halls",
+      "arrival": "from_L020",
+      "hint": "Staff-only door"
+    },
+    {
+      "id": "L020>L024#2",
+      "to": "L024",
+      "trigger": "noclip",
+      "label": "Windows into Level 24",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "source_section": "Dated canonical snapshot; exits",
+      "source_quote": "No-clip through windows",
+      "arrival": "from_L020",
+      "hint": "Windows into Level 24"
+    },
+    {
+      "id": "L020>L004#3",
+      "to": "L004",
+      "trigger": "interact",
+      "label": "Game-room exit sign",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL",
+      "source_section": "Dated canonical snapshot; exits",
+      "source_quote": "Game doors with exit sign",
+      "arrival": "from_L020",
+      "hint": "Game-room exit sign"
+    }
+  ],
+  "entity_policy": "SOURCE_ONLY; hazardous games unimplemented",
+  "notes": "ADAPTATION: finite 180m curated slice and three-console unlocking sequence represent the documented game exits; the other game outcomes are not implemented. No arbitrary hostile entity spawning. Canon: docs/canon/levels/L020.md; authors credited there under CC BY-SA 3.0. Not yet PLAYABLE."
+}

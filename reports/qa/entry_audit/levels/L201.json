@@ -1,0 +1,36 @@
+{
+  "build_ms": 409,
+  "engine_native": true,
+  "level": "L201",
+  "manifest_status": "IN_DEVELOPMENT",
+  "metrics": {
+    "audio_players": 3,
+    "collision_shapes": 341,
+    "exit_triggers": 4,
+    "footprint_x": 420.0,
+    "footprint_y": 93.4,
+    "footprint_z": 568.0,
+    "glb_models": 10,
+    "interactables": 11,
+    "lights": 15,
+    "materials": 32,
+    "mesh_instances": 59,
+    "multimesh_instances": 0,
+    "triangles": 13468
+  },
+  "reason": "loaded via real developer transition, safe player spawn, 15 physics ticks",
+  "scene": "res://levels/L201/L201.tscn",
+  "spawn_report": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+  },
+  "spawn_y_after": 0.0163886491209269,
+  "spawn_y_before": 0.0163886491209269,
+  "stage": "complete",
+  "status": "PASS",
+  "test": "real F3 developer jump and safe spawn"
+}

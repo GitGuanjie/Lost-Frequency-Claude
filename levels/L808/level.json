@@ -1,0 +1,32 @@
+{
+  "stable_id": "L808",
+  "scene": "res://levels/L808/L808.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — candidate dev3",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L011"
+  ],
+  "signature": "Neon polygon landscape with four source formations",
+  "mechanics": [
+    "grid",
+    "city",
+    "art_hall",
+    "infofield"
+  ],
+  "exits": [
+    {
+      "id": "L808>L185#1",
+      "to": "L185",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Subway from a TRANSIT station in Sunset City",
+      "source_quote": "Taking a subway at a subway station marked with \"TRANSIT\" in Sunset City will lead to Level 185",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-808",
+      "trigger_type": "vehicle"
+    }
+  ],
+  "notes": "Source constrained to 2026-11-04 snapshot. All distances are compressed for playable prototype. No engine QA, Windows test or human screenshot review passed yet.",
+  "entity_policy": "No invented hostile entities; narrative testimony is not treated as verified encounter."
+}

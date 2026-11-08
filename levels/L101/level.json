@@ -1,0 +1,49 @@
+{
+ "stable_id": "L101",
+ "scene": "res://levels/L101/L101.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003 28/28 each; bot fired L101>L000#1 at the bed); stills reviewed by builder (AI); integrator review pending",
+ "procedural": true,
+ "arrivals": [
+  "start",
+  "from_L002"
+ ],
+ "signature": "You wake in your own home by the sea on an almost perfect Earth; the longer you stay, the more is wrong: lamp posts too tall, the waves' sound behind their motion, the sun too far left, a gull with too much skin; say you are ready to go back and wake in Level 0",
+ "mechanics": [
+  "wake_in_your_home",
+  "growing_inconsistencies",
+  "lamp_posts_stretch",
+  "sound_lags_the_waves",
+  "sun_drifts_clouds_speed",
+  "gull_wrong_skin_glimpse",
+  "no_almond_water",
+  "no_new_zealand_on_maps",
+  "spoken_return_to_level_0"
+ ],
+ "exits": [
+  {
+   "id": "L101>L000#1",
+   "to": "L000",
+   "trigger": "interact",
+   "trigger_type": "sleep",
+   "label": "Said \"I'm ready to go back\", fell unconscious and woke on the yellow carpet of Level 0",
+   "confidence": "CONFIRMED",
+   "basis": "SOURCE",
+   "source_section": "Exits",
+   "method": "say I'm ready to go back, fall unconscious",
+   "source_quote": "invariably causes you to fall unconscious and reawaken in Level 0",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-101",
+   "conditions": "must state readiness",
+   "hint": "Whenever you are ready: by the bed, on the back deck, or at the water's edge.",
+   "arrival": "from_L101"
+  }
+ ],
+ "notes": "SOURCE: nigh-perfect replica of Earth; you awaken in your pre-Backrooms home; inconsistencies grow with time (lamp posts too tall, sound lagging behind its cause, animals at ~100 m briefly lacking or having excess skin, almond water unknown to vendors and search engines, New Zealand on no map); no outposts; entered via unlocked doors in Level 2; saying \"I'm ready to go back\" -> unconscious -> Level 0. TESTIMONY (narrative frame): windy cold beach, sand and shells, quiet despite the sea, a smooth purple-white shell, waves out of sync with their sound, sun a little too far left, clouds a fraction too fast, being asked to head in. ADAPTATION: 'your home' is a generic two-storey seaside house (hall with stair, living room, kitchen, study, dining room; bedroom, bathroom, spare room of unpacked boxes) on a street of closed neighbours' houses whose gardens run to a dune and the narrative's beach; no family or people are shown (canon trap: the family is narrative); the street streams along X in 48 m chunks (finite window); wrongness rises over ~15 minutes: street lamps stretch up to ~1.85x, the swash's crash sound lags up to 1.7 s, the sun drifts 16 degrees left and clouds speed up 4x, a distant gull flickers to a baggy-skinned mesh for 0.35 s; the return phrase is offered at the bed, the back deck and the shore (all one edge); the world map is a procedural sketch without New Zealand. The DEV26 overlay cues (book, coat rack, cup) are re-homed onto matching furniture at runtime and their glow markers hidden.",
+ "entity_policy": "NO ENTITY PER SOURCE. No people are modelled: the family belongs to the narrative. Gulls are ordinary animals of the Earth replica; their 'wrong skin' is a momentary hallucination (SOURCE). Hounds, fires and faceless things are memories in the narrative and never appear.",
+ "content_warning": "Grief and loss (the page's narrative); a brief body-horror glimpse (a gull's skin) kept abstract.",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "test": "static file prerequisites for all 100 F3 entries",
+  "levels_total": 100,
+  "static_pass": 100,
+  "playable_marked": 27,
+  "in_development_marked": 73,
+  "native_entry_pass": null,
+  "native_entry_tested": false,
+  "engine_verified": false,
+  "problems": [],
+  "native_instructions": "RUN_100_LEVEL_ENTRY_QA_WINDOWS.ps1 -GodotExe <Godot4.5.exe>"
+}

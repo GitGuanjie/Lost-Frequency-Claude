@@ -1,0 +1,15 @@
+{
+  "stable_id": "L060",
+  "scene": "res://levels/L060/L060.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "UNVERIFIED, Godot runtime and screenshot review pending",
+  "procedural": true,
+  "arrivals": ["start", "from_L085"],
+  "signature": "Perpetually dark bay: a new concrete Upper Area high above an unfinished dirt Lower Area, lit stairs, broken lamps, a shallow entrance sea and an intermittent anomalous sea portal.",
+  "mechanics": ["dual_elevation_baywalk", "three_stair_links_at_100m_intervals", "mostly_broken_lamps", "sea_entry_and_swim", "time_varying_four_sea_characteristics", "stable_probability_portal", "painless_death_warning_only"],
+  "exits": [{
+    "id": "L060>L007#1", "to": "L007", "trigger": "condition", "label": "An intermittent sea characteristic forms a portal toward Level 7", "confidence": "CONDITIONAL", "basis": "SOURCE", "source_section": "Exits / The Sea", "source_quote": "you have a chance of being sent to Level 7", "arrival": "from_L060", "hint": "The sea does not behave the same way every time. Portal periods are rare."
+  }],
+  "entity_policy": "NO SPAWNED ENTITIES IN THIS CANDIDATE. The documented Smilers on the upper tier and Brave group are deferred; none can appear on the Lower Area.",
+  "notes": "Source dossier docs/canon/levels/L060.md; CC BY-SA 3.0 D34TH_0000. SOURCE: dark upper concrete promenade, lower unfinished dirt path, stair lights and broken lamps, sea with four characteristics, conditional Level 7 portal. ADAPTATION: 260m finite region, timed sea-characteristic sequence, approximate 23% stable roll at Portal change, warning-only Painless Death. NOT a complete playable scene until physics navigation, Smiler behavior, state handling and GPU review are verified."
+}

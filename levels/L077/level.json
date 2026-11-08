@@ -1,0 +1,30 @@
+{
+  "stable_id": "L077",
+  "scene": "res://levels/L077/L077.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "Rolling summer pastures ringed by dangerous night forest",
+  "mechanics": [
+    "daylight_pasture",
+    "sheep_country",
+    "peripheral_night_forest"
+  ],
+  "exits": [
+    {
+      "id": "L077>EXT#1",
+      "to": "EXT",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL+DANGEROUS",
+      "method": "Walk in surrounding forest beyond 6 km; noclip through detritus",
+      "source_quote": "When walking through the surrounding forest, at any distance greater than 6 km, a traveler will have a 65% chance to no-clip through the detritus",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-77",
+      "trigger_type": "noclip"
+    }
+  ],
+  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Nguithr'xurh, Shenandoah Sheep, Murphy Estate humans"
+}

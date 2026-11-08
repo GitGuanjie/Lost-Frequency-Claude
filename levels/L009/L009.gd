@@ -1,4 +1,5 @@
 extends LevelBase
+const ModelDress := preload("res://core/world/ModelDress.gd")
 ## Level 9 — "The Suburbs" (Backrooms Wikidot rev 116, accessed 2026-11-04; cite:
 ## Stretchsterz, CC BY-SA 3.0). Dossier: docs/canon/levels/L009.md.
 ## Streamed midnight suburb: 64 m chunks = one block of lots plus its two street
@@ -41,6 +42,7 @@ var progress := 0
 var last := -1
 var qa_prog := 0
 var qa_last := -1
+var qa_trace: Array = []
 var tlamps := {}
 var house_in := ""
 var visits := 0
@@ -98,6 +100,10 @@ func build() -> void:
 	_arrivals()
 	var tag := TransitionService.pending_arrival
 	var at: Transform3D = arrivals.get(tag, arrivals["start"])
+	# ChunkWorld only built the START neighbourhood above. A source-specific
+	# arrival may lie in a different chunk: build its floor, house interior and
+	# navigation neighbourhood before spawning/validating the player.
+	world.build_around(at.origin, 1)
 	_interiors_near(at.origin, 24.0)
 	var ah: Dictionary = homes["arrival"]
 	var af: Transform3D = ah["frame"]
@@ -253,7 +259,10 @@ func _build_chunk(cx: int, cz: int, _v: int, node: Node3D) -> Dictionary:
 					st.tree(Vector3(r.randf_range(gx + 3.0, ox + CS - 3.0), LY, r.randf_range(gz + 3.0, oz + CS - 3.0)), 1.1)
 				st.bench(Vector3(ox + 40.0, LY, oz + W + 3.0), PI)
 			else:
-				_slabs(st, ox, oz, r)
+				if Vector2i(cx, cz) == end_owner:
+					_slabs(st, ox, oz, r)
+				else:
+					_night_garage(k, node, ox, oz, "%d,%d" % [cx, cz])
 		"airport":
 			if Vector2i(cx, cz) == air:
 				_airport(k, cx, cz, r, node)
@@ -267,6 +276,7 @@ func _build_chunk(cx: int, cz: int, _v: int, node: Node3D) -> Dictionary:
 		if t:
 			t.condition = func(): return progress >= NEED
 	k.commit()
+	ModelDress.decorate_chunk(self, node, "L009", cx, cz)
 	return meta
 
 
@@ -445,6 +455,79 @@ func _playground(k: GeoKit, st, ox: float, oz: float, node: Node3D) -> void:
 		st.tree(c + p, 1.2)
 
 
+## Non-end outskirts: a genuinely traversable, three-level parking shell,
+## replacing one inaccessible solid building. The Level 11 street exit remains
+## on its own separate end_owner chunk and is never obscured by this structure.
+func _night_garage(k: GeoKit, node: Node3D, ox: float, oz: float, group: String) -> void:
+	var x0 := ox + 32.0
+	var z0 := oz + 24.0
+	# Open ground floor, two upper decks and full-rise exterior stairs.
+	k.slab(x0, z0, ox + 60.0, oz + 52.0, 0.18, 0.26, "l9_driveway", GeoKit.PY)
+	k.slab(x0, z0, ox + 60.0, oz + 52.0, 3.40, 0.24, "l9_foundation", GeoKit.ALL)
+	# The second floor begins beyond the second flight; otherwise its slab
+	# would cover the player's head before they reached the top of the stairs.
+	k.slab(x0, oz + 36.0, ox + 60.0, oz + 52.0, 6.80, 0.24, "l9_foundation", GeoKit.ALL)
+	k.stairs(Vector3(ox + 23.2, 0.18, oz + 28.0), Vector3.RIGHT, 2.0, 3.22, 16, "l9_metal_dark", 0.55, true)
+	k.stairs(Vector3(ox + 51.0, 3.40, oz + 26.0), Vector3(0, 0, 1), 2.0, 3.40, 16, "l9_metal_dark", 0.625, true)
+	for xx in [x0 + 1.0, ox + 59.0]:
+		for zz in [z0 + 1.0, oz + 51.0]:
+			k.box(Vector3(xx, 3.3, zz), Vector3(0.45, 6.6, 0.45), "l9_metal_dark")
+	for level_y in [3.40, 6.80]:
+		var minz := oz + 36.0 if level_y > 5.0 else z0
+		for xx in [x0, ox + 60.0]:
+			k.box(Vector3(xx, level_y + 0.53, (minz + oz + 52.0) * 0.5), Vector3(0.09, 1.06, oz + 52.0 - minz), "l9_metal_dark")
+		k.box(Vector3((x0 + ox + 60.0) * 0.5, level_y + 0.53, oz + 52.0), Vector3(28.0, 1.06, 0.09), "l9_metal_dark")
+	for i in 8:
+		k.box(Vector3(x0 + 3.0 + i * 2.7, 3.42, oz + 47.0), Vector3(0.12, 0.015, 3.2), "l9_paver", GeoKit.ALL, false)
+	_night_garage_roof(k, node, ox, oz, group)
+	lights.add_anchor(Vector3(ox + 46.0, 6.4, oz + 43.0), SODIUM, 1.8, 17.0, 0.25, group)
+	var panel := Interactable.new()
+	node.add_child(panel)
+	panel.setup(Vector3(ox + 52.0, 7.8, oz + 47.0), Vector3(1.3, 1.0, 0.5), "Read the abandoned garage register", func(_p):
+		Overlay.toast("Every vehicle entry has the same date. The final page shows the whole district from above.", 5.0))
+	k.box(Vector3(ox + 52.0, 7.4, oz + 47.0), Vector3(1.2, 0.85, 0.14), "l9_foundation", GeoKit.ALL, false)
+
+
+
+## DEV14: roof level (fourth elevation) with a genuine ascending switchback,
+## missing stair slot, narrow eastern return and lateral observation spur.
+## This is only placed in the existing non-end outskirts garage chunk.
+func _night_garage_roof(k: GeoKit, node: Node3D, ox: float, oz: float, group: String) -> void:
+	var y := 10.20
+	# The third deck is at 6.80 m. A westbound return flight climbs to 10.20.
+	# Its landing is at x=46.2. There is NO roof slab over the ascent.
+	k.stairs(Vector3(ox + 55.0, 6.80, oz + 40.0), Vector3.LEFT,
+		2.0, 3.40, 16, "l9_metal_dark", 0.55, false)
+	for rect in [
+		[ox + 32.0, oz + 36.0, ox + 46.25, oz + 52.0],
+		[ox + 55.30, oz + 36.0, ox + 60.0, oz + 52.0],
+		[ox + 46.25, oz + 36.0, ox + 55.30, oz + 38.60],
+		[ox + 46.25, oz + 41.40, ox + 55.30, oz + 52.0]
+	]:
+		k.slab(rect[0], rect[1], rect[2], rect[3], y, 0.24, "l9_foundation", GeoKit.ALL)
+	# Cantilever observation balcony over the edge of the older garage.
+	k.slab(ox + 25.0, oz + 43.2, ox + 32.0, oz + 46.2, y, 0.22, "l9_metal_dark")
+	for xx in [ox + 25.0, ox + 60.0]:
+		var left: bool = xx == ox + 25.0
+		k.box(Vector3(xx, y + 0.58, oz + 44.7), Vector3(0.11, 1.16, 3.0 if left else 15.0), "l9_metal_dark")
+	for zz in [oz + 36.0, oz + 52.0]:
+		k.box(Vector3(ox + 46.0, y + 0.58, zz), Vector3(28.0, 1.16, 0.11), "l9_metal_dark")
+	for xx in [ox + 32.0, ox + 46.25]:
+		k.box(Vector3(xx, y + 0.58, oz + 44.6), Vector3(0.11, 1.16, 4.4 if xx == ox + 32.0 else 6.35), "l9_metal_dark")
+	# Internal stairwell guard segments leave a wide upper landing at x=46.2.
+	for zz in [oz + 38.6, oz + 41.4]:
+		k.box(Vector3(ox + 51.30, y + 0.58, zz), Vector3(7.5, 1.16, 0.11), "l9_metal_dark")
+	# Partial interior walls create multiple route choices on the roof.
+	k.wall(Vector3(ox + 35.0, y, oz + 45.0), Vector3(ox + 55.0, y, oz + 45.0),
+		2.25, 0.16, "l9_foundation", [{"at": 6.0, "w": 2.5, "h": 2.2}, {"at": 15.5, "w": 2.0, "h": 2.2}], GeoKit.SIDES)
+	var register := Interactable.new()
+	node.add_child(register)
+	register.setup(Vector3(ox + 28.0, y + 0.9, oz + 44.7), Vector3(1.6, 1.1, 1.4),
+		"Inspect the rooftop district plan", func(_p):
+			Overlay.toast("Four parking floors are shown. The roof sketch has a fifth floor drawn upside down.", 5.0))
+	lights.add_anchor(Vector3(ox + 30.0, y + 2.3, oz + 45.0), SODIUM, 0.8, 9.0, 0.0, group)
+
+
 ## Outskirts after the last sign: blank mid-rise slabs, every lamp lit.
 func _slabs(st, ox: float, oz: float, r: RandomNumberGenerator) -> void:
 	for i in 2:
@@ -509,6 +592,18 @@ func _route_sign(k: GeoKit, st, i: int, node: Node3D) -> void:
 	st.stick(cpos + Vector3(0, 5.3, 0), tip, 0.08, "l9_metal_dark")
 	k.box(tip + Vector3(0, -0.06, 0), Vector3(0.6, 0.16, 0.6), "l9_metal_dark", GeoKit.ALL, false)
 	st.arrow_sign(cpos + face * 0.14 + Vector3(0, 2.5, 0), face, turn)
+	# A street-level observation attached to the streamed sign's chunk.
+	# Studying it is optional: the actual route still progresses ONLY when
+	# the player's body reaches the correct intersection in order.
+	var heading := "east" if dout.x > 0 else ("west" if dout.x < 0 else ("south" if dout.y > 0 else "north"))
+	var number := i + 1
+	var sign_trigger := Interactable.new()
+	node.add_child(sign_trigger)
+	sign_trigger.setup(cpos + Vector3(0, 1.7, 0), Vector3(1.8, 2.4, 1.8),
+		"Examine the arrow street sign", func(_p):
+			if SessionState.is_story():
+				SaveService.set_flag(stable_id, "observed_arrow_%02d" % number, true)
+			Overlay.subtitle("Sign %d: the arrow points %s. A lamp hums further down the street." % [number, heading], 4.0))
 	var lens := MeshInstance3D.new()
 	var bm := BoxMesh.new()
 	bm.size = Vector3(0.46, 0.03, 0.46)
@@ -541,7 +636,7 @@ func _qa_route() -> void:
 	var t := add_exit("L009>L011#1", "condition", Vector3(12.0, 1.4, 7.6), Vector3(4.0, 3.0, 9.0), "")
 	if t:
 		t.condition = func(): return qa_prog >= 3
-	qa_routes.append({"edge": "L009>L011#1", "target": Vector3(12.0, 0.05, 7.6), "waypoints": qa_pts.duplicate(), "note": "QA fixture: three arrow signs on the spawn street lead west to a compressed route end"})
+	qa_routes.append({"edge": "L009>L011#1", "target": Vector3(12.0, 0.05, 7.6), "waypoints": qa_pts.duplicate(), "note": "QA fixture: each of three arrow signs must be reached in order; real physics Area3D handles the exit"})
 
 
 func _arrivals() -> void:
@@ -651,11 +746,17 @@ func _near(list: Array, rad: float) -> int:
 
 
 func _route_tick() -> void:
-	var i := _near(qa_pts, 4.5)
-	if i >= 0 and i != qa_last:
-		qa_prog = qa_prog + 1 if i == qa_last + 1 else 1
-		qa_last = i
-	i = _near(pts.slice(0, NS), 9.0)
+	# The compressed QA route is a physical walk on the street, with ordered
+	# waypoints. A wrong sign cannot silently reset/re-complete the sequence.
+	# In particular, every waypoint must actually be entered by the player.
+	if qa_fixture and qa_prog < qa_pts.size():
+		var next_idx: int = qa_prog
+		var next_pt: Vector3 = qa_pts[next_idx]
+		if Vector2(player.global_position.x - next_pt.x, player.global_position.z - next_pt.z).length() < 3.2:
+			qa_last = next_idx
+			qa_prog += 1
+			qa_trace.append({"index": next_idx, "pos": player.global_position, "progress": qa_prog, "time_ms": Time.get_ticks_msec(), "chunk": world.key_at(player.global_position)})
+	var i := _near(pts.slice(0, NS), 9.0)
 	if i < 0 or i == last:
 		return
 	var was := progress
@@ -786,6 +887,16 @@ func _exit_tree() -> void:
 
 
 # ------------------------------------------------------------------ QA
+
+func qa_self_test() -> Array:
+	var tag := TransitionService.pending_arrival
+	var at: Transform3D = arrivals.get(tag, arrivals["start"])
+	var key := world.key_at(at.origin)
+	return [
+		{"what": "actual arrival neighbourhood loaded before spawn", "ok": world.chunks.has(key), "detail": [tag, key]},
+		{"what": "QA route retains real ordered waypoints", "ok": (not qa_fixture) or (qa_pts.size() == 3 and qa_prog <= 3)}
+	]
+
 
 func qa_capture_plan() -> Array:
 	var plan: Array = qa_shots.duplicate()

@@ -1,0 +1,59 @@
+{
+  "stable_id": "L197",
+  "scene": "res://levels/L197/L197.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "UNVERIFIED Godot import, walker, GPU capture and human review pending",
+  "procedural": false,
+  "arrivals": [
+    "start",
+    "from_L197"
+  ],
+  "signature": "Four mineral districts of an expansive crystal cave, from tranquil turquoise water to dark onyx passages.",
+  "mechanics": [
+    "four_distinct_zones",
+    "mineral_crystals",
+    "cove_distilled_water",
+    "ruby_and_onyx",
+    "source_self_loop_exits"
+  ],
+  "exits": [
+    {
+      "id": "L197>L197#1",
+      "to": "L197",
+      "trigger": "walk_in",
+      "label": "Lit Zone 1 path",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "source_section": "Dated canonical snapshot; exits",
+      "source_quote": "lit path in Zone 1",
+      "arrival": "from_L197",
+      "hint": "Lit Zone 1 path"
+    },
+    {
+      "id": "L197>L197#2",
+      "to": "L197",
+      "trigger": "walk_in",
+      "label": "Path through Zone 2",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "source_section": "Dated canonical snapshot; exits",
+      "source_quote": "through Zone 2",
+      "arrival": "from_L197",
+      "hint": "Path through Zone 2"
+    },
+    {
+      "id": "L197>L000#5",
+      "to": "L000",
+      "trigger": "interact",
+      "label": "Fluorescent tunnel to Level 0",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL",
+      "source_section": "Dated canonical snapshot; exits",
+      "source_quote": "unlit tunnel with fluorescent buzz in Zone 3",
+      "arrival": "from_L197",
+      "hint": "Fluorescent tunnel to Level 0"
+    }
+  ],
+  "entity_policy": "Unknown Zone 4 entity reports not modelled",
+  "notes": "ADAPTATION: four finite 50m zones approximate much larger underdocumented cave. The rumored far cavern exit is not implemented. Canon: docs/canon/levels/L197.md; authors credited there under CC BY-SA 3.0. Not yet PLAYABLE."
+}

@@ -5,14 +5,29 @@
  "levels": [
   {
    "bot": {
+    "distance_to_target": 1.0487425327301,
     "distance_walked": 10.2333644917235,
     "edge": "L013>L000#1",
+    "final_position": "(13.2268, 0.02, 1.366621)",
     "fired": true,
+    "path_index": 9,
+    "path_points": 9,
+    "progress_samples": [
+     {
+      "L009_route_progress": -1,
+      "goal": "(9.740583, 0.101973, 1.241644)",
+      "nav_vertex": 4,
+      "position": "(8.623653, 0.02, 1.201603)",
+      "slide_collisions": 0,
+      "tick": 120
+     }
+    ],
+    "reason": "triggered",
     "sim_seconds": 3.61666666666667,
     "target": "L013>L000#1",
     "ticks": 217
    },
-   "build_ms": 2758,
+   "build_ms": 2833,
    "collision_shapes": 6020,
    "distinct_layouts_over_3_seeds": 3,
    "dup_profile": {
@@ -111,25 +126,31 @@
    },
    "exits_declared": 12,
    "exits_found": 2,
-   "load_ms": 2945,
+   "load_ms": 2996,
    "nav": {
     "exits": [
      {
       "edge": "L013>L000#1",
       "goal": "(13.6, 0.101973, 1.38)",
       "path_points": 9,
-      "reachable": true
+      "reachable": true,
+      "snap_error": 0.898027420043945,
+      "start_projection_error": 0.0999999195337296
      },
      {
       "edge": "L013>L289#11",
       "goal": "(7.9, 0.101973, 1.550003)",
       "path_points": 2,
-      "reachable": true
+      "reachable": true,
+      "snap_error": 1.0044652223587,
+      "start_projection_error": 0.0999999195337296
      }
     ],
     "map_regions": 1,
-    "map_sync_ticks": 2,
+    "map_sync_ticks": 12,
     "nav_polygons": 3071,
+    "spawn_on_navmesh": true,
+    "spawn_projection_error": 0.0999999195337296,
     "start": "(3.0, 0.101973, 1.0)"
    },
    "qa_status": "ENGINE_SMOKE_PASS",
@@ -138,6 +159,7 @@
    "spawn": {
     "floor_hit": true,
     "offset": 0.0,
+    "provisional_start_alias": false,
     "requested_arrival": "start",
     "spawn_ok": true,
     "used_arrival": "start"
@@ -146,12 +168,17 @@
   }
  ],
  "renderer": "headless",
- "started": "2026-11-06T07:00:57",
+ "started": "2026-11-08T14:40:18",
  "suites": {
   "duplication": {
    "checks": [],
    "failed": 0,
    "passed": 1
+  },
+  "framework": {
+   "checks": [],
+   "failed": 0,
+   "passed": 8
   },
   "level:L013": {
    "checks": [],

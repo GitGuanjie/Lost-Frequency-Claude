@@ -6,7 +6,9 @@
   "procedural": true,
   "arrivals": [
     "start",
-    "from_L005"
+    "from_L005",
+    "from_L004",
+    "from_L006_1"
   ],
   "signature": "Total darkness and total silence in endless tight concrete hallways: nothing lights up, you only know the walls your hands have just touched, and the one thing to follow is the faint sound of waves.",
   "mechanics": [
@@ -85,5 +87,9 @@
     }
   ],
   "entity_policy": "NO ENTITY PER SOURCE ('no entities have been found on this level'). Nothing is spawned and nothing attacks. Scuttling, breathing and whispering are hallucinations with no source (reported by witnesses after minutes in the dark). Mimicry (about four people who mimic any sound) appears only as your own footsteps echoed back once you stop, never as a body or an attacker. The Archives attacker is unverified testimony and is not implemented. The World's Quietest Room (rumoured; light switch 'advised not to flip') is not implemented, so no light switch exists.",
-  "notes": "Flashlight rule = 'none': the page says light sources brought into the level have no function ('fails' would emit light for seconds). Nothing in the level is lit or emissive; ambient and fog are zero. ADAPTATION: feeling one's way is shown as a fading touch-memory imprint (unshaded shader, no light cast): rays at arm's length (0.95 m) and footsteps record what you touched; imprints fade in ~8 s, faster as dread rises. ADAPTATION: tight-hall grammar (1.3 m halls on a 2.4 m grid, randomized DFS biased to long straight runs plus a few loops) streamed in 24 m chunks; the playable level is a finite streaming window. ADAPTATION: wave sound is placed a few halls ahead on the shortest corridor route to the stairwell (BFS over loaded halls) so it can be followed around corners. ADAPTATION: wrong turn = straying 5-6 chunks from the entrance while 3+ from the stairwell (or 12 minutes without finding it); afterwards the entrance and stairwell chunks are rebuilt as plain halls. ADAPTATION: tactile tints: warmth near the stairs up to the Boiler Room, damp near the stairwell, cold at the metal door. ADAPTATION: dread starts after 2.5 minutes, slows walking slightly, and resets near the entrance (page: Boiler Room as base, frequent return missions). ADAPTATION: walking pace is slower than default (feeling the way). Arrivals: start and from_L005 are the landing at the top of the stairs down from the Boiler Room (also a checkpoint)."
+  "notes": "Flashlight rule = 'none': the page says light sources brought into the level have no function ('fails' would emit light for seconds). Nothing in the level is lit or emissive; ambient and fog are zero. ADAPTATION: feeling one's way is shown as a fading touch-memory imprint (unshaded shader, no light cast): rays at arm's length (0.95 m) and footsteps record what you touched; imprints fade in ~8 s, faster as dread rises. ADAPTATION: tight-hall grammar (1.3 m halls on a 2.4 m grid, randomized DFS biased to long straight runs plus a few loops) streamed in 24 m chunks; the playable level is a finite streaming window. ADAPTATION: wave sound is placed a few halls ahead on the shortest corridor route to the stairwell (BFS over loaded halls) so it can be followed around corners. ADAPTATION: wrong turn = straying 5-6 chunks from the entrance while 3+ from the stairwell (or 12 minutes without finding it); afterwards the entrance and stairwell chunks are rebuilt as plain halls. ADAPTATION: tactile tints: warmth near the stairs up to the Boiler Room, damp near the stairwell, cold at the metal door. ADAPTATION: dread starts after 2.5 minutes, slows walking slightly, and resets near the entrance (page: Boiler Room as base, frequent return missions). ADAPTATION: walking pace is slower than default (feeling the way). Arrivals: start and from_L005 are the landing at the top of the stairs down from the Boiler Room (also a checkpoint).",
+  "arrival_aliases": [
+    "from_L004",
+    "from_L006_1"
+  ]
 }

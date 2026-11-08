@@ -1,0 +1,325 @@
+{
+ "duplication_pairs": [],
+ "engine": "4.5.1-stable (official)",
+ "failures": [],
+ "levels": [
+  {
+   "bot": {
+    "distance_to_target": 1.22121620178223,
+    "distance_walked": 23.4868667563424,
+    "edge": "L019>L005#6",
+    "final_position": "(20.52184, 0.02, 17.61179)",
+    "fired": true,
+    "path_index": 30,
+    "path_points": 30,
+    "progress_samples": [
+     {
+      "L009_route_progress": -1,
+      "goal": "(5.920066, 0.116389, 21.21536)",
+      "nav_vertex": 6,
+      "position": "(4.187807, 0.02, 21.26451)",
+      "slide_collisions": 0,
+      "tick": 120
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(11.91339, 0.116389, 21.04412)",
+      "nav_vertex": 14,
+      "position": "(9.971823, 0.03, 21.09958)",
+      "slide_collisions": 0,
+      "tick": 240
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(16.39379, 0.116389, 20.91611)",
+      "nav_vertex": 21,
+      "position": "(15.81083, 0.02, 20.93276)",
+      "slide_collisions": 0,
+      "tick": 360
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(20.65563, 1.0, 16.8955)",
+      "nav_vertex": 30,
+      "position": "(20.35713, 0.02, 18.00232)",
+      "slide_collisions": 0,
+      "tick": 480
+     }
+    ],
+    "reason": "triggered",
+    "sim_seconds": 8.1,
+    "target": "L019>L005#6",
+    "ticks": 486
+   },
+   "build_ms": 866,
+   "collision_shapes": 1176,
+   "distinct_layouts_over_3_seeds": 3,
+   "dup_profile": {
+    "boxes": {
+     "-1_-1_-1": 72,
+     "-1_-1_0": 72,
+     "-2_-1_-1": 72,
+     "-2_-1_0": 14,
+     "-2_-1_1": 22,
+     "-2_-1_2": 7,
+     "-2_-1_3": 5,
+     "-2_-2_-1": 90,
+     "-2_-2_-2": 20,
+     "-2_-2_0": 15,
+     "-2_-2_1": 44,
+     "-2_-2_2": 12,
+     "-2_-2_3": 7,
+     "-2_0_0": 3,
+     "-2_0_1": 27,
+     "-2_0_2": 8,
+     "-2_0_3": 2,
+     "-2_1_1": 18,
+     "-2_1_2": 12,
+     "-2_1_3": 12,
+     "-2_2_2": 3,
+     "-2_2_3": 4,
+     "-2_3_3": 26,
+     "-2_3_4": 9,
+     "-2_4_4": 1,
+     "-3_-2_-1": 4,
+     "-3_-2_-2": 3,
+     "-3_-2_0": 5,
+     "-3_-2_1": 3,
+     "-3_0_1": 11,
+     "-4_-2_0": 14,
+     "-4_-3_0": 40,
+     "-4_-4_0": 2,
+     "-4_1_1": 2,
+     "-4_1_2": 45,
+     "-4_1_3": 20,
+     "-4_1_4": 34,
+     "-4_2_2": 65,
+     "-4_2_3": 59,
+     "-4_2_4": 45,
+     "-4_3_3": 26,
+     "-4_3_4": 12,
+     "-5_-2_-1": 8,
+     "-5_-2_-2": 12,
+     "-5_-2_0": 9,
+     "-5_-2_1": 7,
+     "-5_-2_2": 4,
+     "-6_-1_0": 1,
+     "-6_-2_-1": 1,
+     "-6_-2_2": 2,
+     "-6_-2_3": 36,
+     "-6_-2_4": 14,
+     "-6_0_1": 8,
+     "-6_0_3": 22,
+     "-6_1_1": 15,
+     "-6_1_2": 7,
+     "-6_1_3": 22,
+     "-6_2_2": 13,
+     "-6_2_3": 2,
+     "-8_-2_-2": 4,
+     "-8_0_1": 5,
+     "0_0_0": 1,
+     "0_0_1": 4,
+     "0_1_2": 11
+    },
+    "materials": {
+     "l19_boards": 50,
+     "l19_book_a": 1500,
+     "l19_book_b": 1308,
+     "l19_book_c": 1224,
+     "l19_cardboard": 2136,
+     "l19_clean": 2,
+     "l19_door": 144,
+     "l19_fabric": 240,
+     "l19_floorwood": 880,
+     "l19_glow": 10,
+     "l19_metal": 648,
+     "l19_newboards": 2,
+     "l19_plastic": 24,
+     "l19_plush_insul": 328,
+     "l19_rafter": 15156,
+     "l19_rotten_wood": 240,
+     "l19_screen": 14,
+     "l19_shade": 32,
+     "l19_tape": 342,
+     "l19_trim": 2016,
+     "l19_void": 708,
+     "l19_walls": 7176,
+     "l19_web": 126,
+     "l19_wood": 1032
+    }
+   },
+   "exits_declared": 10,
+   "exits_found": 16,
+   "load_ms": 957,
+   "nav": {
+    "exits": [
+     {
+      "edge": "L019>L005#6",
+      "goal": "(20.60517, 0.116389, 17.75326)",
+      "path_points": 30,
+      "reachable": true,
+      "snap_error": 1.232506275177,
+      "start_projection_error": 0.100000388920307
+     },
+     {
+      "edge": "L019>L289#5",
+      "goal": "(-2.942905, 0.116389, 31.90913)",
+      "path_points": 62,
+      "reachable": true,
+      "snap_error": 1.31369113922119,
+      "start_projection_error": 0.100000388920307
+     },
+     {
+      "edge": "L019>L012#7",
+      "goal": "(18.6571, 0.116389, 41.41749)",
+      "path_points": 107,
+      "reachable": true,
+      "snap_error": 1.30174446105957,
+      "start_projection_error": 0.100000388920307
+     },
+     {
+      "edge": "L019>L020#8",
+      "goal": "(11.00014, 0.116389, 23.41526)",
+      "path_points": 14,
+      "reachable": true,
+      "snap_error": 1.20240092277527,
+      "start_projection_error": 0.100000388920307
+     },
+     {
+      "edge": "L019>L202#2",
+      "goal": "(-0.615386, 0.116389, 2.088429)",
+      "path_points": 29,
+      "reachable": true,
+      "snap_error": 1.81403028964996,
+      "start_projection_error": 0.100000388920307
+     },
+     {
+      "edge": "L019>L212#10",
+      "goal": "(-1.444462, 0.516909, -1.314272)",
+      "path_points": 29,
+      "reachable": true,
+      "snap_error": 0.180215016007423,
+      "start_projection_error": 0.100000388920307
+     },
+     {
+      "edge": "L019>L432#3",
+      "goal": "(33.48353, 0.116389, 1.540947)",
+      "path_points": 56,
+      "reachable": true,
+      "snap_error": 1.71638929843903,
+      "start_projection_error": 0.100000388920307
+     },
+     {
+      "edge": "L019>L654#4",
+      "goal": "(32.65197, 0.116389, 11.69694)",
+      "path_points": 56,
+      "reachable": true,
+      "snap_error": 1.71638929843903,
+      "start_projection_error": 0.100000388920307
+     },
+     {
+      "edge": "L019>L038#1",
+      "goal": "(12.35709, 0.116389, 22.47893)",
+      "path_points": 15,
+      "reachable": true,
+      "snap_error": 1.77171111106873,
+      "start_projection_error": 0.100000388920307
+     },
+     {
+      "edge": "L019>L202#2",
+      "goal": "(18.57022, 0.116389, 22.6928)",
+      "path_points": 24,
+      "reachable": true,
+      "snap_error": 1.71638929843903,
+      "start_projection_error": 0.100000388920307
+     },
+     {
+      "edge": "L019>L432#3",
+      "goal": "(-2.165025, 0.116389, 30.53601)",
+      "path_points": 61,
+      "reachable": true,
+      "snap_error": 1.71638929843903,
+      "start_projection_error": 0.100000388920307
+     },
+     {
+      "edge": "L019>L654#4",
+      "goal": "(11.81786, 0.116389, 30.26668)",
+      "path_points": 34,
+      "reachable": true,
+      "snap_error": 1.71638929843903,
+      "start_projection_error": 0.100000388920307
+     },
+     {
+      "edge": "L019>L038#1",
+      "goal": "(41.22541, 0.116389, 33.01927)",
+      "path_points": 79,
+      "reachable": true,
+      "snap_error": 1.71638929843903,
+      "start_projection_error": 0.100000388920307
+     },
+     {
+      "edge": "L019>L202#2",
+      "goal": "(-1.228843, 0.116389, 40.52477)",
+      "path_points": 53,
+      "reachable": true,
+      "snap_error": 1.71638929843903,
+      "start_projection_error": 0.100000388920307
+     },
+     {
+      "edge": "L019>L432#3",
+      "goal": "(22.48225, 0.116389, 40.08728)",
+      "path_points": 105,
+      "reachable": true,
+      "snap_error": 1.79453897476196,
+      "start_projection_error": 0.100000388920307
+     },
+     {
+      "edge": "L019>L654#4",
+      "goal": "(29.14731, 0.116389, 43.65969)",
+      "path_points": 98,
+      "reachable": true,
+      "snap_error": 1.71638929843903,
+      "start_projection_error": 0.100000388920307
+     }
+    ],
+    "map_regions": 1,
+    "map_sync_ticks": 9,
+    "nav_polygons": 1400,
+    "spawn_on_navmesh": true,
+    "spawn_projection_error": 0.100000388920307,
+    "start": "(-1.514725, 0.116389, 21.56391)"
+   },
+   "qa_status": "ENGINE_SMOKE_PASS",
+   "save_tested": true,
+   "self_tests": 0,
+   "spawn": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+   },
+   "stable_id": "L019"
+  }
+ ],
+ "renderer": "headless",
+ "started": "2026-11-08T14:40:46",
+ "suites": {
+  "duplication": {
+   "checks": [],
+   "failed": 0,
+   "passed": 1
+  },
+  "framework": {
+   "checks": [],
+   "failed": 0,
+   "passed": 8
+  },
+  "level:L019": {
+   "checks": [],
+   "failed": 0,
+   "passed": 47
+  }
+ }
+}

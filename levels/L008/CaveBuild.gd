@@ -4,6 +4,8 @@ extends RefCounted
 ## Road floor heights are absolute; every road tube has a flat floor.
 
 const Cave := preload("res://levels/L008/CaveGeo.gd")
+const Braids := preload("res://levels/L008/CaveBraids.gd")
+const Ecologies := preload("res://levels/L008/CaveEcologies.gd")
 const CS := 30.0
 const N := 24                     # lattice cells per chunk side (CS / H)
 
@@ -62,6 +64,10 @@ static func road_features() -> Array:
 	var by := [Vector3(225, 2.2, 9), Vector3(243, 3.6, 12), Vector3(261, 2.0, 30)]
 	for i in 2:
 		fs.append({"t": "tube", "a": by[i] + Vector3(0, 1.1, 0), "b": by[i + 1] + Vector3(0, 1.1, 0), "ra": 1.45, "rb": 1.45, "sq": 0.95, "fa": by[i].y, "fb": by[i + 1].y, "amp": 0.5})
+	# Stable braided detours are carved in the SAME streaming SDF as the
+	# original road; their collision is authored by CaveGeo, not decorative kits.
+	fs.append_array(Braids.carve_features())
+	fs.append_array(Ecologies.carve_features())
 	for f in fs:
 		f["bb"] = Cave.aabb_of(f)
 	return fs

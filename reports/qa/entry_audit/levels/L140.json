@@ -1,0 +1,36 @@
+{
+  "build_ms": 585,
+  "engine_native": true,
+  "level": "L140",
+  "manifest_status": "IN_DEVELOPMENT",
+  "metrics": {
+    "audio_players": 3,
+    "collision_shapes": 399,
+    "exit_triggers": 0,
+    "footprint_x": 520.0,
+    "footprint_y": 12.3,
+    "footprint_z": 520.0,
+    "glb_models": 21,
+    "interactables": 13,
+    "lights": 15,
+    "materials": 36,
+    "mesh_instances": 78,
+    "multimesh_instances": 960,
+    "triangles": 15897
+  },
+  "reason": "loaded via real developer transition, safe player spawn, 15 physics ticks",
+  "scene": "res://levels/L140/L140.tscn",
+  "spawn_report": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+  },
+  "spawn_y_after": 0.0563888512551785,
+  "spawn_y_before": 0.0563888512551785,
+  "stage": "complete",
+  "status": "PASS",
+  "test": "real F3 developer jump and safe spawn"
+}

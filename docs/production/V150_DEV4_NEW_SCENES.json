@@ -1,0 +1,70 @@
+{
+  "L001_1": {
+    "physical_exits": [
+      "L001_1>L001#1",
+      "L001_1>L001#2"
+    ],
+    "declared_exits": 2,
+    "description": "Four reliability sectors along one narrow corridor, ending in a non-solid floor"
+  },
+  "L022": {
+    "physical_exits": [
+      "L022>L021#1",
+      "L022>L023#2"
+    ],
+    "declared_exits": 2,
+    "description": "Three-tier collapsed car park, actual stair flights and mine shafts"
+  },
+  "L023": {
+    "physical_exits": [
+      "L023>L007#1"
+    ],
+    "declared_exits": 1,
+    "description": "Forest canopy plus an underground luminous water-heart chamber"
+  },
+  "L027": {
+    "physical_exits": [
+      "L027>L028#2"
+    ],
+    "declared_exits": 1,
+    "description": "Warm two-waterfall limestone cave, documented timed mineral exposure"
+  },
+  "L049": {
+    "physical_exits": [
+      "L049>L003#4",
+      "L049>L007#5",
+      "L049>L014#1",
+      "L049>L050#3"
+    ],
+    "declared_exits": 4,
+    "description": "Mud-filled WWI trench network with two bunkers and time-dependent storm exits"
+  },
+  "L053": {
+    "physical_exits": [
+      "L053>L009#1",
+      "L053>L053#3"
+    ],
+    "declared_exits": 2,
+    "description": "A single furnished looping house, accessible basement and sealed rescue door"
+  },
+  "L079": {
+    "physical_exits": [],
+    "declared_exits": 0,
+    "description": "Seven-room research clinic with timed mechanical tremor and uncertain exit"
+  },
+  "L320": {
+    "physical_exits": [
+      "L320>L001#1",
+      "L320>L009#2",
+      "L320>L011#3",
+      "L320>L048#5"
+    ],
+    "declared_exits": 4,
+    "description": "Revived amusement park with 4 verified return arches, ride plazas and ferris wheel"
+  },
+  "L015": {
+    "physical_exits": [],
+    "declared_exits": 0,
+    "description": "Futuristic machinery halls, terminals and an unresolved starry exit frame"
+  }
+}

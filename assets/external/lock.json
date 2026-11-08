@@ -286,5 +286,1172 @@
   },
   "license": "CC0 1.0",
   "source": "https://polyhaven.com/a/sparse_grass"
+ },
+ "model:ArmChair_01": {
+  "kind": "model",
+  "name": "Arm Chair 01",
+  "authors": [
+   "Kirill Sannikov"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/ArmChair_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/ArmChair_01.glb",
+  "bytes": 286328,
+  "sha256": "5e3d5a586116c82128c9626d64cb76a85aa0769bbcbcf124054dd6acf62751d1",
+  "fetched": "2026-11-08"
+ },
+ "model:Barrel_01": {
+  "kind": "model",
+  "name": "Barrel_01",
+  "authors": [
+   "Jorge Camacho"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/Barrel_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/Barrel_01.glb",
+  "bytes": 229840,
+  "sha256": "bcde4a576220d516d83f7941e5c9917c32ae327779b7e6d6cdba22ad13aab4de",
+  "fetched": "2026-11-08"
+ },
+ "model:CashRegister_01": {
+  "kind": "model",
+  "name": "Cash Register 01",
+  "authors": [
+   "Joe Seabuhr"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/CashRegister_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/CashRegister_01.glb",
+  "bytes": 489164,
+  "sha256": "7da8e2416a684b1512dd882585b758ac5fcfc7469d24eda5f0a93a70707e96c7",
+  "fetched": "2026-11-08"
+ },
+ "model:Chandelier_01": {
+  "kind": "model",
+  "name": "Chandelier 01",
+  "authors": [
+   "Kirill Sannikov"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/Chandelier_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/Chandelier_01.glb",
+  "bytes": 446136,
+  "sha256": "a4df133e28f2a14f92271de0246a70e055be372deca38e1b207c39f799359b07",
+  "fetched": "2026-11-08"
+ },
+ "model:ClassicNightstand_01": {
+  "kind": "model",
+  "name": "Classic Nightstand 01",
+  "authors": [
+   "Kirill Sannikov"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/ClassicNightstand_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/ClassicNightstand_01.glb",
+  "bytes": 159988,
+  "sha256": "3bd996bf1f11a3bb001fec0bd8f8ab30ad7fab4c9e204c48ca6caa63566ac728",
+  "fetched": "2026-11-08"
+ },
+ "model:GreenChair_01": {
+  "kind": "model",
+  "name": "Green Chair 01",
+  "authors": [
+   "Kirill Sannikov"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/GreenChair_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/GreenChair_01.glb",
+  "bytes": 247260,
+  "sha256": "967da9cd7c248680cacef1940594543ad294fd7ad579d479453bfe783985c815",
+  "fetched": "2026-11-08"
+ },
+ "model:SchoolChair_01": {
+  "kind": "model",
+  "name": "School Chair 01",
+  "authors": [
+   "Ethan Place"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/SchoolChair_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/SchoolChair_01.glb",
+  "bytes": 220856,
+  "sha256": "1db345d639efc1051ad61b4559c0cf31f002b03caed1e924bc8552ab68b0c173",
+  "fetched": "2026-11-08"
+ },
+ "model:SchoolDesk_01": {
+  "kind": "model",
+  "name": "School Desk 01",
+  "authors": [
+   "Ethan Place"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/SchoolDesk_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/SchoolDesk_01.glb",
+  "bytes": 209340,
+  "sha256": "6b70f6480a34a89b4b2f0a1378a30a8d3d8c25573d9f734e646d8cf3c2af1a40",
+  "fetched": "2026-11-08"
+ },
+ "model:Shelf_01": {
+  "kind": "model",
+  "name": "Shelf 01",
+  "authors": [
+   "Gabriel Radi\u0107"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/Shelf_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/Shelf_01.glb",
+  "bytes": 137420,
+  "sha256": "736f572250ef59df2f82964d66450a32be261d43cf29f58a429073a4e02e8fba",
+  "fetched": "2026-11-08"
+ },
+ "model:Sofa_01": {
+  "kind": "model",
+  "name": "Sofa 01",
+  "authors": [
+   "Kirill Sannikov"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/Sofa_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/Sofa_01.glb",
+  "bytes": 209028,
+  "sha256": "c36d7215ab500711322141879a61f35ad257436495c0b7d964b351cee6587856",
+  "fetched": "2026-11-08"
+ },
+ "model:Television_01": {
+  "kind": "model",
+  "name": "Television 01",
+  "authors": [
+   "Gabriel Radi\u0107"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/Television_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/Television_01.glb",
+  "bytes": 189836,
+  "sha256": "6b7c152f7ce4662122a3cdc08d09717a2be38089da58355190450484a78d550c",
+  "fetched": "2026-11-08"
+ },
+ "model:WetFloorSign_01": {
+  "kind": "model",
+  "name": "Wet Floor Sign 01",
+  "authors": [
+   "Fran Calvente"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/WetFloorSign_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/WetFloorSign_01.glb",
+  "bytes": 84448,
+  "sha256": "4d18dd7591f9ce02fd88012a75f8707f41bcaabe7371ad26ba030e465d9bfee6",
+  "fetched": "2026-11-08"
+ },
+ "model:bar_chair_round_01": {
+  "kind": "model",
+  "name": "Bar Chair Round 01",
+  "authors": [
+   "Dairon Sanchez"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/bar_chair_round_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/bar_chair_round_01.glb",
+  "bytes": 295664,
+  "sha256": "785692ad6cddf239294715d4d44da01a70c140d0e5e565b38b52474922302c76",
+  "fetched": "2026-11-08"
+ },
+ "model:barrel_03": {
+  "kind": "model",
+  "name": "Barrel 03",
+  "authors": [
+   "Serhii Khromov"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/barrel_03",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/barrel_03.glb",
+  "bytes": 170108,
+  "sha256": "8a811530c47e2d388d29f236ec1c8f0528a7b7a4a995237fe9e115c2e7803adb",
+  "fetched": "2026-11-08"
+ },
+ "model:binder_notebook": {
+  "kind": "model",
+  "name": "Binder Notebook",
+  "authors": [
+   "DaDrood"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/binder_notebook",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/binder_notebook.glb",
+  "bytes": 355160,
+  "sha256": "4afe09f977c08a9fc03acf316666d04d8bc0645371ab92cb443d59c9b6cf484c",
+  "fetched": "2026-11-08"
+ },
+ "model:boulder_01": {
+  "kind": "model",
+  "name": "Boulder 01",
+  "authors": [
+   "Rico Cilliers"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/boulder_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/boulder_01.glb",
+  "bytes": 360176,
+  "sha256": "a7cc07c0c19b7b5134245213c0b304608ae9a8f04c967f874cd6526ebdba9228",
+  "fetched": "2026-11-08"
+ },
+ "model:caged_hanging_light": {
+  "kind": "model",
+  "name": "Caged Hanging Light",
+  "authors": [
+   "Ulan Cabanilla"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/caged_hanging_light",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/caged_hanging_light.glb",
+  "bytes": 458416,
+  "sha256": "49b35b728be207a66d8679a7a249cf7c36ad79e5eba89c663ee7c5fdeaace6f7",
+  "fetched": "2026-11-08"
+ },
+ "model:cardboard_box_01": {
+  "kind": "model",
+  "name": "Cardboard Box 01",
+  "authors": [
+   "Rahul Chaudhary"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/cardboard_box_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/cardboard_box_01.glb",
+  "bytes": 303312,
+  "sha256": "05108ade09c8fb342589ab81d605339860e157fc51117b93f87c4348826c90eb",
+  "fetched": "2026-11-08"
+ },
+ "model:ceiling_fan": {
+  "kind": "model",
+  "name": "Ceiling Fan",
+  "authors": [
+   "Ulan Cabanilla"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/ceiling_fan",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/ceiling_fan.glb",
+  "bytes": 375284,
+  "sha256": "be07fdce5ab19f7cde653314b5fedef63a8b67095a605d45c6f7c124170e5e2f",
+  "fetched": "2026-11-08"
+ },
+ "model:classic_laptop": {
+  "kind": "model",
+  "name": "Classic Laptop",
+  "authors": [
+   "Arrangemonk"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/classic_laptop",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/classic_laptop.glb",
+  "bytes": 482504,
+  "sha256": "edd4fff997f0e8fc582a18038dfafb0d318f1c0758c958536f4d0a76138211d3",
+  "fetched": "2026-11-08"
+ },
+ "model:clipboard": {
+  "kind": "model",
+  "name": "Clipboard",
+  "authors": [
+   "ProgrammerOnCoffee"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/clipboard",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/clipboard.glb",
+  "bytes": 277296,
+  "sha256": "53b3a91e325ee28bb450fbc5630f30ea0034b94e0b28cd936da4d9fdd9b1fc0a",
+  "fetched": "2026-11-08"
+ },
+ "model:coffee_table_round_01": {
+  "kind": "model",
+  "name": "Coffee Table Round 01",
+  "authors": [
+   "Ulan Cabanilla"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/coffee_table_round_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/coffee_table_round_01.glb",
+  "bytes": 221904,
+  "sha256": "0ba4274d5cd5297a4bc7e9818b4a08608ada9e243448e94977c41c32a68d0764",
+  "fetched": "2026-11-08"
+ },
+ "model:concrete_road_barrier": {
+  "kind": "model",
+  "name": "Concrete Road Barrier",
+  "authors": [
+   "Amal Kumar"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/concrete_road_barrier",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/concrete_road_barrier.glb",
+  "bytes": 316608,
+  "sha256": "bfa82559c9b674cef748187785521de3dd831dbd57a3b19cf38ef2e25bfcaa3e",
+  "fetched": "2026-11-08"
+ },
+ "model:covered_car": {
+  "kind": "model",
+  "name": "Covered Car",
+  "authors": [
+   "MP"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/covered_car",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/covered_car.glb",
+  "bytes": 410928,
+  "sha256": "66b96e1c2e6f4d87758509814b5f15de4fb7f45de0c78d529e43031baf4db52a",
+  "fetched": "2026-11-08"
+ },
+ "model:dead_tree_trunk": {
+  "kind": "model",
+  "name": "Dead Tree Trunk",
+  "authors": [
+   "Rob Tuytel"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/dead_tree_trunk",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/dead_tree_trunk.glb",
+  "bytes": 360368,
+  "sha256": "78c40dab15058f64d3dd9d47bdce0d24d011ba0de4c0209a611a5744c1bebe9e",
+  "fetched": "2026-11-08"
+ },
+ "model:dining_chair_02": {
+  "kind": "model",
+  "name": "Dining Chair 02",
+  "authors": [
+   "James Ray Cock"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/dining_chair_02",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/dining_chair_02.glb",
+  "bytes": 306688,
+  "sha256": "518173d18ee3ce8b5f0b8f092b67a7fba393baf4c7392ca4d53b55c8b1980df4",
+  "fetched": "2026-11-08"
+ },
+ "model:dining_table": {
+  "kind": "model",
+  "name": "Dining Table",
+  "authors": [
+   "Aron \u0141yczek"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/dining_table",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/dining_table.glb",
+  "bytes": 181312,
+  "sha256": "669d51ee6319660c8894265e18d63a4907635674d3e20d6f631a1850e548da37",
+  "fetched": "2026-11-08"
+ },
+ "model:drawer_cabinet": {
+  "kind": "model",
+  "name": "Drawer Cabinet",
+  "authors": [
+   "Ulan Cabanilla"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/drawer_cabinet",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/drawer_cabinet.glb",
+  "bytes": 400488,
+  "sha256": "667d6dea958e761dbf7638e27c4dff1ab0890aae001bb1ea5bdb51db2a420c44",
+  "fetched": "2026-11-08"
+ },
+ "model:exterior_aircon_unit": {
+  "kind": "model",
+  "name": "Exterior Aircon Unit",
+  "authors": [
+   "Monsta3D"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/exterior_aircon_unit",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/exterior_aircon_unit.glb",
+  "bytes": 712016,
+  "sha256": "38b1e9ec9e1c840cf2f74bfaaf298ecbfc82f1efa0944dadd52a4366e72ad5b6",
+  "fetched": "2026-11-08"
+ },
+ "model:fire_alarm": {
+  "kind": "model",
+  "name": "Fire Alarm",
+  "authors": [
+   "Slinc"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/fire_alarm",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/fire_alarm.glb",
+  "bytes": 246960,
+  "sha256": "086d133fb16cfab74356877a47a0f9a572ad2ea901eb3a6cf09d7d25a5680f6b",
+  "fetched": "2026-11-08"
+ },
+ "model:fire_hydrant": {
+  "kind": "model",
+  "name": "Fire Hydrant",
+  "authors": [
+   "Gon\u00e7alo Fel\u00edcio"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/fire_hydrant",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/fire_hydrant.glb",
+  "bytes": 452556,
+  "sha256": "d152f50c8e1e0cd65de0b5a7d0d0e684158794233b44e2ff01fccea1934595ee",
+  "fetched": "2026-11-08"
+ },
+ "model:grass_medium_01": {
+  "kind": "model",
+  "name": "Grass Medium 01",
+  "authors": [
+   "Rob Tuytel",
+   "Rico Cilliers"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/grass_medium_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/grass_medium_01.glb",
+  "bytes": 546844,
+  "sha256": "c2a4c57abac1e35dd0079c0db3e2e3c96571233c4f92bdb0a877c59d46a9e72f",
+  "fetched": "2026-11-08"
+ },
+ "model:hand_truck": {
+  "kind": "model",
+  "name": "Hand Truck",
+  "authors": [
+   "Mutanzom3D"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/hand_truck",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/hand_truck.glb",
+  "bytes": 570012,
+  "sha256": "81b92cdeca856a38a8dd551256264e065c6b0265287e29890f820aef181d9749",
+  "fetched": "2026-11-08"
+ },
+ "model:hanging_industrial_lamp": {
+  "kind": "model",
+  "name": "Hanging Industrial Lamp",
+  "authors": [
+   "Kuutti Siitonen"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/hanging_industrial_lamp",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/hanging_industrial_lamp.glb",
+  "bytes": 454316,
+  "sha256": "93449ccd1e0ae2a77de3d76d7a6bf4521e9da68fac583550265a6fcd8fc40e1f",
+  "fetched": "2026-11-08"
+ },
+ "model:industrial_wall_lamp": {
+  "kind": "model",
+  "name": "Industrial Wall Lamp",
+  "authors": [
+   "Kuutti Siitonen"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/industrial_wall_lamp",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/industrial_wall_lamp.glb",
+  "bytes": 368156,
+  "sha256": "60ac36afa9f494772c1089f2398909128c8544a15f47dd31c0d068c6e1d000cb",
+  "fetched": "2026-11-08"
+ },
+ "model:korean_fire_extinguisher_01": {
+  "kind": "model",
+  "name": "Korean Fire Extinguisher 01",
+  "authors": [
+   "UM JOORIN"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/korean_fire_extinguisher_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/korean_fire_extinguisher_01.glb",
+  "bytes": 528500,
+  "sha256": "82ac1b4c08a744b51c0c91204f9ff2b0234e6dfb28c19a38922d791483195bb6",
+  "fetched": "2026-11-08"
+ },
+ "model:lantern_chandelier_01": {
+  "kind": "model",
+  "name": "Lantern Chandelier 01",
+  "authors": [
+   "Kirill Sannikov"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/lantern_chandelier_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/lantern_chandelier_01.glb",
+  "bytes": 521652,
+  "sha256": "96829dd3f12ccb3739a74e50804addad4bd4b5c32f57a7d14b593c86d8b6733c",
+  "fetched": "2026-11-08"
+ },
+ "model:lifebuoy": {
+  "kind": "model",
+  "name": "Lifebuoy",
+  "authors": [
+   "Hank Kaamura"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/lifebuoy",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/lifebuoy.glb",
+  "bytes": 352188,
+  "sha256": "b663ab2c5d00a04c9c99b0cdaa142e7ccd02fbd8a4e5b75ddbaa18074f3fed01",
+  "fetched": "2026-11-08"
+ },
+ "model:medical_box": {
+  "kind": "model",
+  "name": "Medical Box",
+  "authors": [
+   "Ulan Cabanilla"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/medical_box",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/medical_box.glb",
+  "bytes": 264020,
+  "sha256": "d1a74aa64286edb605f667dd5961dc28386d05a1851ace3557d1c751d585574b",
+  "fetched": "2026-11-08"
+ },
+ "model:metal_office_desk": {
+  "kind": "model",
+  "name": "Metal Office Desk",
+  "authors": [
+   "Ulan Cabanilla"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/metal_office_desk",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/metal_office_desk.glb",
+  "bytes": 337056,
+  "sha256": "595bcd4ccf1c9051910df7ba10de31a918aa66d5c611a4cff02abfc717b2afca",
+  "fetched": "2026-11-08"
+ },
+ "model:metal_tool_chest": {
+  "kind": "model",
+  "name": "Metal Tool Chest",
+  "authors": [
+   "Yann Kervran",
+   "John Hutcheson"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/metal_tool_chest",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/metal_tool_chest.glb",
+  "bytes": 424884,
+  "sha256": "e7da2f223279ea3771cc76747c00e09148547e1b13b36fcb87503013b3caf40c",
+  "fetched": "2026-11-08"
+ },
+ "model:metal_trash_can": {
+  "kind": "model",
+  "name": "Metal Trash Can",
+  "authors": [
+   "GurJas Studios"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/metal_trash_can",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/metal_trash_can.glb",
+  "bytes": 565964,
+  "sha256": "cdc1690ec5b61bf51da5035f3b03972dc43d2b65ed5f81877e24b96a6f72cf89",
+  "fetched": "2026-11-08"
+ },
+ "model:modern_ceiling_lamp_01": {
+  "kind": "model",
+  "name": "Modern Ceiling Lamp 01",
+  "authors": [
+   "James Ray Cock"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/modern_ceiling_lamp_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/modern_ceiling_lamp_01.glb",
+  "bytes": 221028,
+  "sha256": "77ad1a51be663aaba69ea43a1c20d07e8e04cd23f4af4a56886c5999d7c30db0",
+  "fetched": "2026-11-08"
+ },
+ "model:modular_airduct_rectangular_01": {
+  "kind": "model",
+  "name": "Modular Airduct Rectangular 01",
+  "authors": [
+   "James Ray Cock"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/modular_airduct_rectangular_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/modular_airduct_rectangular_01.glb",
+  "bytes": 680028,
+  "sha256": "f5497f713ec6bc22edd4f0ec23965bcb9586d5ebad575d7a503da1a6194eaea8",
+  "fetched": "2026-11-08"
+ },
+ "model:modular_electric_cables": {
+  "kind": "model",
+  "name": "Modular Electric Cables",
+  "authors": [
+   "Kuutti Siitonen"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/modular_electric_cables",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/modular_electric_cables.glb",
+  "bytes": 599000,
+  "sha256": "ac5650251d2593c81e84137d4c2f0240fa5ad61ea3b544d5d5eeb7149fc1c895",
+  "fetched": "2026-11-08"
+ },
+ "model:modular_industrial_pipes_01": {
+  "kind": "model",
+  "name": "Modular Industrial Pipes 01",
+  "authors": [
+   "Jorge Camacho"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/modular_industrial_pipes_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/modular_industrial_pipes_01.glb",
+  "bytes": 657352,
+  "sha256": "d96ce857fd6ba37d192a1db8343c1e34fcf4632858ecee3c0b380bd02901ea05",
+  "fetched": "2026-11-08"
+ },
+ "model:modular_pipes": {
+  "kind": "model",
+  "name": "Modular Pipes",
+  "authors": [
+   "Kuutti Siitonen"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/modular_pipes",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/modular_pipes.glb",
+  "bytes": 451880,
+  "sha256": "c7eeee864d3d7d2d5b3bb8671f5b00e49baa23cb9f4f2fd3a4e232ba47cb1ec7",
+  "fetched": "2026-11-08"
+ },
+ "model:modular_wooden_pier": {
+  "kind": "model",
+  "name": "Modular Wooden Pier",
+  "authors": [
+   "Rico Cilliers"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/modular_wooden_pier",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/modular_wooden_pier.glb",
+  "bytes": 623656,
+  "sha256": "06a1806bd85897de2e3d1c2cbabcf5d43bf2272e0749f30dfce19b0207ff6bdf",
+  "fetched": "2026-11-08"
+ },
+ "model:mounted_fluorescent_lights": {
+  "kind": "model",
+  "name": "Mounted Fluorescent Lights",
+  "authors": [
+   "Ulan Cabanilla"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/mounted_fluorescent_lights",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/mounted_fluorescent_lights.glb",
+  "bytes": 407684,
+  "sha256": "611145ad4b80816c3de20dd7f05e68f6104487e41f7c611bcbc86aaecc228fb5",
+  "fetched": "2026-11-08"
+ },
+ "model:office_notepads": {
+  "kind": "model",
+  "name": "Office Notepads",
+  "authors": [
+   "Ulan Cabanilla"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/office_notepads",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/office_notepads.glb",
+  "bytes": 79596,
+  "sha256": "5b7b1fbd499af751ada057588b2b1c68f44a873f651a5c1f7a8782e025c695c8",
+  "fetched": "2026-11-08"
+ },
+ "model:old_bed_frame": {
+  "kind": "model",
+  "name": "Old Bed Frame",
+  "authors": [
+   "Luca B"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/old_bed_frame",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/old_bed_frame.glb",
+  "bytes": 483776,
+  "sha256": "f3e9bf4a2cf8098d2ea382bf55238690ff31271a14c68c33893ae1ba70529fd2",
+  "fetched": "2026-11-08"
+ },
+ "model:old_military_crate": {
+  "kind": "model",
+  "name": "Old Military Crate",
+  "authors": [
+   "Jack Mava"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/old_military_crate",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/old_military_crate.glb",
+  "bytes": 386428,
+  "sha256": "8a16c0f10686c6fcfc741c263be12474064da85ccebe33147dcd43d456fc8f0f",
+  "fetched": "2026-11-08"
+ },
+ "model:old_tyre": {
+  "kind": "model",
+  "name": "Old Tyre",
+  "authors": [
+   "MP"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/old_tyre",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/old_tyre.glb",
+  "bytes": 219408,
+  "sha256": "79df21af6321b5e264f9cbc3da0b0a50662b77101ad69ccf01f3fe95d4053be0",
+  "fetched": "2026-11-08"
+ },
+ "model:ornate_mirror_01": {
+  "kind": "model",
+  "name": "Ornate Mirror 01",
+  "authors": [
+   "James Ray Cock"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/ornate_mirror_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/ornate_mirror_01.glb",
+  "bytes": 305756,
+  "sha256": "2225630d84ade6877cd1efb6a734c00137aee7c3004e0a5bef780e0b488f7d0b",
+  "fetched": "2026-11-08"
+ },
+ "model:plastic_bottle_gallon": {
+  "kind": "model",
+  "name": "Plastic Bottle Gallon",
+  "authors": [
+   "Rahul Chaudhary"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/plastic_bottle_gallon",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/plastic_bottle_gallon.glb",
+  "bytes": 242720,
+  "sha256": "d87a7114aebb1dd5c322bf14ce47e7a6c2cfa087d9047134d8339c5821d9649b",
+  "fetched": "2026-11-08"
+ },
+ "model:plastic_crate_01": {
+  "kind": "model",
+  "name": "Plastic Crate 01",
+  "authors": [
+   "PierreB3D"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/plastic_crate_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/plastic_crate_01.glb",
+  "bytes": 310312,
+  "sha256": "810c65e33c6de46d9d884f49ec662bef29baa09762fd1190fdf1d3aba4b8126c",
+  "fetched": "2026-11-08"
+ },
+ "model:plastic_monobloc_chair_01": {
+  "kind": "model",
+  "name": "Plastic Monobloc Chair 01",
+  "authors": [
+   "Kuutti Siitonen"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/plastic_monobloc_chair_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/plastic_monobloc_chair_01.glb",
+  "bytes": 273656,
+  "sha256": "6f57d053f37e6dd591ec6bdfb007960465b22a0b62aee9c068fbf4c6f40bdc27",
+  "fetched": "2026-11-08"
+ },
+ "model:portable_generator": {
+  "kind": "model",
+  "name": "Portable Generator",
+  "authors": [
+   "James Ray Cock"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/portable_generator",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/portable_generator.glb",
+  "bytes": 636912,
+  "sha256": "a1c3c8b044aee51d28ec26976a7cb050b57715e3d78a3443c674c6cebc654b2d",
+  "fetched": "2026-11-08"
+ },
+ "model:power_box_01": {
+  "kind": "model",
+  "name": "Power Box 01",
+  "authors": [
+   "Rico Cilliers",
+   "Yann Kervran"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/power_box_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/power_box_01.glb",
+  "bytes": 492448,
+  "sha256": "20116100e610de91b1c3124be5bade1c1995d51494acf9c66b9f469c29657753",
+  "fetched": "2026-11-08"
+ },
+ "model:propane_tank": {
+  "kind": "model",
+  "name": "Propane Tank",
+  "authors": [
+   "Slinc"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/propane_tank",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/propane_tank.glb",
+  "bytes": 293828,
+  "sha256": "feab54d564f980e45781280941f5d16f5b6989c792583d3b3c47ffa9c76bc290",
+  "fetched": "2026-11-08"
+ },
+ "model:rock_07": {
+  "kind": "model",
+  "name": "Rock 07",
+  "authors": [
+   "Jenelle van Heerden"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/rock_07",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/rock_07.glb",
+  "bytes": 329404,
+  "sha256": "56b90b97fc9697e9f0fcd342aec6a9d8df3424f4d4220fddc3f08342579082e7",
+  "fetched": "2026-11-08"
+ },
+ "model:rollershutter_door": {
+  "kind": "model",
+  "name": "Rollershutter Door",
+  "authors": [
+   "MP"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/rollershutter_door",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/rollershutter_door.glb",
+  "bytes": 185108,
+  "sha256": "bd7e775a1e593e86762c7a1faa0d6e2a10f1b82a92e57b7f5216b13718d35cfb",
+  "fetched": "2026-11-08"
+ },
+ "model:rubber_duck_toy": {
+  "kind": "model",
+  "name": "Rubber Duck Toy",
+  "authors": [
+   "Plat251"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/rubber_duck_toy",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/rubber_duck_toy.glb",
+  "bytes": 153592,
+  "sha256": "fd4c63b2a92009cec0d82138c54872ffbb1e1fd3b72dd4b4ff2abac885e9b9c5",
+  "fetched": "2026-11-08"
+ },
+ "model:security_camera_01": {
+  "kind": "model",
+  "name": "Security Camera 01",
+  "authors": [
+   "Alexander Otterbeck",
+   "Yann Kervran"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/security_camera_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/security_camera_01.glb",
+  "bytes": 389988,
+  "sha256": "f10ae7479a32352ee56879fd6ad8f8a049c3367439a1bfef6df83ac3ed25b9d8",
+  "fetched": "2026-11-08"
+ },
+ "model:security_light": {
+  "kind": "model",
+  "name": "Security Light",
+  "authors": [
+   "Maximilian Schuster"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/security_light",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/security_light.glb",
+  "bytes": 352584,
+  "sha256": "61d3f70e28c679709934ea789de6ff49cdbbc46e65e7dd72acecc4f871e0ae8e",
+  "fetched": "2026-11-08"
+ },
+ "model:stationery_supplies": {
+  "kind": "model",
+  "name": "Stationery Supplies",
+  "authors": [
+   "Mateusz Sadek"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/stationery_supplies",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/stationery_supplies.glb",
+  "bytes": 247948,
+  "sha256": "50262b93843f1100d142a86d68f94547dbdbf37e3f7896ec00fbcf1fd8afc652",
+  "fetched": "2026-11-08"
+ },
+ "model:steel_frame_shelves_01": {
+  "kind": "model",
+  "name": "Steel Frame Shelves 01",
+  "authors": [
+   "James Ray Cock"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/steel_frame_shelves_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/steel_frame_shelves_01.glb",
+  "bytes": 232012,
+  "sha256": "2d827e80960864d844d3195fa2325d00c0fabeb492b63719d9ca99c2422c6a56",
+  "fetched": "2026-11-08"
+ },
+ "model:steel_frame_shelves_02": {
+  "kind": "model",
+  "name": "Steel Frame Shelves 02",
+  "authors": [
+   "James Ray Cock"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/steel_frame_shelves_02",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/steel_frame_shelves_02.glb",
+  "bytes": 240312,
+  "sha256": "7a09284e0672e5959eaaf8fac8d448c00070e1fbc43475928bbfd907ada271ae",
+  "fetched": "2026-11-08"
+ },
+ "model:street_lamp_01": {
+  "kind": "model",
+  "name": "Street Lamp 01",
+  "authors": [
+   "Josh Dean"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/street_lamp_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/street_lamp_01.glb",
+  "bytes": 327844,
+  "sha256": "bd517073a9a78ec5a946997f0eb360ca3f1e76419a2d319f1d02ecbd519c022b",
+  "fetched": "2026-11-08"
+ },
+ "model:street_lamp_02": {
+  "kind": "model",
+  "name": "Street Lamp 02",
+  "authors": [
+   "Josh Dean"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/street_lamp_02",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/street_lamp_02.glb",
+  "bytes": 351948,
+  "sha256": "ff3bc4b9a5e2c3d5ed85c43d57fefd14e94cf4b8564fd39d0f9a12e0653d7abe",
+  "fetched": "2026-11-08"
+ },
+ "model:trashbag": {
+  "kind": "model",
+  "name": "Trashbag",
+  "authors": [
+   "Benny Weimer"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/trashbag",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/trashbag.glb",
+  "bytes": 241892,
+  "sha256": "2e3c30b72da92b38efd51457cf7690dcaafb15695bf143f5ada0e649017734b8",
+  "fetched": "2026-11-08"
+ },
+ "model:utility_box_01": {
+  "kind": "model",
+  "name": "Utility Box 01",
+  "authors": [
+   "James Ray Cock"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/utility_box_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/utility_box_01.glb",
+  "bytes": 260932,
+  "sha256": "fe8237ca6a44d49aaf4eb3399836fa6e70001f3e913e38f26db8af71c7bded70",
+  "fetched": "2026-11-08"
+ },
+ "model:vintage_flashlight": {
+  "kind": "model",
+  "name": "Vintage Flashlight",
+  "authors": [
+   "Omar M. El-Safy"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/vintage_flashlight",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/vintage_flashlight.glb",
+  "bytes": 467160,
+  "sha256": "2946dfea4d4a127caadbafb7ef0739f557304daa21191cdcf1dc21395167165f",
+  "fetched": "2026-11-08"
+ },
+ "model:vintage_grandfather_clock_01": {
+  "kind": "model",
+  "name": "Vintage Grandfather Clock 01",
+  "authors": [
+   "Yann Kervran",
+   "James Ray Cock"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/vintage_grandfather_clock_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/vintage_grandfather_clock_01.glb",
+  "bytes": 539240,
+  "sha256": "06646f63b4d0b52b51f02de2cdb16b6551a44bf143272dd088437e640ae14e5e",
+  "fetched": "2026-11-08"
+ },
+ "model:vintage_radio_transceiver": {
+  "kind": "model",
+  "name": "Vintage Radio Transceiver",
+  "authors": [
+   "Mateusz Sadek"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/vintage_radio_transceiver",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/vintage_radio_transceiver.glb",
+  "bytes": 698688,
+  "sha256": "f3cc3dbd0574680078ea8f6e03623ec7906e002d04a8d80d75df32a38413952a",
+  "fetched": "2026-11-08"
+ },
+ "model:vintage_suitcase": {
+  "kind": "model",
+  "name": "Vintage Suitcase",
+  "authors": [
+   "Maximilian Schuster"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/vintage_suitcase",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/vintage_suitcase.glb",
+  "bytes": 366616,
+  "sha256": "c9eae339aa005d84c50e0d1014c429b2b83adf9f5779e8ab84fe4af77b6f6312",
+  "fetched": "2026-11-08"
+ },
+ "model:vintage_telephone_wall_clock": {
+  "kind": "model",
+  "name": "Vintage Telephone Wall Clock",
+  "authors": [
+   "Adrian C"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/vintage_telephone_wall_clock",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/vintage_telephone_wall_clock.glb",
+  "bytes": 452460,
+  "sha256": "32ad86fc3056c373e3fb24d2a9797c6fe6a73a3b8fb5fa2bd731565bdacb2e62",
+  "fetched": "2026-11-08"
+ },
+ "model:wall_clock": {
+  "kind": "model",
+  "name": "Wall Clock",
+  "authors": [
+   "PierreB3D"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/wall_clock",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/wall_clock.glb",
+  "bytes": 247872,
+  "sha256": "c3ab65fbf7ce7d5692327ec1f9f338ad854fb8d29f99f7f50750225c31f25ece",
+  "fetched": "2026-11-08"
+ },
+ "model:water_manhole_cover": {
+  "kind": "model",
+  "name": "Water Manhole Cover",
+  "authors": [
+   "Raunox"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/water_manhole_cover",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/water_manhole_cover.glb",
+  "bytes": 340708,
+  "sha256": "33066d25fd4e72d6c4492554b89fd757ddc97ac57776b59606dbef345df01bd1",
+  "fetched": "2026-11-08"
+ },
+ "model:wooden_bookshelf_worn": {
+  "kind": "model",
+  "name": "Wooden Bookshelf Worn",
+  "authors": [
+   "Ulan Cabanilla"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/wooden_bookshelf_worn",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/wooden_bookshelf_worn.glb",
+  "bytes": 383944,
+  "sha256": "6ec7be5f7dbaf9d99525d99b85efe23066a432d2f6a88239ac478192f8336a29",
+  "fetched": "2026-11-08"
+ },
+ "model:wooden_crate_01": {
+  "kind": "model",
+  "name": "Wooden Crate 01",
+  "authors": [
+   "James Ray Cock"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/wooden_crate_01",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/wooden_crate_01.glb",
+  "bytes": 321084,
+  "sha256": "226fe45b93be8ea4da68a39e7146b462ab3b75d2b5868974a2ef755883fe6c35",
+  "fetched": "2026-11-08"
+ },
+ "model:wooden_ladder": {
+  "kind": "model",
+  "name": "Wooden Ladder",
+  "authors": [
+   "Miroslav Turura"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/wooden_ladder",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/wooden_ladder.glb",
+  "bytes": 411244,
+  "sha256": "e275eda45877e808fdd47f2d103830dfab89a996caee52a8c8c7ac5f7b258313",
+  "fetched": "2026-11-08"
+ },
+ "model:wooden_picnic_table": {
+  "kind": "model",
+  "name": "Wooden Picnic Table",
+  "authors": [
+   "Ulan Cabanilla"
+  ],
+  "license": "CC0-1.0",
+  "source": "https://polyhaven.com/a/wooden_picnic_table",
+  "variant": "glTF 1k from api.polyhaven.com; textures downscaled to 512 px; mesh simplified with gltfpack 0.22 (-si, -sa, -noq)",
+  "path": "assets/external/models/wooden_picnic_table.glb",
+  "bytes": 432008,
+  "sha256": "a9994917928b080d45970be8af6c866e24e81a49006703a26f832301ef45a805",
+  "fetched": "2026-11-08"
  }
 }

@@ -1,0 +1,35 @@
+{
+  "stable_id": "L055",
+  "scene": "res://levels/L055/L055.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "UNVERIFIED Godot import, walker, GPU capture and human review pending",
+  "procedural": false,
+  "arrivals": [
+    "start",
+    "from_L011"
+  ],
+  "signature": "A dusty rustic restaurant whose disjointed rooms hold ordinary food and inexplicable beams of sunlight.",
+  "mechanics": [
+    "safe_room_entry",
+    "fragmented_kitchens",
+    "unseen_sunbeams",
+    "timed_return_boundary"
+  ],
+  "exits": [
+    {
+      "id": "L055>EXT#1",
+      "to": "@origin",
+      "trigger": "condition",
+      "label": "Automatic ejection back to prior level",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED+ONE-WAY",
+      "source_section": "Dated canonical snapshot; exits",
+      "source_quote": "automatic no-clip after a random duration",
+      "arrival": "",
+      "hint": "Automatic ejection back to prior level",
+      "to_label": "The level the wanderer entered from (source variable)"
+    }
+  ],
+  "entity_policy": "NONE per source",
+  "notes": "ADAPTATION: 132m finite collection of rooms; a real timer auto-requests the documented variable return; a physical test trigger exists only for QA. A full unobserved room-rearrangement system is not yet implemented. Source does not establish a permanent exit. Canon: docs/canon/levels/L055.md; authors credited there under CC BY-SA 3.0. Not yet PLAYABLE."
+}

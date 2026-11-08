@@ -1,0 +1,228 @@
+{
+  "schema": "dev18_proximity_story_v1",
+  "design": "Source-tagged micro-events tied to physical places, no scripted entities or new exits",
+  "levels": {
+    "L000": [
+      {
+        "id": "wet_carpet",
+        "pos": [
+          17.8,
+          0.0,
+          12.3
+        ],
+        "radius": 3.5,
+        "height": 2.5,
+        "caption": "[the carpet squelches despite the absence of standing water]",
+        "source": "CANON_MOTIF",
+        "sound": "splash"
+      },
+      {
+        "id": "behind_arch",
+        "pos": [
+          14.5,
+          0.0,
+          22.5
+        ],
+        "radius": 3.0,
+        "caption": "[the electric hum comes from the wrong side of the wall]",
+        "source": "ADAPTATION",
+        "sound": "knock"
+      }
+    ],
+    "L001": [
+      {
+        "id": "service_duct",
+        "pos": [
+          6.0,
+          0.0,
+          40.0
+        ],
+        "radius": 4.0,
+        "caption": "[a metal shaft carries an air current up into darkness]",
+        "source": "CANON_MOTIF",
+        "sound": "pipe_clank"
+      },
+      {
+        "id": "upper_utility",
+        "pos": [
+          53.0,
+          4.2,
+          23.0
+        ],
+        "radius": 4.0,
+        "height": 2.1,
+        "caption": "[from this height, the fluorescent aisles no longer seem parallel]",
+        "source": "ADAPTATION",
+        "sound": "creak"
+      },
+      {
+        "id": "warehouse_shadow",
+        "pos": [
+          20.0,
+          0.0,
+          16.0
+        ],
+        "radius": 4.5,
+        "caption": "[a crate shifts softly. There is no movement when you turn]",
+        "source": "ADAPTATION",
+        "sound": "knock"
+      }
+    ],
+    "L008": [
+      {
+        "id": "road_stone",
+        "pos": [
+          60.0,
+          -2.0,
+          9.0
+        ],
+        "radius": 4.8,
+        "caption": "[the ninth road grows narrow; ahead, the rocks have never been cut by tools]",
+        "source": "CANON_MOTIF",
+        "sound": "drip"
+      },
+      {
+        "id": "upper_fissure",
+        "pos": [
+          56.0,
+          7.0,
+          -20.0
+        ],
+        "radius": 4.8,
+        "height": 3.1,
+        "caption": "[you can hear water flowing somewhere far below the high fissure]",
+        "source": "ADAPTATION",
+        "sound": "drip"
+      },
+      {
+        "id": "deep_quarry",
+        "pos": [
+          90.0,
+          -10.0,
+          26.0
+        ],
+        "radius": 4.5,
+        "height": 3.0,
+        "caption": "[the cave breathes through two passages in opposite directions]",
+        "source": "ADAPTATION",
+        "sound": "scratch"
+      },
+      {
+        "id": "shaft",
+        "pos": [
+          169.0,
+          -8.0,
+          -14.0
+        ],
+        "radius": 3.6,
+        "height": 3.0,
+        "caption": "[a vertical hollow carries a distant metallic rattle]",
+        "source": "ADAPTATION",
+        "sound": "pipe_clank"
+      },
+      {
+        "id": "flood_bypass",
+        "pos": [
+          242.0,
+          -2.0,
+          20.0
+        ],
+        "radius": 5.0,
+        "caption": "[the water below the bypass suddenly grows louder]",
+        "source": "CANON_MOTIF",
+        "sound": "splash"
+      },
+      {
+        "id": "road_end",
+        "pos": [
+          330.0,
+          0.0,
+          44.0
+        ],
+        "radius": 5.5,
+        "caption": "[there is gravel now, then something almost like asphalt]",
+        "source": "CANON_MOTIF",
+        "sound": "crackle"
+      }
+    ],
+    "L037": [
+      {
+        "id": "grand_hall",
+        "pos": [
+          18.0,
+          -0.18,
+          13.0
+        ],
+        "radius": 4.0,
+        "caption": "[ripples travel across the surface, but their sound vanishes at the walls]",
+        "source": "CANON_MOTIF",
+        "sound": "splash"
+      },
+      {
+        "id": "deep_pit",
+        "pos": [
+          50.5,
+          -4.35,
+          22.6
+        ],
+        "radius": 4.4,
+        "height": 2.2,
+        "caption": "[an immaculate tiled step continues downward beyond the light]",
+        "source": "CANON_MOTIF",
+        "sound": "drip"
+      },
+      {
+        "id": "upper_annex_a",
+        "pos": [
+          81.5,
+          3.17,
+          18.5
+        ],
+        "radius": 3.0,
+        "height": 1.8,
+        "caption": "[the impossible gallery has two routes back to the same pool]",
+        "source": "ADAPTATION",
+        "sound": "drip"
+      },
+      {
+        "id": "upper_annex_b",
+        "pos": [
+          113.0,
+          4.92,
+          4.5
+        ],
+        "radius": 3.0,
+        "height": 1.8,
+        "caption": "[the water looks equally distant from each side, though the floor is not level]",
+        "source": "ADAPTATION",
+        "sound": "splash"
+      }
+    ],
+    "L009": [
+      {
+        "id": "suburb_entry",
+        "pos": [
+          46.0,
+          0.05,
+          8.0
+        ],
+        "radius": 3.0,
+        "caption": "[the houses are furnished. Not one window shows a lamp inside]",
+        "source": "CANON_MOTIF",
+        "sound": "creak"
+      },
+      {
+        "id": "silent_intersection",
+        "pos": [
+          72.0,
+          0.15,
+          8.0
+        ],
+        "radius": 4.0,
+        "caption": "[the road is wet, yet you hear no rain]",
+        "source": "CANON_MOTIF",
+        "sound": "drip"
+      }
+    ]
+  }
+}

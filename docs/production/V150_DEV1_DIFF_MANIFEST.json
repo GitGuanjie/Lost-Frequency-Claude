@@ -1,0 +1,42 @@
+{
+  "base": "LostFrequency_v1.4.0-m5_source.zip",
+  "target": "LostFrequency_v1.5.0-dev1_source.zip",
+  "changed": [
+    "CLAUDE.md",
+    "README.md",
+    "autoload/SaveService.gd",
+    "autoload/Settings.gd",
+    "autoload/TransitionService.gd",
+    "tests/qa_runner.gd",
+    "ui/Overlay.gd"
+  ],
+  "added": [
+    "RUN_DEV1_QA_WINDOWS.ps1",
+    "docs/production/NEXT_SESSION_V150_DEV1_CN.md",
+    "docs/production/V150_DEV1_REPORT_CN.md",
+    "levels/L036/L036.gd",
+    "levels/L036/L036.tscn",
+    "levels/L036/level.json",
+    "levels/L060/L060.gd",
+    "levels/L060/L060.tscn",
+    "levels/L060/level.json",
+    "levels/L075/L075.gd",
+    "levels/L075/L075.tscn",
+    "levels/L075/level.json",
+    "levels/L999/L999.gd",
+    "levels/L999/L999.tscn",
+    "levels/L999/level.json",
+    "reports/world_audit/WORLD_AUDIT.md",
+    "reports/world_audit/exit_evidence.csv",
+    "reports/world_audit/world_graph.dot",
+    "reports/world_audit/world_graph.svg",
+    "reports/world_audit/world_report.json",
+    "tests/static/test_world_integrity.py",
+    "tools/preflight_dev.py",
+    "tools/run_dev1_qa.py",
+    "tools/world_audit.py",
+    "ui/WorldGraph.gd"
+  ],
+  "deleted_from_old_snapshot": [],
+  "note": "Manifest file itself is created after this comparison and included in delivered archives."
+}

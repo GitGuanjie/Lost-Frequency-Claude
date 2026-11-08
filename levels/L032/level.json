@@ -1,0 +1,30 @@
+{
+  "stable_id": "L032",
+  "scene": "res://levels/L032/L032.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "Moonlit forest of hanging skeletal branches",
+  "mechanics": [
+    "dead_forest",
+    "moonlit_paths",
+    "Queen_presence_not_spawned"
+  ],
+  "exits": [
+    {
+      "id": "L032>EXT#1",
+      "to": "EXT",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL+ONE-WAY",
+      "method": "Released by the Skeleton Queen; wake in another forest",
+      "source_quote": "find themselves waking up in another forest of the Backrooms",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-32",
+      "trigger_type": "condition"
+    }
+  ],
+  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
+  "entity_policy": "SOURCED ENTITIES ONLY: The Belle, The Skeleton Queen"
+}

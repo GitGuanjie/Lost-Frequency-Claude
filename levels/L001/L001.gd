@@ -1,4 +1,5 @@
 extends LevelBase
+const ModelDress := preload("res://core/world/ModelDress.gd")
 ## Level 1 — "Habitable Zone" (Backrooms Wiki rev 83, accessed 2026-11-04; cite:
 ## Praetor3005 and DivineAtlas, CC BY-SA 3.0). Dossier: docs/canon/levels/L001.md.
 ##
@@ -19,6 +20,7 @@ const HH := 4.6
 const SPAWN := Vector3(12.0, 0.05, 10.0)
 const BLOCK := Rect2(0.0, 40.0, 32.0, 16.0)     # authored corridor block (Base Alpha outskirts)
 const START_CRATE := Vector3(13.6, 0.0, 15.6)
+const MEZZANINE_CHUNK := Vector2i(1, 0)   # authored exploration annex, not a new canonical exit
 
 var world: ChunkWorld
 var signs: LightPool
@@ -28,6 +30,8 @@ var fog_color := Color(0.11, 0.125, 0.13)
 var _udir := Vector2i(1, 0)
 var _holes: Dictionary = {}
 var _guarded: Array = []
+var _valve_states: Dictionary = {}
+var _gallery_circuit_on := false  # optional rechargeable service lighting
 
 
 func build() -> void:
@@ -81,6 +85,8 @@ func build() -> void:
 	add_shot("hole", Vector3(14.0, 1.62, 33.5), Vector3(6.0, 2.8, 40.0))
 	add_landmark("Arrival point (Aquila Sector)", SPAWN)
 	add_landmark("Base Alpha north exit", Vector3(11.5, 0, 40))
+	add_landmark("Upper maintenance gallery (east of arrival)", Vector3(53.0, 4.2, 23.0))
+	add_shot("gallery", Vector3(38.0, 1.65, 14.0), Vector3(53.0, 5.0, 24.0))
 
 
 func _on_unload(key: Vector2i) -> void:
@@ -211,6 +217,7 @@ func _build_chunk(cx: int, cz: int, _version: int, node: Node3D) -> Dictionary:
 	var u := util_of(cx, cz)
 	var g := "%d,%d" % [cx, cz]
 	var authored := cx == 0 and cz == 1
+	var gallery := Vector2i(cx, cz) == MEZZANINE_CHUNK
 	var meta := {"sector": sec, "util": u, "blocks": [], "rooms": [], "lm": [], "leaks": [], "authored": authored}
 	var blk := BLOCK if authored else Rect2()
 	if not authored and sec != "gothic" and u < 0.5 and maxi(absi(cx), absi(cz)) >= 2 and not _holes.has(Vector2i(cx, cz)) and r.randf() < 0.22:
@@ -231,12 +238,12 @@ func _build_chunk(cx: int, cz: int, _version: int, node: Node3D) -> Dictionary:
 	if cx == 0 and cz == 0:
 		avoid.append(Rect2(SPAWN.x - 3.0, SPAWN.z - 3.0, 6.0, 9.0))
 	_slab_around(k, Rect2(ox, oz, CS, CS), blk, 0.0, 0.4, "l1_floor_gild" if sec == "gild" else "l1_floor", GeoKit.PY)
-	_slab_around(k, Rect2(ox, oz, CS, CS), hole, HH + 0.4, 0.4, "l1_ceiling", GeoKit.NY)
+	_slab_around(k, Rect2(ox, oz, CS, CS), hole, 9.2 if gallery else HH + 0.4, 0.4, "l1_ceiling", GeoKit.NY)
 	for b in 4:
 		if not (authored and b == 1):
-			k.box(Vector3(ox + CS * 0.5, HH - 0.3, oz + b * BAY), Vector3(CS, 0.6, 0.5), "l1_ceiling", GeoKit.NY | GeoKit.PZ | GeoKit.NZ, false)
+			k.box(Vector3(ox + CS * 0.5, 8.8 if gallery else HH - 0.3, oz + b * BAY), Vector3(CS, 0.6, 0.5), "l1_ceiling", GeoKit.NY | GeoKit.PZ | GeoKit.NZ, false)
 		for zz in [2.2, 5.6]:   # conduits between the beams
-			Kit.pipe(k, Vector3(ox, HH - 0.06, oz + b * BAY + zz), Vector3(ox + CS, HH - 0.06, oz + b * BAY + zz), 0.03, "l1_metal", 6)
+			Kit.pipe(k, Vector3(ox, 8.9 if gallery else HH - 0.06, oz + b * BAY + zz), Vector3(ox + CS, 8.9 if gallery else HH - 0.06, oz + b * BAY + zz), 0.03, "l1_metal", 6)
 	# pillars: huge and square in Aquila, slimmer in Gild, round in Gothic
 	var band := Vector2i(r.randi() % 4, r.randi() % 4) if r.randf() < 0.3 else Vector2i(-1, -1)
 	var bmat: String = ["l1_band_r", "l1_band_b", "l1_band_y"][r.randi() % 3]
@@ -244,14 +251,15 @@ func _build_chunk(cx: int, cz: int, _version: int, node: Node3D) -> Dictionary:
 	for b in 4:
 		for a in 4:
 			var p := Vector3(ox + a * BAY, 0.0, oz + b * BAY)
-			if blk.grow(1.0).has_point(Vector2(p.x, p.z)) or BLOCK.grow(1.0).has_point(Vector2(p.x, p.z)):
+			if (gallery and a >= 2 and b >= 1) or blk.grow(1.0).has_point(Vector2(p.x, p.z)) or BLOCK.grow(1.0).has_point(Vector2(p.x, p.z)):
 				continue
 			pillars.append(p)
 			if sec == "gothic":
 				k.cylinder(p + Vector3.UP * HH * 0.5, 0.65, HH, "l1_pillar", 16)
 				continue
 			var w := _pw(sec) * 2.0
-			k.box(p + Vector3.UP * HH * 0.5, Vector3(w, HH, w), "l1_pillar", GeoKit.SIDES)
+			var ph := 9.1 if gallery else HH
+			k.box(p + Vector3.UP * ph * 0.5, Vector3(w, ph, w), "l1_pillar", GeoKit.SIDES)
 			k.box(p + Vector3.UP * 0.12, Vector3(w + 0.08, 0.24, w + 0.08), "l1_plinth", GeoKit.SIDES | GeoKit.PY, false)
 			if sec == "aquila":   # faded two-tone paint on the lower pillar
 				k.box(p + Vector3.UP * 0.72, Vector3(w + 0.012, 0.96, w + 0.012), "l1_pband", GeoKit.SIDES, false)
@@ -264,7 +272,7 @@ func _build_chunk(cx: int, cz: int, _version: int, node: Node3D) -> Dictionary:
 	for b in 4:
 		for a in 4:
 			for off in ([Vector2(4, 4), Vector2(4, 0)] if sec == "gild" else [Vector2(4, 4)]):
-				var c := Vector3(ox + a * BAY + off.x, HH - 0.95, oz + b * BAY + off.y)
+				var c := Vector3(ox + a * BAY + off.x, 8.75 if gallery else HH - 0.95, oz + b * BAY + off.y)
 				if blk.has_point(Vector2(c.x, c.z)) or (sec == "gothic" and (a + b) % 2 == 1) or hole.grow(1.0).has_point(Vector2(c.x, c.z)):
 					continue
 				var dead := r.randf() < 0.05 + u * 0.35
@@ -277,9 +285,9 @@ func _build_chunk(cx: int, cz: int, _version: int, node: Node3D) -> Dictionary:
 		var ix := cx * 4 + a
 		if _h01(ix, 0, 31) < 0.6 or cx == 0:
 			var x := ox + a * BAY + 2.3
-			Kit.pipe(k, Vector3(x, HH - 0.75, oz), Vector3(x, HH - 0.75, oz + CS), 0.12 if _h01(ix, 1, 31) < 0.5 else 0.07, "l1_pipe", 8)
+			Kit.pipe(k, Vector3(x, 8.5 if gallery else HH - 0.75, oz), Vector3(x, 8.5 if gallery else HH - 0.75, oz + CS), 0.12 if _h01(ix, 1, 31) < 0.5 else 0.07, "l1_pipe", 8)
 			var lz := oz + r.randf_range(3.0, CS - 3.0)
-			if sec == "aquila" and r.randf() < 0.55 and _ok(Vector3(x, 0, lz), [BLOCK.grow(1.0), blk.grow(1.0)]):
+			if not gallery and sec == "aquila" and r.randf() < 0.55 and _ok(Vector3(x, 0, lz), [BLOCK.grow(1.0), blk.grow(1.0)]):
 				meta["leaks"].append(Vector3(x, 0.0, lz))
 				for i in 4:
 					Kit.disk(k, Vector3(x + r.randf_range(-0.7, 0.7), 0.008, lz + r.randf_range(-0.9, 0.9)), Vector3.UP, r.randf_range(0.35, 0.95), "l1_puddle", 14)
@@ -309,7 +317,10 @@ func _build_chunk(cx: int, cz: int, _version: int, node: Node3D) -> Dictionary:
 		Kit.corridor_block(self, k, node, blk, r, g, meta, authored)
 		if authored:
 			_vent(k, node, BLOCK.position.x, BLOCK.get_center().y)
-	_features(k, node, cx, cz, sec, u, r, pillars, avoid, meta)
+	if gallery:
+		_maintenance_gallery(k, node, g)
+	else:
+		_features(k, node, cx, cz, sec, u, r, pillars, avoid, meta)
 	if cx == 0 and cz == 0:   # arrival dressing: the supply crate, a crate stack, debris
 		sys.make_crate(node, "start", START_CRATE, 0.35, Vector3(0.9, 0.7, 0.7), true)
 		sys.make_crate(node, "c0_0_s1", Vector3(19.6, 0, 13.2), 0.2, Vector3(1.0, 0.75, 0.8))
@@ -323,7 +334,106 @@ func _build_chunk(cx: int, cz: int, _version: int, node: Node3D) -> Dictionary:
 	if not qa_fixture and cx * _udir.x + cz * _udir.y >= 7:   # smooth threshold to Level 2
 		make_exit("L001>L002#1", "walk_in", Vector3(ox + CS * 0.5, 1.5, oz + CS * 0.5), Vector3(CS - 2.0, 3.0, CS - 2.0), "", node)
 	k.commit()
+	ModelDress.decorate_chunk(self, node, "L001", cx, cz)
 	return meta
+
+
+## Authored warehouse mezzanine. Two heights are physically connected by a
+## full-rise stair collision ramp, NOT by teleportation or fake decorative stairs.
+## ADAPTATION: maintenance access within Level 1's abandoned warehouse setting.
+func _maintenance_gallery(k: GeoKit, node: Node3D, group: String) -> void:
+	const TOP := 4.2
+	# The 9.2 m roof and the absence of normal random rack props in this bay
+	# leave useful standing clearance above and beneath the suspended deck.
+	k.stairs(Vector3(35.0, 0.0, 21.0), Vector3.RIGHT, 2.0, TOP, 16, "l1_metal", 0.55, true)
+	k.slab(43.8, 17.0, 61.5, 29.5, TOP, 0.24, "l1_metal", GeoKit.ALL)
+	k.slab(49.4, 7.0, 52.0, 17.0, TOP, 0.24, "l1_metal", GeoKit.ALL)
+	# Rails around the open drop; the stair opening at x=43.8 remains clear.
+	# Leave a 3 m bridge opening in the near rail; the far edge is continuous.
+	for a in [[43.8, 49.1], [52.3, 61.5]]:
+		k.box(Vector3((a[0] + a[1]) * 0.5, TOP + 0.54, 17.0), Vector3(a[1] - a[0], 1.08, 0.09), "l1_rack")
+	k.box(Vector3(52.6, TOP + 0.54, 29.5), Vector3(17.8, 1.08, 0.09), "l1_rack")
+	k.box(Vector3(61.45, TOP + 0.54, 23.25), Vector3(0.09, 1.08, 12.3), "l1_rack")
+	for xx in [49.4, 52.0]:
+		k.box(Vector3(xx, TOP + 0.54, 11.9), Vector3(0.08, 1.08, 9.5), "l1_rack")
+	# The opposite end of the bridge is a deliberate dead end with an overlook.
+	for xx in [45.5, 58.5]:
+		for zz in [19.0, 27.5]:
+			k.box(Vector3(xx, TOP - 2.05, zz), Vector3(0.22, 4.0, 0.22), "l1_metal")
+	k.box(Vector3(58.5, TOP + 0.42, 25.8), Vector3(1.8, 0.84, 0.58), "l1_fixture")
+	for i in 5:
+		k.box(Vector3(58.5 - i * 0.22, TOP + 0.92, 25.5), Vector3(0.12, 0.04, 0.10), "l1_meg", GeoKit.ALL, false)
+	# DEV19: one two-way emergency lighting circuit connects both levels of
+	# the existing mezzanine. Its lamps physically reveal the stair and return
+	# path during the wiki's unpredictable Flickering; it does NOT alter Flickering.
+	var circuit_lights: Array = []
+	for lamp_info in [
+		["Entry", Vector3(36.2, 3.2, 21.0), 7.0],
+		["StairLanding", Vector3(44.0, TOP + 2.0, 21.0), 9.0],
+		["MaintenanceEmergencyLight", Vector3(58.5, TOP + 1.75, 25.8), 9.0],
+		["ThirdDeck", Vector3(50.0, 7.7, 26.0), 8.0]
+	]:
+		var glow := OmniLight3D.new()
+		glow.name = "Circuit_" + str(lamp_info[0])
+		glow.position = lamp_info[1]
+		glow.light_color = Color(1.0, 0.68, 0.32)
+		glow.light_energy = 1.4 if _gallery_circuit_on else 0.0
+		glow.omni_range = float(lamp_info[2])
+		glow.shadow_enabled = false
+		node.add_child(glow)
+		circuit_lights.append(glow)
+	# Accessible from the floor OR the upper level. Neither is compulsory:
+	# the normal 9th Road / Level 1 exits remain unchanged.
+	for control in [Vector3(35.5, 1.2, 22.0), Vector3(58.5, TOP + 1.15, 25.3)]:
+		make_interactable(control, Vector3(1.25, 0.85, 0.85),
+			"Toggle emergency gallery lamp" if control.y > TOP else "Toggle gallery emergency lighting", func(_p):
+			_gallery_circuit_on = not _gallery_circuit_on
+			for fixture in circuit_lights:
+				fixture.light_energy = 1.4 if _gallery_circuit_on else 0.0
+			SaveService.record_discovery(stable_id, "gallery_circuit",
+				"The battery-fed maintenance lights outline the way up. The warehouse blackouts remain unpredictable.", "ADAPTATION")
+			sound.play_at("transformer", {"seconds": 1.5}, control, -16.0)
+			Overlay.subtitle("[a relay snaps; four amber lamps %s]" % ("illuminate the gallery" if _gallery_circuit_on else "go out"), 4.0), node)
+	var note := Interactable.new()
+	node.add_child(note)
+	note.setup(Vector3(50.6, TOP + 0.95, 8.2), Vector3(1.4, 0.7, 0.3), "Inspect maintenance clipboard", func(_p):
+		Overlay.toast("An unsigned inspection form. The diagram shows one stair, then the same stair again, impossibly.", 5.0))
+	k.box(Vector3(50.6, TOP + 0.75, 8.2), Vector3(1.2, 0.7, 0.12), "l1_beige", GeoKit.ALL, false)
+	lights.add_anchor(Vector3(50.5, TOP + 3.2, 14.5), Color(0.85, 0.88, 0.8), 1.25, 9.0, 0.0, group)
+	_maintenance_upper_deck(k, node, group, TOP)
+
+
+
+## DEV14: a third, deliberately compact inspection level over the original
+## warehouse mezzanine. Cut a 2.9 m stair slot in its floor, with two separate
+## viewing returns. Keep upper walkways under the 9.2 m ceiling beams.
+func _maintenance_upper_deck(k: GeoKit, node: Node3D, group: String, lower: float) -> void:
+	var upper := 6.50
+	# Existing lower deck spans x=43.8..61.5, z=17..29.5.
+	# Upward stair starts on it and finishes at the upper landing at z=25.25.
+	k.stairs(Vector3(56.35, lower, 18.05), Vector3.BACK, 1.80, upper - lower,
+		18, "l1_metal", 0.40, false)
+	# Cutout x=55..58, z=18..25.2, flanked by two parallel balcony paths.
+	for rect in [
+		[44.0, 17.0, 55.0, 29.0], [58.0, 17.0, 61.2, 29.0],
+		[55.0, 25.2, 58.0, 29.0], [55.0, 17.0, 58.0, 18.0]
+	]:
+		k.slab(rect[0], rect[1], rect[2], rect[3], upper, 0.20, "l1_metal", GeoKit.PY)
+	# Upper loop with two different overlooking branches, not a solid slab.
+	for zz in [17.0, 29.0]:
+		k.box(Vector3(49.5, upper + 0.50, zz), Vector3(11.0, 1.0, 0.10), "l1_rack")
+	for xx in [44.0, 61.2]:
+		k.box(Vector3(xx, upper + 0.5, 23.0), Vector3(0.10, 1.0, 12.0), "l1_rack")
+	# Guard the long sides of the rising slot, leaving both landings open.
+	for xx in [55.0, 58.0]:
+		k.box(Vector3(xx, upper + 0.55, 21.2), Vector3(0.10, 1.10, 6.3), "l1_rack")
+	k.box(Vector3(52.0, upper + 0.48, 20.2), Vector3(2.0, 0.96, 0.24), "l1_fixture", GeoKit.ALL, false)
+	var log := Interactable.new()
+	node.add_child(log)
+	log.setup(Vector3(50.0, upper + 1.0, 27.0), Vector3(1.2, 1.2, 1.2),
+		"Read the third-deck safety chart", func(_p):
+			Overlay.toast("Two mezzanine surveys disagree on the number of floors. Both bear the same signature.", 5.0))
+	lights.add_anchor(Vector3(49.5, upper + 1.7, 27.0), Color(0.95, 0.81, 0.52), 0.55, 8.0, 0.0, group)
 
 
 func _features(k: GeoKit, node: Node3D, cx: int, cz: int, sec: String, u: float, r: RandomNumberGenerator, pillars: Array, avoid: Array, meta: Dictionary) -> void:
@@ -383,8 +493,33 @@ func _features(k: GeoKit, node: Node3D, cx: int, cz: int, sec: String, u: float,
 			Kit.dial(k, at + Vector3.UP * r.randf_range(1.4, 1.9), face)
 			Kit.pipe(k, at + Vector3(0, 0.3, 0) + face * 0.1, at + Vector3(0, HH - 0.3, 0) + face * 0.1, 0.05, "l1_pipe", 6)
 			if r.randf() < u * 0.6:
-				Kit.valve(k, at + Vector3.UP * 1.05 + face * 0.1, face)
+				var vp := at + Vector3.UP * 1.05 + face * 0.1
+				Kit.valve(k, vp, face)
+				if not meta.has("dev18_valve"):
+					_utility_valve(node, vp, cx, cz, meta)
 			meta["lm"].append(at + Vector3.UP * 1.6)
+
+
+## An optional utility valve: local pipe pressure and its indicator, not a
+## mandatory exit lock. It never overrides the wiki's unpredictable Flickering
+## sequence. Scoped to the streamed chunk so no ghost collider survives unload.
+func _utility_valve(owner: Node3D, at: Vector3, cx: int, cz: int, meta: Dictionary) -> void:
+	var id := "%d,%d" % [cx, cz]
+	meta["dev18_valve"] = id
+	var lamp := OmniLight3D.new()
+	lamp.name = "PipePressureIndicator"
+	lamp.position = at + Vector3(0.0, 0.45, 0.0)
+	lamp.light_color = Color(0.25, 0.82, 0.47)
+	lamp.omni_range = 4.0
+	lamp.light_energy = 1.0 if _valve_states.get(id, false) else 0.0
+	owner.add_child(lamp)
+	make_interactable(at, Vector3(1.0, 1.0, 1.0), "Turn the pressure valve", func(_p):
+		var now: bool = not bool(_valve_states.get(id, false))
+		_valve_states[id] = now
+		SaveService.record_discovery(stable_id, "pressure_valve", "A service valve responds, but its pressure indicator offers no reliable control over the Flickering.")
+		lamp.light_energy = 1.0 if now else 0.0
+		Overlay.toast("[metal groans] The pipe pressure %s. Nothing else in this place responds." % ("rises" if now else "falls"), 4.0), owner)
+
 
 
 ## "Going into an open ventilation duct will lead to Level 800": a floor-level duct

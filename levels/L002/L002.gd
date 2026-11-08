@@ -1,4 +1,5 @@
 extends LevelBase
+const ModelDress := preload("res://core/world/ModelDress.gd")
 ## Level 2 — "Abandoned Utility Halls" (Backrooms Wiki rev 93, accessed 2026-11-04;
 ## cite: Greggita Mahayfaio, CC BY-SA 3.0). Dossier: docs/canon/levels/L002.md.
 ##
@@ -70,6 +71,7 @@ func build() -> void:
 	add_shot("arrival", SPAWN + Vector3(-0.6, 1.62, 0.3), Vector3(30.0, 1.5, 9.0))
 	add_landmark("Arrival vestibule (tram buffer)", Vector3(10, 0, 10))
 	add_landmark("Pipe gallery", Vector3(50, 0, 10))
+	add_landmark("First pipe gallery - high service loop", Vector3(55.4, 5.0, 10.0))
 
 
 func _materials() -> void:
@@ -408,6 +410,8 @@ func _build_chunk(cx: int, cz: int, _version: int, node: Node3D) -> Dictionary:
 			if fd["deck"] == "up" and not ups.has(int(fd["dir"])):
 				ups.append(int(fd["dir"]))
 		G.gallery_interior(self, ctx, C, a, ups, los)
+		if cx == 2 and cz == 0:
+			G.authored_upper_service_loop(self, ctx, C)
 	else:
 		fixture(ctx, C + Vector3.UP * (HO - 0.1), Vector3(1, 0, 0), 0, 0.0)
 		for d in 8:   # service pipes cross the junction ceiling between its corridors
@@ -440,6 +444,7 @@ func _build_chunk(cx: int, cz: int, _version: int, node: Node3D) -> Dictionary:
 			if ch is MeshInstance3D:
 				circ_meshes[cid].append(ch)
 	meta["boxes"] = k.stats["boxes"]
+	ModelDress.decorate_chunk(self, node, "L002", cx, cz)
 	return meta
 
 
@@ -456,8 +461,20 @@ func level_process(delta: float) -> void:
 
 
 func qa_capture_plan() -> Array:
-	return sys.capture_plan()
+	var plan: Array = sys.capture_plan()
+	plan.append({"name": "dev13_upper_service_loop", "pos": Vector3(56.2, 6.5, 7.8), "target": Vector3(51.1, 3.4, 10.0),
+		"prepare": func(): world.build_around(Vector3(50.0, 0.0, 10.0), 1)})
+	return plan
 
 
 func qa_self_test() -> Array:
-	return await sys.self_test()
+	var result: Array = await sys.self_test()
+	world.build_around(Vector3(50.0, 0.0, 10.0), 1)
+	await get_tree().physics_frame
+	var physics := get_world_3d().direct_space_state
+	var platform := physics.intersect_ray(PhysicsRayQueryParameters3D.create(
+		Vector3(55.4, 6.7, 10.0), Vector3(55.4, 4.2, 10.0), 1))
+	result.append({"what": "DEV13 first pipe gallery high service loop has a true y5m collision deck",
+		"ok": not platform.is_empty() and absf(float(platform.get("position", Vector3.ZERO).y) - 5.0) < 0.2,
+		"detail": platform.get("position", Vector3.ZERO)})
+	return result

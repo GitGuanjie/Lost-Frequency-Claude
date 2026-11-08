@@ -1,0 +1,85 @@
+{
+  "version": "1.5.0-dev21",
+  "base_archive": "LostFrequency_v1.5.0-dev20_SOURCE.zip",
+  "base_sha256": "b3bab301d7c6867945777bc1049260a6130ef8fed5f4a0bd2395f3f2fed94303",
+  "file_count": 20,
+  "files": {
+    "3/DEV21_README_FIRST_CN.md": {
+      "sha256": "148bd798463dfedc1b3d01d99fa28286cabd59e42dc76cf2e326fc9a58eb23a2",
+      "bytes": 4303
+    },
+    "3/EXPORT_DEV21_WINDOWS.ps1": {
+      "sha256": "5876b69f45d6ba909dd28e3d641ff29b499471bb2fc5880ad88760dbe520ce26",
+      "bytes": 1544
+    },
+    "3/README.md": {
+      "sha256": "75f3184844c0c2d590ebd943d217d3cc422bf74ca8c5dd88714b6c38af40c747",
+      "bytes": 9784
+    },
+    "3/RUN_DEV21_QA_WINDOWS.ps1": {
+      "sha256": "ac582b9ec69a2b57a74f5ed1fccac141af8bf3eac3130911061374cc469c414a",
+      "bytes": 641
+    },
+    "3/core/world/AtriumWeave.gd": {
+      "sha256": "ec3c0c789bdfc72537168b37f625aeae561c8864a44c0ef68bb7786c4d80d031",
+      "bytes": 18370
+    },
+    "3/core/world/AtriumWeaveState.gd": {
+      "sha256": "fd541bf62985915fc62b10bbde2b5517df11f8d38a7c0796fc15406b4e267d35",
+      "bytes": 7616
+    },
+    "3/core/world/ScenarioArchitecture.gd": {
+      "sha256": "8564a3ce8d669b87e7fca8f469ed4391a8a4e0e8a1b64cd32a4ef41fbb2c22a6",
+      "bytes": 4266
+    },
+    "3/core/world/ScenarioDressing.gd": {
+      "sha256": "16d084b9c6e40520465c003274f1d73eb490fa8dc90655abb82cefa89022f7b9",
+      "bytes": 3265
+    },
+    "3/data/dev21_wing_scenarios.json": {
+      "sha256": "3f22d4ae1c2057092d0053aab191b27b13385107ad71e2dd42e139e59cf78b6a",
+      "bytes": 112724
+    },
+    "3/docs/production/V150_DEV21_CONTENT_DIVERSITY_CN.md": {
+      "sha256": "f20a0fb95f6f9ed8aba225878c041a47d35362b7912d4710cbd9eccea384518c",
+      "bytes": 3697
+    },
+    "3/project.godot": {
+      "sha256": "bab951963173961c8bff73c686df96c05965845188f3a1bf35784c2f19bff419",
+      "bytes": 1624
+    },
+    "3/reports/qa/v150_dev21/batch_summary.json": {
+      "sha256": "1312aace6325f3b2db8d1165abec51b847dc4cf079ea1ccb0bad32cab64d8836",
+      "bytes": 503
+    },
+    "3/reports/qa/v150_dev21/import.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "3/tests/qa_runner.gd": {
+      "sha256": "6f3117e0a9a768eed1bd7e0708264d1b2e0b9e4397862c55ebea79a201d374f5",
+      "bytes": 87059
+    },
+    "3/tests/static/test_dev20_atrium_generation.py": {
+      "sha256": "543c911210cc9b5697cacbe7cdfc8edc895b6b26ae02339103fff66d1f7ff408",
+      "bytes": 7502
+    },
+    "3/tests/static/test_dev21_scenario_dressing.py": {
+      "sha256": "9118b12e09b556a8fd25a6e3d95dd786fcdc17cab50edba61279fa2c96681c7d",
+      "bytes": 6370
+    },
+    "3/tools/generate_dev21_scenarios.py": {
+      "sha256": "beee39fdc619bda8e56b2c9656150a98516d24062f53d76dcdbaf497f7ce7731",
+      "bytes": 9658
+    },
+    "3/tools/render_dev21_model_layout.py": {
+      "sha256": "f969f9af715f3db85da8ebf6aa0c293bdb51389939b29edfd3eaaab46274e97a",
+      "bytes": 2343
+    },
+    "3/tools/run_dev21_qa.py": {
+      "sha256": "73d0c4d11e28e803ee98a0946969545a173aecd31748ada024ca91d0dfd6a7df",
+      "bytes": 14321
+    }
+  },
+  "note": "Patch applies over extracted dev20 at directory containing 3; never overwrites user save data."
+}

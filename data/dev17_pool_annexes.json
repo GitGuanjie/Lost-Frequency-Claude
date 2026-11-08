@@ -1,0 +1,25 @@
+{
+  "schema": "dev17_poolrooms_v1",
+  "annexes": {
+    "annex_a": {
+      "chunk": [
+        2,
+        0
+      ],
+      "tiers": 3,
+      "rise_m": 3.35,
+      "basin_floor_m": -7.25,
+      "water_line_m": 0.0
+    },
+    "annex_b": {
+      "chunk": [
+        3,
+        0
+      ],
+      "tiers": 4,
+      "rise_m": 2.55,
+      "basin_floor_m": -8.25,
+      "water_line_m": 0.0
+    }
+  }
+}

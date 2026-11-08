@@ -1,0 +1,36 @@
+{
+  "build_ms": 672,
+  "engine_native": true,
+  "level": "L320",
+  "manifest_status": "IN_DEVELOPMENT",
+  "metrics": {
+    "audio_players": 2,
+    "collision_shapes": 1867,
+    "exit_triggers": 4,
+    "footprint_x": 250.0,
+    "footprint_y": 44.6,
+    "footprint_z": 301.1,
+    "glb_models": 46,
+    "interactables": 44,
+    "lights": 38,
+    "materials": 35,
+    "mesh_instances": 203,
+    "multimesh_instances": 0,
+    "triangles": 51698
+  },
+  "reason": "loaded via real developer transition, safe player spawn, 15 physics ticks",
+  "scene": "res://levels/L320/L320.tscn",
+  "spawn_report": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+  },
+  "spawn_y_after": 0.0819725841283798,
+  "spawn_y_before": 0.0819725841283798,
+  "stage": "complete",
+  "status": "PASS",
+  "test": "real F3 developer jump and safe spawn"
+}

@@ -1,0 +1,726 @@
+{
+  "version": "1.5.0-dev14",
+  "provenance": "Authored route sketches tied to GDScript geometry; graph connectivity is NOT proof of player or physics traversal",
+  "canon_roster_sha256": "39a6b754d1149bf81cea3f7467a82eb3d831a11973dee36182ce64df8c26ceb6",
+  "cross_level_transitions_sha256": "6775428947d91638edd13bd23cac06f48d747edb26f292ba5576844118deebf7",
+  "level_manifest_sha256": {
+    "L000": "c434b93679a293d0f9a18d4005723f72283dba3ab4bd9b8141ee5673d91485ff",
+    "L001": "a37ce56d8a2d4c04d05ad0bb57981831baa44f3a577a0a17de0714d5ed2d07a8",
+    "L009": "5fcc63a56b1ab2ce6e53df390842a76cf0e2479005e4077b14aa0116dc4ac0ff",
+    "L011": "a0febf872f435988857a4004dd2f4301c10869cd4a82e526e2d004fe2f0da77f"
+  },
+  "levels": {
+    "L000": {
+      "variant": "rare-fifth-stratum",
+      "design_only": true,
+      "description": "Five-storey rare atrium: two alternating stair sides, two high shaft bridges, branching rings, and permanent vertical openings.",
+      "nodes": {
+        "floor0": [
+          6.9,
+          0,
+          11.12
+        ],
+        "floor1": [
+          6.9,
+          3.0,
+          6.0
+        ],
+        "stair2_foot": [
+          3.35,
+          3.0,
+          7.8
+        ],
+        "floor2_west": [
+          3.35,
+          6.25,
+          13.56
+        ],
+        "floor2_bridge_w": [
+          6.0,
+          6.25,
+          15.9
+        ],
+        "floor2_bridge_e": [
+          18.0,
+          6.25,
+          15.9
+        ],
+        "floor2_east": [
+          21.35,
+          6.25,
+          15.9
+        ],
+        "stair3_foot": [
+          21.35,
+          6.25,
+          8.1
+        ],
+        "floor3_east": [
+          21.35,
+          9.5,
+          14.85
+        ],
+        "floor3_bridge_e": [
+          18,
+          9.5,
+          12.45
+        ],
+        "floor3_bridge_w": [
+          6,
+          9.5,
+          12.45
+        ],
+        "floor3_west": [
+          3.35,
+          9.5,
+          12.45
+        ],
+        "stair4_foot": [
+          3.35,
+          9.5,
+          8.1
+        ],
+        "floor3_north": [
+          21,
+          9.5,
+          19.7
+        ],
+        "floor3_south": [
+          3.35,
+          9.5,
+          4.5
+        ],
+        "floor4_west": [
+          3.35,
+          12.75,
+          14.85
+        ],
+        "floor4_bridge_w": [
+          6,
+          12.75,
+          12.45
+        ],
+        "floor4_bridge_e": [
+          18,
+          12.75,
+          12.45
+        ],
+        "floor4_east": [
+          21.35,
+          12.75,
+          12.45
+        ],
+        "floor4_north": [
+          21,
+          12.75,
+          19.7
+        ],
+        "floor4_south": [
+          3.35,
+          12.75,
+          4.5
+        ]
+      },
+      "edges": [
+        [
+          "floor0",
+          "floor1",
+          "stair",
+          1.6
+        ],
+        [
+          "floor1",
+          "stair2_foot",
+          "deck",
+          1.8
+        ],
+        [
+          "stair2_foot",
+          "floor2_west",
+          "stair",
+          1.8
+        ],
+        [
+          "floor2_west",
+          "floor2_bridge_w",
+          "deck",
+          1.8
+        ],
+        [
+          "floor2_bridge_w",
+          "floor2_bridge_e",
+          "bridge",
+          2.0
+        ],
+        [
+          "floor2_bridge_e",
+          "floor2_east",
+          "deck",
+          1.8
+        ],
+        [
+          "floor2_east",
+          "stair3_foot",
+          "deck",
+          1.8
+        ],
+        [
+          "stair3_foot",
+          "floor3_east",
+          "stair",
+          1.75
+        ],
+        [
+          "floor3_east",
+          "floor3_bridge_e",
+          "deck",
+          1.8
+        ],
+        [
+          "floor3_bridge_e",
+          "floor3_bridge_w",
+          "bridge",
+          2.3
+        ],
+        [
+          "floor3_bridge_w",
+          "floor3_west",
+          "deck",
+          1.8
+        ],
+        [
+          "floor3_west",
+          "stair4_foot",
+          "deck",
+          1.8
+        ],
+        [
+          "floor3_east",
+          "floor3_north",
+          "deck",
+          1.8
+        ],
+        [
+          "floor3_north",
+          "floor3_west",
+          "deck",
+          1.8
+        ],
+        [
+          "floor3_west",
+          "floor3_south",
+          "deck",
+          1.8
+        ],
+        [
+          "floor3_south",
+          "floor3_east",
+          "deck",
+          1.8
+        ],
+        [
+          "stair4_foot",
+          "floor4_west",
+          "stair",
+          1.75
+        ],
+        [
+          "floor4_west",
+          "floor4_bridge_w",
+          "deck",
+          1.8
+        ],
+        [
+          "floor4_bridge_w",
+          "floor4_bridge_e",
+          "bridge",
+          2.3
+        ],
+        [
+          "floor4_bridge_e",
+          "floor4_east",
+          "deck",
+          1.8
+        ],
+        [
+          "floor4_east",
+          "floor4_north",
+          "deck",
+          1.8
+        ],
+        [
+          "floor4_north",
+          "floor4_west",
+          "deck",
+          1.8
+        ],
+        [
+          "floor4_west",
+          "floor4_south",
+          "deck",
+          1.8
+        ],
+        [
+          "floor4_south",
+          "floor4_east",
+          "deck",
+          1.8
+        ]
+      ],
+      "metrics": {
+        "nodes": 21,
+        "edges": 24,
+        "cycle_rank": 4,
+        "max_elevation_m": 12.75,
+        "min_elevation_m": 0,
+        "vertical_span_m": 12.75,
+        "stair_links": 4
+      }
+    },
+    "L001": {
+      "variant": "authored-gallery",
+      "design_only": true,
+      "description": "Warehouse triple-deck route with a carved upper stair shaft and two-way maintenance loop.",
+      "nodes": {
+        "warehouse_floor": [
+          35,
+          0,
+          21
+        ],
+        "mezzanine_landing": [
+          43.8,
+          4.2,
+          21
+        ],
+        "mezzanine_west": [
+          49.5,
+          4.2,
+          22
+        ],
+        "stair_head_foot": [
+          56.35,
+          4.2,
+          18.05
+        ],
+        "upper_landing": [
+          56.35,
+          6.5,
+          25.25
+        ],
+        "west_north": [
+          53.5,
+          6.5,
+          27.0
+        ],
+        "west_south": [
+          50.0,
+          6.5,
+          17.5
+        ],
+        "east_south": [
+          59.4,
+          6.5,
+          17.5
+        ],
+        "east_north": [
+          59.4,
+          6.5,
+          27.0
+        ],
+        "upper_west": [
+          46,
+          6.5,
+          23
+        ],
+        "upper_east": [
+          60.0,
+          6.5,
+          23
+        ]
+      },
+      "edges": [
+        [
+          "warehouse_floor",
+          "mezzanine_landing",
+          "stair",
+          2.0
+        ],
+        [
+          "mezzanine_landing",
+          "mezzanine_west",
+          "deck",
+          2.0
+        ],
+        [
+          "mezzanine_west",
+          "stair_head_foot",
+          "deck",
+          2.0
+        ],
+        [
+          "stair_head_foot",
+          "upper_landing",
+          "stair",
+          1.8
+        ],
+        [
+          "upper_landing",
+          "west_north",
+          "deck",
+          1.8
+        ],
+        [
+          "upper_landing",
+          "east_north",
+          "deck",
+          1.8
+        ],
+        [
+          "west_north",
+          "upper_west",
+          "deck",
+          1.8
+        ],
+        [
+          "upper_west",
+          "west_south",
+          "deck",
+          1.8
+        ],
+        [
+          "east_north",
+          "upper_east",
+          "deck",
+          1.8
+        ],
+        [
+          "upper_east",
+          "east_south",
+          "deck",
+          1.8
+        ],
+        [
+          "west_south",
+          "east_south",
+          "bridge",
+          2.0
+        ],
+        [
+          "west_north",
+          "east_north",
+          "bridge",
+          2.0
+        ]
+      ],
+      "metrics": {
+        "nodes": 11,
+        "edges": 12,
+        "cycle_rank": 2,
+        "max_elevation_m": 6.5,
+        "min_elevation_m": 0,
+        "vertical_span_m": 6.5,
+        "stair_links": 2
+      }
+    },
+    "L009": {
+      "variant": "non-exit-garage",
+      "design_only": true,
+      "description": "Four-deck disused garage in non-exit outskirts: roof stair, open central slot, roof loop and lateral spur.",
+      "nodes": {
+        "street": [
+          23.2,
+          0.18,
+          28.0
+        ],
+        "deck1": [
+          32,
+          3.4,
+          28.0
+        ],
+        "deck1_return": [
+          51,
+          3.4,
+          26.0
+        ],
+        "deck2": [
+          51,
+          6.8,
+          36.0
+        ],
+        "deck2_return": [
+          55,
+          6.8,
+          40.0
+        ],
+        "roof_land": [
+          46.2,
+          10.2,
+          40.0
+        ],
+        "roof_west": [
+          39,
+          10.2,
+          40.0
+        ],
+        "roof_north": [
+          39,
+          10.2,
+          49.0
+        ],
+        "roof_east": [
+          58,
+          10.2,
+          49.0
+        ],
+        "roof_south": [
+          58,
+          10.2,
+          42.0
+        ],
+        "roof_south_west": [
+          47,
+          10.2,
+          42
+        ],
+        "roof_spur": [
+          28,
+          10.2,
+          44.7
+        ]
+      },
+      "edges": [
+        [
+          "street",
+          "deck1",
+          "stair",
+          2.0
+        ],
+        [
+          "deck1",
+          "deck1_return",
+          "deck",
+          2.0
+        ],
+        [
+          "deck1_return",
+          "deck2",
+          "stair",
+          2.0
+        ],
+        [
+          "deck2",
+          "deck2_return",
+          "deck",
+          2.0
+        ],
+        [
+          "deck2_return",
+          "roof_land",
+          "stair",
+          2.0
+        ],
+        [
+          "roof_land",
+          "roof_west",
+          "deck",
+          2.0
+        ],
+        [
+          "roof_west",
+          "roof_north",
+          "deck",
+          2.0
+        ],
+        [
+          "roof_north",
+          "roof_east",
+          "deck",
+          2.0
+        ],
+        [
+          "roof_east",
+          "roof_south",
+          "deck",
+          2.0
+        ],
+        [
+          "roof_south",
+          "roof_south_west",
+          "deck",
+          2.0
+        ],
+        [
+          "roof_south_west",
+          "roof_land",
+          "deck",
+          2.0
+        ],
+        [
+          "roof_north",
+          "roof_spur",
+          "deck",
+          2.3
+        ]
+      ],
+      "metrics": {
+        "nodes": 12,
+        "edges": 12,
+        "cycle_rank": 1,
+        "max_elevation_m": 10.2,
+        "min_elevation_m": 0.18,
+        "vertical_span_m": 10.02,
+        "stair_links": 3
+      }
+    },
+    "L011": {
+      "variant": "authored-park",
+      "design_only": true,
+      "description": "City park quadruple-elevation loop with two independent ascents to a high airbridge.",
+      "nodes": {
+        "street_west": [
+          30,
+          0.15,
+          60
+        ],
+        "lower_bridge_west": [
+          38,
+          3.75,
+          60
+        ],
+        "lower_center": [
+          50,
+          3.75,
+          60
+        ],
+        "high_center": [
+          50,
+          7.25,
+          52
+        ],
+        "high_west": [
+          41,
+          7.25,
+          52
+        ],
+        "high_east": [
+          59,
+          7.25,
+          52
+        ],
+        "west_stair_foot": [
+          41,
+          7.25,
+          43.2
+        ],
+        "east_stair_foot": [
+          59,
+          7.25,
+          43.2
+        ],
+        "top_west": [
+          41,
+          10.65,
+          36.0
+        ],
+        "top_east": [
+          59,
+          10.65,
+          36.0
+        ],
+        "top_bridge_west": [
+          41,
+          10.65,
+          30.9
+        ],
+        "top_bridge_east": [
+          59,
+          10.65,
+          30.9
+        ]
+      },
+      "edges": [
+        [
+          "street_west",
+          "lower_bridge_west",
+          "stair",
+          3.2
+        ],
+        [
+          "lower_bridge_west",
+          "lower_center",
+          "deck",
+          3.2
+        ],
+        [
+          "lower_center",
+          "high_center",
+          "stair",
+          2.0
+        ],
+        [
+          "high_center",
+          "high_west",
+          "deck",
+          2.0
+        ],
+        [
+          "high_center",
+          "high_east",
+          "deck",
+          2.0
+        ],
+        [
+          "high_west",
+          "west_stair_foot",
+          "deck",
+          2.0
+        ],
+        [
+          "high_east",
+          "east_stair_foot",
+          "deck",
+          2.0
+        ],
+        [
+          "west_stair_foot",
+          "top_west",
+          "stair",
+          2.1
+        ],
+        [
+          "east_stair_foot",
+          "top_east",
+          "stair",
+          2.1
+        ],
+        [
+          "top_west",
+          "top_bridge_west",
+          "deck",
+          2.1
+        ],
+        [
+          "top_east",
+          "top_bridge_east",
+          "deck",
+          2.1
+        ],
+        [
+          "top_bridge_west",
+          "top_bridge_east",
+          "bridge",
+          2.7
+        ]
+      ],
+      "metrics": {
+        "nodes": 12,
+        "edges": 12,
+        "cycle_rank": 1,
+        "max_elevation_m": 10.65,
+        "min_elevation_m": 0.15,
+        "vertical_span_m": 10.5,
+        "stair_links": 4
+      }
+    }
+  }
+}

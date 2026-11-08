@@ -1,0 +1,21 @@
+{
+  "stable_id": "L071",
+  "scene": "res://levels/L071/L071.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev5 source candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L004"
+  ],
+  "signature": "Vast dim basement with failed records, fading geometry and no documented exit",
+  "mechanics": [
+    "infinite_basement",
+    "source_ambiguous",
+    "error_0071",
+    "low_visibility"
+  ],
+  "exits": [],
+  "notes": "Compact exploration adaptation. Runtime Godot and Windows verification required; no automatic PLAYABLE promotion.",
+  "entity_policy": "NO ENTITY PER SOURCE"
+}

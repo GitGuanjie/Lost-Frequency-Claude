@@ -1,0 +1,36 @@
+{
+  "build_ms": 1658,
+  "engine_native": true,
+  "level": "L008",
+  "manifest_status": "PLAYABLE",
+  "metrics": {
+    "audio_players": 6,
+    "collision_shapes": 135,
+    "exit_triggers": 3,
+    "footprint_x": 413.1,
+    "footprint_y": 22.5,
+    "footprint_z": 151.0,
+    "glb_models": 0,
+    "interactables": 13,
+    "lights": 15,
+    "materials": 16,
+    "mesh_instances": 103,
+    "multimesh_instances": 0,
+    "triangles": 57460
+  },
+  "reason": "loaded via real developer transition, safe player spawn, 15 physics ticks",
+  "scene": "res://levels/L008/L008.tscn",
+  "spawn_report": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+  },
+  "spawn_y_after": 0.0163904372602701,
+  "spawn_y_before": 0.0163904372602701,
+  "stage": "complete",
+  "status": "PASS",
+  "test": "real F3 developer jump and safe spawn"
+}

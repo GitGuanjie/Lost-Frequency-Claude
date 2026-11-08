@@ -1,0 +1,51 @@
+{
+  "stable_id": "L094",
+  "scene": "res://levels/L094/L094.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev5 source candidate",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "1930s stop-motion town, fountain, walkable hill to floating castle and night cycle",
+  "mechanics": [
+    "stop_motion_town",
+    "castle_hill",
+    "night_cycle",
+    "three_house_routes"
+  ],
+  "exits": [
+    {
+      "id": "L094>L007#2",
+      "to": "L007",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL",
+      "method": "some houses",
+      "source_quote": "some houses will lead to Level 7, Level 9 and Level 53",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-94",
+      "trigger_type": "door"
+    },
+    {
+      "id": "L094>L009#3",
+      "to": "L009",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL",
+      "method": "some houses",
+      "source_quote": "some houses will lead to Level 7, Level 9 and Level 53",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-94",
+      "trigger_type": "door"
+    },
+    {
+      "id": "L094>L053#4",
+      "to": "L053",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL",
+      "method": "some houses",
+      "source_quote": "some houses will lead to Level 7, Level 9 and Level 53",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-94",
+      "trigger_type": "door"
+    }
+  ],
+  "notes": "Compact exploration adaptation. Runtime Godot and Windows verification required; no automatic PLAYABLE promotion.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Animations, Smilers, Skin-Stealers, Hounds, male Deathmoths, Death Rats (night); Robo-Men, Animated King (castle)"
+}

@@ -1,0 +1,33 @@
+{
+  "stable_id": "L998",
+  "scene": "res://levels/L998/L998.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L737",
+    "from_L002",
+    "from_L011"
+  ],
+  "signature": "Cloud plane grading from white to stormblack",
+  "mechanics": [
+    "graduated_clouds",
+    "office_stairwell",
+    "storm_gradient"
+  ],
+  "exits": [
+    {
+      "id": "L998>EXT#1",
+      "to": "EXT",
+      "basis": "SOURCE",
+      "confidence": "UNKNOWN+DANGEROUS",
+      "method": "walk outward across the cloud plane through the grey and black zones and the storm",
+      "source_quote": "it has never once been known where the edges of Level 998 actually lead to",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-998",
+      "trigger_type": "walk_in"
+    }
+  ],
+  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Smilers, Dullers, entity-17-infected creatures, Woodlins (reported); animalistic types rumoured"
+}

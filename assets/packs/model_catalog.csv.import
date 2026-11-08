@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://4k1slxk2f0s7"
+
+[deps]
+
+files=["res://assets/packs/model_catalog.pack.translation", "res://assets/packs/model_catalog.triangles.translation", "res://assets/packs/model_catalog.geometries.translation", "res://assets/packs/model_catalog.size.translation", "res://assets/packs/model_catalog.size.translation", "res://assets/packs/model_catalog.size.translation", "res://assets/packs/model_catalog.bytes.translation"]
+
+source_file="res://assets/packs/model_catalog.csv"
+dest_files=["res://assets/packs/model_catalog.pack.translation", "res://assets/packs/model_catalog.triangles.translation", "res://assets/packs/model_catalog.geometries.translation", "res://assets/packs/model_catalog.size.translation", "res://assets/packs/model_catalog.size.translation", "res://assets/packs/model_catalog.size.translation", "res://assets/packs/model_catalog.bytes.translation"]
+
+[params]
+
+compress=true
+delimiter=0

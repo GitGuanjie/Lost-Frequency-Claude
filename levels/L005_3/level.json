@@ -1,0 +1,42 @@
+{
+  "stable_id": "L005_3",
+  "scene": "res://levels/L005_3/L005_3.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L005",
+    "from_L005_3"
+  ],
+  "signature": "Promethean marble library with stacked reading galleries",
+  "mechanics": [
+    "tall_library",
+    "self_loop_wooden_door",
+    "Hotel_exit"
+  ],
+  "exits": [
+    {
+      "id": "L005_3>L005_3#1",
+      "to": "L005_3",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL",
+      "method": "wooden door at a dead-end corridor",
+      "source_quote": "a chance that a corridor will lead to a dead end with a wooden door",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-5-3",
+      "trigger_type": "door"
+    },
+    {
+      "id": "L005_3>L005#2",
+      "to": "L005",
+      "basis": "SOURCE",
+      "confidence": "UNKNOWN",
+      "method": "not explicitly stated",
+      "source_quote": "left the Promethean Library",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-5-3",
+      "trigger_type": "unknown"
+    }
+  ],
+  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Library Mind (bodiless); Gentleman only as narrative vignette"
+}

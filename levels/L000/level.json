@@ -4,7 +4,14 @@
   "status": "PLAYABLE",
   "qa_status": "ENGINE_SMOKE_PASS (16/16 level checks, bot fired L000>L001#1); stills reviewed by integrator (AI); human review pending",
   "arrivals": [
-    "start"
+    "start",
+    "from_L000_1",
+    "from_L013",
+    "from_L021",
+    "from_L025",
+    "from_L197",
+    "from_L000_2",
+    "from_L101"
   ],
   "signature": "Peripheral-shift streaming maze of mono-yellow rooms, halls and sunken stair rooms; arches (stable rest), pillar lattices, hole grids, silent blackout zones with ankle-deep fluid, and sealing Red Rooms.",
   "mechanics": [
@@ -46,6 +53,18 @@
     }
   ],
   "entity_policy": "NO ENTITY PER SOURCE (existence unknown). Whispers/scratching are sound-only.",
-  "notes": "Flashlight is unavailable in a story run until one is found (wanderers arrive unprepared). Exit placement is seeded: arch chunks 50%, distant normal chunks 7%. QA fixture forces one flickering wall in chunk (1,0). ADAPTATION: one damp note near the wake-up point paraphrases the page's exit advice (flickering wall) and the arch-room stability fact; it is a clue device, not a companion (Isolation Effect respected).",
-  "procedural": true
+  "notes": "Flashlight is unavailable in a story run until one is found (wanderers arrive unprepared). Exit placement is seeded: arch chunks 50%, distant normal chunks 7%. QA fixture forces one flickering wall in chunk (1,0). ADAPTATION: one damp note near the wake-up point paraphrases the page's exit advice (flickering wall) and the arch-room stability fact; it is a clue device, not a companion (Isolation Effect respected). Dev6: new inbound provisional start-position aliases (from_L000_2) are not custom-designed entrance geometry.",
+  "procedural": true,
+  "arrival_aliases": [
+    "from_L000_1",
+    "from_L013",
+    "from_L021",
+    "from_L025",
+    "from_L197",
+    "from_L000_2",
+    "from_L101"
+  ],
+  "provisional_arrival_notes": [
+    "dev7: from_L101 currently maps to safe start position; not a dedicated architectural ingress."
+  ]
 }

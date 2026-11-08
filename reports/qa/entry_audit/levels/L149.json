@@ -1,0 +1,36 @@
+{
+  "build_ms": 667,
+  "engine_native": true,
+  "level": "L149",
+  "manifest_status": "IN_DEVELOPMENT",
+  "metrics": {
+    "audio_players": 3,
+    "collision_shapes": 41,
+    "exit_triggers": 2,
+    "footprint_x": 394.5,
+    "footprint_y": 11.9,
+    "footprint_z": 70.0,
+    "glb_models": 8,
+    "interactables": 5,
+    "lights": 4,
+    "materials": 21,
+    "mesh_instances": 46,
+    "multimesh_instances": 0,
+    "triangles": 10244
+  },
+  "reason": "loaded via real developer transition, safe player spawn, 15 physics ticks",
+  "scene": "res://levels/L149/L149.tscn",
+  "spawn_report": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+  },
+  "spawn_y_after": 0.0189751163125038,
+  "spawn_y_before": 0.0189751163125038,
+  "stage": "complete",
+  "status": "PASS",
+  "test": "real F3 developer jump and safe spawn"
+}

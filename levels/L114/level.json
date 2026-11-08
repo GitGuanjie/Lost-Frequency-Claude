@@ -1,0 +1,108 @@
+{
+ "stable_id": "L114",
+ "scene": "res://levels/L114/L114.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": true,
+ "arrivals": [
+  "start",
+  "from_L029",
+  "from_L013"
+ ],
+ "signature": "Your childhood bedroom at nine to twelve, lit a dim sterile white, with the same blue floral single bed for everyone, grins waiting in the dark under it, mould creeping across the ceiling, and a door left ajar onto an infinite black void with a M.E.G. rope tied to the knob.",
+ "mechanics": [
+  "seeded_childhood_bedroom",
+  "fused_second_room_split_level",
+  "light_switch_only_working_appliance",
+  "smilers_emerge_in_darkness",
+  "dead_appliances",
+  "bed_bug_bites",
+  "sleep_on_bed_exit",
+  "bored_phrase_exit",
+  "low_gravity_void_no_swimming_up",
+  "meg_rope_climb_back",
+  "stress_mould_growth_8h",
+  "window_counterpart_swap"
+ ],
+ "exits": [
+  {
+   "id": "L114>L009#1",
+   "to": "L009",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "method": "Fall asleep in the room",
+   "source_quote": "Fall asleep in this room, and you will awake on a street on Level 9 .",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-114",
+   "trigger_type": "sleep",
+   "trigger": "interact",
+   "label": "Fell asleep on the blue floral bed and woke on a street",
+   "source_section": "Entrances And Exits",
+   "hint": "The bed is the one thing that is the same for everyone. Lie down; it is hard to stay awake in this light.",
+   "arrival": "from_L114"
+  },
+  {
+   "id": "L114>L025#2",
+   "to": "L025",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "method": "Say 'I'm so bored...' in a dull voice",
+   "source_quote": "Saying \"I'm so bored…\" in a dull voice leads you to Level 25 .",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-114",
+   "trigger_type": "condition",
+   "trigger": "interact",
+   "label": "Said \"I'm so bored...\" in a dull voice",
+   "source_section": "Entrances And Exits",
+   "hint": "Nothing here works. Nothing here happens. Say so.",
+   "arrival": "from_L114"
+  },
+  {
+   "id": "L114>EXT#3",
+   "to": "EXT",
+   "basis": "SOURCE",
+   "confidence": "DANGEROUS+ONE-WAY",
+   "method": "Doorway to void: infinite drift, death by dehydration",
+   "source_quote": "wanderers who fall out of reach of the doorway will continue drifting down into the darkness",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-114",
+   "trigger_type": "fall",
+   "trigger": "fall",
+   "label": "Drifted beyond the rope into the void (not a level exit)",
+   "source_section": "Properties of The Void",
+   "hint": "The rope is about 150 yards long.",
+   "implemented_as": "fail_state",
+   "to_label": "the void (no destination)"
+  }
+ ],
+ "notes": "SOURCE: childhood bedroom of a 9-12 year old, desynchronous (one wanderer); arrival in the doorway facing in, door behind slightly ajar onto a black void; the same single bed (wooden frame, blue floral sheet) with bed bugs; appliances dead, brought devices work (flashlight allowed); the light switch is the only working appliance, on by default, dim sterile white; Smilers under the bed and in dark spaces emerge if the light goes off; void enterable, breathable, low gravity, no swimming up; ~150 yd (137 m) M.E.G. rope tied to the doorknob; Stress Mould on walls/ceiling grows, hazardous after ~8 h; windows only if the childhood room had them; no bases; exits: sleep -> Level 9 street, 'I'm so bored...' in a dull voice -> Level 25. ADAPTATION: the room is seeded (size 3.7-4.4 x 4.4-5.1 m, 2.42-2.56 m ceiling, window 60%, furniture) because every wanderer's room differs; 70% of seeds fuse a second childhood room (other wallpaper and floor) through the east wall at +0.36/+0.54/-0.36 m (2-3 steps) for 'several rooms fused together erratically'; generic childhood-room furniture (school desk and chair, bookshelf, nightstand, dresser, toy crates, closet with white sliding doors) is ours - interview details (pink stool, poster, duck lamp) are testimony and are not used; one in-room hour = 45 s of play for mould growth; Smilers attack for 30 health every 3 s after 6.5 s of darkness (no combat); the door swings wide when you step onto the threshold and the rope hangs from its outer knob; reaching the top of the rope hauls you over the threshold; drifting 2.5 m below the rope's end blacks out and kills (the source's dehydration, compressed). The edge L114>EXT#3 is kept as declared but implemented as a fail state, not a trigger: the void has no destination. The shared DEV26 annex cues are relocated by the level into the room (on_player_ready). QA fixture: the doze takes 1.2 s instead of 7 s.",
+ "entity_policy": "SOURCED ENTITIES ONLY: Smilers (grins in the dark under the bed and in the closet gap; emerge only while the light is off), Stress Mould (growing patches), window counterparts (only when the seeded room has a window), bed bugs (bites when lying down). The void stays empty, as the page says.",
+ "fail_states": [
+  {
+   "kind": "void_drift",
+   "label": "Drifting below the end of the 137 m M.E.G. rope: lost in the void",
+   "basis": "SOURCE",
+   "source_quote": "it is assumed that those lost within eventually die of dehydration"
+  },
+  {
+   "kind": "smilers",
+   "label": "Smilers emerge and attack while the light is off",
+   "basis": "SOURCE",
+   "source_quote": "turning off the lights in the room will allow them to emerge"
+  },
+  {
+   "kind": "stress_mould",
+   "label": "Stress Mould becomes hazardous after about eight hours",
+   "basis": "SOURCE",
+   "source_quote": "levels of mould in the room exceed safety limits after approximately 8 hours"
+  },
+  {
+   "kind": "window",
+   "label": "Touching a window replaced by its malevolent counterpart",
+   "basis": "ADAPTATION",
+   "source_quote": "The windows in the room are occasionally replaced by their malevolent liminal counterparts."
+  }
+ ],
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
+}

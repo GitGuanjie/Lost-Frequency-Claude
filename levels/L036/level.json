@@ -1,0 +1,45 @@
+{
+  "stable_id": "L036",
+  "scene": "res://levels/L036/L036.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "UNVERIFIED Godot import, physics QA, GPU screenshots and human review pending",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L011",
+    "from_L009",
+    "from_L011_2"
+  ],
+  "signature": "A monochrome deserted airport through numbered baggage belts and empty check-in counters, opening to a 26-terminal A-Z concourse, contradictory signs, unitless boarding clocks and a gate leading only to the intermediary Airplane.",
+  "mechanics": [
+    "authored_eight_baggage_belts",
+    "empty_unstaffed_checkin",
+    "all_26_lettered_terminal_areas",
+    "contradictory_signs_not_exits",
+    "unitless_boarding_clock",
+    "intermediary_sublevel_gate_only",
+    "no_hostile_entities"
+  ],
+  "exits": [
+    {
+      "id": "L036>L036_1#1",
+      "to": "L036_1",
+      "trigger": "interact",
+      "label": "Board an active flight into intermediary Airplane (Sublevel 36.1)",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "source_section": "Check-in / Entrances and Exits",
+      "source_quote": "Every gate door leads to an instance of Sublevel 36.1",
+      "arrival": "from_L036",
+      "hint": "Wait for the flight counter to fall within the boarding window; the destination beyond the Airplane is unknown."
+    }
+  ],
+  "entity_policy": "NONE. Do not spawn hostile entities, invent fixed destinations, add real time or day-night cycle.",
+  "notes": "Dossier docs/canon/levels/L036.md, Endrew1, CC BY-SA 3.0. Adaptation: finite authored 26-terminal slice representing an indefinitely large airport; eight belts, multiple counters, 26 gate areas. Flight timing has abstract unit counts with no real in-world time scale. There is no playable 36.1 yet and the exit remains a release boundary. No QA claims.",
+  "arrival_aliases": [
+    "from_L011_2"
+  ],
+  "provisional_arrival_notes": [
+    "dev7: from_L011_2 currently maps to safe start position; not a dedicated architectural ingress."
+  ]
+}

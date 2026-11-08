@@ -1,4 +1,5 @@
 extends LevelBase
+const ModelDress := preload("res://core/world/ModelDress.gd")
 ## Level 5 — "Terror Hotel" (Backrooms Wikidot rev 184, accessed 2026-11-04; cite:
 ## "Level 5 - "Terror Hotel"" by Stretchsterz, CC BY-SA 3.0). Dossier:
 ## docs/canon/levels/L005.md. Every system maps to a SOURCE FACT row or an
@@ -67,6 +68,8 @@ var _mj := 0
 var _shove := Vector3.ZERO
 var _shove_t := 0.0
 var _zone_rev := ""
+var _service_clues: Array = []
+var _service_complete := false
 
 
 func build() -> void:
@@ -134,6 +137,50 @@ func build() -> void:
 	add_landmark("The Beverly Room", TABLE)
 	add_landmark("Boiler Room - Housekeeping post", Vector3(5.0, -5.0, 17.4))
 	add_landmark("The way down to Level 6", Vector3(16.0, -10.0, 98.7))
+	add_shot("service_records", Vector3(18.9, 1.7, 15.4), Vector3(17.9, 1.3, 13.4))
+
+
+	ModelDress.decorate(self, "L005")
+	_install_housekeeping_records()
+
+## OPTIONAL ADAPTATION: the hotel cannot be solved with a three-key puzzle.
+## These records are collectibles with localized sound and persistent journal
+## flags; they never override the source-defined doors, lift or Boiler Room exits.
+func _install_housekeeping_records() -> void:
+	var clues := [
+		{"key": "lobby", "p": Vector3(-3.2, 1.25, 2.6), "title": "Hotel guest register", "line": "The arrival column has no dates, only floor numbers that repeat."},
+		{"key": "ballroom", "p": Vector3(17.9, 1.3, 13.4), "title": "Beverly Room service slip", "line": "A dining order was collected before it was placed."},
+		{"key": "boiler", "p": Vector3(5.0, -4.2, 17.4), "title": "Boiler maintenance log", "line": "The temperature rises when no fuel has been added."}
+	]
+	var k := kit("HousekeepingRecords")
+	for item in clues:
+		var pt: Vector3 = item["p"]
+		var key: String = item["key"]
+		_service_clues.append(key)
+		k.box(pt, Vector3(0.46, 0.04, 0.32), "l5_walnut", GeoKit.ALL, false)
+		add_interactable(pt + Vector3(0, 0.18, 0), Vector3(0.85, 0.85, 0.85), "Inspect a housekeeping record", func(_p): _read_housekeeping(key, str(item["title"]), str(item["line"])))
+	k.commit()
+	add_landmark("Guest register", Vector3(-3.2, 0.0, 2.6))
+	add_landmark("Housekeeping service slip", Vector3(17.9, 0.0, 13.4))
+	add_landmark("Maintenance record in the boiler", Vector3(5.0, -5.0, 17.4))
+	_service_complete = _housekeeping_count() == 3
+
+
+func _housekeeping_count() -> int:
+	var n := 0
+	for key in _service_clues:
+		if SaveService.flag(stable_id, "service_" + key, false):
+			n += 1
+	return n
+
+
+func _read_housekeeping(key: String, title: String, line: String) -> void:
+	SaveService.set_flag(stable_id, "service_" + key, true)
+	Overlay.toast("%s: %s (%d/3)" % [title, line, _housekeeping_count()], 5.0)
+	if _housekeeping_count() == 3 and not _service_complete:
+		_service_complete = true
+		Overlay.subtitle("[the records have different handwriting, but the same signature]", 5.0)
+		SaveService.set_flag(stable_id, "service_all_read", true)
 
 
 func _audio() -> void:
@@ -716,6 +763,32 @@ func _moths(pos: Vector3, n: Vector3) -> void:
 
 # ----------------------------------------------------------------- QA
 
+func qa_self_test() -> Array:
+	var result: Array = []
+	# DEV13: the lower inspection deck and both aligned B1 entry catwalks
+	# must have real StaticBody colliders, not only graph declarations.
+	var physics := get_world_3d().direct_space_state
+	var lower := physics.intersect_ray(PhysicsRayQueryParameters3D.create(
+		Vector3(-10.1, -6.1, 24.5), Vector3(-10.1, -9.1, 24.5), 1))
+	var entry_a := physics.intersect_ray(PhysicsRayQueryParameters3D.create(
+		Vector3(-1.5, -3.4, 15.0), Vector3(-1.5, -6.3, 15.0), 1))
+	var entry_b := physics.intersect_ray(PhysicsRayQueryParameters3D.create(
+		Vector3(0.0, -3.4, 19.5), Vector3(0.0, -6.3, 19.5), 1))
+	result.append({"what": "DEV13 B1 inspection annex lower deck collision at -8.1m",
+		"ok": not lower.is_empty() and absf(float(lower.get("position", Vector3.ZERO).y) + 8.1) < 0.2,
+		"detail": lower.get("position", Vector3.ZERO)})
+	result.append({"what": "DEV13 both B1 annex entry catwalks have walkable collisions",
+		"ok": not entry_a.is_empty() and not entry_b.is_empty()
+			and absf(float(entry_a.get("position", Vector3.ZERO).y) + 5.0) < 0.2
+			and absf(float(entry_b.get("position", Vector3.ZERO).y) + 5.0) < 0.2,
+		"detail": [entry_a.get("position", Vector3.ZERO), entry_b.get("position", Vector3.ZERO)]})
+	result.append({"what": "three distinct housekeeping records", "ok": _service_clues == ["lobby", "ballroom", "boiler"]})
+	for key in _service_clues:
+		_read_housekeeping(key, "QA", "Optional evidence")
+	result.append({"what": "service evidence persists without altering exits", "ok": _housekeeping_count() == 3 and bool(SaveService.flag(stable_id, "service_all_read", false))})
+	return result
+
+
 func qa_capture_plan() -> Array:
 	var plan: Array = []
 	plan.append({"name": "hall", "pos": Vector3(-2.6, 1.62, 0.7), "target": Vector3(-4.9, 1.45, 22.0)})
@@ -723,6 +796,7 @@ func qa_capture_plan() -> Array:
 	plan.append({"name": "ballroom_wide", "pos": Vector3(4.6, 1.75, 21.2), "target": Vector3(17.5, 3.4, 9.0)})
 	plan.append({"name": "ring", "pos": Vector3(1.6, 1.62, 26.5), "target": Vector3(1.6, 1.5, 4.0)})
 	plan.append({"name": "boiler", "pos": Vector3(6.0, -3.3, 21.5), "target": Vector3(19.0, -3.8, 9.5)})
+	plan.append({"name": "dev13_b1_annex", "pos": Vector3(-10.0, -6.1, 24.5), "target": Vector3(-1.1, -4.2, 19.5)})
 	plan.append({"name": "furnace", "pos": Vector3(20.0, -4.4, 62.6), "target": Vector3(15.0, -5.2, 75.0)})
 	plan.append({"name": "deep", "pos": Vector3(16.0, -4.7, 77.0), "target": Vector3(16.0, -7.6, 92.0)})
 	var cs := _corridor_shot()

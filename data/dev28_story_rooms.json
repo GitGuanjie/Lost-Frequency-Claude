@@ -1,0 +1,1446 @@
+{
+  "version": "dev28",
+  "canon_exits_modified": false,
+  "sites": [
+    {
+      "id": "L015",
+      "title": "Machine-city maintenance",
+      "tint": [
+        0.38,
+        0.8,
+        0.94
+      ],
+      "sound": "fluorescent_hum",
+      "source": "ADAPTATION",
+      "cues": [
+        {
+          "id": "l015_1",
+          "pos": [
+            0,
+            0,
+            -46
+          ],
+          "prompt": "Read the maintenance ledger",
+          "description": "The desk is powered, but no responsible operator is listed.",
+          "kind": "inspect",
+          "props": [
+            {
+              "pack": "space-kit",
+              "model": "machine-wireless",
+              "height": 0.75,
+              "pos": [
+                -2.2,
+                0.0,
+                -47.4
+              ],
+              "yaw": 0.0,
+              "solid": false
+            },
+            {
+              "pack": "space-kit",
+              "model": "desk-computer",
+              "height": 0.75,
+              "pos": [
+                2.15,
+                0.0,
+                -47.35
+              ],
+              "yaw": 90.0,
+              "solid": false
+            },
+            {
+              "pack": "prototype-kit",
+              "model": "pipe-section",
+              "height": 0.75,
+              "pos": [
+                2.1,
+                0.0,
+                -44.3
+              ],
+              "yaw": 180.0,
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l015_2",
+          "pos": [
+            0,
+            0,
+            24
+          ],
+          "prompt": "Test the inactive relay",
+          "description": "The local warning strip lights, while the larger machinery remains silent.",
+          "kind": "switch",
+          "props": [
+            {
+              "pack": "space-kit",
+              "model": "desk-computer",
+              "height": 0.75,
+              "pos": [
+                -2.2,
+                0.0,
+                22.6
+              ],
+              "yaw": 90.0,
+              "solid": false
+            },
+            {
+              "pack": "prototype-kit",
+              "model": "pipe-section",
+              "height": 0.75,
+              "pos": [
+                2.15,
+                0.0,
+                22.65
+              ],
+              "yaw": 180.0,
+              "solid": false
+            },
+            {
+              "pack": "space-kit",
+              "model": "machine-wireless",
+              "height": 0.75,
+              "pos": [
+                2.1,
+                0.0,
+                25.7
+              ],
+              "yaw": 270.0,
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l015_3",
+          "pos": [
+            0,
+            0,
+            89
+          ],
+          "prompt": "Listen through the conduit",
+          "description": "A distant repeated metallic rhythm does not seem to come from the same floor.",
+          "kind": "listen",
+          "props": [
+            {
+              "pack": "prototype-kit",
+              "model": "pipe-section",
+              "height": 0.65,
+              "pos": [
+                -2.2,
+                0.0,
+                87.6
+              ],
+              "yaw": 180.0,
+              "solid": false
+            },
+            {
+              "pack": "space-kit",
+              "model": "machine-wireless",
+              "height": 0.65,
+              "pos": [
+                2.15,
+                0.0,
+                87.65
+              ],
+              "yaw": 270.0,
+              "solid": false
+            },
+            {
+              "pack": "space-kit",
+              "model": "desk-computer",
+              "height": 0.65,
+              "pos": [
+                2.1,
+                0.0,
+                90.7
+              ],
+              "yaw": 0.0,
+              "solid": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L018",
+      "title": "Preschool memories",
+      "tint": [
+        0.95,
+        0.72,
+        0.43
+      ],
+      "sound": "whisper",
+      "source": "ADAPTATION",
+      "cues": [
+        {
+          "id": "l018_1",
+          "pos": [
+            0,
+            0,
+            -23
+          ],
+          "prompt": "Examine the drawing",
+          "description": "The artwork resembles a memory, but no child has signed it.",
+          "kind": "inspect",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "books",
+              "height": 0.75,
+              "pos": [
+                -2.2,
+                0.0,
+                -24.4
+              ],
+              "yaw": 0.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "bookcaseopenlow",
+              "height": 0.75,
+              "pos": [
+                2.15,
+                0.0,
+                -24.35
+              ],
+              "yaw": 90.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "chair",
+              "height": 0.75,
+              "pos": [
+                2.1,
+                0.0,
+                -21.3
+              ],
+              "yaw": 180.0,
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l018_2",
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "prompt": "Turn the toy projector",
+          "description": "Colours briefly brighten around the toys and slowly fade.",
+          "kind": "switch",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "bookcaseopenlow",
+              "height": 0.75,
+              "pos": [
+                -2.2,
+                0.0,
+                -1.4
+              ],
+              "yaw": 90.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "chair",
+              "height": 0.75,
+              "pos": [
+                2.15,
+                0.0,
+                -1.35
+              ],
+              "yaw": 180.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "books",
+              "height": 0.75,
+              "pos": [
+                2.1,
+                0.0,
+                1.7
+              ],
+              "yaw": 270.0,
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l018_3",
+          "pos": [
+            0,
+            0,
+            22
+          ],
+          "prompt": "Listen beside the bookcase",
+          "description": "A reassuring voice dissolves before any words can be understood.",
+          "kind": "listen",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "chair",
+              "height": 0.65,
+              "pos": [
+                -2.2,
+                0.0,
+                20.6
+              ],
+              "yaw": 180.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "books",
+              "height": 0.65,
+              "pos": [
+                2.15,
+                0.0,
+                20.65
+              ],
+              "yaw": 270.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "bookcaseopenlow",
+              "height": 0.65,
+              "pos": [
+                2.1,
+                0.0,
+                23.7
+              ],
+              "yaw": 0.0,
+              "solid": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L026",
+      "title": "Adventure / SS Fun =)",
+      "tint": [
+        0.59,
+        1,
+        0.54
+      ],
+      "sound": "creak",
+      "source": "ADAPTATION",
+      "cues": [
+        {
+          "id": "l026_1",
+          "pos": [
+            0,
+            0,
+            -32
+          ],
+          "prompt": "Check a cabin roster",
+          "description": "The vessel name has been overwritten more than once.",
+          "kind": "inspect",
+          "props": [
+            {
+              "pack": "food-kit",
+              "model": "soda-can",
+              "height": 0.75,
+              "pos": [
+                -2.2,
+                0.0,
+                -33.4
+              ],
+              "yaw": 0.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "chair",
+              "height": 0.75,
+              "pos": [
+                2.15,
+                0.0,
+                -33.35
+              ],
+              "yaw": 90.0,
+              "solid": false
+            },
+            {
+              "pack": "prototype-kit",
+              "model": "pipe-section",
+              "height": 0.75,
+              "pos": [
+                2.1,
+                0.0,
+                -30.3
+              ],
+              "yaw": 180.0,
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l026_2",
+          "pos": [
+            0,
+            0,
+            23
+          ],
+          "prompt": "Test the power circuit",
+          "description": "The emergency strip responds despite the absence of a generator.",
+          "kind": "switch",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "chair",
+              "height": 0.75,
+              "pos": [
+                -2.2,
+                0.0,
+                21.6
+              ],
+              "yaw": 90.0,
+              "solid": false
+            },
+            {
+              "pack": "prototype-kit",
+              "model": "pipe-section",
+              "height": 0.75,
+              "pos": [
+                2.15,
+                0.0,
+                21.65
+              ],
+              "yaw": 180.0,
+              "solid": false
+            },
+            {
+              "pack": "food-kit",
+              "model": "soda-can",
+              "height": 0.75,
+              "pos": [
+                2.1,
+                0.0,
+                24.7
+              ],
+              "yaw": 270.0,
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l026_3",
+          "pos": [
+            -7,
+            4,
+            21
+          ],
+          "prompt": "Listen above the deck",
+          "description": "The sea and the distant party cannot be located in the same direction.",
+          "kind": "listen",
+          "props": [
+            {
+              "pack": "prototype-kit",
+              "model": "pipe-section",
+              "height": 0.65,
+              "pos": [
+                -9.2,
+                4.0,
+                19.6
+              ],
+              "yaw": 180.0,
+              "solid": false
+            },
+            {
+              "pack": "food-kit",
+              "model": "soda-can",
+              "height": 0.65,
+              "pos": [
+                -4.85,
+                4.0,
+                19.65
+              ],
+              "yaw": 270.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "chair",
+              "height": 0.65,
+              "pos": [
+                -4.9,
+                4.0,
+                22.7
+              ],
+              "yaw": 0.0,
+              "solid": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L031",
+      "title": "Roller rink",
+      "tint": [
+        0.96,
+        0.37,
+        0.74
+      ],
+      "sound": "fluorescent_hum",
+      "source": "ADAPTATION",
+      "cues": [
+        {
+          "id": "l031_1",
+          "pos": [
+            -60,
+            0,
+            30
+          ],
+          "prompt": "Examine the rental counter",
+          "description": "Pairs of skates are arranged, though very few people seem to use them.",
+          "kind": "inspect",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "chair",
+              "height": 0.75,
+              "pos": [
+                -62.2,
+                0.0,
+                28.6
+              ],
+              "yaw": 0.0,
+              "solid": false
+            },
+            {
+              "pack": "food-kit",
+              "model": "soda-can",
+              "height": 0.75,
+              "pos": [
+                -57.85,
+                0.0,
+                28.65
+              ],
+              "yaw": 90.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "bench",
+              "height": 0.75,
+              "pos": [
+                -57.9,
+                0.0,
+                31.7
+              ],
+              "yaw": 180.0,
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l031_2",
+          "pos": [
+            47,
+            0,
+            -9
+          ],
+          "prompt": "Switch the arcade overlook lights",
+          "description": "Pink and blue lights change the gallery above the cabinet row.",
+          "kind": "switch",
+          "props": [
+            {
+              "pack": "food-kit",
+              "model": "soda-can",
+              "height": 0.75,
+              "pos": [
+                44.8,
+                0.0,
+                -10.4
+              ],
+              "yaw": 90.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "bench",
+              "height": 0.75,
+              "pos": [
+                49.15,
+                0.0,
+                -10.35
+              ],
+              "yaw": 180.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "chair",
+              "height": 0.75,
+              "pos": [
+                49.1,
+                0.0,
+                -7.3
+              ],
+              "yaw": 270.0,
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l031_3",
+          "pos": [
+            0,
+            0,
+            18
+          ],
+          "prompt": "Listen at the rink centre",
+          "description": "A familiar melody echoes long after the DJ has changed the track.",
+          "kind": "listen",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "bench",
+              "height": 0.65,
+              "pos": [
+                -2.2,
+                0.0,
+                16.6
+              ],
+              "yaw": 180.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "chair",
+              "height": 0.65,
+              "pos": [
+                2.15,
+                0.0,
+                16.65
+              ],
+              "yaw": 270.0,
+              "solid": false
+            },
+            {
+              "pack": "food-kit",
+              "model": "soda-can",
+              "height": 0.65,
+              "pos": [
+                2.1,
+                0.0,
+                19.7
+              ],
+              "yaw": 0.0,
+              "solid": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L049",
+      "title": "Flooded trench",
+      "tint": [
+        0.48,
+        0.67,
+        0.89
+      ],
+      "sound": "wind",
+      "source": "ADAPTATION",
+      "cues": [
+        {
+          "id": "l049_1",
+          "pos": [
+            0,
+            -3,
+            -84
+          ],
+          "prompt": "Read the wet route notes",
+          "description": "A warning repeats the same instruction: remain below the parapet.",
+          "kind": "inspect",
+          "props": [
+            {
+              "pack": "prototype-kit",
+              "model": "crate",
+              "height": 0.75,
+              "pos": [
+                -2.2,
+                -3.0,
+                -85.4
+              ],
+              "yaw": 0.0,
+              "solid": false
+            },
+            {
+              "pack": "mini-dungeon",
+              "model": "barrel",
+              "height": 0.75,
+              "pos": [
+                2.15,
+                -3.0,
+                -85.35
+              ],
+              "yaw": 90.0,
+              "solid": false
+            },
+            {
+              "pack": "graveyard-kit",
+              "model": "debris-wood",
+              "height": 0.749665625332193,
+              "pos": [
+                2.1,
+                -3.0,
+                -82.3
+              ],
+              "yaw": 180.0,
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l049_2",
+          "pos": [
+            0,
+            -3,
+            5
+          ],
+          "prompt": "Check a bunker signal",
+          "description": "The emergency light works intermittently, as if it is responding to the weather.",
+          "kind": "switch",
+          "props": [
+            {
+              "pack": "mini-dungeon",
+              "model": "barrel",
+              "height": 0.75,
+              "pos": [
+                -2.2,
+                -3.0,
+                3.6
+              ],
+              "yaw": 90.0,
+              "solid": false
+            },
+            {
+              "pack": "graveyard-kit",
+              "model": "debris-wood",
+              "height": 0.749665625332193,
+              "pos": [
+                2.15,
+                -3.0,
+                3.65
+              ],
+              "yaw": 180.0,
+              "solid": false
+            },
+            {
+              "pack": "prototype-kit",
+              "model": "crate",
+              "height": 0.75,
+              "pos": [
+                2.1,
+                -3.0,
+                6.7
+              ],
+              "yaw": 270.0,
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l049_3",
+          "pos": [
+            0,
+            -3,
+            68
+          ],
+          "prompt": "Listen near the sandbags",
+          "description": "The wind becomes distant; water can be heard beneath the earth.",
+          "kind": "listen",
+          "props": [
+            {
+              "pack": "graveyard-kit",
+              "model": "debris-wood",
+              "height": 0.65,
+              "pos": [
+                -2.2,
+                -3.0,
+                66.6
+              ],
+              "yaw": 180.0,
+              "solid": false
+            },
+            {
+              "pack": "prototype-kit",
+              "model": "crate",
+              "height": 0.65,
+              "pos": [
+                2.15,
+                -3.0,
+                66.65
+              ],
+              "yaw": 270.0,
+              "solid": false
+            },
+            {
+              "pack": "mini-dungeon",
+              "model": "barrel",
+              "height": 0.65,
+              "pos": [
+                2.1,
+                -3.0,
+                69.7
+              ],
+              "yaw": 0.0,
+              "solid": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L055",
+      "title": "Pit Stop restaurant",
+      "tint": [
+        1,
+        0.72,
+        0.41
+      ],
+      "sound": "creak",
+      "source": "ADAPTATION",
+      "cues": [
+        {
+          "id": "l055_1",
+          "pos": [
+            0,
+            0,
+            -40
+          ],
+          "prompt": "Inspect the safe room",
+          "description": "The table has been set even though no one is working here.",
+          "kind": "inspect",
+          "props": [
+            {
+              "pack": "food-kit",
+              "model": "plate",
+              "height": 0.42387425781355564,
+              "pos": [
+                -2.2,
+                0.0,
+                -41.4
+              ],
+              "yaw": 0.0,
+              "solid": false
+            },
+            {
+              "pack": "food-kit",
+              "model": "cup",
+              "height": 0.75,
+              "pos": [
+                2.15,
+                0.0,
+                -41.35
+              ],
+              "yaw": 90.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "chair",
+              "height": 0.75,
+              "pos": [
+                2.1,
+                0.0,
+                -38.3
+              ],
+              "yaw": 180.0,
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l055_2",
+          "pos": [
+            0,
+            0,
+            21
+          ],
+          "prompt": "Try the empty switch",
+          "description": "A small light warms the room without revealing the source of the sunlight.",
+          "kind": "switch",
+          "props": [
+            {
+              "pack": "food-kit",
+              "model": "cup",
+              "height": 0.75,
+              "pos": [
+                -2.2,
+                0.0,
+                19.6
+              ],
+              "yaw": 90.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "chair",
+              "height": 0.75,
+              "pos": [
+                2.15,
+                0.0,
+                19.65
+              ],
+              "yaw": 180.0,
+              "solid": false
+            },
+            {
+              "pack": "food-kit",
+              "model": "plate",
+              "height": 0.42387425781355564,
+              "pos": [
+                2.1,
+                0.0,
+                22.7
+              ],
+              "yaw": 270.0,
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l055_3",
+          "pos": [
+            0,
+            0,
+            56
+          ],
+          "prompt": "Listen beyond the booths",
+          "description": "Floorboards creak in a room whose furniture no longer matches your memory.",
+          "kind": "listen",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "chair",
+              "height": 0.65,
+              "pos": [
+                -2.2,
+                0.0,
+                54.6
+              ],
+              "yaw": 180.0,
+              "solid": false
+            },
+            {
+              "pack": "food-kit",
+              "model": "plate",
+              "height": 0.42387425781355564,
+              "pos": [
+                2.15,
+                0.0,
+                54.65
+              ],
+              "yaw": 270.0,
+              "solid": false
+            },
+            {
+              "pack": "food-kit",
+              "model": "cup",
+              "height": 0.65,
+              "pos": [
+                2.1,
+                0.0,
+                57.7
+              ],
+              "yaw": 0.0,
+              "solid": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L079",
+      "title": "Ghosts in the Machine",
+      "tint": [
+        0.58,
+        0.93,
+        0.81
+      ],
+      "sound": "fluorescent_hum",
+      "source": "ADAPTATION",
+      "cues": [
+        {
+          "id": "l079_1",
+          "pos": [
+            13,
+            0,
+            -37
+          ],
+          "prompt": "Read the office records",
+          "description": "A burned document refers to the unfinished second phase of an experiment.",
+          "kind": "inspect",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "desk",
+              "height": 0.75,
+              "pos": [
+                10.8,
+                0.0,
+                -38.4
+              ],
+              "yaw": 0.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "cabinetbed",
+              "height": 0.75,
+              "pos": [
+                15.15,
+                0.0,
+                -38.35
+              ],
+              "yaw": 90.0,
+              "solid": false
+            },
+            {
+              "pack": "space-kit",
+              "model": "desk-computer",
+              "height": 0.75,
+              "pos": [
+                15.1,
+                0.0,
+                -35.3
+              ],
+              "yaw": 180.0,
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l079_2",
+          "pos": [
+            -13,
+            0,
+            -21
+          ],
+          "prompt": "Test the equipment display",
+          "description": "An unfamiliar machine briefly displays a status, then clears itself.",
+          "kind": "switch",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "cabinetbed",
+              "height": 0.75,
+              "pos": [
+                -15.2,
+                0.0,
+                -22.4
+              ],
+              "yaw": 90.0,
+              "solid": false
+            },
+            {
+              "pack": "space-kit",
+              "model": "desk-computer",
+              "height": 0.75,
+              "pos": [
+                -10.85,
+                0.0,
+                -22.35
+              ],
+              "yaw": 180.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "desk",
+              "height": 0.75,
+              "pos": [
+                -10.9,
+                0.0,
+                -19.3
+              ],
+              "yaw": 270.0,
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l079_3",
+          "pos": [
+            0,
+            0,
+            41
+          ],
+          "prompt": "Listen beside the time machine",
+          "description": "The electrical sound resembles sobbing; the clocks do not agree.",
+          "kind": "listen",
+          "props": [
+            {
+              "pack": "space-kit",
+              "model": "desk-computer",
+              "height": 0.65,
+              "pos": [
+                -2.2,
+                0.0,
+                39.6
+              ],
+              "yaw": 180.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "desk",
+              "height": 0.65,
+              "pos": [
+                2.15,
+                0.0,
+                39.65
+              ],
+              "yaw": 270.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "cabinetbed",
+              "height": 0.65,
+              "pos": [
+                2.1,
+                0.0,
+                42.7
+              ],
+              "yaw": 0.0,
+              "solid": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L083",
+      "title": "Submarine deep decks",
+      "tint": [
+        0.53,
+        0.81,
+        0.95
+      ],
+      "sound": "water_bed",
+      "source": "ADAPTATION",
+      "cues": [
+        {
+          "id": "l083_1",
+          "pos": [
+            0,
+            0,
+            -38
+          ],
+          "prompt": "Check the provision stores",
+          "description": "The shelves remain stocked despite the crew having disappeared.",
+          "kind": "inspect",
+          "props": [
+            {
+              "pack": "space-kit",
+              "model": "machine-generator",
+              "height": 0.75,
+              "pos": [
+                -2.2,
+                0.0,
+                -39.4
+              ],
+              "yaw": 0.0,
+              "solid": false
+            },
+            {
+              "pack": "space-kit",
+              "model": "desk-computer",
+              "height": 0.75,
+              "pos": [
+                2.15,
+                0.0,
+                -39.35
+              ],
+              "yaw": 90.0,
+              "solid": false
+            },
+            {
+              "pack": "prototype-kit",
+              "model": "pipe-section",
+              "height": 0.75,
+              "pos": [
+                2.1,
+                0.0,
+                -36.3
+              ],
+              "yaw": 180.0,
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l083_2",
+          "pos": [
+            0,
+            4.2,
+            18
+          ],
+          "prompt": "Adjust bridge observation lamps",
+          "description": "The observation port glows, but its view seems impossibly deep.",
+          "kind": "switch",
+          "props": [
+            {
+              "pack": "space-kit",
+              "model": "desk-computer",
+              "height": 0.75,
+              "pos": [
+                -2.2,
+                4.2,
+                16.6
+              ],
+              "yaw": 90.0,
+              "solid": false
+            },
+            {
+              "pack": "prototype-kit",
+              "model": "pipe-section",
+              "height": 0.75,
+              "pos": [
+                2.15,
+                4.2,
+                16.65
+              ],
+              "yaw": 180.0,
+              "solid": false
+            },
+            {
+              "pack": "space-kit",
+              "model": "machine-generator",
+              "height": 0.75,
+              "pos": [
+                2.1,
+                4.2,
+                19.7
+              ],
+              "yaw": 270.0,
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l083_3",
+          "pos": [
+            0,
+            0,
+            50
+          ],
+          "prompt": "Listen against the pressure bulkhead",
+          "description": "Three knocks can be distinguished from the ocean noise.",
+          "kind": "listen",
+          "props": [
+            {
+              "pack": "prototype-kit",
+              "model": "pipe-section",
+              "height": 0.65,
+              "pos": [
+                -2.2,
+                0.0,
+                48.6
+              ],
+              "yaw": 180.0,
+              "solid": false
+            },
+            {
+              "pack": "space-kit",
+              "model": "machine-generator",
+              "height": 0.65,
+              "pos": [
+                2.15,
+                0.0,
+                48.65
+              ],
+              "yaw": 270.0,
+              "solid": false
+            },
+            {
+              "pack": "space-kit",
+              "model": "desk-computer",
+              "height": 0.65,
+              "pos": [
+                2.1,
+                0.0,
+                51.7
+              ],
+              "yaw": 0.0,
+              "solid": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L090",
+      "title": "Renovated house",
+      "tint": [
+        0.93,
+        0.82,
+        0.64
+      ],
+      "sound": "creak",
+      "source": "ADAPTATION",
+      "cues": [
+        {
+          "id": "l090_1",
+          "pos": [
+            0,
+            0,
+            -14
+          ],
+          "prompt": "Inspect the new paint",
+          "description": "Every surface seems freshly renovated, yet the finish does not match.",
+          "kind": "inspect",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "books",
+              "height": 0.75,
+              "pos": [
+                -2.2,
+                0.0,
+                -15.4
+              ],
+              "yaw": 0.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "lamproundfloor",
+              "height": 0.75,
+              "pos": [
+                2.15,
+                0.0,
+                -15.35
+              ],
+              "yaw": 90.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "chairdesk",
+              "height": 0.75,
+              "pos": [
+                2.1,
+                0.0,
+                -12.3
+              ],
+              "yaw": 180.0,
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l090_2",
+          "pos": [
+            0,
+            0,
+            8
+          ],
+          "prompt": "Toggle the hallway lamp",
+          "description": "The warm lamp reveals a different shadow pattern along the hallway.",
+          "kind": "switch",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "lamproundfloor",
+              "height": 0.75,
+              "pos": [
+                -2.2,
+                0.0,
+                6.6
+              ],
+              "yaw": 90.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "chairdesk",
+              "height": 0.75,
+              "pos": [
+                2.15,
+                0.0,
+                6.65
+              ],
+              "yaw": 180.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "books",
+              "height": 0.75,
+              "pos": [
+                2.1,
+                0.0,
+                9.7
+              ],
+              "yaw": 270.0,
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l090_3",
+          "pos": [
+            0,
+            4,
+            20
+          ],
+          "prompt": "Listen above the attic floor",
+          "description": "A faint noise comes from below the floor you are standing on.",
+          "kind": "listen",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "chairdesk",
+              "height": 0.65,
+              "pos": [
+                -2.2,
+                4.0,
+                18.6
+              ],
+              "yaw": 180.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "books",
+              "height": 0.65,
+              "pos": [
+                2.15,
+                4.0,
+                18.65
+              ],
+              "yaw": 270.0,
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "lamproundfloor",
+              "height": 0.65,
+              "pos": [
+                2.1,
+                4.0,
+                21.7
+              ],
+              "yaw": 0.0,
+              "solid": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

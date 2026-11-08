@@ -1,0 +1,36 @@
+{
+  "build_ms": 405,
+  "engine_native": true,
+  "level": "L256",
+  "manifest_status": "PLAYABLE",
+  "metrics": {
+    "audio_players": 8,
+    "collision_shapes": 113,
+    "exit_triggers": 0,
+    "footprint_x": 46.6,
+    "footprint_y": 11.5,
+    "footprint_z": 29.0,
+    "glb_models": 0,
+    "interactables": 25,
+    "lights": 15,
+    "materials": 52,
+    "mesh_instances": 75,
+    "multimesh_instances": 0,
+    "triangles": 5356
+  },
+  "reason": "loaded via real developer transition, safe player spawn, 15 physics ticks",
+  "scene": "res://levels/L256/L256.tscn",
+  "spawn_report": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+  },
+  "spawn_y_after": 4.50197219848633,
+  "spawn_y_before": 4.50197219848633,
+  "stage": "complete",
+  "status": "PASS",
+  "test": "real F3 developer jump and safe spawn"
+}

@@ -1,0 +1,61 @@
+{
+  "stable_id": "L320",
+  "scene": "res://levels/L320/L320.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev4 source candidate",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "Revived amusement park with 4 verified return arches, ride plazas and ferris wheel",
+  "mechanics": [
+    "amusement_park",
+    "archway_plaza",
+    "ferris_wheel",
+    "ride_interaction"
+  ],
+  "exits": [
+    {
+      "id": "L320>L001#1",
+      "to": "L001",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Walk back through the labelled archway in the row of archways in the plaza before the main gates (destination implied by two-directional statement)",
+      "source_quote": "All of these entrances are two directional, and are used to leave Level 320 also.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-320",
+      "trigger_type": "walk_in"
+    },
+    {
+      "id": "L320>L009#2",
+      "to": "L009",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Walk back through the labelled archway in the row of archways in the plaza before the main gates (destination implied by two-directional statement)",
+      "source_quote": "All of these entrances are two directional, and are used to leave Level 320 also.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-320",
+      "trigger_type": "walk_in"
+    },
+    {
+      "id": "L320>L011#3",
+      "to": "L011",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Walk back through the labelled archway in the row of archways in the plaza before the main gates (destination implied by two-directional statement)",
+      "source_quote": "All of these entrances are two directional, and are used to leave Level 320 also.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-320",
+      "trigger_type": "walk_in"
+    },
+    {
+      "id": "L320>L048#5",
+      "to": "L048",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Walk back through the labelled archway in the row of archways in the plaza before the main gates (destination implied by two-directional statement)",
+      "source_quote": "All of these entrances are two directional, and are used to leave Level 320 also.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-320",
+      "trigger_type": "walk_in"
+    }
+  ],
+  "notes": "Uses a compact prototype scale. Godot/Windows gameplay and performance not yet verified; no promotion to PLAYABLE.",
+  "entity_policy": "SOURCED ENTITIES ONLY: park staff/mascots and MVC maintenance beings; header banner says 'No Harmful Entities'; no hostile entity named in the current article"
+}

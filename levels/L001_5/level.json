@@ -1,0 +1,88 @@
+{
+ "stable_id": "L001_5",
+ "scene": "res://levels/L001_5/L001_5.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": true,
+ "arrivals": [
+  "start",
+  "from_L001",
+  "from_L188",
+  "from_L021"
+ ],
+ "signature": "Blank white rooms seen almost in black and white, where every fluorescent fixture pours darkness instead of light and the room glows from nowhere; near silence except whispers that grow quieter as their owners get closer, until they stop altogether and a door is standing behind you.",
+ "mechanics": [
+  "inverted_light_negative_fixtures",
+  "sourceless_illumination_white_distance_fog",
+  "no_hum_near_silence",
+  "inverse_whisper_volume",
+  "denizens_creep_while_you_rest",
+  "latching_touch",
+  "intelligible_whisper_fragments",
+  "silence_then_door_behind_you",
+  "fake_windows_entry_traps_fade_on_arrival",
+  "shattered_wall_noclip",
+  "upside_down_room",
+  "gallery_between_floors"
+ ],
+ "exits": [
+  {
+   "id": "L001_5>EXT#1",
+   "to": "EXT",
+   "to_label": "Unspecified (no-clipping out; destination not stated)",
+   "trigger": "noclip",
+   "label": "No-clipped out through a shattered wall",
+   "confidence": "CONFIRMED",
+   "basis": "SOURCE",
+   "source_section": "Entrances And Exits",
+   "source_quote": "There is currently no known way to exit Level 1.5 besides no-clipping.",
+   "mechanism_basis": "ADAPTATION",
+   "adaptation_reason": "The page names no-clipping as the only exit but gives no place or destination. We put it where the walls look like 'a mosaic of shattered reality' (Log 1) and route it to the placeholder EXT, which the framework reports as not built.",
+   "hint": "In places the white wall is broken into a mosaic of dark fragments that shiver. Lean into one.",
+   "arrival": "from_L001_5"
+  },
+  {
+   "id": "L001_5>EXT#2",
+   "to": "EXT",
+   "to_label": "The pitch-black corridor beyond the door (deeper into Level 1.5)",
+   "trigger": "interact",
+   "label": "Went through the door that appeared when the whispering stopped",
+   "confidence": "DANGEROUS+ONE-WAY",
+   "basis": "SOURCE",
+   "source_section": "Log 5",
+   "source_quote": "Perhaps this level is different in that sense too, you don't leave by trying to get out, maybe the only way to leave is to go deeper.",
+   "mechanism_basis": "ADAPTATION",
+   "adaptation_reason": "Narrator testimony only: after the whispers stopped and the pull grew, a door stood behind him. We trigger the silence after the intelligible mumble and about 150 s in the level, and place the door on the nearest wall behind the player. The corridor beyond (True Log 6) is not built; the route reports as not built.",
+   "hint": "If the whispering ever stops completely, turn around.",
+   "risk": "Extreme",
+   "arrival": "from_L001_5"
+  }
+ ],
+ "documented_edges_not_built": [
+  {
+   "id": "L001_5>EXT#3",
+   "to": null,
+   "label": "RUMORED: fake windows lead out (Log 7, author compromised)",
+   "confidence": "RUMORED",
+   "basis": "SOURCE",
+   "source_section": "Log 7",
+   "source_quote": "If you see the fake windows, enter them and find salvation.",
+   "reason_not_built": "The dossier marks Log 7 unreliable and the earlier logs call the windows traps; the two windows are glass you can look through, never exits."
+  }
+ ],
+ "fail_states": [
+  {
+   "kind": "entity",
+   "label": "Something unseen latches on when the whispering has gone quiet",
+   "basis": "SOURCE",
+   "source_quote": "when the whispering gets quiet, that's when I know they're getting closer."
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY, as sound. Whispering denizens (article) are three invisible audio sources whose volume follows the page's inverted law; they creep closer while you stay still (Log 5) and a touch (Log 4, 'the absence of even absence') costs a little health and pushes them back. The husk stalker, 'Mother' and 'She' are not spawned; 'She' appears only in the compromised Log 7 note. No bases or communities (page).",
+ "notes": "SOURCE: a sub-section 'in-between' levels, easy to enter and hard to leave; everything is 'backwards': fluorescent darkness pours from the ceiling while ordinary darkness is replaced by light (Figure 1: inverted black and white, the surroundings naturally illuminated, upside-down); the usual humming is absent and it is almost silent except for whispering that is audible only within a distance and grows softer as the creatures get closer; intelligible fragments; communications garbled; no bases; only exit is no-clipping; logs: fake windows that look outside or show a mirror of the room are traps that close and fade, the narrator is 'stuck somewhere between floors', walls blank and white, a pull and then a door after the whispers stop. ADAPTATION: the floor plan (arrival room, long hall, west wing with office, upside-down room and mirror-window room, double-height hall with a gallery at +3 m) is ours, read from 'between floors', Figure 1's hallway and its upside-down image; negative pooled lights + sourceless ambient + white distance fog + near-monochrome grade implement the inversion; whisper volume -11 dB at 26 m falling to -40 dB at 1.5 m, silent beyond 30 m; denizens approach at 0.9 m/s after 2.5 s of standing still and back off while you move; a touch costs 8 health; the mumble plays after 80 s, the silence and the door after 150 s; the door sits on the nearest wall behind you; noclip patches on two seeded shattered walls (one always in the long hall); the mirror window shows a built mirrored copy of the room; arrival from Level 188 fades a window out behind you, from Level 21 an unlabeled door, from Level 1 a noclip glitch. The Log 3 'quiet hum' conflicts with the article; we follow the article (no hum). The garbled Log 1 text is given in its translated, readable form.",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
+}

@@ -1,0 +1,46 @@
+{
+  "stable_id": "L022",
+  "scene": "res://levels/L022/L022.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev4 source candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L001",
+    "from_L069"
+  ],
+  "signature": "Three-tier collapsed car park, actual stair flights and mine shafts",
+  "mechanics": [
+    "multi_storey",
+    "collapse_gaps",
+    "notes",
+    "stairs"
+  ],
+  "exits": [
+    {
+      "id": "L022>L021#1",
+      "to": "L021",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Reverse of the post-collapse hole entrance (method not detailed)",
+      "source_quote": "Level 22 can be exited by using the previously mentioned entrances",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-22",
+      "trigger_type": "unknown"
+    },
+    {
+      "id": "L022>L023#2",
+      "to": "L023",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Reverse of the post-collapse hole entrance (method not detailed)",
+      "source_quote": "Level 22 can be exited by using the previously mentioned entrances",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-22",
+      "trigger_type": "unknown"
+    }
+  ],
+  "notes": "Uses a compact prototype scale. Godot/Windows gameplay and performance not yet verified; no promotion to PLAYABLE. Dev6: new inbound provisional start-position aliases (from_L069) are not custom-designed entrance geometry.",
+  "entity_policy": "NO ENTITY PER SOURCE",
+  "arrival_aliases": [
+    "from_L069"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "stable_id": "L016",
+  "scene": "res://levels/L016/L016.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev5 source candidate",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "Rainforest at permanent dawn adjoining a bright glacial basin; archived climate-shift cycle",
+  "mechanics": [
+    "low_gravity",
+    "rainforest",
+    "glacial_tract",
+    "climate_shift"
+  ],
+  "exits": [
+    {
+      "id": "L016>L046#1",
+      "to": "L046",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Rainforest state: climb a sand-covered tree; arctic state: stand on a sand-covered ice sheet",
+      "source_quote": "The location of the exit is different with each alteration, but the destination is constant.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-16",
+      "trigger_type": "interact"
+    }
+  ],
+  "notes": "Compact exploration adaptation. Runtime Godot and Windows verification required; no automatic PLAYABLE promotion.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Light Guides (arctic state); NO ENTITY PER SOURCE for the rainforest state"
+}

@@ -1,0 +1,14 @@
+Lost Frequency CC0 Model Collection — source and licensing
+
+All included models are created by Kenney (https://kenney.nl) and released under CC0 1.0 Universal:
+https://creativecommons.org/publicdomain/zero/1.0/
+
+The standalone .glb files were fetched from the converted public library at
+https://github.com/Hidencod/tge-assets
+The repository's LICENSE explicitly confirms that both the models and derived GLB files are CC0.
+
+All models are eligible for private/commercial use, edits, and redistribution.
+Attribution is appreciated, not required.
+
+This is a third-party compilation, NOT an official Kenney release.
+Paid itch.io assets, Oxygen and 3DAssets.dev packs are NOT included.

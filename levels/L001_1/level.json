@@ -1,0 +1,100 @@
+{
+ "stable_id": "L001_1",
+ "scene": "res://levels/L001_1/L001_1.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": true,
+ "arrivals": [
+  "start",
+  "from_L001"
+ ],
+ "signature": "One straight white-block, blue-tile corridor south of Base Alpha that degrades with depth: a humming, crate-lined Sector 1 with M.E.G. outposts; a glitched Sector 2 of tilting floors, shifting colours, repeating stretches and noclip walls; a lightless Sector 3 where flashlights do nothing and Smilers grin; and a black-and-white, heaving Sector 4 whose floor drops into an endless void.",
+ "mechanics": [
+  "streamed_single_corridor",
+  "four_sectors_by_depth",
+  "ceiling_steps_7_to_12_ft",
+  "sector2_slopes_hue_shift_repeats_markings_pipe_blocks",
+  "sector2_3_glitch_wall_noclip",
+  "sector3_darkness_flashlight_useless_unsourced_light",
+  "sector4_monochrome_heave_no_collision_void",
+  "crates_thin_with_depth",
+  "outpost1_basement_rest",
+  "outpost2_trading_hall_light_timer_16_8",
+  "outpost3_vanishing_shelf_supplies",
+  "jakobs_hut",
+  "outpost4_crate",
+  "meg_cordon_sign",
+  "sector5_beacon_unreachable"
+ ],
+ "exits": [
+  {
+   "id": "L001_1>L001#1",
+   "to": "L001",
+   "trigger": "walk_in",
+   "label": "Backtracked out through the entrance into Level 1",
+   "confidence": "CONFIRMED",
+   "basis": "SOURCE",
+   "source_section": "Entrances and Exits",
+   "source_quote": "Level 1.1 can be escaped by backtracking through the corridor and exiting through the entrance to the level.",
+   "hint": "The doorway you came in by is always behind you: grey concrete and a sign on the far side.",
+   "arrival": "from_L001_1",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-1-1"
+  },
+  {
+   "id": "L001_1>L001#2",
+   "to": "L001",
+   "trigger": "noclip",
+   "label": "Noclipped through a glitching wall into another part of Level 1",
+   "confidence": "CONFIRMED",
+   "basis": "SOURCE",
+   "source_section": "Sector 2 / Entrances and Exits",
+   "source_quote": "Noclipping can also land explorers in a random part of Level 1, however this is unpredictable and should only be used as a method of escape in emergencies.",
+   "hint": "In the glitched sectors some stretches of wall shimmer and hiss with static. Lean into one and keep pushing.",
+   "arrival": "from_L001_1",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-1-1"
+  },
+  {
+   "id": "L001_1>EXT#3",
+   "to": "EXT",
+   "to_label": "Endless void (noclipped out of Sector 4)",
+   "trigger": "fall",
+   "label": "Fell through the floor of Sector 4 into the void",
+   "confidence": "DANGEROUS+ONE-WAY",
+   "basis": "SOURCE",
+   "source_section": "Sector 4",
+   "source_quote": "Much of this sector has no collision. Noclipping through the level drops one into a presumably endless void.",
+   "mechanism_basis": "ADAPTATION",
+   "adaptation_reason": "The page gives no destination ('presumably endless void') and says it does not return to Level 1, so 'to' is the placeholder EXT and the framework reports the route as not built. Falling through a floor tile without collision is our reading of noclipping through the level.",
+   "hint": "Past the M.E.G. tape the floor tiles look solid. Many are not.",
+   "risk": "Presumed lethal",
+   "arrival": "from_L001_1"
+  }
+ ],
+ "documented_edges_not_built": [
+  {
+   "id": "L001_1>EXT#4",
+   "to": null,
+   "label": "RUMORED: Sector 5 / a 'further level' behind a beacon of light",
+   "confidence": "RUMORED",
+   "basis": "SOURCE",
+   "source_section": "Sector 5",
+   "source_quote": "The only description consistent among survivors was that of a beacon of light that drew explorers towards it through unknown means.",
+   "reason_not_built": "Existence unconfirmed and 'Likely Inaccessible'; the beacon is visible from Sector 4 but stands beyond the void and is never reached."
+  }
+ ],
+ "fail_states": [
+  {
+   "kind": "hazard",
+   "label": "Fell into the void below Sector 4",
+   "basis": "SOURCE",
+   "source_quote": "Noclipping through the level drops one into a presumably endless void."
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY, as scripted presences without combat. Sector 1: none (page: no documented dangerous entities). Sector 2: rare far-off Smiler grins plus sound-only Hounds (claws on tile) and Skin-Stealers (an almost-human voice). Sector 3: Smilers common (eyes and grin in the dark that vanish when you get close), two of them near the Outpost 4 crate (page: entities wait near it). Sector 4: black glitched, mutated figures with extra limbs (one with moth-like wings) hovering overhead like vultures, never attacking (interview testimony). No NPCs: M.E.G. Team Corridor and the Tunnel Gang appear only through their outposts, signs and notes.",
+ "notes": "SOURCE: sub-section of Level 1 reached south of M.E.G. Base Alpha past a sign; straight narrow corridor of unknown length; white-painted cinder block, blue tile, pipes and ducts through cracks and holes; crates of supplies that become rarer with depth; explorers are not separated; four sectors (Sector 1 7-12 ft ceiling, ~12 ft wide, fluorescent hum, no dangerous entities; Sector 2 glitched with slanted floors, abnormal hues, repeating sections, pipes and ducts blocking, unreadable markings, wall noclip to Level 1; Sector 3 dark, lights and flashlights useless, unsourced bright patches, ~20 ft ceiling, 6-20 ft wide, antiseptic smell, Smilers; Sector 4 black-and-white, undulating, much of it without collision, void below, floating mutated entities, M.E.G. warning sign at the end of Sector 3); outposts (1: basement-like room, unpainted block, wooden boards, four three-high bunks, coolers, storage; 2: trading hall with doorways either side into dorm with 16 bunks, kitchen+dining, storage, common area, white tile, lights 16 h on / 8 h off; 3: shelf + cot, supplies vanish; Jakob's Hut: clothes and bedding on sticks in a large recess, Tunnel Gang; 4: a ~4 ft crate mid-hall in Sector 3); exits by backtracking and by noclip to Level 1. ADAPTATION: lengths compressed (Sector 1 192 m, Sector 2 240 m, Sector 3 168 m, Sector 4 96 m; the page gives miles); the playable world is a finite streaming window (24 m chunks, 3 each way) along a fixed corridor; ceiling heights step per 6 m bay; Sector 2 slopes up to about 23 degrees in 6 m bays and two stretches repeat the preceding chunk exactly; hue variants (pink, green, violet, amber); glitch walls are shimmering emissive patches with a 2.2 s noclip push; the Outpost 2 timer runs one game hour per 15 s; Outpost 3 items vanish only while unobserved (20 s checks); outposts are shown unmanned (no NPCs in this build); crate contents are flavour plus Almond Water; Outpost 1 and 2 rest points heal and checkpoint; the floor-tile void fall is our implementation of noclipping out of Sector 4 (destination unbuilt); the Sector 5 beacon is a visual far beyond the void. Outpost 5 (abandoned, never established) is not built.",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
+}

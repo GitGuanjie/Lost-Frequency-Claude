@@ -1,0 +1,50 @@
+{
+  "stable_id": "L006_1",
+  "scene": "res://levels/L006_1/L006_1.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — candidate dev3",
+  "procedural": false,
+  "arrivals": [
+    "start",
+    "from_L006"
+  ],
+  "signature": "1980s food-court mall with historical diners and free vending",
+  "mechanics": [
+    "vending",
+    "restaurant_warp"
+  ],
+  "exits": [
+    {
+      "id": "L006_1>L006#1",
+      "to": "L006",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Rusty steel door",
+      "source_quote": "Constantly guarded by The M.E.G. and access to this exit without permission is restricted.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-6-1",
+      "trigger_type": "door"
+    },
+    {
+      "id": "L006_1>L011#2",
+      "to": "L011",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Sliding glass doors on perimeter",
+      "source_quote": "This exit is the safest and easiest way to exit Level 6.1 .",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-6-1",
+      "trigger_type": "door"
+    },
+    {
+      "id": "L006_1>L003#3",
+      "to": "L003",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Enter any vent opening",
+      "source_quote": "Entering through any vent opening will cause you to be sucked into the vent and dropped into Level 3 .",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-6-1",
+      "trigger_type": "interact"
+    }
+  ],
+  "notes": "Source constrained to 2026-11-04 snapshot. All distances are compressed for playable prototype. No engine QA, Windows test or human screenshot review passed yet.",
+  "entity_policy": "No invented hostile entities; narrative testimony is not treated as verified encounter."
+}

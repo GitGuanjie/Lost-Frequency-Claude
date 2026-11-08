@@ -1,0 +1,20 @@
+{
+  "version": "1.5.0-dev13",
+  "scope": "offline source and manifest checks ONLY",
+  "timestamp_utc": "2026-11-07T14:40:06.924347+00:00",
+  "checks": [
+    {
+      "name": "python_static",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    {
+      "name": "world_manifest",
+      "status": "PASS",
+      "exit_code": 0
+    }
+  ],
+  "godot_engine": "NOT RUN",
+  "windows_runtime": "NOT RUN",
+  "l009_to_l011_physical_route": "NOT VERIFIED"
+}

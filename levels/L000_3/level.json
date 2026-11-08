@@ -1,0 +1,31 @@
+{
+ "stable_id": "L000_3",
+ "scene": "res://levels/L000_3/L000_3.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": true,
+ "arrivals": [
+  "start"
+ ],
+ "signature": "Level 0 iced over and bitterly cold: frost-laced carpet, bare walls with scraps of frozen wallpaper, gigantic ice cubes crammed into rooms that barely hold them, vents that keep pumping frosty mist and centuries-old ducts that clip around, around the abandoned camp of a remodelling crew that vanished.",
+ "mechanics": [
+  "level0_grammar_streamed",
+  "giant_ice_cubes",
+  "vent_mist_block_fails",
+  "unstable_ducts_clip",
+  "wallpaper_scraps_detach",
+  "duct_hall_gallery",
+  "sunken_ice_rooms",
+  "task_force_camp_documents",
+  "blowtorch_frozen"
+ ],
+ "exits": [],
+ "notes": "SOURCE: sub-section of Level 0, nearly identical to it but with ice everywhere and very cold; remodel testimony: frost-laced carpet coarse as gravel, bare walls with scraps of pale frozen wallpaper that detach, gigantic ice cubes in rooms that barely contain them, two blowtorches (later unusable), walls with 'frostbite', vents pumping frosty mist that ruins things and could not be blocked, softer wool carpet and new wallpaper installed then failing again, centuries-old rusty ducts that clip around and are unstable, task forces 104/105/107/108-CX, sector A891-01, Major Took arriving 01-01-2020 to find nobody. ADAPTATION: the playable world is a finite streaming window of seeded 24 m chunks (3 m grid, BSP rooms and hallways, a doorway between every pair of neighbouring rooms); the camp room in chunk (0,0) and its contents; the remodel zone (new wool carpet and wallpaper near the camp, original frozen state elsewhere) is our reading of the crew working outward; the duct hall (two-storey hall with gallery and stair, chunk -1,0 and rare far chunks) and sunken rooms with an ice-sheet floor come from Level 0's own grammar ('nearly identical to Level 0'); vent block holds 16-32 s before the mist forces the board off; duct sections jolt 0.2-0.5 m out of line for under a second; mist raises fog and greys the image (no damage: the page states only the cold); tripod work lights stand for 'improved the lightings'. No exits: the page states none (the Level 1 and Level 0.2 links are references, not routes), so the level is developer-reachable only. Seeds vary the floor plans, cube rooms, pits, duct rooms, vents and crew traces.",
+ "entity_policy": "NO ENTITY PER SOURCE. Task Force 104-CX (Planes, Chris, Havec, Evie), the reinforcement task forces and Major Took exist only as authors and addressees of the documents; nobody is spawned and nothing explains their disappearance.",
+ "no_exit_reason": "No sourced, traversable inter-level exit; omitted rather than invented.",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
+}

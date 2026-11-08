@@ -42,6 +42,9 @@ var _hum_db := -19.0
 var _vt := 0.0
 var _warned := false
 var _base_heard := false
+var _archive_flags: Array = []
+var _archive_lights: Array = []
+var _archive_complete := false
 
 
 func build() -> void:
@@ -76,9 +79,64 @@ func build() -> void:
 	# came back up the old stairway from Level 5: on its top landing, facing the door out
 	add_arrival("from_L005", Vector3(5.4, 0.05, 8.25), 180.0)
 	world.build_around(START, 2)
+	_install_archive_circuit()
 	_audio()
 	add_shot("atrium", START + Vector3(0, 1.57, 0), Vector3(16.5, 1.0, 17.5))
 	add_landmark("Gallery over the atrium (start)", START)
+
+
+## OPTIONAL DEVELOPMENT ADAPTATION: an abandoned inspection circuit, not a new
+## faction, entity or exit. Players can investigate all three desks in any order.
+## Fixed anchor positions are on existing gallery and break-room floors.
+func _install_archive_circuit() -> void:
+	var stations := [
+		{"key": "west", "p": Vector3(4.2, 1.2, 20.8), "title": "West fire-stair maintenance box", "message": "A stairwell bell rings, but the fire panel records no alarm."},
+		{"key": "break", "p": Vector3(16.4, 1.25, 8.15), "title": "Break-room circuit recorder", "message": "The circuit chart has more numbered floors than the building shows."},
+		{"key": "gallery", "p": Vector3(9.0, 4.75, 8.35), "title": "Upper gallery inspection terminal", "message": "Its final entry says: DO NOT FOLLOW THE WINDOWS."}
+	]
+	var k := kit("OfficeInspectionDesks")
+	for rec in stations:
+		var key: String = rec["key"]
+		var pt: Vector3 = rec["p"]
+		_archive_flags.append(key)
+		k.box(pt, Vector3(0.65, 0.42, 0.12), "l4_brass", GeoKit.ALL, false)
+		k.box(pt + Vector3(0, 0.06, 0.07), Vector3(0.38, 0.11, 0.025), "l4_steel", GeoKit.ALL, false)
+		var lamp := OmniLight3D.new()
+		lamp.name = "InspectionLamp_" + key
+		lamp.light_color = Color(0.95, 0.65, 0.28)
+		lamp.light_energy = 0.14 if bool(SaveService.flag(stable_id, "archive_" + key, false)) else 0.0
+		lamp.omni_range = 2.0
+		lamp.position = pt + Vector3(0, 0.2, 0.24)
+		add_child(lamp)
+		_archive_lights.append(lamp)
+		add_interactable(pt + Vector3(0, 0, 0.25), Vector3(1.2, 1.1, 0.7), "Inspect the circuit recorder", func(_p): _inspect_archive(key, str(rec["title"]), str(rec["message"])))
+	k.commit()
+	add_landmark("Inspection recorder - ground floor", Vector3(16.4, 0.0, 8.15))
+	add_landmark("Inspection recorder - upper gallery", Vector3(9.0, 3.6, 8.35))
+	_archive_complete = _archive_count() == 3
+
+
+func _archive_count() -> int:
+	var n := 0
+	for key in _archive_flags:
+		if bool(SaveService.flag(stable_id, "archive_" + key, false)):
+			n += 1
+	return n
+
+
+func _inspect_archive(key: String, title: String, message: String) -> void:
+	if not SaveService.flag(stable_id, "archive_" + key, false):
+		SaveService.set_flag(stable_id, "archive_" + key, true)
+		for i in _archive_flags.size():
+			if _archive_flags[i] == key and is_instance_valid(_archive_lights[i]):
+				(_archive_lights[i] as OmniLight3D).light_energy = 0.7
+		Overlay.toast("%s: %s (%d/3)" % [title, message, _archive_count()], 5.0)
+	else:
+		Overlay.toast("%s: %s" % [title, message], 4.0)
+	if _archive_count() == 3 and not _archive_complete:
+		_archive_complete = true
+		Overlay.subtitle("[all three circuit lamps glow; the empty upper floor answers with three footsteps]", 5.0)
+		SaveService.set_flag(stable_id, "archive_all_inspected", true)
 
 
 func _audio() -> void:
@@ -288,11 +346,30 @@ func qa_capture_plan() -> Array:
 	plan.append({"name": "corridor", "pos": Vector3(24.6, 1.62, 1.2), "target": Vector3(44.0, 1.3, 1.6)})
 	plan.append({"name": "oldstair", "pos": Vector3(3.3, 1.55, 8.7), "target": Vector3(3.6, -1.2, 4.8)})
 	plan.append({"name": "breakroom", "pos": Vector3(17.6, 1.6, 12.2), "target": Vector3(13.0, 0.9, 3.2)})
+	plan.append({"name": "inspection", "pos": Vector3(10.3, 5.15, 9.1), "target": Vector3(9.0, 4.75, 8.35)})
+	plan.append({"name": "dev13_skybridge", "pos": Vector3(14.1, 6.75, 14.1), "target": Vector3(20.5, 4.75, 17.8)})
 	return plan
 
 
 func qa_self_test() -> Array:
 	var out: Array = []
+	# DEV13: the ceiling was removed above the bridge; assert actual collider
+	# positions, not merely source-code presence or a config-level path.
+	var physics := get_world_3d().direct_space_state
+	var up_bridge := physics.intersect_ray(PhysicsRayQueryParameters3D.create(
+		Vector3(14.1, 6.8, 14.0), Vector3(14.1, 4.5, 14.0), 1))
+	var raised_roof := physics.intersect_ray(PhysicsRayQueryParameters3D.create(
+		Vector3(14.1, 9.2, 14.0), Vector3(14.1, 7.6, 14.0), 1))
+	out.append({"what": "DEV13 atrium bridge has an actual walkable 5.1m collision deck",
+		"ok": not up_bridge.is_empty() and absf(float(up_bridge.get("position", Vector3.ZERO).y) - 5.1) < 0.12,
+		"detail": up_bridge.get("position", Vector3.ZERO)})
+	out.append({"what": "DEV13 raised ceiling preserves headroom above the atrium bridge",
+		"ok": not raised_roof.is_empty() and float(raised_roof.get("position", Vector3.ZERO).y) > 8.0,
+		"detail": raised_roof.get("position", Vector3.ZERO)})
+	out.append({"what": "all three inspection recorders exist", "ok": _archive_flags.size() == 3 and _archive_lights.size() == 3})
+	for key in _archive_flags:
+		_inspect_archive(key, "Test recorder", "QA inspection record")
+	out.append({"what": "three inspection flags persist", "ok": _archive_count() == 3 and SaveService.flag(stable_id, "archive_all_inspected", false)})
 	var space := get_world_3d().direct_space_state
 	# two walkable storeys in a streamed chunk corridor
 	var h1 := space.intersect_ray(PhysicsRayQueryParameters3D.create(Vector3(25.2, 6.0, 1.2), Vector3(25.2, -2.0, 1.2), 1))

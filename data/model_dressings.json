@@ -1,0 +1,5363 @@
+{
+  "version": 1,
+  "notes": "All placements preserve existing GeoKit routing. Decor props default nonblocking; no canonical exits invented.",
+  "levels": {
+    "L055": [
+      {
+        "pack": "food-kit",
+        "model": "plate-dinner",
+        "pos": [
+          -8,
+          1.46,
+          -40.0
+        ],
+        "height": 0.1,
+        "inspect": "[a meal has been left here, but there is no trace of the guest]",
+        "prompt": "Inspect the abandoned meal"
+      },
+      {
+        "pack": "food-kit",
+        "model": "cup-coffee",
+        "pos": [
+          8,
+          1.46,
+          -40.0
+        ],
+        "height": 0.23,
+        "yaw": 29
+      },
+      {
+        "pack": "food-kit",
+        "model": "pizza-box",
+        "pos": [
+          -8,
+          1.46,
+          -26.8
+        ],
+        "height": 0.23,
+        "yaw": 58
+      },
+      {
+        "pack": "food-kit",
+        "model": "can-open",
+        "pos": [
+          8,
+          1.46,
+          -26.8
+        ],
+        "height": 0.23,
+        "yaw": 87
+      },
+      {
+        "pack": "food-kit",
+        "model": "sandwich",
+        "pos": [
+          -8,
+          1.46,
+          -13.6
+        ],
+        "height": 0.23,
+        "yaw": 116
+      },
+      {
+        "pack": "food-kit",
+        "model": "bowl",
+        "pos": [
+          8,
+          1.46,
+          -13.6
+        ],
+        "height": 0.23,
+        "yaw": 145
+      },
+      {
+        "pack": "food-kit",
+        "model": "plate-broken",
+        "pos": [
+          -8,
+          1.46,
+          -0.4
+        ],
+        "height": 0.1,
+        "yaw": 174
+      },
+      {
+        "pack": "food-kit",
+        "model": "plate-dinner",
+        "pos": [
+          8,
+          1.46,
+          -0.4
+        ],
+        "height": 0.1,
+        "yaw": 203,
+        "inspect": "[a meal has been left here, but there is no trace of the guest]",
+        "prompt": "Inspect the abandoned meal"
+      },
+      {
+        "pack": "food-kit",
+        "model": "cup-coffee",
+        "pos": [
+          -8,
+          1.46,
+          12.8
+        ],
+        "height": 0.23,
+        "yaw": 232
+      },
+      {
+        "pack": "food-kit",
+        "model": "pizza-box",
+        "pos": [
+          8,
+          1.46,
+          12.8
+        ],
+        "height": 0.23,
+        "yaw": 261
+      },
+      {
+        "pack": "food-kit",
+        "model": "can-open",
+        "pos": [
+          -8,
+          1.46,
+          26.0
+        ],
+        "height": 0.23,
+        "yaw": 290
+      },
+      {
+        "pack": "food-kit",
+        "model": "sandwich",
+        "pos": [
+          8,
+          1.46,
+          26.0
+        ],
+        "height": 0.23,
+        "yaw": 319
+      },
+      {
+        "pack": "food-kit",
+        "model": "bowl",
+        "pos": [
+          -8,
+          1.46,
+          39.2
+        ],
+        "height": 0.23,
+        "yaw": 348
+      },
+      {
+        "pack": "food-kit",
+        "model": "plate-broken",
+        "pos": [
+          8,
+          1.46,
+          39.2
+        ],
+        "height": 0.1,
+        "yaw": 377
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "radio",
+        "pos": [
+          -15,
+          0,
+          -36
+        ],
+        "height": 1.6,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "trashcan",
+        "pos": [
+          15,
+          0,
+          -17
+        ],
+        "height": 1.3,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "kitchenfridge",
+        "pos": [
+          -15,
+          0,
+          2
+        ],
+        "height": 1.3,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "kitchencabinet",
+        "pos": [
+          15,
+          0,
+          21
+        ],
+        "height": 1.6,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "kitchencoffeemachine",
+        "pos": [
+          -15,
+          0,
+          40
+        ],
+        "height": 1.3,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseopen",
+        "pos": [
+          15,
+          0,
+          59
+        ],
+        "height": 1.3,
+        "yaw": 90
+      }
+    ],
+    "L006_1": [
+      {
+        "pack": "food-kit",
+        "model": "soda-can",
+        "pos": [
+          -22.5,
+          1.41,
+          -73.0
+        ],
+        "height": 0.25,
+        "inspect": "[someone has removed every price label]",
+        "prompt": "Examine a vending display"
+      },
+      {
+        "pack": "food-kit",
+        "model": "plate-dinner",
+        "pos": [
+          22.5,
+          1.41,
+          -73.0
+        ],
+        "height": 0.1,
+        "yaw": 37
+      },
+      {
+        "pack": "food-kit",
+        "model": "cup-tea",
+        "pos": [
+          -22.5,
+          1.41,
+          -55.0
+        ],
+        "height": 0.25,
+        "yaw": 74
+      },
+      {
+        "pack": "food-kit",
+        "model": "pizza-box",
+        "pos": [
+          22.5,
+          1.41,
+          -55.0
+        ],
+        "height": 0.25,
+        "yaw": 111
+      },
+      {
+        "pack": "food-kit",
+        "model": "mug",
+        "pos": [
+          -22.5,
+          1.41,
+          -37.0
+        ],
+        "height": 0.25,
+        "yaw": 148
+      },
+      {
+        "pack": "food-kit",
+        "model": "sandwich",
+        "pos": [
+          22.5,
+          1.41,
+          -37.0
+        ],
+        "height": 0.25,
+        "yaw": 185
+      },
+      {
+        "pack": "food-kit",
+        "model": "soda-can",
+        "pos": [
+          -22.5,
+          1.41,
+          -19.0
+        ],
+        "height": 0.25,
+        "yaw": 222
+      },
+      {
+        "pack": "food-kit",
+        "model": "plate-dinner",
+        "pos": [
+          22.5,
+          1.41,
+          -19.0
+        ],
+        "height": 0.1,
+        "yaw": 259
+      },
+      {
+        "pack": "food-kit",
+        "model": "cup-tea",
+        "pos": [
+          -22.5,
+          1.41,
+          -1.0
+        ],
+        "height": 0.25,
+        "yaw": 296
+      },
+      {
+        "pack": "food-kit",
+        "model": "pizza-box",
+        "pos": [
+          22.5,
+          1.41,
+          -1.0
+        ],
+        "height": 0.25,
+        "yaw": 333
+      },
+      {
+        "pack": "food-kit",
+        "model": "mug",
+        "pos": [
+          -22.5,
+          1.41,
+          17.0
+        ],
+        "height": 0.25,
+        "yaw": 370
+      },
+      {
+        "pack": "food-kit",
+        "model": "sandwich",
+        "pos": [
+          22.5,
+          1.41,
+          17.0
+        ],
+        "height": 0.25,
+        "yaw": 407
+      },
+      {
+        "pack": "food-kit",
+        "model": "soda-can",
+        "pos": [
+          -22.5,
+          1.41,
+          35.0
+        ],
+        "height": 0.25,
+        "yaw": 444
+      },
+      {
+        "pack": "food-kit",
+        "model": "plate-dinner",
+        "pos": [
+          22.5,
+          1.41,
+          35.0
+        ],
+        "height": 0.1,
+        "yaw": 481
+      },
+      {
+        "pack": "food-kit",
+        "model": "cup-tea",
+        "pos": [
+          -22.5,
+          1.41,
+          53.0
+        ],
+        "height": 0.25,
+        "yaw": 518
+      },
+      {
+        "pack": "food-kit",
+        "model": "pizza-box",
+        "pos": [
+          22.5,
+          1.41,
+          53.0
+        ],
+        "height": 0.25,
+        "yaw": 555
+      },
+      {
+        "pack": "food-kit",
+        "model": "mug",
+        "pos": [
+          -22.5,
+          1.41,
+          71.0
+        ],
+        "height": 0.25,
+        "yaw": 592
+      },
+      {
+        "pack": "food-kit",
+        "model": "sandwich",
+        "pos": [
+          22.5,
+          1.41,
+          71.0
+        ],
+        "height": 0.25,
+        "yaw": 629
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "kitchencoffeemachine",
+        "pos": [
+          -30.5,
+          0,
+          -67.0
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "kitchenmicrowave",
+        "pos": [
+          30.5,
+          0,
+          -43.0
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "kitchenfridgelarge",
+        "pos": [
+          -30.5,
+          0,
+          -19.0
+        ],
+        "height": 1.55,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "kitchencabinet",
+        "pos": [
+          30.5,
+          0,
+          5.0
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "kitchencoffeemachine",
+        "pos": [
+          -30.5,
+          0,
+          29.0
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "kitchenmicrowave",
+        "pos": [
+          30.5,
+          0,
+          53.0
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "kitchenfridgelarge",
+        "pos": [
+          -30.5,
+          0,
+          77.0
+        ],
+        "height": 1.55,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "kitchencabinet",
+        "pos": [
+          30.5,
+          0,
+          101.0
+        ],
+        "height": 1.2,
+        "yaw": 90
+      }
+    ],
+    "L020": [
+      {
+        "pack": "space-kit",
+        "model": "desk-computer",
+        "pos": [
+          -15,
+          1.9,
+          40.68
+        ],
+        "height": 1.2,
+        "inspect": "[a high score has been entered under an empty name]",
+        "prompt": "Inspect the abandoned game terminal"
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computerscreen",
+        "pos": [
+          15,
+          1.9,
+          40.68
+        ],
+        "height": 1.0,
+        "yaw": 180
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computerscreen",
+        "pos": [
+          -15,
+          1.9,
+          46.98
+        ],
+        "height": 1.0
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computer",
+        "pos": [
+          15,
+          1.9,
+          46.98
+        ],
+        "height": 1.2,
+        "yaw": 180
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computerscreen",
+        "pos": [
+          -15,
+          1.9,
+          53.28
+        ],
+        "height": 1.0
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computerscreen",
+        "pos": [
+          15,
+          1.9,
+          53.28
+        ],
+        "height": 1.0,
+        "yaw": 180
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computer",
+        "pos": [
+          -15,
+          1.9,
+          59.58
+        ],
+        "height": 1.2
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computerscreen",
+        "pos": [
+          15,
+          1.9,
+          59.58
+        ],
+        "height": 1.0,
+        "yaw": 180
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computerscreen",
+        "pos": [
+          -15,
+          1.9,
+          65.88
+        ],
+        "height": 1.0
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computer",
+        "pos": [
+          15,
+          1.9,
+          65.88
+        ],
+        "height": 1.2,
+        "yaw": 180
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computerscreen",
+        "pos": [
+          -15,
+          1.9,
+          72.18
+        ],
+        "height": 1.0
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computerscreen",
+        "pos": [
+          15,
+          1.9,
+          72.18
+        ],
+        "height": 1.0,
+        "yaw": 180
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computer",
+        "pos": [
+          -15,
+          1.9,
+          78.48
+        ],
+        "height": 1.2
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computerscreen",
+        "pos": [
+          15,
+          1.9,
+          78.48
+        ],
+        "height": 1.0,
+        "yaw": 180
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computerscreen",
+        "pos": [
+          -15,
+          1.9,
+          84.78
+        ],
+        "height": 1.0
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computer",
+        "pos": [
+          15,
+          1.9,
+          84.78
+        ],
+        "height": 1.2,
+        "yaw": 180
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computerscreen",
+        "pos": [
+          -15,
+          1.9,
+          91.08
+        ],
+        "height": 1.0
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computerscreen",
+        "pos": [
+          15,
+          1.9,
+          91.08
+        ],
+        "height": 1.0,
+        "yaw": 180
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computer",
+        "pos": [
+          -15,
+          1.9,
+          97.38
+        ],
+        "height": 1.2
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computerscreen",
+        "pos": [
+          15,
+          1.9,
+          97.38
+        ],
+        "height": 1.0,
+        "yaw": 180
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computerscreen",
+        "pos": [
+          -15,
+          1.9,
+          103.68
+        ],
+        "height": 1.0
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computer",
+        "pos": [
+          15,
+          1.9,
+          103.68
+        ],
+        "height": 1.2,
+        "yaw": 180
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computerscreen",
+        "pos": [
+          -15,
+          1.9,
+          109.98
+        ],
+        "height": 1.0
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computerscreen",
+        "pos": [
+          15,
+          1.9,
+          109.98
+        ],
+        "height": 1.0,
+        "yaw": 180
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "trashcan",
+        "pos": [
+          18,
+          0,
+          -41
+        ],
+        "height": 1.25
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "loungechair",
+        "pos": [
+          -18,
+          0,
+          -29
+        ],
+        "height": 1.25
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "trashcan",
+        "pos": [
+          18,
+          0,
+          -17
+        ],
+        "height": 1.25
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "loungechair",
+        "pos": [
+          -18,
+          0,
+          -5
+        ],
+        "height": 1.25
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "trashcan",
+        "pos": [
+          18,
+          0,
+          7
+        ],
+        "height": 1.25
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "loungechair",
+        "pos": [
+          -18,
+          0,
+          19
+        ],
+        "height": 1.25
+      }
+    ],
+    "L053": [
+      {
+        "pack": "furniture-kit",
+        "model": "tablecoffee",
+        "pos": [
+          -10,
+          0,
+          -15
+        ],
+        "height": 1.05,
+        "inspect": "[the fabric is warm though the room is empty]",
+        "prompt": "Examine the family furniture"
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseclosed",
+        "pos": [
+          10,
+          0,
+          -15
+        ],
+        "height": 1.05,
+        "yaw": 30
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "televisionvintage",
+        "pos": [
+          -10,
+          0,
+          -9
+        ],
+        "height": 1.05,
+        "yaw": 60
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "chair",
+        "pos": [
+          10,
+          0,
+          -9
+        ],
+        "height": 1.05,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "cabinettelevision",
+        "pos": [
+          -10,
+          0,
+          -3
+        ],
+        "height": 1.05,
+        "yaw": 120
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "plantsmall2",
+        "pos": [
+          10,
+          0,
+          -3
+        ],
+        "height": 1.05,
+        "yaw": 150
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "tablecoffee",
+        "pos": [
+          -10,
+          0,
+          3
+        ],
+        "height": 1.05,
+        "yaw": 180
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseclosed",
+        "pos": [
+          10,
+          0,
+          3
+        ],
+        "height": 1.05,
+        "yaw": 210
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "televisionvintage",
+        "pos": [
+          -10,
+          0,
+          9
+        ],
+        "height": 1.05,
+        "yaw": 240
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "chair",
+        "pos": [
+          10,
+          0,
+          9
+        ],
+        "height": 1.05,
+        "yaw": 270
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "cabinettelevision",
+        "pos": [
+          -10,
+          0,
+          15
+        ],
+        "height": 1.05,
+        "yaw": 300
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "plantsmall2",
+        "pos": [
+          10,
+          0,
+          15
+        ],
+        "height": 1.05,
+        "yaw": 330
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "kitchenfridge",
+        "pos": [
+          -12,
+          0,
+          14
+        ],
+        "height": 1.9,
+        "inspect": "[the refrigerator hums, though the house is supposedly empty]",
+        "prompt": "Check the refrigerator"
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "computerscreen",
+        "pos": [
+          11,
+          0,
+          -18
+        ],
+        "height": 0.65
+      }
+    ],
+    "L027": [
+      {
+        "pack": "nature-kit",
+        "model": "rock-smalla",
+        "pos": [
+          -11.2,
+          0,
+          -10.0
+        ],
+        "height": 2.2,
+        "solid": true,
+        "inspect": "[the stone is smooth where no water reaches]",
+        "prompt": "Examine the limestone"
+      },
+      {
+        "pack": "nature-kit",
+        "model": "rock-smallb",
+        "pos": [
+          11.2,
+          0,
+          -10.0
+        ],
+        "height": 1.25,
+        "yaw": 41
+      },
+      {
+        "pack": "nature-kit",
+        "model": "rock-smalld",
+        "pos": [
+          -11.2,
+          0,
+          -7.5
+        ],
+        "height": 1.25,
+        "yaw": 82
+      },
+      {
+        "pack": "nature-kit",
+        "model": "rock-tallc",
+        "pos": [
+          11.2,
+          0,
+          -7.5
+        ],
+        "height": 1.25,
+        "yaw": 123
+      },
+      {
+        "pack": "nature-kit",
+        "model": "cliff-blockhalf-rock",
+        "pos": [
+          -11.2,
+          0,
+          -5.0
+        ],
+        "height": 2.2,
+        "yaw": 164,
+        "solid": true
+      },
+      {
+        "pack": "nature-kit",
+        "model": "rock-smalla",
+        "pos": [
+          11.2,
+          0,
+          -5.0
+        ],
+        "height": 1.25,
+        "yaw": 205
+      },
+      {
+        "pack": "nature-kit",
+        "model": "rock-smallb",
+        "pos": [
+          -11.2,
+          0,
+          -2.5
+        ],
+        "height": 1.25,
+        "yaw": 246
+      },
+      {
+        "pack": "nature-kit",
+        "model": "rock-smalld",
+        "pos": [
+          11.2,
+          0,
+          -2.5
+        ],
+        "height": 1.25,
+        "yaw": 287
+      },
+      {
+        "pack": "nature-kit",
+        "model": "rock-tallc",
+        "pos": [
+          -11.2,
+          0,
+          0.0
+        ],
+        "height": 2.2,
+        "yaw": 328
+      },
+      {
+        "pack": "nature-kit",
+        "model": "cliff-blockhalf-rock",
+        "pos": [
+          11.2,
+          0,
+          0.0
+        ],
+        "height": 1.25,
+        "yaw": 369
+      },
+      {
+        "pack": "nature-kit",
+        "model": "rock-smalla",
+        "pos": [
+          -11.2,
+          0,
+          2.5
+        ],
+        "height": 1.25,
+        "yaw": 410
+      },
+      {
+        "pack": "nature-kit",
+        "model": "rock-smallb",
+        "pos": [
+          11.2,
+          0,
+          2.5
+        ],
+        "height": 1.25,
+        "yaw": 451
+      },
+      {
+        "pack": "nature-kit",
+        "model": "rock-smalld",
+        "pos": [
+          -11.2,
+          0,
+          3.0
+        ],
+        "height": 2.2,
+        "yaw": 492
+      },
+      {
+        "pack": "nature-kit",
+        "model": "rock-tallc",
+        "pos": [
+          11.2,
+          0,
+          4.4
+        ],
+        "height": 1.25,
+        "yaw": 533
+      },
+      {
+        "pack": "nature-kit",
+        "model": "cliff-blockhalf-rock",
+        "pos": [
+          -11.2,
+          0,
+          5.8
+        ],
+        "height": 1.25,
+        "yaw": 574
+      },
+      {
+        "pack": "nature-kit",
+        "model": "rock-smalla",
+        "pos": [
+          11.2,
+          0,
+          7.2
+        ],
+        "height": 1.25,
+        "yaw": 615
+      },
+      {
+        "pack": "nature-kit",
+        "model": "rock-smallb",
+        "pos": [
+          -11.2,
+          0,
+          8.6
+        ],
+        "height": 2.2,
+        "yaw": 656
+      },
+      {
+        "pack": "nature-kit",
+        "model": "rock-smalld",
+        "pos": [
+          11.2,
+          0,
+          10.0
+        ],
+        "height": 1.25,
+        "yaw": 697
+      },
+      {
+        "pack": "nature-kit",
+        "model": "rock-tallc",
+        "pos": [
+          -11.2,
+          0,
+          11.4
+        ],
+        "height": 1.25,
+        "yaw": 738,
+        "solid": true
+      },
+      {
+        "pack": "nature-kit",
+        "model": "cliff-blockhalf-rock",
+        "pos": [
+          11.2,
+          0,
+          12.8
+        ],
+        "height": 1.25,
+        "yaw": 779
+      },
+      {
+        "pack": "nature-kit",
+        "model": "cliff-waterfall-rock",
+        "pos": [
+          -7,
+          0,
+          13
+        ],
+        "height": 4.0
+      }
+    ],
+    "L049": [
+      {
+        "pack": "graveyard-kit",
+        "model": "debris",
+        "pos": [
+          -11.5,
+          -3,
+          -105.0
+        ],
+        "height": 2.0,
+        "inspect": "[a splintered support bears old muddy handprints]",
+        "prompt": "Inspect the broken barricade"
+      },
+      {
+        "pack": "graveyard-kit",
+        "model": "debris-wood",
+        "pos": [
+          11.5,
+          -3,
+          -105.0
+        ],
+        "height": 1.35,
+        "yaw": 19
+      },
+      {
+        "pack": "graveyard-kit",
+        "model": "fence-damaged",
+        "pos": [
+          -11.5,
+          -3,
+          -82.5
+        ],
+        "height": 2.0,
+        "yaw": 38
+      },
+      {
+        "pack": "graveyard-kit",
+        "model": "stone-wall-damaged",
+        "pos": [
+          11.5,
+          -3,
+          -82.5
+        ],
+        "height": 1.35,
+        "yaw": 57,
+        "solid": true
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "barrel",
+        "pos": [
+          -11.5,
+          -3,
+          -60.0
+        ],
+        "height": 2.0,
+        "yaw": 76
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "rocks",
+        "pos": [
+          11.5,
+          -3,
+          -60.0
+        ],
+        "height": 1.35,
+        "yaw": 95
+      },
+      {
+        "pack": "graveyard-kit",
+        "model": "debris",
+        "pos": [
+          -11.5,
+          -3,
+          -37.5
+        ],
+        "height": 2.0,
+        "yaw": 114,
+        "solid": true
+      },
+      {
+        "pack": "graveyard-kit",
+        "model": "debris-wood",
+        "pos": [
+          11.5,
+          -3,
+          -37.5
+        ],
+        "height": 1.35,
+        "yaw": 133
+      },
+      {
+        "pack": "graveyard-kit",
+        "model": "fence-damaged",
+        "pos": [
+          -11.5,
+          -3,
+          -15.0
+        ],
+        "height": 2.0,
+        "yaw": 152
+      },
+      {
+        "pack": "graveyard-kit",
+        "model": "stone-wall-damaged",
+        "pos": [
+          11.5,
+          -3,
+          -15.0
+        ],
+        "height": 1.35,
+        "yaw": 171
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "barrel",
+        "pos": [
+          -11.5,
+          -3,
+          7.5
+        ],
+        "height": 2.0,
+        "yaw": 190
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "rocks",
+        "pos": [
+          11.5,
+          -3,
+          7.5
+        ],
+        "height": 1.35,
+        "yaw": 209
+      },
+      {
+        "pack": "graveyard-kit",
+        "model": "debris",
+        "pos": [
+          -11.5,
+          -3,
+          30.0
+        ],
+        "height": 2.0,
+        "yaw": 228
+      },
+      {
+        "pack": "graveyard-kit",
+        "model": "debris-wood",
+        "pos": [
+          11.5,
+          -3,
+          30.0
+        ],
+        "height": 1.35,
+        "yaw": 247
+      },
+      {
+        "pack": "graveyard-kit",
+        "model": "fence-damaged",
+        "pos": [
+          -11.5,
+          -3,
+          52.5
+        ],
+        "height": 2.0,
+        "yaw": 266
+      },
+      {
+        "pack": "graveyard-kit",
+        "model": "stone-wall-damaged",
+        "pos": [
+          11.5,
+          -3,
+          52.5
+        ],
+        "height": 1.35,
+        "yaw": 285
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "barrel",
+        "pos": [
+          -11.5,
+          -3,
+          75.0
+        ],
+        "height": 2.0,
+        "yaw": 304
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "rocks",
+        "pos": [
+          11.5,
+          -3,
+          75.0
+        ],
+        "height": 1.35,
+        "yaw": 323
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "barrel",
+        "pos": [
+          19,
+          -3,
+          18
+        ],
+        "height": 1.1
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "barrel",
+        "pos": [
+          -19,
+          -3,
+          18
+        ],
+        "height": 1.1
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "barrel",
+        "pos": [
+          19,
+          -3,
+          90
+        ],
+        "height": 1.1
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "barrel",
+        "pos": [
+          -19,
+          -3,
+          90
+        ],
+        "height": 1.1
+      }
+    ],
+    "L005": [
+      {
+        "pack": "furniture-kit",
+        "model": "loungesofa",
+        "pos": [
+          -12,
+          0,
+          -30.0
+        ],
+        "height": 1.4,
+        "inspect": "[the upholstery smells faintly of old smoke]",
+        "prompt": "Examine the hotel furnishings"
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "sidetable",
+        "pos": [
+          12,
+          0,
+          -30.0
+        ],
+        "height": 1.4,
+        "yaw": 18
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "lampwall",
+        "pos": [
+          -12,
+          0,
+          -21.0
+        ],
+        "height": 1.4,
+        "yaw": 36
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "chairrounded",
+        "pos": [
+          12,
+          0,
+          -21.0
+        ],
+        "height": 1.4,
+        "yaw": 54
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "radio",
+        "pos": [
+          -12,
+          0,
+          -12.0
+        ],
+        "height": 1.4,
+        "yaw": 72
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "coatrackstanding",
+        "pos": [
+          12,
+          0,
+          -12.0
+        ],
+        "height": 1.4,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "loungesofa",
+        "pos": [
+          -12,
+          0,
+          -3.0
+        ],
+        "height": 1.4,
+        "yaw": 108
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "sidetable",
+        "pos": [
+          12,
+          0,
+          -3.0
+        ],
+        "height": 1.4,
+        "yaw": 126
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "lampwall",
+        "pos": [
+          -12,
+          0,
+          6.0
+        ],
+        "height": 1.4,
+        "yaw": 144
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "chairrounded",
+        "pos": [
+          12,
+          0,
+          6.0
+        ],
+        "height": 1.4,
+        "yaw": 162
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "radio",
+        "pos": [
+          -12,
+          0,
+          15.0
+        ],
+        "height": 1.4,
+        "yaw": 180
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "coatrackstanding",
+        "pos": [
+          12,
+          0,
+          15.0
+        ],
+        "height": 1.4,
+        "yaw": 198
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "pottedplant",
+        "pos": [
+          -9,
+          0,
+          9
+        ],
+        "height": 1.6
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "televisionvintage",
+        "pos": [
+          19,
+          0,
+          10
+        ],
+        "height": 1.4,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "books",
+        "pos": [
+          16,
+          1.02,
+          12.8
+        ],
+        "height": 0.22,
+        "yaw": 31,
+        "inspect": "[one page of the guest register has been torn out]",
+        "prompt": "Inspect the hotel reading table"
+      }
+    ],
+    "L005_3": [
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseclosedwide",
+        "pos": [
+          -18,
+          0,
+          -37
+        ],
+        "height": 3.0,
+        "yaw": 270,
+        "inspect": "[several titles have no letters on their spines]",
+        "prompt": "Inspect the library shelf"
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseopen",
+        "pos": [
+          18,
+          0,
+          -37
+        ],
+        "height": 3.0,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseopen",
+        "pos": [
+          -18,
+          0,
+          -28
+        ],
+        "height": 3.0,
+        "yaw": 270
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseclosedwide",
+        "pos": [
+          18,
+          0,
+          -28
+        ],
+        "height": 3.0,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseopen",
+        "pos": [
+          -18,
+          0,
+          -19
+        ],
+        "height": 3.0,
+        "yaw": 270
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseopen",
+        "pos": [
+          18,
+          0,
+          -19
+        ],
+        "height": 3.0,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseclosedwide",
+        "pos": [
+          -18,
+          0,
+          -10
+        ],
+        "height": 3.0,
+        "yaw": 270
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseopen",
+        "pos": [
+          18,
+          0,
+          -10
+        ],
+        "height": 3.0,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseopen",
+        "pos": [
+          -18,
+          0,
+          -1
+        ],
+        "height": 3.0,
+        "yaw": 270
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseclosedwide",
+        "pos": [
+          18,
+          0,
+          -1
+        ],
+        "height": 3.0,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseopen",
+        "pos": [
+          -18,
+          0,
+          8
+        ],
+        "height": 3.0,
+        "yaw": 270
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseopen",
+        "pos": [
+          18,
+          0,
+          8
+        ],
+        "height": 3.0,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseclosedwide",
+        "pos": [
+          -18,
+          0,
+          17
+        ],
+        "height": 3.0,
+        "yaw": 270
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseopen",
+        "pos": [
+          18,
+          0,
+          17
+        ],
+        "height": 3.0,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseopen",
+        "pos": [
+          -18,
+          0,
+          26
+        ],
+        "height": 3.0,
+        "yaw": 270
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseclosedwide",
+        "pos": [
+          18,
+          0,
+          26
+        ],
+        "height": 3.0,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseopen",
+        "pos": [
+          -18,
+          0,
+          35
+        ],
+        "height": 3.0,
+        "yaw": 270
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseopen",
+        "pos": [
+          18,
+          0,
+          35
+        ],
+        "height": 3.0,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseclosedwide",
+        "pos": [
+          -18,
+          0,
+          44
+        ],
+        "height": 3.0,
+        "yaw": 270
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseopen",
+        "pos": [
+          18,
+          0,
+          44
+        ],
+        "height": 3.0,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "books",
+        "pos": [
+          -8.0,
+          0.9,
+          -39
+        ],
+        "height": 0.3
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "books",
+        "pos": [
+          -5.6,
+          0.9,
+          -16
+        ],
+        "height": 0.3,
+        "yaw": 29
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "books",
+        "pos": [
+          -3.2,
+          0.9,
+          7
+        ],
+        "height": 0.3,
+        "yaw": 58
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "books",
+        "pos": [
+          -0.8,
+          0.9,
+          -39
+        ],
+        "height": 0.3,
+        "yaw": 87
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "books",
+        "pos": [
+          1.6,
+          0.9,
+          -16
+        ],
+        "height": 0.3,
+        "yaw": 116
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "books",
+        "pos": [
+          4.0,
+          0.9,
+          7
+        ],
+        "height": 0.3,
+        "yaw": 145
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "books",
+        "pos": [
+          6.4,
+          0.9,
+          -39
+        ],
+        "height": 0.3,
+        "yaw": 174
+      }
+    ],
+    "L090": [
+      {
+        "pack": "furniture-kit",
+        "model": "beddouble",
+        "pos": [
+          -10,
+          0,
+          -17.0
+        ],
+        "height": 1.0,
+        "inspect": "[the pillow has a depression but the sheets are untouched]",
+        "prompt": "Examine the bedroom"
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "table",
+        "pos": [
+          10,
+          0,
+          -17.0
+        ],
+        "height": 1.0,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "loungesofa",
+        "pos": [
+          -10,
+          0,
+          -8.4
+        ],
+        "height": 1.0
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "televisionvintage",
+        "pos": [
+          10,
+          0,
+          -8.4
+        ],
+        "height": 1.0,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "chairmoderncushion",
+        "pos": [
+          -10,
+          0,
+          0.2
+        ],
+        "height": 1.0
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseopen",
+        "pos": [
+          10,
+          0,
+          0.2
+        ],
+        "height": 1.0,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "beddouble",
+        "pos": [
+          -10,
+          0,
+          8.8
+        ],
+        "height": 1.0
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "table",
+        "pos": [
+          10,
+          0,
+          8.8
+        ],
+        "height": 1.0,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "loungesofa",
+        "pos": [
+          -10,
+          0,
+          17.4
+        ],
+        "height": 1.0
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "televisionvintage",
+        "pos": [
+          10,
+          0,
+          17.4
+        ],
+        "height": 1.0,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "chairmoderncushion",
+        "pos": [
+          -10,
+          0,
+          26.0
+        ],
+        "height": 1.0
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseopen",
+        "pos": [
+          10,
+          0,
+          26.0
+        ],
+        "height": 1.0,
+        "yaw": 90
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "plantsmall2",
+        "pos": [
+          -9,
+          4.1,
+          18
+        ],
+        "height": 0.9
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "plantsmall2",
+        "pos": [
+          -5,
+          4.1,
+          18
+        ],
+        "height": 0.9
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "plantsmall2",
+        "pos": [
+          -1,
+          4.1,
+          18
+        ],
+        "height": 0.9
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "plantsmall2",
+        "pos": [
+          3,
+          4.1,
+          18
+        ],
+        "height": 0.9
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "plantsmall2",
+        "pos": [
+          7,
+          4.1,
+          18
+        ],
+        "height": 0.9
+      }
+    ],
+    "L083": [
+      {
+        "pack": "space-kit",
+        "model": "machine-generator",
+        "pos": [
+          -5.2,
+          0,
+          -65.0
+        ],
+        "height": 2.0,
+        "inspect": "[the dials tremble despite the lack of power]",
+        "prompt": "Inspect a silent machine"
+      },
+      {
+        "pack": "space-kit",
+        "model": "pipe-ring",
+        "pos": [
+          5.2,
+          0,
+          -65.0
+        ],
+        "height": 1.35,
+        "yaw": 27
+      },
+      {
+        "pack": "space-kit",
+        "model": "barrel",
+        "pos": [
+          -5.2,
+          0,
+          -51.0
+        ],
+        "height": 1.35,
+        "yaw": 54
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-wireless",
+        "pos": [
+          5.2,
+          0,
+          -51.0
+        ],
+        "height": 1.35,
+        "yaw": 81
+      },
+      {
+        "pack": "space-kit",
+        "model": "pipe-corner",
+        "pos": [
+          -5.2,
+          0,
+          -37.0
+        ],
+        "height": 1.35,
+        "yaw": 108
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-generator",
+        "pos": [
+          5.2,
+          0,
+          -37.0
+        ],
+        "height": 2.0,
+        "yaw": 135
+      },
+      {
+        "pack": "space-kit",
+        "model": "pipe-ring",
+        "pos": [
+          -5.2,
+          0,
+          -23.0
+        ],
+        "height": 1.35,
+        "yaw": 162
+      },
+      {
+        "pack": "space-kit",
+        "model": "barrel",
+        "pos": [
+          5.2,
+          0,
+          -23.0
+        ],
+        "height": 1.35,
+        "yaw": 189
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-wireless",
+        "pos": [
+          -5.2,
+          0,
+          -9.0
+        ],
+        "height": 1.35,
+        "yaw": 216
+      },
+      {
+        "pack": "space-kit",
+        "model": "pipe-corner",
+        "pos": [
+          5.2,
+          0,
+          -9.0
+        ],
+        "height": 1.35,
+        "yaw": 243
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-generator",
+        "pos": [
+          -5.2,
+          0,
+          5.0
+        ],
+        "height": 2.0,
+        "yaw": 270
+      },
+      {
+        "pack": "space-kit",
+        "model": "pipe-ring",
+        "pos": [
+          5.2,
+          0,
+          5.0
+        ],
+        "height": 1.35,
+        "yaw": 297
+      },
+      {
+        "pack": "space-kit",
+        "model": "barrel",
+        "pos": [
+          -5.2,
+          0,
+          19.0
+        ],
+        "height": 1.35,
+        "yaw": 324
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-wireless",
+        "pos": [
+          5.2,
+          0,
+          19.0
+        ],
+        "height": 1.35,
+        "yaw": 351
+      },
+      {
+        "pack": "space-kit",
+        "model": "pipe-corner",
+        "pos": [
+          -5.2,
+          0,
+          33.0
+        ],
+        "height": 1.35,
+        "yaw": 378
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-generator",
+        "pos": [
+          5.2,
+          0,
+          33.0
+        ],
+        "height": 2.0,
+        "yaw": 405
+      },
+      {
+        "pack": "space-kit",
+        "model": "pipe-ring",
+        "pos": [
+          -5.2,
+          0,
+          47.0
+        ],
+        "height": 1.35,
+        "yaw": 432
+      },
+      {
+        "pack": "space-kit",
+        "model": "barrel",
+        "pos": [
+          5.2,
+          0,
+          47.0
+        ],
+        "height": 1.35,
+        "yaw": 459
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-wireless",
+        "pos": [
+          -5.2,
+          0,
+          61.0
+        ],
+        "height": 1.35,
+        "yaw": 486
+      },
+      {
+        "pack": "space-kit",
+        "model": "pipe-corner",
+        "pos": [
+          5.2,
+          0,
+          61.0
+        ],
+        "height": 1.35,
+        "yaw": 513
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computer",
+        "pos": [
+          -5.2,
+          4.8,
+          -49.0
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computer",
+        "pos": [
+          5.2,
+          4.8,
+          -33.0
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computer",
+        "pos": [
+          -5.2,
+          4.8,
+          -17.0
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computer",
+        "pos": [
+          5.2,
+          4.8,
+          -1.0
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computer",
+        "pos": [
+          -5.2,
+          4.8,
+          15.0
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "space-kit",
+        "model": "desk-computer",
+        "pos": [
+          5.2,
+          4.8,
+          31.0
+        ],
+        "height": 1.5,
+        "yaw": 90
+      }
+    ],
+    "L022": [
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-barrier",
+        "pos": [
+          -38.0,
+          0,
+          -45
+        ],
+        "height": 1.5,
+        "yaw": 90,
+        "inspect": "[its warning paint has been scoured away]",
+        "prompt": "Inspect the parking barrier"
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          38.0,
+          0,
+          -45
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-fence",
+        "pos": [
+          -38.0,
+          0,
+          -36
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "dumpster",
+        "pos": [
+          38.0,
+          0,
+          -36
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-barrier",
+        "pos": [
+          -38.0,
+          0,
+          -27
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          38.0,
+          0,
+          -27
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-fence",
+        "pos": [
+          -38.0,
+          0,
+          -18
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "dumpster",
+        "pos": [
+          38.0,
+          0,
+          -18
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-barrier",
+        "pos": [
+          -38.0,
+          0,
+          -9
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          38.0,
+          0,
+          -9
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-fence",
+        "pos": [
+          -38.0,
+          0,
+          0
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "dumpster",
+        "pos": [
+          38.0,
+          0,
+          0
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-barrier",
+        "pos": [
+          -38.0,
+          0,
+          9
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          38.0,
+          0,
+          9
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-fence",
+        "pos": [
+          -38.0,
+          0,
+          18
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "dumpster",
+        "pos": [
+          38.0,
+          0,
+          18
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-barrier",
+        "pos": [
+          -38.0,
+          0,
+          27
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          38.0,
+          0,
+          27
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-fence",
+        "pos": [
+          -38.0,
+          0,
+          36
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "dumpster",
+        "pos": [
+          38.0,
+          0,
+          36
+        ],
+        "height": 1.5,
+        "yaw": 90
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "barrel",
+        "pos": [
+          -30,
+          0,
+          -38
+        ],
+        "height": 1.25
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "rocks",
+        "pos": [
+          -22,
+          0,
+          -29
+        ],
+        "height": 1.25
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "barrel",
+        "pos": [
+          -14,
+          0,
+          -20
+        ],
+        "height": 1.25
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "rocks",
+        "pos": [
+          -6,
+          0,
+          -11
+        ],
+        "height": 1.25
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "barrel",
+        "pos": [
+          2,
+          0,
+          -2
+        ],
+        "height": 1.25
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "rocks",
+        "pos": [
+          10,
+          0,
+          7
+        ],
+        "height": 1.25
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "barrel",
+        "pos": [
+          18,
+          0,
+          16
+        ],
+        "height": 1.25
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "rocks",
+        "pos": [
+          26,
+          0,
+          25
+        ],
+        "height": 1.25
+      }
+    ],
+    "L028": [
+      {
+        "pack": "mini-dungeon",
+        "model": "chair",
+        "pos": [
+          -10.5,
+          0.1,
+          25
+        ],
+        "height": 1.3,
+        "inspect": "[there are scratches on the underside of the chair]",
+        "prompt": "Inspect the castle furniture"
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "column",
+        "pos": [
+          10.5,
+          0.1,
+          25
+        ],
+        "height": 1.3,
+        "yaw": 23
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "barrel",
+        "pos": [
+          -10.5,
+          0.1,
+          32
+        ],
+        "height": 1.3,
+        "yaw": 46
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "chest",
+        "pos": [
+          10.5,
+          0.1,
+          32
+        ],
+        "height": 1.3,
+        "yaw": 69
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "chair",
+        "pos": [
+          -10.5,
+          0.1,
+          39
+        ],
+        "height": 1.3,
+        "yaw": 92
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "column",
+        "pos": [
+          10.5,
+          0.1,
+          39
+        ],
+        "height": 1.3,
+        "yaw": 115
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "barrel",
+        "pos": [
+          -10.5,
+          0.1,
+          46
+        ],
+        "height": 1.3,
+        "yaw": 138
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "chest",
+        "pos": [
+          10.5,
+          0.1,
+          46
+        ],
+        "height": 1.3,
+        "yaw": 161
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "table",
+        "pos": [
+          -7.5,
+          5.85,
+          21
+        ],
+        "height": 1.9
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "banner",
+        "pos": [
+          7.5,
+          5.85,
+          21
+        ],
+        "height": 1.9
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "table",
+        "pos": [
+          -7.5,
+          5.85,
+          28
+        ],
+        "height": 1.9
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "banner",
+        "pos": [
+          7.5,
+          5.85,
+          28
+        ],
+        "height": 1.9
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "table",
+        "pos": [
+          -7.5,
+          5.85,
+          35
+        ],
+        "height": 1.9
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "banner",
+        "pos": [
+          7.5,
+          5.85,
+          35
+        ],
+        "height": 1.9
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "table",
+        "pos": [
+          -7.5,
+          5.85,
+          42
+        ],
+        "height": 1.9
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "banner",
+        "pos": [
+          7.5,
+          5.85,
+          42
+        ],
+        "height": 1.9
+      }
+    ],
+    "L029": [
+      {
+        "pack": "mini-dungeon",
+        "model": "barrel",
+        "pos": [
+          -24,
+          0.1,
+          -20.0
+        ],
+        "height": 1.1,
+        "inspect": "[the barrel contains dust instead of cargo]",
+        "prompt": "Inspect the port supplies"
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "chest",
+        "pos": [
+          24,
+          0.1,
+          -20.0
+        ],
+        "height": 1.1,
+        "yaw": 11
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "pot",
+        "pos": [
+          -24,
+          0.1,
+          -13.5
+        ],
+        "height": 1.1,
+        "yaw": 22
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "chest",
+        "pos": [
+          24,
+          0.1,
+          -13.5
+        ],
+        "height": 1.1,
+        "yaw": 33
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "barrel",
+        "pos": [
+          -24,
+          0.1,
+          -7.0
+        ],
+        "height": 1.1,
+        "yaw": 44
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "chest",
+        "pos": [
+          24,
+          0.1,
+          -7.0
+        ],
+        "height": 1.1,
+        "yaw": 55
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "pot",
+        "pos": [
+          -24,
+          0.1,
+          -0.5
+        ],
+        "height": 1.1,
+        "yaw": 66
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "chest",
+        "pos": [
+          24,
+          0.1,
+          -0.5
+        ],
+        "height": 1.1,
+        "yaw": 77
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "barrel",
+        "pos": [
+          -24,
+          0.1,
+          6.0
+        ],
+        "height": 1.1,
+        "yaw": 88
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "chest",
+        "pos": [
+          24,
+          0.1,
+          6.0
+        ],
+        "height": 1.1,
+        "yaw": 99
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "pot",
+        "pos": [
+          -24,
+          0.1,
+          12.5
+        ],
+        "height": 1.1,
+        "yaw": 110
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "chest",
+        "pos": [
+          24,
+          0.1,
+          12.5
+        ],
+        "height": 1.1,
+        "yaw": 121
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "barrel",
+        "pos": [
+          -24,
+          0.1,
+          19.0
+        ],
+        "height": 1.1,
+        "yaw": 132
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "chest",
+        "pos": [
+          24,
+          0.1,
+          19.0
+        ],
+        "height": 1.1,
+        "yaw": 143
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "pot",
+        "pos": [
+          -24,
+          0.1,
+          25.5
+        ],
+        "height": 1.1,
+        "yaw": 154
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "chest",
+        "pos": [
+          24,
+          0.1,
+          25.5
+        ],
+        "height": 1.1,
+        "yaw": 165
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-fence",
+        "pos": [
+          -21,
+          0,
+          -15
+        ],
+        "height": 2.1,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-light",
+        "pos": [
+          21,
+          0,
+          -15
+        ],
+        "height": 2.1,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-light",
+        "pos": [
+          -21,
+          0,
+          2
+        ],
+        "height": 2.1,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-fence",
+        "pos": [
+          21,
+          0,
+          2
+        ],
+        "height": 2.1,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-light",
+        "pos": [
+          -21,
+          0,
+          19
+        ],
+        "height": 2.1,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-light",
+        "pos": [
+          21,
+          0,
+          19
+        ],
+        "height": 2.1,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-fence",
+        "pos": [
+          -21,
+          0,
+          36
+        ],
+        "height": 2.1,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-light",
+        "pos": [
+          21,
+          0,
+          36
+        ],
+        "height": 2.1,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-light",
+        "pos": [
+          -21,
+          0,
+          53
+        ],
+        "height": 2.1,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-fence",
+        "pos": [
+          21,
+          0,
+          53
+        ],
+        "height": 2.1,
+        "yaw": 90
+      }
+    ],
+    "L050": [
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-fence",
+        "pos": [
+          -22,
+          0,
+          -144
+        ],
+        "height": 1.2,
+        "yaw": 90,
+        "inspect": "[the sign has no destination beneath the arrow]",
+        "prompt": "Read the road warning"
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "road-sign-warning",
+        "pos": [
+          22,
+          0,
+          -144
+        ],
+        "height": 2.3,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          -22,
+          0,
+          -120
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-barrier",
+        "pos": [
+          22,
+          0,
+          -120
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-fence",
+        "pos": [
+          -22,
+          0,
+          -96
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "road-sign-warning",
+        "pos": [
+          22,
+          0,
+          -96
+        ],
+        "height": 2.3,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          -22,
+          0,
+          -72
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-barrier",
+        "pos": [
+          22,
+          0,
+          -72
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-fence",
+        "pos": [
+          -22,
+          0,
+          -48
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "road-sign-warning",
+        "pos": [
+          22,
+          0,
+          -48
+        ],
+        "height": 2.3,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          -22,
+          0,
+          -24
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-barrier",
+        "pos": [
+          22,
+          0,
+          -24
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-fence",
+        "pos": [
+          -22,
+          0,
+          0
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "road-sign-warning",
+        "pos": [
+          22,
+          0,
+          0
+        ],
+        "height": 2.3,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          -22,
+          0,
+          24
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-barrier",
+        "pos": [
+          22,
+          0,
+          24
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-fence",
+        "pos": [
+          -22,
+          0,
+          48
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "road-sign-warning",
+        "pos": [
+          22,
+          0,
+          48
+        ],
+        "height": 2.3,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          -22,
+          0,
+          72
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-barrier",
+        "pos": [
+          22,
+          0,
+          72
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-fence",
+        "pos": [
+          -22,
+          0,
+          96
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "road-sign-warning",
+        "pos": [
+          22,
+          0,
+          96
+        ],
+        "height": 2.3,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          -22,
+          0,
+          120
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-barrier",
+        "pos": [
+          22,
+          0,
+          120
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-fence",
+        "pos": [
+          -22,
+          0,
+          144
+        ],
+        "height": 1.2,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "road-sign-warning",
+        "pos": [
+          22,
+          0,
+          144
+        ],
+        "height": 2.3,
+        "yaw": 90
+      }
+    ],
+    "L017": [
+      {
+        "pack": "space-kit",
+        "model": "machine-generator",
+        "pos": [
+          -17,
+          0,
+          -111
+        ],
+        "height": 1.6,
+        "inspect": "[the ship machinery is cold and entirely silent]",
+        "prompt": "Inspect the engine assembly"
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-barrel",
+        "pos": [
+          17,
+          0,
+          -111
+        ],
+        "height": 1.6,
+        "yaw": 25
+      },
+      {
+        "pack": "space-kit",
+        "model": "pipe-corner",
+        "pos": [
+          -17,
+          0,
+          -83
+        ],
+        "height": 1.6,
+        "yaw": 50
+      },
+      {
+        "pack": "space-kit",
+        "model": "barrels",
+        "pos": [
+          17,
+          0,
+          -83
+        ],
+        "height": 1.6,
+        "yaw": 75
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-wireless",
+        "pos": [
+          -17,
+          0,
+          -55
+        ],
+        "height": 1.6,
+        "yaw": 100
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-wirelesscable",
+        "pos": [
+          17,
+          0,
+          -55
+        ],
+        "height": 1.6,
+        "yaw": 125
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-generator",
+        "pos": [
+          -17,
+          0,
+          -27
+        ],
+        "height": 1.6,
+        "yaw": 150
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-barrel",
+        "pos": [
+          17,
+          0,
+          -27
+        ],
+        "height": 1.6,
+        "yaw": 175
+      },
+      {
+        "pack": "space-kit",
+        "model": "pipe-corner",
+        "pos": [
+          -17,
+          0,
+          1
+        ],
+        "height": 1.6,
+        "yaw": 200
+      },
+      {
+        "pack": "space-kit",
+        "model": "barrels",
+        "pos": [
+          17,
+          0,
+          1
+        ],
+        "height": 1.6,
+        "yaw": 225
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-wireless",
+        "pos": [
+          -17,
+          0,
+          29
+        ],
+        "height": 1.6,
+        "yaw": 250
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-wirelesscable",
+        "pos": [
+          17,
+          0,
+          29
+        ],
+        "height": 1.6,
+        "yaw": 275
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-generator",
+        "pos": [
+          -17,
+          0,
+          57
+        ],
+        "height": 1.6,
+        "yaw": 300
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-barrel",
+        "pos": [
+          17,
+          0,
+          57
+        ],
+        "height": 1.6,
+        "yaw": 325
+      },
+      {
+        "pack": "space-kit",
+        "model": "pipe-corner",
+        "pos": [
+          -17,
+          0,
+          85
+        ],
+        "height": 1.6,
+        "yaw": 350
+      },
+      {
+        "pack": "space-kit",
+        "model": "barrels",
+        "pos": [
+          17,
+          0,
+          85
+        ],
+        "height": 1.6,
+        "yaw": 375
+      }
+    ],
+    "L071": [
+      {
+        "pack": "furniture-kit",
+        "model": "desk",
+        "pos": [
+          -45,
+          -0.1,
+          -85
+        ],
+        "height": 1.2,
+        "inspect": "[a name has been scratched from the surface]",
+        "prompt": "Inspect the abandoned desk"
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "chairdesk",
+        "pos": [
+          45,
+          -0.1,
+          -85
+        ],
+        "height": 1.2,
+        "yaw": 31
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseclosed",
+        "pos": [
+          -45,
+          -0.1,
+          -59
+        ],
+        "height": 1.2,
+        "yaw": 62
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bedbunk",
+        "pos": [
+          45,
+          -0.1,
+          -59
+        ],
+        "height": 1.2,
+        "yaw": 93
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "cardboardboxopen",
+        "pos": [
+          -45,
+          -0.1,
+          -33
+        ],
+        "height": 1.2,
+        "yaw": 124
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "computerkeyboard",
+        "pos": [
+          45,
+          -0.1,
+          -33
+        ],
+        "height": 1.2,
+        "yaw": 155
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "televisionvintage",
+        "pos": [
+          -45,
+          -0.1,
+          -7
+        ],
+        "height": 1.2,
+        "yaw": 186
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "desk",
+        "pos": [
+          45,
+          -0.1,
+          -7
+        ],
+        "height": 1.2,
+        "yaw": 217
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "chairdesk",
+        "pos": [
+          -45,
+          -0.1,
+          19
+        ],
+        "height": 1.2,
+        "yaw": 248
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseclosed",
+        "pos": [
+          45,
+          -0.1,
+          19
+        ],
+        "height": 1.2,
+        "yaw": 279
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bedbunk",
+        "pos": [
+          -45,
+          -0.1,
+          45
+        ],
+        "height": 1.2,
+        "yaw": 310
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "cardboardboxopen",
+        "pos": [
+          45,
+          -0.1,
+          45
+        ],
+        "height": 1.2,
+        "yaw": 341
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "computerkeyboard",
+        "pos": [
+          -45,
+          -0.1,
+          71
+        ],
+        "height": 1.2,
+        "yaw": 372
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "televisionvintage",
+        "pos": [
+          45,
+          -0.1,
+          71
+        ],
+        "height": 1.2,
+        "yaw": 403
+      }
+    ],
+    "L073": [
+      {
+        "pack": "mini-dungeon",
+        "model": "barrel",
+        "pos": [
+          -13,
+          3.5,
+          29
+        ],
+        "height": 1.6,
+        "inspect": "[no key fits the old iron lock]",
+        "prompt": "Inspect the castle storeroom"
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "banner",
+        "pos": [
+          13,
+          3.5,
+          29
+        ],
+        "height": 1.6,
+        "yaw": 18
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "chair",
+        "pos": [
+          -13,
+          3.5,
+          36
+        ],
+        "height": 1.6,
+        "yaw": 36
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "chest",
+        "pos": [
+          13,
+          3.5,
+          36
+        ],
+        "height": 1.6,
+        "yaw": 54
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "barrel",
+        "pos": [
+          -13,
+          3.5,
+          43
+        ],
+        "height": 1.6,
+        "yaw": 72
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "banner",
+        "pos": [
+          13,
+          3.5,
+          43
+        ],
+        "height": 1.6,
+        "yaw": 90
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "chair",
+        "pos": [
+          -13,
+          3.5,
+          50
+        ],
+        "height": 1.6,
+        "yaw": 108
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "chest",
+        "pos": [
+          13,
+          3.5,
+          50
+        ],
+        "height": 1.6,
+        "yaw": 126
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "barrel",
+        "pos": [
+          -13,
+          3.5,
+          57
+        ],
+        "height": 1.6,
+        "yaw": 144
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "banner",
+        "pos": [
+          13,
+          3.5,
+          57
+        ],
+        "height": 1.6,
+        "yaw": 162
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "chair",
+        "pos": [
+          -13,
+          3.5,
+          64
+        ],
+        "height": 1.6,
+        "yaw": 180
+      },
+      {
+        "pack": "mini-dungeon",
+        "model": "chest",
+        "pos": [
+          13,
+          3.5,
+          64
+        ],
+        "height": 1.6,
+        "yaw": 198
+      }
+    ],
+    "L085": [
+      {
+        "pack": "furniture-kit",
+        "model": "bedbunk",
+        "pos": [
+          -10.4,
+          0,
+          -33
+        ],
+        "height": 1.2,
+        "inspect": "[a handwritten address is missing its street name]",
+        "prompt": "Inspect the empty room"
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "chair",
+        "pos": [
+          10.4,
+          0,
+          -33
+        ],
+        "height": 1.2
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "televisionvintage",
+        "pos": [
+          -10.4,
+          0,
+          -21
+        ],
+        "height": 1.2
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseopen",
+        "pos": [
+          10.4,
+          0,
+          -21
+        ],
+        "height": 1.2
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "cardboardboxclosed",
+        "pos": [
+          -10.4,
+          0,
+          -9
+        ],
+        "height": 1.2
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bedbunk",
+        "pos": [
+          10.4,
+          0,
+          -9
+        ],
+        "height": 1.2
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "chair",
+        "pos": [
+          -10.4,
+          0,
+          3
+        ],
+        "height": 1.2
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "televisionvintage",
+        "pos": [
+          10.4,
+          0,
+          3
+        ],
+        "height": 1.2
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "bookcaseopen",
+        "pos": [
+          -10.4,
+          0,
+          15
+        ],
+        "height": 1.2
+      },
+      {
+        "pack": "furniture-kit",
+        "model": "cardboardboxclosed",
+        "pos": [
+          10.4,
+          0,
+          15
+        ],
+        "height": 1.2
+      }
+    ],
+    "L069": [
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          -12,
+          0,
+          -110
+        ],
+        "height": 1.4,
+        "inspect": "[the lettering looks familiar but never settles into words]",
+        "prompt": "Examine the road sign"
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "road-sign-warning",
+        "pos": [
+          12,
+          0,
+          -110
+        ],
+        "height": 1.4,
+        "yaw": 15
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-barrier",
+        "pos": [
+          -12,
+          0,
+          -73
+        ],
+        "height": 1.4,
+        "yaw": 30
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          12,
+          0,
+          -73
+        ],
+        "height": 1.4,
+        "yaw": 45
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "road-sign-warning",
+        "pos": [
+          -12,
+          0,
+          -36
+        ],
+        "height": 1.4,
+        "yaw": 60
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-barrier",
+        "pos": [
+          12,
+          0,
+          -36
+        ],
+        "height": 1.4,
+        "yaw": 75
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          -12,
+          0,
+          1
+        ],
+        "height": 1.4,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "road-sign-warning",
+        "pos": [
+          12,
+          0,
+          1
+        ],
+        "height": 1.4,
+        "yaw": 105
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-barrier",
+        "pos": [
+          -12,
+          0,
+          38
+        ],
+        "height": 1.4,
+        "yaw": 120
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          12,
+          0,
+          38
+        ],
+        "height": 1.4,
+        "yaw": 135
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "road-sign-warning",
+        "pos": [
+          -12,
+          0,
+          75
+        ],
+        "height": 1.4,
+        "yaw": 150
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-barrier",
+        "pos": [
+          12,
+          0,
+          75
+        ],
+        "height": 1.4,
+        "yaw": 165
+      }
+    ],
+    "L320": [
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-light",
+        "pos": [
+          -37,
+          0,
+          -109
+        ],
+        "height": 1.4,
+        "inspect": "[the last inspection date has been overwritten many times]",
+        "prompt": "Inspect the maintenance notice"
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-fence",
+        "pos": [
+          37,
+          0,
+          -109
+        ],
+        "height": 1.4,
+        "yaw": 15
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          -37,
+          0,
+          -86
+        ],
+        "height": 1.4,
+        "yaw": 30
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "dumpster",
+        "pos": [
+          37,
+          0,
+          -86
+        ],
+        "height": 1.4,
+        "yaw": 45
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-light",
+        "pos": [
+          -37,
+          0,
+          -63
+        ],
+        "height": 1.4,
+        "yaw": 60
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-fence",
+        "pos": [
+          37,
+          0,
+          -63
+        ],
+        "height": 1.4,
+        "yaw": 75
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          -37,
+          0,
+          -40
+        ],
+        "height": 1.4,
+        "yaw": 90
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "dumpster",
+        "pos": [
+          37,
+          0,
+          -40
+        ],
+        "height": 1.4,
+        "yaw": 105
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-light",
+        "pos": [
+          -37,
+          0,
+          -17
+        ],
+        "height": 1.4,
+        "yaw": 120
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-fence",
+        "pos": [
+          37,
+          0,
+          -17
+        ],
+        "height": 1.4,
+        "yaw": 135
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          -37,
+          0,
+          6
+        ],
+        "height": 1.4,
+        "yaw": 150
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "dumpster",
+        "pos": [
+          37,
+          0,
+          6
+        ],
+        "height": 1.4,
+        "yaw": 165
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-light",
+        "pos": [
+          -37,
+          0,
+          29
+        ],
+        "height": 1.4,
+        "yaw": 180
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-fence",
+        "pos": [
+          37,
+          0,
+          29
+        ],
+        "height": 1.4,
+        "yaw": 195
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          -37,
+          0,
+          52
+        ],
+        "height": 1.4,
+        "yaw": 210
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "dumpster",
+        "pos": [
+          37,
+          0,
+          52
+        ],
+        "height": 1.4,
+        "yaw": 225
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-light",
+        "pos": [
+          -37,
+          0,
+          75
+        ],
+        "height": 1.4,
+        "yaw": 240
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-fence",
+        "pos": [
+          37,
+          0,
+          75
+        ],
+        "height": 1.4,
+        "yaw": 255
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          -37,
+          0,
+          98
+        ],
+        "height": 1.4,
+        "yaw": 270
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "dumpster",
+        "pos": [
+          37,
+          0,
+          98
+        ],
+        "height": 1.4,
+        "yaw": 285
+      }
+    ],
+    "L001": [
+      {
+        "pack": "space-kit",
+        "model": "machine-generator",
+        "pos": [
+          34.0,
+          0,
+          28
+        ],
+        "height": 1.35,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0,
+        "inspect": "[a warning label has peeled away from the machine]",
+        "prompt": "Inspect the maintenance equipment"
+      },
+      {
+        "pack": "space-kit",
+        "model": "barrels",
+        "pos": [
+          37.3,
+          0,
+          25
+        ],
+        "height": 1.35,
+        "yaw": 35,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "space-kit",
+        "model": "pipe-corner",
+        "pos": [
+          40.6,
+          0,
+          28
+        ],
+        "height": 1.35,
+        "yaw": 70,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "space-kit",
+        "model": "barrel",
+        "pos": [
+          43.9,
+          0,
+          25
+        ],
+        "height": 1.35,
+        "yaw": 105,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-generator",
+        "pos": [
+          47.2,
+          0,
+          28
+        ],
+        "height": 1.35,
+        "yaw": 140,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "space-kit",
+        "model": "barrels",
+        "pos": [
+          50.5,
+          0,
+          25
+        ],
+        "height": 1.35,
+        "yaw": 175,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "space-kit",
+        "model": "pipe-corner",
+        "pos": [
+          53.8,
+          0,
+          28
+        ],
+        "height": 1.35,
+        "yaw": 210,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "space-kit",
+        "model": "barrel",
+        "pos": [
+          57.1,
+          0,
+          25
+        ],
+        "height": 1.35,
+        "yaw": 245,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "prototype-kit",
+        "model": "crate",
+        "pos": [
+          3,
+          0,
+          23
+        ],
+        "height": 1.35,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "prototype-kit",
+        "model": "lever-single",
+        "pos": [
+          6,
+          0,
+          23
+        ],
+        "height": 1.35,
+        "yaw": 10,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "prototype-kit",
+        "model": "pipe-section",
+        "pos": [
+          9,
+          0,
+          23
+        ],
+        "height": 1.35,
+        "yaw": 20,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "prototype-kit",
+        "model": "wall-window-barred-small",
+        "pos": [
+          12,
+          0,
+          23
+        ],
+        "height": 1.35,
+        "yaw": 30,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "prototype-kit",
+        "model": "crate",
+        "pos": [
+          15,
+          0,
+          23
+        ],
+        "height": 1.35,
+        "yaw": 40,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "prototype-kit",
+        "model": "lever-single",
+        "pos": [
+          18,
+          0,
+          23
+        ],
+        "height": 1.35,
+        "yaw": 50,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "prototype-kit",
+        "model": "pipe-section",
+        "pos": [
+          21,
+          0,
+          23
+        ],
+        "height": 1.35,
+        "yaw": 60,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "prototype-kit",
+        "model": "wall-window-barred-small",
+        "pos": [
+          24,
+          0,
+          23
+        ],
+        "height": 1.35,
+        "yaw": 70,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      }
+    ],
+    "L009": [
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          18.0,
+          0,
+          18
+        ],
+        "height": 1.15,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0,
+        "inspect": "[the orange plastic is wet without any visible rain]",
+        "prompt": "Inspect the roadside debris"
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-light",
+        "pos": [
+          23.3,
+          0,
+          15
+        ],
+        "height": 1.15,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "dumpster",
+        "pos": [
+          28.6,
+          0,
+          18
+        ],
+        "height": 1.15,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "road-sign-warning",
+        "pos": [
+          33.9,
+          0,
+          15
+        ],
+        "height": 1.15,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          39.2,
+          0,
+          18
+        ],
+        "height": 1.15,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-light",
+        "pos": [
+          44.5,
+          0,
+          15
+        ],
+        "height": 1.15,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "dumpster",
+        "pos": [
+          49.8,
+          0,
+          18
+        ],
+        "height": 1.15,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "road-sign-warning",
+        "pos": [
+          55.1,
+          0,
+          15
+        ],
+        "height": 1.15,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-suburban",
+        "model": "fence-low",
+        "pos": [
+          2.0,
+          0,
+          -25
+        ],
+        "height": 1.2,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": -1
+      },
+      {
+        "pack": "city-kit-suburban",
+        "model": "planter",
+        "pos": [
+          8.5,
+          0,
+          -21
+        ],
+        "height": 1.2,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": -1
+      },
+      {
+        "pack": "city-kit-suburban",
+        "model": "fence-low",
+        "pos": [
+          15.0,
+          0,
+          -25
+        ],
+        "height": 1.2,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": -1
+      },
+      {
+        "pack": "city-kit-suburban",
+        "model": "planter",
+        "pos": [
+          21.5,
+          0,
+          -21
+        ],
+        "height": 1.2,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": -1
+      },
+      {
+        "pack": "city-kit-suburban",
+        "model": "fence-low",
+        "pos": [
+          28.0,
+          0,
+          -25
+        ],
+        "height": 1.2,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": -1
+      },
+      {
+        "pack": "city-kit-suburban",
+        "model": "planter",
+        "pos": [
+          34.5,
+          0,
+          -21
+        ],
+        "height": 1.2,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": -1
+      },
+      {
+        "pack": "city-kit-suburban",
+        "model": "fence-low",
+        "pos": [
+          41.0,
+          0,
+          -25
+        ],
+        "height": 1.2,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": -1
+      },
+      {
+        "pack": "city-kit-suburban",
+        "model": "planter",
+        "pos": [
+          47.5,
+          0,
+          -21
+        ],
+        "height": 1.2,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": -1
+      }
+    ],
+    "L011": [
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          85,
+          0,
+          17
+        ],
+        "height": 1.6,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0,
+        "inspect": "[a work permit has no dates and no named contractor]",
+        "prompt": "Inspect the construction barrier"
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-barrier",
+        "pos": [
+          97,
+          0,
+          17
+        ],
+        "height": 1.6,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-light",
+        "pos": [
+          109,
+          0,
+          17
+        ],
+        "height": 1.6,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "dumpster",
+        "pos": [
+          121,
+          0,
+          17
+        ],
+        "height": 1.6,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          133,
+          0,
+          17
+        ],
+        "height": 1.6,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-barrier",
+        "pos": [
+          145,
+          0,
+          17
+        ],
+        "height": 1.6,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-light",
+        "pos": [
+          85,
+          0,
+          72
+        ],
+        "height": 1.6,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "dumpster",
+        "pos": [
+          97,
+          0,
+          72
+        ],
+        "height": 1.6,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-cone",
+        "pos": [
+          109,
+          0,
+          72
+        ],
+        "height": 1.6,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-barrier",
+        "pos": [
+          121,
+          0,
+          72
+        ],
+        "height": 1.6,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "construction-light",
+        "pos": [
+          133,
+          0,
+          72
+        ],
+        "height": 1.6,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-roads",
+        "model": "dumpster",
+        "pos": [
+          145,
+          0,
+          72
+        ],
+        "height": 1.6,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-commercial",
+        "model": "detail-overhang",
+        "pos": [
+          21,
+          3,
+          24
+        ],
+        "height": 1.2,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-commercial",
+        "model": "detail-awning",
+        "pos": [
+          27,
+          3,
+          24
+        ],
+        "height": 1.2,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-commercial",
+        "model": "detail-overhang",
+        "pos": [
+          33,
+          3,
+          24
+        ],
+        "height": 1.2,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-commercial",
+        "model": "detail-awning",
+        "pos": [
+          39,
+          3,
+          24
+        ],
+        "height": 1.2,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-commercial",
+        "model": "detail-overhang",
+        "pos": [
+          45,
+          3,
+          24
+        ],
+        "height": 1.2,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-commercial",
+        "model": "detail-awning",
+        "pos": [
+          51,
+          3,
+          24
+        ],
+        "height": 1.2,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-commercial",
+        "model": "detail-overhang",
+        "pos": [
+          57,
+          3,
+          24
+        ],
+        "height": 1.2,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "city-kit-commercial",
+        "model": "detail-awning",
+        "pos": [
+          63,
+          3,
+          24
+        ],
+        "height": 1.2,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      }
+    ],
+    "L002": [
+      {
+        "pack": "space-kit",
+        "model": "machine-generator",
+        "pos": [
+          48,
+          0,
+          20
+        ],
+        "height": 2.0,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0,
+        "inspect": "[the mechanical counter moves while the power is off]",
+        "prompt": "Inspect the generator panel"
+      },
+      {
+        "pack": "space-kit",
+        "model": "pipe-ring",
+        "pos": [
+          55,
+          0,
+          20
+        ],
+        "height": 2.0,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-wireless",
+        "pos": [
+          62,
+          0,
+          20
+        ],
+        "height": 2.0,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "space-kit",
+        "model": "barrels",
+        "pos": [
+          69,
+          0,
+          20
+        ],
+        "height": 2.0,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-barrel",
+        "pos": [
+          76,
+          0,
+          20
+        ],
+        "height": 2.0,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-generator",
+        "pos": [
+          48,
+          0,
+          23
+        ],
+        "height": 2.0,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "space-kit",
+        "model": "pipe-ring",
+        "pos": [
+          55,
+          0,
+          23
+        ],
+        "height": 2.0,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-wireless",
+        "pos": [
+          62,
+          0,
+          23
+        ],
+        "height": 2.0,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "space-kit",
+        "model": "barrels",
+        "pos": [
+          69,
+          0,
+          23
+        ],
+        "height": 2.0,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-barrel",
+        "pos": [
+          76,
+          0,
+          23
+        ],
+        "height": 2.0,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 1,
+        "cz": 0
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-barrel",
+        "pos": [
+          4,
+          0,
+          21
+        ],
+        "height": 1.65,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "space-kit",
+        "model": "pipe-straight",
+        "pos": [
+          7,
+          0,
+          21
+        ],
+        "height": 1.65,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-barrel",
+        "pos": [
+          10,
+          0,
+          21
+        ],
+        "height": 1.65,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "space-kit",
+        "model": "pipe-straight",
+        "pos": [
+          13,
+          0,
+          21
+        ],
+        "height": 1.65,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "space-kit",
+        "model": "machine-barrel",
+        "pos": [
+          16,
+          0,
+          21
+        ],
+        "height": 1.65,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      },
+      {
+        "pack": "space-kit",
+        "model": "pipe-straight",
+        "pos": [
+          19,
+          0,
+          21
+        ],
+        "height": 1.65,
+        "yaw": 90,
+        "scope": "chunk",
+        "cx": 0,
+        "cz": 0
+      }
+    ]
+  }
+}

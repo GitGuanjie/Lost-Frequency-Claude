@@ -1,0 +1,51 @@
+{
+  "stable_id": "L085",
+  "scene": "res://levels/L085/L085.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "Smog-covered plastic grassland, elevated mansions and empty library",
+  "mechanics": [
+    "plastic_grass",
+    "smog",
+    "radio_loop",
+    "library_noclip"
+  ],
+  "exits": [
+    {
+      "id": "L085>L064#1",
+      "to": "L064",
+      "basis": "SOURCE",
+      "confidence": "ONE-WAY+CONDITIONAL",
+      "method": "Vehicle noclip while driving toward palace (Amelia, 2024)",
+      "source_quote": "she and her vehicle noclipped into Level 64 .",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-85",
+      "trigger_type": "noclip"
+    },
+    {
+      "id": "L085>L601#2",
+      "to": "L601",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL",
+      "method": "Unintentional noclip in library (Yusuf, 2022)",
+      "source_quote": "unintentionally noclipped into The End while exploring a library.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-85",
+      "trigger_type": "noclip"
+    },
+    {
+      "id": "L085>EXT#3",
+      "to": "EXT",
+      "basis": "SOURCE",
+      "confidence": "RUMORED+DANGEROUS",
+      "method": "Unintentional noclip only",
+      "source_quote": "Intentional noclips do not work.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-85",
+      "trigger_type": "noclip"
+    }
+  ],
+  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
+  "entity_policy": "SOURCED ENTITIES ONLY: RoboPets (no biological life)"
+}

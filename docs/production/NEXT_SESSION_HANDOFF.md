@@ -4,7 +4,34 @@ Repository `GitGuanjie/Lost-Frequency-Claude`, branch `main`. The game is at the
 Its history was imported from `GitGuanjie/claude-EO` (`lost_frequency/`, branch `claude/affectionate-wright-axgljs`)
 on 2026-11-06. Engine: Godot **4.5.1** (Forward+).
 
-## State (2026-11-06)
+## State (2026-11-08, v2 rebuild programme)
+- **Intake of the external "dev28" build.** The user supplied a dev28 build by another AI agent (100 scenes,
+  27 playable + 73 IN_DEVELOPMENT). It was imported verbatim (commit 98fa23f), then:
+  - **Why levels "could not open":** mixed tab/space indentation in `core/world/LevelBase.gd` broke the
+    TransitionService, Overlay and MainMenu autoloads, so no level loaded. 31 further scripts failed to compile.
+    All fixed; `tests/CompileAll.tscn` now guards this (0 failing scripts required).
+  - **Native audit:** `tests/LevelEntryProbe.tscn` (one process per level) loads every level through the real F3
+    transition and records content metrics in `reports/qa/entry_audit/levels/`. All 100 load and spawn safely.
+    The metrics and stills showed most dev28 levels were placeholders (3–30 meshes) or a reused generic scaffold.
+- **Rebuilt so far: 24 levels** (each QA 0 failures on seeds 1001/2002/3003 incl. walker bot; stills reviewed):
+  L000_2, L001_1, L001_5, L994, L965, L011_2, L114, L160, L021, L037_1, L100, L007_7, L000_3, L001_3, L003_5,
+  L010_1, L263, L101, L922, L027, L007_8, L096, L069, L005_1. Promoted to PLAYABLE.
+- **In progress (round 3, branches build/r3a–d, backed up on origin):** L052, L009_3, L018; L011_3, L030, L058;
+  L026, L075, L079; L031, L060, L053.
+- **Still to rebuild (37):** L015, L001_2, L036, L197, L071, L022, L049, L055, L090, L020, L006_1, L737, L041,
+  L005_3, L016, L017, L899, L024, L999, L023, L998, L149, L083, L201, L029, L140, L048, L094, L077, L108, L050,
+  L073, L085, L320, L032, L028, L808. They load and spawn, but are thin or use the generic dev28 scaffold.
+- **New assets:** 83 Poly Haven CC0 models (`assets/external/models/`, index with measured sizes in `INDEX.md`,
+  provenance in `lock.json` / `ASSET_PROVENANCE.csv` / in-game credits). `Props.place()` places Poly Haven or
+  Kenney models with measured scaling, optional single-box collision and a size-scaled visibility range.
+- **Process:** `docs/production/LEVEL_REBUILD_BRIEF.md` is the builder brief (≤4 parallel builder agents, one
+  worktree each, integrator reviews stills and merges with --no-ff). Guide section 11 has the latest notes.
+- **Known follow-ups:** heavy triangle counts on prop-dense levels (L994 ~2.3M, L003_5 ~1.5M: decimate props further
+  or add LODs); CaptureRunner can hang after writing stills (run under `timeout`); dev26 vignette data still
+  targets old stub coordinates for L101/L114/L160 (those levels relocate the cues at runtime); no API yet for
+  carried player status, forced crouch, vehicle seats or runtime-chosen destinations.
+
+## Earlier state (2026-11-06)
 - **Built: 27** (scoreboard has the list). This batch added L906, L601, L256 and L000_1. L000, L001, L002, L003, L004,
   L005, L006, L007, L008, L009, L010, L011, L012, L014, L019, L025, L037, L188 and L974. 17 are
   story-reachable from Level 0; L974 is developer-only per canon. Fully accepted: 0 (needs a human playtest and

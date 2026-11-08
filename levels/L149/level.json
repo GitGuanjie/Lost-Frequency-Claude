@@ -1,0 +1,41 @@
+{
+  "stable_id": "L149",
+  "scene": "res://levels/L149/L149.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — candidate dev3",
+  "procedural": false,
+  "arrivals": [
+    "start",
+    "from_L046"
+  ],
+  "signature": "Low-gravity floating coconut isles and unstable boundary",
+  "mechanics": [
+    "low_gravity",
+    "islands",
+    "barrier"
+  ],
+  "exits": [
+    {
+      "id": "L149>L037#1",
+      "to": "L037",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL+DANGEROUS",
+      "method": "extremely small chance of no-clip deep in the Barrier",
+      "source_quote": "extremely small chance of no-clipping into Level 37 or level-140",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-149",
+      "trigger_type": "noclip"
+    },
+    {
+      "id": "L149>L140#2",
+      "to": "L140",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL+DANGEROUS",
+      "method": "extremely small chance of no-clip deep in the Barrier",
+      "source_quote": "extremely small chance of no-clipping into Level 37 or level-140",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-149",
+      "trigger_type": "noclip"
+    }
+  ],
+  "notes": "Source constrained to 2026-11-04 snapshot. All distances are compressed for playable prototype. No engine QA, Windows test or human screenshot review passed yet.",
+  "entity_policy": "No invented hostile entities; narrative testimony is not treated as verified encounter."
+}

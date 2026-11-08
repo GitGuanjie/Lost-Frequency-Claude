@@ -281,6 +281,34 @@ static func gallery_interior(lvl, ctx: Dictionary, C: Vector3, a: float, up_dirs
 	lvl.fixture(ctx, C + Vector3(-4.2, HO - 0.2, 0.6), Vector3(0, 0, 1), 0, 0.0)
 
 
+## DEV13 localized vertical adaptation for the first authored gallery (2,0).
+## Two physically separate inclined arms connect the existing central upper
+## platform (y=2.8) to a third deck (y=5.0), forming a return loop without
+## altering the procedural border passages, lift or lower utility corridors.
+static func authored_upper_service_loop(lvl, ctx: Dictionary, C: Vector3) -> void:
+	var k: GeoKit = ctx["k"]
+	var low := DY
+	var upper := 5.0
+	var w := 1.25
+	for z in [-1.10, 1.10]:
+		var start := C + Vector3(1.3, low, z)
+		var end := C + Vector3(5.4, upper, z)
+		k.ramp(start, end, w, 0.16, "l2_grate")
+	# The high deck connects the tips of both ramps into a closed circuit.
+	k.slab(C.x + 4.75, C.z - 1.75, C.x + 6.05, C.z + 1.75,
+		upper, 0.17, "l2_grate")
+	# Outer guardrail at the high edge, without blocking either ramp mouth.
+	k.box(C + Vector3(6.09, upper + 0.49, 0),
+		Vector3(0.08, 0.98, 3.5), "l2_rail_yellow")
+	k.box(C + Vector3(5.4, upper + 0.49, -1.82),
+		Vector3(1.4, 0.98, 0.08), "l2_rail_yellow")
+	k.box(C + Vector3(5.4, upper + 0.49, 1.82),
+		Vector3(1.4, 0.98, 0.08), "l2_rail_yellow")
+	lvl.add_interactable(C + Vector3(5.4, upper + 0.6, 0.0),
+		Vector3(1.0, 1.15, 1.0), "Inspect the upper pipework service tag", func(_p):
+			Overlay.toast("The overhead pipe run turns back toward the junction it should have left.", 4.0))
+
+
 # ---------------------------------------------------------- rooms & features
 
 ## A room behind an unlocked door (quadrant beside a corridor). kind: bare |

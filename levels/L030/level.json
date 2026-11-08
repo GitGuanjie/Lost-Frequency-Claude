@@ -1,0 +1,19 @@
+{
+  "stable_id": "L030",
+  "scene": "res://levels/L030/L030.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "Daylight floating grass islands above vast void; no confirmed escape",
+  "mechanics": [
+    "floating_islands",
+    "void_bridges_uncertain",
+    "audio_lure"
+  ],
+  "exits": [],
+  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Memory Lurkers, level voice, Wormlings; Smiler and The Birds as rare/rumored"
+}

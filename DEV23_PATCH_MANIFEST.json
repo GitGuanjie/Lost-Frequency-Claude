@@ -1,0 +1,48 @@
+{
+  "from": "v1.5.0-dev22",
+  "to": "v1.5.0-dev23",
+  "baseline": "LostFrequency_v1.5.0-dev22_SOURCE.zip",
+  "files_added": [
+    "3/DEV23_README_FIRST_CN.md",
+    "3/EXPORT_DEV23_WINDOWS.ps1",
+    "3/RUN_DEV23_QA_WINDOWS.ps1",
+    "3/core/world/LandmarkSpurState.gd",
+    "3/core/world/LandmarkSpurs.gd",
+    "3/data/dev23_landmark_spurs.json",
+    "3/docs/production/DEV23_LandmarkRoutes.png",
+    "3/docs/production/DEV23_LandmarkRoutes.svg",
+    "3/reports/qa/v150_dev23/import.log",
+    "3/reports/qa/v150_dev23/summary.json",
+    "3/tests/static/test_dev23_landmark_spurs.py",
+    "3/tools/draw_dev23_routes.py",
+    "3/tools/generate_dev23_landmarks.py",
+    "3/tools/run_dev23_qa.py"
+  ],
+  "files_replaced": [
+    "3/README.md",
+    "3/core/world/NarrativeDistrict.gd",
+    "3/project.godot",
+    "3/tests/qa_runner.gd"
+  ],
+  "sha256": {
+    "3/DEV23_README_FIRST_CN.md": "01b37ba44bf32d8964f34c1fd55d7875890476bf52232d9eae3df9097dd0fb41",
+    "3/EXPORT_DEV23_WINDOWS.ps1": "ebd7d968c96a9132813dc40141d0850d20787b38e1a287f01ce493f40e8156c6",
+    "3/README.md": "2d4427875230f7c732c08e0ff45c9ec3cd3efaeebcf639de26b7b0d2a2669fc2",
+    "3/RUN_DEV23_QA_WINDOWS.ps1": "6ba6f62400311234493d9525e74dbacf8773b891dc7c946bd204becc6bcaba92",
+    "3/core/world/LandmarkSpurState.gd": "6d7763c41a0594e3c62c49d03bcce8fea48d6ef50623c169d8636a556e764317",
+    "3/core/world/LandmarkSpurs.gd": "9b611d16c6275babfaafce59c6ba76ffba57cb50bbfa2e008a1e8772322149af",
+    "3/core/world/NarrativeDistrict.gd": "0ccc0c4f3a02b0268a02addfef7a2757c3f89f42b09aa65b9d61e8d338b89ee9",
+    "3/data/dev23_landmark_spurs.json": "9899bed1e09b8946efbfb889865f4f0e9efc246567a4f6ef2e280765842b0321",
+    "3/docs/production/DEV23_LandmarkRoutes.png": "91338b4db91140d7a412925785e9b643e2b703080a9789e8527cd7bb48d28492",
+    "3/docs/production/DEV23_LandmarkRoutes.svg": "97d1389e03c8de3bcbbe79237628ef0b37ba86ee46b811ec3abe194f44fd94f4",
+    "3/project.godot": "3dc65d27dc5f312f1660a3ac6192d139d1f00a2d3f808026b48e518dba4a749f",
+    "3/reports/qa/v150_dev23/import.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "3/reports/qa/v150_dev23/summary.json": "4ad703aee6a1396b1c8bcc24b7d5db6b6ead6bd9cf07e96e2b614228e9fd159b",
+    "3/tests/qa_runner.gd": "8377bace7df78ccaa4a4c5b1a6913809759e05943f806bf86274dbdb1a6c4d6f",
+    "3/tests/static/test_dev23_landmark_spurs.py": "33b3a89ea9dfe80f5b5222f9f489f691993e989ae64431f2ba7cd8984037a169",
+    "3/tools/draw_dev23_routes.py": "57bf5c5760b3b49d339cb12ebbf6f9001bf08a77ac2f72b85fa64d7ffecea3cb",
+    "3/tools/generate_dev23_landmarks.py": "7299404d1eda71151a7ee8b2437a0e501a08ff7c59e9f5df5c8f1cefeb01f18c",
+    "3/tools/run_dev23_qa.py": "333a5e965b04e75ddd117f6211fdb3c6aa5325da5605ff893f41008088f5f9a3"
+  },
+  "instructions": "Back up dev22; extract this patch to the directory containing 3/; no existing file is removed."
+}
