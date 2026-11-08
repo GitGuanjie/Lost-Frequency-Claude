@@ -1,35 +1,41 @@
 {
-  "stable_id": "L055",
-  "scene": "res://levels/L055/L055.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "UNVERIFIED Godot import, walker, GPU capture and human review pending",
-  "procedural": false,
-  "arrivals": [
-    "start",
-    "from_L011"
-  ],
-  "signature": "A dusty rustic restaurant whose disjointed rooms hold ordinary food and inexplicable beams of sunlight.",
-  "mechanics": [
-    "safe_room_entry",
-    "fragmented_kitchens",
-    "unseen_sunbeams",
-    "timed_return_boundary"
-  ],
-  "exits": [
-    {
-      "id": "L055>EXT#1",
-      "to": "@origin",
-      "trigger": "condition",
-      "label": "Automatic ejection back to prior level",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED+ONE-WAY",
-      "source_section": "Dated canonical snapshot; exits",
-      "source_quote": "automatic no-clip after a random duration",
-      "arrival": "",
-      "hint": "Automatic ejection back to prior level",
-      "to_label": "The level the wanderer entered from (source variable)"
-    }
-  ],
-  "entity_policy": "NONE per source",
-  "notes": "ADAPTATION: 132m finite collection of rooms; a real timer auto-requests the documented variable return; a physical test trigger exists only for QA. A full unobserved room-rearrangement system is not yet implemented. Source does not establish a permanent exit. Canon: docs/canon/levels/L055.md; authors credited there under CC BY-SA 3.0. Not yet PLAYABLE."
+ "stable_id": "L055",
+ "scene": "res://levels/L055/L055.tscn",
+ "status": "IN_DEVELOPMENT",
+ "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003 24/24 each; bot fired the QA-only timed-return fixture L055>EXT#1 in the Safe Room); stills reviewed by builder (AI); integrator review pending",
+ "procedural": true,
+ "arrivals": [
+  "start",
+  "from_L011"
+ ],
+ "signature": "An abandoned rustic restaurant of segmented rooms - counter, kitchen, rows of seating - joined by corridors and lit by beams of sunlight from nowhere; the outskirts rearrange when unwatched, and after a while the level sends you back where you came from",
+ "mechanics": [
+  "safe_room_entry",
+  "streamed_restaurant_rooms",
+  "unobserved_rooms_move",
+  "sunbeams_from_nowhere",
+  "sunlight_drowsiness_rest",
+  "hidden_stay_timer_return",
+  "hallucinations_over_time",
+  "frontrooms_food_plain_water"
+ ],
+ "exits": [
+  {
+   "id": "L055>EXT#1",
+   "to": "@origin",
+   "trigger": "condition",
+   "label": "The light grew harsh and the level sent you back where you came from",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED+ONE-WAY",
+   "source_section": "Entrances And Exits (Exits)",
+   "source_quote": "no-clip wanderers out of the level after a random duration of time has elapsed, back to the original level from which they entered",
+   "arrival": "",
+   "hint": "You can't leave. You'll know when it's time.",
+   "to_label": "The level the wanderer entered from (source variable)",
+   "trigger_type": "timed"
+  }
+ ],
+ "entity_policy": "NO ENTITY PER SOURCE ('no signs of life anywhere'). Hallucinations are sounds and captions only; the narrator's father appears only in a testimony note.",
+ "notes": "SOURCE: infinite segmented rooms like an abandoned rustic restaurant joined by halls and corridors; counters, kitchens, rows of seating, rare bathrooms; cracked brick, flaking wallpaper, creaking floorboards, thick dust; the Safe Room is the only entry; outskirts look the same; Frontrooms food and plain water, no Almond Water; eerily quiet (no hum, no machinery, no life); humid and cool; hallucinations with long stays; unobserved outskirts rooms move without new rooms appearing; sunlight from an unperceivable source at various angles in every room, drowsiness for the exhausted; M.E.G. supplies (phones, pamphlets); no conventional exits, automatic no-clip back to the level of entry after a random duration, awareness that time is limited; zero re-entries. ADAPTATION: a finite streaming window of 24 m chunks (one 18 m room each, four doorways, short corridors; door offsets alternate so no sightline crosses three rooms); rooms are drawn from a seeded finite set of 32 designs (diner with booths, tavern with long tables and a raised dais, cafe, dining room with cloths) and an unseen chunk is rebuilt as another design (ChunkWorld peripheral shift, 25 s unseen; the Safe Room at chunk (0,0) never shifts); sunbeams are spot lights with dusty shafts that begin in mid-air; the stay is compressed to a hidden 20-45 minutes; sitting in a sunbeam passes 6-12 minutes with a memory fragment from the page's narrative (TESTIMONY); standing in light deepens a drowsy vignette; hallucinations (a murmur, a faint choir, rain on glass) begin after 7 minutes; the harsh-light ejection follows the narrative's 'the light grows harsher'. Menu boards list ordinary dishes (ours). QA fixture: in QA mode only, the timed return is a condition volume in the Safe Room with the timer at zero. Re-entry is not blocked by the game state yet (no global flag API); see report. Canon: docs/canon/levels/L055.md; author bird_stalwart055 credited there under CC BY-SA 3.0. Not yet PLAYABLE.",
+ "legacy_overlays": false
 }
