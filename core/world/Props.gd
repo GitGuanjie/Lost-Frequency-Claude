@@ -97,6 +97,9 @@ static func place(level: Node3D, parent: Node3D, id: String, pos: Vector3, yaw_d
 	holder.add_child(model)
 	if not shadows:
 		_no_shadows(model)
+	# Distance cull scaled by size: small clutter disappears early, big pieces stay.
+	var reach := clampf((b.size * s).length() * 14.0, 20.0, 90.0)
+	_set_range(model, reach)
 	if collide and b.size != Vector3.ZERO:
 		var body := StaticBody3D.new()
 		var cs := CollisionShape3D.new()
@@ -108,6 +111,15 @@ static func place(level: Node3D, parent: Node3D, id: String, pos: Vector3, yaw_d
 		holder.add_child(body)
 	placed_count += 1
 	return holder
+
+static func _set_range(n: Node, reach: float) -> void:
+	if n is GeometryInstance3D:
+		var g := n as GeometryInstance3D
+		g.visibility_range_end = reach
+		g.visibility_range_end_margin = 3.0
+		g.visibility_range_fade_mode = GeometryInstance3D.VISIBILITY_RANGE_FADE_SELF
+	for c in n.get_children():
+		_set_range(c, reach)
 
 static func _no_shadows(n: Node) -> void:
 	if n is GeometryInstance3D:
