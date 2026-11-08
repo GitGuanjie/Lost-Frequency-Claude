@@ -2,18 +2,27 @@
   "stable_id": "L052",
   "scene": "res://levels/L052/L052.tscn",
   "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
+  "qa_status": "NOT_TESTED",
   "procedural": true,
   "arrivals": [
     "start"
   ],
-  "signature": "Descending limestone crawlspace and cave art",
+  "signature": "A lightless limestone cavern entered by a crouch-only crawl whose mouth shrinks behind you, its walls covered in reddish-brown drawings, and more painted pairs of eyes every time you look back.",
   "mechanics": [
-    "crawlspace",
+    "crouch_only_crawl",
+    "mouth_smaller_from_within",
+    "flashlight_only_light",
+    "streamed_unknown_length_cavern",
     "cave_paintings",
-    "silent_campfire"
+    "extinguished_campfire_and_tools",
+    "eyes_multiply_while_watched",
+    "ceiling_drips",
+    "sparse_bugs",
+    "courier_notebook"
   ],
   "exits": [],
-  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
-  "entity_policy": "NO ENTITY PER SOURCE (a watcher is reported by diary only)"
+  "notes": "SOURCE: shallow crawl entrance, mouth smaller from within (no way back); large limestone cavern with earthy rocky walls, no natural light, height from ~2 m to much taller, stalactites, unknown length; reddish-brown drawings on all inspected walls (three stick figures round a campfire with two crossed out; above-threshold animals, some degraded; a stick figure enclosed by small irregular shapes), hand prints, clawing traces; one extinguished campfire and crude tools; few bugs (edibility unconfirmed); water only as drips from ceiling and stalactites; three incomplete remains three metres from the entrance (bloat, active decay, skeleton) with Dina A.'s 57-entry notebook (43 legible) in a torn rucksack with delivery papers; diary: feeling observed, more and more 'eyes', entries 52-56 drawn with eye pairs, last entry 'I se e yo u'; closing line about ignoring further supply requests. ADAPTATION: the remains lie on a short bare-rock apron in front of the mouth where the player arrives, because the page puts them three metres from the entrance in Plane #445 and does not describe Plane #445; the cave layout grammar (first hall, campfire alcove, 2 m low gallery, side loop, 13 m second hall with a ramp to a ledge, then a seeded endless gallery east) is ours; the crawl tapers to a hand-sized hole once the player stands in the cavern; the growing watch (about nine minutes to full, faster with the flashlight off) paints new eye pairs on walls outside the camera view (the dossier's plan; eye drawings are the diary's motif); stalactite lengths are clipped above head height in low sections. The playable world is a finite 5x5 window of 24 m chunks streamed around the player. Notebook text is a paraphrase with one short quote.",
+  "entity_policy": "NO ENTITY PER SOURCE. The watcher is only the courier's diary testimony; it is expressed as painted eye pairs that multiply, a heartbeat and subtitles, never a body.",
+  "legacy_overlays": false,
+  "no_exit_reason": "The Level 52 page states no exit and says leaving through the entrance is impossible because the mouth is smaller from within. data/canon/transitions.json has no edge out of L052, so no exit is built; the crawl behind the player tapers to a hand-sized hole once they stand in the cavern."
 }
