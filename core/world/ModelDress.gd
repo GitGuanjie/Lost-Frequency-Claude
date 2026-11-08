@@ -100,7 +100,8 @@ static func _place(level: Node3D, owner: Node3D, item: Dictionary) -> bool:
 	var xyz: Array = item.get("pos", [0.0, 0.0, 0.0])
 	anchor.position = Vector3(float(xyz[0]), float(xyz[1]), float(xyz[2]))
 	anchor.rotation.y = deg_to_rad(float(item.get("yaw", 0.0)))
-	owner.add_child(anchor)
+	# readable unique names: duplicates become GLB_<model>2, GLB_<model>3 ... (keeps the GLB_ prefix)
+	owner.add_child(anchor, true)
 	model.name = "Visual"
 	anchor.add_child(model)
 	model.scale = Vector3.ONE * factor

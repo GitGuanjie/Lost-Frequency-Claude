@@ -11,7 +11,7 @@ Read first, in this order:
 2. `docs/production/LEVEL_AUTHORING_GUIDE.md`. Sections 0–10 apply in full; section 9 (film-grade rules)
    is mandatory.
 3. The current stub in `levels/<SID>/` and its `level.json`. Keep `stable_id`, the edge ids and the
-   arrival tags. You may rewrite every `.gd` file in that folder from scratch, and you should.
+   arrival tags. Set `"legacy_overlays": false` in `level.json` (see guide section 11). You may rewrite every `.gd` file in that folder from scratch, and you should.
 4. One finished reference level close to your theme. Office/backrooms: `levels/L001`, `levels/L002`.
    Water: `levels/L037`, `levels/L007`. Outdoor: `levels/L011`, `levels/L009`. Domestic: `levels/L974`.
    Hotel: `levels/L005`. Large vertical: `levels/L004`, `levels/L601`.

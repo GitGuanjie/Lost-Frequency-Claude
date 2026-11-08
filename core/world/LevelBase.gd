@@ -55,10 +55,13 @@ func _ready() -> void:
 	_spawn_player()
 	# Data-driven, non-intrusive ambience, registered only for curated levels.
 	# No canonical exit/level data is changed by these optional cues.
-	_install_ambient_discoveries()
-	_install_dev26_curated_atmospheres()
-	_install_dev27_field_sectors()
-	_install_dev28_story_rooms()
+	# Rebuilt levels set "legacy_overlays": false in level.json so the dev18-dev28
+	# data-driven overlays (authored against the old stubs) are not stacked on top.
+	if manifest.get("legacy_overlays", true):
+		_install_ambient_discoveries()
+		_install_dev26_curated_atmospheres()
+		_install_dev27_field_sectors()
+		_install_dev28_story_rooms()
 	# let physics register the static world before validating the spawn
 	await get_tree().physics_frame
 	await get_tree().physics_frame

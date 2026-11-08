@@ -187,3 +187,13 @@ real 3D structure, continuous level switching, and no obvious boundaries. These 
   while the player is in their slice.
 - For a chosen-at-runtime destination (`to: null` edges), set the cached edge's `to` just before firing
   (see L906); a proper API is still pending.
+
+## 11. Integrator notes from the v2 rebuild (2026-11-08)
+- `GeoKit.stairs(base, dir, width, rise, steps, mat, run)` takes the TOTAL rise, not the rise per step.
+- Set `"legacy_overlays": false` in a rebuilt level's `level.json`. Otherwise the dev18–dev28 data overlays
+  (ambient discoveries, dev26 vignettes, dev27 field sectors, dev28 story rooms), authored against the old stubs,
+  are installed on top of your layout at fixed coordinates.
+- `Props.place()` sets a size-scaled visibility range (20–90 m). Prefer a few well-placed large rocks to hundreds
+  of boulders: each Poly Haven model is up to ~8k triangles.
+- A destination chosen at runtime (`to: null` edges) is still set on the cached edge just before firing
+  (see L906, L021); a proper API is pending. `LadderVolume.top_exit` is unused; levels handle the top themselves.
