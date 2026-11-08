@@ -2,30 +2,48 @@
   "stable_id": "L009_3",
   "scene": "res://levels/L009_3/L009_3.tscn",
   "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
+  "qa_status": "NOT_TESTED",
   "procedural": true,
   "arrivals": [
     "start",
-    "from_L028"
+    "from_L028",
+    "from_L009_3"
   ],
-  "signature": "Overcast wheat field maze with stone highway wall",
+  "signature": "A static, fog-drowned countryside where metres-high wheat forms an endless labyrinth, one warping highway runs past a mossy wall under a steel net, rotten wooden houses watch from every hill, an engine is always coming and never arrives, and walking straight ahead brings you back to the same fields.",
   "mechanics": [
+    "periodic_mobius_terrain",
     "wheat_labyrinth",
-    "hill_houses",
-    "fog"
+    "single_warping_highway",
+    "tar_slows_and_tires",
+    "engine_swell_never_arrives",
+    "hide_crouched_in_wheat_or_forest",
+    "hilltop_rotten_houses",
+    "plank_loft",
+    "bathroom_casement_onto_still_trees",
+    "weak_back_door_loops_to_fields",
+    "fuzzy_outside_in_sky",
+    "static_no_weather"
   ],
   "exits": [
     {
       "id": "L009_3>EXT#1",
-      "to": "EXT",
+      "to": "L009_3",
       "basis": "SOURCE",
       "confidence": "CONFIRMED",
       "method": "Break weak back door of a house",
       "source_quote": "she once again found herself within grassy fields leading to nowhere",
       "source_url": "https://backrooms-wiki.wikidot.com/level-9-3",
-      "trigger_type": "door"
+      "trigger_type": "door",
+      "trigger": "interact",
+      "label": "Forced the rotten back door and found yourself in the grassy fields again",
+      "source_section": "Discovery",
+      "hint": "Every hill has a house. Every house has a back door nobody can open properly.",
+      "arrival": "from_L009_3",
+      "to_label": "Level 9.3 (the same grassy fields)",
+      "implemented_as": "same-level loop: transitions.json gives no destination (to: null); the page says she 'once again found herself within grassy fields leading to nowhere', so the edge is routed back into this level's meadow arrival"
     }
   ],
-  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
-  "entity_policy": "NO ENTITY PER SOURCE"
+  "notes": "SOURCE: subsector of Level 9; titanic grassy fields and lonely roads ringed by forested hills; static, overcast, humid, foggy, weak light from the clouds; houses on hilltops, tiny, putrescent, wooden, drenched inside, full of utensils, furnishings and beams; a hallway ending in a bathroom with a commode below a casement onto huge trees that never move; metres-high wheat forming an endless labyrinth that diverges toward buildings; one single highway warping under the fog; its tar tires wanderers; a brittle moss-covered cobble and brick wall covered by a steel net on one side; roads without cars but an echo of engines approaching and never arriving; the fog as a blanket to hide under; forests that lead back to the fields; Möbius terrain with the outside visible only as a fuzzy image in the sky; nothing grows, fades or breaks down; no life forms; discovery via a darkened corner of the wheat; a back door with a frozen knob but weak, through which Cassidy found herself in grassy fields again. ADAPTATION: the Möbius terrain is a 384 m periodic torus (walking straight through the forest returns you to the same fields); the maze is a seeded 8 m-cell torus maze with extra loops; three hilltop houses per period, each with a plank loft over the front room; the highway is a sinuous curve per period with the wall on its west side; the tar lowers walk/sprint speed and drains stamina; the engine is a periodic swell capped far away (it ends sooner while you crouch in wheat, forest or away from the road); the back-door edge has no destination in transitions.json (to: null), so it is routed to this level's meadow arrival (from_L009_3) per the page's wording; a soaked sheet paraphrases the page's advice; house furniture beyond 'utensils, furnishings and beams' and the bathroom fixtures is ours. The playable world is a finite 5x5 window of 48 m chunks streamed around the player.",
+  "entity_policy": "NO ENTITY PER SOURCE. The engine is only heard; nothing ever appears on the road.",
+  "legacy_overlays": false
 }
