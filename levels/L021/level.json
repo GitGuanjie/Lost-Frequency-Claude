@@ -2,16 +2,23 @@
   "stable_id": "L021",
   "scene": "res://levels/L021/L021.tscn",
   "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — candidate dev3",
-  "procedural": false,
+  "qa_status": "NOT_TESTED",
+  "procedural": true,
   "arrivals": [
     "start",
     "from_L022"
   ],
-  "signature": "Four intersecting numbered-door corridors with safe centre",
+  "signature": "A small square with a front desk and waiting chairs where four endless condo hallways meet; numbered doors repeat down both sides forever, most opening onto brick or another stretch of the same halls, a few onto other levels, and behind a neon red Exit door a stair drops into three dark halls where something clicks in step.",
   "mechanics": [
-    "door_warp",
-    "crossroad"
+    "safe_central_square",
+    "four_streamed_hallways",
+    "door_table_by_label",
+    "doors_warp_within_level_or_wall",
+    "peripheral_shift_relabel_and_block",
+    "clickers_heard_in_halls",
+    "pickups_almond_water_level_keys_firesalt",
+    "neon_exit_door_dark_halls_below",
+    "organised_droves_hazard"
   ],
   "exits": [
     {
@@ -20,9 +27,13 @@
       "basis": "SOURCE",
       "confidence": "CONFIRMED",
       "method": "Door labelled 105",
+      "trigger": "interact",
+      "label": "Opened a door labelled 105",
+      "source_section": "Description",
       "source_quote": "Doors labeled 105 lead to Level 0 .",
       "source_url": "https://backrooms-wiki.wikidot.com/level-21",
-      "trigger_type": "door"
+      "hint": "Read the brass plaques.",
+      "arrival": "from_L021"
     },
     {
       "id": "L021>L356#2",
@@ -30,9 +41,72 @@
       "basis": "SOURCE",
       "confidence": "CONFIRMED",
       "method": "Door labelled 356",
+      "trigger": "interact",
+      "label": "Opened a door labelled 356",
+      "source_section": "Description",
       "source_quote": "Doors labeled 356 lead to Level 356 .",
       "source_url": "https://backrooms-wiki.wikidot.com/level-21",
-      "trigger_type": "door"
+      "hint": "Read the brass plaques.",
+      "arrival": "from_L021"
+    },
+    {
+      "id": "L021>L046#3",
+      "to": "L046",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL",
+      "method": "Sandstone doors",
+      "trigger": "interact",
+      "label": "Opened a sandstone door",
+      "source_section": "Description",
+      "source_quote": "Doors composed of sandstone can lead to Level 46",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-21",
+      "hint": "Some doors are not wood at all.",
+      "arrival": "from_L021",
+      "conditions": "'can lead': about 60% of sandstone doors (seeded); the rest open on brick"
+    },
+    {
+      "id": "L021>L669#4",
+      "to": "L669",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Door labelled 34",
+      "trigger": "interact",
+      "label": "Opened a door labelled 34",
+      "source_section": "Description",
+      "source_quote": "Doors labelled 34 lead to Level 669",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-21",
+      "hint": "Read the brass plaques.",
+      "arrival": "from_L021"
+    },
+    {
+      "id": "L021>EXT#5",
+      "to": "EXT",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Smiley-face doors",
+      "trigger": "interact",
+      "label": "Opened a door with a smiley face",
+      "source_section": "Description",
+      "source_quote": "Doors labelled with a smiley face lead to a party! =)",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-21",
+      "hint": "Someone drew a face on a plaque.",
+      "arrival": "from_L021",
+      "to_label": "a party (unnamed)"
+    },
+    {
+      "id": "L021>EXT#6",
+      "to": "EXT",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Door labelled with number 8-20",
+      "trigger": "interact",
+      "label": "Opened a door labelled with a level number from 8 to 20",
+      "source_section": "Description",
+      "source_quote": "Doors labelled 8-20 lead to their respective Levels.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-21",
+      "hint": "Low numbers mean something here.",
+      "arrival": "from_L021",
+      "to_label": "Levels 8-20 (the number on the door; set at runtime)"
     },
     {
       "id": "L021>L001_5#7",
@@ -40,11 +114,53 @@
       "basis": "SOURCE",
       "confidence": "CONFIRMED",
       "method": "Unlabeled doors",
+      "trigger": "interact",
+      "label": "Opened an unlabelled door",
+      "source_section": "Description",
       "source_quote": "Unlabeled doors lead to Level 1.5 .",
       "source_url": "https://backrooms-wiki.wikidot.com/level-21",
-      "trigger_type": "door"
+      "hint": "Not every door has a plaque.",
+      "arrival": "from_L021"
+    },
+    {
+      "id": "L021>EXT#8",
+      "to": "EXT",
+      "basis": "SOURCE",
+      "confidence": "UNKNOWN",
+      "method": "Other doors",
+      "trigger": "interact",
+      "label": "Opened an ordinary numbered door onto somewhere else entirely",
+      "source_section": "Description",
+      "source_quote": "Other doors can lead to random things and are not to be trusted.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-21",
+      "hint": "Most doors lie.",
+      "arrival": "from_L021",
+      "to_label": "random places (unnamed)"
+    },
+    {
+      "id": "L021>EXT#10",
+      "to": "EXT",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL",
+      "method": "Repeating doors in Exit halls",
+      "trigger": "interact",
+      "label": "Opened one of the repeating doors in the dark Exit halls",
+      "source_section": "Discovery of \"Exit\" Door",
+      "source_quote": "These repeating doors do not contain resources and only lead to Sub-sections and Unnumbered Levels.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-21",
+      "hint": "Past the neon sign, every door looks the same.",
+      "arrival": "from_L021",
+      "to_label": "sub-sections and unnumbered levels (unnamed)"
     }
   ],
-  "notes": "Source constrained to 2026-11-04 snapshot. All distances are compressed for playable prototype. No engine QA, Windows test or human screenshot review passed yet.",
-  "entity_policy": "No invented hostile entities; narrative testimony is not treated as verified encounter."
+  "notes": "SOURCE: four hallways ~26 miles long meeting at a small open square with chairs and a desk; no entities in the square; hallways shift and can be blocked; doors repeat on both sides; door table (105, 356, sandstone, 34, smiley, 8-20, unlabelled; others random/back into Level 21/onto a wall); Clickers common; Almond Water, Level Keys, Firesalt in the halls; distrust anyone; the neon red Exit door in the hallway to the right of the front desk leads to three dark non-shifting hallways with resources, organised entities and repeating doors to sub-sections; page image 'Hallway at Meridian Condo'. ADAPTATION: the hallways are streamed 24 m segments (a finite window around the player, not 26 miles); condo look (carpet, wainscot, brass plaques, ceiling lights) from the page image because lighting and materials are not stated; doors every 3 m per side; label odds: ~2% each for 105/356/34, ~1.6% smiley, ~3.6% for 8-20, ~3.5% unlabelled, ~2.5% sandstone; ordinary doors: 60% step you into another hallway 3-30 segments away, 35% open on brick, 5% random elsewhere (EXT#8); unseen segments re-roll their doors and 14% end in a wall (peripheral shift; never the square's neighbours or the Exit segment); 'right of the front desk' = the east hallway as you face the desk from the visitor side; the Exit door is 48 m east; behind it a 4.5 m stair drops to a junction with the three dark halls (north, east, west) - the stair is ours; Exit halls do not shift; organised entities hurt only after ~55 m into them. The 8-20 doors route to the level matching their plaque by setting the cached edge's 'to' just before firing (as L906 does). The page's Exit door edge L021>EXT#9 is realised in-level (the dark halls) rather than as a transition. Clickers are sound-only. QA fixture: in QA the first door of the south hallway mouth is a 105 door.",
+  "entity_policy": "SOURCED ENTITIES ONLY, as presences: Clickers heard in the hallways (never in the square); organised entities heard in droves in the Exit halls (a hazard deep in, no combat). Unknown entities and other people are not spawned (the ledger warns not to trust anyone met here).",
+  "fail_states": [
+    {
+      "kind": "organised_entities",
+      "label": "Lingering deep in the dark Exit halls: organised entities strike",
+      "basis": "SOURCE",
+      "source_quote": "Entities can appear here in droves, noted for being strangely organized."
+    }
+  ]
 }
