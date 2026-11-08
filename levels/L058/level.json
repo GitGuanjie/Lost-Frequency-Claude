@@ -1,64 +1,69 @@
 {
-  "stable_id": "L058",
-  "scene": "res://levels/L058/L058.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT_TESTED",
-  "procedural": false,
-  "legacy_overlays": false,
-  "arrivals": [
-    "start"
-  ],
-  "signature": "A derelict indoor waterpark lit by windows onto a white void: dry, leaf-strewn pools ringed in blue tile, faded slides groaning on rust-bleeding white beams (one of them black), blue plastic grass and painted trees bearing purple Tegan Fruit; beyond the door, dark corridors whose metal floors announce every step, a damp cafe with free vending machines, and a storeroom whose fluorescents die without warning.",
-  "mechanics": [
-    "dry_waterpark_two_pools",
-    "slide_tower_two_decks",
-    "corridor_noise_alert_smiler",
-    "storeroom_blackouts",
-    "free_vending_stock_and_restock",
-    "tegan_fruit_stage_cycle",
-    "switchable_corridor_lamp",
-    "window_entities_rare"
-  ],
-  "exits": [
-    {
-      "id": "L058>L001#2",
-      "to": "L001",
-      "trigger": "interact",
-      "label": "Opened the storeroom crate with a red number one",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "source_section": "Entrances And Exits / The Storerooms",
-      "source_quote": "Opening a supply crate with a red number one",
-      "hint": "Somewhere in the Storeroom one crate is marked differently.",
-      "arrival": "from_L058"
-    },
-    {
-      "id": "L058>L058_1#1",
-      "to": "L058_1",
-      "trigger": "noclip",
-      "label": "No-clipped into the black waterslide",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED+DANGEROUS",
-      "source_section": "Entrances And Exits",
-      "source_quote": "isn't recommended due to Level 58.1 being class 5",
-      "hint": "One slide among the faded colours is black. It ends in the splash pool.",
-      "arrival": "from_L058"
-    },
-    {
-      "id": "L058>EXT#3",
-      "to": null,
-      "trigger": "noclip",
-      "label": "No-clipped into the exposed piping in the Corridors",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "source_section": "Entrances And Exits",
-      "source_quote": "No-clipping into exposed piping in The Corridors",
-      "hint": "At the far end of the main corridor the wall is broken open onto pipes.",
-      "arrival": "",
-      "to_label": "Office Space EL3A"
-    }
-  ],
-  "fail_states": [],
-  "entity_policy": "SOURCED ENTITIES ONLY, scripted presences, never combat: a Smiler (CONFIRMED, Corridors only) that comes out of the dark when corridor noise builds up and fades when you go quiet (a hit costs health); Window entities (CONFIRMED, rare) as a dark shape in a high window. Dullers (CONFIRMED) are named in the notes but not shown. No Wretch (a single past instance, killed). The Tribe of Tegan and the B.N.T.G. base are communities, not built here beyond a B.N.T.G. border and notice.",
-  "notes": "SOURCE: infinite indoor waterpark with four room types (Waterpark, Corridors, Cafes, Storerooms); everyone no-clips into the main Waterpark; faded plastic slides on white-chipped, rusting beams that groan; dry, grimy pools no deeper than 0.5 m, blue tile rims, beige concrete, dry red leaves; windows onto a bright white void, Window entities sometimes; blue plastic grass, blue-leaved trees with uniquely painted dark brown trunks, boulders; Tegan Trees and Tegan Fruit (stages 6/11/7 days then elder, ripe plasticises skin, elder sickens); smooth concrete walkways; spectator areas of picnic benches on blue plastic behind filthy, cracked glass; Corridors: minimal light (ceiling lights, lamps on tables, glowing white windows), rough grey concrete, white MDF ceiling tiles on plastic supports, metal plate floors whose noise attracts entities; crates on trolleys, stepladders, boards, pallets, pipes; B.N.T.G. borders of boards, pallets and pipes; Cafes: brown wooden door with two grimy panes and a faded bell, broken furniture, counter, unlocked till of Frontrooms money, one or two vending machines with cracked touchscreens and a working keypad, free, 10 of each of Almond Water, unbranded crisps, Greasy Marshmallows, Warpberries, inconsistent restock; striped slate blue and grey wallpaper and black and white tile in some; Storerooms: grey concrete, loud fluorescents that black out (4 s to about 5 h 20 min), racks, unsealed supply crates (Almond Water, Lucky O Milk, Greasy Marshmallows), chlorine tanks, toilet bowls, mattresses, chairs, tables, unpowered vending machines, suitcases, tyres, folded football kits; the red '1' crate; exits by the red 1 crate (Level 1), no-clipping into a black waterslide (Level 58.1, class 5) and into exposed piping in the Corridors (Office Space EL3A). ADAPTATION: the infinite park is a finite authored slice (one main Waterpark, a corridor network, one Cafe, one Storeroom), closed by walls, doors and the white void; the slide tower decks, mound layout and corridor plan are ours; the black slide is placed in the main Waterpark so its exit is findable; blackouts are shortened to 4-45 s; vending restock waits 3-168 real hours after a machine empties; corridor noise is a meter driven by your speed on metal floors, and a Smiler appears at 100%; the Tegan Fruit stage follows the real calendar on a 30-day cycle (one tree near the spectator area is pickable). Not built: the Tribe of Tegan village (huts, crop beds, town centre, the black-slide bin), the full B.N.T.G. base, the Level Key, vines in cafes. QA mode disables blackouts, the noise Smiler, Window entities and creaks. Content note: the page's tribe material (a boy pushed down a slide and never seen again, funerals that feed bodies to entities, imprisonment, cult worship) is not depicted; nothing graphic. Canon: docs/canon/levels/L058.md; page by BlockHead42, CC BY-SA 3.0."
+ "stable_id": "L058",
+ "scene": "res://levels/L058/L058.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": false,
+ "legacy_overlays": false,
+ "arrivals": [
+  "start"
+ ],
+ "signature": "A derelict indoor waterpark lit by windows onto a white void: dry, leaf-strewn pools ringed in blue tile, faded slides groaning on rust-bleeding white beams (one of them black), blue plastic grass and painted trees bearing purple Tegan Fruit; beyond the door, dark corridors whose metal floors announce every step, a damp cafe with free vending machines, and a storeroom whose fluorescents die without warning.",
+ "mechanics": [
+  "dry_waterpark_two_pools",
+  "slide_tower_two_decks",
+  "corridor_noise_alert_smiler",
+  "storeroom_blackouts",
+  "free_vending_stock_and_restock",
+  "tegan_fruit_stage_cycle",
+  "switchable_corridor_lamp",
+  "window_entities_rare"
+ ],
+ "exits": [
+  {
+   "id": "L058>L001#2",
+   "to": "L001",
+   "trigger": "interact",
+   "label": "Opened the storeroom crate with a red number one",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "source_section": "Entrances And Exits / The Storerooms",
+   "source_quote": "Opening a supply crate with a red number one",
+   "hint": "Somewhere in the Storeroom one crate is marked differently.",
+   "arrival": "from_L058"
+  },
+  {
+   "id": "L058>L058_1#1",
+   "to": "L058_1",
+   "trigger": "noclip",
+   "label": "No-clipped into the black waterslide",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED+DANGEROUS",
+   "source_section": "Entrances And Exits",
+   "source_quote": "isn't recommended due to Level 58.1 being class 5",
+   "hint": "One slide among the faded colours is black. It ends in the splash pool.",
+   "arrival": "from_L058"
+  },
+  {
+   "id": "L058>EXT#3",
+   "to": null,
+   "trigger": "noclip",
+   "label": "No-clipped into the exposed piping in the Corridors",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "source_section": "Entrances And Exits",
+   "source_quote": "No-clipping into exposed piping in The Corridors",
+   "hint": "At the far end of the main corridor the wall is broken open onto pipes.",
+   "arrival": "",
+   "to_label": "Office Space EL3A"
+  }
+ ],
+ "fail_states": [],
+ "entity_policy": "SOURCED ENTITIES ONLY, scripted presences, never combat: a Smiler (CONFIRMED, Corridors only) that comes out of the dark when corridor noise builds up and fades when you go quiet (a hit costs health); Window entities (CONFIRMED, rare) as a dark shape in a high window. Dullers (CONFIRMED) are named in the notes but not shown. No Wretch (a single past instance, killed). The Tribe of Tegan and the B.N.T.G. base are communities, not built here beyond a B.N.T.G. border and notice.",
+ "notes": "SOURCE: infinite indoor waterpark with four room types (Waterpark, Corridors, Cafes, Storerooms); everyone no-clips into the main Waterpark; faded plastic slides on white-chipped, rusting beams that groan; dry, grimy pools no deeper than 0.5 m, blue tile rims, beige concrete, dry red leaves; windows onto a bright white void, Window entities sometimes; blue plastic grass, blue-leaved trees with uniquely painted dark brown trunks, boulders; Tegan Trees and Tegan Fruit (stages 6/11/7 days then elder, ripe plasticises skin, elder sickens); smooth concrete walkways; spectator areas of picnic benches on blue plastic behind filthy, cracked glass; Corridors: minimal light (ceiling lights, lamps on tables, glowing white windows), rough grey concrete, white MDF ceiling tiles on plastic supports, metal plate floors whose noise attracts entities; crates on trolleys, stepladders, boards, pallets, pipes; B.N.T.G. borders of boards, pallets and pipes; Cafes: brown wooden door with two grimy panes and a faded bell, broken furniture, counter, unlocked till of Frontrooms money, one or two vending machines with cracked touchscreens and a working keypad, free, 10 of each of Almond Water, unbranded crisps, Greasy Marshmallows, Warpberries, inconsistent restock; striped slate blue and grey wallpaper and black and white tile in some; Storerooms: grey concrete, loud fluorescents that black out (4 s to about 5 h 20 min), racks, unsealed supply crates (Almond Water, Lucky O Milk, Greasy Marshmallows), chlorine tanks, toilet bowls, mattresses, chairs, tables, unpowered vending machines, suitcases, tyres, folded football kits; the red '1' crate; exits by the red 1 crate (Level 1), no-clipping into a black waterslide (Level 58.1, class 5) and into exposed piping in the Corridors (Office Space EL3A). ADAPTATION: the infinite park is a finite authored slice (one main Waterpark, a corridor network, one Cafe, one Storeroom), closed by walls, doors and the white void; the slide tower decks, mound layout and corridor plan are ours; the black slide is placed in the main Waterpark so its exit is findable; blackouts are shortened to 4-45 s; vending restock waits 3-168 real hours after a machine empties; corridor noise is a meter driven by your speed on metal floors, and a Smiler appears at 100%; the Tegan Fruit stage follows the real calendar on a 30-day cycle (one tree near the spectator area is pickable). Not built: the Tribe of Tegan village (huts, crop beds, town centre, the black-slide bin), the full B.N.T.G. base, the Level Key, vines in cafes. QA mode disables blackouts, the noise Smiler, Window entities and creaks. Content note: the page's tribe material (a boy pushed down a slide and never seen again, funerals that feed bodies to entities, imprisonment, cult worship) is not depicted; nothing graphic. Canon: docs/canon/levels/L058.md; page by BlockHead42, CC BY-SA 3.0.",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }
