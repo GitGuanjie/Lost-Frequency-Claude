@@ -2,16 +2,21 @@
   "stable_id": "L160",
   "scene": "res://levels/L160/L160.tscn",
   "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
-  "procedural": true,
+  "qa_status": "NOT_TESTED",
+  "procedural": false,
   "arrivals": [
     "start"
   ],
-  "signature": "Under-described pact: unseen city of promised memories",
+  "signature": "A voice leads you through memories it promises to give back: a grey straw field in fog, the swing you shared under an open sky, an infinite stretch of azure under a burning orange sky, a short street of shut cottages it calls the city of promised memories, and her house with striped awnings, soup on the table, where a back door opens onto one more place you need to go through.",
   "mechanics": [
-    "narrative_monologue",
-    "pact",
-    "unspecified_city"
+    "second_person_voice_zones",
+    "memory_pull_colour_and_music",
+    "pact_accept_or_walk_away",
+    "grey_present_vs_coloured_memory_sky",
+    "swing_animated",
+    "diegetic_soft_limit_grey_folds_back",
+    "two_storey_house",
+    "raised_boardwalk_over_shallows"
   ],
   "exits": [
     {
@@ -22,9 +27,17 @@
       "method": "Go through final place where the voice waits",
       "source_quote": "There's just one more place you need to go through.",
       "source_url": "https://backrooms-wiki.wikidot.com/level-160",
-      "trigger_type": "unknown"
+      "trigger_type": "unknown",
+      "trigger": "walk_in",
+      "label": "Accepted the pact and went through the last door",
+      "source_section": "body (monologue)",
+      "hint": "The voice says it will be waiting inside. Her house is at the end of the street.",
+      "to_label": "one more place (unnamed)",
+      "conditions": "the voice's pact must be accepted at the back door (ADAPTATION gate; the page offers only the pact)",
+      "arrival": "from_L160"
     }
   ],
-  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
-  "entity_policy": "SOURCED ENTITIES ONLY: the unnamed pact voice; promised people are claims only"
+  "notes": "CONTENT NOTE: the page mentions suicide; the level shows a toast at entry and never depicts or quotes the jump. SOURCE (page text): second-person monologue; the name rendered as symbols; playing till dusk, tag, hide and seek; the swing and the open sky; Emma who shared the swing and is 'humming'; the present 'monotone and grey'; an infinite stretch of azure under the burning orange sky; the woman who took you to her house, food, clothes, shelter, 'Mom'; her children; the soup laid out on the table; the mother crying in bed; the pact; 'The city of promised memories'; 'one more place you need to go through. I will be waiting for you inside'; background piano. SOURCE (credited image titles): House With Striped Awnings, swings Empty, Orange Sky, Dark sky, Fittie (a row of small seaside cottages), Straw Fogs, Grey Dreams. ADAPTATION: the page gives no layout, so the route and its scale are ours: field (fog, straw bales, utility poles) -> playground mound (+0.5 m) with the swing -> shallow azure sheet with a 1 m boardwalk -> a 32 m street of eight shut cottages (no residents; the voice names the city, the cottages come from the Fittie image) -> a two-storey house (dining room, kitchen, sitting room, her bedroom, the children's room). Voice lines are short page quotes shown as captions when you reach each memory (the 'pull' rises: saturation, sky colour and piano). The pact: the back door asks for an answer; accepting opens the door into darkness and the exit; walking out of the house after the offer is refusal ('You know where to find me.' is the page's own line). The exit's destination is unknown, so 'to' is EXT and the route reports as not built. Soft limit: beyond ~82 m from the route centre the fog thickens and walking slows; past ~104 m the screen dips and you are returned to the path. QA fixture: in QA the pact starts accepted and the back door open so the walker bot can reach the exit. The shared DEV26 annex cues are relocated onto the route by the level (on_player_ready).",
+  "entity_policy": "SOURCED ENTITIES ONLY: the unnamed voice, delivered as captions. Emma, the friends and the mother are the voice's claims: no figure, NPC or body of any of them appears. No monsters, no combat.",
+  "fail_states": []
 }
