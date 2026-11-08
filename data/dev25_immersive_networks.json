@@ -1,0 +1,1966 @@
+{
+  "note": "Non-canonical, optional physically connected exploration annexes. No source exit changes.",
+  "sites": [
+    {
+      "accent": "l41_steel",
+      "basis_degrees": 0,
+      "cue": "wind",
+      "entry": [
+        27.0,
+        0.0,
+        34.0
+      ],
+      "id": "L041",
+      "links": [
+        {
+          "a": "b_16_0",
+          "b": "b_16_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_16_0",
+          "b": "b_32_0",
+          "kind": "walk"
+        },
+        {
+          "a": "b_16_16",
+          "b": "b_32_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_32_0",
+          "b": "b_32_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_32_0",
+          "b": "b_48_0",
+          "kind": "walk"
+        },
+        {
+          "a": "b_32_16",
+          "b": "b_48_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_48_0",
+          "b": "b_48_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_48_0",
+          "b": "b_64_0",
+          "kind": "walk"
+        },
+        {
+          "a": "b_48_16",
+          "b": "b_64_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_64_0",
+          "b": "b_64_16",
+          "kind": "walk"
+        },
+        {
+          "a": "u_16_44",
+          "b": "u_32_44",
+          "kind": "walk"
+        },
+        {
+          "a": "u_32_44",
+          "b": "u_48_44",
+          "kind": "walk"
+        },
+        {
+          "a": "u_48_44",
+          "b": "u_64_44",
+          "kind": "walk"
+        },
+        {
+          "a": "u_48_44",
+          "b": "u_48_60",
+          "kind": "optional"
+        },
+        {
+          "a": "u_64_44",
+          "b": "u_64_60",
+          "kind": "walk"
+        },
+        {
+          "a": "u_48_60",
+          "b": "u_64_60",
+          "kind": "walk"
+        },
+        {
+          "a": "b_16_16",
+          "b": "u_16_44",
+          "kind": "stair"
+        },
+        {
+          "a": "b_64_16",
+          "b": "u_64_44",
+          "kind": "stair"
+        }
+      ],
+      "mat": "l41_plank",
+      "message": "The tar bubbles below a pier with burned supports. A distant signal changes its rhythm.",
+      "nodes": {
+        "b_16_0": [
+          43.0,
+          0.0,
+          34.0
+        ],
+        "b_16_16": [
+          43.0,
+          0.0,
+          50.0
+        ],
+        "b_32_0": [
+          59.0,
+          0.0,
+          34.0
+        ],
+        "b_32_16": [
+          59.0,
+          0.0,
+          50.0
+        ],
+        "b_48_0": [
+          75.0,
+          0.0,
+          34.0
+        ],
+        "b_48_16": [
+          75.0,
+          0.0,
+          50.0
+        ],
+        "b_64_0": [
+          91.0,
+          0.0,
+          34.0
+        ],
+        "b_64_16": [
+          91.0,
+          0.0,
+          50.0
+        ],
+        "u_16_44": [
+          43.0,
+          3.5,
+          78.0
+        ],
+        "u_32_44": [
+          59.0,
+          3.5,
+          78.0
+        ],
+        "u_48_44": [
+          75.0,
+          3.5,
+          78.0
+        ],
+        "u_48_60": [
+          75.0,
+          3.5,
+          94.0
+        ],
+        "u_64_44": [
+          91.0,
+          3.5,
+          78.0
+        ],
+        "u_64_60": [
+          91.0,
+          3.5,
+          94.0
+        ]
+      },
+      "optional_edge": [
+        "u_48_44",
+        "u_48_60"
+      ],
+      "origin": [
+        27.0,
+        0.0,
+        34.0
+      ],
+      "props": [
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 1.0,
+          "model": "construction-barrier",
+          "node": "b_16_0",
+          "pack": "city-kit-roads",
+          "yaw": 16.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.12,
+          "model": "crate",
+          "node": "b_64_16",
+          "pack": "prototype-kit",
+          "yaw": 89.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 1.24,
+          "model": "electricity-pole",
+          "node": "b_16_0",
+          "pack": "city-kit-roads",
+          "yaw": 142.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 1.36,
+          "model": "lantern-glass",
+          "node": "b_64_16",
+          "pack": "graveyard-kit",
+          "yaw": 204.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 1.24,
+          "model": "construction-barrier",
+          "node": "b_16_0",
+          "pack": "city-kit-roads",
+          "yaw": 271.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.55,
+          "model": "crate",
+          "node": "b_64_16",
+          "pack": "prototype-kit",
+          "yaw": 356.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 1.0,
+          "model": "electricity-pole",
+          "node": "b_16_0",
+          "pack": "city-kit-roads",
+          "yaw": 47.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 1.12,
+          "model": "crate",
+          "node": "b_64_16",
+          "pack": "prototype-kit",
+          "yaw": 112.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 1.24,
+          "model": "pipe-section",
+          "node": "b_16_0",
+          "pack": "prototype-kit",
+          "yaw": 189.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 0.773,
+          "model": "rock-smallb",
+          "node": "b_64_16",
+          "pack": "nature-kit",
+          "yaw": 244.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 0.773,
+          "model": "rock-smallb",
+          "node": "b_16_0",
+          "pack": "nature-kit",
+          "yaw": 329.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 1.24,
+          "model": "construction-barrier",
+          "node": "b_64_16",
+          "pack": "city-kit-roads",
+          "yaw": 19.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 1.0,
+          "model": "electricity-pole",
+          "node": "b_16_0",
+          "pack": "city-kit-roads",
+          "yaw": 85.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.12,
+          "model": "electricity-pole",
+          "node": "b_64_16",
+          "pack": "city-kit-roads",
+          "yaw": 165.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 1.24,
+          "model": "electricity-pole",
+          "node": "b_16_16",
+          "pack": "city-kit-roads",
+          "yaw": 238.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 1.36,
+          "model": "pipe-section",
+          "node": "u_16_44",
+          "pack": "prototype-kit",
+          "yaw": 306.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 1.405,
+          "model": "electricity-pole",
+          "node": "b_16_16",
+          "pack": "city-kit-roads",
+          "yaw": 15.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.405,
+          "model": "electricity-pole",
+          "node": "u_16_44",
+          "pack": "city-kit-roads",
+          "yaw": 86.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 1.0,
+          "model": "construction-barrier",
+          "node": "b_16_16",
+          "pack": "city-kit-roads",
+          "yaw": 146.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 1.12,
+          "model": "pipe-section",
+          "node": "u_16_44",
+          "pack": "prototype-kit",
+          "yaw": 204.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 1.24,
+          "model": "construction-barrier",
+          "node": "b_16_16",
+          "pack": "city-kit-roads",
+          "yaw": 277.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.36,
+          "model": "pipe-section",
+          "node": "u_16_44",
+          "pack": "prototype-kit",
+          "yaw": 349.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 0.773,
+          "model": "rock-smallb",
+          "node": "b_16_16",
+          "pack": "nature-kit",
+          "yaw": 55.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 1.24,
+          "model": "construction-barrier",
+          "node": "u_16_44",
+          "pack": "city-kit-roads",
+          "yaw": 104.0
+        }
+      ],
+      "riser": 3.5,
+      "schema": "dev25-v1",
+      "style": "tar_pier",
+      "surveys": [
+        "b_16_0",
+        "u_16_44",
+        "u_64_44"
+      ],
+      "title": "Black Lake: submerging pier circuit"
+    },
+    {
+      "accent": "l48_bark",
+      "basis_degrees": -90,
+      "cue": "water_bed",
+      "entry": [
+        25.0,
+        0.0,
+        -80.0
+      ],
+      "id": "L048",
+      "links": [
+        {
+          "a": "b_16_0",
+          "b": "b_16_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_16_0",
+          "b": "b_32_0",
+          "kind": "walk"
+        },
+        {
+          "a": "b_16_16",
+          "b": "b_32_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_32_0",
+          "b": "b_32_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_32_0",
+          "b": "b_48_0",
+          "kind": "walk"
+        },
+        {
+          "a": "b_32_16",
+          "b": "b_48_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_48_0",
+          "b": "b_48_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_48_0",
+          "b": "b_64_0",
+          "kind": "walk"
+        },
+        {
+          "a": "b_48_16",
+          "b": "b_64_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_64_0",
+          "b": "b_64_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_64_16",
+          "b": "b_80_16",
+          "kind": "walk"
+        },
+        {
+          "a": "u_16_44",
+          "b": "u_32_44",
+          "kind": "walk"
+        },
+        {
+          "a": "u_32_44",
+          "b": "u_48_44",
+          "kind": "walk"
+        },
+        {
+          "a": "u_48_44",
+          "b": "u_64_44",
+          "kind": "walk"
+        },
+        {
+          "a": "u_64_44",
+          "b": "u_80_44",
+          "kind": "walk"
+        },
+        {
+          "a": "u_64_44",
+          "b": "u_64_60",
+          "kind": "optional"
+        },
+        {
+          "a": "u_80_44",
+          "b": "u_80_60",
+          "kind": "walk"
+        },
+        {
+          "a": "u_64_60",
+          "b": "u_80_60",
+          "kind": "walk"
+        },
+        {
+          "a": "b_16_16",
+          "b": "u_16_44",
+          "kind": "stair"
+        },
+        {
+          "a": "b_80_16",
+          "b": "u_80_44",
+          "kind": "stair"
+        }
+      ],
+      "mat": "l48_building",
+      "message": "The hotel lamps are still on. No wave seems to match the other waves.",
+      "nodes": {
+        "b_16_0": [
+          25.0,
+          0.0,
+          -96.0
+        ],
+        "b_16_16": [
+          41.0,
+          0.0,
+          -96.0
+        ],
+        "b_32_0": [
+          25.0,
+          0.0,
+          -112.0
+        ],
+        "b_32_16": [
+          41.0,
+          0.0,
+          -112.0
+        ],
+        "b_48_0": [
+          25.0,
+          0.0,
+          -128.0
+        ],
+        "b_48_16": [
+          41.0,
+          0.0,
+          -128.0
+        ],
+        "b_64_0": [
+          25.0,
+          0.0,
+          -144.0
+        ],
+        "b_64_16": [
+          41.0,
+          0.0,
+          -144.0
+        ],
+        "b_80_16": [
+          41.0,
+          0.0,
+          -160.0
+        ],
+        "u_16_44": [
+          69.0,
+          3.5,
+          -96.0
+        ],
+        "u_32_44": [
+          69.0,
+          3.5,
+          -112.0
+        ],
+        "u_48_44": [
+          69.0,
+          3.5,
+          -128.0
+        ],
+        "u_64_44": [
+          69.0,
+          3.5,
+          -144.0
+        ],
+        "u_64_60": [
+          85.0,
+          3.5,
+          -144.0
+        ],
+        "u_80_44": [
+          69.0,
+          3.5,
+          -160.0
+        ],
+        "u_80_60": [
+          85.0,
+          3.5,
+          -160.0
+        ]
+      },
+      "optional_edge": [
+        "u_64_44",
+        "u_64_60"
+      ],
+      "origin": [
+        25.0,
+        0.0,
+        -80.0
+      ],
+      "props": [
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 0.539,
+          "model": "tablecoffee",
+          "node": "b_16_0",
+          "pack": "furniture-kit",
+          "yaw": 6.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.12,
+          "model": "light-square",
+          "node": "b_64_16",
+          "pack": "city-kit-roads",
+          "yaw": 87.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 0.697,
+          "model": "planter",
+          "node": "u_64_60",
+          "pack": "city-kit-suburban",
+          "yaw": 138.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 0.563,
+          "model": "rock-smallflata",
+          "node": "b_48_16",
+          "pack": "nature-kit",
+          "yaw": 220.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 0.697,
+          "model": "planter",
+          "node": "u_64_44",
+          "pack": "city-kit-suburban",
+          "yaw": 281.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 0.539,
+          "model": "tablecoffee",
+          "node": "b_32_16",
+          "pack": "furniture-kit",
+          "yaw": 339.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 1.0,
+          "model": "bench",
+          "node": "u_32_44",
+          "pack": "furniture-kit",
+          "yaw": 51.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 1.061,
+          "model": "cup",
+          "node": "b_16_16",
+          "pack": "food-kit",
+          "yaw": 113.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 1.24,
+          "model": "bench",
+          "node": "b_80_16",
+          "pack": "furniture-kit",
+          "yaw": 190.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.36,
+          "model": "soda-bottle",
+          "node": "u_80_60",
+          "pack": "food-kit",
+          "yaw": 244.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 0.563,
+          "model": "rock-smallflata",
+          "node": "b_64_0",
+          "pack": "nature-kit",
+          "yaw": 318.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 0.563,
+          "model": "rock-smallflata",
+          "node": "u_80_44",
+          "pack": "nature-kit",
+          "yaw": 38.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 0.697,
+          "model": "planter",
+          "node": "b_48_0",
+          "pack": "city-kit-suburban",
+          "yaw": 110.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.061,
+          "model": "cup",
+          "node": "u_48_44",
+          "pack": "food-kit",
+          "yaw": 176.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 1.24,
+          "model": "light-square",
+          "node": "b_32_0",
+          "pack": "city-kit-roads",
+          "yaw": 232.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 1.36,
+          "model": "bench",
+          "node": "u_16_44",
+          "pack": "furniture-kit",
+          "yaw": 290.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 1.231,
+          "model": "lampwall",
+          "node": "b_16_16",
+          "pack": "furniture-kit",
+          "yaw": 7.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.6,
+          "model": "light-square",
+          "node": "b_80_16",
+          "pack": "city-kit-roads",
+          "yaw": 76.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 1.0,
+          "model": "soda-bottle",
+          "node": "u_80_60",
+          "pack": "food-kit",
+          "yaw": 142.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 1.12,
+          "model": "light-square",
+          "node": "b_64_0",
+          "pack": "city-kit-roads",
+          "yaw": 197.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 1.24,
+          "model": "soda-bottle",
+          "node": "u_80_44",
+          "pack": "food-kit",
+          "yaw": 269.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 0.563,
+          "model": "rock-smallflata",
+          "node": "b_48_0",
+          "pack": "nature-kit",
+          "yaw": 330.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 0.772,
+          "model": "path-stones-messy",
+          "node": "u_48_44",
+          "pack": "city-kit-suburban",
+          "yaw": 54.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 0.563,
+          "model": "rock-smallflata",
+          "node": "b_32_0",
+          "pack": "nature-kit",
+          "yaw": 102.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 0.539,
+          "model": "tablecoffee",
+          "node": "u_16_44",
+          "pack": "furniture-kit",
+          "yaw": 185.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.12,
+          "model": "light-square",
+          "node": "b_16_0",
+          "pack": "city-kit-roads",
+          "yaw": 247.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 1.061,
+          "model": "cup",
+          "node": "b_64_16",
+          "pack": "food-kit",
+          "yaw": 323.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 1.36,
+          "model": "soda-bottle",
+          "node": "u_64_60",
+          "pack": "food-kit",
+          "yaw": 31.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 1.061,
+          "model": "cup",
+          "node": "b_48_16",
+          "pack": "food-kit",
+          "yaw": 90.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.6,
+          "model": "soda-bottle",
+          "node": "u_64_44",
+          "pack": "food-kit",
+          "yaw": 166.0
+        }
+      ],
+      "riser": 3.5,
+      "schema": "dev25-v1",
+      "style": "seafront",
+      "surveys": [
+        "b_16_0",
+        "u_16_44",
+        "u_80_44"
+      ],
+      "title": "Permanent evening: tidal observation gallery"
+    },
+    {
+      "accent": "l140_stem",
+      "basis_degrees": 180,
+      "cue": "crickets",
+      "entry": [
+        -75.0,
+        0.0,
+        0.0
+      ],
+      "id": "L140",
+      "links": [
+        {
+          "a": "b_16_0",
+          "b": "b_16_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_16_0",
+          "b": "b_32_0",
+          "kind": "walk"
+        },
+        {
+          "a": "b_16_16",
+          "b": "b_32_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_32_0",
+          "b": "b_32_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_32_0",
+          "b": "b_48_0",
+          "kind": "walk"
+        },
+        {
+          "a": "b_32_16",
+          "b": "b_48_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_48_0",
+          "b": "b_48_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_48_0",
+          "b": "b_64_0",
+          "kind": "walk"
+        },
+        {
+          "a": "b_48_16",
+          "b": "b_64_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_64_0",
+          "b": "b_64_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_64_16",
+          "b": "b_80_16",
+          "kind": "walk"
+        },
+        {
+          "a": "u_16_44",
+          "b": "u_32_44",
+          "kind": "walk"
+        },
+        {
+          "a": "u_32_44",
+          "b": "u_48_44",
+          "kind": "walk"
+        },
+        {
+          "a": "u_48_44",
+          "b": "u_64_44",
+          "kind": "walk"
+        },
+        {
+          "a": "u_64_44",
+          "b": "u_80_44",
+          "kind": "walk"
+        },
+        {
+          "a": "u_64_44",
+          "b": "u_64_60",
+          "kind": "optional"
+        },
+        {
+          "a": "u_80_44",
+          "b": "u_80_60",
+          "kind": "walk"
+        },
+        {
+          "a": "u_64_60",
+          "b": "u_80_60",
+          "kind": "walk"
+        },
+        {
+          "a": "b_16_16",
+          "b": "u_16_44",
+          "kind": "stair"
+        },
+        {
+          "a": "b_80_16",
+          "b": "u_80_44",
+          "kind": "stair"
+        }
+      ],
+      "mat": "l140_house",
+      "message": "The flower heads face a light that does not seem to be a single sun.",
+      "nodes": {
+        "b_16_0": [
+          -91.0,
+          0.0,
+          0.0
+        ],
+        "b_16_16": [
+          -91.0,
+          0.0,
+          -16.0
+        ],
+        "b_32_0": [
+          -107.0,
+          0.0,
+          0.0
+        ],
+        "b_32_16": [
+          -107.0,
+          0.0,
+          -16.0
+        ],
+        "b_48_0": [
+          -123.0,
+          0.0,
+          0.0
+        ],
+        "b_48_16": [
+          -123.0,
+          0.0,
+          -16.0
+        ],
+        "b_64_0": [
+          -139.0,
+          0.0,
+          0.0
+        ],
+        "b_64_16": [
+          -139.0,
+          0.0,
+          -16.0
+        ],
+        "b_80_16": [
+          -155.0,
+          0.0,
+          -16.0
+        ],
+        "u_16_44": [
+          -91.0,
+          3.5,
+          -44.0
+        ],
+        "u_32_44": [
+          -107.0,
+          3.5,
+          -44.0
+        ],
+        "u_48_44": [
+          -123.0,
+          3.5,
+          -44.0
+        ],
+        "u_64_44": [
+          -139.0,
+          3.5,
+          -44.0
+        ],
+        "u_64_60": [
+          -139.0,
+          3.5,
+          -60.0
+        ],
+        "u_80_44": [
+          -155.0,
+          3.5,
+          -44.0
+        ],
+        "u_80_60": [
+          -155.0,
+          3.5,
+          -60.0
+        ]
+      },
+      "optional_edge": [
+        "u_64_44",
+        "u_64_60"
+      ],
+      "origin": [
+        -75.0,
+        0.0,
+        0.0
+      ],
+      "props": [
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 1.0,
+          "model": "chair",
+          "node": "b_16_0",
+          "pack": "furniture-kit",
+          "yaw": 1.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.12,
+          "model": "bench",
+          "node": "b_64_16",
+          "pack": "furniture-kit",
+          "yaw": 86.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 1.24,
+          "model": "bench",
+          "node": "u_64_60",
+          "pack": "furniture-kit",
+          "yaw": 151.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 0.572,
+          "model": "bowl",
+          "node": "b_48_16",
+          "pack": "food-kit",
+          "yaw": 207.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 1.48,
+          "model": "bench",
+          "node": "u_64_44",
+          "pack": "furniture-kit",
+          "yaw": 270.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.6,
+          "model": "chair",
+          "node": "b_32_16",
+          "pack": "furniture-kit",
+          "yaw": 0.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 0.572,
+          "model": "bowl",
+          "node": "u_32_44",
+          "pack": "food-kit",
+          "yaw": 69.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 0.697,
+          "model": "planter",
+          "node": "b_16_16",
+          "pack": "city-kit-suburban",
+          "yaw": 127.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 0.697,
+          "model": "planter",
+          "node": "b_80_16",
+          "pack": "city-kit-suburban",
+          "yaw": 199.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.36,
+          "model": "lantern-glass",
+          "node": "u_80_60",
+          "pack": "graveyard-kit",
+          "yaw": 247.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 1.48,
+          "model": "bench",
+          "node": "b_64_0",
+          "pack": "furniture-kit",
+          "yaw": 316.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 0.773,
+          "model": "rock-smallc",
+          "node": "u_80_44",
+          "pack": "nature-kit",
+          "yaw": 31.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 0.773,
+          "model": "rock-smallc",
+          "node": "b_48_0",
+          "pack": "nature-kit",
+          "yaw": 86.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.12,
+          "model": "barrel",
+          "node": "u_48_44",
+          "pack": "food-kit",
+          "yaw": 167.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 0.572,
+          "model": "bowl",
+          "node": "b_32_0",
+          "pack": "food-kit",
+          "yaw": 230.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 1.36,
+          "model": "barrel",
+          "node": "u_16_44",
+          "pack": "food-kit",
+          "yaw": 295.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 0.539,
+          "model": "tablecoffee",
+          "node": "b_16_16",
+          "pack": "furniture-kit",
+          "yaw": 4.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.6,
+          "model": "bench",
+          "node": "b_80_16",
+          "pack": "furniture-kit",
+          "yaw": 83.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 1.0,
+          "model": "lantern-glass",
+          "node": "u_80_60",
+          "pack": "graveyard-kit",
+          "yaw": 149.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 1.12,
+          "model": "barrel",
+          "node": "b_64_0",
+          "pack": "food-kit",
+          "yaw": 208.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 1.24,
+          "model": "barrel",
+          "node": "u_80_44",
+          "pack": "food-kit",
+          "yaw": 271.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.36,
+          "model": "chair",
+          "node": "b_48_0",
+          "pack": "furniture-kit",
+          "yaw": 348.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 1.48,
+          "model": "chair",
+          "node": "u_48_44",
+          "pack": "furniture-kit",
+          "yaw": 40.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 0.773,
+          "model": "rock-smallc",
+          "node": "b_32_0",
+          "pack": "nature-kit",
+          "yaw": 103.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 0.773,
+          "model": "rock-smallc",
+          "node": "u_16_44",
+          "pack": "nature-kit",
+          "yaw": 186.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 0.572,
+          "model": "bowl",
+          "node": "b_16_0",
+          "pack": "food-kit",
+          "yaw": 262.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 1.24,
+          "model": "barrel",
+          "node": "b_64_16",
+          "pack": "food-kit",
+          "yaw": 323.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 0.697,
+          "model": "planter",
+          "node": "u_64_60",
+          "pack": "city-kit-suburban",
+          "yaw": 16.0
+        }
+      ],
+      "riser": 3.5,
+      "schema": "dev25-v1",
+      "style": "sunflower",
+      "surveys": [
+        "b_16_0",
+        "u_16_44",
+        "u_80_44"
+      ],
+      "title": "Sunflower field: dusk observation loop"
+    },
+    {
+      "accent": "l201_neon",
+      "basis_degrees": 180,
+      "cue": "pad",
+      "entry": [
+        -35.0,
+        0.0,
+        65.0
+      ],
+      "id": "L201",
+      "links": [
+        {
+          "a": "b_16_0",
+          "b": "b_16_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_16_0",
+          "b": "b_32_0",
+          "kind": "walk"
+        },
+        {
+          "a": "b_16_16",
+          "b": "b_32_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_32_0",
+          "b": "b_32_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_32_0",
+          "b": "b_48_0",
+          "kind": "walk"
+        },
+        {
+          "a": "b_32_16",
+          "b": "b_48_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_48_0",
+          "b": "b_48_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_48_0",
+          "b": "b_64_0",
+          "kind": "walk"
+        },
+        {
+          "a": "b_48_16",
+          "b": "b_64_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_64_0",
+          "b": "b_64_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_64_0",
+          "b": "b_80_0",
+          "kind": "walk"
+        },
+        {
+          "a": "b_64_16",
+          "b": "b_80_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_80_0",
+          "b": "b_80_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_80_0",
+          "b": "b_96_0",
+          "kind": "walk"
+        },
+        {
+          "a": "b_80_16",
+          "b": "b_96_16",
+          "kind": "walk"
+        },
+        {
+          "a": "b_96_0",
+          "b": "b_96_16",
+          "kind": "walk"
+        },
+        {
+          "a": "u_16_44",
+          "b": "u_32_44",
+          "kind": "walk"
+        },
+        {
+          "a": "u_32_44",
+          "b": "u_48_44",
+          "kind": "walk"
+        },
+        {
+          "a": "u_48_44",
+          "b": "u_64_44",
+          "kind": "walk"
+        },
+        {
+          "a": "u_64_44",
+          "b": "u_80_44",
+          "kind": "walk"
+        },
+        {
+          "a": "u_80_44",
+          "b": "u_96_44",
+          "kind": "walk"
+        },
+        {
+          "a": "u_80_44",
+          "b": "u_80_60",
+          "kind": "optional"
+        },
+        {
+          "a": "u_96_44",
+          "b": "u_96_60",
+          "kind": "walk"
+        },
+        {
+          "a": "u_80_60",
+          "b": "u_96_60",
+          "kind": "walk"
+        },
+        {
+          "a": "b_16_16",
+          "b": "u_16_44",
+          "kind": "stair"
+        },
+        {
+          "a": "b_96_16",
+          "b": "u_96_44",
+          "kind": "stair"
+        }
+      ],
+      "mat": "l201_city",
+      "message": "A cursor moves over a ruined marble terminal; every window shows a different, uncertain horizon.",
+      "nodes": {
+        "b_16_0": [
+          -51.0,
+          0.0,
+          65.0
+        ],
+        "b_16_16": [
+          -51.0,
+          0.0,
+          49.0
+        ],
+        "b_32_0": [
+          -67.0,
+          0.0,
+          65.0
+        ],
+        "b_32_16": [
+          -67.0,
+          0.0,
+          49.0
+        ],
+        "b_48_0": [
+          -83.0,
+          0.0,
+          65.0
+        ],
+        "b_48_16": [
+          -83.0,
+          0.0,
+          49.0
+        ],
+        "b_64_0": [
+          -99.0,
+          0.0,
+          65.0
+        ],
+        "b_64_16": [
+          -99.0,
+          0.0,
+          49.0
+        ],
+        "b_80_0": [
+          -115.0,
+          0.0,
+          65.0
+        ],
+        "b_80_16": [
+          -115.0,
+          0.0,
+          49.0
+        ],
+        "b_96_0": [
+          -131.0,
+          0.0,
+          65.0
+        ],
+        "b_96_16": [
+          -131.0,
+          0.0,
+          49.0
+        ],
+        "u_16_44": [
+          -51.0,
+          3.5,
+          21.0
+        ],
+        "u_32_44": [
+          -67.0,
+          3.5,
+          21.0
+        ],
+        "u_48_44": [
+          -83.0,
+          3.5,
+          21.0
+        ],
+        "u_64_44": [
+          -99.0,
+          3.5,
+          21.0
+        ],
+        "u_80_44": [
+          -115.0,
+          3.5,
+          21.0
+        ],
+        "u_80_60": [
+          -115.0,
+          3.5,
+          5.0
+        ],
+        "u_96_44": [
+          -131.0,
+          3.5,
+          21.0
+        ],
+        "u_96_60": [
+          -131.0,
+          3.5,
+          5.0
+        ]
+      },
+      "optional_edge": [
+        "u_80_44",
+        "u_80_60"
+      ],
+      "origin": [
+        -35.0,
+        0.0,
+        65.0
+      ],
+      "props": [
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 1.0,
+          "model": "desk-computerscreen",
+          "node": "b_16_0",
+          "pack": "space-kit",
+          "yaw": 2.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.12,
+          "model": "column",
+          "node": "b_64_16",
+          "pack": "mini-dungeon",
+          "yaw": 75.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 1.24,
+          "model": "shape-hollow-hexagon",
+          "node": "u_48_44",
+          "pack": "prototype-kit",
+          "yaw": 135.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 1.36,
+          "model": "shape-hollow-hexagon",
+          "node": "b_16_16",
+          "pack": "prototype-kit",
+          "yaw": 214.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 1.388,
+          "model": "satellitedish",
+          "node": "b_80_0",
+          "pack": "space-kit",
+          "yaw": 294.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.24,
+          "model": "detail-overhang",
+          "node": "u_64_44",
+          "pack": "city-kit-commercial",
+          "yaw": 336.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 1.0,
+          "model": "detail-overhang",
+          "node": "b_32_0",
+          "pack": "city-kit-commercial",
+          "yaw": 57.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 1.12,
+          "model": "detail-overhang",
+          "node": "b_80_16",
+          "pack": "city-kit-commercial",
+          "yaw": 124.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 1.113,
+          "model": "pot",
+          "node": "u_80_44",
+          "pack": "mini-dungeon",
+          "yaw": 180.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.113,
+          "model": "pot",
+          "node": "b_32_16",
+          "pack": "mini-dungeon",
+          "yaw": 261.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 0.886,
+          "model": "machine-generator",
+          "node": "b_96_0",
+          "pack": "space-kit",
+          "yaw": 312.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 1.24,
+          "model": "detail-overhang",
+          "node": "u_96_44",
+          "pack": "city-kit-commercial",
+          "yaw": 43.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 0.775,
+          "model": "rocks",
+          "node": "b_48_0",
+          "pack": "mini-dungeon",
+          "yaw": 94.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.12,
+          "model": "computerscreen",
+          "node": "b_96_16",
+          "pack": "furniture-kit",
+          "yaw": 164.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 1.113,
+          "model": "pot",
+          "node": "u_80_60",
+          "pack": "mini-dungeon",
+          "yaw": 227.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 0.886,
+          "model": "machine-generator",
+          "node": "b_48_16",
+          "pack": "space-kit",
+          "yaw": 285.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 1.24,
+          "model": "detail-overhang",
+          "node": "u_16_44",
+          "pack": "city-kit-commercial",
+          "yaw": 2.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.113,
+          "model": "pot",
+          "node": "u_96_60",
+          "pack": "mini-dungeon",
+          "yaw": 71.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 0.886,
+          "model": "machine-generator",
+          "node": "b_64_0",
+          "pack": "space-kit",
+          "yaw": 139.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 1.12,
+          "model": "detail-overhang",
+          "node": "u_32_44",
+          "pack": "city-kit-commercial",
+          "yaw": 219.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 1.24,
+          "model": "satellitedish",
+          "node": "b_16_16",
+          "pack": "space-kit",
+          "yaw": 261.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.113,
+          "model": "pot",
+          "node": "b_80_0",
+          "pack": "mini-dungeon",
+          "yaw": 351.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 1.48,
+          "model": "column",
+          "node": "u_64_44",
+          "pack": "mini-dungeon",
+          "yaw": 55.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 1.24,
+          "model": "detail-overhang",
+          "node": "b_32_0",
+          "pack": "city-kit-commercial",
+          "yaw": 127.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 0.886,
+          "model": "machine-generator",
+          "node": "b_80_16",
+          "pack": "space-kit",
+          "yaw": 174.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 0.775,
+          "model": "rocks",
+          "node": "u_80_44",
+          "pack": "mini-dungeon",
+          "yaw": 245.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 1.107,
+          "model": "desk-computer",
+          "node": "b_32_16",
+          "pack": "space-kit",
+          "yaw": 312.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 1.113,
+          "model": "pot",
+          "node": "b_96_0",
+          "pack": "mini-dungeon",
+          "yaw": 20.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 1.113,
+          "model": "pot",
+          "node": "u_96_44",
+          "pack": "mini-dungeon",
+          "yaw": 97.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 0.886,
+          "model": "machine-generator",
+          "node": "b_48_0",
+          "pack": "space-kit",
+          "yaw": 167.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 1.0,
+          "model": "desk-computer",
+          "node": "b_96_16",
+          "pack": "space-kit",
+          "yaw": 213.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 1.113,
+          "model": "pot",
+          "node": "u_80_60",
+          "pack": "mini-dungeon",
+          "yaw": 281.0
+        },
+        {
+          "dx": 2.7,
+          "dz": -2.65,
+          "height": 1.162,
+          "model": "computerscreen",
+          "node": "b_48_16",
+          "pack": "furniture-kit",
+          "yaw": 357.0
+        },
+        {
+          "dx": -2.7,
+          "dz": -2.65,
+          "height": 1.162,
+          "model": "computerscreen",
+          "node": "u_16_44",
+          "pack": "furniture-kit",
+          "yaw": 57.0
+        },
+        {
+          "dx": 2.7,
+          "dz": 2.65,
+          "height": 1.48,
+          "model": "column",
+          "node": "u_96_60",
+          "pack": "mini-dungeon",
+          "yaw": 118.0
+        },
+        {
+          "dx": -2.7,
+          "dz": 2.65,
+          "height": 0.886,
+          "model": "machine-generator",
+          "node": "b_64_0",
+          "pack": "space-kit",
+          "yaw": 191.0
+        }
+      ],
+      "riser": 3.5,
+      "schema": "dev25-v1",
+      "style": "vapor_temple",
+      "surveys": [
+        "b_16_0",
+        "u_16_44",
+        "u_96_44"
+      ],
+      "title": "Vaporwave world: digital ruins and signal arcade"
+    }
+  ],
+  "version": 25
+}

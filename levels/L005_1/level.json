@@ -1,0 +1,31 @@
+{
+  "stable_id": "L005_1",
+  "scene": "res://levels/L005_1/L005_1.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L005"
+  ],
+  "signature": "Hotel casino: slot banks, card tables, four chip colours and exit lobby",
+  "mechanics": [
+    "casino_hall",
+    "chip_inventory",
+    "game_of_chance"
+  ],
+  "exits": [
+    {
+      "id": "L005_1>L005#1",
+      "to": "L005",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Leave through the same front doors; chips may be traded for goods when leaving.",
+      "source_quote": "The only way to enter and exit is through the front doors of the casino in Level 5",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-5-1",
+      "trigger_type": "door"
+    }
+  ],
+  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Entity 18, Bellhopper (135), Barkeeper (164), Comedian (185), Louie Sulphur, casino staff"
+}

@@ -1,0 +1,30 @@
+{
+  "stable_id": "L994",
+  "scene": "res://levels/L994/L994.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "Tidal beach surrounded by rock mountains; east-facing anomalous sea",
+  "mechanics": [
+    "irregular_tide",
+    "nonhostile_unnerving_sea",
+    "return_before_tide"
+  ],
+  "exits": [
+    {
+      "id": "L994>EXT#1",
+      "to": "EXT",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL+DANGEROUS",
+      "method": "Return through the entrance before the tide arrives",
+      "source_quote": "Please just go back to where you came from, the tide is coming",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-994",
+      "trigger_type": "timed"
+    }
+  ],
+  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
+  "entity_policy": "NO ENTITY PER SOURCE (article: no entities exist); sea faces only as unverified audio testimony"
+}

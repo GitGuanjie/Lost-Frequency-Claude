@@ -1,0 +1,32 @@
+{
+  "stable_id": "L001_2",
+  "scene": "res://levels/L001_2/L001_2.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev5 source candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L001"
+  ],
+  "signature": "Overgrown concrete warehouse; living-memory flowers, walkable ruins and a safe return threshold",
+  "mechanics": [
+    "overgrown_warehouse",
+    "memory_visions",
+    "exploration",
+    "source_return"
+  ],
+  "exits": [
+    {
+      "id": "L001_2>L001#1",
+      "to": "L001",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL",
+      "method": "walk back to entrance; mechanism not described",
+      "source_quote": "looking for the Garden's entrance",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-1-2",
+      "trigger_type": "walk_in"
+    }
+  ],
+  "notes": "Compact exploration adaptation. Runtime Godot and Windows verification required; no automatic PLAYABLE promotion.",
+  "entity_policy": "NO ENTITY PER SOURCE"
+}

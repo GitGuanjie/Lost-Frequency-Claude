@@ -5,14 +5,17 @@
   "qa_status": "ENGINE_SMOKE_PASS (full-suite run 2026-11-05, 0 failures); stills reviewed by integrator (AI); human review pending",
   "procedural": true,
   "arrivals": [
-    "start",
-    "from_L011",
-    "from_L188",
     "from_L000",
     "from_L005",
     "from_L009",
+    "from_L011",
+    "from_L012",
     "from_L019",
-    "from_L037"
+    "from_L037",
+    "from_L114",
+    "from_L188",
+    "from_L201",
+    "start"
   ],
   "signature": "A long-abandoned, ransacked 1980s arcade: tall maroon play rooms full of wrecked cabinets under a dripping polystyrene ceiling, where a rare lit machine marked with a level number takes your quarter and sends you to the level it is tethered to.",
   "mechanics": [
@@ -292,5 +295,10 @@
   ],
   "fail_states": [],
   "entity_policy": "NO ENTITY PER SOURCE: the article and the notes record no inhabitants and no bases or communities. Nothing is spawned; the only motion is dripping water, sparking outlets and attract-mode screens.",
-  "notes": "SOURCE: arcade of large echoey rooms; tall, often maroon walls; dust on floors and on shelves nailed to the walls; back hallways with boxes and cold boilers holding Almond Water or snacks; polystyrene ceiling with dripping pipes above; faulty outlets; deliberately wrecked early-1980s cabinets (burns, blunt smashes, bullet holes); about 1 in 1500 machines works and needs a quarter plus an attempt to play; a second, larger slot; patchy function; the Level 10 machine is dead from water damage; hints or level numbers left on devices; the notes left by the arrival point next to a janitor's-closet door from Level 4. ADAPTATION: (1) the playable world is a finite streaming window of seeded 26 m blocks around an authored 52 m hub, and the block grid is bounded at the page's 9.2 x 8.5 mile estimate; (2) working-machine density is compressed for play: the seven built-route machines sit in the hub (the notes report about 20 working ones), the twelve unbuilt-route machines and the Level 40 window are seeded 4-9 blocks out, and every other cabinet is dead; (3) marquee game titles, carpet motif, light fixtures and tape wording are ours (the page says cabinet art does not match the destination and that numbers or hints are left on the devices); (4) 'patchy' function is modelled as the coin mech sometimes dropping the quarter straight to the return cup (it never eats it); (5) the Level 4 closet door is entrance-only here because the page documents no exit through it; (6) the rumoured unnamed 'server level' cabinet (L025>EXT#22) is not placed. QA fixture: in QA mode the wanderer carries one quarter, and the bot walks to the cabinet marked 0 and feeds it through the normal interact logic."
+  "notes": "SOURCE: arcade of large echoey rooms; tall, often maroon walls; dust on floors and on shelves nailed to the walls; back hallways with boxes and cold boilers holding Almond Water or snacks; polystyrene ceiling with dripping pipes above; faulty outlets; deliberately wrecked early-1980s cabinets (burns, blunt smashes, bullet holes); about 1 in 1500 machines works and needs a quarter plus an attempt to play; a second, larger slot; patchy function; the Level 10 machine is dead from water damage; hints or level numbers left on devices; the notes left by the arrival point next to a janitor's-closet door from Level 4. ADAPTATION: (1) the playable world is a finite streaming window of seeded 26 m blocks around an authored 52 m hub, and the block grid is bounded at the page's 9.2 x 8.5 mile estimate; (2) working-machine density is compressed for play: the seven built-route machines sit in the hub (the notes report about 20 working ones), the twelve unbuilt-route machines and the Level 40 window are seeded 4-9 blocks out, and every other cabinet is dead; (3) marquee game titles, carpet motif, light fixtures and tape wording are ours (the page says cabinet art does not match the destination and that numbers or hints are left on the devices); (4) 'patchy' function is modelled as the coin mech sometimes dropping the quarter straight to the return cup (it never eats it); (5) the Level 4 closet door is entrance-only here because the page documents no exit through it; (6) the rumoured unnamed 'server level' cabinet (L025>EXT#22) is not placed. QA fixture: in QA mode the wanderer carries one quarter, and the bot walks to the cabinet marked 0 and feeds it through the normal interact logic.",
+  "arrival_aliases": [
+    "from_L012",
+    "from_L114",
+    "from_L201"
+  ]
 }

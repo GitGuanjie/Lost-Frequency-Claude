@@ -1,0 +1,1624 @@
+{
+  "version": 26,
+  "source": "ADAPTATION",
+  "sites": [
+    {
+      "id": "L060",
+      "title": "The Baywalk - unfinished lower path",
+      "accent": "l60_rust",
+      "tint": [
+        0.97,
+        0.73,
+        0.41
+      ],
+      "cues": [
+        {
+          "id": "l060_1",
+          "pos": [
+            6,
+            0,
+            37
+          ],
+          "prompt": "Check the dry equipment",
+          "description": "You notice that the equipment is dry despite the sea air.",
+          "props": [
+            {
+              "pack": "city-kit-roads",
+              "model": "construction-cone",
+              "height": 0.52,
+              "pos": [
+                6.92,
+                0,
+                36.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "prototype-kit",
+              "model": "crate",
+              "height": 0.66,
+              "pos": [
+                5.08,
+                0,
+                38.05
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l060_2",
+          "pos": [
+            6,
+            0,
+            137
+          ],
+          "prompt": "Inspect the stairway lamp",
+          "description": "One functioning lamp marks the stairs to a far more dangerous path.",
+          "props": [
+            {
+              "pack": "city-kit-roads",
+              "model": "construction-light",
+              "height": 0.66,
+              "pos": [
+                5.08,
+                0,
+                136.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "city-kit-roads",
+              "model": "construction-barrier",
+              "height": 0.8,
+              "pos": [
+                6.92,
+                0,
+                138.05
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l060_3",
+          "pos": [
+            6,
+            0,
+            235
+          ],
+          "prompt": "Examine a storm-stained warning",
+          "description": "No wall protects the lower path from the changing sea.",
+          "props": [
+            {
+              "pack": "prototype-kit",
+              "model": "crate",
+              "height": 0.8,
+              "pos": [
+                6.92,
+                0,
+                234.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "city-kit-roads",
+              "model": "construction-cone",
+              "height": 0.52,
+              "pos": [
+                5.08,
+                0,
+                236.05
+              ],
+              "solid": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L079",
+      "title": "Ghosts in the Machine - clinic",
+      "accent": "l79_metal",
+      "tint": [
+        0.57,
+        0.91,
+        0.81
+      ],
+      "cues": [
+        {
+          "id": "l079_1",
+          "pos": [
+            13.2,
+            0,
+            -37
+          ],
+          "prompt": "Inspect the office records",
+          "description": "A note mentions an experiment moved to its next phase.",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "computerscreen",
+              "height": 0.52,
+              "pos": [
+                14.12,
+                0,
+                -37.85
+              ],
+              "solid": false
+            },
+            {
+              "pack": "prototype-kit",
+              "model": "pipe-section",
+              "height": 0.66,
+              "pos": [
+                12.28,
+                0,
+                -35.95
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l079_2",
+          "pos": [
+            -13.2,
+            0,
+            -21
+          ],
+          "prompt": "Inspect the equipment store",
+          "description": "The dial of a medical instrument has no recognizable scale.",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "desk",
+              "height": 0.66,
+              "pos": [
+                -14.12,
+                0,
+                -21.85
+              ],
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "cabinetbed",
+              "height": 0.8,
+              "pos": [
+                -12.28,
+                0,
+                -19.95
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l079_3",
+          "pos": [
+            13.2,
+            0,
+            -5
+          ],
+          "prompt": "Examine the treatment room",
+          "description": "The bed is made, but an object has left an imprint in the linen.",
+          "props": [
+            {
+              "pack": "prototype-kit",
+              "model": "pipe-section",
+              "height": 0.8,
+              "pos": [
+                14.12,
+                0,
+                -5.85
+              ],
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "computerscreen",
+              "height": 0.52,
+              "pos": [
+                12.28,
+                0,
+                -3.95
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l079_4",
+          "pos": [
+            -13.2,
+            0,
+            11
+          ],
+          "prompt": "Read the sealed research sheet",
+          "description": "The recorded time disagrees with the corridor clock.",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "cabinetbed",
+              "height": 0.52,
+              "pos": [
+                -14.12,
+                0,
+                10.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "desk",
+              "height": 0.66,
+              "pos": [
+                -12.28,
+                0,
+                12.05
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l079_5",
+          "pos": [
+            13.2,
+            0,
+            27
+          ],
+          "prompt": "Listen to the next room",
+          "description": "A rhythm seems to come from within the walls.",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "computerscreen",
+              "height": 0.66,
+              "pos": [
+                14.12,
+                0,
+                26.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "prototype-kit",
+              "model": "pipe-section",
+              "height": 0.8,
+              "pos": [
+                12.28,
+                0,
+                28.05
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l079_6",
+          "pos": [
+            -13.2,
+            0,
+            43
+          ],
+          "prompt": "Inspect the empty cabinet",
+          "description": "The contents of this drawer have been carefully removed.",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "desk",
+              "height": 0.775,
+              "pos": [
+                -14.12,
+                0,
+                42.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "cabinetbed",
+              "height": 0.52,
+              "pos": [
+                -12.28,
+                0,
+                44.05
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l079_7",
+          "pos": [
+            2.8,
+            0,
+            49
+          ],
+          "prompt": "Inspect the central machine",
+          "description": "The machine reports a value that nobody wrote down.",
+          "props": [
+            {
+              "pack": "prototype-kit",
+              "model": "pipe-section",
+              "height": 0.52,
+              "pos": [
+                3.72,
+                0,
+                48.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "computerscreen",
+              "height": 0.66,
+              "pos": [
+                1.88,
+                0,
+                50.05
+              ],
+              "solid": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L083",
+      "title": "The Sunken Submarine - sealed decks",
+      "accent": "l83_metal",
+      "tint": [
+        0.56,
+        0.83,
+        0.96
+      ],
+      "cues": [
+        {
+          "id": "l083_1",
+          "pos": [
+            -4.6,
+            0,
+            -53
+          ],
+          "prompt": "Inspect the store inventory",
+          "description": "The log records provisions where no recent crew have been seen.",
+          "props": [
+            {
+              "pack": "space-kit",
+              "model": "desk-computer",
+              "height": 0.52,
+              "pos": [
+                -3.68,
+                0,
+                -53.85
+              ],
+              "solid": false
+            },
+            {
+              "pack": "space-kit",
+              "model": "machine-wireless",
+              "height": 0.66,
+              "pos": [
+                -5.52,
+                0,
+                -51.95
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l083_2",
+          "pos": [
+            4.5,
+            4.2,
+            27
+          ],
+          "prompt": "Examine the bridge panel",
+          "description": "A faint reflection passes behind the submerged viewport.",
+          "props": [
+            {
+              "pack": "space-kit",
+              "model": "barrel",
+              "height": 0.66,
+              "pos": [
+                3.58,
+                4.2,
+                26.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "space-kit",
+              "model": "machine-generator",
+              "height": 0.8,
+              "pos": [
+                5.42,
+                4.2,
+                28.05
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l083_3",
+          "pos": [
+            -4.6,
+            0,
+            55
+          ],
+          "prompt": "Read the hatch checklist",
+          "description": "The escape hatch must remain available; the checklist is incomplete.",
+          "props": [
+            {
+              "pack": "space-kit",
+              "model": "machine-wireless",
+              "height": 0.8,
+              "pos": [
+                -3.68,
+                0,
+                54.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "space-kit",
+              "model": "desk-computer",
+              "height": 0.52,
+              "pos": [
+                -5.52,
+                0,
+                56.05
+              ],
+              "solid": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L090",
+      "title": "Newly Renovated Home - domestic anomalies",
+      "accent": "l90_floor",
+      "tint": [
+        1.0,
+        0.79,
+        0.54
+      ],
+      "cues": [
+        {
+          "id": "l090_1",
+          "pos": [
+            -5.5,
+            0,
+            -13
+          ],
+          "prompt": "Look at the changed furniture",
+          "description": "There are no fingerprints on a piece of furniture you remember moving.",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "books",
+              "height": 0.52,
+              "pos": [
+                -4.58,
+                0,
+                -13.85
+              ],
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "cardboardboxclosed",
+              "height": 0.66,
+              "pos": [
+                -6.42,
+                0,
+                -11.95
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l090_2",
+          "pos": [
+            5.5,
+            4.0,
+            8
+          ],
+          "prompt": "Inspect the upstairs frame",
+          "description": "The new paint has dried, but the same damp patch remains.",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "chair",
+              "height": 0.66,
+              "pos": [
+                4.58,
+                4.0,
+                7.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "bench",
+              "height": 0.8,
+              "pos": [
+                6.42,
+                4.0,
+                9.05
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l090_3",
+          "pos": [
+            5.5,
+            0,
+            41
+          ],
+          "prompt": "Observe the old oak",
+          "description": "The air is still, even around the oldest branches.",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "cardboardboxclosed",
+              "height": 0.8,
+              "pos": [
+                6.42,
+                0,
+                40.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "books",
+              "height": 0.52,
+              "pos": [
+                4.58,
+                0,
+                42.05
+              ],
+              "solid": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L096",
+      "title": "Solace - quiet house",
+      "accent": "d6_porcelain",
+      "tint": [
+        0.96,
+        0.9,
+        0.78
+      ],
+      "cues": [
+        {
+          "id": "l096_1",
+          "pos": [
+            -4.5,
+            6.1,
+            4
+          ],
+          "prompt": "Inspect a porcelain pitcher",
+          "description": "Dust rests on the rim; nobody demands that you clean it.",
+          "props": [
+            {
+              "pack": "food-kit",
+              "model": "cup-tea",
+              "height": 0.52,
+              "pos": [
+                -3.58,
+                6.1,
+                3.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "books",
+              "height": 0.66,
+              "pos": [
+                -5.42,
+                6.1,
+                5.05
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l096_2",
+          "pos": [
+            4.5,
+            6.1,
+            -3
+          ],
+          "prompt": "Observe the clean windowsill",
+          "description": "For a moment, the mountains seem farther away.",
+          "props": [
+            {
+              "pack": "food-kit",
+              "model": "bowl",
+              "height": 0.546,
+              "pos": [
+                3.58,
+                6.1,
+                -3.85
+              ],
+              "solid": false
+            },
+            {
+              "pack": "food-kit",
+              "model": "plate-dinner",
+              "height": 0.367,
+              "pos": [
+                5.42,
+                6.1,
+                -1.95
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l096_3",
+          "pos": [
+            7,
+            6.1,
+            7
+          ],
+          "prompt": "Notice the silence",
+          "description": "There is no task here except the one you choose for yourself.",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "books",
+              "height": 0.8,
+              "pos": [
+                7.92,
+                6.1,
+                6.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "food-kit",
+              "model": "cup-tea",
+              "height": 0.52,
+              "pos": [
+                6.08,
+                6.1,
+                8.05
+              ],
+              "solid": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L101",
+      "title": "The Nearly Familiar Home - missing details",
+      "accent": "d7_furniture",
+      "tint": [
+        0.89,
+        0.68,
+        0.49
+      ],
+      "cues": [
+        {
+          "id": "l101_1",
+          "pos": [
+            -4.2,
+            0,
+            -25
+          ],
+          "prompt": "Examine the misplaced book",
+          "description": "The cover is right, but the last page is empty.",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "books",
+              "height": 0.52,
+              "pos": [
+                -3.28,
+                0,
+                -25.85
+              ],
+              "solid": false
+            },
+            {
+              "pack": "food-kit",
+              "model": "cup-tea",
+              "height": 0.66,
+              "pos": [
+                -5.12,
+                0,
+                -23.95
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l101_2",
+          "pos": [
+            4.2,
+            0,
+            4
+          ],
+          "prompt": "Inspect the empty coat rack",
+          "description": "The rack holds a shadow without a coat.",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "coatrackstanding",
+              "height": 0.66,
+              "pos": [
+                3.28,
+                0,
+                3.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "chair",
+              "height": 0.8,
+              "pos": [
+                5.12,
+                0,
+                5.05
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l101_3",
+          "pos": [
+            -4.2,
+            0,
+            24
+          ],
+          "prompt": "Look at the familiar cup",
+          "description": "The cup is still warm. You cannot recall using it.",
+          "props": [
+            {
+              "pack": "food-kit",
+              "model": "cup-tea",
+              "height": 0.8,
+              "pos": [
+                -3.28,
+                0,
+                23.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "books",
+              "height": 0.52,
+              "pos": [
+                -5.12,
+                0,
+                25.05
+              ],
+              "solid": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L114",
+      "title": "Childhood Bedroom - small remembered objects",
+      "accent": "l114_blue",
+      "tint": [
+        0.54,
+        0.72,
+        0.96
+      ],
+      "cues": [
+        {
+          "id": "l114_1",
+          "pos": [
+            4.5,
+            0,
+            -4
+          ],
+          "prompt": "Look at an old notebook",
+          "description": "The handwriting is recognizable; the event described is not.",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "books",
+              "height": 0.52,
+              "pos": [
+                5.42,
+                0,
+                -4.85
+              ],
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "cardboardboxclosed",
+              "height": 0.66,
+              "pos": [
+                3.58,
+                0,
+                -2.95
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l114_2",
+          "pos": [
+            4.5,
+            0,
+            3
+          ],
+          "prompt": "Check the lamplight",
+          "description": "The room seems smaller when you look toward the void.",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "chair",
+              "height": 0.66,
+              "pos": [
+                3.58,
+                0,
+                2.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "books",
+              "height": 0.8,
+              "pos": [
+                5.42,
+                0,
+                4.05
+              ],
+              "solid": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L160",
+      "title": "The Pact - uncertain testimony",
+      "accent": "d7_light",
+      "tint": [
+        0.74,
+        0.48,
+        0.95
+      ],
+      "cues": [
+        {
+          "id": "l160_1",
+          "pos": [
+            -4.8,
+            0,
+            -42
+          ],
+          "prompt": "Listen under the first arch",
+          "description": "The voice changes the terms of its own promise.",
+          "props": [
+            {
+              "pack": "prototype-kit",
+              "model": "column-rounded",
+              "height": 0.52,
+              "pos": [
+                -3.88,
+                0,
+                -42.85
+              ],
+              "solid": false
+            },
+            {
+              "pack": "mini-dungeon",
+              "model": "column",
+              "height": 0.66,
+              "pos": [
+                -5.72,
+                0,
+                -40.95
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l160_2",
+          "pos": [
+            4.8,
+            0,
+            0
+          ],
+          "prompt": "Study the reflection",
+          "description": "The surface repeats your movement a moment too late.",
+          "props": [
+            {
+              "pack": "prototype-kit",
+              "model": "shape-hollow-hexagon",
+              "height": 0.66,
+              "pos": [
+                3.88,
+                0,
+                -0.85
+              ],
+              "solid": false
+            },
+            {
+              "pack": "prototype-kit",
+              "model": "column-triangle",
+              "height": 0.8,
+              "pos": [
+                5.72,
+                0,
+                1.05
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l160_3",
+          "pos": [
+            -4.8,
+            0,
+            42
+          ],
+          "prompt": "Listen at the last pillar",
+          "description": "The promise no longer has a speaker.",
+          "props": [
+            {
+              "pack": "mini-dungeon",
+              "model": "column",
+              "height": 0.8,
+              "pos": [
+                -3.88,
+                0,
+                41.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "prototype-kit",
+              "model": "column-rounded",
+              "height": 0.52,
+              "pos": [
+                -5.72,
+                0,
+                43.05
+              ],
+              "solid": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L197",
+      "title": "Crystal Caverns - four distinct mineral galleries",
+      "accent": "l197_rock",
+      "tint": [
+        0.41,
+        0.93,
+        0.9
+      ],
+      "cues": [
+        {
+          "id": "l197_1",
+          "pos": [
+            -12.8,
+            4.2,
+            -28
+          ],
+          "prompt": "Observe turquoise resonance",
+          "description": "The mineral light is steady and the water sounds far below.",
+          "props": [
+            {
+              "pack": "nature-kit",
+              "model": "rock-smalla",
+              "height": 0.52,
+              "pos": [
+                -11.88,
+                4.2,
+                -28.85
+              ],
+              "solid": false
+            },
+            {
+              "pack": "nature-kit",
+              "model": "rock-tallc",
+              "height": 0.66,
+              "pos": [
+                -13.72,
+                4.2,
+                -26.95
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l197_2",
+          "pos": [
+            12.8,
+            4.7,
+            31
+          ],
+          "prompt": "Observe amethyst layering",
+          "description": "The violet fragments change how deep the gallery appears.",
+          "props": [
+            {
+              "pack": "nature-kit",
+              "model": "rock-smallb",
+              "height": 0.66,
+              "pos": [
+                11.88,
+                4.7,
+                30.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "nature-kit",
+              "model": "rock-smallc",
+              "height": 0.738,
+              "pos": [
+                13.72,
+                4.7,
+                32.05
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l197_3",
+          "pos": [
+            -12.8,
+            5.1,
+            75
+          ],
+          "prompt": "Inspect a ruby fault",
+          "description": "The red veins remain strikingly visible in the darkness.",
+          "props": [
+            {
+              "pack": "nature-kit",
+              "model": "rock-tallc",
+              "height": 0.8,
+              "pos": [
+                -11.88,
+                5.1,
+                74.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "nature-kit",
+              "model": "rock-smalla",
+              "height": 0.52,
+              "pos": [
+                -13.72,
+                5.1,
+                76.05
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l197_4",
+          "pos": [
+            12.8,
+            4.5,
+            121
+          ],
+          "prompt": "Observe the onyx edge",
+          "description": "Even the last glint seems to be swallowed by the stone.",
+          "props": [
+            {
+              "pack": "nature-kit",
+              "model": "rock-smallc",
+              "height": 0.52,
+              "pos": [
+                11.88,
+                4.5,
+                120.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "nature-kit",
+              "model": "rock-smallb",
+              "height": 0.66,
+              "pos": [
+                13.72,
+                4.5,
+                122.05
+              ],
+              "solid": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L071",
+      "title": "Void Basement - corrupted storage rows",
+      "accent": "l71_pipe",
+      "tint": [
+        0.64,
+        0.72,
+        0.82
+      ],
+      "cues": [
+        {
+          "id": "l071_1",
+          "pos": [
+            -18,
+            -0.1,
+            -45
+          ],
+          "prompt": "Examine a corrupted file",
+          "description": "An entire row of recorded locations has been erased.",
+          "props": [
+            {
+              "pack": "prototype-kit",
+              "model": "crate",
+              "height": 0.52,
+              "pos": [
+                -17.08,
+                -0.1,
+                -45.85
+              ],
+              "solid": false
+            },
+            {
+              "pack": "space-kit",
+              "model": "barrel",
+              "height": 0.66,
+              "pos": [
+                -18.92,
+                -0.1,
+                -43.95
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l071_2",
+          "pos": [
+            18,
+            -0.1,
+            10
+          ],
+          "prompt": "Listen to the pipework",
+          "description": "A signal passes through pipes that do not appear connected.",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "cardboardboxclosed",
+              "height": 0.66,
+              "pos": [
+                17.08,
+                -0.1,
+                9.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "graveyard-kit",
+              "model": "debris",
+              "height": 0.487,
+              "pos": [
+                18.92,
+                -0.1,
+                11.05
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l071_3",
+          "pos": [
+            -18,
+            -0.1,
+            60
+          ],
+          "prompt": "Inspect a sealed crate",
+          "description": "The crate label is unreadable, except for the number 0071.",
+          "props": [
+            {
+              "pack": "space-kit",
+              "model": "barrel",
+              "height": 0.8,
+              "pos": [
+                -17.08,
+                -0.1,
+                59.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "prototype-kit",
+              "model": "crate",
+              "height": 0.52,
+              "pos": [
+                -18.92,
+                -0.1,
+                61.05
+              ],
+              "solid": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L052",
+      "title": "DESTINATION REACHED - old cave markings",
+      "accent": "d7_limestone",
+      "tint": [
+        0.76,
+        0.66,
+        0.47
+      ],
+      "cues": [
+        {
+          "id": "l052_1",
+          "pos": [
+            -18,
+            0,
+            -30
+          ],
+          "prompt": "Study the first cave marks",
+          "description": "The marks overlap the older limestone scratches.",
+          "props": [
+            {
+              "pack": "nature-kit",
+              "model": "rock-smalla",
+              "height": 0.52,
+              "pos": [
+                -17.08,
+                0,
+                -30.85
+              ],
+              "solid": false
+            },
+            {
+              "pack": "nature-kit",
+              "model": "rock-smallb",
+              "height": 0.66,
+              "pos": [
+                -18.92,
+                0,
+                -28.95
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l052_2",
+          "pos": [
+            18,
+            0,
+            -2
+          ],
+          "prompt": "Examine the abandoned rock pile",
+          "description": "There are traces of work, but no signed route onward.",
+          "props": [
+            {
+              "pack": "mini-dungeon",
+              "model": "stones",
+              "height": 0.66,
+              "pos": [
+                17.08,
+                0,
+                -2.85
+              ],
+              "solid": false
+            },
+            {
+              "pack": "graveyard-kit",
+              "model": "debris",
+              "height": 0.487,
+              "pos": [
+                18.92,
+                0,
+                -0.95
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l052_3",
+          "pos": [
+            -18,
+            0,
+            37
+          ],
+          "prompt": "Read the faded charcoal lines",
+          "description": "The message is incomplete and the campfire has long gone cold.",
+          "props": [
+            {
+              "pack": "nature-kit",
+              "model": "rock-smallb",
+              "height": 0.738,
+              "pos": [
+                -17.08,
+                0,
+                36.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "nature-kit",
+              "model": "rock-smalla",
+              "height": 0.52,
+              "pos": [
+                -18.92,
+                0,
+                38.05
+              ],
+              "solid": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L053",
+      "title": "Alone - the looping suburban house",
+      "accent": "l53_wood",
+      "tint": [
+        0.9,
+        0.78,
+        0.56
+      ],
+      "cues": [
+        {
+          "id": "l053_1",
+          "pos": [
+            -5,
+            0,
+            -17
+          ],
+          "prompt": "Observe the front-door memory",
+          "description": "The angle of the entrance seems familiar even after the house loops.",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "chair",
+              "height": 0.52,
+              "pos": [
+                -4.08,
+                0,
+                -17.85
+              ],
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "books",
+              "height": 0.66,
+              "pos": [
+                -5.92,
+                0,
+                -15.95
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l053_2",
+          "pos": [
+            5,
+            0,
+            3
+          ],
+          "prompt": "Inspect the kitchen counter",
+          "description": "A place setting has been prepared, but there is no guest.",
+          "props": [
+            {
+              "pack": "food-kit",
+              "model": "cup-tea",
+              "height": 0.66,
+              "pos": [
+                4.08,
+                0,
+                2.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "cardboardboxclosed",
+              "height": 0.8,
+              "pos": [
+                5.92,
+                0,
+                4.05
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l053_3",
+          "pos": [
+            -5,
+            0,
+            16
+          ],
+          "prompt": "Examine a folded note",
+          "description": "The note mentions a red door without explaining where it leads.",
+          "props": [
+            {
+              "pack": "furniture-kit",
+              "model": "books",
+              "height": 0.8,
+              "pos": [
+                -4.08,
+                0,
+                15.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "furniture-kit",
+              "model": "chair",
+              "height": 0.52,
+              "pos": [
+                -5.92,
+                0,
+                17.05
+              ],
+              "solid": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L058",
+      "title": "Water Wonder - empty pools and dark storerooms",
+      "accent": "l58_tile",
+      "tint": [
+        0.29,
+        0.72,
+        0.89
+      ],
+      "cues": [
+        {
+          "id": "l058_1",
+          "pos": [
+            -34,
+            0,
+            -30
+          ],
+          "prompt": "Inspect the pool edge",
+          "description": "The turquoise tiles are dry; no one has been swimming here.",
+          "props": [
+            {
+              "pack": "food-kit",
+              "model": "soda-can",
+              "height": 0.52,
+              "pos": [
+                -33.08,
+                0,
+                -30.85
+              ],
+              "solid": false
+            },
+            {
+              "pack": "space-kit",
+              "model": "barrel",
+              "height": 0.66,
+              "pos": [
+                -34.92,
+                0,
+                -28.95
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l058_2",
+          "pos": [
+            30,
+            0,
+            -5
+          ],
+          "prompt": "Study the abandoned walkway",
+          "description": "The plastic-blue ground gives no hint of ordinary grass.",
+          "props": [
+            {
+              "pack": "city-kit-roads",
+              "model": "construction-cone",
+              "height": 0.66,
+              "pos": [
+                29.08,
+                0,
+                -5.85
+              ],
+              "solid": false
+            },
+            {
+              "pack": "food-kit",
+              "model": "plate-broken",
+              "height": 0.299,
+              "pos": [
+                30.92,
+                0,
+                -3.95
+              ],
+              "solid": false
+            }
+          ]
+        },
+        {
+          "id": "l058_3",
+          "pos": [
+            -8,
+            0,
+            87
+          ],
+          "prompt": "Examine the storage label",
+          "description": "The label is damaged and the slide machinery is quiet.",
+          "props": [
+            {
+              "pack": "space-kit",
+              "model": "barrel",
+              "height": 0.8,
+              "pos": [
+                -7.08,
+                0,
+                86.15
+              ],
+              "solid": false
+            },
+            {
+              "pack": "food-kit",
+              "model": "soda-can",
+              "height": 0.52,
+              "pos": [
+                -8.92,
+                0,
+                88.05
+              ],
+              "solid": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

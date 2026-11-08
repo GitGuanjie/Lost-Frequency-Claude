@@ -1,0 +1,41 @@
+{
+  "stable_id": "L899",
+  "scene": "res://levels/L899/L899.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "Yonder floating-island settlement with mushrooms and spring",
+  "mechanics": [
+    "island_void",
+    "mushroom_crops",
+    "spring_lake",
+    "brochure"
+  ],
+  "exits": [
+    {
+      "id": "L899>EXT#1",
+      "to": "EXT",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL",
+      "method": "escorted return by Karl",
+      "source_quote": "Karl showed me the way back",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-899",
+      "trigger_type": "walk_in"
+    },
+    {
+      "id": "L899>EXT#2",
+      "to": "EXT",
+      "basis": "SOURCE",
+      "confidence": "ONE-WAY",
+      "method": "stay forever",
+      "source_quote": "anything longer than a few days is signing up for a lifetime reservation",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-899",
+      "trigger_type": "condition"
+    }
+  ],
+  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Karl and brochure staff; no hostile entity"
+}

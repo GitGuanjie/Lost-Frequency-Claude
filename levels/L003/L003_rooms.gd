@@ -153,9 +153,12 @@ static func assembly(lvl, k: GeoKit, r: RandomNumberGenerator) -> void:
 		k.box(Vector3(52.0, 0.005, z), Vector3(30.0, 0.01, 0.08), "l3_rail", GeoKit.ALL, false)
 	# control mezzanine with booth
 	k.slab(44.0, 39.2, 69.85, 43.85, 3.6, 0.25, "l3_grate")
-	K.railing(k, Vector3(44.0, 3.6, 39.2), Vector3(69.85, 3.6, 39.2))
-	k.stairs(Vector3(38.4, 0, 41.3), Vector3(1, 0, 0), 1.4, 3.6, 20, "l3_grate", 0.28, false)
-	K.pipe(k, Vector3(38.4, 0.95, 40.6), Vector3(44.0, 4.55, 40.6), 0.024, "l3_rail", 6)
+	# Leave an actual 4.4 m-wide access opening for the new upper stair.
+	K.railing(k, Vector3(44.0, 3.6, 39.2), Vector3(45.8, 3.6, 39.2))
+	K.railing(k, Vector3(50.2, 3.6, 39.2), Vector3(69.85, 3.6, 39.2))
+	_assembly_upper_walk(lvl, k)
+	k.stairs(Vector3(38.4, 0, 41.3), Vector3(1, 0, 0), 1.4, 3.6, 20, "l3_grate", 0.40, false)
+	K.pipe(k, Vector3(38.4, 0.95, 40.6), Vector3(46.4, 4.55, 40.6), 0.024, "l3_rail", 6)
 	for x: float in [46.0, 52.0, 58.0, 64.0]:
 		k.box(Vector3(x, 1.68, 39.4), Vector3(0.2, 3.36, 0.2), "l3_steel")
 	k.wall(Vector3(52.0, 3.6, 40.6), Vector3(60.0, 3.6, 40.6), 2.6, 0.12, "l3_cabinet", [{"at": 1.4, "w": 0.9, "h": 2.1}, {"at": 5.0, "w": 5.0, "h": 1.0, "sill": 1.0}])
@@ -181,6 +184,44 @@ static func assembly(lvl, k: GeoKit, r: RandomNumberGenerator) -> void:
 	K.wall_dress(k, r, Vector3(34.3, 0, 23.0), Vector3(34.3, 0, 43.6), Vector3(1, 0, 0), 4.5, true, 0.4)
 	K.wall_dress(k, r, Vector3(69.7, 0, 16.4), Vector3(69.7, 0, 38.6), Vector3(-1, 0, 0), 4.5, true, 0.4)
 	lvl.zones.append({"name": "assembly", "box": AABB(Vector3(34, -1, 16), Vector3(36, 11, 28))})
+
+
+## DEV12: vertical rework of the assembly hall, extending the old mezzanine to
+## a THIRD navigable height. The room roof at y=9 has 2.7 m clearance above
+## the new upper walkway. Source remains an electrical station, not a new exit.
+static func _assembly_upper_walk(lvl, k: GeoKit) -> void:
+	var y := 6.2
+	# Existing lower mezzanine top is 3.6m; stairs use 18 treads @ 0.38m.
+	k.stairs(Vector3(48.0, 3.6, 40.4), Vector3.FORWARD, 1.8, 2.6, 18, "l3_grate", 0.38, false)
+	# Two connecting cross-bridges and a return view over the live conveyor lines.
+	for rc in [
+		Rect2(Vector2(43.0, 31.9), Vector2(25.0, 2.6)),
+		Rect2(Vector2(53.0, 20.0), Vector2(2.8, 13.0)),
+		Rect2(Vector2(53.0, 19.8), Vector2(13.5, 2.7)),
+		Rect2(Vector2(63.9, 19.8), Vector2(2.6, 8.0))
+	]:
+		k.slab(rc.position.x, rc.position.y, rc.end.x, rc.end.y, y, 0.22, "l3_grate")
+	# Collision guardrail on exposed edges, with the stair landing open.
+	for ab in [
+		[Vector3(43.0, y, 31.65), Vector3(52.8, y, 31.65)],
+		[Vector3(56.0, y, 31.65), Vector3(68.0, y, 31.65)],
+		[Vector3(43.0, y, 34.6), Vector3(46.7, y, 34.6)],
+		[Vector3(49.3, y, 34.6), Vector3(68.0, y, 34.6)],
+		[Vector3(52.9, y, 20.0), Vector3(52.9, y, 31.9)],
+		[Vector3(56.0, y, 22.7), Vector3(56.0, y, 31.8)],
+		[Vector3(53.0, y, 19.65), Vector3(66.5, y, 19.65)],
+		[Vector3(56.0, y, 22.7), Vector3(64.0, y, 22.7)],
+		[Vector3(66.65, y, 19.8), Vector3(66.65, y, 27.8)]
+	]:
+		K.railing(k, ab[0], ab[1])
+	for x in [44.0, 57.5, 66.0]:
+		k.box(Vector3(x, 3.0, 32.9), Vector3(0.24, 6.0, 0.24), "l3_steel", GeoKit.ALL, false)
+	lvl.add_note("l3_upper_maintenance", "Overhead maintenance diagram",
+		"The numbering on the assembly machinery repeats vertically: station A at ground, station A at the control deck, station A above the conveyor. The upper diagram has no date.",
+		Vector3(60.0, y + 0.28, 20.9), Vector3(0.55, 0.08, 0.35))
+	lvl.add_landmark("Assembly hall: upper cross-bridge", Vector3(54.5, y, 32.6))
+	lvl.add_shot("assembly_upper", Vector3(60.0, y + 1.58, 21.1), Vector3(45.0, 0.7, 30.0), {"flashlight": true})
+
 
 
 # ----------------------------------------------------------- boiler room

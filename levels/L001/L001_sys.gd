@@ -30,6 +30,7 @@ var _amb_t := 8.0
 var hunt := 0.0
 var smiler: Node3D
 var _interest := 0.0
+var _smiler_occluded := 0.0
 var dis := 0.0
 var _fold_cd := 40.0
 var _fold_fx := 0.0
@@ -150,7 +151,7 @@ func _flicker(delta: float, p: Player) -> void:
 # ----------------------------------------------------------------- Smilers
 
 func _hunt(delta: float, p: Player) -> void:
-	var exposed := fl == "dark" and zone == "hall" and not p.dead
+	var exposed := fl == "dark" and zone == "hall" and not p.dead and p.global_position.y < 2.0
 	var light_on := p.flashlight.visible
 	var loud := Vector2(p.velocity.x, p.velocity.z).length() > 4.2
 	if exposed:
@@ -168,20 +169,32 @@ func _hunt(delta: float, p: Player) -> void:
 	if smiler:
 		var cam := p.camera.global_position
 		var to := cam - smiler.global_position
-		threat = clampf(1.0 - to.length() / 16.0, 0.2, 1.0)
+		# Unlike the old direct-position chase, the presence cannot pass through
+		# warehouse walls, crate stacks or a closed corridor door.
+		var space := L.get_world_3d().direct_space_state
+		var ray := PhysicsRayQueryParameters3D.create(smiler.global_position, cam, 1)
+		ray.exclude = [p.get_rid()]
+		var clear: bool = space.intersect_ray(ray).is_empty()
+		threat = clampf(1.0 - to.length() / 16.0, 0.2, 1.0) if clear else 0.0
 		if not exposed:
 			_drop_smiler(0.0)
 		elif light_on or loud:
-			_interest = 5.0
-			var stp := to.normalized() * delta * (1.7 if light_on else 1.2)
-			smiler.global_position += Vector3(stp.x, 0.0, stp.z)
+			if clear:
+				_smiler_occluded = 0.0
+				_interest = 5.0
+				var stp := to.normalized() * delta * (1.7 if light_on else 1.2)
+				smiler.global_position += Vector3(stp.x, 0.0, stp.z)
+			else:
+				_smiler_occluded += delta
+				if _smiler_occluded > 5.0:
+					_drop_smiler(0.35)
 		else:
-			_interest -= delta   # "switch off or throw your light away"
+			_interest -= delta   # switching off the light can break its fixation
 			if _interest <= 0.0:
 				_drop_smiler(0.3)
 		if smiler:
 			smiler.look_at(cam, Vector3.UP, true)
-			if to.length() < 1.5:
+			if clear and to.length() < 1.5:
 				p.hurt(1000.0, "A Smiler followed your light in the dark")
 	var hb: AudioStreamPlayer = _beds["heart"]
 	hb.volume_db = lerpf(hb.volume_db, -70.0 + 62.0 * threat, clampf(delta * 3.0, 0.0, 1.0))
@@ -190,6 +203,7 @@ func _hunt(delta: float, p: Player) -> void:
 func _drop_smiler(h: float) -> void:
 	smiler.queue_free()
 	smiler = null
+	_smiler_occluded = 0.0
 	hunt = h
 
 
@@ -199,9 +213,23 @@ func _spawn_smiler(p: Player) -> void:
 	f.y = 0.0
 	f = f.normalized().rotated(Vector3.UP, rt.randf_range(-0.25, 0.25))
 	var d := 14.0
-	var hit: Dictionary = L.get_world_3d().direct_space_state.intersect_ray(PhysicsRayQueryParameters3D.create(cam.global_position, cam.global_position + f * d, 1))
-	if not hit.is_empty():
-		d = maxf(5.0, cam.global_position.distance_to(hit["position"]) - 1.0)
+	var space := L.get_world_3d().direct_space_state
+	var found := false
+	# Try several directions. Never instantiate the face inside nearby walls.
+	for offset in [0.0, -0.65, 0.65, -1.2, 1.2]:
+		var direction := f.rotated(Vector3.UP, offset)
+		var spawn_ray := PhysicsRayQueryParameters3D.create(cam.global_position, cam.global_position + direction * d, 1)
+		spawn_ray.exclude = [p.get_rid()]
+		var hit: Dictionary = space.intersect_ray(spawn_ray)
+		var dist := d if hit.is_empty() else cam.global_position.distance_to(hit["position"]) - 1.2
+		if dist >= 9.0:
+			f = direction
+			d = dist
+			found = true
+			break
+	if not found:
+		hunt = 0.5
+		return
 	smiler = Node3D.new()
 	smiler.name = "Smiler"
 	L.add_child(smiler)

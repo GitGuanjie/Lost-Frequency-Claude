@@ -1,4 +1,5 @@
 extends LevelBase
+const ModelDress := preload("res://core/world/ModelDress.gd")
 ## Level 11 — "The City That Never Sleeps" (Backrooms Wikidot rev 60, accessed
 ## 2026-11-04; cite: Greggita Mahayfaio, inspired by the original Level 11 by
 ## nerdykiddo4884, CC BY-SA 3.0). Dossier: docs/canon/levels/L011.md.
@@ -81,6 +82,7 @@ func build() -> void:
 	_sounds()
 	add_shot("avenue", START + Vector3(0, 1.62, 0), Vector3(420.0, 45.0, 6.0), {"flashlight": false})
 	add_landmark("Spawn sidewalk (skyline east, barricade south-west)", START)
+	add_shot("overpass", Vector3(198.0, 5.4, 59.0), Vector3(210.0, 1.8, 57.0))
 
 
 func _car_setup() -> void:
@@ -141,6 +143,9 @@ func density(cx: int, cz: int) -> float:
 
 
 func kind_of(cx: int, cz: int) -> String:
+	# Authored overpass park one block from the eastern start area.
+	if cx == 2 and cz == 0:
+		return "park"
 	var d := density(cx, cz)
 	if maxi(absi(cx), absi(cz)) >= 2 and _h01(cx, cz, 61) > 0.9 and d < 0.8:
 		return "park"
@@ -281,6 +286,8 @@ func _build_chunk(cx: int, cz: int, _v: int, node: Node3D) -> Dictionary:
 				_extras(cb, k, b, r, node, meta, far_out)
 	if kd == "park":
 		_park(cb, k, ox, oz, node, far_out)
+		if key == Vector2i(2, 0):
+			_elevated_walkway(k, node, ox, oz, grp)
 	if key == WEST:
 		_exit_west(cb, node)
 	elif key == Vector2i(1, 0):
@@ -289,6 +296,7 @@ func _build_chunk(cx: int, cz: int, _v: int, node: Node3D) -> Dictionary:
 		lights.add_anchor(l[0], l[1], l[2], l[3], 0.0, grp)
 	meta["cars"] = _cars(node, slots, r)
 	k.commit()
+	ModelDress.decorate_chunk(self, node, "L011", cx, cz)
 	return meta
 
 
@@ -414,11 +422,130 @@ func _park(cb, k: GeoKit, ox: float, oz: float, node: Node3D, cabinet: bool) -> 
 	for i in 14:
 		var p := Vector3(ox + W + 4.0 + fmod(i * 37.0, 52.0), LY, oz + W + 4.0 + fmod(i * 23.0 + 11.0, 52.0))
 		if absf(p.x - c.x) > 3.5 and absf(p.z - c.z) > 3.5:
-			cb.tree(p, 1.3)
+			# Keep the raised route and BOTH stair approaches clear of trees.
+			if Vector2i(floori(ox / CS), floori(oz / CS)) != Vector2i(2, 0) or absf(p.z - (c.z + 10.0)) > 5.0:
+				cb.tree(p, 1.3)
 	for i in 4:
 		cb.bench(c + Vector3([-8, 8, 0, 0][i], 0, [0, 0, -8, 8][i]) * 1.0 + Vector3([0, 0, 2.6, -2.6][i], 0, [2.6, -2.6, 0, 0][i]), [0.0, PI, PI * 0.5, -PI * 0.5][i])
 	if cabinet:
 		_odd_cabinet(cb, c + Vector3(-14.0, 0, 9.0), node)
+
+
+## Walkable elevated observation bridge over the civic park. Stair collision
+## follows the same continuous-ramp method used elsewhere in the game. Its
+## elevated deck stays well within the park parcel (not on streamed borders).
+func _elevated_walkway(k: GeoKit, node: Node3D, ox: float, oz: float, group: String) -> void:
+	var mid := Vector3(ox + 50.0, LY, oz + 60.0)
+	var rise := 3.6
+	var steps := 18
+	var run := 0.45
+	var upper_y := LY + rise
+	var left := mid + Vector3(-20.0, 0, 0)
+	var right := mid + Vector3(20.0, 0, 0)
+	k.stairs(left, Vector3.RIGHT, 3.2, rise, steps, "l11_canal_wall", run)
+	k.stairs(right, Vector3.LEFT, 3.2, rise, steps, "l11_canal_wall", run)
+	k.slab(mid.x - 12.0, mid.z - 1.7, mid.x + 12.0, mid.z + 1.7, upper_y, 0.24, "l11_plaza")
+	for side in [-1.0, 1.0]:
+		var rz := mid.z + side * 1.78
+		# The northern railing has a 3.2m opening for the NEW upper stair.
+		if side < 0.0:
+			for offset in [-6.8, 6.8]:
+				k.box(Vector3(mid.x + offset, upper_y + 0.72, rz), Vector3(10.4, 1.44, 0.11), "l11_rail_metal")
+		else:
+			k.box(Vector3(mid.x, upper_y + 0.72, rz), Vector3(24.0, 1.44, 0.11), "l11_rail_metal")
+		for i in 9:
+			var x := mid.x - 11.5 + i * 2.875
+			if side < 0.0 and absf(x - mid.x) < 1.6:
+				continue
+			k.box(Vector3(x, upper_y + 0.75, rz), Vector3(0.12, 1.5, 0.18), "l11_rail_metal", GeoKit.ALL, false)
+	_skywalk_upper(k, node, mid, upper_y, group)
+	for side in [-1.0, 1.0]:
+		var p := mid + Vector3(side * 17.0, upper_y * 0.5, 0)
+		lights.add_anchor(p, Color(0.75, 0.82, 1.0), 1.0, 8.0, 0.0, group)
+	var sign := Interactable.new()
+	node.add_child(sign)
+	sign.setup(Vector3(mid.x, upper_y + 1.1, mid.z), Vector3(1.4, 2.0, 1.4), "Read the overpass notice", func(_p):
+		SaveService.set_flag(stable_id, "overpass_seen", true)
+		Overlay.toast("Civic pedestrian bridge. There are no train routes on the diagram, only roads with the names scratched out.", 4.5))
+	add_landmark("Overpass park (upper observation walkway)", Vector3(mid.x, upper_y, mid.z))
+
+
+## DEV12: the second elevation is accessed from the original overpass, NOT from
+## a debug teleport. It creates a three-level (street / bridge / roofwalk) park.
+## The upper route returns to the original bridge via the same physical stairs.
+func _skywalk_upper(k: GeoKit, node: Node3D, mid: Vector3, base_y: float, group: String) -> void:
+	var upper := base_y + 3.5
+	var rise_steps := 20
+	var run := 0.40
+	# From the centre of the existing bridge through its 3.2m northern gap.
+	k.stairs(Vector3(mid.x, base_y, mid.z), Vector3.FORWARD, 2.0, 3.5, rise_steps, "l11_canal_wall", run)
+	var z := mid.z - rise_steps * run
+	# A cross-bridge and two distinct balcony wings with an open central void.
+	k.slab(mid.x - 11.0, z - 1.5, mid.x + 11.0, z + 1.5, upper, 0.25, "l11_plaza")
+	k.slab(mid.x - 10.8, z - 11.0, mid.x - 7.6, z + 1.5, upper, 0.25, "l11_plaza")
+	k.slab(mid.x + 7.6, z - 11.0, mid.x + 10.8, z + 1.5, upper, 0.25, "l11_plaza")
+	k.slab(mid.x - 11.0, z - 11.0, mid.x + 11.0, z - 8.0, upper, 0.25, "l11_plaza")
+	# Perimeter barriers, with an intentional open stair threshold on south edge.
+	for rail in [
+		[Vector3(mid.x - 11.1, upper + 0.7, z - 4.8), Vector3(0.12, 1.4, 12.3)],
+		[Vector3(mid.x + 11.1, upper + 0.7, z - 4.8), Vector3(0.12, 1.4, 12.3)],
+		[Vector3(mid.x, upper + 0.7, z - 11.1), Vector3(22.0, 1.4, 0.12)],
+		[Vector3(mid.x - 6.7, upper + 0.7, z + 1.63), Vector3(8.6, 1.4, 0.12)],
+		[Vector3(mid.x + 6.7, upper + 0.7, z + 1.63), Vector3(8.6, 1.4, 0.12)],
+		[Vector3(mid.x, upper + 0.7, z - 7.91), Vector3(15.0, 1.4, 0.12)],
+		[Vector3(mid.x - 7.48, upper + 0.7, z - 5.7), Vector3(0.12, 1.4, 4.0)],
+		[Vector3(mid.x + 7.48, upper + 0.7, z - 5.7), Vector3(0.12, 1.4, 4.0)]
+	]:
+		k.box(rail[0], rail[1], "l11_rail_metal")
+	for x in [mid.x - 10.0, mid.x + 10.0]:
+		for zz in [z - 10.0, z - 1.0]:
+			k.box(Vector3(x, (LY + upper) * 0.5, zz), Vector3(0.28, upper - LY, 0.28), "l11_canal_wall", GeoKit.ALL, false)
+	var sign := Interactable.new()
+	node.add_child(sign)
+	sign.setup(Vector3(mid.x, upper + 1.0, z - 9.3), Vector3(1.6, 1.8, 1.6), "Inspect the high observation map", func(_p):
+		SaveService.set_flag(stable_id, "skywalk_seen", true)
+		Overlay.toast("This walkway overlooks three streets that do not meet on the map. The upper route ends above the same park.", 4.5))
+	lights.add_anchor(Vector3(mid.x, upper + 2.2, z - 9.5), Color(0.67, 0.78, 1.0), 0.7, 10.0, 0.0, group)
+	add_landmark("High park observation loop (third elevation)", Vector3(mid.x, upper, z - 9.0))
+	add_shot("skywalk_upper", Vector3(mid.x + 8.4, upper + 1.65, z - 8.0), Vector3(mid.x, 0.6, mid.z))
+	_skywalk_fourth(k, node, mid, upper, group)
+
+
+
+## DEV14: two truly independent flights to a fourth elevation (one can be
+## descended while the other is climbed). A bridging spine connects the stair
+## heads, rather than a roof panel merely decorating the existing overpass.
+func _skywalk_fourth(k: GeoKit, node: Node3D, mid: Vector3, base_y: float, group: String) -> void:
+	var upper := base_y + 3.4
+	var z := mid.z - 8.0
+	# Existing third-storey bridge has two long side wings centred at x=+/-9.
+	# Ascents point north; the deck starts exactly beyond their final riser.
+	for side in [-1.0, 1.0]:
+		k.stairs(Vector3(mid.x + side * 9.0, base_y, z - 0.8), Vector3.FORWARD,
+			2.1, upper - base_y, 18, "l11_canal_wall", 0.40, false)
+	# Opposite wings meet on the far side of the open air atrium.
+	k.slab(mid.x - 11.0, z - 14.5, mid.x + 11.0, z - 11.8,
+		upper, 0.25, "l11_plaza")
+	for side in [-1.0, 1.0]:
+		var xc := mid.x + side * 9.0
+		k.slab(xc - 1.65, z - 11.8, xc + 1.65, z - 7.9,
+			upper, 0.25, "l11_plaza")
+		# Outer and inner rails frame a shaft; don't block the stair mouths.
+		for xx in [xc - 1.72, xc + 1.72]:
+			k.box(Vector3(xx, upper + 0.65, z - 9.8),
+				Vector3(0.12, 1.30, 3.80), "l11_rail_metal")
+	for zz in [z - 14.6, z - 11.72]:
+		k.box(Vector3(mid.x, upper + 0.65, zz), Vector3(15.0 if zz > z - 14.0 else 22.0, 1.30, 0.12), "l11_rail_metal")
+	for xx in [mid.x - 11.10, mid.x + 11.10]:
+		k.box(Vector3(xx, upper + 0.65, z - 13.25), Vector3(0.12, 1.30, 2.7), "l11_rail_metal")
+	var map := Interactable.new()
+	node.add_child(map)
+	map.setup(Vector3(mid.x, upper + 0.95, z - 13.1), Vector3(1.25, 1.0, 0.75),
+		"Inspect the fourth-level city index", func(_p):
+			Overlay.toast("The same avenue runs beneath both staircases, yet neither points to its original intersection.", 5.0))
+	lights.add_anchor(Vector3(mid.x, upper + 2.1, z - 13.1), Color(0.65, 0.76, 0.95), 0.75, 10.0, 0.0, group)
+	add_landmark("Fourth-elevation double stairway", Vector3(mid.x, upper, z - 13.0))
+	add_shot("skywalk_fourth", Vector3(mid.x - 8.9, upper + 1.6, z - 12.4), Vector3(mid.x + 9.0, base_y, z))
 
 
 func _odd_cabinet(cb, p: Vector3, node: Node3D) -> void:
@@ -746,6 +873,29 @@ func _seen(cam: Camera3D, p: Vector3) -> bool:
 
 
 # ------------------------------------------------------------------ QA
+
+## Engine-level geometry evidence. A lexer/source check cannot prove that a
+## bridge collision works or a staircase actually has a reachable top landing.
+func qa_self_test() -> Array:
+	var result: Array = []
+	result.append({"what": "authored civic overpass park is deterministic", "ok": kind_of(2, 0) == "park"})
+	world.build_around(Vector3(210.0, 0.0, 60.0), 0)
+	await get_tree().physics_frame
+	var space := get_world_3d().direct_space_state
+	var top := space.intersect_ray(PhysicsRayQueryParameters3D.create(Vector3(210.0, 4.35, 60.0), Vector3(210.0, 3.25, 60.0), 1))
+	var stair := space.intersect_ray(PhysicsRayQueryParameters3D.create(Vector3(194.0, 3.3, 60.0), Vector3(194.0, 1.0, 60.0), 1))
+	var upper_ok := not top.is_empty() and absf(float(top["position"].y) - 3.75) < 0.12
+	var stair_ok := not stair.is_empty() and float(stair["position"].y) > 0.8 and float(stair["position"].y) < 3.0
+	result.append({"what": "park overpass deck collision at 3.75m", "ok": upper_ok, "detail": top.get("position", Vector3.ZERO)})
+	result.append({"what": "left physical stair ramp rises above park floor", "ok": stair_ok, "detail": stair.get("position", Vector3.ZERO)})
+	var sky_y := LY + 7.1
+	var sky_deck := space.intersect_ray(PhysicsRayQueryParameters3D.create(Vector3(202.0, sky_y + 0.8, 52.0), Vector3(202.0, sky_y - 0.6, 52.0), 1))
+	var sky_ok := not sky_deck.is_empty() and absf(float(sky_deck.get("position", Vector3.ZERO).y) - sky_y) < 0.14
+	result.append({"what": "third-height skywalk has a walkable collision deck", "ok": sky_ok, "detail": sky_deck.get("position", Vector3.ZERO)})
+	var upstair := space.intersect_ray(PhysicsRayQueryParameters3D.create(Vector3(210.0, 6.8, 56.0), Vector3(210.0, 4.2, 56.0), 1))
+	result.append({"what": "second ascent uses a physical stair ramp", "ok": not upstair.is_empty() and float(upstair.get("position", Vector3.ZERO).y) > 4.7 and float(upstair.get("position", Vector3.ZERO).y) < 6.3, "detail": upstair.get("position", Vector3.ZERO)})
+	return result
+
 
 func qa_capture_plan() -> Array:
 	var plan_: Array = qa_shots.duplicate()

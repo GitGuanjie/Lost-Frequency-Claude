@@ -129,6 +129,7 @@ func new_expedition() -> void:
 func continue_expedition() -> void:
 	SessionState.set_mode(SessionState.Mode.STORY)
 	SaveService.load_story()
+	arrived_via = SaveService.story.get("last_arrival_edge", {}).duplicate()
 	var cp: Dictionary = SaveService.story.get("checkpoint", {})
 	var sid: String = cp.get("level", "L000")
 	if not LevelRegistry.is_playable(sid):
@@ -191,9 +192,16 @@ func load_level(sid: String, arrival: String, reason: String) -> void:
 			ResourceLoader.load_threaded_request(path, "PackedScene", true)
 			_prefetched[path] = true
 		Overlay.glitch(0.6)
+		var seamless_deadline := Time.get_ticks_msec() + 45000
 		while ResourceLoader.load_threaded_get_status(path) == ResourceLoader.THREAD_LOAD_IN_PROGRESS:
+			if Time.get_ticks_msec() > seamless_deadline:
+				_fail(sid, "seamless prefetch timed out")
+				return
 			Overlay.glitch(0.6)
 			await get_tree().process_frame
+		if ResourceLoader.load_threaded_get_status(path) != ResourceLoader.THREAD_LOAD_LOADED:
+			_fail(sid, "seamless prefetch failed")
+			return
 		_capture_carry()
 		Overlay.glitch(1.0)
 		await get_tree().process_frame
@@ -214,7 +222,11 @@ func load_level(sid: String, arrival: String, reason: String) -> void:
 			return
 	_prefetched.erase(path)
 	var progress := []
+	var load_deadline := Time.get_ticks_msec() + 45000
 	while true:
+		if Time.get_ticks_msec() > load_deadline:
+			_fail(sid, "resource loading timed out")
+			return
 		var st := ResourceLoader.load_threaded_get_status(path, progress)
 		if st == ResourceLoader.THREAD_LOAD_LOADED:
 			break
@@ -228,12 +240,26 @@ func load_level(sid: String, arrival: String, reason: String) -> void:
 		_fail(sid, "not a PackedScene")
 		return
 	SessionState.current_level = sid
-	var inst := packed.instantiate()
+	var inst := packed.instantiate() as LevelBase
+	if inst == null:
+		_fail(sid, "scene root must extend LevelBase")
+		return
 	get_tree().root.add_child(inst)
 	get_tree().current_scene = inst
-	# LevelBase emits level_loaded after build + player placement
-	await level_loaded
+	# Signals can be missed if a scene completes its ready lifecycle before
+	# an await is installed. Poll the actual intended instance with a deadline.
+	var build_deadline := Time.get_ticks_msec() + 60000
+	while is_instance_valid(inst) and not inst.built:
+		if Time.get_ticks_msec() > build_deadline:
+			_fail(sid, "level build / ready timed out")
+			return
+		await get_tree().process_frame
+	if not is_instance_valid(inst) or SessionState.current_level != sid:
+		_fail(sid, "level instance did not become ready")
+		return
 	SaveService.mark_visited(sid)
+	if reason.begins_with("exit:") and SessionState.is_story() and str(arrived_via.get("to", "")) == sid:
+		SaveService.set_arrival_edge(arrived_via)
 	if reason != "continue" and reason != "restart":
 		# an arrival is a checkpoint: Continue must resume in the level you reached
 		SaveService.set_checkpoint(sid, arrival, null)

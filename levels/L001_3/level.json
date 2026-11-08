@@ -1,0 +1,31 @@
+{
+  "stable_id": "L001_3",
+  "scene": "res://levels/L001_3/L001_3.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L001"
+  ],
+  "signature": "Overbright sixteen-door medical corridor with delayed detox interactions",
+  "mechanics": [
+    "medical_corridor",
+    "detox_rooms",
+    "white_decay_variants"
+  ],
+  "exits": [
+    {
+      "id": "L001_3>L001#1",
+      "to": "L001",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "No-clip into either end of the main hallway",
+      "source_quote": "One may return to Level 1 by no-clipping into either end of the main hallway.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-1-3",
+      "trigger_type": "noclip"
+    }
+  ],
+  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
+  "entity_policy": "NO ENTITY PER SOURCE"
+}

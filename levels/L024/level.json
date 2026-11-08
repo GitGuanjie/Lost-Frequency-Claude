@@ -1,0 +1,34 @@
+{
+  "stable_id": "L024",
+  "scene": "res://levels/L024/L024.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev5 source candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L001",
+    "from_L020",
+    "from_L025"
+  ],
+  "signature": "Lead-painted plastic lunar plain with machinery, industrial mines and the PlasticWorks boundary gate",
+  "mechanics": [
+    "plastic_lunar_model",
+    "industrial_mine",
+    "ambient_siren",
+    "hazardous_mist"
+  ],
+  "exits": [
+    {
+      "id": "L024>EXT#1",
+      "to": "EXT",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "follow the road to the PlasticWorks main gate; miners show the way out",
+      "source_quote": "just follow the road to the main gate, the miners will show you the way out",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-24",
+      "trigger_type": "walk_in"
+    }
+  ],
+  "notes": "Compact exploration adaptation. Runtime Godot and Windows verification required; no automatic PLAYABLE promotion.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Moon Mites, Beauford"
+}

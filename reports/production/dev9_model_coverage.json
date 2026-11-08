@@ -1,0 +1,215 @@
+{
+  "release": "1.5.0-dev9",
+  "assets_total": 414,
+  "asset_types_used": 86,
+  "placed_instances": 466,
+  "redressed_levels": 24,
+  "pack_counts": {
+    "city-kit-commercial": 16,
+    "city-kit-roads": 16,
+    "city-kit-suburban": 8,
+    "food-kit": 32,
+    "furniture-kit": 109,
+    "graveyard-kit": 16,
+    "mini-dungeon": 24,
+    "nature-kit": 32,
+    "prototype-kit": 67,
+    "space-kit": 94
+  },
+  "levels": [
+    {
+      "level": "L001",
+      "placements": 16,
+      "unique_models": 8,
+      "inspections": 1,
+      "chunk_owned": 16,
+      "nonblocking": 16
+    },
+    {
+      "level": "L002",
+      "placements": 16,
+      "unique_models": 6,
+      "inspections": 1,
+      "chunk_owned": 16,
+      "nonblocking": 16
+    },
+    {
+      "level": "L005",
+      "placements": 15,
+      "unique_models": 9,
+      "inspections": 2,
+      "chunk_owned": 0,
+      "nonblocking": 15
+    },
+    {
+      "level": "L005_3",
+      "placements": 27,
+      "unique_models": 3,
+      "inspections": 1,
+      "chunk_owned": 0,
+      "nonblocking": 27
+    },
+    {
+      "level": "L006_1",
+      "placements": 26,
+      "unique_models": 10,
+      "inspections": 1,
+      "chunk_owned": 0,
+      "nonblocking": 26
+    },
+    {
+      "level": "L009",
+      "placements": 16,
+      "unique_models": 6,
+      "inspections": 1,
+      "chunk_owned": 16,
+      "nonblocking": 16
+    },
+    {
+      "level": "L011",
+      "placements": 20,
+      "unique_models": 6,
+      "inspections": 1,
+      "chunk_owned": 20,
+      "nonblocking": 20
+    },
+    {
+      "level": "L017",
+      "placements": 16,
+      "unique_models": 6,
+      "inspections": 1,
+      "chunk_owned": 0,
+      "nonblocking": 16
+    },
+    {
+      "level": "L020",
+      "placements": 30,
+      "unique_models": 4,
+      "inspections": 1,
+      "chunk_owned": 0,
+      "nonblocking": 30
+    },
+    {
+      "level": "L022",
+      "placements": 28,
+      "unique_models": 6,
+      "inspections": 1,
+      "chunk_owned": 0,
+      "nonblocking": 28
+    },
+    {
+      "level": "L027",
+      "placements": 21,
+      "unique_models": 6,
+      "inspections": 1,
+      "chunk_owned": 0,
+      "nonblocking": 18
+    },
+    {
+      "level": "L028",
+      "placements": 16,
+      "unique_models": 6,
+      "inspections": 1,
+      "chunk_owned": 0,
+      "nonblocking": 16
+    },
+    {
+      "level": "L029",
+      "placements": 26,
+      "unique_models": 5,
+      "inspections": 1,
+      "chunk_owned": 0,
+      "nonblocking": 26
+    },
+    {
+      "level": "L049",
+      "placements": 22,
+      "unique_models": 6,
+      "inspections": 1,
+      "chunk_owned": 0,
+      "nonblocking": 20
+    },
+    {
+      "level": "L050",
+      "placements": 26,
+      "unique_models": 4,
+      "inspections": 1,
+      "chunk_owned": 0,
+      "nonblocking": 26
+    },
+    {
+      "level": "L053",
+      "placements": 14,
+      "unique_models": 8,
+      "inspections": 2,
+      "chunk_owned": 0,
+      "nonblocking": 14
+    },
+    {
+      "level": "L055",
+      "placements": 20,
+      "unique_models": 13,
+      "inspections": 2,
+      "chunk_owned": 0,
+      "nonblocking": 20
+    },
+    {
+      "level": "L069",
+      "placements": 12,
+      "unique_models": 3,
+      "inspections": 1,
+      "chunk_owned": 0,
+      "nonblocking": 12
+    },
+    {
+      "level": "L071",
+      "placements": 14,
+      "unique_models": 7,
+      "inspections": 1,
+      "chunk_owned": 0,
+      "nonblocking": 14
+    },
+    {
+      "level": "L073",
+      "placements": 12,
+      "unique_models": 4,
+      "inspections": 1,
+      "chunk_owned": 0,
+      "nonblocking": 12
+    },
+    {
+      "level": "L083",
+      "placements": 26,
+      "unique_models": 6,
+      "inspections": 1,
+      "chunk_owned": 0,
+      "nonblocking": 26
+    },
+    {
+      "level": "L085",
+      "placements": 10,
+      "unique_models": 5,
+      "inspections": 1,
+      "chunk_owned": 0,
+      "nonblocking": 10
+    },
+    {
+      "level": "L090",
+      "placements": 17,
+      "unique_models": 7,
+      "inspections": 1,
+      "chunk_owned": 0,
+      "nonblocking": 17
+    },
+    {
+      "level": "L320",
+      "placements": 20,
+      "unique_models": 4,
+      "inspections": 1,
+      "chunk_owned": 0,
+      "nonblocking": 20
+    }
+  ],
+  "engine_status": "NOT TESTED: Godot unavailable",
+  "windows_export_status": "NOT BUILT"
+}

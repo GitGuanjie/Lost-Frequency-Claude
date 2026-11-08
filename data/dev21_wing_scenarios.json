@@ -1,0 +1,5468 @@
+{
+  "schema": 1,
+  "version": "dev21",
+  "status": "PROCEDURAL_DRESSING_UNVERIFIED_IN_ENGINE",
+  "source": "Local archived Wikidot level texts; in-game vignettes are clearly adaptations",
+  "wings": [
+    {
+      "id": "L028",
+      "anchor": "StormstoneUpperShelves",
+      "title": "Stormstone Keep: forge scraps, storerooms and impossible domestic details",
+      "models": [
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            2
+          ],
+          "pack": "mini-dungeon",
+          "model": "wood-structure",
+          "height": 1.5165,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 39
+        },
+        {
+          "tier": 0,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "height": 1.5179,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 150
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "furniture-kit",
+          "model": "table",
+          "height": 0.6407,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 226
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 286
+        },
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            1
+          ],
+          "pack": "mini-dungeon",
+          "model": "column",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 329
+        },
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            2
+          ],
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 2.0,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 51,
+          "inspect": "The blue light outside the keep has not reached these objects.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "furniture-kit",
+          "model": "table",
+          "height": 0.6407,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 116
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "mini-dungeon",
+          "model": "chest",
+          "height": 1.485,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 188
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "furniture-kit",
+          "model": "radio",
+          "height": 1.1953,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 225
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "mini-dungeon",
+          "model": "banner",
+          "height": 1.7778,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 307
+        },
+        {
+          "tier": 0,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "height": 1.1846,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 58
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "furniture-kit",
+          "model": "bookcaseclosed",
+          "height": 2.0,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 137
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "height": 1.1846,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 197
+        },
+        {
+          "tier": 1,
+          "cell": [
+            0,
+            2
+          ],
+          "pack": "mini-dungeon",
+          "model": "chest",
+          "height": 1.485,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 217
+        },
+        {
+          "tier": 1,
+          "cell": [
+            2,
+            2
+          ],
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "height": 1.1846,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 322
+        },
+        {
+          "tier": 1,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "height": 1.1846,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 10
+        },
+        {
+          "tier": 1,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "furniture-kit",
+          "model": "radio",
+          "height": 1.1953,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 127,
+          "inspect": "The blue light outside the keep has not reached these objects.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 1,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "mini-dungeon",
+          "model": "chest",
+          "height": 1.485,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 186
+        },
+        {
+          "tier": 1,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "furniture-kit",
+          "model": "bookcaseclosed",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 258
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 2.0,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 278
+        },
+        {
+          "tier": 1,
+          "cell": [
+            2,
+            1
+          ],
+          "pack": "furniture-kit",
+          "model": "radio",
+          "height": 1.1953,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 17
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 93
+        },
+        {
+          "tier": 2,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "height": 1.1846,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 174
+        },
+        {
+          "tier": 2,
+          "cell": [
+            2,
+            1
+          ],
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "height": 1.1846,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 222
+        },
+        {
+          "tier": 2,
+          "cell": [
+            2,
+            2
+          ],
+          "pack": "mini-dungeon",
+          "model": "column",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 304
+        },
+        {
+          "tier": 2,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 2.0,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 26
+        },
+        {
+          "tier": 2,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "mini-dungeon",
+          "model": "banner",
+          "height": 1.7778,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 109
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "furniture-kit",
+          "model": "books",
+          "height": 1.08,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 174,
+          "inspect": "The blue light outside the keep has not reached these objects.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "furniture-kit",
+          "model": "books",
+          "height": 1.08,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 222
+        },
+        {
+          "tier": 2,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 276
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "mini-dungeon",
+          "model": "column",
+          "height": 2.0,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 38
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "furniture-kit",
+          "model": "radio",
+          "height": 1.1953,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 42
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 147
+        }
+      ],
+      "ambience": [
+        {
+          "id": "dev21:L028:scene:0",
+          "pos": [
+            103.0,
+            4.6,
+            -31.5
+          ],
+          "radius": 4.5,
+          "height": 2.0,
+          "caption": "The blue light outside the keep has not reached these objects.",
+          "sound": "wind",
+          "source": "ADAPTATION"
+        },
+        {
+          "id": "dev21:L028:scene:2",
+          "pos": [
+            117.0,
+            11.6,
+            -31.5
+          ],
+          "radius": 4.5,
+          "height": 2.0,
+          "caption": "Examine the upper keep watchpoint.",
+          "sound": "wind",
+          "source": "ADAPTATION"
+        }
+      ],
+      "station_prompts": [
+        "Read the rusted forge inventory",
+        "Trace the blue-lit stone joint",
+        "Examine the upper keep watchpoint"
+      ],
+      "station_reports": [
+        "The blue light outside the keep has not reached these objects.",
+        "The level looks different from the next height.",
+        "A return path is now easier to distinguish from above."
+      ]
+    },
+    {
+      "id": "L032",
+      "anchor": "NightCanopyBranchedWalk",
+      "title": "Forest of the Skeleton Queen: bleached stone, memorials, hanging relics",
+      "models": [
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "height": 0.4794,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 67
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "height": 0.4794,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 88
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            2
+          ],
+          "pack": "graveyard-kit",
+          "model": "grave",
+          "height": 0.1218,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 181
+        },
+        {
+          "tier": 0,
+          "cell": [
+            0,
+            2
+          ],
+          "pack": "mini-dungeon",
+          "model": "stones",
+          "height": 0.4272,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 235
+        },
+        {
+          "tier": 0,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "height": 0.4452,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 3
+        },
+        {
+          "tier": 0,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "height": 0.4794,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 63,
+          "inspect": "Something pale catches the moonlight between the trunks.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "nature-kit",
+          "model": "rock-talld",
+          "height": 1.4054,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 139
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "height": 0.2999,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 165
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "nature-kit",
+          "model": "rock-tallc",
+          "height": 1.4416,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 259
+        },
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            1
+          ],
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "height": 0.6031,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 324
+        },
+        {
+          "tier": 0,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "mini-dungeon",
+          "model": "stones",
+          "height": 0.4272,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 23
+        },
+        {
+          "tier": 1,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "height": 0.4794,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 121
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 1.3569,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 152
+        },
+        {
+          "tier": 1,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "graveyard-kit",
+          "model": "grave",
+          "height": 0.1218,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 262
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "height": 0.4794,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 350
+        },
+        {
+          "tier": 1,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "nature-kit",
+          "model": "rock-talld",
+          "height": 1.4054,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 10
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "height": 0.2999,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 65,
+          "inspect": "Something pale catches the moonlight between the trunks.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 1,
+          "cell": [
+            0,
+            2
+          ],
+          "pack": "graveyard-kit",
+          "model": "lightpost-single",
+          "height": 2.0,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 141
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "nature-kit",
+          "model": "rock-talld",
+          "height": 1.4054,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 241
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "height": 0.4452,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 334
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "height": 0.4452,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 22
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            2
+          ],
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "height": 0.4794,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 82
+        },
+        {
+          "tier": 2,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "height": 0.4794,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 173
+        },
+        {
+          "tier": 2,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "height": 0.2999,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 256
+        },
+        {
+          "tier": 2,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 1.3569,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 281
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "height": 0.4452,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 32
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "graveyard-kit",
+          "model": "grave",
+          "height": 0.1218,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 81
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "graveyard-kit",
+          "model": "lightpost-single",
+          "height": 2.0,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 118,
+          "inspect": "Something pale catches the moonlight between the trunks.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 2,
+          "cell": [
+            0,
+            2
+          ],
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "height": 0.2999,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 194
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            2
+          ],
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "height": 0.4452,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 282
+        },
+        {
+          "tier": 2,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "height": 0.6031,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 22
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "nature-kit",
+          "model": "rock-tallc",
+          "height": 1.4416,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 53
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 1.3569,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 146
+        }
+      ],
+      "ambience": [
+        {
+          "id": "dev21:L032:scene:0",
+          "pos": [
+            123.0,
+            4.5,
+            43.5
+          ],
+          "radius": 4.5,
+          "height": 2.0,
+          "caption": "Something pale catches the moonlight between the trunks.",
+          "sound": "creak",
+          "source": "ADAPTATION"
+        },
+        {
+          "id": "dev21:L032:scene:2",
+          "pos": [
+            137.0,
+            11.3,
+            43.5
+          ],
+          "radius": 4.5,
+          "height": 2.0,
+          "caption": "Look across the moonlit canopy.",
+          "sound": "creak",
+          "source": "ADAPTATION"
+        }
+      ],
+      "station_prompts": [
+        "Listen for clattering branches",
+        "Study a pale trunk marker",
+        "Look across the moonlit canopy"
+      ],
+      "station_reports": [
+        "Something pale catches the moonlight between the trunks.",
+        "The level looks different from the next height.",
+        "A return path is now easier to distinguish from above."
+      ]
+    },
+    {
+      "id": "L050",
+      "anchor": "DesertRoadSignalDeck",
+      "title": "Moribund Highway: derelict roadside maintenance and abandoned supplies",
+      "models": [
+        {
+          "tier": 0,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "prototype-kit",
+          "model": "pipe-split",
+          "height": 0.508,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 33
+        },
+        {
+          "tier": 0,
+          "cell": [
+            0,
+            2
+          ],
+          "pack": "city-kit-roads",
+          "model": "electricity-pole",
+          "height": 0.7615,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 93
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "city-kit-roads",
+          "model": "sign-highway",
+          "height": 0.5942,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 193
+        },
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            1
+          ],
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "height": 1.08,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 258
+        },
+        {
+          "tier": 0,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "prototype-kit",
+          "model": "pipe-section",
+          "height": 2.0,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 3
+        },
+        {
+          "tier": 0,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "city-kit-roads",
+          "model": "dumpster",
+          "height": 0.4755,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 63,
+          "inspect": "The roadside supplies look recently rearranged, but the road is empty.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "city-kit-roads",
+          "model": "road-sign-warning",
+          "height": 2.0,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 94
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "city-kit-roads",
+          "model": "sign-highway",
+          "height": 0.5942,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 187
+        },
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "city-kit-roads",
+          "model": "road-sign-warning",
+          "height": 2.0,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 275
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            2
+          ],
+          "pack": "city-kit-roads",
+          "model": "electricity-pole",
+          "height": 0.7615,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 318
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "city-kit-roads",
+          "model": "construction-light",
+          "height": 1.4025,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 7
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "city-kit-roads",
+          "model": "road-sign-warning",
+          "height": 2.0,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 104
+        },
+        {
+          "tier": 1,
+          "cell": [
+            2,
+            1
+          ],
+          "pack": "city-kit-roads",
+          "model": "dumpster",
+          "height": 0.4755,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 169
+        },
+        {
+          "tier": 1,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "height": 1.08,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 262
+        },
+        {
+          "tier": 1,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "city-kit-roads",
+          "model": "construction-barrier",
+          "height": 0.672,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 334
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "prototype-kit",
+          "model": "crate",
+          "height": 0.84,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 61
+        },
+        {
+          "tier": 1,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "city-kit-roads",
+          "model": "road-sign-warning",
+          "height": 2.0,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 127,
+          "inspect": "The roadside supplies look recently rearranged, but the road is empty.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "city-kit-roads",
+          "model": "construction-light",
+          "height": 1.4025,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 169
+        },
+        {
+          "tier": 1,
+          "cell": [
+            2,
+            2
+          ],
+          "pack": "city-kit-roads",
+          "model": "construction-light",
+          "height": 1.4025,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 246
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "prototype-kit",
+          "model": "pipe-section",
+          "height": 2.0,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 278
+        },
+        {
+          "tier": 1,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "city-kit-roads",
+          "model": "dumpster",
+          "height": 0.4755,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 5
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "height": 1.08,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 71
+        },
+        {
+          "tier": 2,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "city-kit-roads",
+          "model": "sign-highway",
+          "height": 0.5942,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 174
+        },
+        {
+          "tier": 2,
+          "cell": [
+            2,
+            2
+          ],
+          "pack": "city-kit-roads",
+          "model": "road-sign-warning",
+          "height": 2.0,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 233
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            2
+          ],
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "height": 1.08,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 287
+        },
+        {
+          "tier": 2,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "prototype-kit",
+          "model": "crate",
+          "height": 0.84,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 38
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "prototype-kit",
+          "model": "pipe-section",
+          "height": 2.0,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 80
+        },
+        {
+          "tier": 2,
+          "cell": [
+            0,
+            2
+          ],
+          "pack": "city-kit-roads",
+          "model": "road-sign-warning",
+          "height": 2.0,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 123,
+          "inspect": "The roadside supplies look recently rearranged, but the road is empty.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "city-kit-roads",
+          "model": "road-sign-warning",
+          "height": 2.0,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 200
+        },
+        {
+          "tier": 2,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "height": 1.08,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 310
+        },
+        {
+          "tier": 2,
+          "cell": [
+            2,
+            1
+          ],
+          "pack": "prototype-kit",
+          "model": "pipe-section",
+          "height": 2.0,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 359
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "city-kit-roads",
+          "model": "road-sign-warning",
+          "height": 2.0,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 42
+        },
+        {
+          "tier": 2,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "prototype-kit",
+          "model": "pipe-split",
+          "height": 0.508,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 129
+        }
+      ],
+      "ambience": [
+        {
+          "id": "dev21:L050:scene:0",
+          "pos": [
+            110.0,
+            4.6,
+            68.5
+          ],
+          "radius": 4.5,
+          "height": 2.0,
+          "caption": "The roadside supplies look recently rearranged, but the road is empty.",
+          "sound": "knock",
+          "source": "ADAPTATION"
+        },
+        {
+          "id": "dev21:L050:scene:2",
+          "pos": [
+            124.0,
+            11.6,
+            68.5
+          ],
+          "radius": 4.5,
+          "height": 2.0,
+          "caption": "Observe the highway from above.",
+          "sound": "knock",
+          "source": "ADAPTATION"
+        }
+      ],
+      "station_prompts": [
+        "Inspect the derelict roadside beacon",
+        "Align the maintenance reflectors",
+        "Observe the highway from above"
+      ],
+      "station_reports": [
+        "The roadside supplies look recently rearranged, but the road is empty.",
+        "The level looks different from the next height.",
+        "A return path is now easier to distinguish from above."
+      ]
+    },
+    {
+      "id": "L073",
+      "anchor": "CrimsonKeepBoundary",
+      "title": "Redlands: defensive ruined castle, crimson-worn gear and remnants",
+      "models": [
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "mini-dungeon",
+          "model": "rocks",
+          "height": 0.825,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 51
+        },
+        {
+          "tier": 0,
+          "cell": [
+            0,
+            2
+          ],
+          "pack": "mini-dungeon",
+          "model": "gate",
+          "height": 1.5469,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 93
+        },
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            1
+          ],
+          "pack": "mini-dungeon",
+          "model": "wood-support",
+          "height": 1.5165,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 187
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "graveyard-kit",
+          "model": "crypt-door",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 297
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            2
+          ],
+          "pack": "mini-dungeon",
+          "model": "chest",
+          "height": 1.485,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 323
+        },
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "graveyard-kit",
+          "model": "crypt-door",
+          "height": 2.0,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 62,
+          "inspect": "The scattered equipment suggests that this position once had a purpose.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "mini-dungeon",
+          "model": "gate",
+          "height": 1.5469,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 116
+        },
+        {
+          "tier": 0,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "height": 1.5179,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 205
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "mini-dungeon",
+          "model": "column",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 281
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "mini-dungeon",
+          "model": "banner",
+          "height": 1.7778,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 296
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "height": 1.5179,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 18
+        },
+        {
+          "tier": 1,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "graveyard-kit",
+          "model": "iron-fence-damaged",
+          "height": 1.4527,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 121
+        },
+        {
+          "tier": 1,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "mini-dungeon",
+          "model": "wood-support",
+          "height": 1.5165,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 191
+        },
+        {
+          "tier": 1,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "mini-dungeon",
+          "model": "rocks",
+          "height": 0.825,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 228
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "mini-dungeon",
+          "model": "column",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 283
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "height": 1.5179,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 28
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "height": 1.5179,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 132,
+          "inspect": "The scattered equipment suggests that this position once had a purpose.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "mini-dungeon",
+          "model": "rocks",
+          "height": 0.825,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 147
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            2
+          ],
+          "pack": "mini-dungeon",
+          "model": "column",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 229
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "height": 1.5179,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 334
+        },
+        {
+          "tier": 1,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "height": 1.5179,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 51
+        },
+        {
+          "tier": 1,
+          "cell": [
+            0,
+            2
+          ],
+          "pack": "mini-dungeon",
+          "model": "banner",
+          "height": 1.7778,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 65
+        },
+        {
+          "tier": 2,
+          "cell": [
+            0,
+            2
+          ],
+          "pack": "mini-dungeon",
+          "model": "rocks",
+          "height": 0.825,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 128
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            2
+          ],
+          "pack": "mini-dungeon",
+          "model": "wood-support",
+          "height": 1.5165,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 216
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "mini-dungeon",
+          "model": "gate",
+          "height": 1.5469,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 276
+        },
+        {
+          "tier": 2,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "mini-dungeon",
+          "model": "banner",
+          "height": 1.7778,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 27
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "mini-dungeon",
+          "model": "rocks",
+          "height": 0.825,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 47
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "mini-dungeon",
+          "model": "rocks",
+          "height": 0.825,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 151,
+          "inspect": "The scattered equipment suggests that this position once had a purpose.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 2,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "mini-dungeon",
+          "model": "wood-support",
+          "height": 1.5165,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 239
+        },
+        {
+          "tier": 2,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "graveyard-kit",
+          "model": "crypt-door",
+          "height": 2.0,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 322
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 2.0,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 5
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "mini-dungeon",
+          "model": "banner",
+          "height": 1.7778,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 98
+        },
+        {
+          "tier": 2,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "mini-dungeon",
+          "model": "wood-support",
+          "height": 1.5165,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 129
+        }
+      ],
+      "ambience": [
+        {
+          "id": "dev21:L073:scene:0",
+          "pos": [
+            75.0,
+            4.6,
+            -35.5
+          ],
+          "radius": 4.5,
+          "height": 2.0,
+          "caption": "The scattered equipment suggests that this position once had a purpose.",
+          "sound": "pipe_clank",
+          "source": "ADAPTATION"
+        },
+        {
+          "id": "dev21:L073:scene:2",
+          "pos": [
+            89.0,
+            11.6,
+            -35.5
+          ],
+          "radius": 4.5,
+          "height": 2.0,
+          "caption": "Survey the redland approach.",
+          "sound": "pipe_clank",
+          "source": "ADAPTATION"
+        }
+      ],
+      "station_prompts": [
+        "Inspect the broken boundary standard",
+        "Check a sheltered battlement marker",
+        "Survey the redland approach"
+      ],
+      "station_reports": [
+        "The scattered equipment suggests that this position once had a purpose.",
+        "The level looks different from the next height.",
+        "A return path is now easier to distinguish from above."
+      ]
+    },
+    {
+      "id": "L077",
+      "anchor": "ShepherdNightOutlook",
+      "title": "Oh Shenandoah: mist, weathered trail markers and deserted overlook",
+      "models": [
+        {
+          "tier": 0,
+          "cell": [
+            0,
+            2
+          ],
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "height": 0.7728,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 22
+        },
+        {
+          "tier": 0,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "city-kit-roads",
+          "model": "sign-highway",
+          "height": 0.5942,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 139
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "height": 0.2999,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 215
+        },
+        {
+          "tier": 0,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "height": 0.4794,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 246
+        },
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "graveyard-kit",
+          "model": "shovel",
+          "height": 2.0,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 351
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "height": 0.4452,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 23,
+          "inspect": "The same shape emerges again from the fog at a different height.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            2
+          ],
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "height": 0.7728,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 122
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "city-kit-roads",
+          "model": "sign-highway",
+          "height": 0.5942,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 154
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "height": 0.2999,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 259
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "height": 0.2999,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 3
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "nature-kit",
+          "model": "rock-tallc",
+          "height": 1.4416,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 40
+        },
+        {
+          "tier": 1,
+          "cell": [
+            0,
+            2
+          ],
+          "pack": "nature-kit",
+          "model": "rock-tallc",
+          "height": 1.4416,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 75
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "graveyard-kit",
+          "model": "shovel",
+          "height": 2.0,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 174
+        },
+        {
+          "tier": 1,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "height": 0.4452,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 262
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            2
+          ],
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "height": 0.7728,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 305
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "height": 0.2999,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 5
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "city-kit-roads",
+          "model": "road-sign-warning",
+          "height": 2.0,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 132,
+          "inspect": "The same shape emerges again from the fog at a different height.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 1.3569,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 136
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "height": 0.4191,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 241
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "city-kit-roads",
+          "model": "road-sign-warning",
+          "height": 2.0,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 334
+        },
+        {
+          "tier": 1,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 1.3569,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 5
+        },
+        {
+          "tier": 1,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "height": 0.7728,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 122
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "city-kit-roads",
+          "model": "road-sign-warning",
+          "height": 2.0,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 134
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 1.3569,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 194
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "height": 0.4191,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 299
+        },
+        {
+          "tier": 2,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "height": 0.4794,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 352
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "city-kit-roads",
+          "model": "sign-highway",
+          "height": 0.5942,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 114
+        },
+        {
+          "tier": 2,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "height": 0.4191,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 168,
+          "inspect": "The same shape emerges again from the fog at a different height.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "graveyard-kit",
+          "model": "shovel",
+          "height": 2.0,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 222
+        },
+        {
+          "tier": 2,
+          "cell": [
+            0,
+            2
+          ],
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 1.3569,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 265
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            2
+          ],
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "height": 0.7728,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 353
+        },
+        {
+          "tier": 2,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "graveyard-kit",
+          "model": "shovel",
+          "height": 2.0,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 93
+        },
+        {
+          "tier": 2,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "nature-kit",
+          "model": "rock-tallc",
+          "height": 1.4416,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 175
+        }
+      ],
+      "ambience": [
+        {
+          "id": "dev21:L077:scene:0",
+          "pos": [
+            170.0,
+            4.6,
+            -8.5
+          ],
+          "radius": 4.5,
+          "height": 2.0,
+          "caption": "The same shape emerges again from the fog at a different height.",
+          "sound": "wind",
+          "source": "ADAPTATION"
+        },
+        {
+          "id": "dev21:L077:scene:2",
+          "pos": [
+            184.0,
+            11.6,
+            -8.5
+          ],
+          "radius": 4.5,
+          "height": 2.0,
+          "caption": "Find the return line through the haze.",
+          "sound": "wind",
+          "source": "ADAPTATION"
+        }
+      ],
+      "station_prompts": [
+        "Trace the old fogbound trail",
+        "Set a second mist landmark",
+        "Find the return line through the haze"
+      ],
+      "station_reports": [
+        "The same shape emerges again from the fog at a different height.",
+        "The level looks different from the next height.",
+        "A return path is now easier to distinguish from above."
+      ]
+    },
+    {
+      "id": "L085",
+      "anchor": "AbandonedSunsetTerraces",
+      "title": "Brilliant Evermore: immaculate interiors, false food, polluted exterior",
+      "models": [
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "furniture-kit",
+          "model": "bookcaseopen",
+          "height": 2.0,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 17
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "food-kit",
+          "model": "cup-coffee",
+          "height": 1.0361,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 155
+        },
+        {
+          "tier": 0,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "furniture-kit",
+          "model": "bookcaseopen",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 221
+        },
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            2
+          ],
+          "pack": "furniture-kit",
+          "model": "bookcaseopen",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 269
+        },
+        {
+          "tier": 0,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "furniture-kit",
+          "model": "bookcaseopen",
+          "height": 2.0,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 317
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "furniture-kit",
+          "model": "loungesofa",
+          "height": 0.7745,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 23,
+          "inspect": "Everything seems deliberately stocked, but some food is only an imitation.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "furniture-kit",
+          "model": "desk",
+          "height": 0.8636,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 139
+        },
+        {
+          "tier": 0,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "furniture-kit",
+          "model": "cardboardboxopen",
+          "height": 1.2468,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 205
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "furniture-kit",
+          "model": "radio",
+          "height": 1.1953,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 258
+        },
+        {
+          "tier": 0,
+          "cell": [
+            0,
+            2
+          ],
+          "pack": "furniture-kit",
+          "model": "cardboardboxopen",
+          "height": 1.2468,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 301
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "food-kit",
+          "model": "cup-coffee",
+          "height": 1.0361,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 41
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "food-kit",
+          "model": "plate-broken",
+          "height": 0.333,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 126
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "food-kit",
+          "model": "plate-broken",
+          "height": 0.333,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 174
+        },
+        {
+          "tier": 1,
+          "cell": [
+            2,
+            2
+          ],
+          "pack": "food-kit",
+          "model": "plate-broken",
+          "height": 0.333,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 251
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "furniture-kit",
+          "model": "books",
+          "height": 1.08,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 350
+        },
+        {
+          "tier": 1,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "food-kit",
+          "model": "plate-broken",
+          "height": 0.333,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 45
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "furniture-kit",
+          "model": "books",
+          "height": 1.08,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 65,
+          "inspect": "Everything seems deliberately stocked, but some food is only an imitation.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 1,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "furniture-kit",
+          "model": "bookcaseopen",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 186
+        },
+        {
+          "tier": 1,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "furniture-kit",
+          "model": "books",
+          "height": 1.08,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 269
+        },
+        {
+          "tier": 1,
+          "cell": [
+            2,
+            1
+          ],
+          "pack": "furniture-kit",
+          "model": "televisionmodern",
+          "height": 1.0957,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 306
+        },
+        {
+          "tier": 1,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "furniture-kit",
+          "model": "books",
+          "height": 1.08,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 5
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "furniture-kit",
+          "model": "loungesofa",
+          "height": 0.7745,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 94
+        },
+        {
+          "tier": 2,
+          "cell": [
+            2,
+            1
+          ],
+          "pack": "food-kit",
+          "model": "plate-broken",
+          "height": 0.333,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 151
+        },
+        {
+          "tier": 2,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "furniture-kit",
+          "model": "radio",
+          "height": 1.1953,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 245
+        },
+        {
+          "tier": 2,
+          "cell": [
+            2,
+            2
+          ],
+          "pack": "furniture-kit",
+          "model": "chair",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 304
+        },
+        {
+          "tier": 2,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "furniture-kit",
+          "model": "chair",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 352
+        },
+        {
+          "tier": 2,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "food-kit",
+          "model": "cup-coffee",
+          "height": 1.0361,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 97
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "food-kit",
+          "model": "cup-coffee",
+          "height": 1.0361,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 174,
+          "inspect": "Everything seems deliberately stocked, but some food is only an imitation.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "furniture-kit",
+          "model": "desk",
+          "height": 0.8636,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 189
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "furniture-kit",
+          "model": "loungesofa",
+          "height": 0.7745,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 327
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "furniture-kit",
+          "model": "bookcaseopen",
+          "height": 2.0,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 5
+        },
+        {
+          "tier": 2,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "furniture-kit",
+          "model": "radio",
+          "height": 1.1953,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 104
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "furniture-kit",
+          "model": "televisionmodern",
+          "height": 1.0957,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 146
+        }
+      ],
+      "ambience": [
+        {
+          "id": "dev21:L085:scene:0",
+          "pos": [
+            136.0,
+            4.6,
+            -47.5
+          ],
+          "radius": 4.5,
+          "height": 2.0,
+          "caption": "Everything seems deliberately stocked, but some food is only an imitation.",
+          "sound": "creak",
+          "source": "ADAPTATION"
+        },
+        {
+          "id": "dev21:L085:scene:2",
+          "pos": [
+            150.0,
+            11.6,
+            -47.5
+          ],
+          "radius": 4.5,
+          "height": 2.0,
+          "caption": "Retune the upper ventilation light.",
+          "sound": "creak",
+          "source": "ADAPTATION"
+        }
+      ],
+      "station_prompts": [
+        "Test the air-filtration indicator",
+        "Inspect the unnaturally neat storeroom",
+        "Retune the upper ventilation light"
+      ],
+      "station_reports": [
+        "Everything seems deliberately stocked, but some food is only an imitation.",
+        "The level looks different from the next height.",
+        "A return path is now easier to distinguish from above."
+      ]
+    },
+    {
+      "id": "L094",
+      "anchor": "ImpossibleTownArcades",
+      "title": "Motion: strange manufactured town and mis-scaled toy-like interiors",
+      "models": [
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "furniture-kit",
+          "model": "books",
+          "height": 1.08,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 73
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "mini-dungeon",
+          "model": "column",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 99
+        },
+        {
+          "tier": 0,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "city-kit-suburban",
+          "model": "planter",
+          "height": 0.7425,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 221
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "prototype-kit",
+          "model": "crate",
+          "height": 1.65,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 263
+        },
+        {
+          "tier": 0,
+          "cell": [
+            0,
+            2
+          ],
+          "pack": "furniture-kit",
+          "model": "chair",
+          "height": 2.0,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 306
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            2
+          ],
+          "pack": "city-kit-suburban",
+          "model": "planter",
+          "height": 0.7425,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 34,
+          "inspect": "The object is familiar, but its proportions seem oddly deliberate.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "furniture-kit",
+          "model": "chairrounded",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 133
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "furniture-kit",
+          "model": "chairrounded",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 154
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "city-kit-suburban",
+          "model": "planter",
+          "height": 0.7425,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 292
+        },
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            1
+          ],
+          "pack": "mini-dungeon",
+          "model": "column",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 324
+        },
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            2
+          ],
+          "pack": "furniture-kit",
+          "model": "chair",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 46
+        },
+        {
+          "tier": 1,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "prototype-kit",
+          "model": "crate",
+          "height": 1.65,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 86
+        },
+        {
+          "tier": 1,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "prototype-kit",
+          "model": "crate",
+          "height": 1.65,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 192
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "furniture-kit",
+          "model": "plantsmall1",
+          "height": 1.08,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 245
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "prototype-kit",
+          "model": "crate",
+          "height": 1.65,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 317
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "furniture-kit",
+          "model": "table",
+          "height": 0.6407,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 50
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "furniture-kit",
+          "model": "books",
+          "height": 1.08,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 65,
+          "inspect": "The object is familiar, but its proportions seem oddly deliberate.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 1,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "prototype-kit",
+          "model": "crate",
+          "height": 1.65,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 186
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            2
+          ],
+          "pack": "furniture-kit",
+          "model": "chair",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 229
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "furniture-kit",
+          "model": "plantsmall1",
+          "height": 1.08,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 345
+        },
+        {
+          "tier": 1,
+          "cell": [
+            0,
+            2
+          ],
+          "pack": "furniture-kit",
+          "model": "chair",
+          "height": 2.0,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 354
+        },
+        {
+          "tier": 1,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "mini-dungeon",
+          "model": "column",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 122
+        },
+        {
+          "tier": 2,
+          "cell": [
+            0,
+            2
+          ],
+          "pack": "mini-dungeon",
+          "model": "column",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 128
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            2
+          ],
+          "pack": "furniture-kit",
+          "model": "chairrounded",
+          "height": 2.0,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 216
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "city-kit-suburban",
+          "model": "planter",
+          "height": 0.7425,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 298
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "food-kit",
+          "model": "cup",
+          "height": 1.1297,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 32
+        },
+        {
+          "tier": 2,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "furniture-kit",
+          "model": "ruground",
+          "height": 0.3228,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 97
+        },
+        {
+          "tier": 2,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "prototype-kit",
+          "model": "crate",
+          "height": 1.65,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 134,
+          "inspect": "The object is familiar, but its proportions seem oddly deliberate.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "furniture-kit",
+          "model": "books",
+          "height": 1.08,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 223
+        },
+        {
+          "tier": 2,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "food-kit",
+          "model": "cup",
+          "height": 1.1297,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 311
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "furniture-kit",
+          "model": "chair",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 331
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "prototype-kit",
+          "model": "crate",
+          "height": 1.65,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 53
+        },
+        {
+          "tier": 2,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "furniture-kit",
+          "model": "table",
+          "height": 0.6407,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 175
+        }
+      ],
+      "ambience": [
+        {
+          "id": "dev21:L094:scene:0",
+          "pos": [
+            113.0,
+            4.6,
+            63.5
+          ],
+          "radius": 4.5,
+          "height": 2.0,
+          "caption": "The object is familiar, but its proportions seem oddly deliberate.",
+          "sound": "knock",
+          "source": "ADAPTATION"
+        },
+        {
+          "id": "dev21:L094:scene:2",
+          "pos": [
+            127.0,
+            11.6,
+            63.5
+          ],
+          "radius": 4.5,
+          "height": 2.0,
+          "caption": "Align the rooftop perspective.",
+          "sound": "knock",
+          "source": "ADAPTATION"
+        }
+      ],
+      "station_prompts": [
+        "Examine a strangely scaled fixture",
+        "Trace the repeating painted motif",
+        "Align the rooftop perspective"
+      ],
+      "station_reports": [
+        "The object is familiar, but its proportions seem oddly deliberate.",
+        "The level looks different from the next height.",
+        "A return path is now easier to distinguish from above."
+      ]
+    },
+    {
+      "id": "L108",
+      "anchor": "CraterwoodCanopyCircuit",
+      "title": "Fertile Grounds: Craterwood debris, ancient stone and uncanny growth",
+      "models": [
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "height": 0.6031,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 84
+        },
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            1
+          ],
+          "pack": "nature-kit",
+          "model": "cliff-half-rock",
+          "height": 0.42,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 116
+        },
+        {
+          "tier": 0,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "height": 0.4452,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 210
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "height": 0.6031,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 230
+        },
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "nature-kit",
+          "model": "rock-talle",
+          "height": 0.7077,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 351
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "height": 0.4452,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 23,
+          "inspect": "The growth patterns give an impression of a path that was never built.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "nature-kit",
+          "model": "rock-talle",
+          "height": 0.7077,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 116
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "graveyard-kit",
+          "model": "stone-wall-damaged",
+          "height": 0.609,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 210
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "height": 0.2999,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 259
+        },
+        {
+          "tier": 0,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "height": 0.4452,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 358
+        },
+        {
+          "tier": 0,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "graveyard-kit",
+          "model": "stone-wall-damaged",
+          "height": 0.609,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 23
+        },
+        {
+          "tier": 1,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "nature-kit",
+          "model": "cliff-rock",
+          "height": 0.84,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 121
+        },
+        {
+          "tier": 1,
+          "cell": [
+            0,
+            2
+          ],
+          "pack": "nature-kit",
+          "model": "rock-tallc",
+          "height": 1.4416,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 146
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "graveyard-kit",
+          "model": "stone-wall-damaged",
+          "height": 0.609,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 268
+        },
+        {
+          "tier": 1,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "nature-kit",
+          "model": "rock-talle",
+          "height": 0.7077,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 299
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "height": 0.2999,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 61
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "height": 0.6031,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 76,
+          "inspect": "The growth patterns give an impression of a path that was never built.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "nature-kit",
+          "model": "cliff-rock",
+          "height": 0.84,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 136
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "nature-kit",
+          "model": "cliff-half-rock",
+          "height": 0.42,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 241
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            2
+          ],
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "height": 0.4191,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 300
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "height": 0.6031,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 22
+        },
+        {
+          "tier": 1,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "nature-kit",
+          "model": "cliff-half-rock",
+          "height": 0.42,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 110
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 1.3569,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 157
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 1.3569,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 261
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "nature-kit",
+          "model": "cliff-rock",
+          "height": 0.84,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 298
+        },
+        {
+          "tier": 2,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "height": 0.2999,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 38
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "height": 1.3569,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 103
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            2
+          ],
+          "pack": "nature-kit",
+          "model": "cliff-rock",
+          "height": 0.84,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 140,
+          "inspect": "The growth patterns give an impression of a path that was never built.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 2,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "height": 0.6031,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 205
+        },
+        {
+          "tier": 2,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "height": 0.6031,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 311
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "nature-kit",
+          "model": "cliff-rock",
+          "height": 0.84,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 342
+        },
+        {
+          "tier": 2,
+          "cell": [
+            0,
+            2
+          ],
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "height": 0.6031,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 47
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "nature-kit",
+          "model": "rock-tallc",
+          "height": 1.4416,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 113
+        }
+      ],
+      "ambience": [
+        {
+          "id": "dev21:L108:scene:0",
+          "pos": [
+            151.0,
+            4.6,
+            75.5
+          ],
+          "radius": 4.5,
+          "height": 2.0,
+          "caption": "The growth patterns give an impression of a path that was never built.",
+          "sound": "scratch",
+          "source": "ADAPTATION"
+        },
+        {
+          "id": "dev21:L108:scene:2",
+          "pos": [
+            165.0,
+            11.6,
+            75.5
+          ],
+          "radius": 4.5,
+          "height": 2.0,
+          "caption": "Find the higher forest boundary.",
+          "sound": "scratch",
+          "source": "ADAPTATION"
+        }
+      ],
+      "station_prompts": [
+        "Read the growth-ring marker",
+        "Observe the fractured canopy",
+        "Find the higher forest boundary"
+      ],
+      "station_reports": [
+        "The growth patterns give an impression of a path that was never built.",
+        "The level looks different from the next height.",
+        "A return path is now easier to distinguish from above."
+      ]
+    },
+    {
+      "id": "L320",
+      "anchor": "SilentRideWestTransit",
+      "title": "Entertainland: abandoned attraction equipment, stalls and concessions",
+      "models": [
+        {
+          "tier": 0,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "food-kit",
+          "model": "soda-bottle",
+          "height": 2.0,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 68
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "furniture-kit",
+          "model": "table",
+          "height": 0.3262,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 122
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "furniture-kit",
+          "model": "chair",
+          "height": 1.974,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 159
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "furniture-kit",
+          "model": "chair",
+          "height": 1.974,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 286
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "furniture-kit",
+          "model": "chair",
+          "height": 1.974,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 334
+        },
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "furniture-kit",
+          "model": "table",
+          "height": 0.3262,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 62,
+          "inspect": "An attraction seems ready to reopen, but no operator is present.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "food-kit",
+          "model": "pizza-box",
+          "height": 0.7781,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 94
+        },
+        {
+          "tier": 0,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "prototype-kit",
+          "model": "crate",
+          "height": 0.84,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 170
+        },
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            1
+          ],
+          "pack": "furniture-kit",
+          "model": "chair",
+          "height": 1.974,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 253
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            2
+          ],
+          "pack": "food-kit",
+          "model": "soda-can-crushed",
+          "height": 0.6139,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 318
+        },
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            2
+          ],
+          "pack": "furniture-kit",
+          "model": "trashcan",
+          "height": 1.5351,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 46
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            2
+          ],
+          "pack": "city-kit-roads",
+          "model": "construction-light",
+          "height": 1.4025,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 92
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "food-kit",
+          "model": "pizza-box",
+          "height": 0.7781,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 152
+        },
+        {
+          "tier": 1,
+          "cell": [
+            2,
+            2
+          ],
+          "pack": "food-kit",
+          "model": "soda-can-crushed",
+          "height": 0.6139,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 251
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "prototype-kit",
+          "model": "lever-double",
+          "height": 0.63,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 283
+        },
+        {
+          "tier": 1,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "furniture-kit",
+          "model": "trashcan",
+          "height": 1.5351,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 56
+        },
+        {
+          "tier": 1,
+          "cell": [
+            2,
+            1
+          ],
+          "pack": "food-kit",
+          "model": "soda-can-crushed",
+          "height": 0.6139,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 93,
+          "inspect": "An attraction seems ready to reopen, but no operator is present.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "food-kit",
+          "model": "soda-can-crushed",
+          "height": 0.6139,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 170
+        },
+        {
+          "tier": 1,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "prototype-kit",
+          "model": "lever-double",
+          "height": 0.63,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 223
+        },
+        {
+          "tier": 1,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "furniture-kit",
+          "model": "chair",
+          "height": 1.974,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 328
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "furniture-kit",
+          "model": "table",
+          "height": 0.3262,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 56
+        },
+        {
+          "tier": 1,
+          "cell": [
+            0,
+            2
+          ],
+          "pack": "prototype-kit",
+          "model": "lever-double",
+          "height": 0.63,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 65
+        },
+        {
+          "tier": 2,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "furniture-kit",
+          "model": "table",
+          "height": 0.3262,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 174
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "city-kit-roads",
+          "model": "construction-light",
+          "height": 1.4025,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 194
+        },
+        {
+          "tier": 2,
+          "cell": [
+            2,
+            2
+          ],
+          "pack": "food-kit",
+          "model": "pizza-box",
+          "height": 0.7781,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 304
+        },
+        {
+          "tier": 2,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "furniture-kit",
+          "model": "chair",
+          "height": 1.974,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 26
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "height": 1.08,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 80
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "prototype-kit",
+          "model": "lever-double",
+          "height": 0.63,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 152,
+          "inspect": "An attraction seems ready to reopen, but no operator is present.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            2
+          ],
+          "pack": "city-kit-roads",
+          "model": "construction-light",
+          "height": 1.4025,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 211
+        },
+        {
+          "tier": 2,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "food-kit",
+          "model": "soda-can-crushed",
+          "height": 0.6139,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 322
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "food-kit",
+          "model": "pizza-box",
+          "height": 0.7781,
+          "offset": [
+            -2.04,
+            2.04
+          ],
+          "yaw": 38
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "city-kit-roads",
+          "model": "construction-light",
+          "height": 1.4025,
+          "offset": [
+            2.04,
+            -2.04
+          ],
+          "yaw": 53
+        },
+        {
+          "tier": 2,
+          "cell": [
+            2,
+            1
+          ],
+          "pack": "prototype-kit",
+          "model": "crate",
+          "height": 0.84,
+          "offset": [
+            2.04,
+            2.04
+          ],
+          "yaw": 141
+        }
+      ],
+      "ambience": [
+        {
+          "id": "dev21:L320:scene:0",
+          "pos": [
+            -17.0,
+            4.6,
+            -46.5
+          ],
+          "radius": 4.5,
+          "height": 2.0,
+          "caption": "An attraction seems ready to reopen, but no operator is present.",
+          "sound": "creak",
+          "source": "ADAPTATION"
+        },
+        {
+          "id": "dev21:L320:scene:2",
+          "pos": [
+            -3.0,
+            11.6,
+            -46.5
+          ],
+          "radius": 4.5,
+          "height": 2.0,
+          "caption": "Trace the park overview route.",
+          "sound": "creak",
+          "source": "ADAPTATION"
+        }
+      ],
+      "station_prompts": [
+        "Inspect a deserted attraction panel",
+        "Test the silent sign lights",
+        "Trace the park overview route"
+      ],
+      "station_reports": [
+        "An attraction seems ready to reopen, but no operator is present.",
+        "The level looks different from the next height.",
+        "A return path is now easier to distinguish from above."
+      ]
+    },
+    {
+      "id": "L808",
+      "anchor": "NeonOuterCityOverpass",
+      "title": "Synthwave World: luminous utility equipment and polygonal city remnants",
+      "models": [
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "space-kit",
+          "model": "machine-generatorlarge",
+          "height": 0.8669,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 17
+        },
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            2
+          ],
+          "pack": "space-kit",
+          "model": "barrel",
+          "height": 1.5,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 127
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "space-kit",
+          "model": "machine-wireless",
+          "height": 1.32,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 193
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            1
+          ],
+          "pack": "space-kit",
+          "model": "machine-wireless",
+          "height": 1.32,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 241
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "space-kit",
+          "model": "desk-chair",
+          "height": 1.7625,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 357
+        },
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "space-kit",
+          "model": "machine-wireless",
+          "height": 1.32,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 62,
+          "inspect": "A soft electrical pulse crosses the surface without an obvious source.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 0,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "prototype-kit",
+          "model": "lever-single",
+          "height": 1.485,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 134
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            2
+          ],
+          "pack": "city-kit-roads",
+          "model": "light-square",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 176
+        },
+        {
+          "tier": 0,
+          "cell": [
+            2,
+            1
+          ],
+          "pack": "city-kit-roads",
+          "model": "light-square",
+          "height": 2.0,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 253
+        },
+        {
+          "tier": 0,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "space-kit",
+          "model": "desk-computer",
+          "height": 1.1786,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 329
+        },
+        {
+          "tier": 0,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "city-kit-roads",
+          "model": "light-square",
+          "height": 2.0,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 74
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "space-kit",
+          "model": "desk-chair",
+          "height": 1.7625,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 103
+        },
+        {
+          "tier": 1,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "city-kit-roads",
+          "model": "light-square",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 157
+        },
+        {
+          "tier": 1,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "space-kit",
+          "model": "machine-wireless",
+          "height": 1.32,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 274
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "space-kit",
+          "model": "pipe-open",
+          "height": 0.99,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 350
+        },
+        {
+          "tier": 1,
+          "cell": [
+            0,
+            2
+          ],
+          "pack": "city-kit-roads",
+          "model": "light-square",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 359
+        },
+        {
+          "tier": 1,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "space-kit",
+          "model": "pipe-open",
+          "height": 0.99,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 115,
+          "inspect": "A soft electrical pulse crosses the surface without an obvious source.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "space-kit",
+          "model": "pipe-open",
+          "height": 0.99,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 192
+        },
+        {
+          "tier": 1,
+          "cell": [
+            2,
+            1
+          ],
+          "pack": "space-kit",
+          "model": "satellitedish",
+          "height": 1.4776,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 235
+        },
+        {
+          "tier": 1,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "city-kit-roads",
+          "model": "light-square",
+          "height": 2.0,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 278
+        },
+        {
+          "tier": 1,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "space-kit",
+          "model": "machine-generatorlarge",
+          "height": 0.8669,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 40
+        },
+        {
+          "tier": 1,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "space-kit",
+          "model": "barrel",
+          "height": 1.5,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 94
+        },
+        {
+          "tier": 2,
+          "cell": [
+            2,
+            3
+          ],
+          "pack": "space-kit",
+          "model": "pipe-open",
+          "height": 0.99,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 173
+        },
+        {
+          "tier": 2,
+          "cell": [
+            0,
+            2
+          ],
+          "pack": "space-kit",
+          "model": "desk-computerscreen",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 199
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            0
+          ],
+          "pack": "space-kit",
+          "model": "machine-wireless",
+          "height": 1.32,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 299
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            3
+          ],
+          "pack": "space-kit",
+          "model": "machine-wireless",
+          "height": 1.32,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 43
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            3
+          ],
+          "pack": "city-kit-roads",
+          "model": "light-square",
+          "height": 2.0,
+          "offset": [
+            -2.42,
+            2.42
+          ],
+          "yaw": 80
+        },
+        {
+          "tier": 2,
+          "cell": [
+            4,
+            1
+          ],
+          "pack": "space-kit",
+          "model": "desk-chair",
+          "height": 1.7625,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 180,
+          "inspect": "A soft electrical pulse crosses the surface without an obvious source.",
+          "prompt": "Inspect the unusual object"
+        },
+        {
+          "tier": 2,
+          "cell": [
+            0,
+            3
+          ],
+          "pack": "city-kit-roads",
+          "model": "light-square",
+          "height": 2.0,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 205
+        },
+        {
+          "tier": 2,
+          "cell": [
+            2,
+            1
+          ],
+          "pack": "prototype-kit",
+          "model": "lever-single",
+          "height": 1.485,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 288
+        },
+        {
+          "tier": 2,
+          "cell": [
+            4,
+            0
+          ],
+          "pack": "space-kit",
+          "model": "desk-chair",
+          "height": 1.7625,
+          "offset": [
+            2.42,
+            2.42
+          ],
+          "yaw": 22
+        },
+        {
+          "tier": 2,
+          "cell": [
+            1,
+            0
+          ],
+          "pack": "space-kit",
+          "model": "barrel",
+          "height": 1.5,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 42
+        },
+        {
+          "tier": 2,
+          "cell": [
+            3,
+            2
+          ],
+          "pack": "space-kit",
+          "model": "machine-generatorlarge",
+          "height": 0.8669,
+          "offset": [
+            2.42,
+            -2.42
+          ],
+          "yaw": 169
+        }
+      ],
+      "ambience": [
+        {
+          "id": "dev21:L808:scene:0",
+          "pos": [
+            91.0,
+            4.6,
+            -62.5
+          ],
+          "radius": 4.5,
+          "height": 2.0,
+          "caption": "A soft electrical pulse crosses the surface without an obvious source.",
+          "sound": "pipe_clank",
+          "source": "ADAPTATION"
+        },
+        {
+          "id": "dev21:L808:scene:2",
+          "pos": [
+            105.0,
+            11.6,
+            -62.5
+          ],
+          "radius": 4.5,
+          "height": 2.0,
+          "caption": "Synchronize the highest light marker.",
+          "sound": "pipe_clank",
+          "source": "ADAPTATION"
+        }
+      ],
+      "station_prompts": [
+        "Tune a neon wayfinding signal",
+        "Inspect the geometric pulse",
+        "Synchronize the highest light marker"
+      ],
+      "station_reports": [
+        "A soft electrical pulse crosses the surface without an obvious source.",
+        "The level looks different from the next height.",
+        "A return path is now easier to distinguish from above."
+      ]
+    }
+  ]
+}

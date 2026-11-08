@@ -1,0 +1,30 @@
+{
+  "stable_id": "L263",
+  "scene": "res://levels/L263/L263.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "Pink repetition: long corridor with static window cells",
+  "mechanics": [
+    "pink_hallway",
+    "static_windows",
+    "nonhostile_presence"
+  ],
+  "exits": [
+    {
+      "id": "L263>EXT#1",
+      "to": "EXT",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Turn around",
+      "source_quote": "can easily be exited by simply turning around",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-263",
+      "trigger_type": "walk_in"
+    }
+  ],
+  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Pink (nonhostile level consciousness)"
+}

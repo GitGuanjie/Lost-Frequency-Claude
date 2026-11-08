@@ -499,6 +499,8 @@ func _structs(meta: Dictionary, node: Node3D, hi: bool) -> void:
 			var b := B.new(kit, p["frame"], r)
 			if hi:
 				var info: Dictionary = b.build(p["kind"], red)
+				if p["home"] and p["kind"] == "barn":
+					b.watchtower()
 				info["kind"] = p["kind"]
 				info["home"] = p["home"]
 				info["frame"] = p["frame"]

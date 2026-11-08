@@ -1,0 +1,71 @@
+{
+  "stable_id": "L737",
+  "scene": "res://levels/L737/L737.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "Dune Eternal: sun-struck ruins and monumental pyramid",
+  "mechanics": [
+    "gold_dust",
+    "extreme_heat",
+    "pyramid",
+    "known_path_to_L998"
+  ],
+  "exits": [
+    {
+      "id": "L737>L046#1",
+      "to": "L046",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Listed extraction",
+      "source_quote": "Level 46 & Level 169",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-737",
+      "trigger_type": "unknown"
+    },
+    {
+      "id": "L737>L169#2",
+      "to": "L169",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Fireteam Midas extraction, then memory erasure",
+      "source_quote": "execute an extraction to Level 169",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-737",
+      "trigger_type": "unknown"
+    },
+    {
+      "id": "L737>L739#3",
+      "to": "L739",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Listed extraction",
+      "source_quote": "Level 739",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-737",
+      "trigger_type": "unknown"
+    },
+    {
+      "id": "L737>L998#4",
+      "to": "L998",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Listed extraction",
+      "source_quote": "Level 998",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-737",
+      "trigger_type": "unknown"
+    },
+    {
+      "id": "L737>EXT#5",
+      "to": "EXT",
+      "basis": "SOURCE",
+      "confidence": "RUMORED",
+      "method": "Emergency phone number",
+      "source_quote": "an emergency phone number, respectively",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-737",
+      "trigger_type": "item"
+    }
+  ],
+  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Entity 737/1 (static) and human Repository personnel"
+}

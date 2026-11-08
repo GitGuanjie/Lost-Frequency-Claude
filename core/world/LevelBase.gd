@@ -49,9 +49,16 @@ func _ready() -> void:
 	sound.name = "Soundscape"
 	add_child(sound)
 	build()
+	_register_provisional_arrivals()
 	build_ms = Time.get_ticks_msec() - t0
 	Settings.set_reverb(rules["reverb_room"], rules["reverb_wet"])
 	_spawn_player()
+	# Data-driven, non-intrusive ambience, registered only for curated levels.
+	# No canonical exit/level data is changed by these optional cues.
+	_install_ambient_discoveries()
+	_install_dev26_curated_atmospheres()
+	_install_dev27_field_sectors()
+	_install_dev28_story_rooms()
 	# let physics register the static world before validating the spawn
 	await get_tree().physics_frame
 	await get_tree().physics_frame
@@ -65,6 +72,100 @@ func _ready() -> void:
 		Overlay.level_title(LevelRegistry.display_name(stable_id), str(e.get("survival_class", "")))
 	TransitionService.notify_level_ready(stable_id)
 
+
+func _install_ambient_discoveries() -> void:
+	var path := "res://data/dev18_ambient_discoveries.json"
+	if not FileAccess.file_exists(path):
+		return
+	var data: Variant = JSON.parse_string(FileAccess.get_file_as_string(path))
+	if not data is Dictionary:
+		push_warning("Ambient discoveries: malformed JSON")
+		return
+	var levels: Dictionary = data.get("levels", {})
+	if not levels.has(stable_id):
+		return
+	var ambience := preload("res://core/world/AmbientDiscovery.gd").new()
+	ambience.name = "AmbientDiscoveries"
+	add_child(ambience)
+	ambience.setup(self, levels[stable_id])
+
+
+
+## DEV26: sourced, sparse micro-scenes with independent interactive states. The
+## array is inspected only once on level load, never per-frame or per-chunk.
+func _install_dev26_curated_atmospheres() -> void:
+	var path := "res://data/dev26_curated_vignettes.json"
+	if not FileAccess.file_exists(path):
+		return
+	var data: Variant = JSON.parse_string(FileAccess.get_file_as_string(path))
+	if not data is Dictionary:
+		push_warning("DEV26 curated content malformed")
+		return
+	for rec in data.get("sites", []):
+		if str(rec.get("id", "")) != stable_id:
+			continue
+		var director := preload("res://core/world/CuratedAtmospheres26.gd").new()
+		director.name = "DEV26_CuratedAtmospheres"
+		add_child(director)
+		director.setup(self, rec)
+		return
+
+## DEV27: optional physical field sectors restricted to eight open-space levels.
+## Their locations, imported props, route topology and story cues are audited
+## together. They do not alter the source-locked exit or arrival registry.
+func _install_dev27_field_sectors() -> void:
+	var path := "res://data/dev27_field_sectors.json"
+	if not FileAccess.file_exists(path):
+		return
+	var data: Variant = JSON.parse_string(FileAccess.get_file_as_string(path))
+	if not data is Dictionary:
+		push_warning("DEV27 field sector data malformed")
+		return
+	for site in data.get("sites", []):
+		if str(site.get("id", "")) != stable_id:
+			continue
+		var sector := preload("res://core/world/FieldSectors27.gd").new()
+		sector.name = "DEV27_FieldSector"
+		add_child(sector)
+		sector.setup(self, site)
+		return
+
+## DEV28: varied authored investigation points in existing, traversable spaces.
+## No canonical exits or arrival spawn points are touched.
+func _install_dev28_story_rooms() -> void:
+    const PATH = "res://data/dev28_story_rooms.json"
+    if not FileAccess.file_exists(PATH):
+        return
+    var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(PATH))
+    if not (parsed is Dictionary):
+        push_warning("DEV28 story-room data malformed")
+        return
+    for entry in parsed.get("sites", []):
+        if str(entry.get("id", "")) != stable_id:
+            continue
+        var story := preload("res://core/world/StoryRooms28.gd").new()
+        story.name = "DEV28_InteractiveStoryRooms"
+        add_child(story)
+        story.setup(self, entry)
+        return
+
+## Source-defined inbound edges without a hand-authored arrival receive an explicit
+## start-position alias. The alias is recorded in the manifest and QA; it is NOT
+## represented as a dedicated, fully designed entrance. Never overwrite a real arrival.
+func _register_provisional_arrivals() -> void:
+	var explicit_aliases: Array = manifest.get("arrival_aliases", [])
+	if explicit_aliases.is_empty():
+		return
+	if not arrivals.has("start"):
+		push_error("%s cannot create arrival aliases without a safe start position" % stable_id)
+		return
+	for raw_tag in explicit_aliases:
+		var tag := str(raw_tag)
+		if not tag.begins_with("from_"):
+			push_warning("%s ignores invalid arrival alias %s" % [stable_id, tag])
+			continue
+		if not arrivals.has(tag):
+			arrivals[tag] = arrivals["start"]
 
 ## Override: create geometry, lights, audio, exits, arrivals, notes.
 func build() -> void:
@@ -177,7 +278,8 @@ func _spawn_player() -> void:
 	player.apply_rules(rules)
 	var tag := TransitionService.pending_arrival
 	var xf: Transform3D = arrivals.get(tag, arrivals.get("start", Transform3D(Basis(), Vector3(0, 0.1, 0))))
-	spawn_report = {"requested_arrival": tag, "used_arrival": tag if arrivals.has(tag) else "start"}
+	spawn_report = {"requested_arrival": tag, "used_arrival": tag if arrivals.has(tag) else "start",
+		"provisional_start_alias": tag in manifest.get("arrival_aliases", [])}
 	var cp: Dictionary = TransitionService.pending_restore
 	if cp.get("level", "") == stable_id and cp.get("pos") is Array and (cp["pos"] as Array).size() == 3:
 		var p: Array = cp["pos"]
@@ -279,8 +381,14 @@ func add_note(id: String, title: String, text: String, center: Vector3, size: Ve
 
 
 func add_interactable(center: Vector3, size: Vector3, prompt: String, cb: Callable) -> Interactable:
+	return make_interactable(center, size, prompt, cb, self)
+
+
+## DEV18: the interaction is owned by its streamed geometry. Unloading or
+## rebuilding a chunk frees its collider and callback; no ghost prompts remain.
+func make_interactable(center: Vector3, size: Vector3, prompt: String, cb: Callable, owner: Node) -> Interactable:
 	var it := Interactable.new()
-	add_child(it)
+	owner.add_child(it)
 	it.setup(center, size, prompt, cb)
 	return it
 

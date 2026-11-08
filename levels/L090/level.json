@@ -1,0 +1,36 @@
+{
+  "stable_id": "L090",
+  "scene": "res://levels/L090/L090.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "UNVERIFIED Godot import, walker, GPU capture and human review pending",
+  "procedural": false,
+  "arrivals": [
+    "start",
+    "from_L025"
+  ],
+  "signature": "A renovated but unreliable two-floor family house with an attic, broken AC and an ancient oak in the backyard.",
+  "mechanics": [
+    "two_storey_house",
+    "attic",
+    "old_oak_exit",
+    "unreliable_real_estate_voice",
+    "broken_ac"
+  ],
+  "exits": [
+    {
+      "id": "L090>EXT#1",
+      "to": "EXT",
+      "trigger": "walk_in",
+      "label": "Exit by old oak tree; destination unstated",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "source_section": "Dated canonical snapshot; exits",
+      "source_quote": "Exit near the old oak tree in the backyard",
+      "arrival": "",
+      "hint": "Exit by old oak tree; destination unstated",
+      "to_label": "Unnumbered exit by the backyard oak"
+    }
+  ],
+  "entity_policy": "Death Rats unverified, no new entity spawned",
+  "notes": "ADAPTATION: finite house footprint and hand-placed furnishings. Do not imply the alleged Death Rats are confirmed; exit destination kept unknown. Canon: docs/canon/levels/L090.md; authors credited there under CC BY-SA 3.0. Not yet PLAYABLE."
+}

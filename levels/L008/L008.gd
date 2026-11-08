@@ -18,6 +18,7 @@ extends LevelBase
 
 const Cave := preload("res://levels/L008/CaveGeo.gd")
 const Lay := preload("res://levels/L008/CaveBuild.gd")
+const Ecologies := preload("res://levels/L008/CaveEcologies.gd")
 const CS := Lay.CS
 const GLOW := Color(0.55, 0.95, 0.78)
 
@@ -45,6 +46,7 @@ var tremor_t := 90.0
 var _shake := 0.0
 var _said: Dictionary = {}
 var _rush: AudioStreamPlayer3D
+var _surveyed: Dictionary = {}
 
 
 func build() -> void:
@@ -89,6 +91,13 @@ func build() -> void:
 	add_landmark("Breakdown chamber", Lay.BREAK)
 	add_landmark("Road shaft (ladder)", Lay.SHAFT)
 	add_landmark("Road end", Lay.EXIT)
+	add_landmark("Deep quarry side circuit", Vector3(90, -10, 26))
+	add_landmark("Upper calcite circuit", Vector3(307, 11, 58))
+	add_landmark("DEV19 phreatic light thread", Vector3(60, 0, 16))
+	add_landmark("DEV19 upper rock shear", Vector3(174, 6, -60))
+	add_landmark("DEV19 high calcite return", Vector3(273, 2, 75))
+	add_shot("dev17_deep_cave", Vector3(89, -8, 23), Vector3(74, -8, 28))
+	add_shot("dev17_high_cave", Vector3(307, 12.6, 58), Vector3(321, 10, 63))
 
 
 # ------------------------------------------------------------------ chunks
@@ -181,8 +190,72 @@ func _build_chunk(cx: int, cz: int, version: int, node: Node3D) -> Dictionary:
 				wv.tint = Color(0.16, 0.22, 0.2)
 				floods[key] = {"wv": wv, "lo": c.y - 0.9, "hi": c.y + rad.y * 1.25, "t": r.randf_range(20.0, 60.0), "ph": 0}
 	k.add_box_shape(Transform3D(Basis(), Vector3(ox + 2.0 + r.randf() * 26.0, -70.0, oz + 2.0 + r.randf() * 26.0)), Vector3(0.5, 0.5, 0.5), "concrete")
+	_branch_discoveries(node, k, cx, cz, meta)
 	k.commit()
 	return meta
+
+
+## Naturally occurring formations are placed at actual floor nodes of the
+## DEV17 SDF cave braids (not at arbitrary coordinates inside rock). A player
+## may expose a dim luminescent seam and gain a real spatial reference point.
+## These remain environmental adaptations, never new canonical settlements.
+func _branch_discoveries(owner: Node3D, k: GeoKit, cx: int, cz: int, meta: Dictionary) -> void:
+	var sites := [
+		["fissure", Vector3(56.0, 7.0, -20.0), "A thread of light catches in the calcite above the fissure."],
+		["quarry", Vector3(74.0, -8.0, 28.0), "Under the dust, the wall glimmers over the drowned quarry."],
+		["overlook", Vector3(128.0, 2.0, -28.0), "A pale line in the upper gallery leads back toward the road."],
+	]
+	for item in sites:
+		var at: Vector3 = item[1]
+		if floori(at.x / CS) != cx or floori(at.z / CS) != cz:
+			continue
+		var name: String = item[0]
+		var tip: String = item[2]
+		var p := at + Vector3(0.0, 1.2, 0.0)
+		k.box(p, Vector3(0.24, 1.15, 0.12), "l8_flowstone", GeoKit.ALL, false)
+		var glow := OmniLight3D.new()
+		glow.name = "CaveReflection_" + name
+		glow.position = p + Vector3(0.0, 0.1, 0.0)
+		glow.light_color = Color(0.35, 0.72, 0.65)
+		glow.omni_range = 8.0
+		glow.light_energy = 0.08
+		owner.add_child(glow)
+		var activated: bool = bool(_surveyed.get(name, false))
+		glow.light_energy = 1.25 if activated else 0.08
+		make_interactable(p, Vector3(1.5, 1.6, 1.5), "Study the cave formation (do not touch)", func(_who):
+			_surveyed[name] = true
+			SaveService.record_discovery(stable_id, "geology:" + name, tip)
+			glow.light_energy = 1.25
+			Overlay.subtitle(tip, 4.5)
+			Overlay.toast("Cave survey: %d of 3 formations observed" % (int(_surveyed.has("fissure")) + int(_surveyed.has("quarry")) + int(_surveyed.has("overlook"))), 3.0), owner)
+		meta["dev18_formation"] = name
+	# Each observation is placed at a node that is ALSO in the SDF route JSON;
+	# the physical tunnel is carved before these decorations are instantiated.
+	for site in Ecologies.observation_sites():
+		var at: Vector3 = site["at"]
+		if floori(at.x / CS) != cx or floori(at.z / CS) != cz:
+			continue
+		var id: String = site["id"]
+		var msg: String = site["text"]
+		var center := at + Vector3.UP * 1.3
+		for offset in [-0.42, 0.42]:
+			k.box(center + Vector3(offset, -0.3, 1.4), Vector3(0.18, 0.9, 0.22), "l8_flowstone", GeoKit.ALL, false)
+		var light := OmniLight3D.new()
+		light.name = "EcologyGlow_" + id
+		light.position = center + Vector3(0.0, 0.35, 1.3)
+		light.light_color = Color(0.46, 0.79, 0.71)
+		light.omni_range = 8.0
+		light.light_energy = 0.20
+		owner.add_child(light)
+		make_interactable(center, Vector3(2.6, 2.2, 2.6), "Observe the cave junction", func(_who):
+			SaveService.record_discovery(stable_id, "ecology:" + id, msg, "ADAPTATION")
+			Overlay.subtitle(msg, 4.8)
+			var tw := owner.create_tween()
+			tw.tween_property(light, "light_energy", 2.1, 1.0)
+			tw.tween_interval(2.5)
+			tw.tween_property(light, "light_energy", 0.2, 3.0)
+			sound.play_at("wind", {"seconds": 2.5}, center, -24.0), owner)
+		meta["dev19_observation"] = id
 
 
 func _on_unload(k: Vector2i) -> void:
@@ -273,6 +346,19 @@ func _set_pieces() -> void:
 		var lab := _label_local(holder, Vector3(0.07, 0.0, -0.02), "9TH ROAD\nMARKER #%d" % n, 0.0016)
 		var li := lights.add_anchor(base + Vector3(0, 1.5, 0) - d * 0.6, GLOW, 0.7, 5.5, 0.0, "marker")
 		markers.append({"num": n, "pos": base, "label": lab, "holder": holder, "light": li, "cond": 1.0, "seen": false, "reached": false})
+		var marker_n := n
+		var marker_at := base
+		add_interactable(base + Vector3(0, 1.35, 0), Vector3(1.1, 1.0, 1.1),
+			"Inspect 9th Road marker", func(_who):
+				var path_length := 0.0
+				for segment in Lay.ROAD.size() - 1:
+					path_length += (Lay.ROAD[segment + 1][0] - Lay.ROAD[segment][0]).length()
+				var distance_left := maxi(0, roundi(path_length - (12.0 + 50.0 * float(marker_n - 1))))
+				Overlay.toast("9TH ROAD / MARKER %d / approx. %dm to the eastern exit. Keep to the marked route." % [marker_n, distance_left], 5.0)
+				if not _surveyed.has("road_%d" % marker_n):
+					_surveyed["road_%d" % marker_n] = true
+				SaveService.record_discovery(stable_id, "road:" + str(marker_n),
+					"9th Road marker %d; the way back is not necessarily the way ahead." % marker_n, "CANON_MOTIF"))
 		n += 1
 	# M.E.G. ladder bolted up the east wall of the road shaft (12 m)
 	for i in 34:

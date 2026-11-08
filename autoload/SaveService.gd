@@ -36,6 +36,7 @@ func fresh_story(seed_value: int) -> Dictionary:
 		"checkpoint": {"level": "L000", "arrival": "start", "pos": null, "yaw": 0.0, "pitch": 0.0},
 		"journal": {"edges": [], "notes": [], "levels_visited": []},
 		"flags": {}, "inventory": {}, "playtime_s": 0.0, "save_count": 0, "migrated_from": null,
+		"last_arrival_edge": {},
 	}
 
 
@@ -140,13 +141,29 @@ func _write_story_file(reason: String) -> bool:
 		last_error = "Save verification failed"
 		return false
 	var gp := ProjectSettings.globalize_path(p)
-	if FileAccess.file_exists(p):
-		DirAccess.copy_absolute(gp, gp + ".bak")
-		DirAccess.remove_absolute(gp)
+	var had_primary := FileAccess.file_exists(p)
+	if had_primary:
+		# Windows cannot reliably rename over a live destination. Move the old
+		# primary to backup first; a crash at any step leaves either the primary,
+		# backup or verified temp recoverable by load_story().
+		if FileAccess.file_exists(p + ".bak"):
+			var drop := DirAccess.remove_absolute(gp + ".bak")
+			if drop != OK:
+				last_error = "Cannot rotate previous save backup: " + error_string(drop)
+				return false
+		var rotate := DirAccess.rename_absolute(gp, gp + ".bak")
+		if rotate != OK:
+			last_error = "Cannot preserve previous story save: " + error_string(rotate)
+			return false
 	var err := DirAccess.rename_absolute(gp + ".tmp", gp)
 	if err != OK:
+		# Always attempt restoration; do not leave a valid backup stranded when
+		# no primary exists. The verified .tmp still remains for recovery.
+		if had_primary and not FileAccess.file_exists(p):
+			DirAccess.rename_absolute(gp + ".bak", gp)
 		last_error = "Save rename failed: " + error_string(err)
 		return false
+	last_error = ""
 	saved.emit(reason)
 	return true
 
@@ -158,6 +175,19 @@ func set_checkpoint(level_sid: String, arrival: String, pos: Variant = null, yaw
 	s["current_level"] = level_sid
 	s["checkpoint"] = {"level": level_sid, "arrival": arrival,
 		"pos": ([pos.x, pos.y, pos.z] if pos is Vector3 else null), "yaw": yaw, "pitch": pitch}
+
+
+## Keep only the last successful level arrival. Unlike witnessed edges, this
+## records an actually loaded destination and survives Continue; @origin exits
+## must never guess from unrelated or declined release-boundary routes.
+func set_arrival_edge(edge: Dictionary) -> void:
+	if not SessionState.is_story():
+		return
+	story["last_arrival_edge"] = {
+		"id": str(edge.get("id", "")),
+		"from": str(edge.get("from", "")),
+		"to": str(edge.get("to", "")),
+	}
 
 
 func mark_visited(level_sid: String) -> void:
@@ -188,6 +218,21 @@ func read_note(note_id: String) -> bool:
 	if notes.has(note_id):
 		return false
 	notes.append(note_id)
+	return true
+
+
+## A diegetic finding, not a document or a canon route. New field is optional:
+## existing saves without discoveries remain compatible.
+func record_discovery(level_sid: String, discovery_id: String, description: String, source: String = "ADAPTATION") -> bool:
+	var j: Dictionary = scope()["journal"]
+	if not j.has("discoveries"):
+		j["discoveries"] = []
+	var seen: Array = j["discoveries"]
+	for entry in seen:
+		if entry.get("level") == level_sid and entry.get("id") == discovery_id:
+			return false
+	seen.append({"level": level_sid, "id": discovery_id, "description": description,
+		"source": source})
 	return true
 
 

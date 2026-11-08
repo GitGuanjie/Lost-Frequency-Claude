@@ -1,0 +1,45 @@
+{
+  "stable_id": "L048",
+  "scene": "res://levels/L048/L048.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — candidate dev3",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L010",
+    "from_L320"
+  ],
+  "signature": "Permanent-sunset beach, hotels and forest at 200 metres",
+  "mechanics": [
+    "beach",
+    "forest",
+    "farmhouse"
+  ],
+  "exits": [
+    {
+      "id": "L048>L010#5",
+      "to": "L010",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL",
+      "method": "Enter and exit a random farmhouse",
+      "source_quote": "Entering and exiting any of the farmhouses will take you to Level 10.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-48",
+      "trigger_type": "door"
+    },
+    {
+      "id": "L048>L049#4",
+      "to": "L049",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL",
+      "method": "Follow dirt trenches in the forest",
+      "source_quote": "will progressively lead one to Level 49",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-48",
+      "trigger_type": "walk_in"
+    }
+  ],
+  "notes": "Source constrained to 2026-11-04 snapshot. All distances are compressed for playable prototype. No engine QA, Windows test or human screenshot review passed yet.",
+  "entity_policy": "No invented hostile entities; narrative testimony is not treated as verified encounter.",
+  "arrival_aliases": [
+    "from_L320"
+  ]
+}

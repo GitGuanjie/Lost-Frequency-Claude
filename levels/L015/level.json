@@ -1,0 +1,19 @@
+{
+  "stable_id": "L015",
+  "scene": "res://levels/L015/L015.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev4 source candidate",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "Futuristic machinery halls, terminals and an unresolved starry exit frame",
+  "mechanics": [
+    "engine_gallery",
+    "control_terminals",
+    "unknown_destination"
+  ],
+  "exits": [],
+  "notes": "Uses a compact prototype scale. Godot/Windows gameplay and performance not yet verified; no promotion to PLAYABLE.",
+  "entity_policy": "NO ENTITY PER SOURCE (only Hound corpses)"
+}

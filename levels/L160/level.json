@@ -1,0 +1,30 @@
+{
+  "stable_id": "L160",
+  "scene": "res://levels/L160/L160.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "Under-described pact: unseen city of promised memories",
+  "mechanics": [
+    "narrative_monologue",
+    "pact",
+    "unspecified_city"
+  ],
+  "exits": [
+    {
+      "id": "L160>EXT#1",
+      "to": "EXT",
+      "basis": "SOURCE",
+      "confidence": "UNKNOWN",
+      "method": "Go through final place where the voice waits",
+      "source_quote": "There's just one more place you need to go through.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-160",
+      "trigger_type": "unknown"
+    }
+  ],
+  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
+  "entity_policy": "SOURCED ENTITIES ONLY: the unnamed pact voice; promised people are claims only"
+}

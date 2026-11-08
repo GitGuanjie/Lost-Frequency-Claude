@@ -1,0 +1,54 @@
+{
+  "stable_id": "L031",
+  "scene": "res://levels/L031/L031.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — candidate dev3",
+  "procedural": false,
+  "arrivals": [
+    "start",
+    "from_L002",
+    "from_L003",
+    "from_L201"
+  ],
+  "signature": "Four-zone roller rink, arcade green card and Coach",
+  "mechanics": [
+    "green_card",
+    "arcade",
+    "food_court",
+    "coach"
+  ],
+  "exits": [
+    {
+      "id": "L031>L040#1",
+      "to": "L040",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "noclip into any working arcade game",
+      "source_quote": "No-clipping into any working game in the arcade portion will transport one to Level 40",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-31",
+      "trigger_type": "noclip"
+    },
+    {
+      "id": "L031>L070#2",
+      "to": "L070",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "white door engraved 70",
+      "source_quote": "a white door in this level with the number 70 engraved on it",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-31",
+      "trigger_type": "door"
+    },
+    {
+      "id": "L031>L232#3",
+      "to": "L232",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "door labelled \"Employees only!\" in the food court",
+      "source_quote": "a door labeled \"Employees only!\" in the food court will send you to Level 232",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-31",
+      "trigger_type": "door"
+    }
+  ],
+  "notes": "Source constrained to 2026-11-04 snapshot. All distances are compressed for playable prototype. No engine QA, Windows test or human screenshot review passed yet.",
+  "entity_policy": "No invented hostile entities; narrative testimony is not treated as verified encounter."
+}

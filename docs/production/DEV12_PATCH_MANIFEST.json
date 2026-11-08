@@ -1,0 +1,135 @@
+{
+  "version": "1.5.0-dev12",
+  "parent": "1.5.0-dev11",
+  "source_file_count": 1617,
+  "changed_file_count": 24,
+  "changed_files": [
+    {
+      "path": "DEV12_README_FIRST_CN.md",
+      "bytes": 1139,
+      "sha256": "dc8bd84cad8e400bf090f80b9062757ff6407054e82b5eab183abebd3a5592bd"
+    },
+    {
+      "path": "EXPORT_DEV12_WINDOWS.ps1",
+      "bytes": 1590,
+      "sha256": "63ae02c8d1cc8e9b301dec5428453b02bfc04ae45ab82542f88f422258941ad0"
+    },
+    {
+      "path": "RUN_DEV12_QA_WINDOWS.ps1",
+      "bytes": 666,
+      "sha256": "2d1000deea2c68fe955806f707d7c88bcce08efbf5fdd3ae8bc313621b0686ef"
+    },
+    {
+      "path": "VERIFY_DEV12_OFFLINE.py",
+      "bytes": 1184,
+      "sha256": "56ff571add4af5c678669ea88d8d31606c7a20a2f3c3ee7e212356f88a02c8a7"
+    },
+    {
+      "path": "data/vertical_routes_dev12.json",
+      "bytes": 7763,
+      "sha256": "5d88d416d7cec926abdcaa9e3dfe9a2008b3989b419675ebc75587dae86abc3f"
+    },
+    {
+      "path": "docs/production/DEV12_VERTICAL_ROUTES.dot",
+      "bytes": 7657,
+      "sha256": "ad09d49e56291a88bfb6c8d77d584359d7d7b6a93d639bdb80ea8c142dbbae84"
+    },
+    {
+      "path": "docs/production/DEV12_VERTICAL_ROUTES.png",
+      "bytes": 231506,
+      "sha256": "36543adb5f47f4cba2c965cd041addd3a3db853cb46b50c592ec7ad496adf59d"
+    },
+    {
+      "path": "docs/production/DEV12_VERTICAL_ROUTES.svg",
+      "bytes": 43422,
+      "sha256": "a233d122fd72413f7c3cb482827907df6e52404cb2aeb48d7c7eb7d5f4732448"
+    },
+    {
+      "path": "docs/production/NEXT_SESSION_V150_DEV12_CN.md",
+      "bytes": 1410,
+      "sha256": "71184871d0bee74f148b4b55b67e594e9c1bc5795c84e2e007993e00ca148c46"
+    },
+    {
+      "path": "docs/production/V150_DEV12_VERTICAL_REBUILD_CN.md",
+      "bytes": 4456,
+      "sha256": "87f88383f724c791530f0a2439193a832240ec0b08d40345b5612dc0b42fa91f"
+    },
+    {
+      "path": "levels/L003/L003.gd",
+      "bytes": 20531,
+      "sha256": "d9665da8ca1547c71e436812e18322c200fb05f9fe1dad527068631f7f01d3ff"
+    },
+    {
+      "path": "levels/L003/L003_rooms.gd",
+      "bytes": 19787,
+      "sha256": "bb7e9cb38827111fe30521a86ab2d82695a5778569f61841e911b58eae861477"
+    },
+    {
+      "path": "levels/L010/L010.gd",
+      "bytes": 28046,
+      "sha256": "5400c708bf0a16c32229f6e9d4bfa9bdab96f23be25fca63bc47e9e375a3ca32"
+    },
+    {
+      "path": "levels/L010/L010_barn.gd",
+      "bytes": 14459,
+      "sha256": "f27a4d2e65793a0bbcb328e02399b2e909f8f55ee3bb6bb65341f8e416d4e76c"
+    },
+    {
+      "path": "levels/L010/L010_geo.gd",
+      "bytes": 23995,
+      "sha256": "9c34df03f322393f84cb44b011bfb12a48dac2a2d290d992d57040f4356411df"
+    },
+    {
+      "path": "levels/L011/L011.gd",
+      "bytes": 40932,
+      "sha256": "acf49c16136666f271f1ddb1fd725d8bb8c3df1df1c5abce126847dad5bb458e"
+    },
+    {
+      "path": "levels/L025/L025.gd",
+      "bytes": 36999,
+      "sha256": "4e1e3a80a628b31fa430b60bed7aae9751986aff7a4165a29b52f1b4e207c323"
+    },
+    {
+      "path": "reports/qa/v150_dev12/batch_summary.json",
+      "bytes": 465,
+      "sha256": "33bad6eacef1020dff4e57a2540160e4cdc99b23a2c96db1a44dc8140d263d7e"
+    },
+    {
+      "path": "reports/qa/v150_dev12/import.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/qa/v150_dev12/offline.json",
+      "bytes": 447,
+      "sha256": "cad949b9f3c51f4ba8b7de29c423d9292161a8baa6c53c259c081fcf7c0637f8"
+    },
+    {
+      "path": "tests/model_asset_smoke.gd",
+      "bytes": 2915,
+      "sha256": "fc1e753979b2b5a4f3b96d82cc7521586a66a538f8e79bd6ccd30aa3e0b989e6"
+    },
+    {
+      "path": "tests/static/test_dev11_deep_rebuild.py",
+      "bytes": 4178,
+      "sha256": "9e0abe7325361a559bee71f05e91514f07f3a02d2ffdadb39f7af563f6228716"
+    },
+    {
+      "path": "tests/static/test_dev12_vertical_architecture.py",
+      "bytes": 4828,
+      "sha256": "4eda8e899602b8e1445960b37490c43c3f49ccc28fd3d48368ed37a50ea26252"
+    },
+    {
+      "path": "tools/run_dev12_qa.py",
+      "bytes": 7531,
+      "sha256": "5bf458c9c57b75ea3c5f1951820b8ccde50c8763b4075db07c8323848a837d92"
+    }
+  ],
+  "validation": {
+    "offline_static": "100/100 PASS",
+    "world_audit": "PASS (100 scenes, 235 exit declarations, 0 issues)",
+    "godot_engine": "NOT AVAILABLE; attempted import FAIL",
+    "windows_build": "NOT BUILT"
+  },
+  "generated_utc": "2026-11-07T13:42:28.098892+00:00"
+}

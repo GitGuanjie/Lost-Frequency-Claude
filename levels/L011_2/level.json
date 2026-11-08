@@ -1,0 +1,111 @@
+{
+  "stable_id": "L011_2",
+  "scene": "res://levels/L011_2/L011_2.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L011"
+  ],
+  "signature": "Refuge apartment district beneath black winter sky",
+  "mechanics": [
+    "winter_apartments",
+    "scattered_gates",
+    "cold"
+  ],
+  "exits": [
+    {
+      "id": "L011_2>L011#1",
+      "to": "L011",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Walk away from the apartment complex",
+      "source_quote": "Walking away from the apartment complex leads you back to Level 11.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-11-2",
+      "trigger_type": "walk_in"
+    },
+    {
+      "id": "L011_2>L283#2",
+      "to": "L283",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Apartment door",
+      "source_quote": "Level 11.2 is connected to the following levels through apartment doors",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-11-2",
+      "trigger_type": "door"
+    },
+    {
+      "id": "L011_2>L189#3",
+      "to": "L189",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Apartment door",
+      "source_quote": "The gateways to Level 283 and level-189 have proved especially useful.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-11-2",
+      "trigger_type": "door"
+    },
+    {
+      "id": "L011_2>L852#4",
+      "to": "L852",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Apartment door",
+      "source_quote": "- Level 852",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-11-2",
+      "trigger_type": "door"
+    },
+    {
+      "id": "L011_2>L155#5",
+      "to": "L155",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Apartment door",
+      "source_quote": "- Level 155",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-11-2",
+      "trigger_type": "door"
+    },
+    {
+      "id": "L011_2>L036#6",
+      "to": "L036",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Apartment door",
+      "source_quote": "- Level 36",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-11-2",
+      "trigger_type": "door"
+    },
+    {
+      "id": "L011_2>L059#7",
+      "to": "L059",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Apartment door",
+      "source_quote": "- level-59",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-11-2",
+      "trigger_type": "door"
+    },
+    {
+      "id": "L011_2>L121#8",
+      "to": "L121",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Apartment door",
+      "source_quote": "- Level 121",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-11-2",
+      "trigger_type": "door"
+    },
+    {
+      "id": "L011_2>L078#9",
+      "to": "L078",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Apartment door",
+      "source_quote": "- Level 78",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-11-2",
+      "trigger_type": "door"
+    }
+  ],
+  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
+  "entity_policy": "SOURCED ENTITIES ONLY: shadow figure (reported), unnamed 'thing' in Banner Building (diary); facelings absent"
+}

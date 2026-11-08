@@ -29,6 +29,9 @@ var pause_menu: Control
 var dev_browser: Control
 var settings_panel: Control
 var journal_panel: Control
+var world_map_panel: Control
+var _world_graph: Control
+var _world_map_details: RichTextLabel
 var credits_panel: Control
 var note_panel: Control
 var death_panel: Control
@@ -80,6 +83,7 @@ func _ready() -> void:
 	dev_browser = _build_dev_browser()
 	settings_panel = _build_settings()
 	journal_panel = _build_journal()
+	world_map_panel = _build_world_map()
 	credits_panel = _build_credits()
 	note_panel = _build_note()
 	death_panel = _build_death()
@@ -250,6 +254,7 @@ func _build_pause() -> Control:
 	vb.add_child(_pause_mode_label)
 	vb.add_child(UITheme.button("Resume", func(): close_all()))
 	vb.add_child(UITheme.button("Journal", func(): push(journal_panel)))
+	vb.add_child(UITheme.button("World connection map (F6)", func(): push(world_map_panel)))
 	vb.add_child(UITheme.button("Settings", func(): push(settings_panel)))
 	_pause_save_btn = UITheme.button("Save expedition", func(): _save_now())
 	vb.add_child(_pause_save_btn)
@@ -332,6 +337,102 @@ func _build_dev_browser() -> Control:
 	brow.add_child(_dev_spawn)
 	root.add_child(holder)
 	return holder
+
+
+func _build_world_map() -> Control:
+	var holder := Control.new()
+	_full(holder)
+	holder.visible = false
+	var bg := ColorRect.new()
+	_full(bg)
+	bg.color = Color(0.016, 0.023, 0.027, 0.98)
+	holder.add_child(bg)
+	var margin := MarginContainer.new()
+	_full(margin)
+	for side in ["left", "right", "top", "bottom"]:
+		margin.add_theme_constant_override("margin_" + side, 26)
+	holder.add_child(margin)
+	var column := VBoxContainer.new()
+	column.add_theme_constant_override("separation", 12)
+	margin.add_child(column)
+	var head := HBoxContainer.new()
+	column.add_child(head)
+	head.add_child(UITheme.label("LEVEL CONNECTIONS · DIRECTED GRAPH", 25, UITheme.ACCENT))
+	var stretch := Control.new()
+	stretch.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	head.add_child(stretch)
+	head.add_child(UITheme.button("Recenter", func(): _world_graph.call("reset_view")))
+	head.add_child(UITheme.button("Close (Esc / F6)", func(): pop()))
+	var desc := UITheme.label("Arrows show the direction of declared exits, not guaranteed reachability. Drag to pan · Scroll to zoom · Select a node for its routes. Story mode reveals only visited levels and witnessed exits.", 14, UITheme.MUTED)
+	desc.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	column.add_child(desc)
+	var body := HBoxContainer.new()
+	body.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	body.add_theme_constant_override("separation", 14)
+	column.add_child(body)
+	_world_graph = preload("res://ui/WorldGraph.gd").new() as Control
+	_world_graph.name = "ConnectionGraph"
+	_world_graph.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_world_graph.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	_world_graph.custom_minimum_size = Vector2(550, 400)
+	_world_graph.mouse_filter = Control.MOUSE_FILTER_STOP
+	_world_graph.connect("node_selected", _world_graph_node_selected)
+	body.add_child(_world_graph)
+	var sidebar := VBoxContainer.new()
+	sidebar.custom_minimum_size = Vector2(340, 0)
+	body.add_child(sidebar)
+	sidebar.add_child(UITheme.label("SELECTED LEVEL", 18, UITheme.ACCENT))
+	_world_map_details = RichTextLabel.new()
+	_world_map_details.bbcode_enabled = false
+	_world_map_details.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	_world_map_details.selection_enabled = true
+	sidebar.add_child(_world_map_details)
+	sidebar.add_child(UITheme.label("Teal: source-linked / witnessed\nAmber: adaptation or unfinished node\nDashed: declared, NOT verified (dev)\nSolid: witnessed in your story\nBright border: current position", 14, UITheme.MUTED))
+	root.add_child(holder)
+	return holder
+
+
+func _world_graph_refresh() -> void:
+	var journal: Dictionary = SaveService.scope().get("journal", {})
+	_world_graph.call("rebuild", SessionState.is_developer(), SessionState.current_level,
+		journal.get("levels_visited", []), journal.get("edges", []))
+	_world_graph.call_deferred("reset_view")
+
+
+func _world_graph_node_selected(sid: String) -> void:
+	var lines := [LevelRegistry.display_name(sid), "", "Status: " + LevelRegistry.status_label(sid)]
+	if sid == SessionState.current_level:
+		lines.append("Your present location")
+	if SessionState.is_developer():
+		lines.append("DEVELOPER VIEW — all built-level exits; not necessarily physically verified.")
+	else:
+		lines.append("EXPEDITION VIEW — only routes witnessed by you.")
+	lines.append("")
+	lines.append("DIRECTED ROUTE PREVIEW FROM CURRENT LEVEL:")
+	var path: Array = _world_graph.call("preview_route_to", sid)
+	if path.is_empty():
+		lines.append("No known directed path from your current level.")
+	else:
+		lines.append(" → ".join(PackedStringArray(path)))
+		lines.append("(Declared only; physical traversal not verified.)" if SessionState.is_developer() else "(Based only on routes you witnessed.)")
+	lines.append("")
+	lines.append("Outgoing routes:")
+	var count := 0
+	if SessionState.is_developer():
+		for edge in TransitionService.exits_of(sid):
+			var dest: String = str(edge.get("to", ""))
+			var status := "BUILT" if LevelRegistry.is_spawnable(dest) else "UNBUILT / SPECIAL"
+			lines.append("→ %s [%s | %s]" % [LevelRegistry.display_name(dest), status, edge.get("basis", "SOURCE")])
+			count += 1
+	else:
+		for witnessed in SaveService.scope().get("journal", {}).get("edges", []):
+			if str(witnessed.get("from", "")) != sid:
+				continue
+			lines.append("→ %s (used %d times)" % [LevelRegistry.display_name(str(witnessed.get("to", ""))), int(witnessed.get("count", 1))])
+			count += 1
+	if count == 0:
+		lines.append("No known outgoing route.")
+	_world_map_details.text = "\n".join(PackedStringArray(lines))
 
 
 func _build_settings() -> Control:
@@ -459,6 +560,7 @@ func _build_journal() -> Control:
 	hint.text = "Developer route hints for this level (SOURCE / ADAPTATION / DEBUG ONLY)"
 	hint.toggled.connect(func(on): SessionState.debug_hint_mode = on; _refresh_journal())
 	hb.add_child(hint)
+	vb.add_child(UITheme.button("Connection map (F6)", func(): push(world_map_panel)))
 	vb.add_child(UITheme.button("Back (Esc)", func(): pop()))
 	return r[0]
 
@@ -573,7 +675,9 @@ func push(panel: Control) -> void:
 		p.visible = false
 	_stack.append(panel)
 	panel.visible = true
-	if panel == dev_browser:
+	if panel == world_map_panel:
+		_world_graph_refresh()
+	elif panel == dev_browser:
 		_dev_refresh()
 		_dev_search.grab_focus()
 	elif panel == journal_panel:
@@ -672,6 +776,12 @@ func _input(event: InputEvent) -> void:
 			pop()
 		else:
 			push(dev_browser)
+		get_viewport().set_input_as_handled()
+	elif event.is_action_pressed("world_map") and SessionState.in_gameplay:
+		if not _stack.is_empty() and _stack.back() == world_map_panel:
+			pop()
+		else:
+			push(world_map_panel)
 		get_viewport().set_input_as_handled()
 	elif typing:
 		return
@@ -1046,6 +1156,16 @@ func _refresh_journal() -> void:
 			edge.get("label", edge.get("trigger", "")), int(e.get("count", 1))]
 	var notes: Array = j.get("notes", [])
 	s += "\n[b]Documents read:[/b] %d\n" % notes.size()
+	var discoveries: Array = j.get("discoveries", [])
+	s += "\n[b]Environmental observations:[/b] %d\n" % discoveries.size()
+	if discoveries.is_empty():
+		s += "  (explore and interact with unusual places to record observations)\n"
+	else:
+		# Most recent first. Cap the visible log, not the saved observations.
+		for idx in range(discoveries.size() - 1, maxi(-1, discoveries.size() - 31), -1):
+			var finding: Dictionary = discoveries[idx]
+			s += "  • %s — %s\n" % [LevelRegistry.display_name(str(finding.get("level", ""))),
+				str(finding.get("description", ""))]
 	var mig: Variant = sc.get("migrated_from")
 	if mig is Dictionary and mig.get("imported", false):
 		s += "\n[color=#9a968a]Legacy V%s save imported (seed and visit list only; legacy coordinates were incompatible).[/color]\n" % str(mig.get("version", "?"))

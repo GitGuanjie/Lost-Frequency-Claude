@@ -70,6 +70,11 @@ func _physics_process(delta: float) -> void:
 		return
 	var p := _inside as Player
 	match kind:
+		"walk_in":
+			# A condition-gated walk-in exit may become valid while the player
+			# remains in its volume. Never bypass that condition on entry.
+			if condition.is_valid() and condition.call():
+				fire()
 		"noclip":
 			if p.pushing_into(global_position, size) and (not condition.is_valid() or condition.call()):
 				_hold += delta
@@ -93,7 +98,11 @@ func _physics_process(delta: float) -> void:
 
 ## Interact-kind exits are fired by the player's interact action.
 func interact(_p: Player) -> void:
-	if kind == "interact" and enabled and (not condition.is_valid() or condition.call()):
+	# Do not allow an interact() caller (including QA automation) to activate an
+	# exit without physics-confirmed occupancy of its trigger volume.
+	if not is_instance_valid(_p) or _inside != _p or not enabled or _fired:
+		return
+	if kind == "interact" and (not condition.is_valid() or condition.call()):
 		fire()
 
 
@@ -103,6 +112,9 @@ func get_prompt() -> String:
 
 func fire() -> void:
 	if _fired or not enabled:
+		return
+	# A caller must not bypass the physical exit's story condition.
+	if condition.is_valid() and not condition.call():
 		return
 	_fired = true
 	fired.emit(edge_id)

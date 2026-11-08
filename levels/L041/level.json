@@ -1,0 +1,42 @@
+{
+  "stable_id": "L041",
+  "scene": "res://levels/L041/L041.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev5 source candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L008"
+  ],
+  "signature": "Foggy boiling-tar basin, separate burning islands and a continuous supported boardwalk",
+  "mechanics": [
+    "tar_lake",
+    "supported_piers",
+    "charcoal_islands",
+    "hazardous_environment"
+  ],
+  "exits": [
+    {
+      "id": "L041>L612#3",
+      "to": "L612",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Barn door on stone plinth",
+      "source_quote": "Finding an odd barn door on a stone plinth and going through it.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-41",
+      "trigger_type": "door"
+    },
+    {
+      "id": "L041>L626#4",
+      "to": "L626",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Submerged lighthouse gallery; tamper with beacon",
+      "source_quote": "then tampering with the functional, flickering beacon within it.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-41",
+      "trigger_type": "interact"
+    }
+  ],
+  "notes": "Compact exploration adaptation. Runtime Godot and Windows verification required; no automatic PLAYABLE promotion.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Collagen Leviathans"
+}

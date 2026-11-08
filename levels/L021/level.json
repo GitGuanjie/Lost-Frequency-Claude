@@ -1,0 +1,50 @@
+{
+  "stable_id": "L021",
+  "scene": "res://levels/L021/L021.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — candidate dev3",
+  "procedural": false,
+  "arrivals": [
+    "start",
+    "from_L022"
+  ],
+  "signature": "Four intersecting numbered-door corridors with safe centre",
+  "mechanics": [
+    "door_warp",
+    "crossroad"
+  ],
+  "exits": [
+    {
+      "id": "L021>L000#1",
+      "to": "L000",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Door labelled 105",
+      "source_quote": "Doors labeled 105 lead to Level 0 .",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-21",
+      "trigger_type": "door"
+    },
+    {
+      "id": "L021>L356#2",
+      "to": "L356",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Door labelled 356",
+      "source_quote": "Doors labeled 356 lead to Level 356 .",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-21",
+      "trigger_type": "door"
+    },
+    {
+      "id": "L021>L001_5#7",
+      "to": "L001_5",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Unlabeled doors",
+      "source_quote": "Unlabeled doors lead to Level 1.5 .",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-21",
+      "trigger_type": "door"
+    }
+  ],
+  "notes": "Source constrained to 2026-11-04 snapshot. All distances are compressed for playable prototype. No engine QA, Windows test or human screenshot review passed yet.",
+  "entity_policy": "No invented hostile entities; narrative testimony is not treated as verified encounter."
+}

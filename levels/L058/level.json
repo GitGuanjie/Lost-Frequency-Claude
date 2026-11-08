@@ -1,0 +1,60 @@
+{
+  "stable_id": "L058",
+  "scene": "res://levels/L058/L058.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "UNVERIFIED Godot import, walker, GPU capture and human review pending",
+  "procedural": false,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "A derelict indoor waterpark with dry pools, rusted slides, blue artificial plants and dark maintenance rooms.",
+  "mechanics": [
+    "dry_waterpark",
+    "shallow_empty_pools",
+    "plastic_blue_landscaping",
+    "pitch_black_slide",
+    "source_red_1_crate",
+    "storeroom_blackouts"
+  ],
+  "exits": [
+    {
+      "id": "L058>L058_1#1",
+      "to": "L058_1",
+      "trigger": "noclip",
+      "label": "Black waterslide to Level 58.1",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED+DANGEROUS",
+      "source_section": "Dated canonical snapshot; exits",
+      "source_quote": "no-clip into black waterslide",
+      "arrival": "from_L058",
+      "hint": "Black waterslide to Level 58.1"
+    },
+    {
+      "id": "L058>L001#2",
+      "to": "L001",
+      "trigger": "interact",
+      "label": "Red-numbered supply crate to Level 1",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "source_section": "Dated canonical snapshot; exits",
+      "source_quote": "open supply crate with red number one",
+      "arrival": "from_L058",
+      "hint": "Red-numbered supply crate to Level 1"
+    },
+    {
+      "id": "L058>EXT#3",
+      "to": "EXT",
+      "trigger": "noclip",
+      "label": "Exposed piping of unknown destination",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "source_section": "Dated canonical snapshot; exits",
+      "source_quote": "no-clip into exposed piping in Corridors",
+      "arrival": "",
+      "hint": "Exposed piping of unknown destination",
+      "to_label": "Unknown destination beyond exposed pipes"
+    }
+  ],
+  "entity_policy": "Known Smilers/Dullers/Windows per source, not yet simulated",
+  "notes": "ADAPTATION: finite waterpark and simplified periodic storeroom blackouts. Hostile entities are not simulated yet, so hazard fidelity is incomplete. Canon: docs/canon/levels/L058.md; authors credited there under CC BY-SA 3.0. Not yet PLAYABLE."
+}

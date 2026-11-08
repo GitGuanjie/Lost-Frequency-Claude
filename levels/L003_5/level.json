@@ -1,0 +1,31 @@
+{
+  "stable_id": "L003_5",
+  "scene": "res://levels/L003_5/L003_5.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L003"
+  ],
+  "signature": "Void-sky electrostatic tower cluster, intermittent discharge and extraction",
+  "mechanics": [
+    "electrostatic_towers",
+    "lightning_cycle",
+    "sheltered_interior"
+  ],
+  "exits": [
+    {
+      "id": "L003_5>L003#1",
+      "to": "L003",
+      "basis": "SOURCE",
+      "confidence": "DANGEROUS+CONDITIONAL",
+      "method": "No-clip directly into an electrostatic discharge",
+      "source_quote": "No-clipping directly into an electrostatic discharge may transport you to Level 3 .",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-3-5",
+      "trigger_type": "noclip"
+    }
+  ],
+  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
+  "entity_policy": "SOURCED ENTITIES ONLY: The Windows (humans also present)"
+}

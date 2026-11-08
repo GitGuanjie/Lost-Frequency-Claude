@@ -1,0 +1,20 @@
+{
+  "stable_id": "L010_1",
+  "scene": "res://levels/L010_1/L010_1.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L010"
+  ],
+  "signature": "Contaminated crimson basin, exclusion fence and shoreline readings",
+  "mechanics": [
+    "contaminated_lake",
+    "exposure_timer",
+    "no_safe_shoreline_exit"
+  ],
+  "exits": [],
+  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
+  "entity_policy": "NO ENTITY PER SOURCE (only the substance itself)"
+}

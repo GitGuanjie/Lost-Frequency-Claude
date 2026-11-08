@@ -1,0 +1,123 @@
+{
+  "from": "1.5.0-dev18",
+  "to": "1.5.0-dev19",
+  "scope": "add/overwrite these relative to a project parent with 3/ inside",
+  "changed_count": 19,
+  "files": [
+    {
+      "path": "3/DEV19_README_FIRST_CN.md",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "3037fb56476d2ebbfb68abd805105f4a265ed30bb541783a66178cf100f82135"
+    },
+    {
+      "path": "3/EXPORT_DEV19_WINDOWS.ps1",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "0dcf44494ab5b38530eb429b0aca79eed594a773fec4a4ff67aec8a2349701ab"
+    },
+    {
+      "path": "3/RUN_DEV19_QA_WINDOWS.ps1",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "fd4829aa6fce7507ea8dc71d834acd3e77541e996ab3c863260a46d5895f2e71"
+    },
+    {
+      "path": "3/data/dev19_cave_ecologies.json",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "b750b463fb062b4113723f6a17c6fa6368bc6c2828e3d0cf550497fb7de0cb38"
+    },
+    {
+      "path": "3/docs/production/DEV19_CaveRouteOverview.png",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "378e1887f69a7d59bac86c258aa45fdc1b97c10517acd4999c00aae1a8fdc4ae"
+    },
+    {
+      "path": "3/docs/production/DEV19_空间与互动开发报告.md",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "2e2b45f3be72a4cd3155591df62533a95fdecf0cb40b8a8e08ea070aef362e87"
+    },
+    {
+      "path": "3/levels/L001/L001.gd",
+      "status": "modified",
+      "before_sha256": "9a0f3cfac424aebb464ba6d93f835aac4ab21c315ab6be7f98cda3fc3fc59849",
+      "after_sha256": "f2d9d28f8a2fc390c501b726936afc344c349b4f567aacec74cb0cc0a1bf84b5"
+    },
+    {
+      "path": "3/levels/L008/CaveBuild.gd",
+      "status": "modified",
+      "before_sha256": "9419a6019b7441e9c962456fdee112335208cb1fa2b56b030fbcc9e5da7ff1e4",
+      "after_sha256": "cfe65a7de181683179ca083b95f107421199eae7dc4301bc4c42a1c27de6fc17"
+    },
+    {
+      "path": "3/levels/L008/CaveEcologies.gd",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "903b7e6b04771f51f2f08c40a508fbc597ffc6679a47e75429d8c862250baa84"
+    },
+    {
+      "path": "3/levels/L008/L008.gd",
+      "status": "modified",
+      "before_sha256": "4ec2f136ab1c1786a3b8c55db25dd5a009215d256e7e9cee67dc4ede6ba9c93f",
+      "after_sha256": "b08d7afcc331da31ab1d155b4f22052fde50b80f70581e1c705f2ddb093527c8"
+    },
+    {
+      "path": "3/levels/L037/L037.gd",
+      "status": "modified",
+      "before_sha256": "f812bb55a5c3096a04b4ed75c4671db9014b1b78ba1d9489f0f06da3208bdebc",
+      "after_sha256": "25052cf75ebfbc0622656eaf0eeb0ddec789ad6fdf56709570cc50ebf3beef8d"
+    },
+    {
+      "path": "3/levels/L037/L037_signature_halls.gd",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "47ef69c597e5bc195d230b286310b475ec6f3b33e011f3acf9ae3fef3cd00cd4"
+    },
+    {
+      "path": "3/project.godot",
+      "status": "modified",
+      "before_sha256": "10995cf9e25863e681d9ea747254b80bdc3e97bd9e66b0d6b25822b6dcdfd4a3",
+      "after_sha256": "532a5951ae80ab5b79d825e2824653d70068484c15c5896c54b0babe73bdfe52"
+    },
+    {
+      "path": "3/reports/qa/v150_dev19/batch_summary.json",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "b6a4ef04f9210b47df81544776530fbd6b77a0e3e0b205357cb1067b3734352c"
+    },
+    {
+      "path": "3/reports/qa/v150_dev19/import.log",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "3/tests/qa_runner.gd",
+      "status": "modified",
+      "before_sha256": "6b98c6e3b3e2e2cdf34979751ba854594a7e69f2b60b95484fe92e7fb68b5aa7",
+      "after_sha256": "f573eefb903459f4ff96586e551077b7ae097a4e40bf15eff9554eef51253233"
+    },
+    {
+      "path": "3/tests/static/test_dev19_world_depth.py",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "da5717804a3cec63bb9d8489bd1a65b9f274e74ea616764f971065c599a37dc9"
+    },
+    {
+      "path": "3/tests/static/test_dev8_rework.py",
+      "status": "modified",
+      "before_sha256": "4aedc92fb2d9f913be68a575232d4fb5725d52257ea1c289c8f6a99886869ba6",
+      "after_sha256": "a25fd8032686963321ef8333b9f3dfbc3d9da8820615eb7f658712e2e5109443"
+    },
+    {
+      "path": "3/tools/run_dev19_qa.py",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "b509bf5560f55a2f43367b84b4523b37e3cb9390b8f9e4f2355573a5af5dc730"
+    }
+  ],
+  "note": "No Godot engine pass; source/static-only verification."
+}

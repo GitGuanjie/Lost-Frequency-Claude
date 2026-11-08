@@ -1,0 +1,51 @@
+{
+  "stable_id": "L007_8",
+  "scene": "res://levels/L007_8/L007_8.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L007_7"
+  ],
+  "signature": "Impaled Ocean: separated stilt villages and bottomless eye",
+  "mechanics": [
+    "water_navigation",
+    "stilts",
+    "deep_eye"
+  ],
+  "exits": [
+    {
+      "id": "L007_8>L008#1",
+      "to": "L008",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "multiple exits in the Deep Eyes",
+      "source_quote": "In the Deep Eyes multiple Level 8 exits were found.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-7-8",
+      "trigger_type": "dive"
+    },
+    {
+      "id": "L007_8>L007_7#2",
+      "to": "L007_7",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "entrance in stilt houses with unmelting snow on the roof",
+      "source_quote": "there is an entrance to Level 7.7",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-7-8",
+      "trigger_type": "walk_in"
+    },
+    {
+      "id": "L007_8>EXT#3",
+      "to": "EXT",
+      "basis": "SOURCE",
+      "confidence": "RUMORED",
+      "method": "voyage into distant waves",
+      "source_quote": "rifts to other realities, ships of incomprehensible size",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-7-8",
+      "trigger_type": "vehicle"
+    }
+  ],
+  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Seawalkers (non-aggressive); seagulls and fish are non-entity fauna"
+}

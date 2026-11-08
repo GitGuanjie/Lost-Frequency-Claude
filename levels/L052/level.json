@@ -1,0 +1,19 @@
+{
+  "stable_id": "L052",
+  "scene": "res://levels/L052/L052.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "Descending limestone crawlspace and cave art",
+  "mechanics": [
+    "crawlspace",
+    "cave_paintings",
+    "silent_campfire"
+  ],
+  "exits": [],
+  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
+  "entity_policy": "NO ENTITY PER SOURCE (a watcher is reported by diary only)"
+}

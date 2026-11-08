@@ -1,0 +1,20 @@
+{
+  "stable_id": "L073",
+  "scene": "res://levels/L073/L073.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L028"
+  ],
+  "signature": "Moonlit crimson island, rising castle, black sea and silent gate",
+  "mechanics": [
+    "red_island",
+    "castle_vertical",
+    "moonlit_sprint"
+  ],
+  "exits": [],
+  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Windows, Smilers, Deathmoths, Clumps, Dullers, Hounds, Skin-Stealers, Death Rats, Camo Crawlers, aquatic entities, CORAN"
+}

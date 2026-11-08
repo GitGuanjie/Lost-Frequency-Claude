@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://levels/L030/L030.gd" id="1_s"]
+
+[node name="L030" type="Node3D"]
+script = ExtResource("1_s")
+stable_id = "L030"

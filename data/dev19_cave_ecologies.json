@@ -1,0 +1,10 @@
+{
+  "schema": "dev19_cave_ecology_routes_v1",
+  "canon_basis": "Level 8: phreatic tubes, vertical shafts, biologically rich and unusually illuminated regions. The named mini-habitats below are game adaptations.",
+  "routes": [
+    {"id":"luminous_phreatic_bypass","name":"Phreatic light thread","radius_m":2.1,"floor_nodes":[[56,7,-20],[51,4,-3],[60,0,16],[74,-8,28]],"observation_index":2,"observation":"Scattered mineral light traces the passage back toward the road."},
+    {"id":"shear_rift_ring","name":"Above the broken rock","radius_m":2.15,"floor_nodes":[[128,2,-28],[148,7,-50],[174,6,-60],[195,0,-49],[210,-6,-31]],"observation_index":2,"observation":"The rock spikes follow a fault that joins two old passageways."},
+    {"id":"upper_karst_return","name":"High calcite return","radius_m":2.15,"floor_nodes":[[248,-8,43],[253,-3,63],[273,2,75],[291,8,74],[307,11,58]],"observation_index":2,"observation":"A pale calcite seam arcs down to the drowned detour."}
+  ],
+  "route_status":"DESIGNED_SDF_NOT_ENGINE_WALKED"
+}

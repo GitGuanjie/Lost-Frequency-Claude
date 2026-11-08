@@ -3,7 +3,7 @@
 A Godot 4.5.1 game adapting the English Backrooms Wikidot (canon snapshot dated 2026-11-04 in `sources/`).
 Target: 100 roster levels (`docs/canon/LEVEL_100_MATRIX.csv`). Honest status: `reports/QUALITY_SCOREBOARD.md`.
 
-Start each session by reading `docs/production/NEXT_SESSION_HANDOFF.md`, `docs/production/LEVEL_AUTHORING_GUIDE.md`
+For the latest changes read `docs/production/NEXT_SESSION_V150_DEV3_CN.md` first, then `docs/production/NEXT_SESSION_V150_DEV2_CN.md`, then `docs/production/NEXT_SESSION_V150_DEV1_CN.md`, then `docs/production/NEXT_SESSION_HANDOFF.md`, `docs/production/LEVEL_AUTHORING_GUIDE.md`
 (section 9, film-grade spatial rules, is mandatory) and `docs/canon/CANON_POLICY.md`.
 
 Rules:

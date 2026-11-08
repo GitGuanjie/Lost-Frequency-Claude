@@ -1,0 +1,80 @@
+digraph VerticalWorld {
+graph [bgcolor="#f8f9fc", pad=0.34, ranksep="0.65", nodesep="0.29", fontname="Noto Serif CJK SC", label="Lost Frequency  dev12 — 关卡内部立体路线（源码设计图，未经实机验收）", labelloc=t, fontsize=21, fontcolor="#263040", overlap=false, compound=true];
+node [shape=box, style="rounded,filled", fontname="Noto Serif CJK SC", fontsize=10, margin="0.16,0.10", penwidth=1.1];
+edge [color="#52677d", arrowsize=0.65, penwidth=1.5, fontname="Noto Serif CJK SC", fontsize=8];
+subgraph cluster_L003 {
+label="L003｜电力站"; style="rounded,filled"; fillcolor="#ffffff"; color="#087e8b"; penwidth=2; fontsize=14; margin=24;
+"L003_floor" [label="floor\n0.00 m", fillcolor="#d9ebf5", color="#087e8b"];
+"L003_control" [label="control\n3.60 m", fillcolor="#e8effa", color="#087e8b"];
+"L003_top" [label="top\n6.20 m", fillcolor="#f3e7d2", color="#087e8b"];
+"L003_cross" [label="cross\n6.20 m", fillcolor="#f3e7d2", color="#087e8b"];
+"L003_west_wing" [label="west wing\n6.20 m", fillcolor="#f3e7d2", color="#087e8b"];
+"L003_far_wing" [label="far wing\n6.20 m", fillcolor="#f3e7d2", color="#087e8b"];
+"L003_floor" -> "L003_control" [dir=both, color="#087e8b", style=solid, label="↑ 3.60 m", fontcolor="#087e8b"];
+"L003_control" -> "L003_top" [dir=both, color="#087e8b", style=solid, label="↑ 2.60 m", fontcolor="#087e8b"];
+"L003_top" -> "L003_cross" [dir=both, color="#087e8b", style=dashed, label="平面通道", fontcolor="#087e8b"];
+"L003_cross" -> "L003_west_wing" [dir=both, color="#087e8b", style=dashed, label="平面通道", fontcolor="#087e8b"];
+"L003_west_wing" -> "L003_far_wing" [dir=both, color="#087e8b", style=dashed, label="平面通道", fontcolor="#087e8b"];
+}
+subgraph cluster_L010 {
+label="L010｜农场"; style="rounded,filled"; fillcolor="#ffffff"; color="#b65b39"; penwidth=2; fontsize=14; margin=24;
+"L010_floor" [label="floor\n0.00 m", fillcolor="#d9ebf5", color="#b65b39"];
+"L010_landing_1" [label="landing 1\n2.90 m", fillcolor="#e8effa", color="#b65b39"];
+"L010_transfer_1" [label="transfer 1\n2.90 m", fillcolor="#e8effa", color="#b65b39"];
+"L010_landing_2" [label="landing 2\n5.80 m", fillcolor="#e8effa", color="#b65b39"];
+"L010_transfer_2" [label="transfer 2\n5.80 m", fillcolor="#e8effa", color="#b65b39"];
+"L010_landing_3" [label="landing 3\n8.70 m", fillcolor="#f3e7d2", color="#b65b39"];
+"L010_top" [label="top\n8.70 m", fillcolor="#f3e7d2", color="#b65b39"];
+"L010_floor" -> "L010_landing_1" [dir=both, color="#b65b39", style=solid, label="↑ 2.90 m", fontcolor="#b65b39"];
+"L010_landing_1" -> "L010_transfer_1" [dir=both, color="#b65b39", style=dashed, label="平面通道", fontcolor="#b65b39"];
+"L010_transfer_1" -> "L010_landing_2" [dir=both, color="#b65b39", style=solid, label="↑ 2.90 m", fontcolor="#b65b39"];
+"L010_landing_2" -> "L010_transfer_2" [dir=both, color="#b65b39", style=dashed, label="平面通道", fontcolor="#b65b39"];
+"L010_transfer_2" -> "L010_landing_3" [dir=both, color="#b65b39", style=solid, label="↑ 2.90 m", fontcolor="#b65b39"];
+"L010_landing_3" -> "L010_top" [dir=both, color="#b65b39", style=dashed, label="平面通道", fontcolor="#b65b39"];
+}
+subgraph cluster_L011 {
+label="L011｜城市公园"; style="rounded,filled"; fillcolor="#ffffff"; color="#5364b5"; penwidth=2; fontsize=14; margin=24;
+"L011_street_west" [label="street west\n0.15 m", fillcolor="#d9ebf5", color="#5364b5"];
+"L011_bridge_west" [label="bridge west\n3.75 m", fillcolor="#e8effa", color="#5364b5"];
+"L011_bridge_centre" [label="bridge centre\n3.75 m", fillcolor="#e8effa", color="#5364b5"];
+"L011_bridge_east" [label="bridge east\n3.75 m", fillcolor="#e8effa", color="#5364b5"];
+"L011_street_east" [label="street east\n0.15 m", fillcolor="#d9ebf5", color="#5364b5"];
+"L011_upper_stair" [label="upper stair\n7.25 m", fillcolor="#f3e7d2", color="#5364b5"];
+"L011_sky_main" [label="sky main\n7.25 m", fillcolor="#f3e7d2", color="#5364b5"];
+"L011_sky_west" [label="sky west\n7.25 m", fillcolor="#f3e7d2", color="#5364b5"];
+"L011_sky_north_west" [label="sky north west\n7.25 m", fillcolor="#f3e7d2", color="#5364b5"];
+"L011_sky_north_east" [label="sky north east\n7.25 m", fillcolor="#f3e7d2", color="#5364b5"];
+"L011_sky_east" [label="sky east\n7.25 m", fillcolor="#f3e7d2", color="#5364b5"];
+"L011_street_west" -> "L011_bridge_west" [dir=both, color="#5364b5", style=solid, label="↑ 3.60 m", fontcolor="#5364b5"];
+"L011_bridge_west" -> "L011_bridge_centre" [dir=both, color="#5364b5", style=dashed, label="平面通道", fontcolor="#5364b5"];
+"L011_bridge_centre" -> "L011_bridge_east" [dir=both, color="#5364b5", style=dashed, label="平面通道", fontcolor="#5364b5"];
+"L011_bridge_east" -> "L011_street_east" [dir=both, color="#5364b5", style=solid, label="↑ 3.60 m", fontcolor="#5364b5"];
+"L011_bridge_centre" -> "L011_upper_stair" [dir=both, color="#5364b5", style=solid, label="↑ 3.50 m", fontcolor="#5364b5"];
+"L011_upper_stair" -> "L011_sky_main" [dir=both, color="#5364b5", style=dashed, label="平面通道", fontcolor="#5364b5"];
+"L011_sky_main" -> "L011_sky_west" [dir=both, color="#5364b5", style=dashed, label="平面通道", fontcolor="#5364b5"];
+"L011_sky_west" -> "L011_sky_north_west" [dir=both, color="#5364b5", style=dashed, label="平面通道", fontcolor="#5364b5"];
+"L011_sky_north_west" -> "L011_sky_north_east" [dir=both, color="#5364b5", style=dashed, label="平面通道", fontcolor="#5364b5"];
+"L011_sky_north_east" -> "L011_sky_east" [dir=both, color="#5364b5", style=dashed, label="平面通道", fontcolor="#5364b5"];
+"L011_sky_east" -> "L011_sky_main" [dir=both, color="#5364b5", style=dashed, label="平面通道", fontcolor="#5364b5"];
+}
+subgraph cluster_L025 {
+label="L025｜街机中心"; style="rounded,filled"; fillcolor="#ffffff"; color="#9a6a24"; penwidth=2; fontsize=14; margin=24;
+"L025_ground" [label="ground\n0.00 m", fillcolor="#d9ebf5", color="#9a6a24"];
+"L025_rest" [label="rest\n1.41 m", fillcolor="#e8effa", color="#9a6a24"];
+"L025_deck_start" [label="deck start\n2.82 m", fillcolor="#e8effa", color="#9a6a24"];
+"L025_west" [label="west\n2.82 m", fillcolor="#e8effa", color="#9a6a24"];
+"L025_east" [label="east\n2.82 m", fillcolor="#e8effa", color="#9a6a24"];
+"L025_east_north" [label="east north\n2.82 m", fillcolor="#e8effa", color="#9a6a24"];
+"L025_west_north" [label="west north\n2.82 m", fillcolor="#e8effa", color="#9a6a24"];
+"L025_west_return" [label="west return\n2.82 m", fillcolor="#e8effa", color="#9a6a24"];
+"L025_ground" -> "L025_rest" [dir=both, color="#9a6a24", style=solid, label="↑ 1.41 m", fontcolor="#9a6a24"];
+"L025_rest" -> "L025_deck_start" [dir=both, color="#9a6a24", style=solid, label="↑ 1.41 m", fontcolor="#9a6a24"];
+"L025_deck_start" -> "L025_west" [dir=both, color="#9a6a24", style=dashed, label="平面通道", fontcolor="#9a6a24"];
+"L025_west" -> "L025_east" [dir=both, color="#9a6a24", style=dashed, label="平面通道", fontcolor="#9a6a24"];
+"L025_east" -> "L025_east_north" [dir=both, color="#9a6a24", style=dashed, label="平面通道", fontcolor="#9a6a24"];
+"L025_east_north" -> "L025_west_north" [dir=both, color="#9a6a24", style=dashed, label="平面通道", fontcolor="#9a6a24"];
+"L025_west_north" -> "L025_west_return" [dir=both, color="#9a6a24", style=dashed, label="平面通道", fontcolor="#9a6a24"];
+"L025_west_return" -> "L025_west" [dir=both, color="#9a6a24", style=dashed, label="平面通道", fontcolor="#9a6a24"];
+}
+subgraph cluster_legend {label="图例"; style="rounded"; color="#9ca5b7"; node [shape=plaintext, fontsize=10]; legend [label="实线：楼梯 / 斜坡      虚线：平台 / 桥廊      双向箭头：预期可往返（需 Godot 验证）"]; }
+}

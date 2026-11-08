@@ -1,0 +1,20 @@
+{
+  "stable_id": "L922",
+  "scene": "res://levels/L922/L922.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — candidate dev3",
+  "procedural": false,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "Brutalist black-and-white stairwell which loops upward",
+  "mechanics": [
+    "stairs",
+    "loop",
+    "no_exit"
+  ],
+  "exits": [],
+  "notes": "Source constrained to 2026-11-04 snapshot. All distances are compressed for playable prototype. No engine QA, Windows test or human screenshot review passed yet.",
+  "entity_policy": "No invented hostile entities; narrative testimony is not treated as verified encounter.",
+  "no_exit_reason": "No sourced, traversable inter-level exit; omitted rather than invented."
+}

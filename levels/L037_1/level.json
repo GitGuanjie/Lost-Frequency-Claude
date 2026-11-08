@@ -1,0 +1,20 @@
+{
+  "stable_id": "L037_1",
+  "scene": "res://levels/L037_1/L037_1.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L037"
+  ],
+  "signature": "Sanguine pool labyrinth, red ambient light and slow-return transition",
+  "mechanics": [
+    "red_poolrooms",
+    "viscous_water",
+    "light_attenuation"
+  ],
+  "exits": [],
+  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Ambassadors (confirmed); elusive entity rumoured"
+}

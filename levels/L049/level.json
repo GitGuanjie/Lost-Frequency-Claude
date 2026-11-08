@@ -1,0 +1,63 @@
+{
+  "stable_id": "L049",
+  "scene": "res://levels/L049/L049.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev4 source candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L011",
+    "from_L048"
+  ],
+  "signature": "Mud-filled WWI trench network with two bunkers and time-dependent storm exits",
+  "mechanics": [
+    "trench",
+    "weather",
+    "bunkers",
+    "flood_exit"
+  ],
+  "exits": [
+    {
+      "id": "L049>L014#1",
+      "to": "L014",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "specific rusted bunker doors",
+      "source_quote": "Specific rusted doors in the bunkers serve as access points to Level 14, Level 65, or Level 50",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-49",
+      "trigger_type": "door"
+    },
+    {
+      "id": "L049>L050#3",
+      "to": "L050",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "specific rusted bunker doors",
+      "source_quote": "Specific rusted doors in the bunkers serve as access points to Level 14, Level 65, or Level 50",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-49",
+      "trigger_type": "door"
+    },
+    {
+      "id": "L049>L003#4",
+      "to": "L003",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED+DANGEROUS",
+      "method": "struck by lightning during rainstorm",
+      "source_quote": "Being struck by lightning during a rainstorm phenomenon results in an immediate no-clip to Level 3",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-49",
+      "trigger_type": "condition"
+    },
+    {
+      "id": "L049>L007#5",
+      "to": "L007",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL",
+      "method": "follow a water-filled tunnel opened by severe flooding",
+      "source_quote": "a water-filled tunnel may become accessible. Following this tunnel will lead you to Level 7",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-49",
+      "trigger_type": "swim"
+    }
+  ],
+  "notes": "Uses a compact prototype scale. Godot/Windows gameplay and performance not yet verified; no promotion to PLAYABLE.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Trenchcleaners (49/1), unseen entities"
+}

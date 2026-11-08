@@ -1,0 +1,31 @@
+{
+  "stable_id": "L000_2",
+  "scene": "res://levels/L000_2/L000_2.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L000"
+  ],
+  "signature": "Pristine remodeled Level 0 gives way to exposed wall studs and unsafe debris",
+  "mechanics": [
+    "remodeled_hall",
+    "collapse_stages",
+    "three_documents"
+  ],
+  "exits": [
+    {
+      "id": "L000_2>L000#1",
+      "to": "L000",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "door back the way you came",
+      "source_quote": "finding a door will lead back to Level 0",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-0-2",
+      "trigger_type": "door"
+    }
+  ],
+  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
+  "entity_policy": "NO ENTITY PER SOURCE"
+}

@@ -1,0 +1,4573 @@
+{
+  "schema": "lf.dev24.expeditions.v1",
+  "version": "1.5.0-dev24",
+  "validation": "BLUEPRINT_ONLY_NOT_NATIVE_QA",
+  "source": "Original gameplay adaptation; owned GLB models and previously researched Wikidot themes",
+  "sites": [
+    {
+      "id": "L028",
+      "style": "keep_forge",
+      "mat": "l28_blue",
+      "accent": "l28_iron",
+      "title": "Ruin forge and inverted watch hall",
+      "observation": "The forge echoes under blue stone, while familiar appliances seem completely out of place.",
+      "sound": "pipe_clank",
+      "rise": 3.5,
+      "entry_gallery": [
+        117.5,
+        10.5,
+        -137.0
+      ],
+      "origin": [
+        141.5,
+        10.5,
+        -137.0
+      ],
+      "morphology": {
+        "base": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            -1
+          ]
+        ],
+        "upper": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            0,
+            -1
+          ]
+        ]
+      },
+      "nodes": {
+        "b0": [
+          141.5,
+          10.5,
+          -137.0
+        ],
+        "b1": [
+          155.5,
+          10.5,
+          -137.0
+        ],
+        "b2": [
+          169.5,
+          10.5,
+          -137.0
+        ],
+        "b3": [
+          141.5,
+          10.5,
+          -151.0
+        ],
+        "b4": [
+          155.5,
+          10.5,
+          -151.0
+        ],
+        "b5": [
+          169.5,
+          10.5,
+          -151.0
+        ],
+        "u0": [
+          198.5,
+          14.0,
+          -137.0
+        ],
+        "u1": [
+          212.5,
+          14.0,
+          -137.0
+        ],
+        "u2": [
+          212.5,
+          14.0,
+          -151.0
+        ],
+        "u3": [
+          198.5,
+          14.0,
+          -151.0
+        ]
+      },
+      "links": [
+        {
+          "a": "b3",
+          "b": "b0",
+          "kind": "walk"
+        },
+        {
+          "a": "b3",
+          "b": "b4",
+          "kind": "walk"
+        },
+        {
+          "a": "b0",
+          "b": "b1",
+          "kind": "walk"
+        },
+        {
+          "a": "b4",
+          "b": "b5",
+          "kind": "walk"
+        },
+        {
+          "a": "b1",
+          "b": "b2",
+          "kind": "walk"
+        },
+        {
+          "a": "b4",
+          "b": "b1",
+          "kind": "unlockable"
+        },
+        {
+          "a": "u3",
+          "b": "u0",
+          "kind": "walk"
+        },
+        {
+          "a": "u3",
+          "b": "u2",
+          "kind": "walk"
+        },
+        {
+          "a": "u0",
+          "b": "u1",
+          "kind": "walk"
+        },
+        {
+          "a": "b5",
+          "b": "b2",
+          "kind": "walk"
+        },
+        {
+          "a": "u2",
+          "b": "u1",
+          "kind": "walk"
+        },
+        {
+          "a": "b2",
+          "b": "u0",
+          "kind": "stair"
+        }
+      ],
+      "optional_edge": [
+        "b4",
+        "b1"
+      ],
+      "survey": [
+        "b0",
+        "b5",
+        "u3"
+      ],
+      "props": [
+        {
+          "node": "b0",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 127
+        },
+        {
+          "node": "b0",
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.8974,
+          "yaw": 286
+        },
+        {
+          "node": "b0",
+          "pack": "furniture-kit",
+          "model": "radio",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.9055,
+          "yaw": 87
+        },
+        {
+          "node": "b1",
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.8974,
+          "yaw": 70
+        },
+        {
+          "node": "b1",
+          "pack": "mini-dungeon",
+          "model": "chest",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.125,
+          "yaw": 37
+        },
+        {
+          "node": "b1",
+          "pack": "mini-dungeon",
+          "model": "banner",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.3468,
+          "yaw": 182
+        },
+        {
+          "node": "b2",
+          "pack": "mini-dungeon",
+          "model": "wood-structure",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.1488,
+          "yaw": 287
+        },
+        {
+          "node": "b2",
+          "pack": "mini-dungeon",
+          "model": "chair",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.5908,
+          "yaw": 229
+        },
+        {
+          "node": "b2",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 338
+        },
+        {
+          "node": "b3",
+          "pack": "mini-dungeon",
+          "model": "column",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 220
+        },
+        {
+          "node": "b3",
+          "pack": "mini-dungeon",
+          "model": "banner",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.3468,
+          "yaw": 94
+        },
+        {
+          "node": "b3",
+          "pack": "mini-dungeon",
+          "model": "chair",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.5908,
+          "yaw": 56
+        },
+        {
+          "node": "b4",
+          "pack": "furniture-kit",
+          "model": "radio",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.9055,
+          "yaw": 226
+        },
+        {
+          "node": "b4",
+          "pack": "mini-dungeon",
+          "model": "column",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 358
+        },
+        {
+          "node": "b4",
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.8974,
+          "yaw": 101
+        },
+        {
+          "node": "b5",
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.1499,
+          "yaw": 50
+        },
+        {
+          "node": "b5",
+          "pack": "mini-dungeon",
+          "model": "column",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 152
+        },
+        {
+          "node": "b5",
+          "pack": "furniture-kit",
+          "model": "radio",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.9055,
+          "yaw": 62
+        },
+        {
+          "node": "u0",
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.1499,
+          "yaw": 292
+        },
+        {
+          "node": "u0",
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.8974,
+          "yaw": 338
+        },
+        {
+          "node": "u0",
+          "pack": "mini-dungeon",
+          "model": "banner",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.3468,
+          "yaw": 181
+        },
+        {
+          "node": "u1",
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.1499,
+          "yaw": 246
+        },
+        {
+          "node": "u1",
+          "pack": "furniture-kit",
+          "model": "books",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.25,
+          "yaw": 184
+        },
+        {
+          "node": "u1",
+          "pack": "furniture-kit",
+          "model": "radio",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.9055,
+          "yaw": 344
+        },
+        {
+          "node": "u2",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 133
+        },
+        {
+          "node": "u2",
+          "pack": "furniture-kit",
+          "model": "books",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.25,
+          "yaw": 24
+        },
+        {
+          "node": "u2",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 19
+        },
+        {
+          "node": "u3",
+          "pack": "mini-dungeon",
+          "model": "chest",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.125,
+          "yaw": 221
+        },
+        {
+          "node": "u3",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 131
+        },
+        {
+          "node": "u3",
+          "pack": "mini-dungeon",
+          "model": "chest",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.125,
+          "yaw": 98
+        }
+      ],
+      "cycle_rank_base": 2,
+      "cycle_rank_upper": 1
+    },
+    {
+      "id": "L032",
+      "style": "canopy",
+      "mat": "d7_trunk",
+      "accent": "d7_bone",
+      "title": "Bone-chime branchwalk",
+      "observation": "The branches are suspended above an ever-dark forest. Nothing here explains the clattering.",
+      "sound": "creak",
+      "rise": 3.4,
+      "entry_gallery": [
+        137.5,
+        10.2,
+        -62.0
+      ],
+      "origin": [
+        161.5,
+        10.2,
+        -62.0
+      ],
+      "morphology": {
+        "base": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            -1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "upper": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            -1
+          ]
+        ]
+      },
+      "nodes": {
+        "b0": [
+          161.5,
+          10.2,
+          -62.0
+        ],
+        "b1": [
+          175.5,
+          10.2,
+          -62.0
+        ],
+        "b2": [
+          175.5,
+          10.2,
+          -76.0
+        ],
+        "b3": [
+          189.5,
+          10.2,
+          -76.0
+        ],
+        "b4": [
+          189.5,
+          10.2,
+          -62.0
+        ],
+        "b5": [
+          203.5,
+          10.2,
+          -62.0
+        ],
+        "u0": [
+          232.5,
+          13.6,
+          -62.0
+        ],
+        "u1": [
+          232.5,
+          13.6,
+          -76.0
+        ],
+        "u2": [
+          246.5,
+          13.6,
+          -76.0
+        ],
+        "u3": [
+          260.5,
+          13.6,
+          -76.0
+        ]
+      },
+      "links": [
+        {
+          "a": "b0",
+          "b": "b1",
+          "kind": "walk"
+        },
+        {
+          "a": "b2",
+          "b": "b1",
+          "kind": "walk"
+        },
+        {
+          "a": "b2",
+          "b": "b3",
+          "kind": "walk"
+        },
+        {
+          "a": "b1",
+          "b": "b4",
+          "kind": "walk"
+        },
+        {
+          "a": "b4",
+          "b": "b5",
+          "kind": "walk"
+        },
+        {
+          "a": "b3",
+          "b": "b4",
+          "kind": "unlockable"
+        },
+        {
+          "a": "u1",
+          "b": "u0",
+          "kind": "walk"
+        },
+        {
+          "a": "u1",
+          "b": "u2",
+          "kind": "walk"
+        },
+        {
+          "a": "u2",
+          "b": "u3",
+          "kind": "walk"
+        },
+        {
+          "a": "b5",
+          "b": "u0",
+          "kind": "stair"
+        }
+      ],
+      "optional_edge": [
+        "b3",
+        "b4"
+      ],
+      "survey": [
+        "b0",
+        "b5",
+        "u3"
+      ],
+      "props": [
+        {
+          "node": "b0",
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.4462,
+          "yaw": 211
+        },
+        {
+          "node": "b0",
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.6236,
+          "yaw": 58
+        },
+        {
+          "node": "b0",
+          "pack": "graveyard-kit",
+          "model": "fence-damaged",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.7752,
+          "yaw": 325
+        },
+        {
+          "node": "b1",
+          "pack": "graveyard-kit",
+          "model": "lightpost-single",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 256
+        },
+        {
+          "node": "b1",
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.8974,
+          "yaw": 338
+        },
+        {
+          "node": "b1",
+          "pack": "graveyard-kit",
+          "model": "debris",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.4111,
+          "yaw": 117
+        },
+        {
+          "node": "b2",
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.6625,
+          "yaw": 24
+        },
+        {
+          "node": "b2",
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.6625,
+          "yaw": 321
+        },
+        {
+          "node": "b2",
+          "pack": "graveyard-kit",
+          "model": "debris",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.4111,
+          "yaw": 148
+        },
+        {
+          "node": "b3",
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.4462,
+          "yaw": 139
+        },
+        {
+          "node": "b3",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 24
+        },
+        {
+          "node": "b3",
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.4462,
+          "yaw": 182
+        },
+        {
+          "node": "b4",
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.6236,
+          "yaw": 242
+        },
+        {
+          "node": "b4",
+          "pack": "nature-kit",
+          "model": "rock-talld",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 359
+        },
+        {
+          "node": "b4",
+          "pack": "graveyard-kit",
+          "model": "stone-wall-damaged",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.9062,
+          "yaw": 85
+        },
+        {
+          "node": "b5",
+          "pack": "nature-kit",
+          "model": "rock-talld",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 42
+        },
+        {
+          "node": "b5",
+          "pack": "graveyard-kit",
+          "model": "lightpost-single",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 208
+        },
+        {
+          "node": "b5",
+          "pack": "nature-kit",
+          "model": "rock-tallc",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 41
+        },
+        {
+          "node": "u0",
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.6236,
+          "yaw": 92
+        },
+        {
+          "node": "u0",
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.8974,
+          "yaw": 341
+        },
+        {
+          "node": "u0",
+          "pack": "graveyard-kit",
+          "model": "fence-damaged",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.7752,
+          "yaw": 144
+        },
+        {
+          "node": "u1",
+          "pack": "graveyard-kit",
+          "model": "stone-wall-damaged",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.9062,
+          "yaw": 215
+        },
+        {
+          "node": "u1",
+          "pack": "graveyard-kit",
+          "model": "debris",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.4111,
+          "yaw": 137
+        },
+        {
+          "node": "u1",
+          "pack": "mini-dungeon",
+          "model": "stones",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.6358,
+          "yaw": 251
+        },
+        {
+          "node": "u2",
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.4462,
+          "yaw": 140
+        },
+        {
+          "node": "u2",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 194
+        },
+        {
+          "node": "u2",
+          "pack": "graveyard-kit",
+          "model": "stone-wall-damaged",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.9062,
+          "yaw": 70
+        },
+        {
+          "node": "u3",
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.6236,
+          "yaw": 257
+        },
+        {
+          "node": "u3",
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.6236,
+          "yaw": 273
+        },
+        {
+          "node": "u3",
+          "pack": "graveyard-kit",
+          "model": "stone-wall-damaged",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.9062,
+          "yaw": 73
+        }
+      ],
+      "cycle_rank_base": 1,
+      "cycle_rank_upper": 0
+    },
+    {
+      "id": "L050",
+      "style": "highway",
+      "mat": "l50_sand",
+      "accent": "l50_vehicle",
+      "title": "Displaced highway junction",
+      "observation": "A road marker points towards both the near bridge and the far one.",
+      "sound": "wind",
+      "rise": 3.5,
+      "entry_gallery": [
+        124.5,
+        10.5,
+        -37.0
+      ],
+      "origin": [
+        148.5,
+        10.5,
+        -37.0
+      ],
+      "morphology": {
+        "base": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            -1
+          ],
+          [
+            3,
+            -1
+          ]
+        ],
+        "upper": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      "nodes": {
+        "b0": [
+          148.5,
+          10.5,
+          -37.0
+        ],
+        "b1": [
+          162.5,
+          10.5,
+          -37.0
+        ],
+        "b2": [
+          176.5,
+          10.5,
+          -37.0
+        ],
+        "b3": [
+          190.5,
+          10.5,
+          -37.0
+        ],
+        "b4": [
+          176.5,
+          10.5,
+          -51.0
+        ],
+        "b5": [
+          190.5,
+          10.5,
+          -51.0
+        ],
+        "u0": [
+          219.5,
+          14.0,
+          -37.0
+        ],
+        "u1": [
+          233.5,
+          14.0,
+          -37.0
+        ],
+        "u2": [
+          247.5,
+          14.0,
+          -37.0
+        ],
+        "u3": [
+          247.5,
+          14.0,
+          -23.0
+        ]
+      },
+      "links": [
+        {
+          "a": "b0",
+          "b": "b1",
+          "kind": "walk"
+        },
+        {
+          "a": "b1",
+          "b": "b2",
+          "kind": "walk"
+        },
+        {
+          "a": "b4",
+          "b": "b2",
+          "kind": "walk"
+        },
+        {
+          "a": "b4",
+          "b": "b5",
+          "kind": "walk"
+        },
+        {
+          "a": "b2",
+          "b": "b3",
+          "kind": "walk"
+        },
+        {
+          "a": "b5",
+          "b": "b3",
+          "kind": "unlockable"
+        },
+        {
+          "a": "u0",
+          "b": "u1",
+          "kind": "walk"
+        },
+        {
+          "a": "u1",
+          "b": "u2",
+          "kind": "walk"
+        },
+        {
+          "a": "u2",
+          "b": "u3",
+          "kind": "walk"
+        },
+        {
+          "a": "b3",
+          "b": "u0",
+          "kind": "stair"
+        }
+      ],
+      "optional_edge": [
+        "b5",
+        "b3"
+      ],
+      "survey": [
+        "b0",
+        "b5",
+        "u3"
+      ],
+      "props": [
+        {
+          "node": "b0",
+          "pack": "city-kit-roads",
+          "model": "road-sign-warning",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 48
+        },
+        {
+          "node": "b0",
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.25,
+          "yaw": 281
+        },
+        {
+          "node": "b0",
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.25,
+          "yaw": 172
+        },
+        {
+          "node": "b1",
+          "pack": "prototype-kit",
+          "model": "crate",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.25,
+          "yaw": 139
+        },
+        {
+          "node": "b1",
+          "pack": "prototype-kit",
+          "model": "crate",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.25,
+          "yaw": 199
+        },
+        {
+          "node": "b1",
+          "pack": "prototype-kit",
+          "model": "pipe-section",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 234
+        },
+        {
+          "node": "b2",
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.25,
+          "yaw": 169
+        },
+        {
+          "node": "b2",
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.25,
+          "yaw": 186
+        },
+        {
+          "node": "b2",
+          "pack": "prototype-kit",
+          "model": "pipe-section",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 239
+        },
+        {
+          "node": "b3",
+          "pack": "prototype-kit",
+          "model": "pipe-split",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.7559,
+          "yaw": 191
+        },
+        {
+          "node": "b3",
+          "pack": "city-kit-roads",
+          "model": "construction-light",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.6233,
+          "yaw": 58
+        },
+        {
+          "node": "b3",
+          "pack": "city-kit-roads",
+          "model": "electricity-pole",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.1333,
+          "yaw": 126
+        },
+        {
+          "node": "b4",
+          "pack": "city-kit-roads",
+          "model": "road-sign-warning",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 31
+        },
+        {
+          "node": "b4",
+          "pack": "city-kit-roads",
+          "model": "traffic-light",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 305
+        },
+        {
+          "node": "b4",
+          "pack": "city-kit-roads",
+          "model": "electricity-pole",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.1333,
+          "yaw": 27
+        },
+        {
+          "node": "b5",
+          "pack": "city-kit-roads",
+          "model": "sign-highway",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.8842,
+          "yaw": 58
+        },
+        {
+          "node": "b5",
+          "pack": "prototype-kit",
+          "model": "crate",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.25,
+          "yaw": 148
+        },
+        {
+          "node": "b5",
+          "pack": "city-kit-roads",
+          "model": "traffic-light",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 44
+        },
+        {
+          "node": "u0",
+          "pack": "prototype-kit",
+          "model": "pipe-section",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 65
+        },
+        {
+          "node": "u0",
+          "pack": "city-kit-roads",
+          "model": "traffic-light",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 151
+        },
+        {
+          "node": "u0",
+          "pack": "city-kit-roads",
+          "model": "dumpster",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.7076,
+          "yaw": 231
+        },
+        {
+          "node": "u1",
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.25,
+          "yaw": 72
+        },
+        {
+          "node": "u1",
+          "pack": "prototype-kit",
+          "model": "pipe-section",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 303
+        },
+        {
+          "node": "u1",
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.25,
+          "yaw": 145
+        },
+        {
+          "node": "u2",
+          "pack": "city-kit-roads",
+          "model": "electricity-pole",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.1333,
+          "yaw": 245
+        },
+        {
+          "node": "u2",
+          "pack": "city-kit-roads",
+          "model": "construction-barrier",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.0,
+          "yaw": 127
+        },
+        {
+          "node": "u2",
+          "pack": "city-kit-roads",
+          "model": "construction-light",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.6233,
+          "yaw": 185
+        },
+        {
+          "node": "u3",
+          "pack": "city-kit-roads",
+          "model": "road-sign-warning",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 197
+        },
+        {
+          "node": "u3",
+          "pack": "city-kit-roads",
+          "model": "traffic-light",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 191
+        },
+        {
+          "node": "u3",
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.25,
+          "yaw": 130
+        }
+      ],
+      "cycle_rank_base": 1,
+      "cycle_rank_upper": 0
+    },
+    {
+      "id": "L073",
+      "style": "red_keep",
+      "mat": "d6_darkstone",
+      "accent": "d6_redwood",
+      "title": "Redoubts beyond the crimson keep",
+      "observation": "The outer defensive platforms return to a courtyard the same height as the first.",
+      "sound": "knock",
+      "rise": 3.5,
+      "entry_gallery": [
+        89.5,
+        10.5,
+        -141.0
+      ],
+      "origin": [
+        113.5,
+        10.5,
+        -141.0
+      ],
+      "morphology": {
+        "base": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "upper": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "nodes": {
+        "b0": [
+          113.5,
+          10.5,
+          -141.0
+        ],
+        "b1": [
+          127.5,
+          10.5,
+          -141.0
+        ],
+        "b2": [
+          141.5,
+          10.5,
+          -141.0
+        ],
+        "b3": [
+          113.5,
+          10.5,
+          -127.0
+        ],
+        "b4": [
+          127.5,
+          10.5,
+          -127.0
+        ],
+        "b5": [
+          141.5,
+          10.5,
+          -127.0
+        ],
+        "u0": [
+          170.5,
+          14.0,
+          -141.0
+        ],
+        "u1": [
+          184.5,
+          14.0,
+          -141.0
+        ],
+        "u2": [
+          184.5,
+          14.0,
+          -127.0
+        ],
+        "u3": [
+          170.5,
+          14.0,
+          -127.0
+        ]
+      },
+      "links": [
+        {
+          "a": "b0",
+          "b": "b3",
+          "kind": "walk"
+        },
+        {
+          "a": "b0",
+          "b": "b1",
+          "kind": "walk"
+        },
+        {
+          "a": "b3",
+          "b": "b4",
+          "kind": "walk"
+        },
+        {
+          "a": "b1",
+          "b": "b2",
+          "kind": "walk"
+        },
+        {
+          "a": "b4",
+          "b": "b5",
+          "kind": "walk"
+        },
+        {
+          "a": "b1",
+          "b": "b4",
+          "kind": "unlockable"
+        },
+        {
+          "a": "u0",
+          "b": "u3",
+          "kind": "walk"
+        },
+        {
+          "a": "u0",
+          "b": "u1",
+          "kind": "walk"
+        },
+        {
+          "a": "u3",
+          "b": "u2",
+          "kind": "walk"
+        },
+        {
+          "a": "b2",
+          "b": "b5",
+          "kind": "walk"
+        },
+        {
+          "a": "u1",
+          "b": "u2",
+          "kind": "walk"
+        },
+        {
+          "a": "b2",
+          "b": "u0",
+          "kind": "stair"
+        }
+      ],
+      "optional_edge": [
+        "b1",
+        "b4"
+      ],
+      "survey": [
+        "b0",
+        "b5",
+        "u3"
+      ],
+      "props": [
+        {
+          "node": "b0",
+          "pack": "mini-dungeon",
+          "model": "gate",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.1719,
+          "yaw": 13
+        },
+        {
+          "node": "b0",
+          "pack": "mini-dungeon",
+          "model": "chest",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.125,
+          "yaw": 87
+        },
+        {
+          "node": "b0",
+          "pack": "mini-dungeon",
+          "model": "banner",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.3468,
+          "yaw": 1
+        },
+        {
+          "node": "b1",
+          "pack": "mini-dungeon",
+          "model": "gate",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.1719,
+          "yaw": 51
+        },
+        {
+          "node": "b1",
+          "pack": "mini-dungeon",
+          "model": "column",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 154
+        },
+        {
+          "node": "b1",
+          "pack": "mini-dungeon",
+          "model": "column",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 342
+        },
+        {
+          "node": "b2",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 57
+        },
+        {
+          "node": "b2",
+          "pack": "graveyard-kit",
+          "model": "iron-fence-damaged",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.1005,
+          "yaw": 218
+        },
+        {
+          "node": "b2",
+          "pack": "mini-dungeon",
+          "model": "rocks",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.625,
+          "yaw": 190
+        },
+        {
+          "node": "b3",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 275
+        },
+        {
+          "node": "b3",
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.1499,
+          "yaw": 206
+        },
+        {
+          "node": "b3",
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.8974,
+          "yaw": 114
+        },
+        {
+          "node": "b4",
+          "pack": "mini-dungeon",
+          "model": "column",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 4
+        },
+        {
+          "node": "b4",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 294
+        },
+        {
+          "node": "b4",
+          "pack": "mini-dungeon",
+          "model": "rocks",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.625,
+          "yaw": 314
+        },
+        {
+          "node": "b5",
+          "pack": "mini-dungeon",
+          "model": "gate",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.1719,
+          "yaw": 80
+        },
+        {
+          "node": "b5",
+          "pack": "mini-dungeon",
+          "model": "chest",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.125,
+          "yaw": 295
+        },
+        {
+          "node": "b5",
+          "pack": "mini-dungeon",
+          "model": "rocks",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.625,
+          "yaw": 174
+        },
+        {
+          "node": "u0",
+          "pack": "mini-dungeon",
+          "model": "rocks",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.625,
+          "yaw": 108
+        },
+        {
+          "node": "u0",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 316
+        },
+        {
+          "node": "u0",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 57
+        },
+        {
+          "node": "u1",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 44
+        },
+        {
+          "node": "u1",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 61
+        },
+        {
+          "node": "u1",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 163
+        },
+        {
+          "node": "u2",
+          "pack": "mini-dungeon",
+          "model": "column",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 221
+        },
+        {
+          "node": "u2",
+          "pack": "mini-dungeon",
+          "model": "column",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 241
+        },
+        {
+          "node": "u2",
+          "pack": "mini-dungeon",
+          "model": "chest",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.125,
+          "yaw": 23
+        },
+        {
+          "node": "u3",
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.8974,
+          "yaw": 52
+        },
+        {
+          "node": "u3",
+          "pack": "mini-dungeon",
+          "model": "wood-support",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.1488,
+          "yaw": 116
+        },
+        {
+          "node": "u3",
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.1499,
+          "yaw": 292
+        }
+      ],
+      "cycle_rank_base": 2,
+      "cycle_rank_upper": 1
+    },
+    {
+      "id": "L077",
+      "style": "fog_trail",
+      "mat": "d7_farm",
+      "accent": "d7_nightwood",
+      "title": "Twinned mist switchbacks",
+      "observation": "The ridge remains visible while the path behind it disappears.",
+      "sound": "wind",
+      "rise": 3.5,
+      "entry_gallery": [
+        184.5,
+        10.5,
+        -114.0
+      ],
+      "origin": [
+        208.5,
+        10.5,
+        -114.0
+      ],
+      "morphology": {
+        "base": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "upper": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      "nodes": {
+        "b0": [
+          208.5,
+          10.5,
+          -114.0
+        ],
+        "b1": [
+          222.5,
+          10.5,
+          -114.0
+        ],
+        "b2": [
+          222.5,
+          10.5,
+          -100.0
+        ],
+        "b3": [
+          236.5,
+          10.5,
+          -100.0
+        ],
+        "b4": [
+          236.5,
+          10.5,
+          -114.0
+        ],
+        "b5": [
+          250.5,
+          10.5,
+          -114.0
+        ],
+        "u0": [
+          279.5,
+          14.0,
+          -114.0
+        ],
+        "u1": [
+          279.5,
+          14.0,
+          -100.0
+        ],
+        "u2": [
+          293.5,
+          14.0,
+          -100.0
+        ],
+        "u3": [
+          307.5,
+          14.0,
+          -100.0
+        ]
+      },
+      "links": [
+        {
+          "a": "b0",
+          "b": "b1",
+          "kind": "walk"
+        },
+        {
+          "a": "b1",
+          "b": "b2",
+          "kind": "walk"
+        },
+        {
+          "a": "b1",
+          "b": "b4",
+          "kind": "walk"
+        },
+        {
+          "a": "b2",
+          "b": "b3",
+          "kind": "walk"
+        },
+        {
+          "a": "b4",
+          "b": "b5",
+          "kind": "walk"
+        },
+        {
+          "a": "b4",
+          "b": "b3",
+          "kind": "unlockable"
+        },
+        {
+          "a": "u0",
+          "b": "u1",
+          "kind": "walk"
+        },
+        {
+          "a": "u1",
+          "b": "u2",
+          "kind": "walk"
+        },
+        {
+          "a": "u2",
+          "b": "u3",
+          "kind": "walk"
+        },
+        {
+          "a": "b5",
+          "b": "u0",
+          "kind": "stair"
+        }
+      ],
+      "optional_edge": [
+        "b4",
+        "b3"
+      ],
+      "survey": [
+        "b0",
+        "b5",
+        "u3"
+      ],
+      "props": [
+        {
+          "node": "b0",
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.6236,
+          "yaw": 53
+        },
+        {
+          "node": "b0",
+          "pack": "city-kit-roads",
+          "model": "road-sign-warning",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 273
+        },
+        {
+          "node": "b0",
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.6625,
+          "yaw": 314
+        },
+        {
+          "node": "b1",
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.1499,
+          "yaw": 226
+        },
+        {
+          "node": "b1",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 38
+        },
+        {
+          "node": "b1",
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.1499,
+          "yaw": 68
+        },
+        {
+          "node": "b2",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 120
+        },
+        {
+          "node": "b2",
+          "pack": "graveyard-kit",
+          "model": "shovel",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 158
+        },
+        {
+          "node": "b2",
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.7133,
+          "yaw": 241
+        },
+        {
+          "node": "b3",
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.6236,
+          "yaw": 123
+        },
+        {
+          "node": "b3",
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.6236,
+          "yaw": 242
+        },
+        {
+          "node": "b3",
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.6236,
+          "yaw": 146
+        },
+        {
+          "node": "b4",
+          "pack": "mini-dungeon",
+          "model": "barrel",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.1499,
+          "yaw": 283
+        },
+        {
+          "node": "b4",
+          "pack": "nature-kit",
+          "model": "cliff-rock",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.25,
+          "yaw": 315
+        },
+        {
+          "node": "b4",
+          "pack": "nature-kit",
+          "model": "rock-tallc",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 128
+        },
+        {
+          "node": "b5",
+          "pack": "graveyard-kit",
+          "model": "bench-damaged",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.7133,
+          "yaw": 292
+        },
+        {
+          "node": "b5",
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.6236,
+          "yaw": 354
+        },
+        {
+          "node": "b5",
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.4462,
+          "yaw": 23
+        },
+        {
+          "node": "u0",
+          "pack": "nature-kit",
+          "model": "cliff-rock",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.25,
+          "yaw": 339
+        },
+        {
+          "node": "u0",
+          "pack": "nature-kit",
+          "model": "rock-tallc",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 58
+        },
+        {
+          "node": "u0",
+          "pack": "nature-kit",
+          "model": "rock-tallc",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 127
+        },
+        {
+          "node": "u1",
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.4462,
+          "yaw": 52
+        },
+        {
+          "node": "u1",
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.4462,
+          "yaw": 147
+        },
+        {
+          "node": "u1",
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.4462,
+          "yaw": 127
+        },
+        {
+          "node": "u2",
+          "pack": "nature-kit",
+          "model": "rock-smalla",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.6625,
+          "yaw": 281
+        },
+        {
+          "node": "u2",
+          "pack": "nature-kit",
+          "model": "rock-tallc",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 67
+        },
+        {
+          "node": "u2",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 233
+        },
+        {
+          "node": "u3",
+          "pack": "nature-kit",
+          "model": "rock-tallc",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 54
+        },
+        {
+          "node": "u3",
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.6236,
+          "yaw": 199
+        },
+        {
+          "node": "u3",
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.4462,
+          "yaw": 201
+        }
+      ],
+      "cycle_rank_base": 1,
+      "cycle_rank_upper": 0
+    },
+    {
+      "id": "L085",
+      "style": "shelter",
+      "mat": "d7_luxury",
+      "accent": "d7_road",
+      "title": "Two-level service apartments",
+      "observation": "Empty rooms surround a maintenance hall that still answers to its switches.",
+      "sound": "pipe_clank",
+      "rise": 3.5,
+      "entry_gallery": [
+        150.5,
+        10.5,
+        -153.0
+      ],
+      "origin": [
+        174.5,
+        10.5,
+        -153.0
+      ],
+      "morphology": {
+        "base": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            -1
+          ],
+          [
+            1,
+            -2
+          ]
+        ],
+        "upper": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            -1
+          ]
+        ]
+      },
+      "nodes": {
+        "b0": [
+          174.5,
+          10.5,
+          -153.0
+        ],
+        "b1": [
+          188.5,
+          10.5,
+          -153.0
+        ],
+        "b2": [
+          202.5,
+          10.5,
+          -153.0
+        ],
+        "b3": [
+          188.5,
+          10.5,
+          -167.0
+        ],
+        "b4": [
+          202.5,
+          10.5,
+          -167.0
+        ],
+        "b5": [
+          188.5,
+          10.5,
+          -181.0
+        ],
+        "u0": [
+          231.5,
+          14.0,
+          -153.0
+        ],
+        "u1": [
+          245.5,
+          14.0,
+          -153.0
+        ],
+        "u2": [
+          245.5,
+          14.0,
+          -167.0
+        ],
+        "u3": [
+          259.5,
+          14.0,
+          -167.0
+        ]
+      },
+      "links": [
+        {
+          "a": "b0",
+          "b": "b1",
+          "kind": "walk"
+        },
+        {
+          "a": "b3",
+          "b": "b1",
+          "kind": "walk"
+        },
+        {
+          "a": "b5",
+          "b": "b3",
+          "kind": "walk"
+        },
+        {
+          "a": "b3",
+          "b": "b4",
+          "kind": "walk"
+        },
+        {
+          "a": "b1",
+          "b": "b2",
+          "kind": "walk"
+        },
+        {
+          "a": "b4",
+          "b": "b2",
+          "kind": "unlockable"
+        },
+        {
+          "a": "u0",
+          "b": "u1",
+          "kind": "walk"
+        },
+        {
+          "a": "u2",
+          "b": "u1",
+          "kind": "walk"
+        },
+        {
+          "a": "u2",
+          "b": "u3",
+          "kind": "walk"
+        },
+        {
+          "a": "b2",
+          "b": "u0",
+          "kind": "stair"
+        }
+      ],
+      "optional_edge": [
+        "b4",
+        "b2"
+      ],
+      "survey": [
+        "b0",
+        "b5",
+        "u3"
+      ],
+      "props": [
+        {
+          "node": "b0",
+          "pack": "furniture-kit",
+          "model": "bookcaseclosed",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 254
+        },
+        {
+          "node": "b0",
+          "pack": "furniture-kit",
+          "model": "televisionmodern",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.8301,
+          "yaw": 326
+        },
+        {
+          "node": "b0",
+          "pack": "furniture-kit",
+          "model": "bedbunk",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.9703,
+          "yaw": 25
+        },
+        {
+          "node": "b1",
+          "pack": "furniture-kit",
+          "model": "bookcaseclosed",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 342
+        },
+        {
+          "node": "b1",
+          "pack": "furniture-kit",
+          "model": "cardboardboxclosed",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.6529,
+          "yaw": 181
+        },
+        {
+          "node": "b1",
+          "pack": "furniture-kit",
+          "model": "radio",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.9055,
+          "yaw": 210
+        },
+        {
+          "node": "b2",
+          "pack": "furniture-kit",
+          "model": "cabinettelevision",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.4844,
+          "yaw": 249
+        },
+        {
+          "node": "b2",
+          "pack": "furniture-kit",
+          "model": "desk",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.6542,
+          "yaw": 66
+        },
+        {
+          "node": "b2",
+          "pack": "furniture-kit",
+          "model": "books",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.25,
+          "yaw": 60
+        },
+        {
+          "node": "b3",
+          "pack": "furniture-kit",
+          "model": "cardboardboxclosed",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.6529,
+          "yaw": 54
+        },
+        {
+          "node": "b3",
+          "pack": "furniture-kit",
+          "model": "books",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.25,
+          "yaw": 355
+        },
+        {
+          "node": "b3",
+          "pack": "furniture-kit",
+          "model": "chair",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 314
+        },
+        {
+          "node": "b4",
+          "pack": "furniture-kit",
+          "model": "loungesofa",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.5867,
+          "yaw": 195
+        },
+        {
+          "node": "b4",
+          "pack": "furniture-kit",
+          "model": "chair",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 267
+        },
+        {
+          "node": "b4",
+          "pack": "furniture-kit",
+          "model": "books",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.25,
+          "yaw": 99
+        },
+        {
+          "node": "b5",
+          "pack": "furniture-kit",
+          "model": "radio",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.9055,
+          "yaw": 354
+        },
+        {
+          "node": "b5",
+          "pack": "furniture-kit",
+          "model": "cardboardboxopen",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.9445,
+          "yaw": 214
+        },
+        {
+          "node": "b5",
+          "pack": "furniture-kit",
+          "model": "chair",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 64
+        },
+        {
+          "node": "u0",
+          "pack": "furniture-kit",
+          "model": "laptop",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.8523,
+          "yaw": 12
+        },
+        {
+          "node": "u0",
+          "pack": "food-kit",
+          "model": "plate-broken",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.2523,
+          "yaw": 80
+        },
+        {
+          "node": "u0",
+          "pack": "furniture-kit",
+          "model": "laptop",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.8523,
+          "yaw": 307
+        },
+        {
+          "node": "u1",
+          "pack": "food-kit",
+          "model": "plate-broken",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.2523,
+          "yaw": 254
+        },
+        {
+          "node": "u1",
+          "pack": "food-kit",
+          "model": "cup-coffee",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.7849,
+          "yaw": 115
+        },
+        {
+          "node": "u1",
+          "pack": "furniture-kit",
+          "model": "bedbunk",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.9703,
+          "yaw": 203
+        },
+        {
+          "node": "u2",
+          "pack": "furniture-kit",
+          "model": "cabinettelevision",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.4844,
+          "yaw": 125
+        },
+        {
+          "node": "u2",
+          "pack": "furniture-kit",
+          "model": "lamproundfloor",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 227
+        },
+        {
+          "node": "u2",
+          "pack": "furniture-kit",
+          "model": "lamproundfloor",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 247
+        },
+        {
+          "node": "u3",
+          "pack": "food-kit",
+          "model": "cup-coffee",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.7849,
+          "yaw": 208
+        },
+        {
+          "node": "u3",
+          "pack": "furniture-kit",
+          "model": "chair",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 210
+        },
+        {
+          "node": "u3",
+          "pack": "furniture-kit",
+          "model": "cabinettelevision",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.4844,
+          "yaw": 268
+        }
+      ],
+      "cycle_rank_base": 1,
+      "cycle_rank_upper": 0
+    },
+    {
+      "id": "L094",
+      "style": "toy_town",
+      "mat": "l94_house",
+      "accent": "l94_roof",
+      "title": "False-scale balcony quarter",
+      "observation": "A small door is paired with a gigantic step, without explaining who used either.",
+      "sound": "creak",
+      "rise": 3.5,
+      "entry_gallery": [
+        127.5,
+        10.5,
+        -42.0
+      ],
+      "origin": [
+        151.5,
+        10.5,
+        -42.0
+      ],
+      "morphology": {
+        "base": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "upper": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "nodes": {
+        "b0": [
+          151.5,
+          10.5,
+          -42.0
+        ],
+        "b1": [
+          151.5,
+          10.5,
+          -28.0
+        ],
+        "b2": [
+          165.5,
+          10.5,
+          -28.0
+        ],
+        "b3": [
+          165.5,
+          10.5,
+          -42.0
+        ],
+        "b4": [
+          179.5,
+          10.5,
+          -42.0
+        ],
+        "b5": [
+          179.5,
+          10.5,
+          -28.0
+        ],
+        "u0": [
+          208.5,
+          14.0,
+          -42.0
+        ],
+        "u1": [
+          222.5,
+          14.0,
+          -42.0
+        ],
+        "u2": [
+          222.5,
+          14.0,
+          -28.0
+        ],
+        "u3": [
+          208.5,
+          14.0,
+          -28.0
+        ]
+      },
+      "links": [
+        {
+          "a": "b0",
+          "b": "b1",
+          "kind": "walk"
+        },
+        {
+          "a": "b0",
+          "b": "b3",
+          "kind": "walk"
+        },
+        {
+          "a": "b1",
+          "b": "b2",
+          "kind": "walk"
+        },
+        {
+          "a": "b3",
+          "b": "b4",
+          "kind": "walk"
+        },
+        {
+          "a": "b2",
+          "b": "b5",
+          "kind": "walk"
+        },
+        {
+          "a": "b3",
+          "b": "b2",
+          "kind": "unlockable"
+        },
+        {
+          "a": "u0",
+          "b": "u3",
+          "kind": "walk"
+        },
+        {
+          "a": "u0",
+          "b": "u1",
+          "kind": "walk"
+        },
+        {
+          "a": "u3",
+          "b": "u2",
+          "kind": "walk"
+        },
+        {
+          "a": "b4",
+          "b": "b5",
+          "kind": "walk"
+        },
+        {
+          "a": "u1",
+          "b": "u2",
+          "kind": "walk"
+        },
+        {
+          "a": "b4",
+          "b": "u0",
+          "kind": "stair"
+        }
+      ],
+      "optional_edge": [
+        "b3",
+        "b2"
+      ],
+      "survey": [
+        "b0",
+        "b5",
+        "u3"
+      ],
+      "props": [
+        {
+          "node": "b0",
+          "pack": "food-kit",
+          "model": "cup",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.8558,
+          "yaw": 263
+        },
+        {
+          "node": "b0",
+          "pack": "furniture-kit",
+          "model": "coatrackstanding",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 350
+        },
+        {
+          "node": "b0",
+          "pack": "furniture-kit",
+          "model": "table",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.4854,
+          "yaw": 169
+        },
+        {
+          "node": "b1",
+          "pack": "furniture-kit",
+          "model": "chairrounded",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 113
+        },
+        {
+          "node": "b1",
+          "pack": "furniture-kit",
+          "model": "loungechair",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.1735,
+          "yaw": 150
+        },
+        {
+          "node": "b1",
+          "pack": "mini-dungeon",
+          "model": "column",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 291
+        },
+        {
+          "node": "b2",
+          "pack": "prototype-kit",
+          "model": "crate",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.25,
+          "yaw": 62
+        },
+        {
+          "node": "b2",
+          "pack": "furniture-kit",
+          "model": "coatrackstanding",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 206
+        },
+        {
+          "node": "b2",
+          "pack": "furniture-kit",
+          "model": "coatrackstanding",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 93
+        },
+        {
+          "node": "b3",
+          "pack": "furniture-kit",
+          "model": "books",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.25,
+          "yaw": 63
+        },
+        {
+          "node": "b3",
+          "pack": "prototype-kit",
+          "model": "crate",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.25,
+          "yaw": 193
+        },
+        {
+          "node": "b3",
+          "pack": "furniture-kit",
+          "model": "books",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.25,
+          "yaw": 216
+        },
+        {
+          "node": "b4",
+          "pack": "food-kit",
+          "model": "cup",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.8558,
+          "yaw": 299
+        },
+        {
+          "node": "b4",
+          "pack": "prototype-kit",
+          "model": "crate",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.25,
+          "yaw": 199
+        },
+        {
+          "node": "b4",
+          "pack": "furniture-kit",
+          "model": "plantsmall1",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.25,
+          "yaw": 58
+        },
+        {
+          "node": "b5",
+          "pack": "food-kit",
+          "model": "cup",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.8558,
+          "yaw": 119
+        },
+        {
+          "node": "b5",
+          "pack": "furniture-kit",
+          "model": "table",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.4854,
+          "yaw": 310
+        },
+        {
+          "node": "b5",
+          "pack": "furniture-kit",
+          "model": "plantsmall1",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.25,
+          "yaw": 69
+        },
+        {
+          "node": "u0",
+          "pack": "furniture-kit",
+          "model": "loungechair",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.1735,
+          "yaw": 307
+        },
+        {
+          "node": "u0",
+          "pack": "mini-dungeon",
+          "model": "column",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 280
+        },
+        {
+          "node": "u0",
+          "pack": "furniture-kit",
+          "model": "plantsmall1",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.25,
+          "yaw": 281
+        },
+        {
+          "node": "u1",
+          "pack": "furniture-kit",
+          "model": "table",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.4854,
+          "yaw": 35
+        },
+        {
+          "node": "u1",
+          "pack": "furniture-kit",
+          "model": "ruground",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.2446,
+          "yaw": 58
+        },
+        {
+          "node": "u1",
+          "pack": "furniture-kit",
+          "model": "plantsmall1",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.25,
+          "yaw": 127
+        },
+        {
+          "node": "u2",
+          "pack": "furniture-kit",
+          "model": "books",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.25,
+          "yaw": 128
+        },
+        {
+          "node": "u2",
+          "pack": "furniture-kit",
+          "model": "table",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.4854,
+          "yaw": 69
+        },
+        {
+          "node": "u2",
+          "pack": "furniture-kit",
+          "model": "ruground",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.2446,
+          "yaw": 298
+        },
+        {
+          "node": "u3",
+          "pack": "city-kit-suburban",
+          "model": "planter",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.5625,
+          "yaw": 121
+        },
+        {
+          "node": "u3",
+          "pack": "food-kit",
+          "model": "cup",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.8558,
+          "yaw": 325
+        },
+        {
+          "node": "u3",
+          "pack": "furniture-kit",
+          "model": "ruground",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.2446,
+          "yaw": 218
+        }
+      ],
+      "cycle_rank_base": 2,
+      "cycle_rank_upper": 1
+    },
+    {
+      "id": "L108",
+      "style": "roots",
+      "mat": "d7_trunk",
+      "accent": "d7_mutant",
+      "title": "Split canopy and buried roots",
+      "observation": "The root arches join across an unseen hollow.",
+      "sound": "scratch",
+      "rise": 3.5,
+      "entry_gallery": [
+        165.5,
+        10.5,
+        -30.0
+      ],
+      "origin": [
+        189.5,
+        10.5,
+        -30.0
+      ],
+      "morphology": {
+        "base": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            -1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "upper": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "nodes": {
+        "b0": [
+          189.5,
+          10.5,
+          -30.0
+        ],
+        "b1": [
+          203.5,
+          10.5,
+          -30.0
+        ],
+        "b2": [
+          203.5,
+          10.5,
+          -44.0
+        ],
+        "b3": [
+          217.5,
+          10.5,
+          -44.0
+        ],
+        "b4": [
+          217.5,
+          10.5,
+          -30.0
+        ],
+        "b5": [
+          203.5,
+          10.5,
+          -16.0
+        ],
+        "u0": [
+          246.5,
+          14.0,
+          -30.0
+        ],
+        "u1": [
+          246.5,
+          14.0,
+          -44.0
+        ],
+        "u2": [
+          260.5,
+          14.0,
+          -44.0
+        ],
+        "u3": [
+          260.5,
+          14.0,
+          -30.0
+        ]
+      },
+      "links": [
+        {
+          "a": "b0",
+          "b": "b1",
+          "kind": "walk"
+        },
+        {
+          "a": "b2",
+          "b": "b1",
+          "kind": "walk"
+        },
+        {
+          "a": "b2",
+          "b": "b3",
+          "kind": "walk"
+        },
+        {
+          "a": "b1",
+          "b": "b5",
+          "kind": "walk"
+        },
+        {
+          "a": "b1",
+          "b": "b4",
+          "kind": "walk"
+        },
+        {
+          "a": "b3",
+          "b": "b4",
+          "kind": "unlockable"
+        },
+        {
+          "a": "u1",
+          "b": "u0",
+          "kind": "walk"
+        },
+        {
+          "a": "u1",
+          "b": "u2",
+          "kind": "walk"
+        },
+        {
+          "a": "u0",
+          "b": "u3",
+          "kind": "walk"
+        },
+        {
+          "a": "u2",
+          "b": "u3",
+          "kind": "walk"
+        },
+        {
+          "a": "b4",
+          "b": "u0",
+          "kind": "stair"
+        }
+      ],
+      "optional_edge": [
+        "b3",
+        "b4"
+      ],
+      "survey": [
+        "b0",
+        "b5",
+        "u3"
+      ],
+      "props": [
+        {
+          "node": "b0",
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.4462,
+          "yaw": 267
+        },
+        {
+          "node": "b0",
+          "pack": "nature-kit",
+          "model": "rock-talle",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.0531,
+          "yaw": 176
+        },
+        {
+          "node": "b0",
+          "pack": "nature-kit",
+          "model": "rock-smalld",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.678,
+          "yaw": 63
+        },
+        {
+          "node": "b1",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 124
+        },
+        {
+          "node": "b1",
+          "pack": "nature-kit",
+          "model": "rock-tallc",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 215
+        },
+        {
+          "node": "b1",
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.8974,
+          "yaw": 114
+        },
+        {
+          "node": "b2",
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.8974,
+          "yaw": 16
+        },
+        {
+          "node": "b2",
+          "pack": "nature-kit",
+          "model": "cliff-half-rock",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.625,
+          "yaw": 180
+        },
+        {
+          "node": "b2",
+          "pack": "nature-kit",
+          "model": "cliff-large-rock",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.25,
+          "yaw": 4
+        },
+        {
+          "node": "b3",
+          "pack": "nature-kit",
+          "model": "cliff-large-rock",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.25,
+          "yaw": 74
+        },
+        {
+          "node": "b3",
+          "pack": "nature-kit",
+          "model": "cliff-half-rock",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.625,
+          "yaw": 164
+        },
+        {
+          "node": "b3",
+          "pack": "nature-kit",
+          "model": "cliff-half-rock",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.625,
+          "yaw": 40
+        },
+        {
+          "node": "b4",
+          "pack": "nature-kit",
+          "model": "rock-smalld",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.678,
+          "yaw": 4
+        },
+        {
+          "node": "b4",
+          "pack": "nature-kit",
+          "model": "cliff-large-rock",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.25,
+          "yaw": 350
+        },
+        {
+          "node": "b4",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 36
+        },
+        {
+          "node": "b5",
+          "pack": "nature-kit",
+          "model": "rock-smallb",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.6236,
+          "yaw": 116
+        },
+        {
+          "node": "b5",
+          "pack": "nature-kit",
+          "model": "rock-talle",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.0531,
+          "yaw": 195
+        },
+        {
+          "node": "b5",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 153
+        },
+        {
+          "node": "u0",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 247
+        },
+        {
+          "node": "u0",
+          "pack": "nature-kit",
+          "model": "rock-smalld",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.678,
+          "yaw": 251
+        },
+        {
+          "node": "u0",
+          "pack": "nature-kit",
+          "model": "rock-smalld",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.678,
+          "yaw": 267
+        },
+        {
+          "node": "u1",
+          "pack": "graveyard-kit",
+          "model": "debris-wood",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.4462,
+          "yaw": 29
+        },
+        {
+          "node": "u1",
+          "pack": "mini-dungeon",
+          "model": "pot",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.8974,
+          "yaw": 306
+        },
+        {
+          "node": "u1",
+          "pack": "nature-kit",
+          "model": "rock-smalld",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.678,
+          "yaw": 199
+        },
+        {
+          "node": "u2",
+          "pack": "nature-kit",
+          "model": "rock-tallc",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 42
+        },
+        {
+          "node": "u2",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 212
+        },
+        {
+          "node": "u2",
+          "pack": "graveyard-kit",
+          "model": "lantern-glass",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 274
+        },
+        {
+          "node": "u3",
+          "pack": "nature-kit",
+          "model": "cliff-large-rock",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.25,
+          "yaw": 259
+        },
+        {
+          "node": "u3",
+          "pack": "nature-kit",
+          "model": "cliff-large-rock",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.25,
+          "yaw": 289
+        },
+        {
+          "node": "u3",
+          "pack": "nature-kit",
+          "model": "cliff-large-rock",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.25,
+          "yaw": 77
+        }
+      ],
+      "cycle_rank_base": 1,
+      "cycle_rank_upper": 1
+    },
+    {
+      "id": "L320",
+      "style": "attraction",
+      "mat": "l320_path",
+      "accent": "l320_paint",
+      "title": "Silent ride queue",
+      "observation": "The queue doubles back under an elevated ride platform, without moving machinery.",
+      "sound": "creak",
+      "rise": 3.5,
+      "entry_gallery": [
+        -2.5,
+        10.5,
+        -152.0
+      ],
+      "origin": [
+        21.5,
+        10.5,
+        -152.0
+      ],
+      "morphology": {
+        "base": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "upper": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            -1
+          ]
+        ]
+      },
+      "nodes": {
+        "b0": [
+          21.5,
+          10.5,
+          -152.0
+        ],
+        "b1": [
+          35.5,
+          10.5,
+          -152.0
+        ],
+        "b2": [
+          35.5,
+          10.5,
+          -138.0
+        ],
+        "b3": [
+          49.5,
+          10.5,
+          -138.0
+        ],
+        "b4": [
+          49.5,
+          10.5,
+          -152.0
+        ],
+        "b5": [
+          35.5,
+          10.5,
+          -166.0
+        ],
+        "u0": [
+          78.5,
+          14.0,
+          -152.0
+        ],
+        "u1": [
+          92.5,
+          14.0,
+          -152.0
+        ],
+        "u2": [
+          92.5,
+          14.0,
+          -166.0
+        ],
+        "u3": [
+          106.5,
+          14.0,
+          -166.0
+        ]
+      },
+      "links": [
+        {
+          "a": "b0",
+          "b": "b1",
+          "kind": "walk"
+        },
+        {
+          "a": "b5",
+          "b": "b1",
+          "kind": "walk"
+        },
+        {
+          "a": "b1",
+          "b": "b2",
+          "kind": "walk"
+        },
+        {
+          "a": "b1",
+          "b": "b4",
+          "kind": "walk"
+        },
+        {
+          "a": "b2",
+          "b": "b3",
+          "kind": "walk"
+        },
+        {
+          "a": "b4",
+          "b": "b3",
+          "kind": "unlockable"
+        },
+        {
+          "a": "u0",
+          "b": "u1",
+          "kind": "walk"
+        },
+        {
+          "a": "u2",
+          "b": "u1",
+          "kind": "walk"
+        },
+        {
+          "a": "u2",
+          "b": "u3",
+          "kind": "walk"
+        },
+        {
+          "a": "b4",
+          "b": "u0",
+          "kind": "stair"
+        }
+      ],
+      "optional_edge": [
+        "b4",
+        "b3"
+      ],
+      "survey": [
+        "b0",
+        "b5",
+        "u3"
+      ],
+      "props": [
+        {
+          "node": "b0",
+          "pack": "food-kit",
+          "model": "pizza-box",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.1578,
+          "yaw": 269
+        },
+        {
+          "node": "b0",
+          "pack": "food-kit",
+          "model": "fries-empty",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.1121,
+          "yaw": 95
+        },
+        {
+          "node": "b0",
+          "pack": "city-kit-roads",
+          "model": "traffic-light",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 187
+        },
+        {
+          "node": "b1",
+          "pack": "food-kit",
+          "model": "soda-bottle",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 263
+        },
+        {
+          "node": "b1",
+          "pack": "food-kit",
+          "model": "pizza-box",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.1578,
+          "yaw": 76
+        },
+        {
+          "node": "b1",
+          "pack": "food-kit",
+          "model": "soda-can-crushed",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.9136,
+          "yaw": 272
+        },
+        {
+          "node": "b2",
+          "pack": "city-kit-roads",
+          "model": "construction-light",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.6233,
+          "yaw": 121
+        },
+        {
+          "node": "b2",
+          "pack": "furniture-kit",
+          "model": "bench",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.4687,
+          "yaw": 232
+        },
+        {
+          "node": "b2",
+          "pack": "furniture-kit",
+          "model": "table",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.4854,
+          "yaw": 310
+        },
+        {
+          "node": "b3",
+          "pack": "food-kit",
+          "model": "soda-bottle",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 105
+        },
+        {
+          "node": "b3",
+          "pack": "furniture-kit",
+          "model": "chair",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 180
+        },
+        {
+          "node": "b3",
+          "pack": "prototype-kit",
+          "model": "crate",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.25,
+          "yaw": 344
+        },
+        {
+          "node": "b4",
+          "pack": "city-kit-roads",
+          "model": "construction-fence",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.6,
+          "yaw": 129
+        },
+        {
+          "node": "b4",
+          "pack": "furniture-kit",
+          "model": "trashcan",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 244
+        },
+        {
+          "node": "b4",
+          "pack": "city-kit-roads",
+          "model": "traffic-light",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.8,
+          "yaw": 178
+        },
+        {
+          "node": "b5",
+          "pack": "prototype-kit",
+          "model": "crate",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.25,
+          "yaw": 38
+        },
+        {
+          "node": "b5",
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.25,
+          "yaw": 70
+        },
+        {
+          "node": "b5",
+          "pack": "prototype-kit",
+          "model": "lever-double",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.9375,
+          "yaw": 350
+        },
+        {
+          "node": "u0",
+          "pack": "city-kit-roads",
+          "model": "construction-light",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.6233,
+          "yaw": 98
+        },
+        {
+          "node": "u0",
+          "pack": "city-kit-roads",
+          "model": "construction-light",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.6233,
+          "yaw": 159
+        },
+        {
+          "node": "u0",
+          "pack": "prototype-kit",
+          "model": "lever-double",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.9375,
+          "yaw": 259
+        },
+        {
+          "node": "u1",
+          "pack": "food-kit",
+          "model": "fries-empty",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.1121,
+          "yaw": 210
+        },
+        {
+          "node": "u1",
+          "pack": "city-kit-roads",
+          "model": "construction-cone",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.25,
+          "yaw": 208
+        },
+        {
+          "node": "u1",
+          "pack": "food-kit",
+          "model": "fries-empty",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.1121,
+          "yaw": 17
+        },
+        {
+          "node": "u2",
+          "pack": "city-kit-roads",
+          "model": "traffic-light",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 86
+        },
+        {
+          "node": "u2",
+          "pack": "city-kit-roads",
+          "model": "traffic-light",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 7
+        },
+        {
+          "node": "u2",
+          "pack": "city-kit-roads",
+          "model": "construction-light",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.6233,
+          "yaw": 70
+        },
+        {
+          "node": "u3",
+          "pack": "furniture-kit",
+          "model": "trashcan",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 232
+        },
+        {
+          "node": "u3",
+          "pack": "city-kit-roads",
+          "model": "construction-light",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.6233,
+          "yaw": 116
+        },
+        {
+          "node": "u3",
+          "pack": "furniture-kit",
+          "model": "bench",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.4687,
+          "yaw": 51
+        }
+      ],
+      "cycle_rank_base": 1,
+      "cycle_rank_upper": 0
+    },
+    {
+      "id": "L808",
+      "style": "neon",
+      "mat": "l808_city",
+      "accent": "l808_magenta",
+      "title": "Afterimage relay fields",
+      "observation": "The grid changes its color in bands while the static sunset refuses to move.",
+      "sound": "pipe_clank",
+      "rise": 3.5,
+      "entry_gallery": [
+        105.5,
+        10.5,
+        -168.0
+      ],
+      "origin": [
+        129.5,
+        10.5,
+        -168.0
+      ],
+      "morphology": {
+        "base": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            -1
+          ],
+          [
+            3,
+            -1
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "upper": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      "nodes": {
+        "b0": [
+          129.5,
+          10.5,
+          -168.0
+        ],
+        "b1": [
+          143.5,
+          10.5,
+          -168.0
+        ],
+        "b2": [
+          157.5,
+          10.5,
+          -168.0
+        ],
+        "b3": [
+          157.5,
+          10.5,
+          -182.0
+        ],
+        "b4": [
+          171.5,
+          10.5,
+          -182.0
+        ],
+        "b5": [
+          171.5,
+          10.5,
+          -168.0
+        ],
+        "u0": [
+          200.5,
+          14.0,
+          -168.0
+        ],
+        "u1": [
+          214.5,
+          14.0,
+          -168.0
+        ],
+        "u2": [
+          214.5,
+          14.0,
+          -154.0
+        ],
+        "u3": [
+          228.5,
+          14.0,
+          -154.0
+        ]
+      },
+      "links": [
+        {
+          "a": "b0",
+          "b": "b1",
+          "kind": "walk"
+        },
+        {
+          "a": "b1",
+          "b": "b2",
+          "kind": "walk"
+        },
+        {
+          "a": "b3",
+          "b": "b2",
+          "kind": "walk"
+        },
+        {
+          "a": "b3",
+          "b": "b4",
+          "kind": "walk"
+        },
+        {
+          "a": "b2",
+          "b": "b5",
+          "kind": "walk"
+        },
+        {
+          "a": "b4",
+          "b": "b5",
+          "kind": "unlockable"
+        },
+        {
+          "a": "u0",
+          "b": "u1",
+          "kind": "walk"
+        },
+        {
+          "a": "u1",
+          "b": "u2",
+          "kind": "walk"
+        },
+        {
+          "a": "u2",
+          "b": "u3",
+          "kind": "walk"
+        },
+        {
+          "a": "b5",
+          "b": "u0",
+          "kind": "stair"
+        }
+      ],
+      "optional_edge": [
+        "b4",
+        "b5"
+      ],
+      "survey": [
+        "b0",
+        "b5",
+        "u3"
+      ],
+      "props": [
+        {
+          "node": "b0",
+          "pack": "city-kit-roads",
+          "model": "light-square",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 25
+        },
+        {
+          "node": "b0",
+          "pack": "space-kit",
+          "model": "machine-generatorlarge",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.6567,
+          "yaw": 265
+        },
+        {
+          "node": "b0",
+          "pack": "space-kit",
+          "model": "machine-wireless",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.0,
+          "yaw": 235
+        },
+        {
+          "node": "b1",
+          "pack": "space-kit",
+          "model": "machine-barrel",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.1603,
+          "yaw": 319
+        },
+        {
+          "node": "b1",
+          "pack": "space-kit",
+          "model": "machine-wireless",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.0,
+          "yaw": 62
+        },
+        {
+          "node": "b1",
+          "pack": "space-kit",
+          "model": "satellitedish",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.1194,
+          "yaw": 181
+        },
+        {
+          "node": "b2",
+          "pack": "space-kit",
+          "model": "pipe-open",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.75,
+          "yaw": 145
+        },
+        {
+          "node": "b2",
+          "pack": "prototype-kit",
+          "model": "lever-single",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.125,
+          "yaw": 40
+        },
+        {
+          "node": "b2",
+          "pack": "space-kit",
+          "model": "machine-barrel",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.1603,
+          "yaw": 107
+        },
+        {
+          "node": "b3",
+          "pack": "space-kit",
+          "model": "pipe-open",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.75,
+          "yaw": 81
+        },
+        {
+          "node": "b3",
+          "pack": "space-kit",
+          "model": "desk-computerscreen",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.5179,
+          "yaw": 201
+        },
+        {
+          "node": "b3",
+          "pack": "space-kit",
+          "model": "pipe-open",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.75,
+          "yaw": 191
+        },
+        {
+          "node": "b4",
+          "pack": "space-kit",
+          "model": "machine-generatorlarge",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.6567,
+          "yaw": 297
+        },
+        {
+          "node": "b4",
+          "pack": "space-kit",
+          "model": "barrel",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.5625,
+          "yaw": 220
+        },
+        {
+          "node": "b4",
+          "pack": "space-kit",
+          "model": "barrel",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.5625,
+          "yaw": 133
+        },
+        {
+          "node": "b5",
+          "pack": "space-kit",
+          "model": "desk-chair",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 180
+        },
+        {
+          "node": "b5",
+          "pack": "space-kit",
+          "model": "satellitedish",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.1194,
+          "yaw": 216
+        },
+        {
+          "node": "b5",
+          "pack": "space-kit",
+          "model": "machine-generatorlarge",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 0.6567,
+          "yaw": 197
+        },
+        {
+          "node": "u0",
+          "pack": "prototype-kit",
+          "model": "lever-single",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.125,
+          "yaw": 171
+        },
+        {
+          "node": "u0",
+          "pack": "space-kit",
+          "model": "machine-barrel",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.1603,
+          "yaw": 7
+        },
+        {
+          "node": "u0",
+          "pack": "space-kit",
+          "model": "desk-computer",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.8929,
+          "yaw": 34
+        },
+        {
+          "node": "u1",
+          "pack": "space-kit",
+          "model": "machine-barrel",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.1603,
+          "yaw": 157
+        },
+        {
+          "node": "u1",
+          "pack": "space-kit",
+          "model": "machine-generator",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 0.7143,
+          "yaw": 310
+        },
+        {
+          "node": "u1",
+          "pack": "space-kit",
+          "model": "pipe-open",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 0.75,
+          "yaw": 212
+        },
+        {
+          "node": "u2",
+          "pack": "space-kit",
+          "model": "pipe-ring",
+          "dx": -3.56,
+          "dz": -3.45,
+          "height": 1.0,
+          "yaw": 193
+        },
+        {
+          "node": "u2",
+          "pack": "city-kit-roads",
+          "model": "light-square",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.8,
+          "yaw": 318
+        },
+        {
+          "node": "u2",
+          "pack": "space-kit",
+          "model": "satellitedish",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 1.1194,
+          "yaw": 310
+        },
+        {
+          "node": "u3",
+          "pack": "space-kit",
+          "model": "satellitedish",
+          "dx": 3.56,
+          "dz": -3.45,
+          "height": 1.1194,
+          "yaw": 79
+        },
+        {
+          "node": "u3",
+          "pack": "space-kit",
+          "model": "machine-generator",
+          "dx": -3.56,
+          "dz": 3.45,
+          "height": 0.7143,
+          "yaw": 5
+        },
+        {
+          "node": "u3",
+          "pack": "prototype-kit",
+          "model": "shape-hollow-hexagon",
+          "dx": 3.56,
+          "dz": 3.45,
+          "height": 1.25,
+          "yaw": 29
+        }
+      ],
+      "cycle_rank_base": 1,
+      "cycle_rank_upper": 0
+    }
+  ]
+}

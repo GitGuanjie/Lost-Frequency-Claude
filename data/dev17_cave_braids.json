@@ -1,0 +1,297 @@
+{
+  "schema": "dev17_sdf_routes_v1",
+  "stable_road_nodes": 18,
+  "braids": [
+    {
+      "id": "Fissure switchbacks",
+      "entry_road": 1,
+      "exit_road": 3,
+      "floor_nodes": [
+        [
+          36,
+          -0.6,
+          5
+        ],
+        [
+          39,
+          3,
+          -12
+        ],
+        [
+          56,
+          7,
+          -20
+        ],
+        [
+          72,
+          4,
+          -17
+        ],
+        [
+          82,
+          -1,
+          -10
+        ],
+        [
+          82,
+          -4,
+          2
+        ]
+      ],
+      "radius_m": 2.1
+    },
+    {
+      "id": "Drowned quarry switchback",
+      "entry_road": 2,
+      "exit_road": 4,
+      "floor_nodes": [
+        [
+          60,
+          -2,
+          9
+        ],
+        [
+          66,
+          -4,
+          21
+        ],
+        [
+          74,
+          -8,
+          28
+        ],
+        [
+          90,
+          -10,
+          26
+        ],
+        [
+          104,
+          -9,
+          10
+        ],
+        [
+          104,
+          -6,
+          -6
+        ]
+      ],
+      "radius_m": 2.2
+    },
+    {
+      "id": "Overlook and underpass",
+      "entry_road": 4,
+      "exit_road": 6,
+      "floor_nodes": [
+        [
+          104,
+          -6,
+          -6
+        ],
+        [
+          116,
+          -2,
+          -19
+        ],
+        [
+          128,
+          2,
+          -28
+        ],
+        [
+          143,
+          0,
+          -32
+        ],
+        [
+          152,
+          -4,
+          -25
+        ],
+        [
+          150,
+          -8,
+          -12
+        ]
+      ],
+      "radius_m": 2.3
+    },
+    {
+      "id": "Dark antechambers",
+      "entry_road": 9,
+      "exit_road": 11,
+      "floor_nodes": [
+        [
+          190,
+          4.5,
+          -8
+        ],
+        [
+          196,
+          0,
+          -23
+        ],
+        [
+          210,
+          -6,
+          -31
+        ],
+        [
+          224,
+          -5,
+          -23
+        ],
+        [
+          232,
+          -1,
+          -8
+        ],
+        [
+          230,
+          2,
+          14
+        ]
+      ],
+      "radius_m": 2.1
+    },
+    {
+      "id": "Deep detour of drowned dip",
+      "entry_road": 11,
+      "exit_road": 14,
+      "floor_nodes": [
+        [
+          230,
+          2,
+          14
+        ],
+        [
+          238,
+          -3,
+          29
+        ],
+        [
+          248,
+          -8,
+          43
+        ],
+        [
+          264,
+          -9,
+          47
+        ],
+        [
+          278,
+          -4,
+          47
+        ],
+        [
+          282,
+          1,
+          35
+        ]
+      ],
+      "radius_m": 2.1
+    },
+    {
+      "id": "Upper calcite skyloop",
+      "entry_road": 14,
+      "exit_road": 16,
+      "floor_nodes": [
+        [
+          282,
+          1,
+          35
+        ],
+        [
+          295,
+          6,
+          53
+        ],
+        [
+          307,
+          11,
+          58
+        ],
+        [
+          321,
+          10,
+          63
+        ],
+        [
+          335,
+          5,
+          62
+        ],
+        [
+          336,
+          0,
+          46
+        ]
+      ],
+      "radius_m": 2.2
+    }
+  ],
+  "links": [
+    {
+      "id": "Upper interleaving crosslink",
+      "source_braid": 2,
+      "source_node": 3,
+      "target_braid": 3,
+      "target_node": 1,
+      "floor_nodes": [
+        [
+          143,
+          0,
+          -32
+        ],
+        [
+          161,
+          2,
+          -38
+        ],
+        [
+          179,
+          4,
+          -37
+        ],
+        [
+          196,
+          0,
+          -23
+        ]
+      ],
+      "radius_m": 2.0
+    },
+    {
+      "id": "Road-shaft alternate",
+      "source_braid": 2,
+      "source_node": 4,
+      "target_braid": 3,
+      "target_node": 2,
+      "floor_nodes": [
+        [
+          152,
+          -4,
+          -25
+        ],
+        [
+          168,
+          -2,
+          -38
+        ],
+        [
+          187,
+          -3,
+          -42
+        ],
+        [
+          210,
+          -6,
+          -31
+        ]
+      ],
+      "radius_m": 2.0
+    }
+  ],
+  "sdf_notes": "Stable immutable 9th Road side circuits; SDF flat interpolated floors; not engine tested"
+}

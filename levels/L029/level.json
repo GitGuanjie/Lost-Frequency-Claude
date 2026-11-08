@@ -1,0 +1,42 @@
+{
+  "stable_id": "L029",
+  "scene": "res://levels/L029/L029.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev5 source candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L025"
+  ],
+  "signature": "Pink-sky harbor, wooden market, white-leaf trees and hazardous ocean crossings",
+  "mechanics": [
+    "trading_hub",
+    "island_cliffs",
+    "harbor",
+    "unsafe_ocean"
+  ],
+  "exits": [
+    {
+      "id": "L029>L114#1",
+      "to": "L114",
+      "basis": "SOURCE",
+      "confidence": "DANGEROUS+UNKNOWN",
+      "method": "Sail several days away from the island",
+      "source_quote": "all attempts result in the death of the wanderers",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-29",
+      "trigger_type": "vehicle"
+    },
+    {
+      "id": "L029>L284#2",
+      "to": "L284",
+      "basis": "SOURCE",
+      "confidence": "DANGEROUS+UNKNOWN",
+      "method": "Same ocean crossing",
+      "source_quote": "one would theoretically end up in Level 114 or Level 284",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-29",
+      "trigger_type": "vehicle"
+    }
+  ],
+  "notes": "Compact exploration adaptation. Runtime Godot and Windows verification required; no automatic PLAYABLE promotion.",
+  "entity_policy": "SOURCED ENTITIES ONLY: the Kraken offshore; unnamed ocean entities as reports; no land entities named"
+}

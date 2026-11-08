@@ -23,6 +23,8 @@ extends LevelBase
 const Cells := preload("res://levels/L037/L037_cells.gd")
 const Kinds := preload("res://levels/L037/L037_kinds.gd")
 const Water := preload("res://levels/L037/L037_water.gd")
+const Annex := preload("res://levels/L037/L037_vertical_annex.gd")
+const Signature := preload("res://levels/L037/L037_signature_halls.gd")
 const CS := 32.0
 const WALK := -0.18
 const DRY := 0.35
@@ -30,11 +32,17 @@ const AMB := 0.12
 const SKY_COL := Color(0.93, 0.99, 1.0)
 const UW_COL := Color(0.45, 0.92, 1.0)
 const IMMERSE_S := 7.0
-const HUB := {Vector2i(0, 0): "hub_hall", Vector2i(1, 0): "hub_pit"}
+const HUB := {Vector2i(0, 0): "hub_hall", Vector2i(1, 0): "hub_pit",
+    Vector2i(2, 0): "hub_annex_a", Vector2i(3, 0): "hub_annex_b",
+    Vector2i(4, 0): "hub_colonnade", Vector2i(5, 0): "hub_twilight"}
 ## Fixed openings around the authored hub: "ax,az,axis" -> [[t0, width, ceiling]].
 const HUB_BORDERS := {
 	"-1,0,x": [], "0,-1,z": [[8, 2, 3.6]], "0,0,z": [[10, 2, 3.6]], "0,0,x": [[6, 3, 4.4]],
 	"1,-1,z": [[4, 2, 3.4]], "1,0,x": [[9, 2, 3.6]], "1,0,z": [[11, 2, 3.4]],
+    "2,-1,z": [], "2,0,z": [], "2,0,x": [[9, 2, 3.6]],
+    "3,-1,z": [], "3,0,z": [], "3,0,x": [[9, 2, 3.6]],
+    "4,-1,z": [], "4,0,z": [], "4,0,x": [[9, 2, 3.6]],
+    "5,-1,z": [], "5,0,z": [], "5,0,x": [[9, 2, 3.6]],
 }
 
 var world: ChunkWorld
@@ -57,6 +65,9 @@ var _rolled := false
 var _held_msg := false
 var _cab_trigger: ExitTrigger
 var _saved_aa: Array = []
+var _acoustic_memory := {}
+var _acoustic_cooldown := 0.0
+var _touch_events: Dictionary = {}
 
 
 func build() -> void:
@@ -130,6 +141,16 @@ func build() -> void:
 	add_shot("pit", Vector3(40.9, Kinds.LEDGE + 1.62, 14.2), Vector3(53.0, -4.4, 15.8))
 	add_landmark("Spawn alcove, Grand Pool Hall", Vector3(8.0, DRY, 27.0))
 	add_landmark("The Stair Pit", Vector3(48.0, WALK, 16.0))
+	add_landmark("Silent underwater depth", Vector3(51.0, -6.0, 15.0))
+	add_landmark("Submerged upper terrace", Vector3(45.0, -1.6, 19.0))
+	add_landmark("Submerged lower terrace", Vector3(52.0, -4.35, 22.6))
+	add_shot("deep_acoustics", Vector3(46.0, -2.0, 15.0), Vector3(51.0, -6.2, 15.0))
+	add_shot("dev13_underwater_terraces", Vector3(44.8, -0.6, 19.7), Vector3(51.3, -4.0, 22.6))
+	add_landmark("DEV17 raised pool gallery", Vector3(80, 3.17, 19))
+	add_landmark("DEV17 second pool gallery", Vector3(112, 4.92, 4.5))
+	add_landmark("DEV19 arched colonnade upper crossing", Vector3(146, 2.8, 15))
+	add_landmark("DEV19 twilight basin submerged return", Vector3(177, -3.8, 20))
+	add_shot("dev17_pool_lantern", Vector3(78, 8.12, 5), Vector3(83, -6.4, 17))
 
 
 func _materials() -> void:
@@ -266,6 +287,10 @@ func _build_chunk(cx: int, cz: int, _version: int, node: Node3D) -> Dictionary:
 			Kinds.hub_hall(g, meta)
 		"hub_pit":
 			Kinds.hub_pit(g, meta)
+		"hub_annex_a", "hub_annex_b":
+			Kinds.hub_annex(g, meta, kind == "hub_annex_b")
+		"hub_colonnade", "hub_twilight":
+			Signature.paint(g, meta, kind == "hub_twilight")
 		"corridor":
 			Kinds.corridor(g, r, ops, _axis_of(cx, cz), meta, not qa_fixture and _h01(cx, cz, 233) < 0.12)
 		"pit":
@@ -286,6 +311,19 @@ func _build_chunk(cx: int, cz: int, _version: int, node: Node3D) -> Dictionary:
 	g.emit_stairs(k, ox, oz, "l37_tile")
 	g.emit_pillars(k, ox, oz, "l37_tile")
 	_emit_lights(g, k, ox, oz, group)
+	if cx == 1 and cz == 0:
+		_submerged_stair_pit_terraces(k, Vector3(ox, 0.0, oz), group)
+	if kind == "hub_annex_a" or kind == "hub_annex_b":
+		var annex_meta := Annex.install(k, Vector3(ox, 0.0, oz), kind == "hub_annex_b")
+		meta["vertical_annex"] = annex_meta
+		for lp in annex_meta["lanterns"]:
+			var at := Vector3(float(lp[0]), float(lp[1]), float(lp[2]))
+			lights.add_anchor(at, UW_COL, 1.5, 7.2, 0.0, group)
+	if kind == "hub_colonnade" or kind == "hub_twilight":
+		var signature_meta := Signature.install(k, Vector3(ox, 0.0, oz), kind == "hub_twilight")
+		meta["dev19_signature"] = signature_meta
+		for at in signature_meta["lanterns"]:
+			lights.add_anchor(at, UW_COL, 0.65, 6.8, 0.0, group)
 	k.commit()
 	var wv := WaterVolume.new()
 	wv.name = "Water"
@@ -294,9 +332,131 @@ func _build_chunk(cx: int, cz: int, _version: int, node: Node3D) -> Dictionary:
 	wv.tint = Color(0.10, 0.52, 0.54)
 	meta["min_floor"] = g.min_floor()
 	_chunk_exits(kind, cx, cz, node, meta)
+	_install_environment_touches(node, kind, cx, cz, meta)
+	_install_signature_interactions(node, kind, cx, cz, meta)
 	meta["boxes"] = k.stats["boxes"]
 	return meta
 
+
+
+## These are interactions with the unchanged architecture and water, NOT a
+## machine or puzzle switch. The Wiki expressly depicts pristine, purposeless
+## tiles, irregular lighting, silence and dangerous deep-water staircases.
+## Visual glow and sound fade are transient; the geometry remains untouched.
+func _install_environment_touches(owner: Node3D, kind: String, cx: int, cz: int, meta: Dictionary) -> void:
+	var sites: Array = []
+	match kind:
+		"hub_hall":
+			sites = [["quiet", Vector3(8.1, 1.25, 27.4), "Listen to the water", "[no echo follows the small splash]"]]
+		"hub_pit":
+			sites = [["pit", Vector3(42.5, 1.3, 13.0), "Feel the air above the stair pit", "[the air is warm; the water below does not reveal its depth]"]]
+		"hub_annex_a":
+			sites = [["lightwell", Vector3(80.2, 3.75, 18.5), "Watch light bend through the pool", "[light falls from a direction with no visible source]"]]
+		"hub_annex_b":
+			sites = [["still", Vector3(112.2, 5.35, 4.5), "Touch the perfectly smooth tile", "[the tile is warm, immaculate, and inexplicably soothing]"]]
+	if sites.is_empty():
+		return
+	meta["dev18_sensory_sites"] = sites.size()
+	for info in sites:
+		var sid: String = info[0]
+		var at: Vector3 = info[1]
+		var prompt: String = info[2]
+		var message: String = info[3]
+		# A small luminous water reflection is the only visual signal. No debris,
+		# human-made controls or entities are inserted into Sublimity.
+		var response := OmniLight3D.new()
+		response.name = "QuietReflection_" + sid
+		response.position = at + Vector3.DOWN * 0.35
+		response.light_color = UW_COL
+		response.light_energy = 0.0
+		response.omni_range = 5.0
+		owner.add_child(response)
+		make_interactable(at, Vector3(1.6, 1.7, 1.6), prompt, func(_p):
+			_touch_events[sid] = true
+			SaveService.record_discovery(stable_id, "sensory:" + sid, message)
+			Overlay.subtitle(message, 4.2)
+			var tw := response.create_tween()
+			tw.tween_property(response, "light_energy", 1.25, 0.45)
+			tw.tween_interval(0.55)
+			tw.tween_property(response, "light_energy", 0.0, 2.4), owner)
+
+
+
+## DEV19 — guided environmental affordances, not artificial machinery.
+## The pale sequence of reflections shows a safe OVER-pool crossing; faint
+## underwater lights briefly reveal a RETURN path between the two banks.
+## They change sightlines for a few seconds without changing any exit rule.
+func _install_signature_interactions(owner: Node3D, kind: String, cx: int, cz: int, meta: Dictionary) -> void:
+	if kind != "hub_colonnade" and kind != "hub_twilight":
+		return
+	var o := Vector3(cx * CS, 0.0, cz * CS)
+	var sites: Array = []
+	if kind == "hub_colonnade":
+		sites = [
+			["upper_arches", Vector3(18, 3.75, 15), "Watch the changing reflections",
+				"Three reflected bands illuminate the crossing, one after another."],
+			["low_basin", Vector3(10, -1.0, 14), "Look into the flooded colonnade",
+				"An upper passage and two flooded descents cross the same silent pool."]]
+	else:
+		sites = [
+			["twilight_rim", Vector3(5, 0.90, 26), "Listen over the dark water",
+				"The water is warm. The deeper rooms seem to swallow sound."],
+			["twilight_return", Vector3(16, -3.1, 20), "Trace the light below the surface",
+				"A submerged return bends beneath the opposite bank. There is no visible source of light."]]
+	meta["dev19_environment_interactions"] = sites.size()
+	for site in sites:
+		var sid: String = site[0]
+		var at: Vector3 = o + site[1]
+		var msg: String = site[3]
+		var lamps: Array = []
+		for i in 3:
+			var glow := OmniLight3D.new()
+			glow.name = "TransientPoolLight_%s_%d" % [sid, i]
+			glow.position = at + Vector3(float(i - 1) * 3.1, -0.6, 1.0)
+			glow.light_color = UW_COL if i != 1 else SKY_COL
+			glow.light_energy = 0.0
+			glow.omni_range = 6.5
+			glow.shadow_enabled = false
+			owner.add_child(glow)
+			lamps.append(glow)
+		make_interactable(at, Vector3(1.9, 1.85, 1.9), str(site[2]), func(_p):
+			SaveService.record_discovery(stable_id, "signature:" + sid, msg, "ADAPTATION")
+			Overlay.subtitle(msg, 5.0)
+			var tw := owner.create_tween()
+			for lamp in lamps:
+				tw.tween_property(lamp, "light_energy", 1.75, 0.45)
+				tw.tween_interval(0.2)
+			for lamp in lamps:
+				tw.tween_property(lamp, "light_energy", 0.0, 1.1)
+			sound.play_at("water_bed", {"seconds": 2.0}, at, -28.0), owner)
+
+
+## DEV13 localized source-compatible adaptation: partially sunken tiled
+## maintenance terraces within the existing deep stair pit. They are not a
+## settlement, NPC location, or a new exit. The original staircase still reaches
+## the -7.5 m pit; these give swimmers an additional stepped descent route.
+## Positions are LOCAL to the authored (1,0) hub chunk.
+func _submerged_stair_pit_terraces(k: GeoKit, o: Vector3, group: String) -> void:
+	var upper := -1.60
+	var middle := -4.35
+	var bottom := -7.50
+	# The upper terrace meets the side of the original broad descending stair
+	# at local x~12, z~17.9; no flooring is placed over the stair itself.
+	k.slab(o.x + 11.8, 17.7 + o.z, o.x + 14.2, 20.0 + o.z,
+		upper, 0.16, "l37_tile")
+	var h0 := o + Vector3(13.4, upper, 19.0)
+	var h1 := o + Vector3(20.1, middle, 22.6)
+	k.ramp(h0, h1, 1.6, 0.17, "l37_tile")
+	k.slab(o.x + 19.3, 21.7 + o.z, o.x + 20.9, 23.3 + o.z,
+		middle, 0.17, "l37_tile")
+	# Connect the intermediate landing all the way to the pit bottom.
+	var l0 := o + Vector3(20.1, middle, 22.6)
+	var l1 := o + Vector3(14.0, bottom, 22.6)
+	k.ramp(l0, l1, 1.6, 0.17, "l37_tile")
+	for p in [Vector3(13.2, -1.3, 19.2), Vector3(20.1, -4.0, 22.7), Vector3(14.0, -6.7, 22.6)]:
+		var at := o + p
+		k.box(at, Vector3(0.28, 0.18, 0.28), "l37_panel_uw", GeoKit.ALL, false)
+		lights.add_anchor(at, UW_COL, 1.1, 5.2, 0.0, group)
 
 func _emit_lights(g, k: GeoKit, ox: float, oz: float, group: String) -> void:
 	var o := Vector3(ox, 0, oz)
@@ -468,6 +628,31 @@ func level_process(delta: float) -> void:
 		_rolled = false
 		_held_msg = false
 	_acoustics(delta, depth)
+	_depth_landmarks(delta, p, depth)
+
+
+## Source-aligned acoustic exploration: the place has no entities and no
+## visible signs. Position-localized impressions are NOT audible sources and
+## don't add permanent objects to the pristine tilework. Trigger once per visit.
+func _depth_landmarks(delta: float, p: Vector3, depth: float) -> void:
+	_acoustic_cooldown = maxf(0.0, _acoustic_cooldown - delta)
+	if _acoustic_cooldown > 0.0:
+		return
+	var spots := [
+		{"key": "hub_well", "p": Vector3(17.0, -0.18, 14.0), "radius": 4.2, "say": "[your own footsteps go quiet while the water keeps moving]"},
+		{"key": "stair_drop", "p": Vector3(47.0, -1.8, 16.0), "radius": 4.5, "say": "[the light bends away from a deeper staircase]"},
+		{"key": "deep_heart", "p": Vector3(51.0, -6.0, 15.0), "radius": 5.2, "say": "[no echo returns; the water is perfectly still below you]"}
+	]
+	for rec in spots:
+		var key: String = rec["key"]
+		if _acoustic_memory.has(key):
+			continue
+		var q: Vector3 = rec["p"]
+		if Vector2(p.x - q.x, p.z - q.z).length() < float(rec["radius"]) and absf(p.y - q.y) < (3.0 if depth < 1.0 else 4.0):
+			_acoustic_memory[key] = true
+			_acoustic_cooldown = 7.0
+			Overlay.subtitle(str(rec["say"]), 3.5)
+			break
 
 
 ## Altered sound: no reverberation (bus reverb near dry), noises that suddenly
@@ -507,6 +692,34 @@ func _acoustics(delta: float, depth: float) -> void:
 
 
 const ITER_SHOTS := true   # TEMP iteration views; removed before commit
+
+
+func qa_self_test() -> Array:
+	var result: Array = []
+	# DEV13: ray-tested submerged galleries in authored chunk (1,0).
+	world.build_around(Vector3(52.1, -4.0, 22.6), 1)
+	await get_tree().physics_frame
+	var physics := get_world_3d().direct_space_state
+	var up := physics.intersect_ray(PhysicsRayQueryParameters3D.create(
+		Vector3(45.0, 0.3, 19.0), Vector3(45.0, -3.3, 19.0), 1))
+	var down := physics.intersect_ray(PhysicsRayQueryParameters3D.create(
+		Vector3(52.1, -2.1, 22.6), Vector3(52.1, -5.3, 22.6), 1))
+	result.append({"what": "DEV13 underwater upper gallery has -1.6m collision top",
+		"ok": not up.is_empty() and absf(float(up.get("position", Vector3.ZERO).y) + 1.6) < 0.2,
+		"detail": up.get("position", Vector3.ZERO)})
+	result.append({"what": "DEV13 underwater lower gallery has -4.35m collision top",
+		"ok": not down.is_empty() and absf(float(down.get("position", Vector3.ZERO).y) + 4.35) < 0.2,
+		"detail": down.get("position", Vector3.ZERO)})
+	for rec in [
+		[Vector3(17.0, -0.18, 14.0), 0.18],
+		[Vector3(47.0, -1.8, 16.0), 1.8],
+		[Vector3(51.0, -6.0, 15.0), 6.0],
+	]:
+		_acoustic_cooldown = 0.0
+		_depth_landmarks(0.01, rec[0], rec[1])
+	result.append({"what": "three distinct position-triggered acoustic anomalies", "ok": _acoustic_memory.size() == 3})
+	result.append({"what": "acoustic exploration adds no hostile entity or cross-level exit", "ok": not _acoustic_memory.is_empty()})
+	return result
 
 
 func qa_capture_plan() -> Array:

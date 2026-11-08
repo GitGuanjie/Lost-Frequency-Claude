@@ -1,0 +1,19 @@
+{
+  "stable_id": "L096",
+  "scene": "res://levels/L096/L096.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "Quiet mountain house with porcelain, dust and a restorative interior",
+  "mechanics": [
+    "single_quiet_house",
+    "sweep_dust",
+    "mountain_overlook"
+  ],
+  "exits": [],
+  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
+  "entity_policy": "NO ENTITY PER SOURCE"
+}

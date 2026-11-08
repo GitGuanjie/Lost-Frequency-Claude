@@ -1,0 +1,122 @@
+{
+  "version": "1.5.0-dev11",
+  "base": "1.5.0-dev10",
+  "files_changed": 18,
+  "files": [
+    {
+      "file": "EXPORT_DEV11_WINDOWS.ps1",
+      "change": "ADDED",
+      "bytes": 1590,
+      "sha256": "2725173839f54b16662749adcd601c3f36831a59638c24ff78bd625e64818f17"
+    },
+    {
+      "file": "RUN_DEV11_QA_WINDOWS.ps1",
+      "change": "ADDED",
+      "bytes": 666,
+      "sha256": "a9df092f49f5ee828f4b26a8e28bff06cc23d613e7717671f2fb84ec49da6d75"
+    },
+    {
+      "file": "VERIFY_DEV11_OFFLINE.py",
+      "change": "ADDED",
+      "bytes": 1184,
+      "sha256": "c8167a1a072bd3bb6fdcde9b926bd3a740e0d88f61e43735e31a5ffe635b27ef"
+    },
+    {
+      "file": "core/world/ModelDress.gd",
+      "change": "MODIFIED",
+      "bytes": 5439,
+      "sha256": "97c48ab51b3640f950cd000f433b7809515f37b040d83c6a8999ddf5d2704d56"
+    },
+    {
+      "file": "docs/production/NEXT_SESSION_V150_DEV11_CN.md",
+      "change": "ADDED",
+      "bytes": 2917,
+      "sha256": "76a700a28194a5ba615252d72f4287e07021c1720b7a1dd94eaa93526deb8e1b"
+    },
+    {
+      "file": "docs/production/V150_DEV11_REPORT_CN.md",
+      "change": "ADDED",
+      "bytes": 2212,
+      "sha256": "7c04f84a4eaa805e019df7d165710d7f11212f2866c9d535d6ff42f3178f382e"
+    },
+    {
+      "file": "levels/L004/L004.gd",
+      "change": "MODIFIED",
+      "bytes": 17851,
+      "sha256": "3edd6b4d03acc03231dfc99779dd1af2c9fcef15326b102704063168bddc3ad8"
+    },
+    {
+      "file": "levels/L005/L005.gd",
+      "change": "MODIFIED",
+      "bytes": 30716,
+      "sha256": "ab30745e9d1e13773bed9a53a8399d6d4e2033a50539742f55f61a28ce8e4f6d"
+    },
+    {
+      "file": "levels/L009/L009.gd",
+      "change": "MODIFIED",
+      "bytes": 37277,
+      "sha256": "e050f9bccad652c034d838b5585c8e25bd9e630478bc6620a71813a78fa27c2f"
+    },
+    {
+      "file": "levels/L011/L011.gd",
+      "change": "MODIFIED",
+      "bytes": 37200,
+      "sha256": "51326f85b09d6118560adcc490554333f0682e9fc6b8cf1ca867c7477743c6d4"
+    },
+    {
+      "file": "levels/L037/L037.gd",
+      "change": "MODIFIED",
+      "bytes": 23317,
+      "sha256": "ca554445e187b1b58106886e12f136fa467a9b2a458d55b7f2d5935714262339"
+    },
+    {
+      "file": "project.godot",
+      "change": "MODIFIED",
+      "bytes": 1624,
+      "sha256": "a685ad360225d3e3f3efbd1fe6c58707c94b8e3af2706402040e0aaacdb16a08"
+    },
+    {
+      "file": "reports/qa/v150_dev11/batch_summary.json",
+      "change": "ADDED",
+      "bytes": 419,
+      "sha256": "0c49523801a8c4f56c005513517b8558914641557e830b3fbd78d4c0b4c2838d"
+    },
+    {
+      "file": "reports/qa/v150_dev11/import.log",
+      "change": "ADDED",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "reports/qa/v150_dev11/offline.json",
+      "change": "ADDED",
+      "bytes": 447,
+      "sha256": "1d71a0cfd66147e39bf565cc92d24d75182ca0717aa6b4585f6b70921e1f8c76"
+    },
+    {
+      "file": "tests/model_asset_smoke.gd",
+      "change": "MODIFIED",
+      "bytes": 2915,
+      "sha256": "6f52652355b0381de888ea96ed595dbffce2cd24a0d141d255f4068d10b8575a"
+    },
+    {
+      "file": "tests/static/test_dev11_deep_rebuild.py",
+      "change": "ADDED",
+      "bytes": 4176,
+      "sha256": "a31a529a2e3d7f283a2490146edc10cc563f6c88a534a03e5e8276ae956b3d96"
+    },
+    {
+      "file": "tools/run_dev11_qa.py",
+      "change": "ADDED",
+      "bytes": 7082,
+      "sha256": "f8163549a72e89a5fc18807609c4c46c6a633e5fe1db1eea5834e22925bd9063"
+    }
+  ],
+  "truth_status": {
+    "python_tests": 90,
+    "godot_engine": "NOT AVAILABLE / RUN FAILED",
+    "windows": "NOT BUILT",
+    "l009_story": "NOT VERIFIED"
+  },
+  "timestamp_utc": "2026-11-07T13:16:46.379709+00:00"
+}

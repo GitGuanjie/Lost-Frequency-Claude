@@ -1,0 +1,19 @@
+{
+  "stable_id": "L017",
+  "scene": "res://levels/L017/L017.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "Carrier ship: repeating bulkheads, sector clocks, closet threshold and cold machinery",
+  "mechanics": [
+    "industrial_ship",
+    "clock_sectors",
+    "compartment_exploration"
+  ],
+  "exits": [],
+  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
+  "entity_policy": "SOURCED ENTITIES ONLY: unnamed human occupants incl. Sector 12 officer and skinless man"
+}

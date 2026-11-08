@@ -1,0 +1,31 @@
+{
+  "stable_id": "L101",
+  "scene": "res://levels/L101/L101.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L002"
+  ],
+  "signature": "Almost familiar childhood home opening into empty ocean daylight",
+  "mechanics": [
+    "deja_vu",
+    "creeping_mismatches",
+    "spoken_return"
+  ],
+  "exits": [
+    {
+      "id": "L101>L000#1",
+      "to": "L000",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "say I'm ready to go back, fall unconscious",
+      "source_quote": "invariably causes you to fall unconscious and reawaken in Level 0",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-101",
+      "trigger_type": "sleep"
+    }
+  ],
+  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
+  "entity_policy": "NO ENTITY PER SOURCE"
+}

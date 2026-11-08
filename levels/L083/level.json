@@ -1,0 +1,35 @@
+{
+  "stable_id": "L083",
+  "scene": "res://levels/L083/L083.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "UNVERIFIED Godot import, walker, GPU capture and human review pending",
+  "procedural": false,
+  "arrivals": [
+    "start",
+    "from_L007"
+  ],
+  "signature": "An intact but submerged nuclear submarine with two deck levels, humming compartments and a return hatch to Level 7.",
+  "mechanics": [
+    "two_decks",
+    "bulkhead_chambers",
+    "reactor_warning",
+    "bridge_portholes",
+    "canonical_hatch"
+  ],
+  "exits": [
+    {
+      "id": "L083>L007#1",
+      "to": "L007",
+      "trigger": "interact",
+      "label": "Escape hatch to Level 7",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "source_section": "Dated canonical snapshot; exits",
+      "source_quote": "undo the escape hatch and swim out",
+      "arrival": "from_L083",
+      "hint": "Escape hatch to Level 7"
+    }
+  ],
+  "entity_policy": "The Crew and Great Observer described in source; no unsourced hostile AI",
+  "notes": "ADAPTATION: finite two-deck traverse and periodic offscreen knocking stand in for long, distant hull events; no unsupported crew combat or reactor quest. Window eye not portrayed as a confirmed monster model. Canon: docs/canon/levels/L083.md; authors credited there under CC BY-SA 3.0. Not yet PLAYABLE."
+}

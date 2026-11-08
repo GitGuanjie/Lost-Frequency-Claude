@@ -1,0 +1,781 @@
+{
+  "source": "evidence files only — NOT a fresh engine test",
+  "roster": 100,
+  "blocked": 100,
+  "ready": 0,
+  "blockers": [
+    {
+      "level": "L000",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L001",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L002",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L003",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L004",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L005",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L006",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L007",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L008",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L009",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L010",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L011",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L012",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L013",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L014",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L019",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L037",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L188",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L015",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L016",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L017",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L018",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L020",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L022",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L023",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L024",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L025",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L026",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L027",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L028",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L029",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L030",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L031",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L036",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L048",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L049",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L053",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L069",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L071",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L073",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L075",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L079",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L094",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L200",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L256",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L289",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L404",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L601",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L906",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L974",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L000_1",
+      "blockers": [
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L000_2",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L000_3",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L001_1",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L001_2",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L001_3",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L001_5",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L003_5",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L005_1",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L006_1",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L007_7",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L010_1",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L011_3",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L037_1",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L055",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L058",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L060",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L083",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L090",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L096",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L808",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L922",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L965",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L994",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L999",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L005_3",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L007_8",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L009_3",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L011_2",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L021",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L032",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L041",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L050",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L052",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L077",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L085",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L100",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L101",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L108",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L114",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L140",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L149",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L160",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L197",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L201",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L263",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L320",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L737",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L899",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L998",
+      "blockers": [
+        "not_playable",
+        "missing_clean_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    }
+  ]
+}

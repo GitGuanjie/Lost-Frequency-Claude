@@ -49,5 +49,16 @@ func interact(p: Player) -> void:
 		SaveService.read_note(note_id)
 		Overlay.show_note(note_title, note_text)
 	if action.is_valid():
-		action.call(p)
+		# DEV22: core compatibility. Many earlier scene authors used zero-arg
+		# lambdas, while new generated devices expect Player plus bound options.
+		# Godot's get_argument_count() subtracts bind() arguments, so dispatch
+		# correctly rather than passing Player to every lambda unconditionally.
+		var remaining: int = action.get_argument_count()
+		if remaining == 0:
+			action.call()
+		elif remaining == 1:
+			action.call(p)
+		else:
+			push_error("Interactable action needs %d unbound arguments: %s" % [remaining, prompt])
+			return
 	used.emit(p)

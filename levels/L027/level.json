@@ -1,0 +1,31 @@
+{
+  "stable_id": "L027",
+  "scene": "res://levels/L027/L027.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev4 source candidate",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "Warm two-waterfall limestone cave, documented timed mineral exposure",
+  "mechanics": [
+    "hot_spring",
+    "twin_falls",
+    "waterfall_tunnel",
+    "timer"
+  ],
+  "exits": [
+    {
+      "id": "L027>L028#2",
+      "to": "L028",
+      "basis": "SOURCE",
+      "confidence": "DANGEROUS+ONE-WAY",
+      "method": "climb the other waterfall tunnel, crawl through to a Stormstone plain, step forward (log)",
+      "source_quote": "Don't climb the other waterfall tunnel. It leads to nowhere.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-27",
+      "trigger_type": "condition"
+    }
+  ],
+  "notes": "Uses a compact prototype scale. Godot/Windows gameplay and performance not yet verified; no promotion to PLAYABLE.",
+  "entity_policy": "NO ENTITY PER SOURCE"
+}

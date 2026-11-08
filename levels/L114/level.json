@@ -1,0 +1,53 @@
+{
+  "stable_id": "L114",
+  "scene": "res://levels/L114/L114.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev5 source candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L029",
+    "from_L013"
+  ],
+  "signature": "Small desynchronous childhood bedroom with floral bed, warning notes and a downward void",
+  "mechanics": [
+    "childhood_bedroom",
+    "floral_bed",
+    "sleep_exit",
+    "void_fall"
+  ],
+  "exits": [
+    {
+      "id": "L114>L009#1",
+      "to": "L009",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Fall asleep in the room",
+      "source_quote": "Fall asleep in this room, and you will awake on a street on Level 9 .",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-114",
+      "trigger_type": "sleep"
+    },
+    {
+      "id": "L114>L025#2",
+      "to": "L025",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Say 'I'm so bored...' in a dull voice",
+      "source_quote": "Saying \"I'm so bored…\" in a dull voice leads you to Level 25 .",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-114",
+      "trigger_type": "condition"
+    },
+    {
+      "id": "L114>EXT#3",
+      "to": "EXT",
+      "basis": "SOURCE",
+      "confidence": "DANGEROUS+ONE-WAY",
+      "method": "Doorway to void: infinite drift, death by dehydration",
+      "source_quote": "wanderers who fall out of reach of the doorway will continue drifting down into the darkness",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-114",
+      "trigger_type": "fall"
+    }
+  ],
+  "notes": "Compact exploration adaptation. Runtime Godot and Windows verification required; no automatic PLAYABLE promotion.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Smilers, Stress Mould, window entities"
+}

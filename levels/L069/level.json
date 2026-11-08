@@ -1,0 +1,43 @@
+{
+  "stable_id": "L069",
+  "scene": "res://levels/L069/L069.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L022",
+    "from_L003",
+    "from_L008"
+  ],
+  "signature": "Narrow infinite road between concrete walls and a vehicle safe zone",
+  "mechanics": [
+    "sealed_highway",
+    "car_safe_zone_placeholder",
+    "tunnel_exit_conditions"
+  ],
+  "exits": [
+    {
+      "id": "L069>L011#1",
+      "to": "L011",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED+ONE-WAY",
+      "method": "Perpendicular tunnel, drive about 17 hours, then walk",
+      "source_quote": "This tunnel leads to Level 11.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-69",
+      "trigger_type": "vehicle"
+    },
+    {
+      "id": "L069>L022#2",
+      "to": "L022",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "No-clip through roadside wall",
+      "source_quote": "you will appear in Level 22 with your car parked in a parking space",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-69",
+      "trigger_type": "noclip"
+    }
+  ],
+  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Smilers, Wretches, Beings From Above, The Whispers"
+}

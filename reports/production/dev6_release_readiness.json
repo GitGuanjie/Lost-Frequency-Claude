@@ -1,0 +1,152 @@
+{
+  "evidence_level": "offline evidence gate only; no engine executed",
+  "candidates": 16,
+  "ready": 0,
+  "blocked": 16,
+  "levels": [
+    {
+      "level": "L017",
+      "ready": false,
+      "blockers": [
+        "not_marked_playable",
+        "missing_fresh_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L018",
+      "ready": false,
+      "blockers": [
+        "not_marked_playable",
+        "missing_fresh_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L030",
+      "ready": false,
+      "blockers": [
+        "not_marked_playable",
+        "missing_fresh_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L069",
+      "ready": false,
+      "blockers": [
+        "not_marked_playable",
+        "missing_fresh_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L073",
+      "ready": false,
+      "blockers": [
+        "not_marked_playable",
+        "missing_fresh_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L000_2",
+      "ready": false,
+      "blockers": [
+        "not_marked_playable",
+        "missing_fresh_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L001_3",
+      "ready": false,
+      "blockers": [
+        "not_marked_playable",
+        "missing_fresh_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L001_5",
+      "ready": false,
+      "blockers": [
+        "not_marked_playable",
+        "missing_fresh_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L003_5",
+      "ready": false,
+      "blockers": [
+        "not_marked_playable",
+        "missing_fresh_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L005_1",
+      "ready": false,
+      "blockers": [
+        "not_marked_playable",
+        "missing_fresh_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L007_7",
+      "ready": false,
+      "blockers": [
+        "not_marked_playable",
+        "missing_fresh_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L010_1",
+      "ready": false,
+      "blockers": [
+        "not_marked_playable",
+        "missing_fresh_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L011_3",
+      "ready": false,
+      "blockers": [
+        "not_marked_playable",
+        "missing_fresh_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L037_1",
+      "ready": false,
+      "blockers": [
+        "not_marked_playable",
+        "missing_fresh_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L096",
+      "ready": false,
+      "blockers": [
+        "not_marked_playable",
+        "missing_fresh_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    },
+    {
+      "level": "L965",
+      "ready": false,
+      "blockers": [
+        "not_marked_playable",
+        "missing_fresh_godot_qa",
+        "missing_manual_windows_evidence"
+      ]
+    }
+  ]
+}

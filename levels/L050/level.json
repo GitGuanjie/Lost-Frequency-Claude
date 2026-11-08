@@ -1,0 +1,22 @@
+{
+  "stable_id": "L050",
+  "scene": "res://levels/L050/L050.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev5 source candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L025",
+    "from_L049"
+  ],
+  "signature": "Still highway through a desert, stalled traffic, no invented map exit",
+  "mechanics": [
+    "frozen_vehicles",
+    "roadside_desert",
+    "unmapped_threshold",
+    "environment_interactions"
+  ],
+  "exits": [],
+  "notes": "Compact exploration adaptation. Runtime Godot and Windows verification required; no automatic PLAYABLE promotion.",
+  "entity_policy": "NO ENTITY PER SOURCE"
+}

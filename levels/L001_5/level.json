@@ -1,0 +1,22 @@
+{
+  "stable_id": "L001_5",
+  "scene": "res://levels/L001_5/L001_5.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L001",
+    "from_L188",
+    "from_L021"
+  ],
+  "signature": "Inverted illumination and receding whispers in a white room circuit",
+  "mechanics": [
+    "inverse_light",
+    "silence_proximity",
+    "abstract_white_rooms"
+  ],
+  "exits": [],
+  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
+  "entity_policy": "SOURCED ENTITIES ONLY: whispering denizens (article); husk stalker, Mother, She (testimony only)"
+}

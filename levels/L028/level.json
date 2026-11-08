@@ -1,0 +1,52 @@
+{
+  "stable_id": "L028",
+  "scene": "res://levels/L028/L028.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev5 source candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L027"
+  ],
+  "signature": "Blue-lit valley and accessible two-level keep, six standing runes and periodic lightning",
+  "mechanics": [
+    "stormstone_keep",
+    "six_standing_stones",
+    "two_floor_keep",
+    "periodic_lightning"
+  ],
+  "exits": [
+    {
+      "id": "L028>L004#2",
+      "to": "L004",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL",
+      "method": "Noclip into lamp in keep",
+      "source_quote": "No-clipping into a lamp in Stormstone Keep leads to either Level 4 or Level 5",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-28",
+      "trigger_type": "noclip"
+    },
+    {
+      "id": "L028>L073#3",
+      "to": "L073",
+      "basis": "SOURCE",
+      "confidence": "DANGEROUS+CONDITIONAL",
+      "method": "Struck by lightning",
+      "source_quote": "Getting struck by lightning will occasionally bring one to Level 73",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-28",
+      "trigger_type": "condition"
+    },
+    {
+      "id": "L028>L009_3#5",
+      "to": "L009_3",
+      "basis": "SOURCE",
+      "confidence": "CONDITIONAL",
+      "method": "Walk through the forest",
+      "source_quote": "Walking through this level's forest can allow one to enter Level 9.3",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-28",
+      "trigger_type": "walk_in"
+    }
+  ],
+  "notes": "Compact exploration adaptation. Runtime Godot and Windows verification required; no automatic PLAYABLE promotion.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Blue Knight; Living Abyss as hazard"
+}

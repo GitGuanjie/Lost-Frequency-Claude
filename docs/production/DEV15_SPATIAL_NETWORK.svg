@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1100" width="1440" height="1100">
+<rect width="100%" height="100%" fill="#101b2b"/>
+<style>text{font-family:Arial,sans-serif} .t{fill:#e7f4fc}.sub{fill:#a5b6c7}.cap{fill:#a9f0dc}.note{fill:#bbcbd6}</style>
+<text x="42" y="55" class="t" font-size="32" font-weight="bold">LOST FREQUENCY / DEV15</text>
+<text x="42" y="86" class="sub" font-size="18">9 structural rebuilds | authored route DESIGN (not a Godot gameplay screenshot)</text>
+<rect x="42" y="122" width="429" height="245" rx="10" fill="#182b3d" stroke="#3b5568"/>
+<text x="58" y="156" class="t" font-weight="bold" font-size="19">L015 — MACHINE INSPECTION</text>
+<text x="58" y="180" class="sub" font-size="14">4 levels / 6 stair runs / 10.5 m rise</text>
+<rect x="152" y="315" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="204" y="314" width="20" height="8" fill="#182b3d"/>
+<rect x="290" y="314" width="20" height="8" fill="#182b3d"/>
+<text x="378" y="321" class="note" font-size="12">F0</text>
+<path d="M214 317 L214 308 L287 285" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M300 317 L300 308 L227 285" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="152" y="283" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="204" y="282" width="20" height="8" fill="#182b3d"/>
+<rect x="290" y="282" width="20" height="8" fill="#182b3d"/>
+<text x="378" y="289" class="note" font-size="12">F1</text>
+<path d="M214 285 L214 276 L287 253" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M300 285 L300 276 L227 253" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="152" y="251" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="204" y="250" width="20" height="8" fill="#182b3d"/>
+<rect x="290" y="250" width="20" height="8" fill="#182b3d"/>
+<text x="378" y="257" class="note" font-size="12">F2</text>
+<path d="M214 253 L214 244 L287 221" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M300 253 L300 244 L227 221" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="152" y="219" width="210" height="6" rx="2" fill="#4ab5ce"/>
+<rect x="204" y="218" width="20" height="8" fill="#182b3d"/>
+<rect x="290" y="218" width="20" height="8" fill="#182b3d"/>
+<text x="378" y="225" class="note" font-size="12">F3</text>
+<text x="58" y="352" class="cap" font-size="13">Twin opposed climbs / apertured decks / loops</text>
+<rect x="497" y="122" width="429" height="245" rx="10" fill="#182b3d" stroke="#3b5568"/>
+<text x="513" y="156" class="t" font-weight="bold" font-size="19">L016 — CANOPY LABYRINTH</text>
+<text x="513" y="180" class="sub" font-size="14">4 levels / 6 stair runs / 10.2 m rise</text>
+<rect x="607" y="315" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="659" y="314" width="20" height="8" fill="#182b3d"/>
+<rect x="745" y="314" width="20" height="8" fill="#182b3d"/>
+<text x="833" y="321" class="note" font-size="12">F0</text>
+<path d="M669 317 L669 308 L742 285" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M755 317 L755 308 L682 285" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="607" y="283" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="659" y="282" width="20" height="8" fill="#182b3d"/>
+<rect x="745" y="282" width="20" height="8" fill="#182b3d"/>
+<text x="833" y="289" class="note" font-size="12">F1</text>
+<path d="M669 285 L669 276 L742 253" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M755 285 L755 276 L682 253" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="607" y="251" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="659" y="250" width="20" height="8" fill="#182b3d"/>
+<rect x="745" y="250" width="20" height="8" fill="#182b3d"/>
+<text x="833" y="257" class="note" font-size="12">F2</text>
+<path d="M669 253 L669 244 L742 221" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M755 253 L755 244 L682 221" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="607" y="219" width="210" height="6" rx="2" fill="#4ab5ce"/>
+<rect x="659" y="218" width="20" height="8" fill="#182b3d"/>
+<rect x="745" y="218" width="20" height="8" fill="#182b3d"/>
+<text x="833" y="225" class="note" font-size="12">F3</text>
+<text x="513" y="352" class="cap" font-size="13">Twin opposed climbs / apertured decks / loops</text>
+<rect x="952" y="122" width="429" height="245" rx="10" fill="#182b3d" stroke="#3b5568"/>
+<text x="968" y="156" class="t" font-weight="bold" font-size="19">L017 — CARRIER SERVICE</text>
+<text x="968" y="180" class="sub" font-size="14">4 levels / 6 stair runs / 10.35 m rise</text>
+<rect x="1062" y="315" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="1114" y="314" width="20" height="8" fill="#182b3d"/>
+<rect x="1200" y="314" width="20" height="8" fill="#182b3d"/>
+<text x="1288" y="321" class="note" font-size="12">F0</text>
+<path d="M1124 317 L1124 308 L1197 285" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M1210 317 L1210 308 L1137 285" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="1062" y="283" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="1114" y="282" width="20" height="8" fill="#182b3d"/>
+<rect x="1200" y="282" width="20" height="8" fill="#182b3d"/>
+<text x="1288" y="289" class="note" font-size="12">F1</text>
+<path d="M1124 285 L1124 276 L1197 253" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M1210 285 L1210 276 L1137 253" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="1062" y="251" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="1114" y="250" width="20" height="8" fill="#182b3d"/>
+<rect x="1200" y="250" width="20" height="8" fill="#182b3d"/>
+<text x="1288" y="257" class="note" font-size="12">F2</text>
+<path d="M1124 253 L1124 244 L1197 221" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M1210 253 L1210 244 L1137 221" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="1062" y="219" width="210" height="6" rx="2" fill="#4ab5ce"/>
+<rect x="1114" y="218" width="20" height="8" fill="#182b3d"/>
+<rect x="1200" y="218" width="20" height="8" fill="#182b3d"/>
+<text x="1288" y="225" class="note" font-size="12">F3</text>
+<text x="968" y="352" class="cap" font-size="13">Twin opposed climbs / apertured decks / loops</text>
+<rect x="42" y="393" width="429" height="245" rx="10" fill="#182b3d" stroke="#3b5568"/>
+<text x="58" y="427" class="t" font-weight="bold" font-size="19">L020 — ELECTRIC GALLERY</text>
+<text x="58" y="451" class="sub" font-size="14">4 levels / 6 stair runs / 10.35 m rise</text>
+<rect x="152" y="586" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="204" y="585" width="20" height="8" fill="#182b3d"/>
+<rect x="290" y="585" width="20" height="8" fill="#182b3d"/>
+<text x="378" y="592" class="note" font-size="12">F0</text>
+<path d="M214 588 L214 579 L287 556" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M300 588 L300 579 L227 556" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="152" y="554" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="204" y="553" width="20" height="8" fill="#182b3d"/>
+<rect x="290" y="553" width="20" height="8" fill="#182b3d"/>
+<text x="378" y="560" class="note" font-size="12">F1</text>
+<path d="M214 556 L214 547 L287 524" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M300 556 L300 547 L227 524" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="152" y="522" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="204" y="521" width="20" height="8" fill="#182b3d"/>
+<rect x="290" y="521" width="20" height="8" fill="#182b3d"/>
+<text x="378" y="528" class="note" font-size="12">F2</text>
+<path d="M214 524 L214 515 L287 492" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M300 524 L300 515 L227 492" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="152" y="490" width="210" height="6" rx="2" fill="#4ab5ce"/>
+<rect x="204" y="489" width="20" height="8" fill="#182b3d"/>
+<rect x="290" y="489" width="20" height="8" fill="#182b3d"/>
+<text x="378" y="496" class="note" font-size="12">F3</text>
+<text x="58" y="623" class="cap" font-size="13">Twin opposed climbs / apertured decks / loops</text>
+<rect x="497" y="393" width="429" height="245" rx="10" fill="#182b3d" stroke="#3b5568"/>
+<text x="513" y="427" class="t" font-weight="bold" font-size="19">L024 — PLASTICWORKS</text>
+<text x="513" y="451" class="sub" font-size="14">5 levels / 8 stair runs / 13.6 m rise</text>
+<rect x="607" y="586" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="659" y="585" width="20" height="8" fill="#182b3d"/>
+<rect x="745" y="585" width="20" height="8" fill="#182b3d"/>
+<text x="833" y="592" class="note" font-size="12">F0</text>
+<path d="M669 588 L669 579 L742 556" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M755 588 L755 579 L682 556" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="607" y="554" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="659" y="553" width="20" height="8" fill="#182b3d"/>
+<rect x="745" y="553" width="20" height="8" fill="#182b3d"/>
+<text x="833" y="560" class="note" font-size="12">F1</text>
+<path d="M669 556 L669 547 L742 524" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M755 556 L755 547 L682 524" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="607" y="522" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="659" y="521" width="20" height="8" fill="#182b3d"/>
+<rect x="745" y="521" width="20" height="8" fill="#182b3d"/>
+<text x="833" y="528" class="note" font-size="12">F2</text>
+<path d="M669 524 L669 515 L742 492" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M755 524 L755 515 L682 492" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="607" y="490" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="659" y="489" width="20" height="8" fill="#182b3d"/>
+<rect x="745" y="489" width="20" height="8" fill="#182b3d"/>
+<text x="833" y="496" class="note" font-size="12">F3</text>
+<path d="M669 492 L669 483 L742 460" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M755 492 L755 483 L682 460" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="607" y="458" width="210" height="6" rx="2" fill="#4ab5ce"/>
+<rect x="659" y="457" width="20" height="8" fill="#182b3d"/>
+<rect x="745" y="457" width="20" height="8" fill="#182b3d"/>
+<text x="833" y="464" class="note" font-size="12">F4</text>
+<text x="513" y="623" class="cap" font-size="13">Twin opposed climbs / apertured decks / loops</text>
+<rect x="952" y="393" width="429" height="245" rx="10" fill="#182b3d" stroke="#3b5568"/>
+<text x="968" y="427" class="t" font-weight="bold" font-size="19">L029 — HYPERIA OVERLOOK</text>
+<text x="968" y="451" class="sub" font-size="14">4 levels / 6 stair runs / 10.35 m rise</text>
+<rect x="1062" y="586" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="1114" y="585" width="20" height="8" fill="#182b3d"/>
+<rect x="1200" y="585" width="20" height="8" fill="#182b3d"/>
+<text x="1288" y="592" class="note" font-size="12">F0</text>
+<path d="M1124 588 L1124 579 L1197 556" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M1210 588 L1210 579 L1137 556" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="1062" y="554" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="1114" y="553" width="20" height="8" fill="#182b3d"/>
+<rect x="1200" y="553" width="20" height="8" fill="#182b3d"/>
+<text x="1288" y="560" class="note" font-size="12">F1</text>
+<path d="M1124 556 L1124 547 L1197 524" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M1210 556 L1210 547 L1137 524" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="1062" y="522" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="1114" y="521" width="20" height="8" fill="#182b3d"/>
+<rect x="1200" y="521" width="20" height="8" fill="#182b3d"/>
+<text x="1288" y="528" class="note" font-size="12">F2</text>
+<path d="M1124 524 L1124 515 L1197 492" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M1210 524 L1210 515 L1137 492" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="1062" y="490" width="210" height="6" rx="2" fill="#4ab5ce"/>
+<rect x="1114" y="489" width="20" height="8" fill="#182b3d"/>
+<rect x="1200" y="489" width="20" height="8" fill="#182b3d"/>
+<text x="1288" y="496" class="note" font-size="12">F3</text>
+<text x="968" y="623" class="cap" font-size="13">Twin opposed climbs / apertured decks / loops</text>
+<rect x="42" y="664" width="429" height="245" rx="10" fill="#182b3d" stroke="#3b5568"/>
+<text x="58" y="698" class="t" font-weight="bold" font-size="19">L036 — AIRPORT OVERLOOK</text>
+<text x="58" y="722" class="sub" font-size="14">4 levels / 6 stair runs / 10.35 m rise</text>
+<rect x="152" y="857" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="204" y="856" width="20" height="8" fill="#182b3d"/>
+<rect x="290" y="856" width="20" height="8" fill="#182b3d"/>
+<text x="378" y="863" class="note" font-size="12">F0</text>
+<path d="M214 859 L214 850 L287 827" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M300 859 L300 850 L227 827" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="152" y="825" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="204" y="824" width="20" height="8" fill="#182b3d"/>
+<rect x="290" y="824" width="20" height="8" fill="#182b3d"/>
+<text x="378" y="831" class="note" font-size="12">F1</text>
+<path d="M214 827 L214 818 L287 795" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M300 827 L300 818 L227 795" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="152" y="793" width="210" height="6" rx="2" fill="#456a83"/>
+<rect x="204" y="792" width="20" height="8" fill="#182b3d"/>
+<rect x="290" y="792" width="20" height="8" fill="#182b3d"/>
+<text x="378" y="799" class="note" font-size="12">F2</text>
+<path d="M214 795 L214 786 L287 763" stroke="#f9c376" stroke-width="3.5" fill="none"/>
+<path d="M300 795 L300 786 L227 763" stroke="#80d3a4" stroke-width="3.5" fill="none"/>
+<rect x="152" y="761" width="210" height="6" rx="2" fill="#4ab5ce"/>
+<rect x="204" y="760" width="20" height="8" fill="#182b3d"/>
+<rect x="290" y="760" width="20" height="8" fill="#182b3d"/>
+<text x="378" y="767" class="note" font-size="12">F3</text>
+<text x="58" y="894" class="cap" font-size="13">Twin opposed climbs / apertured decks / loops</text>
+<rect x="952" y="664" width="429" height="245" rx="10" fill="#182b3d" stroke="#3b5568"/>
+<text x="968" y="698" class="t" font-size="19" font-weight="bold">L022 — FOUR-DECK GARAGE</text>
+<text x="968" y="722" class="sub" font-size="14">Existing stair landings repaired / new fourth deck</text>
+<path d="M994 856 H1300" stroke="#5f7c91" stroke-width="6"/>
+<text x="1316" y="860" class="note" font-size="13">F0</text>
+<path d="M1222 856 L1257 818" stroke="#f9c376" stroke-width="4"/>
+<path d="M994 818 H1300" stroke="#5f7c91" stroke-width="6"/>
+<text x="1316" y="822" class="note" font-size="13">F1</text>
+<path d="M1237 818 L1272 780" stroke="#f9c376" stroke-width="4"/>
+<path d="M994 780 H1300" stroke="#5f7c91" stroke-width="6"/>
+<text x="1316" y="784" class="note" font-size="13">F2</text>
+<path d="M1025 780 L1060 742" stroke="#f9c376" stroke-width="4"/>
+<path d="M994 742 H1300" stroke="#5f7c91" stroke-width="6"/>
+<text x="1316" y="746" class="note" font-size="13">F3</text>
+<text x="968" y="894" class="cap" font-size="13">Four plates / three climb segments / 12 m vertical</text>
+<rect x="42" y="935" width="1339" height="123" rx="10" fill="#182b3d" stroke="#3b5568"/>
+<text x="56" y="960" class="t" font-size="19" font-weight="bold">L030 — SHIFTED VOID / TWO PHYSICAL CLIMBS + HIGH SHELF LOOP</text>
+<path d="M322 1027 H417" stroke="#7b98b0" stroke-width="7"/>
+<circle cx="322" cy="1027" r="8" fill="#547e9e"/>
+<circle cx="322" cy="989" r="8" fill="#a5d6b9"/>
+<path d="M417 1027 H512" stroke="#7b98b0" stroke-width="7"/>
+<circle cx="417" cy="1027" r="8" fill="#547e9e"/>
+<circle cx="417" cy="989" r="8" fill="#a5d6b9"/>
+<path d="M417 1027 V989" stroke="#f9c376" stroke-width="4" stroke-dasharray="4 3"/>
+<path d="M512 1027 H607" stroke="#7b98b0" stroke-width="7"/>
+<circle cx="512" cy="1027" r="8" fill="#547e9e"/>
+<circle cx="512" cy="989" r="8" fill="#a5d6b9"/>
+<path d="M607 1027 H702" stroke="#7b98b0" stroke-width="7"/>
+<circle cx="607" cy="1027" r="8" fill="#547e9e"/>
+<circle cx="607" cy="989" r="8" fill="#a5d6b9"/>
+<circle cx="702" cy="1027" r="8" fill="#547e9e"/>
+<path d="M702 1027 V989" stroke="#f9c376" stroke-width="4" stroke-dasharray="4 3"/>
+<path d="M417 989 H512" stroke="#a5d6b9" stroke-width="6"/>
+<path d="M512 989 H607" stroke="#a5d6b9" stroke-width="6"/>
+<path d="M607 989 H702" stroke="#a5d6b9" stroke-width="6"/>
+<path d="M322 1027 H417" stroke="#547e9e" stroke-width="4"/>
+<path d="M417 1027 H512" stroke="#547e9e" stroke-width="4"/>
+<path d="M512 1027 H607" stroke="#547e9e" stroke-width="4"/>
+<path d="M607 1027 H702" stroke="#547e9e" stroke-width="4"/>
+<text x="57" y="995" class="sub" font-size="13">Island rows: y=12 m</text>
+<text x="57" y="1015" class="sub" font-size="13">Upper shelf: y=18 m</text>
+<text x="1182" y="1007" class="cap" font-size="15">2 cycles</text>
+<text x="1162" y="1030" class="sub" font-size="12">No new exits</text>
+<text x="42" y="1084" class="sub" font-size="14">Blue: floor/bridge   Gold and green: distinct physical climb directions   Not to scale; collision/character traversal not certified.</text>
+</svg>

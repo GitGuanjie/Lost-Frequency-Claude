@@ -1,0 +1,41 @@
+{
+  "stable_id": "L026",
+  "scene": "res://levels/L026/L026.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev5 source candidate",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "Cruise liner with double-height decks, branching cabin halls, party rooms and an anomalous poster",
+  "mechanics": [
+    "multi_deck_cruise",
+    "party_halls",
+    "fog_shift",
+    "stair_access"
+  ],
+  "exits": [
+    {
+      "id": "L026>L004#1",
+      "to": "L004",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Touch a reversed, out-of-focus party poster",
+      "source_quote": "Touch a reversed, out-of-focus party poster, and you will no-clip to another level.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-26",
+      "trigger_type": "item"
+    },
+    {
+      "id": "L026>EXT#2",
+      "to": "EXT",
+      "basis": "SOURCE",
+      "confidence": "UNKNOWN",
+      "method": "Jump overboard",
+      "source_quote": "You can also jump overboard.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-26",
+      "trigger_type": "fall"
+    }
+  ],
+  "notes": "Compact exploration adaptation. Runtime Godot and Windows verification required; no automatic PLAYABLE promotion.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Partygoers, Carnivorous Balloons; testimony-only monster/Facelings"
+}

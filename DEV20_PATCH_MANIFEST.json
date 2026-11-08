@@ -1,0 +1,171 @@
+{
+  "from": "v1.5.0-dev19",
+  "to": "v1.5.0-dev20",
+  "additive_update": true,
+  "note": "Design-graph/static-tested only; native Godot FAIL (executable absent). No PLAYABLE promotion.",
+  "changed_count": 27,
+  "files": [
+    {
+      "path": "3/DEV20_README_FIRST_CN.md",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "3ef82358e9ac2f7eba461c0c9dd1ce2d65e583af75749532c51cbc0e3c421fda"
+    },
+    {
+      "path": "3/EXPORT_DEV20_WINDOWS.ps1",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "12083027b0686c9ce44b467bec4d768fe7795be0e2ff7f3e7962ba57d71d2ad3"
+    },
+    {
+      "path": "3/README.md",
+      "status": "modified",
+      "before_sha256": "65114935d06eedfa4cf944893b1f8b47a714af1bec76def8faaca005bb18bc23",
+      "after_sha256": "333a38a77b82e7c10ac696d67c2bfdc9f50ace12f2e06902b78c228307a88794"
+    },
+    {
+      "path": "3/RUN_DEV20_QA_WINDOWS.ps1",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "afcec13b8370bc61359f5c54bcc06980a76159fb6ff3abf616cc172e31ed06fe"
+    },
+    {
+      "path": "3/core/world/AtriumWeave.gd",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "56e9bc2bf74e2590988bc810b5ac370975fe45fd63dade5a2c0c2b986aea1b77"
+    },
+    {
+      "path": "3/core/world/AtriumWeaveState.gd",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "7258d95bb33acc20e09b90396f1ed44b1959244fb4c083033f0a1df3fdad3a22"
+    },
+    {
+      "path": "3/core/world/SpatialBranchworks.gd",
+      "status": "modified",
+      "before_sha256": "4c26c0026366a87a290a21eb9ded4967d5d32828b862c24ceacd6fb940373a99",
+      "after_sha256": "94318ced7a58679ea0d9059d3fdea8398ad16649adbc36cbe703ae6f822cd962"
+    },
+    {
+      "path": "3/data/dev20_atrium_blueprints.json",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "a74e6e4d9612e37b8afe3ccc9ce4ce51d11c2ee0eb53d93f9e31408c273e79dd"
+    },
+    {
+      "path": "3/docs/production/V150_DEV20_PROCEDURAL_DEPTH_CN.md",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "3ef82358e9ac2f7eba461c0c9dd1ce2d65e583af75749532c51cbc0e3c421fda"
+    },
+    {
+      "path": "3/levels/L028/L028.gd",
+      "status": "modified",
+      "before_sha256": "5e24881ff9a95eaede1fc5e4f8f5d82a0a6bd6363a21c264d51c8a3572367e27",
+      "after_sha256": "44c8432a4d676e3693994a197a7a30ffeeccd74ebbbfb3e537335cb9e93f95e5"
+    },
+    {
+      "path": "3/levels/L032/L032.gd",
+      "status": "modified",
+      "before_sha256": "79ea6de60c56ef242d2c79aadaba83bf65728f71c2ccded9f220b24a29c38bca",
+      "after_sha256": "1d1c2757a2285ec721ad65025e015c29eb021b79cbc8f31ce2fa586a2d986d07"
+    },
+    {
+      "path": "3/levels/L050/L050.gd",
+      "status": "modified",
+      "before_sha256": "ffbb48b61fdb1665ffbae19d2c3c6bd845373ff57fd14fbad051ec60fb0e0dce",
+      "after_sha256": "1efb7d542d7ed7a3ecb8d44c54bb54f2440080a7d7457fe45a39c29ad34ab949"
+    },
+    {
+      "path": "3/levels/L073/L073.gd",
+      "status": "modified",
+      "before_sha256": "458516e63483bc9129318b22a5cb09a34fde26c1bcf3a3f1c37545c7cba28ff2",
+      "after_sha256": "d7c317d04ced67e977b2f9f4c2aa7af0289f85311dc3eac687f136a75571c201"
+    },
+    {
+      "path": "3/levels/L077/L077.gd",
+      "status": "modified",
+      "before_sha256": "e55b0bc67bad36b08a9efdd67db8ddde4a94c0ab58217518a777aec6a3c0bc75",
+      "after_sha256": "73ca0a5d5b092d0cdd0fc6483be640a6c86bc0ec7c5f4bb96fb554203a2ebbbb"
+    },
+    {
+      "path": "3/levels/L085/L085.gd",
+      "status": "modified",
+      "before_sha256": "2413effa5ba60579157772e0c217d0d401648d88bc45aebeda26bd1de3954892",
+      "after_sha256": "3b02c24b87387f0e9fd9ccfd94ebc741a088b5be0d1543fa59a810294dd5be92"
+    },
+    {
+      "path": "3/levels/L094/L094.gd",
+      "status": "modified",
+      "before_sha256": "79383daab9e50ab9b5f15e965ae923af22a0922dd149538c3423b9424147b0f4",
+      "after_sha256": "84f1470e363621b710f2d9d7fb473b1345bcdd931e498f5a3318bfb9cbbc15c1"
+    },
+    {
+      "path": "3/levels/L108/L108.gd",
+      "status": "modified",
+      "before_sha256": "ff4cf715b913356074785f18e6760d75129f1cae70e9c53d2d7c2c9e5a428843",
+      "after_sha256": "cf55bab1998978058468bab94ffcd78d19c8c0fc398c98e3bba9bba8b61e2f61"
+    },
+    {
+      "path": "3/levels/L320/L320.gd",
+      "status": "modified",
+      "before_sha256": "254f6b162637499932d34083c416d7352d102fc107efc2a83124a71d61b15eba",
+      "after_sha256": "0bb2fdc53593e70bc9ec2b05bc7b75b8b6a99e882c7e9e77a8fa8af587e6c5a5"
+    },
+    {
+      "path": "3/levels/L808/L808.gd",
+      "status": "modified",
+      "before_sha256": "d8600b00a9e5123a57eb2bd5c03f53865ff9800e9be2994fe2bdf9c6c6f5a875",
+      "after_sha256": "48fa483d79cd8de3fd19c20f0223d96f0cccb4159e970bea2bbe49370cd2e0e9"
+    },
+    {
+      "path": "3/reports/qa/v150_dev20/batch_summary.json",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "cc83f1df291958901b7dbbc4d0bca233ed09872eb39bdd056cda1654b4fb10e1"
+    },
+    {
+      "path": "3/reports/qa/v150_dev20/import.log",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "3/tests/qa_runner.gd",
+      "status": "modified",
+      "before_sha256": "f573eefb903459f4ff96586e551077b7ae097a4e40bf15eff9554eef51253233",
+      "after_sha256": "3616eb9cdfced84ef3fa1ba785d13ad9669dc013419521a8c02f826fbdbcbfec"
+    },
+    {
+      "path": "3/tests/static/test_dev16_branchworks.py",
+      "status": "modified",
+      "before_sha256": "9c453c032e9a794dd71de35a68a178b6429b7e209bcd67152f2007dbfc97c06e",
+      "after_sha256": "090d6025a96d0eca68eba2190073b6f04891692e92b75fdb04b3c99999f1fd6a"
+    },
+    {
+      "path": "3/tests/static/test_dev20_atrium_generation.py",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "2511abe32f2069160a1abc0c2943dd0e66ef9d5f094b1e4a7d94cb16eeb06346"
+    },
+    {
+      "path": "3/tools/generate_dev20_atrium.py",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "cf3068eef473f4b2624f3e518c77f0d2127d62e4447d036c2c052c3c1e53cbc4"
+    },
+    {
+      "path": "3/tools/render_dev20_overview.py",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "d1b5c52d7d8b33d048f1571e7b4bef58d02d3083bfe28d78d47ef62aac9164f2"
+    },
+    {
+      "path": "3/tools/run_dev20_qa.py",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "0e61259219cbe94e8e4056400270d24dca987303bd47cb385cb20229bcd6fed8"
+    }
+  ]
+}

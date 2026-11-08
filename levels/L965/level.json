@@ -1,0 +1,19 @@
+{
+  "stable_id": "L965",
+  "scene": "res://levels/L965/L965.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
+  "procedural": true,
+  "arrivals": [
+    "start"
+  ],
+  "signature": "Monochrome flood plain with silent turbines and no confirmed route mechanism",
+  "mechanics": [
+    "monochrome_plain",
+    "static_sky",
+    "defunct_turbines"
+  ],
+  "exits": [],
+  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
+  "entity_policy": "NO ENTITY PER SOURCE"
+}

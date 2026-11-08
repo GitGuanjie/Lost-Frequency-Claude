@@ -252,6 +252,13 @@ func _home() -> void:
 		var a := r.randf() * TAU
 		var rad := r.randf_range(0.6, 4.4) if i >= 120 else 0.0
 		worm_src.append([Vector3(r.randf_range(-0.9, 0.9), 0, r.randf_range(-0.9, 0.9)), Vector3(cos(a) * rad, 0, sin(a) * rad), r.randf() * TAU, r.randf_range(0.7, 1.6)])
+	# The new inspection scaffold is a three-stage climb behind the home barn.
+	# Landmarks and a readable field note preserve a reason to explore upward.
+	add_note("l10_scaffold_log", "Grain inspection tally",
+		"The wheat was counted from here. A pencil line marks the clouds as unchanged for weeks. The last surveyor wrote: I can see the road, but the road does not know where I am.",
+		P.call(18.7, 8.95, 14.6), Vector3(0.40, 0.1, 0.40))
+	add_landmark("Home barn: upper crop-inspection scaffold", P.call(18.7, 8.7, 14.5))
+	add_shot("grain_scaffold", P.call(18.7, 10.3, 14.6), P.call(3.8, 1.6, 14.2), {"flashlight": false})
 	# a shore where the lake can be drunk from (march from the spawn toward the lake)
 	var to := Vector3(WM.LAKE.x, 0, WM.LAKE.y) - start
 	to.y = 0.0
@@ -627,6 +634,12 @@ func qa_self_test() -> Array:
 	var lk := Vector3(WM.LAKE.x, WM.WATER_Y - 0.5, WM.LAKE.y)
 	out.append({"what": "the authored lake hollow lies below the one water level and is swimmable", "ok": wm.h_at(lk.x, lk.z) < WM.WATER_Y - 1.0 and water.contains(lk), "detail": wm.h_at(lk.x, lk.z)})
 	out.append({"what": "spawn stands on a dirt track above the water", "ok": float(wm.track_near(start.x, start.z)[0]) < 0.5 and start.y > WM.WATER_Y + 0.5, "detail": start})
+	# Engine physics check: top deck must be physical, at its designed height.
+	var fr: Transform3D = wm.plot(WM.HOME.x, WM.HOME.y)["frame"]
+	var tower_p: Vector3 = fr * Vector3(18.4, 8.7, 14.7)
+	var space := get_world_3d().direct_space_state
+	var tower_hit := space.intersect_ray(PhysicsRayQueryParameters3D.create(tower_p + Vector3.UP * 1.0, tower_p - Vector3.UP * 0.65, 1))
+	out.append({"what": "grain scaffold has a collision deck 8.7m above barn floor", "ok": not tower_hit.is_empty() and absf(float(tower_hit.get("position", Vector3.ZERO).y) - tower_p.y) < 0.15, "detail": tower_hit.get("position", Vector3.ZERO)})
 	var d0 := pit_depth
 	for i in 4:
 		_dig(player)

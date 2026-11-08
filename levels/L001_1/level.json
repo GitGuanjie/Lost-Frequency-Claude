@@ -1,0 +1,41 @@
+{
+  "stable_id": "L001_1",
+  "scene": "res://levels/L001_1/L001_1.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev4 source candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L001"
+  ],
+  "signature": "Four reliability sectors along one narrow corridor, ending in a non-solid floor",
+  "mechanics": [
+    "four_sectors",
+    "darkness",
+    "noncolliding_final_floor"
+  ],
+  "exits": [
+    {
+      "id": "L001_1>L001#1",
+      "to": "L001",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Backtrack to entrance",
+      "source_quote": "escaped by backtracking through the corridor and exiting through the entrance",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-1-1",
+      "trigger_type": "walk_in"
+    },
+    {
+      "id": "L001_1>L001#2",
+      "to": "L001",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "Noclip through wall in Sectors 2-3",
+      "source_quote": "Noclipping can also land explorers in a random part of Level 1",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-1-1",
+      "trigger_type": "noclip"
+    }
+  ],
+  "notes": "Uses a compact prototype scale. Godot/Windows gameplay and performance not yet verified; no promotion to PLAYABLE.",
+  "entity_policy": "SOURCED ENTITIES ONLY: Smilers, Hounds, Skin-Stealers (Sector 2-3), floating glitched mutated entities (Sector 4); none documented in Sector 1"
+}

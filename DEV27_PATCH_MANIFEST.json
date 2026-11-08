@@ -1,0 +1,40 @@
+{
+  "from": "v1.5.0-dev26",
+  "to": "v1.5.0-dev27",
+  "base_file": "LostFrequency_v1.5.0-dev26_SOURCE.zip",
+  "base_sha256": "d79c7fa166f27afb006dbf2a67e62ced9319a7118f4ccc90e8ce191083dd172d",
+  "changed": [
+    "3/README.md",
+    "3/core/world/LevelBase.gd",
+    "3/levels/L016/L016.gd",
+    "3/levels/L029/L029.gd",
+    "3/levels/L077/L077.gd",
+    "3/levels/L140/L140.gd",
+    "3/levels/L737/L737.gd",
+    "3/project.godot"
+  ],
+  "added": [
+    "3/DEV27_README_FIRST_CN.md",
+    "3/DEV27_VERIFICATION_STATIC.json",
+    "3/RUN_DEV27_NATIVE_QA_WINDOWS.ps1",
+    "3/core/world/FieldSectors27.gd",
+    "3/data/dev27_field_sectors.json",
+    "3/docs/production/DEV27_FieldSectors_Design.png",
+    "3/tests/Dev27FieldSectorsProbe.gd",
+    "3/tests/Dev27FieldSectorsProbe.tscn",
+    "3/tests/static/test_dev27_field_sectors.py",
+    "3/tools/build_dev27_field_sectors.py",
+    "3/tools/draw_dev27_field_sectors.py",
+    "3/DEV27_PATCH_MANIFEST.json"
+  ],
+  "purpose": "8 unique field-sector themed elevated physical networks; 18 spurs, 228 GLB prop placements, 48 interactions",
+  "native_engine_acceptance": "NOT_RUN: no Godot executable in the environment",
+  "static_unittest": "237/237 PASS",
+  "entry_static": "100/100 PASS",
+  "world_exit_declarations": 235,
+  "status_counts": {
+    "PLAYABLE": 27,
+    "IN_DEVELOPMENT": 73
+  },
+  "instructions": "Back up dev26, extract PATCH.zip next to folder 3/ (overwrite), then run RUN_DEV27_NATIVE_QA_WINDOWS.ps1 with Godot 4.5.1."
+}

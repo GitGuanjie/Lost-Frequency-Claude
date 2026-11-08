@@ -1,0 +1,32 @@
+{
+  "stable_id": "L100",
+  "scene": "res://levels/L100/L100.tscn",
+  "status": "IN_DEVELOPMENT",
+  "qa_status": "NOT ENGINE VERIFIED — dev5 source candidate",
+  "procedural": true,
+  "arrivals": [
+    "start",
+    "from_L048"
+  ],
+  "signature": "Tropical sandbar, twelve memorial stones, almost motionless ocean and a dangerous swim",
+  "mechanics": [
+    "memorial_sandbar",
+    "static_sea",
+    "gravestones",
+    "dwell_swim"
+  ],
+  "exits": [
+    {
+      "id": "L100>L004#1",
+      "to": "L004",
+      "basis": "SOURCE",
+      "confidence": "ONE-WAY+DANGEROUS",
+      "method": "Swim out to near-drowning; the black being carries her away",
+      "source_quote": "gently wrapped its tendrils around her waist",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-100",
+      "trigger_type": "death"
+    }
+  ],
+  "notes": "Compact exploration adaptation. Runtime Godot and Windows verification required; no automatic PLAYABLE promotion.",
+  "entity_policy": "SOURCED ENTITIES ONLY: one non-hostile tall black being (single-witness testimony)"
+}

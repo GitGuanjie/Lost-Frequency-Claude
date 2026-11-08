@@ -38,6 +38,8 @@ var _rest_t := 0.0
 var _rest_cooldown := 0.0
 var _exits_built: Dictionary = {}
 var qa_fixture := false
+var _wall_marks: Dictionary = {}
+var _mark_notice: Dictionary = {}
 
 
 func build() -> void:
@@ -68,6 +70,7 @@ func build() -> void:
 	world.shift_after = 8.0
 	add_child(world)
 	world.chunk_unloaded.connect(func(k): lights.remove_group("%d,%d" % [k.x, k.y]))
+	world.chunk_shifted.connect(_on_marked_chunk_shifted)
 	add_arrival("start", Vector3(10.5, 0.05, 10.5), -90.0)
 	world.build_around(Vector3(10.5, 0, 10.5), 2)
 	# --- audio: ballast buzz with random severe swells; rare sounds in the walls
@@ -269,6 +272,10 @@ func _build_chunk(cx: int, cz: int, version: int, node: Node3D) -> Dictionary:
 	# ---- borders this chunk owns (+X, +Z)
 	_border_walls(k, cx, cz, "x", floor_y)
 	_border_walls(k, cx, cz, "z", floor_y)
+	# Tactile exploration exists only on a minority of stable/normal rooms.
+	# It is not a new exit, and a mark is wiped away when a normal room shifts.
+	if not qa_fixture and kind in ["normal", "arches"] and _h01(cx, cz, 813) < (0.70 if kind == "arches" else 0.24):
+		_wet_wall(node, cx, cz, version, kind)
 	# ---- flickering wall (exit) placement
 	var want_exit := false
 	if qa_fixture and cx == 1 and cz == 0:
@@ -291,8 +298,22 @@ func _build_chunk(cx: int, cz: int, version: int, node: Node3D) -> Dictionary:
 ## A 12 m void rises through both floors; an upper gallery (railing-edged)
 ## rings it, reached by a stair run; upper rooms sit along two sides.
 func _atrium(k: GeoKit, ox: float, oz: float, r: RandomNumberGenerator, wall: String, group: String, meta: Dictionary) -> void:
-	var up := H + 0.25            # upper floor top
-	var top := up + H             # upper ceiling
+	var up := H + 0.25            # second floor top
+	# One in three existing atriums continues upward to an additional observation
+	# gallery. This remains a local architectural anomaly, not a new exit.
+	var tall := absi(hash([level_seed, int(ox), int(oz), "upper_observation"])) % 3 == 0
+	var third := up + 3.25
+	# DEV14: the rare deep-void variant reaches four or five full navigable
+	# elevations. Every height is built deterministically from the chunk seed.
+	var fourth := tall and absi(hash([level_seed, int(ox), int(oz), "fourth_stratum"])) % 2 == 0
+	var fifth := fourth and absi(hash([level_seed, int(ox), int(oz), "fifth_stratum"])) % 3 == 0
+	var fourth_y := third + 3.25
+	var fifth_y := fourth_y + 3.25
+	var top := third + H if tall else up + H
+	if fourth:
+		top = fourth_y + H
+	if fifth:
+		top = fifth_y + H
 	var v0 := Vector2(ox + 6.0, oz + 6.0)
 	var v1 := Vector2(ox + 18.0, oz + 18.0)
 	# upper floor slab around the void (4 pieces), with a carpet top and tile underside
@@ -310,6 +331,14 @@ func _atrium(k: GeoKit, ox: float, oz: float, r: RandomNumberGenerator, wall: St
 	var steps := 16
 	var run := 0.32
 	k.stairs(Vector3(v0.x + 0.9, 0.0, v0.y + steps * run), Vector3(0, 0, -1), 1.6, up, steps, "l0_carpet", run, false)
+	# Optional third storey has a genuine floor void for its ascending ramp.
+	# Without the cut-out, a character would hit a solid ceiling halfway up.
+	if tall:
+		_third_atrium_gallery(k, ox, oz, up, third, wall, group)
+	if fourth:
+		_high_atrium_gallery(k, ox, oz, third, fourth_y, true, wall, group)
+	if fifth:
+		_high_atrium_gallery(k, ox, oz, fourth_y, fifth_y, false, wall, group)
 	# upper-storey shell on the chunk perimeter so nothing beyond the chunk is ever visible
 	for e in [[Vector3(ox, H, oz), Vector3(ox + CS, top, oz + 0.1)], [Vector3(ox, H, oz + CS - 0.1), Vector3(ox + CS, top, oz + CS)],
 			[Vector3(ox, H, oz), Vector3(ox + 0.1, top, oz + CS)], [Vector3(ox + CS - 0.1, H, oz), Vector3(ox + CS, top, oz + CS)]]:
@@ -333,13 +362,130 @@ func _atrium(k: GeoKit, ox: float, oz: float, r: RandomNumberGenerator, wall: St
 			var in_void := c.x > v0.x and c.x < v1.x and c.z > v0.y and c.z < v1.y
 			if not in_void:
 				k.panel(Vector3(c.x, H - 0.004 + 0.0, c.z), 1.2, 0.6, "l0_panel", float(i * 13 + j), 0.0)
-				k.panel(Vector3(c.x, up - 0.255, c.z), 1.2, 0.6, "l0_panel", float(i * 7 + j), 0.0)
+				if tall:
+					k.panel(Vector3(c.x, third - 0.255, c.z), 1.2, 0.6, "l0_panel", float(i * 7 + j), 0.0)
+				if fourth:
+					k.panel(Vector3(c.x, fourth_y - 0.255, c.z), 1.2, 0.6, "l0_panel", float(i * 11 + j), 0.0)
+				if fifth:
+					k.panel(Vector3(c.x, fifth_y - 0.255, c.z), 1.2, 0.6, "l0_panel", float(i * 17 + j), 0.0)
 			k.panel(Vector3(c.x, top - 0.004, c.z), 1.2, 0.6, "l0_panel", float(i + j * 5), 0.03 if r.randf() < 0.06 else 0.0)
 			if (i + j) % 2 == 0:
 				lights.add_anchor(Vector3(c.x, (top if in_void else H) - 0.3, c.z), Color(1.0, 0.93, 0.74), 1.3, 7.5, 0.0, group)
 				if not in_void:
-					lights.add_anchor(Vector3(c.x, top - 0.3, c.z), Color(1.0, 0.93, 0.74), 1.1, 6.5, 0.0, group)
-	meta["storeys"] = 2
+					lights.add_anchor(Vector3(c.x, (third if tall else top) - 0.3, c.z), Color(1.0, 0.93, 0.74), 1.1, 6.5, 0.0, group)
+	meta["storeys"] = 3 if tall else 2
+	if fourth:
+		meta["storeys"] = 4
+	if fifth:
+		meta["storeys"] = 5
+	meta["has_upper_observation_bridge"] = tall
+	meta["dev14_high_strata"] = 2 if fifth else (1 if fourth else 0)
+
+
+## Third-storey navigation is an actual continuous ramp and slab system,
+## not a floating platform. The stair slot and central atrium shaft are both
+## cut out of the top floor, and the bridge has 1 m high side guards.
+func _third_atrium_gallery(k: GeoKit, ox: float, oz: float, lower: float, upper: float, wall: String, group: String) -> void:
+	var x0 := ox + 6.0
+	var x1 := ox + 18.0
+	var z0 := oz + 6.0
+	var z1 := oz + 18.0
+	var mat := "l0_carpet"
+	# South, north and east gallery skirts surrounding the 12 m central void.
+	k.slab(ox, oz, ox + CS, z0, upper, 0.24, mat, GeoKit.PY)
+	k.slab(ox, z1, ox + CS, oz + CS, upper, 0.24, mat, GeoKit.PY)
+	k.slab(x1, z0, ox + CS, z1, upper, 0.24, mat, GeoKit.PY)
+	# West skirt in six sections: 2.8 m wide cut-out where stairs rise.
+	for rect in [
+		[ox, z0, ox + 2.0, z1], [ox + 4.8, z0, x0, z1],
+		[ox + 2.0, z0, ox + 4.8, oz + 9.4],
+		[ox + 2.0, oz + 13.4, ox + 4.8, z1]
+	]:
+		k.slab(rect[0], rect[1], rect[2], rect[3], upper, 0.24, mat, GeoKit.PY)
+	# 18 physical steps: 5.76 m horizontal run, 3.25 m rise.
+	# The final tread sits on the gallery just after the slot ends.
+	k.stairs(Vector3(ox + 3.35, lower, oz + 7.8), Vector3(0, 0, 1), 1.8,
+		upper - lower, 18, mat, 0.32, false)
+	# A narrow cross-void balcony creates an actual alternate upper route.
+	k.slab(x0, oz + 14.9, x1, oz + 16.9, upper, 0.2, mat, GeoKit.PY)
+	for z in [oz + 14.9, oz + 16.9]:
+		k.box(Vector3((x0 + x1) * 0.5, upper + 0.55, z), Vector3(x1 - x0, 1.1, 0.10), wall)
+	# Outer edges of the void are guarded; leave a two-metre opening at each
+	# bridge end so the bridge is not sealed behind an invisible barrier.
+	for x in [x0, x1]:
+		for segment in [[z0, oz + 14.9], [oz + 16.9, z1]]:
+			var a: float = segment[0]
+			var b: float = segment[1]
+			k.box(Vector3(x, upper + 0.55, (a + b) * 0.5), Vector3(0.12, 1.1, b - a), wall)
+	for z in [z0, z1]:
+		k.box(Vector3((x0 + x1) * 0.5, upper + 0.55, z), Vector3(x1 - x0, 1.1, 0.12), wall)
+	# Physical, local environmental storytelling, owned by the streamed chunk.
+	var trace := Interactable.new()
+	k.root.add_child(trace)
+	trace.setup(Vector3(ox + 22.0, upper + 0.95, oz + 22.0), Vector3(1.2, 1.6, 1.2),
+		"Read the maintenance note on the upper gallery", func(_p):
+			Overlay.subtitle("Three staircases on the plan. Only two were built. The third is here anyway.", 5.0))
+	k.box(Vector3(ox + 22.0, upper + 0.36, oz + 22.0), Vector3(1.4, 0.55, 0.16), wall, GeoKit.ALL, false)
+	# Restrained lamps instead of multiplying dynamic shadows on every beam.
+	for x in [ox + 4.0, ox + 21.0]:
+		lights.add_anchor(Vector3(x, upper + 2.2, oz + 15.9), Color(1.0, 0.90, 0.73), 0.85, 5.0, 0.0, group)
+
+
+
+## DEV14: each superposed atrium storey has a 12 m void, a cross-shaft bridge,
+## a split approach gallery and an actual stair slot. Alternating east/west
+## stairs create a changing 3D route rather than repeated stairwell geometry.
+## No story transition, noclip interaction, or invisible teleport is involved.
+func _high_atrium_gallery(k: GeoKit, ox: float, oz: float, lower: float, upper: float, east_stair: bool, wall: String, group: String) -> void:
+	var x0 := ox + 6.0
+	var x1 := ox + 18.0
+	var z0 := oz + 6.0
+	var z1 := oz + 18.0
+	var mat := "l0_carpet"
+	# North/south balconies always exist; a true open 12x12 shaft remains.
+	k.slab(ox, oz, ox + CS, z0, upper, 0.24, mat, GeoKit.PY)
+	k.slab(ox, z1, ox + CS, oz + CS, upper, 0.24, mat, GeoKit.PY)
+	for side in 2:
+		var left := ox if side == 0 else x1
+		var right := x0 if side == 0 else ox + CS
+		var has_slot := (side == 1) == east_stair
+		if has_slot:
+			# The stair climbs THROUGH the upper slab, not into its underside.
+			var slot0 := left + 2.0
+			var slot1 := left + 4.7
+			for rect in [[left, z0, slot0, z1], [slot1, z0, right, z1],
+				[slot0, z0, slot1, oz + 8.0], [slot0, oz + 14.85, slot1, z1]]:
+				k.slab(rect[0], rect[1], rect[2], rect[3], upper, 0.24, mat, GeoKit.PY)
+		else:
+			k.slab(left, z0, right, z1, upper, 0.24, mat, GeoKit.PY)
+	var sx := ox + 21.35 if east_stair else ox + 3.35
+	k.stairs(Vector3(sx, lower, oz + 8.10), Vector3.BACK, 1.75, upper - lower, 18, mat, 0.375, false)
+	# Two asymmetric perimeter partitions with multiple entrances; there is
+	# no repeat of the single observation-room design on the floor below.
+	for zz in [oz + 3.0, oz + 21.0]:
+		k.wall(Vector3(ox + 2.0, upper, zz), Vector3(ox + 22.0, upper, zz),
+			2.50, 0.14, wall,
+			[{"at": 4.0, "w": 2.2, "h": 2.2}, {"at": 14.0, "w": 2.2, "h": 2.2}], GeoKit.SIDES)
+	# Center bridge crosses the empty well and joins BOTH rim galleries.
+	var bridge_lo := oz + 11.3
+	var bridge_hi := oz + 13.6
+	k.slab(x0, bridge_lo, x1, bridge_hi, upper, 0.22, mat, GeoKit.PY)
+	for zz in [bridge_lo, bridge_hi]:
+		k.box(Vector3(ox + 12.0, upper + 0.5, zz), Vector3(12.0, 1.0, 0.10), wall)
+	# Shaft guards leave 2.3m gaps directly opposite bridge ends.
+	for xx in [x0, x1]:
+		for span in [[z0, bridge_lo], [bridge_hi, z1]]:
+			k.box(Vector3(xx, upper + 0.5, (span[0] + span[1]) * 0.5),
+				Vector3(0.11, 1.0, span[1] - span[0]), wall)
+	for zz in [z0, z1]:
+		k.box(Vector3(ox + 12.0, upper + 0.5, zz), Vector3(12.0, 1.0, 0.11), wall)
+	var label := Interactable.new()
+	k.root.add_child(label)
+	label.setup(Vector3(ox + 12.0, upper + 1.0, oz + 12.45), Vector3(1.1, 1.0, 0.7),
+		"Inspect the mismatched floor number", func(_p):
+			Overlay.subtitle("This landing is printed twice on the directory, but the windows look onto different floors.", 5.0))
+	for xx in [ox + 3.0, ox + 21.0]:
+		lights.add_anchor(Vector3(xx, upper + 2.1, oz + 12.5), Color(1.0, 0.88, 0.67), 0.8, 5.0, 0.0, group)
 
 
 func _floor_around(k: GeoKit, ox: float, oz: float, hole: Rect2i, mat: String) -> void:
@@ -595,6 +741,40 @@ func _flicker_wall(node: Node3D, k: GeoKit, ox: float, oz: float, r: RandomNumbe
 	meta["exit_pos"] = c
 
 
+## A shallow stain along an otherwise featureless wall. The thin dark patch
+## is visible but non-colliding; E leaves three scratches you can look for
+## on the way back. In a shifting room these marks do not survive.
+func _wet_wall(owner: Node3D, cx: int, cz: int, version: int, kind: String) -> void:
+	var at := Vector3(cx * CS + 4.5, 1.15, cz * CS + 2.85)
+	var patch := GeoKit.new(owner, "WetWallpaper")
+	patch.box(at, Vector3(0.94, 1.25, 0.018), "l0_wallpaper_rough", GeoKit.ALL, false)
+	patch.commit()
+	var mark := GeoKit.new(owner, "ThreeScratches")
+	for i in 3:
+		mark.box(at + Vector3((float(i) - 1.0) * 0.17, 0.12, -0.019),
+			Vector3(0.028, 0.23, 0.018), "l0_carpet_sticky", GeoKit.ALL, false)
+	mark.commit()
+	var key := Vector2i(cx, cz)
+	mark.root.visible = _wall_marks.get(key, -1) == version
+	make_interactable(at + Vector3(0, 0, -0.22), Vector3(1.2, 1.7, 0.6),
+		"Feel the damp wallpaper / leave a mark", func(_p):
+			_wall_marks[key] = version
+			SaveService.record_discovery(stable_id, "tactile_wallpaper", "The damp yellow wallpaper can be marked; scratches vanish when an unseen room shifts.")
+			mark.root.visible = true
+			if kind == "arches":
+				checkpoint("arches")
+				Overlay.toast("Three marks. The arches stay where they are. Checkpoint saved.", 4.0)
+			else:
+				Overlay.toast("Three marks in the damp paper. Will they still be here?", 4.0), owner)
+
+
+func _on_marked_chunk_shifted(key: Vector2i, _version: int) -> void:
+	if _wall_marks.has(key):
+		_wall_marks.erase(key)
+		_mark_notice[key] = true
+
+
+
 # ----------------------------------------------------------------- runtime
 
 func on_player_ready() -> void:
@@ -612,6 +792,9 @@ func level_process(delta: float) -> void:
 	var key := world.key_at(player.global_position)
 	var meta := world.meta_of(key)
 	_kind_here = meta.get("kind", "normal")
+	if _mark_notice.has(key):
+		_mark_notice.erase(key)
+		Overlay.subtitle("[the three scratches are gone; the wallpaper is smooth again]", 4.0)
 	var fringe: bool = meta.get("fringe", false)
 	# --- hum: random severe swells; silence in blackout zones
 	_surge_t -= delta

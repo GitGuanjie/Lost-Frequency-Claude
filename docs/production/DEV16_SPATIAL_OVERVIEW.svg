@@ -1,0 +1,706 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1770" viewBox="0 0 1500 1770">
+<rect width="100%" height="100%" fill="#10151e"/>
+<style>text{font-family:Arial,Helvetica,sans-serif} .title{fill:#ecf5ff} .small{fill:#b7c7d8} .muted{fill:#8499b0} .chip{fill:#52c3ae}</style>
+<text x="35" y="55" font-size="34" font-weight="bold" class="title">LOST FREQUENCY // DEV16</text>
+<text x="35" y="87" font-size="17" class="small">14 maps · 17 multi-tier sites · 3 paired skybridge systems · 905 nodes / 1123 edges / 232 cycles</text>
+<text x="35" y="111" font-size="14" class="muted">Topology design reconstruction only. Not a Godot screenshot or certified player route.</text>
+<rect x="34" y="134" width="465" height="312" rx="12" fill="#1a2634" stroke="#34516a"/>
+<text x="52" y="166" font-size="21" font-weight="bold" class="title">L028</text>
+<text x="52" y="188" font-size="13" class="small">1 site(s)   43 nodes   11 cycles</text>
+<text x="52" y="207" font-size="12" fill="#8fd2c7">Four branch corridors per tier</text>
+<rect x="210" y="393" width="112" height="6" rx="2" fill="#80d6cd"/>
+<path d="M 210 396 H 192" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="189" y="392" width="7" height="8" fill="#b4cde0"/>
+<path d="M 322 396 H 340" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="337" y="392" width="7" height="8" fill="#b4cde0"/>
+<text x="257" y="388" font-size="11" class="small">0</text>
+<rect x="210" y="362" width="112" height="6" rx="2" fill="#80d6cd"/>
+<path d="M 210 365 H 192" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="189" y="361" width="7" height="8" fill="#b4cde0"/>
+<path d="M 322 365 H 340" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="337" y="361" width="7" height="8" fill="#b4cde0"/>
+<text x="257" y="357" font-size="11" class="small">1</text>
+<rect x="210" y="331" width="112" height="6" rx="2" fill="#80d6cd"/>
+<path d="M 210 334 H 192" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="189" y="330" width="7" height="8" fill="#b4cde0"/>
+<path d="M 322 334 H 340" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="337" y="330" width="7" height="8" fill="#b4cde0"/>
+<text x="257" y="326" font-size="11" class="small">2</text>
+<rect x="210" y="300" width="112" height="6" rx="2" fill="#80d6cd"/>
+<path d="M 210 303 H 192" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="189" y="299" width="7" height="8" fill="#b4cde0"/>
+<path d="M 322 303 H 340" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="337" y="299" width="7" height="8" fill="#b4cde0"/>
+<text x="257" y="295" font-size="11" class="small">3</text>
+<path d="M 314 396 L 339 380.5 L 314 365" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 218 396 L 193 380.5 L 218 365" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 314 365 L 339 349.5 L 314 334" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 218 365 L 193 349.5 L 218 334" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 314 334 L 339 318.5 L 314 303" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 218 334 L 193 318.5 L 218 303" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<text x="52" y="427" font-size="13" class="muted">Vertical span 10.5 m · above grade</text>
+<rect x="522" y="134" width="465" height="312" rx="12" fill="#1a2634" stroke="#34516a"/>
+<text x="540" y="166" font-size="21" font-weight="bold" class="title">L032</text>
+<text x="540" y="188" font-size="13" class="small">1 site(s)   55 nodes   14 cycles</text>
+<text x="540" y="207" font-size="12" fill="#8fd2c7">Four branch corridors per tier</text>
+<rect x="698" y="393" width="112" height="6" rx="2" fill="#72bcd6"/>
+<path d="M 698 396 H 680" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="677" y="392" width="7" height="8" fill="#b4cde0"/>
+<path d="M 810 396 H 828" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="825" y="392" width="7" height="8" fill="#b4cde0"/>
+<text x="745" y="388" font-size="11" class="small">0</text>
+<rect x="698" y="362" width="112" height="6" rx="2" fill="#72bcd6"/>
+<path d="M 698 365 H 680" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="677" y="361" width="7" height="8" fill="#b4cde0"/>
+<path d="M 810 365 H 828" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="825" y="361" width="7" height="8" fill="#b4cde0"/>
+<text x="745" y="357" font-size="11" class="small">1</text>
+<rect x="698" y="331" width="112" height="6" rx="2" fill="#72bcd6"/>
+<path d="M 698 334 H 680" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="677" y="330" width="7" height="8" fill="#b4cde0"/>
+<path d="M 810 334 H 828" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="825" y="330" width="7" height="8" fill="#b4cde0"/>
+<text x="745" y="326" font-size="11" class="small">2</text>
+<rect x="698" y="300" width="112" height="6" rx="2" fill="#72bcd6"/>
+<path d="M 698 303 H 680" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="677" y="299" width="7" height="8" fill="#b4cde0"/>
+<path d="M 810 303 H 828" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="825" y="299" width="7" height="8" fill="#b4cde0"/>
+<text x="745" y="295" font-size="11" class="small">3</text>
+<rect x="698" y="269" width="112" height="6" rx="2" fill="#72bcd6"/>
+<path d="M 698 272 H 680" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="677" y="268" width="7" height="8" fill="#b4cde0"/>
+<path d="M 810 272 H 828" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="825" y="268" width="7" height="8" fill="#b4cde0"/>
+<text x="745" y="264" font-size="11" class="small">4</text>
+<path d="M 802 396 L 827 380.5 L 802 365" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 706 396 L 681 380.5 L 706 365" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 802 365 L 827 349.5 L 802 334" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 706 365 L 681 349.5 L 706 334" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 802 334 L 827 318.5 L 802 303" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 706 334 L 681 318.5 L 706 303" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 802 303 L 827 287.5 L 802 272" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 706 303 L 681 287.5 L 706 272" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<text x="540" y="427" font-size="13" class="muted">Vertical span 13.6 m · above grade</text>
+<rect x="1010" y="134" width="465" height="312" rx="12" fill="#1a2634" stroke="#34516a"/>
+<text x="1028" y="166" font-size="21" font-weight="bold" class="title">L048</text>
+<text x="1028" y="188" font-size="13" class="small">2 site(s)   112 nodes   29 cycles</text>
+<text x="1028" y="207" font-size="12" fill="#f9cc87">Two towers, dual-height bridges</text>
+<rect x="1083" y="393" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 1083 396 H 1065" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1062" y="392" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1195 396 H 1213" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1210" y="392" width="7" height="8" fill="#b4cde0"/>
+<text x="1130" y="388" font-size="11" class="small">0</text>
+<rect x="1083" y="362" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 1083 365 H 1065" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1062" y="361" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1195 365 H 1213" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1210" y="361" width="7" height="8" fill="#b4cde0"/>
+<text x="1130" y="357" font-size="11" class="small">1</text>
+<rect x="1083" y="331" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 1083 334 H 1065" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1062" y="330" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1195 334 H 1213" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1210" y="330" width="7" height="8" fill="#b4cde0"/>
+<text x="1130" y="326" font-size="11" class="small">2</text>
+<rect x="1083" y="300" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 1083 303 H 1065" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1062" y="299" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1195 303 H 1213" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1210" y="299" width="7" height="8" fill="#b4cde0"/>
+<text x="1130" y="295" font-size="11" class="small">3</text>
+<rect x="1083" y="269" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 1083 272 H 1065" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1062" y="268" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1195 272 H 1213" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1210" y="268" width="7" height="8" fill="#b4cde0"/>
+<text x="1130" y="264" font-size="11" class="small">4</text>
+<path d="M 1187 396 L 1212 380.5 L 1187 365" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1091 396 L 1066 380.5 L 1091 365" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 1187 365 L 1212 349.5 L 1187 334" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1091 365 L 1066 349.5 L 1091 334" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 1187 334 L 1212 318.5 L 1187 303" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1091 334 L 1066 318.5 L 1091 303" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 1187 303 L 1212 287.5 L 1187 272" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1091 303 L 1066 287.5 L 1091 272" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<rect x="1289" y="393" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 1289 396 H 1271" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1268" y="392" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1401 396 H 1419" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1416" y="392" width="7" height="8" fill="#b4cde0"/>
+<text x="1336" y="388" font-size="11" class="small">0</text>
+<rect x="1289" y="362" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 1289 365 H 1271" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1268" y="361" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1401 365 H 1419" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1416" y="361" width="7" height="8" fill="#b4cde0"/>
+<text x="1336" y="357" font-size="11" class="small">1</text>
+<rect x="1289" y="331" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 1289 334 H 1271" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1268" y="330" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1401 334 H 1419" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1416" y="330" width="7" height="8" fill="#b4cde0"/>
+<text x="1336" y="326" font-size="11" class="small">2</text>
+<rect x="1289" y="300" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 1289 303 H 1271" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1268" y="299" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1401 303 H 1419" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1416" y="299" width="7" height="8" fill="#b4cde0"/>
+<text x="1336" y="295" font-size="11" class="small">3</text>
+<rect x="1289" y="269" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 1289 272 H 1271" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1268" y="268" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1401 272 H 1419" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1416" y="268" width="7" height="8" fill="#b4cde0"/>
+<text x="1336" y="264" font-size="11" class="small">4</text>
+<path d="M 1393 396 L 1418 380.5 L 1393 365" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1297 396 L 1272 380.5 L 1297 365" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 1393 365 L 1418 349.5 L 1393 334" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1297 365 L 1272 349.5 L 1297 334" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 1393 334 L 1418 318.5 L 1393 303" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1297 334 L 1272 318.5 L 1297 303" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 1393 303 L 1418 287.5 L 1393 272" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1297 303 L 1272 287.5 L 1297 272" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M1213 365 H1271" stroke="#f6d78d" stroke-width="4" stroke-dasharray="9 4"/>
+<path d="M1213 272 H1271" stroke="#f6d78d" stroke-width="4" stroke-dasharray="9 4"/>
+<text x="1028" y="427" font-size="13" class="muted">Vertical span 14.0 m · above grade</text>
+<rect x="34" y="455" width="465" height="312" rx="12" fill="#1a2634" stroke="#34516a"/>
+<text x="52" y="487" font-size="21" font-weight="bold" class="title">L050</text>
+<text x="52" y="509" font-size="13" class="small">1 site(s)   43 nodes   11 cycles</text>
+<text x="52" y="528" font-size="12" fill="#8fd2c7">Four branch corridors per tier</text>
+<rect x="210" y="714" width="112" height="6" rx="2" fill="#b4a1e3"/>
+<path d="M 210 717 H 192" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="189" y="713" width="7" height="8" fill="#b4cde0"/>
+<path d="M 322 717 H 340" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="337" y="713" width="7" height="8" fill="#b4cde0"/>
+<text x="257" y="709" font-size="11" class="small">0</text>
+<rect x="210" y="683" width="112" height="6" rx="2" fill="#b4a1e3"/>
+<path d="M 210 686 H 192" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="189" y="682" width="7" height="8" fill="#b4cde0"/>
+<path d="M 322 686 H 340" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="337" y="682" width="7" height="8" fill="#b4cde0"/>
+<text x="257" y="678" font-size="11" class="small">1</text>
+<rect x="210" y="652" width="112" height="6" rx="2" fill="#b4a1e3"/>
+<path d="M 210 655 H 192" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="189" y="651" width="7" height="8" fill="#b4cde0"/>
+<path d="M 322 655 H 340" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="337" y="651" width="7" height="8" fill="#b4cde0"/>
+<text x="257" y="647" font-size="11" class="small">2</text>
+<rect x="210" y="621" width="112" height="6" rx="2" fill="#b4a1e3"/>
+<path d="M 210 624 H 192" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="189" y="620" width="7" height="8" fill="#b4cde0"/>
+<path d="M 322 624 H 340" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="337" y="620" width="7" height="8" fill="#b4cde0"/>
+<text x="257" y="616" font-size="11" class="small">3</text>
+<path d="M 314 717 L 339 701.5 L 314 686" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 218 717 L 193 701.5 L 218 686" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 314 686 L 339 670.5 L 314 655" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 218 686 L 193 670.5 L 218 655" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 314 655 L 339 639.5 L 314 624" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 218 655 L 193 639.5 L 218 624" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<text x="52" y="748" font-size="13" class="muted">Vertical span 10.5 m · above grade</text>
+<rect x="522" y="455" width="465" height="312" rx="12" fill="#1a2634" stroke="#34516a"/>
+<text x="540" y="487" font-size="21" font-weight="bold" class="title">L073</text>
+<text x="540" y="509" font-size="13" class="small">1 site(s)   43 nodes   11 cycles</text>
+<text x="540" y="528" font-size="12" fill="#8fd2c7">Four branch corridors per tier</text>
+<rect x="698" y="714" width="112" height="6" rx="2" fill="#80d6cd"/>
+<path d="M 698 717 H 680" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="677" y="713" width="7" height="8" fill="#b4cde0"/>
+<path d="M 810 717 H 828" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="825" y="713" width="7" height="8" fill="#b4cde0"/>
+<text x="745" y="709" font-size="11" class="small">0</text>
+<rect x="698" y="683" width="112" height="6" rx="2" fill="#80d6cd"/>
+<path d="M 698 686 H 680" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="677" y="682" width="7" height="8" fill="#b4cde0"/>
+<path d="M 810 686 H 828" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="825" y="682" width="7" height="8" fill="#b4cde0"/>
+<text x="745" y="678" font-size="11" class="small">1</text>
+<rect x="698" y="652" width="112" height="6" rx="2" fill="#80d6cd"/>
+<path d="M 698 655 H 680" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="677" y="651" width="7" height="8" fill="#b4cde0"/>
+<path d="M 810 655 H 828" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="825" y="651" width="7" height="8" fill="#b4cde0"/>
+<text x="745" y="647" font-size="11" class="small">2</text>
+<rect x="698" y="621" width="112" height="6" rx="2" fill="#80d6cd"/>
+<path d="M 698 624 H 680" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="677" y="620" width="7" height="8" fill="#b4cde0"/>
+<path d="M 810 624 H 828" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="825" y="620" width="7" height="8" fill="#b4cde0"/>
+<text x="745" y="616" font-size="11" class="small">3</text>
+<path d="M 802 717 L 827 701.5 L 802 686" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 706 717 L 681 701.5 L 706 686" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 802 686 L 827 670.5 L 802 655" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 706 686 L 681 670.5 L 706 655" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 802 655 L 827 639.5 L 802 624" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 706 655 L 681 639.5 L 706 624" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<text x="540" y="748" font-size="13" class="muted">Vertical span 10.5 m · above grade</text>
+<rect x="1010" y="455" width="465" height="312" rx="12" fill="#1a2634" stroke="#34516a"/>
+<text x="1028" y="487" font-size="21" font-weight="bold" class="title">L077</text>
+<text x="1028" y="509" font-size="13" class="small">1 site(s)   55 nodes   14 cycles</text>
+<text x="1028" y="528" font-size="12" fill="#8fd2c7">Four branch corridors per tier</text>
+<rect x="1186" y="714" width="112" height="6" rx="2" fill="#72bcd6"/>
+<path d="M 1186 717 H 1168" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1165" y="713" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1298 717 H 1316" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1313" y="713" width="7" height="8" fill="#b4cde0"/>
+<text x="1233" y="709" font-size="11" class="small">0</text>
+<rect x="1186" y="683" width="112" height="6" rx="2" fill="#72bcd6"/>
+<path d="M 1186 686 H 1168" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1165" y="682" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1298 686 H 1316" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1313" y="682" width="7" height="8" fill="#b4cde0"/>
+<text x="1233" y="678" font-size="11" class="small">1</text>
+<rect x="1186" y="652" width="112" height="6" rx="2" fill="#72bcd6"/>
+<path d="M 1186 655 H 1168" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1165" y="651" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1298 655 H 1316" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1313" y="651" width="7" height="8" fill="#b4cde0"/>
+<text x="1233" y="647" font-size="11" class="small">2</text>
+<rect x="1186" y="621" width="112" height="6" rx="2" fill="#72bcd6"/>
+<path d="M 1186 624 H 1168" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1165" y="620" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1298 624 H 1316" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1313" y="620" width="7" height="8" fill="#b4cde0"/>
+<text x="1233" y="616" font-size="11" class="small">3</text>
+<rect x="1186" y="590" width="112" height="6" rx="2" fill="#72bcd6"/>
+<path d="M 1186 593 H 1168" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1165" y="589" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1298 593 H 1316" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1313" y="589" width="7" height="8" fill="#b4cde0"/>
+<text x="1233" y="585" font-size="11" class="small">4</text>
+<path d="M 1290 717 L 1315 701.5 L 1290 686" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1194 717 L 1169 701.5 L 1194 686" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 1290 686 L 1315 670.5 L 1290 655" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1194 686 L 1169 670.5 L 1194 655" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 1290 655 L 1315 639.5 L 1290 624" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1194 655 L 1169 639.5 L 1194 624" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 1290 624 L 1315 608.5 L 1290 593" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1194 624 L 1169 608.5 L 1194 593" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<text x="1028" y="748" font-size="13" class="muted">Vertical span 14.0 m · above grade</text>
+<rect x="34" y="776" width="465" height="312" rx="12" fill="#1a2634" stroke="#34516a"/>
+<text x="52" y="808" font-size="21" font-weight="bold" class="title">L085</text>
+<text x="52" y="830" font-size="13" class="small">1 site(s)   43 nodes   11 cycles</text>
+<text x="52" y="849" font-size="12" fill="#8fd2c7">Four branch corridors per tier</text>
+<rect x="210" y="1035" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 210 1038 H 192" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="189" y="1034" width="7" height="8" fill="#b4cde0"/>
+<path d="M 322 1038 H 340" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="337" y="1034" width="7" height="8" fill="#b4cde0"/>
+<text x="257" y="1030" font-size="11" class="small">0</text>
+<rect x="210" y="1004" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 210 1007 H 192" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="189" y="1003" width="7" height="8" fill="#b4cde0"/>
+<path d="M 322 1007 H 340" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="337" y="1003" width="7" height="8" fill="#b4cde0"/>
+<text x="257" y="999" font-size="11" class="small">1</text>
+<rect x="210" y="973" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 210 976 H 192" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="189" y="972" width="7" height="8" fill="#b4cde0"/>
+<path d="M 322 976 H 340" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="337" y="972" width="7" height="8" fill="#b4cde0"/>
+<text x="257" y="968" font-size="11" class="small">2</text>
+<rect x="210" y="942" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 210 945 H 192" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="189" y="941" width="7" height="8" fill="#b4cde0"/>
+<path d="M 322 945 H 340" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="337" y="941" width="7" height="8" fill="#b4cde0"/>
+<text x="257" y="937" font-size="11" class="small">3</text>
+<path d="M 314 1038 L 339 1022.5 L 314 1007" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 218 1038 L 193 1022.5 L 218 1007" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 314 1007 L 339 991.5 L 314 976" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 218 1007 L 193 991.5 L 218 976" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 314 976 L 339 960.5 L 314 945" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 218 976 L 193 960.5 L 218 945" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<text x="52" y="1069" font-size="13" class="muted">Vertical span 10.5 m · above grade</text>
+<rect x="522" y="776" width="465" height="312" rx="12" fill="#1a2634" stroke="#34516a"/>
+<text x="540" y="808" font-size="21" font-weight="bold" class="title">L094</text>
+<text x="540" y="830" font-size="13" class="small">1 site(s)   55 nodes   14 cycles</text>
+<text x="540" y="849" font-size="12" fill="#8fd2c7">Four branch corridors per tier</text>
+<rect x="698" y="1035" width="112" height="6" rx="2" fill="#b4a1e3"/>
+<path d="M 698 1038 H 680" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="677" y="1034" width="7" height="8" fill="#b4cde0"/>
+<path d="M 810 1038 H 828" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="825" y="1034" width="7" height="8" fill="#b4cde0"/>
+<text x="745" y="1030" font-size="11" class="small">0</text>
+<rect x="698" y="1004" width="112" height="6" rx="2" fill="#b4a1e3"/>
+<path d="M 698 1007 H 680" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="677" y="1003" width="7" height="8" fill="#b4cde0"/>
+<path d="M 810 1007 H 828" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="825" y="1003" width="7" height="8" fill="#b4cde0"/>
+<text x="745" y="999" font-size="11" class="small">1</text>
+<rect x="698" y="973" width="112" height="6" rx="2" fill="#b4a1e3"/>
+<path d="M 698 976 H 680" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="677" y="972" width="7" height="8" fill="#b4cde0"/>
+<path d="M 810 976 H 828" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="825" y="972" width="7" height="8" fill="#b4cde0"/>
+<text x="745" y="968" font-size="11" class="small">2</text>
+<rect x="698" y="942" width="112" height="6" rx="2" fill="#b4a1e3"/>
+<path d="M 698 945 H 680" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="677" y="941" width="7" height="8" fill="#b4cde0"/>
+<path d="M 810 945 H 828" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="825" y="941" width="7" height="8" fill="#b4cde0"/>
+<text x="745" y="937" font-size="11" class="small">3</text>
+<rect x="698" y="911" width="112" height="6" rx="2" fill="#b4a1e3"/>
+<path d="M 698 914 H 680" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="677" y="910" width="7" height="8" fill="#b4cde0"/>
+<path d="M 810 914 H 828" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="825" y="910" width="7" height="8" fill="#b4cde0"/>
+<text x="745" y="906" font-size="11" class="small">4</text>
+<path d="M 802 1038 L 827 1022.5 L 802 1007" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 706 1038 L 681 1022.5 L 706 1007" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 802 1007 L 827 991.5 L 802 976" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 706 1007 L 681 991.5 L 706 976" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 802 976 L 827 960.5 L 802 945" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 706 976 L 681 960.5 L 706 945" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 802 945 L 827 929.5 L 802 914" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 706 945 L 681 929.5 L 706 914" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<text x="540" y="1069" font-size="13" class="muted">Vertical span 14.0 m · above grade</text>
+<rect x="1010" y="776" width="465" height="312" rx="12" fill="#1a2634" stroke="#34516a"/>
+<text x="1028" y="808" font-size="21" font-weight="bold" class="title">L108</text>
+<text x="1028" y="830" font-size="13" class="small">1 site(s)   55 nodes   14 cycles</text>
+<text x="1028" y="849" font-size="12" fill="#8fd2c7">Four branch corridors per tier</text>
+<rect x="1186" y="1035" width="112" height="6" rx="2" fill="#80d6cd"/>
+<path d="M 1186 1038 H 1168" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1165" y="1034" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1298 1038 H 1316" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1313" y="1034" width="7" height="8" fill="#b4cde0"/>
+<text x="1233" y="1030" font-size="11" class="small">0</text>
+<rect x="1186" y="1004" width="112" height="6" rx="2" fill="#80d6cd"/>
+<path d="M 1186 1007 H 1168" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1165" y="1003" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1298 1007 H 1316" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1313" y="1003" width="7" height="8" fill="#b4cde0"/>
+<text x="1233" y="999" font-size="11" class="small">1</text>
+<rect x="1186" y="973" width="112" height="6" rx="2" fill="#80d6cd"/>
+<path d="M 1186 976 H 1168" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1165" y="972" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1298 976 H 1316" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1313" y="972" width="7" height="8" fill="#b4cde0"/>
+<text x="1233" y="968" font-size="11" class="small">2</text>
+<rect x="1186" y="942" width="112" height="6" rx="2" fill="#80d6cd"/>
+<path d="M 1186 945 H 1168" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1165" y="941" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1298 945 H 1316" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1313" y="941" width="7" height="8" fill="#b4cde0"/>
+<text x="1233" y="937" font-size="11" class="small">3</text>
+<rect x="1186" y="911" width="112" height="6" rx="2" fill="#80d6cd"/>
+<path d="M 1186 914 H 1168" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1165" y="910" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1298 914 H 1316" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1313" y="910" width="7" height="8" fill="#b4cde0"/>
+<text x="1233" y="906" font-size="11" class="small">4</text>
+<path d="M 1290 1038 L 1315 1022.5 L 1290 1007" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1194 1038 L 1169 1022.5 L 1194 1007" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 1290 1007 L 1315 991.5 L 1290 976" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1194 1007 L 1169 991.5 L 1194 976" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 1290 976 L 1315 960.5 L 1290 945" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1194 976 L 1169 960.5 L 1194 945" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 1290 945 L 1315 929.5 L 1290 914" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1194 945 L 1169 929.5 L 1194 914" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<text x="1028" y="1069" font-size="13" class="muted">Vertical span 14.0 m · above grade</text>
+<rect x="34" y="1097" width="465" height="312" rx="12" fill="#1a2634" stroke="#34516a"/>
+<text x="52" y="1129" font-size="21" font-weight="bold" class="title">L140</text>
+<text x="52" y="1151" font-size="13" class="small">1 site(s)   43 nodes   11 cycles</text>
+<text x="52" y="1170" font-size="12" fill="#8fd2c7">Four branch corridors per tier</text>
+<rect x="210" y="1356" width="112" height="6" rx="2" fill="#72bcd6"/>
+<path d="M 210 1359 H 192" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="189" y="1355" width="7" height="8" fill="#b4cde0"/>
+<path d="M 322 1359 H 340" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="337" y="1355" width="7" height="8" fill="#b4cde0"/>
+<text x="257" y="1351" font-size="11" class="small">0</text>
+<rect x="210" y="1325" width="112" height="6" rx="2" fill="#72bcd6"/>
+<path d="M 210 1328 H 192" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="189" y="1324" width="7" height="8" fill="#b4cde0"/>
+<path d="M 322 1328 H 340" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="337" y="1324" width="7" height="8" fill="#b4cde0"/>
+<text x="257" y="1320" font-size="11" class="small">1</text>
+<rect x="210" y="1294" width="112" height="6" rx="2" fill="#72bcd6"/>
+<path d="M 210 1297 H 192" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="189" y="1293" width="7" height="8" fill="#b4cde0"/>
+<path d="M 322 1297 H 340" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="337" y="1293" width="7" height="8" fill="#b4cde0"/>
+<text x="257" y="1289" font-size="11" class="small">2</text>
+<rect x="210" y="1263" width="112" height="6" rx="2" fill="#72bcd6"/>
+<path d="M 210 1266 H 192" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="189" y="1262" width="7" height="8" fill="#b4cde0"/>
+<path d="M 322 1266 H 340" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="337" y="1262" width="7" height="8" fill="#b4cde0"/>
+<text x="257" y="1258" font-size="11" class="small">3</text>
+<path d="M 314 1359 L 339 1343.5 L 314 1328" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 218 1359 L 193 1343.5 L 218 1328" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 314 1328 L 339 1312.5 L 314 1297" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 218 1328 L 193 1312.5 L 218 1297" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 314 1297 L 339 1281.5 L 314 1266" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 218 1297 L 193 1281.5 L 218 1266" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<text x="52" y="1390" font-size="13" class="muted">Vertical span 10.5 m · above grade</text>
+<rect x="522" y="1097" width="465" height="312" rx="12" fill="#1a2634" stroke="#34516a"/>
+<text x="540" y="1129" font-size="21" font-weight="bold" class="title">L320</text>
+<text x="540" y="1151" font-size="13" class="small">2 site(s)   112 nodes   29 cycles</text>
+<text x="540" y="1170" font-size="12" fill="#f9cc87">Two towers, dual-height bridges</text>
+<rect x="595" y="1356" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 595 1359 H 577" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="574" y="1355" width="7" height="8" fill="#b4cde0"/>
+<path d="M 707 1359 H 725" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="722" y="1355" width="7" height="8" fill="#b4cde0"/>
+<text x="642" y="1351" font-size="11" class="small">0</text>
+<rect x="595" y="1325" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 595 1328 H 577" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="574" y="1324" width="7" height="8" fill="#b4cde0"/>
+<path d="M 707 1328 H 725" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="722" y="1324" width="7" height="8" fill="#b4cde0"/>
+<text x="642" y="1320" font-size="11" class="small">1</text>
+<rect x="595" y="1294" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 595 1297 H 577" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="574" y="1293" width="7" height="8" fill="#b4cde0"/>
+<path d="M 707 1297 H 725" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="722" y="1293" width="7" height="8" fill="#b4cde0"/>
+<text x="642" y="1289" font-size="11" class="small">2</text>
+<rect x="595" y="1263" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 595 1266 H 577" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="574" y="1262" width="7" height="8" fill="#b4cde0"/>
+<path d="M 707 1266 H 725" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="722" y="1262" width="7" height="8" fill="#b4cde0"/>
+<text x="642" y="1258" font-size="11" class="small">3</text>
+<rect x="595" y="1232" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 595 1235 H 577" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="574" y="1231" width="7" height="8" fill="#b4cde0"/>
+<path d="M 707 1235 H 725" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="722" y="1231" width="7" height="8" fill="#b4cde0"/>
+<text x="642" y="1227" font-size="11" class="small">4</text>
+<path d="M 699 1359 L 724 1343.5 L 699 1328" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 603 1359 L 578 1343.5 L 603 1328" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 699 1328 L 724 1312.5 L 699 1297" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 603 1328 L 578 1312.5 L 603 1297" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 699 1297 L 724 1281.5 L 699 1266" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 603 1297 L 578 1281.5 L 603 1266" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 699 1266 L 724 1250.5 L 699 1235" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 603 1266 L 578 1250.5 L 603 1235" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<rect x="801" y="1356" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 801 1359 H 783" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="780" y="1355" width="7" height="8" fill="#b4cde0"/>
+<path d="M 913 1359 H 931" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="928" y="1355" width="7" height="8" fill="#b4cde0"/>
+<text x="848" y="1351" font-size="11" class="small">0</text>
+<rect x="801" y="1325" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 801 1328 H 783" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="780" y="1324" width="7" height="8" fill="#b4cde0"/>
+<path d="M 913 1328 H 931" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="928" y="1324" width="7" height="8" fill="#b4cde0"/>
+<text x="848" y="1320" font-size="11" class="small">1</text>
+<rect x="801" y="1294" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 801 1297 H 783" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="780" y="1293" width="7" height="8" fill="#b4cde0"/>
+<path d="M 913 1297 H 931" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="928" y="1293" width="7" height="8" fill="#b4cde0"/>
+<text x="848" y="1289" font-size="11" class="small">2</text>
+<rect x="801" y="1263" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 801 1266 H 783" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="780" y="1262" width="7" height="8" fill="#b4cde0"/>
+<path d="M 913 1266 H 931" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="928" y="1262" width="7" height="8" fill="#b4cde0"/>
+<text x="848" y="1258" font-size="11" class="small">3</text>
+<rect x="801" y="1232" width="112" height="6" rx="2" fill="#edbd7b"/>
+<path d="M 801 1235 H 783" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="780" y="1231" width="7" height="8" fill="#b4cde0"/>
+<path d="M 913 1235 H 931" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="928" y="1231" width="7" height="8" fill="#b4cde0"/>
+<text x="848" y="1227" font-size="11" class="small">4</text>
+<path d="M 905 1359 L 930 1343.5 L 905 1328" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 809 1359 L 784 1343.5 L 809 1328" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 905 1328 L 930 1312.5 L 905 1297" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 809 1328 L 784 1312.5 L 809 1297" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 905 1297 L 930 1281.5 L 905 1266" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 809 1297 L 784 1281.5 L 809 1266" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 905 1266 L 930 1250.5 L 905 1235" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 809 1266 L 784 1250.5 L 809 1235" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M725 1328 H783" stroke="#f6d78d" stroke-width="4" stroke-dasharray="9 4"/>
+<path d="M725 1235 H783" stroke="#f6d78d" stroke-width="4" stroke-dasharray="9 4"/>
+<text x="540" y="1390" font-size="13" class="muted">Vertical span 14.0 m · above grade</text>
+<rect x="1010" y="1097" width="465" height="312" rx="12" fill="#1a2634" stroke="#34516a"/>
+<text x="1028" y="1129" font-size="21" font-weight="bold" class="title">L808</text>
+<text x="1028" y="1151" font-size="13" class="small">2 site(s)   136 nodes   35 cycles</text>
+<text x="1028" y="1170" font-size="12" fill="#f9cc87">Two towers, dual-height bridges</text>
+<rect x="1083" y="1356.0" width="112" height="6" rx="2" fill="#b4a1e3"/>
+<path d="M 1083 1359.0 H 1065" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1062" y="1355.0" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1195 1359.0 H 1213" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1210" y="1355.0" width="7" height="8" fill="#b4cde0"/>
+<text x="1130" y="1351.0" font-size="11" class="small">0</text>
+<rect x="1083" y="1327.6" width="112" height="6" rx="2" fill="#b4a1e3"/>
+<path d="M 1083 1330.6 H 1065" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1062" y="1326.6" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1195 1330.6 H 1213" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1210" y="1326.6" width="7" height="8" fill="#b4cde0"/>
+<text x="1130" y="1322.6" font-size="11" class="small">1</text>
+<rect x="1083" y="1299.2" width="112" height="6" rx="2" fill="#b4a1e3"/>
+<path d="M 1083 1302.2 H 1065" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1062" y="1298.2" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1195 1302.2 H 1213" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1210" y="1298.2" width="7" height="8" fill="#b4cde0"/>
+<text x="1130" y="1294.2" font-size="11" class="small">2</text>
+<rect x="1083" y="1270.8" width="112" height="6" rx="2" fill="#b4a1e3"/>
+<path d="M 1083 1273.8 H 1065" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1062" y="1269.8" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1195 1273.8 H 1213" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1210" y="1269.8" width="7" height="8" fill="#b4cde0"/>
+<text x="1130" y="1265.8" font-size="11" class="small">3</text>
+<rect x="1083" y="1242.4" width="112" height="6" rx="2" fill="#b4a1e3"/>
+<path d="M 1083 1245.4 H 1065" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1062" y="1241.4" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1195 1245.4 H 1213" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1210" y="1241.4" width="7" height="8" fill="#b4cde0"/>
+<text x="1130" y="1237.4" font-size="11" class="small">4</text>
+<rect x="1083" y="1214.0" width="112" height="6" rx="2" fill="#b4a1e3"/>
+<path d="M 1083 1217.0 H 1065" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1062" y="1213.0" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1195 1217.0 H 1213" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1210" y="1213.0" width="7" height="8" fill="#b4cde0"/>
+<text x="1130" y="1209.0" font-size="11" class="small">5</text>
+<path d="M 1187 1359.0 L 1212 1344.8 L 1187 1330.6" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1091 1359.0 L 1066 1344.8 L 1091 1330.6" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 1187 1330.6 L 1212 1316.4 L 1187 1302.2" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1091 1330.6 L 1066 1316.4 L 1091 1302.2" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 1187 1302.2 L 1212 1288.0 L 1187 1273.8" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1091 1302.2 L 1066 1288.0 L 1091 1273.8" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 1187 1273.8 L 1212 1259.6 L 1187 1245.4" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1091 1273.8 L 1066 1259.6 L 1091 1245.4" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 1187 1245.4 L 1212 1231.2 L 1187 1217.0" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1091 1245.4 L 1066 1231.2 L 1091 1217.0" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<rect x="1289" y="1356.0" width="112" height="6" rx="2" fill="#b4a1e3"/>
+<path d="M 1289 1359.0 H 1271" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1268" y="1355.0" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1401 1359.0 H 1419" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1416" y="1355.0" width="7" height="8" fill="#b4cde0"/>
+<text x="1336" y="1351.0" font-size="11" class="small">0</text>
+<rect x="1289" y="1327.6" width="112" height="6" rx="2" fill="#b4a1e3"/>
+<path d="M 1289 1330.6 H 1271" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1268" y="1326.6" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1401 1330.6 H 1419" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1416" y="1326.6" width="7" height="8" fill="#b4cde0"/>
+<text x="1336" y="1322.6" font-size="11" class="small">1</text>
+<rect x="1289" y="1299.2" width="112" height="6" rx="2" fill="#b4a1e3"/>
+<path d="M 1289 1302.2 H 1271" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1268" y="1298.2" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1401 1302.2 H 1419" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1416" y="1298.2" width="7" height="8" fill="#b4cde0"/>
+<text x="1336" y="1294.2" font-size="11" class="small">2</text>
+<rect x="1289" y="1270.8" width="112" height="6" rx="2" fill="#b4a1e3"/>
+<path d="M 1289 1273.8 H 1271" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1268" y="1269.8" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1401 1273.8 H 1419" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1416" y="1269.8" width="7" height="8" fill="#b4cde0"/>
+<text x="1336" y="1265.8" font-size="11" class="small">3</text>
+<rect x="1289" y="1242.4" width="112" height="6" rx="2" fill="#b4a1e3"/>
+<path d="M 1289 1245.4 H 1271" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1268" y="1241.4" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1401 1245.4 H 1419" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1416" y="1241.4" width="7" height="8" fill="#b4cde0"/>
+<text x="1336" y="1237.4" font-size="11" class="small">4</text>
+<rect x="1289" y="1214.0" width="112" height="6" rx="2" fill="#b4a1e3"/>
+<path d="M 1289 1217.0 H 1271" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1268" y="1213.0" width="7" height="8" fill="#b4cde0"/>
+<path d="M 1401 1217.0 H 1419" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="1416" y="1213.0" width="7" height="8" fill="#b4cde0"/>
+<text x="1336" y="1209.0" font-size="11" class="small">5</text>
+<path d="M 1393 1359.0 L 1418 1344.8 L 1393 1330.6" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1297 1359.0 L 1272 1344.8 L 1297 1330.6" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 1393 1330.6 L 1418 1316.4 L 1393 1302.2" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1297 1330.6 L 1272 1316.4 L 1297 1302.2" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 1393 1302.2 L 1418 1288.0 L 1393 1273.8" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1297 1302.2 L 1272 1288.0 L 1297 1273.8" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 1393 1273.8 L 1418 1259.6 L 1393 1245.4" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1297 1273.8 L 1272 1259.6 L 1297 1245.4" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 1393 1245.4 L 1418 1231.2 L 1393 1217.0" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 1297 1245.4 L 1272 1231.2 L 1297 1217.0" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M1213 1330.6 H1271" stroke="#f6d78d" stroke-width="4" stroke-dasharray="9 4"/>
+<path d="M1213 1217.0 H1271" stroke="#f6d78d" stroke-width="4" stroke-dasharray="9 4"/>
+<text x="1028" y="1390" font-size="13" class="muted">Vertical span 17.5 m · above grade</text>
+<rect x="34" y="1418" width="465" height="312" rx="12" fill="#1a2634" stroke="#34516a"/>
+<text x="52" y="1450" font-size="21" font-weight="bold" class="title">L998</text>
+<text x="52" y="1472" font-size="13" class="small">1 site(s)   55 nodes   14 cycles</text>
+<text x="52" y="1491" font-size="12" fill="#8fd2c7">Four branch corridors per tier</text>
+<rect x="210" y="1677" width="112" height="6" rx="2" fill="#80d6cd"/>
+<path d="M 210 1680 H 192" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="189" y="1676" width="7" height="8" fill="#b4cde0"/>
+<path d="M 322 1680 H 340" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="337" y="1676" width="7" height="8" fill="#b4cde0"/>
+<text x="257" y="1672" font-size="11" class="small">0</text>
+<rect x="210" y="1646" width="112" height="6" rx="2" fill="#80d6cd"/>
+<path d="M 210 1649 H 192" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="189" y="1645" width="7" height="8" fill="#b4cde0"/>
+<path d="M 322 1649 H 340" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="337" y="1645" width="7" height="8" fill="#b4cde0"/>
+<text x="257" y="1641" font-size="11" class="small">1</text>
+<rect x="210" y="1615" width="112" height="6" rx="2" fill="#80d6cd"/>
+<path d="M 210 1618 H 192" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="189" y="1614" width="7" height="8" fill="#b4cde0"/>
+<path d="M 322 1618 H 340" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="337" y="1614" width="7" height="8" fill="#b4cde0"/>
+<text x="257" y="1610" font-size="11" class="small">2</text>
+<rect x="210" y="1584" width="112" height="6" rx="2" fill="#80d6cd"/>
+<path d="M 210 1587 H 192" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="189" y="1583" width="7" height="8" fill="#b4cde0"/>
+<path d="M 322 1587 H 340" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="337" y="1583" width="7" height="8" fill="#b4cde0"/>
+<text x="257" y="1579" font-size="11" class="small">3</text>
+<rect x="210" y="1553" width="112" height="6" rx="2" fill="#80d6cd"/>
+<path d="M 210 1556 H 192" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="189" y="1552" width="7" height="8" fill="#b4cde0"/>
+<path d="M 322 1556 H 340" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="337" y="1552" width="7" height="8" fill="#b4cde0"/>
+<text x="257" y="1548" font-size="11" class="small">4</text>
+<path d="M 314 1680 L 339 1664.5 L 314 1649" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 218 1680 L 193 1664.5 L 218 1649" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 314 1649 L 339 1633.5 L 314 1618" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 218 1649 L 193 1633.5 L 218 1618" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 314 1618 L 339 1602.5 L 314 1587" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 218 1618 L 193 1602.5 L 218 1587" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 314 1587 L 339 1571.5 L 314 1556" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 218 1587 L 193 1571.5 L 218 1556" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<text x="52" y="1711" font-size="13" class="muted">Vertical span 14.0 m · above grade</text>
+<rect x="522" y="1418" width="465" height="312" rx="12" fill="#1a2634" stroke="#34516a"/>
+<text x="540" y="1450" font-size="21" font-weight="bold" class="title">L023</text>
+<text x="540" y="1472" font-size="13" class="small">1 site(s)   55 nodes   14 cycles</text>
+<text x="540" y="1491" font-size="12" fill="#f9cc87">Descending underground — top -6.0 m</text>
+<rect x="698" y="1540" width="112" height="6" rx="2" fill="#72bcd6"/>
+<path d="M 698 1543 H 680" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="677" y="1539" width="7" height="8" fill="#b4cde0"/>
+<path d="M 810 1543 H 828" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="825" y="1539" width="7" height="8" fill="#b4cde0"/>
+<text x="745" y="1535" font-size="11" class="small">0</text>
+<rect x="698" y="1571" width="112" height="6" rx="2" fill="#72bcd6"/>
+<path d="M 698 1574 H 680" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="677" y="1570" width="7" height="8" fill="#b4cde0"/>
+<path d="M 810 1574 H 828" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="825" y="1570" width="7" height="8" fill="#b4cde0"/>
+<text x="745" y="1566" font-size="11" class="small">1</text>
+<rect x="698" y="1602" width="112" height="6" rx="2" fill="#72bcd6"/>
+<path d="M 698 1605 H 680" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="677" y="1601" width="7" height="8" fill="#b4cde0"/>
+<path d="M 810 1605 H 828" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="825" y="1601" width="7" height="8" fill="#b4cde0"/>
+<text x="745" y="1597" font-size="11" class="small">2</text>
+<rect x="698" y="1633" width="112" height="6" rx="2" fill="#72bcd6"/>
+<path d="M 698 1636 H 680" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="677" y="1632" width="7" height="8" fill="#b4cde0"/>
+<path d="M 810 1636 H 828" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="825" y="1632" width="7" height="8" fill="#b4cde0"/>
+<text x="745" y="1628" font-size="11" class="small">3</text>
+<rect x="698" y="1664" width="112" height="6" rx="2" fill="#72bcd6"/>
+<path d="M 698 1667 H 680" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="677" y="1663" width="7" height="8" fill="#b4cde0"/>
+<path d="M 810 1667 H 828" stroke="#7a9bb2" stroke-width="2.5"/>
+<rect x="825" y="1663" width="7" height="8" fill="#b4cde0"/>
+<text x="745" y="1659" font-size="11" class="small">4</text>
+<path d="M 802 1543 L 827 1558.5 L 802 1574" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 706 1543 L 681 1558.5 L 706 1574" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 802 1574 L 827 1589.5 L 802 1605" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 706 1574 L 681 1589.5 L 706 1605" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 802 1605 L 827 1620.5 L 802 1636" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 706 1605 L 681 1620.5 L 706 1636" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<path d="M 802 1636 L 827 1651.5 L 802 1667" fill="none" stroke="#f2bf71" stroke-width="3.4"/>
+<path d="M 706 1636 L 681 1651.5 L 706 1667" fill="none" stroke="#86bded" stroke-width="3.4"/>
+<text x="540" y="1711" font-size="13" class="muted">Vertical span 13.8 m · subsurface</text>
+<text x="35" y="1754" font-size="13" fill="#9fadc0">Teal: walkable deck designs. Gold/blue: two physical stairs. Dashed: paired elevated link. Detailed collision and traversal require Godot.</text>
+</svg>
