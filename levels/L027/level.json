@@ -2,19 +2,38 @@
   "stable_id": "L027",
   "scene": "res://levels/L027/L027.tscn",
   "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev4 source candidate",
-  "procedural": true,
+  "qa_status": "NOT_TESTED",
+  "procedural": false,
   "arrivals": [
     "start"
   ],
-  "signature": "Warm two-waterfall limestone cave, documented timed mineral exposure",
+  "signature": "A small, warm limestone grotto round an 18.6 m2 hot spring fed by two little waterfalls, steam over clear mineral water and an M.E.G. concrete stair up to the tunnel the water runs out of; behind the other waterfall a crawl leads to a dark cavern, a hole of indigo sky and a black Stormstone plain where the level used to be.",
   "mechanics": [
-    "hot_spring",
-    "twin_falls",
-    "waterfall_tunnel",
-    "timer"
+    "soak_clock_calm_at_1h_dizzy_past_2h",
+    "drink_mineral_water",
+    "meg_stair_to_stream_tunnel_origin_exit",
+    "smooth_wall_climb_auto_crouch_crawl",
+    "testimony_cavern_and_sky_hole",
+    "stormstone_plain_cave_vanishes_step_exit",
+    "steam_drips_cave_reverb"
   ],
   "exits": [
+    {
+      "id": "L027>EXT#1",
+      "to": "@origin",
+      "to_label": "The same location you entered from",
+      "basis": "SOURCE",
+      "confidence": "CONFIRMED",
+      "method": "M.E.G. stairway and walk the tunnel with the stream",
+      "trigger_type": "stairs",
+      "trigger": "walk_in",
+      "label": "Followed the stream back up the tunnel beside the M.E.G. stairway",
+      "source_section": "Entrances And Exits",
+      "source_quote": "Following it will lead out of Level 27 and back into the same location you entered it from.",
+      "source_url": "https://backrooms-wiki.wikidot.com/level-27",
+      "hint": "The stairs by the waterfall go up into the tunnel the water comes from.",
+      "arrival": "from_L027"
+    },
     {
       "id": "L027>L028#2",
       "to": "L028",
@@ -23,9 +42,16 @@
       "method": "climb the other waterfall tunnel, crawl through to a Stormstone plain, step forward (log)",
       "source_quote": "Don't climb the other waterfall tunnel. It leads to nowhere.",
       "source_url": "https://backrooms-wiki.wikidot.com/level-27",
-      "trigger_type": "condition"
+      "trigger_type": "condition",
+      "trigger": "condition",
+      "label": "Climbed the other waterfall tunnel, crossed the dark cavern and stepped onto the Stormstone plain",
+      "source_section": "Expedition Log No.1 (TESTIMONY) / Entrances And Exits",
+      "hint": "Don't climb the other waterfall tunnel.",
+      "arrival": "from_L027",
+      "implemented_as": "created only on the plain, after the cave closes behind you"
     }
   ],
-  "notes": "Uses a compact prototype scale. Godot/Windows gameplay and performance not yet verified; no promotion to PLAYABLE.",
-  "entity_policy": "NO ENTITY PER SOURCE"
+  "notes": "SOURCE: small peaceful level devoid of entities; the only accessible part is a ~18.6 m2 (200 sq ft) hot spring cave; potable mineral water about 32 C; two small waterfalls from two openings in the wall; drained by a small tunnel near a corner too small to crawl through; source infinite; limestone, humid, no vegetation or life; an hour's soak calms and heals minor ailments, more than two hours causes dizziness and nausea; no bases; the M.E.G. built a stairway near a corner by one waterfall up to the tunnel the waterfall flows out of, wide enough to walk alongside the stream, leading back to where you entered; Level 11 arrivals land at the tunnel entrance and descend the stair; 'Don't climb the other waterfall tunnel. It leads to nowhere.' TESTIMONY (M.E.G. Expedition Log No.1, Catherine Goswell): smooth wall climbed above the water; crawl against warm current, back bumping the ceiling; vast cavern, walls lost in darkness, opening in the ceiling with a deep indigo sky; pile of rocks rising out of the water to the exit; flat barren plain of black Stormstone; the cave vanished behind; a step forward; woke in an armchair in Stormstone Keep. ADAPTATION: cave layout and size around the pool (13 x 11 m dome) are ours, the page gives no map; one spring hour = 60 s of play for the soak clock; light sources are not stated, so M.E.G. work lamps on the stairway they built and a soft glow in the pool light the cave; the crawl forces a crouch; the cavern is 32 m across with a lake, a causeway and a rock spire ramp to a 10 m sky hole; the plain is a finite 1.4 km disc lost in indigo fog; the cave hole closes once you walk 1.6 m from it, and the next step fires L027>L028#2 (created only then, so the testimony route is never part of the safe level); EXT#1 is the page's documented return route (@origin), added from transitions.json. 'start' is the Level 11 arrival point (tunnel entrance); the shower/bath entrance arrives the same way.",
+  "entity_policy": "NO ENTITY PER SOURCE: no entities, no plants, fish, algae or bacteria; the log repeats no life on the plain.",
+  "legacy_overlays": false
 }

@@ -2,17 +2,24 @@
   "stable_id": "L007_8",
   "scene": "res://levels/L007_8/L007_8.tscn",
   "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
+  "qa_status": "NOT_TESTED",
   "procedural": true,
   "arrivals": [
     "start",
     "from_L007_7"
   ],
-  "signature": "Impaled Ocean: separated stilt villages and bottomless eye",
+  "signature": "A still, sunlit sea that never ends, broken by weatherboard houses on long stilts; a village of nine houses and a landing joined by rope bridges, a Deep Eye falling away into the dark east of it, a house whose roof snow never melts, and far out, grey giants wading with houses on their backs.",
   "mechanics": [
-    "water_navigation",
-    "stilts",
-    "deep_eye"
+    "stilt_village_two_storeys_and_bridges",
+    "weak_bridge_gives_way_remembered",
+    "swim_dive_oxygen_depth_darkening",
+    "deep_eye_dive_opening_to_level_8",
+    "snow_roof_house_door_to_7_7",
+    "drifting_boat_rumoured_voyage",
+    "seawalkers_wading_far_off",
+    "gulls_fish_coral",
+    "compass_spins_music_box_journal",
+    "streamed_horizon_houses_and_boats"
   ],
   "exits": [
     {
@@ -23,7 +30,13 @@
       "method": "multiple exits in the Deep Eyes",
       "source_quote": "In the Deep Eyes multiple Level 8 exits were found.",
       "source_url": "https://backrooms-wiki.wikidot.com/level-7-8",
-      "trigger_type": "dive"
+      "trigger_type": "dive",
+      "trigger": "walk_in",
+      "label": "Swam into a dark opening in the wall of a Deep Eye",
+      "source_section": "Exits",
+      "hint": "The Deep Eye east of the village. Go down.",
+      "arrival": "from_L007_8",
+      "implemented_as": "created only once you dive below the seabed inside the Eye (not navmesh-reachable)"
     },
     {
       "id": "L007_8>L007_7#2",
@@ -33,7 +46,12 @@
       "method": "entrance in stilt houses with unmelting snow on the roof",
       "source_quote": "there is an entrance to Level 7.7",
       "source_url": "https://backrooms-wiki.wikidot.com/level-7-8",
-      "trigger_type": "walk_in"
+      "trigger_type": "walk_in",
+      "trigger": "walk_in",
+      "label": "Stepped into a stilt house whose roof snow never melts",
+      "source_section": "Exits",
+      "hint": "Look for snow on a roof under the glaring sun.",
+      "arrival": "from_L007_8"
     },
     {
       "id": "L007_8>EXT#3",
@@ -43,9 +61,15 @@
       "method": "voyage into distant waves",
       "source_quote": "rifts to other realities, ships of incomprehensible size",
       "source_url": "https://backrooms-wiki.wikidot.com/level-7-8",
-      "trigger_type": "vehicle"
+      "trigger_type": "vehicle",
+      "trigger": "interact",
+      "label": "Cast off in a deserted boat toward the distant waves",
+      "source_section": "Exits",
+      "hint": "Deserted boats drift among the houses. Nobody has maps.",
+      "to_label": "Unknown (rumoured rifts, impossible ships)"
     }
   ],
-  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
-  "entity_policy": "SOURCED ENTITIES ONLY: Seawalkers (non-aggressive); seagulls and fish are non-entity fauna"
+  "notes": "SOURCE: sub-section deep in Level 7; extensive calm saline sea with no discernible end; minimal waves; seabed 20 m down (rocks, sand, metals, coral); holes up to 12,000 m deep; safest crossing by boat, diving acceptable; deserted drifting vessels; houses on stilts of wood, metal and concrete, villages of about ten structures joined by bridges; concrete-column houses best stocked and safest; bridges may break, stilts may snap; Deep Eyes semi-dark with coral and fish, used for fishing, Level 8 exits in them; snow-roofed houses (snow never melts) hold an entrance to Level 7.7; Seawalkers 40-70 m, four-legged, crab-like, grey, white empty eyes, wear stilt houses as shells, groups of 3+, only in water <= 20 m, not aggressive; seagulls domesticated and nesting in houses; tropical fish. TESTIMONY (Captain's Journal, 1705): constant time of day, compasses spinning, a metal box that plays music only you can hear. ADAPTATION: the village layout, house designs and paint colours are ours (the page gives no map); the authored Deep Eye is 76 m across (the largest is 4 km) and its floor is a dark abyss at -175 m; its Level 8 opening is placed at -48 m on the south-west wall and is created only once you dive into the Eye; the weak bridge is one of two seeded side bridges and stays broken in a story save; the sea is a finite 4.4 km window with streamed lone houses and boats, and a gentle current turns swimmers back past 1.5 km; oxygen 80 s; Seawalkers walk a fixed 330 m circuit and never approach (their danger is lore only); casting off in the boat is the rumoured voyage (EXT#3) and is labelled as rumour; communities (Grand Colony, Leilah, Deepfallow Corsairs) are mentioned only in a note, not built; no route back to Level 7 (none is stated).",
+  "entity_policy": "SOURCED ENTITIES ONLY: Seawalkers (three, non-aggressive, far off, in shallow water); seagulls and fish are non-entity fauna.",
+  "legacy_overlays": false
 }
