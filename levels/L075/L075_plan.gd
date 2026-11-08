@@ -78,7 +78,7 @@ func plan() -> void:
 			continue
 		var n2: Vector2i = opts[rng.randi() % opts.size()]
 		visited[n2] = true
-		var lv := int(cells[c]["level"]) + [-1, 0, 0, 1][rng.randi() % 4]
+		var lv: int = int(cells[c]["level"]) + int([-1, 0, 0, 1][rng.randi() % 4])
 		cells[n2]["level"] = clampi(lv, -1, 2)
 		_link(c, n2)
 		stack.append(n2)
@@ -110,8 +110,9 @@ func plan() -> void:
 	# the sand-free room: the far boundary room with the longest route
 	var best := -1
 	for c in cells.keys():
-		var on_edge: bool = c.x == NX - 1 or c.y == 0 or c.y == NZ - 1
-		if not on_edge or c.x < 3:
+		# on the far (east) wall: the straight-line distance from the start then spans the
+		# whole complex, which also keeps every route inside the QA navigation bake
+		if c.x != NX - 1:
 			continue
 		var dd: int = dist.get(c, 0)
 		if dd > best:

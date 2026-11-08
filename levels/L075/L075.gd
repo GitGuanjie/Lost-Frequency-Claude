@@ -30,6 +30,9 @@ extends LevelBase
 const Plan := preload("res://levels/L075/L075_plan.gd")
 const Dress := preload("res://levels/L075/L075_dress.gd")
 const MAX_PRINTS := 1200
+const FURNITURE := ["ph/SchoolChair_01", "ph/wooden_bookshelf_worn", "ph/GreenChair_01", "ph/dining_chair_02", "ph/Sofa_01",
+	"ph/SchoolDesk_01", "ph/ArmChair_01", "ph/ClassicNightstand_01", "ph/plastic_monobloc_chair_01", "ph/coffee_table_round_01",
+	"ph/drawer_cabinet", "ph/cardboard_box_01"]
 
 var P
 var D
@@ -50,12 +53,12 @@ func build() -> void:
 	rules["view_distance"] = 90.0
 	rules["reverb_room"] = 0.42
 	rules["reverb_wet"] = 0.1
-	indoor_env(Color(0.96, 0.86, 0.68), 0.32, Color(0.7, 0.62, 0.48), 0.012)
-	environment.tonemap_exposure = 1.05
+	indoor_env(Color(0.96, 0.86, 0.68), 0.2, Color(0.55, 0.48, 0.36), 0.008)
+	environment.tonemap_exposure = 0.95
 	environment.adjustment_enabled = true
 	environment.adjustment_saturation = 0.92
 	environment.adjustment_contrast = 1.04
-	environment.glow_intensity = 0.55
+	environment.glow_intensity = 0.35
 	environment.glow_bloom = 0.12
 	environment.glow_hdr_threshold = 0.85
 	_materials()
@@ -75,12 +78,12 @@ func build() -> void:
 	_exit_room(k)
 	k.commit()
 	sandk.commit()
-	var n := D.commit_prints()
+	var n: int = D.commit_prints()
 	_player_print_layer()
 	_sounds()
 	var sc: Vector3 = P.centre(P.start)
-	add_arrival("start", Vector3(P.start.x * P.S + 1.4, P.floor_y(P.start) + 0.06, sc.z), -90.0)
-	add_arrival("from_L008", Vector3(P.start.x * P.S + 2.6, P.floor_y(P.start) + 0.06, sc.z + 0.4), -90.0)
+	add_arrival("start", Vector3(P.start.x * P.S + 3.4, P.floor_y(P.start) + 0.06, sc.z), -90.0)
+	add_arrival("from_L008", Vector3(P.start.x * P.S + 4.6, P.floor_y(P.start) + 0.06, sc.z + 0.4), -90.0)
 	add_landmark("Sandy dead-end corridor", sc)
 	add_landmark("The room with no sand", P.centre(P.exit_cell))
 	set_meta("old_prints", n)
@@ -89,8 +92,8 @@ func build() -> void:
 
 func _materials() -> void:
 	MatLib.define("l75_sand", {"albedo_a": Color(0.88, 0.74, 0.44), "albedo_b": Color(0.8, 0.66, 0.38), "pattern": 13,
-		"pattern_scale": Vector2(0.6, 0.6), "pattern_strength": 0.35, "pattern_color": Color(0.72, 0.58, 0.32), "noise_scale": 0.45,
-		"roughness_a": 0.95, "roughness_b": 1.0, "bump_strength": 0.9}, "")
+		"pattern_scale": Vector2(0.45, 0.45), "pattern_strength": 0.6, "pattern_color": Color(0.66, 0.52, 0.28), "noise_scale": 0.9,
+		"stain_amount": 0.25, "stain_color": Color(0.72, 0.58, 0.34), "roughness_a": 0.95, "roughness_b": 1.0, "bump_strength": 1.4}, "")
 	MatLib.define("l75_sand_dark", {"albedo_a": Color(0.66, 0.53, 0.3), "albedo_b": Color(0.6, 0.48, 0.27), "roughness_a": 1.0}, "")
 	MatLib.define("l75_sand_pit", {"albedo_a": Color(0.42, 0.33, 0.18), "albedo_b": Color(0.36, 0.28, 0.15), "noise_scale": 3.0, "roughness_a": 1.0}, "")
 	MatLib.define("l75_sand_castle", {"albedo_a": Color(0.84, 0.7, 0.42), "albedo_b": Color(0.76, 0.62, 0.36), "noise_scale": 5.0,
@@ -100,8 +103,8 @@ func _materials() -> void:
 	var under := {"p": Color(0.82, 0.8, 0.74), "s": Color(0.38, 0.22, 0.13)}
 	for key in paints.keys():
 		for u in under.keys():
-			MatLib.define("l75_%s_%s" % [key, u], {"albedo_a": paints[key][0], "albedo_b": paints[key][1], "noise_scale": 0.8,
-				"peel_amount": 0.5 if u == "p" else 0.42, "peel_color": under[u], "stain_amount": 0.4, "stain_color": Color(0.52, 0.45, 0.34),
+			MatLib.define("l75_%s_%s" % [key, u], {"albedo_a": paints[key][0], "albedo_b": paints[key][1], "noise_scale": 2.4,
+				"peel_amount": 0.16 if u == "p" else 0.12, "peel_color": under[u], "stain_amount": 0.4, "stain_color": Color(0.52, 0.45, 0.34),
 				"stain_scale": 0.25, "grime_height": 0.4, "grime_color": Color(0.6, 0.5, 0.32), "roughness_a": 0.7, "roughness_b": 0.92,
 				"bump_strength": 0.7}, "")
 	MatLib.define("l75_ceiling", {"albedo_a": Color(0.8, 0.78, 0.72), "albedo_b": Color(0.72, 0.7, 0.64), "noise_scale": 0.6,
@@ -111,9 +114,9 @@ func _materials() -> void:
 		"stain_color": Color(0.58, 0.5, 0.36)}, "")
 	MatLib.define("l75_floor", {"albedo_a": Color(0.55, 0.5, 0.42), "albedo_b": Color(0.48, 0.44, 0.37), "pattern": 15,
 		"pattern_color": Color(0.7, 0.66, 0.58), "pattern_strength": 0.4, "noise_scale": 1.5, "roughness_a": 0.6, "roughness_b": 0.85}, "")
-	MatLib.define("l75_clean", {"albedo_a": Color(0.72, 0.7, 0.64), "albedo_b": Color(0.66, 0.64, 0.58), "pattern": 15,
-		"pattern_color": Color(0.5, 0.47, 0.42), "pattern_strength": 0.45, "noise_scale": 1.2, "roughness_a": 0.35, "roughness_b": 0.6,
-		"stain_amount": 0.15}, "")
+	MatLib.define("l75_clean", {"albedo_a": Color(0.74, 0.72, 0.64), "albedo_b": Color(0.7, 0.68, 0.6), "pattern": 9,
+		"pattern_scale": Vector2(0.3, 0.3), "pattern_color": Color(0.36, 0.46, 0.52), "pattern_strength": 0.7, "grout_width": 0.0,
+		"noise_scale": 1.2, "roughness_a": 0.3, "roughness_b": 0.5, "stain_amount": 0.25, "stain_color": Color(0.55, 0.5, 0.4)}, "")
 	MatLib.define("l75_trim", {"albedo_a": Color(0.5, 0.42, 0.32), "albedo_b": Color(0.44, 0.36, 0.27), "roughness_a": 0.6,
 		"stain_amount": 0.3, "peel_amount": 0.3, "peel_color": Color(0.7, 0.66, 0.58)}, "")
 	MatLib.define("l75_frame", {"albedo_a": Color(0.84, 0.82, 0.76), "albedo_b": Color(0.78, 0.76, 0.7), "roughness_a": 0.55,
@@ -186,6 +189,8 @@ func _trim(k: GeoKit) -> void:
 		for s in [-1.0, 1.0]:
 			k.box_xf(Transform3D(b, p + side * s * (w * 0.5 + 0.05) + Vector3.UP * 1.12), Vector3(0.1, 2.25, 0.3), "l75_frame", GeoKit.ALL, false)
 		k.box_xf(Transform3D(b, p + Vector3.UP * 2.3), Vector3(w + 0.2, 0.1, 0.3), "l75_frame", GeoKit.ALL, false)
+		for sn in [-1.0, 1.0]:
+			k.box(p + side * (w * 0.5 + 0.35) + n * sn * 0.115 + Vector3.UP * 1.2, Vector3(0.08, 0.12, 0.08), "l75_fixture", GeoKit.ALL, false)
 
 
 func _rooms(k: GeoKit, sandk: GeoKit) -> void:
@@ -273,7 +278,7 @@ func _rooms(k: GeoKit, sandk: GeoKit) -> void:
 				D.hole(_spot(rect, y, r), r.randf_range(0.18, 0.3))
 			if r.randf() < 0.45:
 				D.car_tracks(sandk, _spot(rect, y, r), r)
-			for i in r.randi() % 3:
+			for i in 1 + r.randi() % 3:
 				var kinds := ["bucket", "shovel", "car", "doll"]
 				D.toy(kinds[r.randi() % 4], _spot(rect, y, r), r.randf() * TAU, r, r.randf_range(0.02, 0.07))
 			if dig_spots.size() < 9 and r.randf() < 0.6:
@@ -281,24 +286,59 @@ func _rooms(k: GeoKit, sandk: GeoKit) -> void:
 		# sand drifts in corners against the walls
 		for i in r.randi() % 3:
 			var corner := Vector3(rect.position.x if r.randf() < 0.5 else rect.end.x, y, rect.position.y if r.randf() < 0.5 else rect.end.y)
+			if _near_door(corner, 3.4):
+				continue
 			var into := (Vector3(cc.x, y, cc.z) - corner).normalized()
-			var head := corner - into * 0.5 + Vector3.UP * r.randf_range(0.35, 0.7)
-			var foot := corner + into * r.randf_range(1.4, 2.4)
+			var head := corner - into * 0.3 + Vector3.UP * r.randf_range(0.18, 0.3)
+			var foot := corner + into * r.randf_range(2.2, 3.2)
 			foot.y = y + 0.03
-			sandk.ramp(foot, head, r.randf_range(1.6, 2.6), 0.8, "l75_sand", "sand")
+			_drift(sandk, foot, head, r.randf_range(2.4, 3.4), 0.5)
+			D.mi(Dress.cyl(0.5, 1.3, 0.16, 18), "l75_sand", corner + into * 0.9 + Vector3(0, 0.1, 0))
 		# occasional deteriorated furniture, half sunk
-		if r.randf() < 0.32:
-			var fid: String = ["ph/SchoolChair_01", "ph/wooden_bookshelf_worn", "ph/GreenChair_01", "ph/dining_chair_02", "ph/Sofa_01", "ph/SchoolDesk_01"][r.randi() % 6]
-			var fp2 := Vector3(rect.position.x + 0.7, y - 0.06, r.randf_range(rect.position.y + 1.0, rect.end.y - 1.0))
-			Props.place(self, props, fid, fp2, 90.0 + r.randf_range(-25, 25), 0.0, fid == "ph/wooden_bookshelf_worn" or fid == "ph/Sofa_01")
+		var nf := 0 if r.randf() < 0.45 else 1 + r.randi() % 2
+		for i in nf:
+			var fid: String = FURNITURE[r.randi() % FURNITURE.size()]
+			var wall := r.randi() % 4
+			var fp2: Vector3
+			var yaw: float
+			match wall:
+				0: fp2 = Vector3(rect.position.x + 0.3, y - 0.06, r.randf_range(rect.position.y + 1.0, rect.end.y - 1.0)); yaw = 90.0
+				1: fp2 = Vector3(rect.end.x - 0.3, y - 0.06, r.randf_range(rect.position.y + 1.0, rect.end.y - 1.0)); yaw = -90.0
+				2: fp2 = Vector3(r.randf_range(rect.position.x + 1.0, rect.end.x - 1.0), y - 0.06, rect.position.y + 0.3); yaw = 0.0
+				_: fp2 = Vector3(r.randf_range(rect.position.x + 1.0, rect.end.x - 1.0), y - 0.06, rect.end.y - 0.3); yaw = 180.0
+			if not _near_door(fp2, 2.4):
+				var big := fid in ["ph/wooden_bookshelf_worn", "ph/Sofa_01", "ph/drawer_cabinet", "ph/SchoolDesk_01"]
+				var node := Props.place(self, props, fid, fp2, yaw + r.randf_range(-25, 25), 0.0, big)
+				if node and r.randf() < 0.3:
+					node.rotation.z = r.randf_range(-0.15, 0.15)
+		# a dead pendant fixture hangs in some rooms; switch plates by the doorways do nothing
+		if r.randf() < 0.35:
+			Props.place(self, props, "ph/caged_hanging_light", Vector3(cc.x + r.randf_range(-1.5, 1.5), top - 0.75, cc.z + r.randf_range(-1.5, 1.5)), r.randf() * 360.0)
 		if c == void_cell:
 			_voidstone(k, Vector3(cc.x + 1.2, top, cc.z - 1.4))
 	# a photograph half-buried in one room near the start
-	var near := P.start + Vector2i(1, 0)
+	var near: Vector2i = P.start + Vector2i(1, 0)
 	var pc: Vector3 = P.centre(near)
 	add_note("l75_photo", "A photograph, half in the sand",
 		"A print of a sandy corridor: sky-blue and white paint, cracked, a beam of light on the floor. Someone has written on the back: 'Playlist for Exploring Liminality'. It feels like a place you went to as a child.",
 		pc + Vector3(1.0, 0.1, 0.6), Vector3(0.5, 0.2, 0.5))
+
+
+## A drift of sand against a corner: visual only, low enough that your feet sink into it.
+func _drift(sandk: GeoKit, a: Vector3, b: Vector3, width: float, thick: float) -> void:
+	var d := b - a
+	var z := d.normalized()
+	var x := Vector3.UP.cross(z).normalized()
+	var y := z.cross(x).normalized()
+	sandk.box_xf(Transform3D(Basis(x, y, z), (a + b) * 0.5 - y * (thick * 0.5)), Vector3(width, thick, d.length()), "l75_sand", GeoKit.ALL, false)
+
+
+func _near_door(p: Vector3, d: float) -> bool:
+	for dr in info["doors"]:
+		var q: Vector3 = dr["pos"]
+		if Vector2(p.x - q.x, p.z - q.z).length() < d:
+			return true
+	return false
 
 
 func _spot(rect: Rect2, y: float, r: RandomNumberGenerator) -> Vector3:
@@ -330,8 +370,8 @@ func _dig_spot(p: Vector3, r: RandomNumberGenerator) -> void:
 	var kinds := ["car", "bucket", "shovel", "doll"]
 	var kind: String = kinds[dig_spots.size() % 4]
 	# a small mound with a corner of plastic showing
-	var mound := D.mi(Dress.cyl(0.12, 0.3, 0.09, 14), "l75_sand", p + Vector3(0, 0.09, 0))
-	var peek := D.mi(Dress.boxm(Vector3(0.05, 0.05, 0.03)), Dress.PLASTIC[dig_spots.size() % 4], p + Vector3(0.06, 0.16, 0.02),
+	var mound: MeshInstance3D = D.mi(Dress.cyl(0.12, 0.3, 0.09, 14), "l75_sand", p + Vector3(0, 0.09, 0))
+	var peek: MeshInstance3D = D.mi(Dress.boxm(Vector3(0.05, 0.05, 0.03)), Dress.PLASTIC[dig_spots.size() % 4], p + Vector3(0.06, 0.16, 0.02),
 		Basis(Vector3(1, 0, 1).normalized(), 0.6))
 	var spot := {"pos": p, "found": false, "kind": kind, "mound": mound, "peek": peek, "seed": r.randi()}
 	dig_spots.append(spot)
@@ -448,18 +488,16 @@ func level_process(_delta: float) -> void:
 
 func _shots() -> void:
 	var sc: Vector3 = P.centre(P.start)
-	add_shot("sand_corridor", Vector3(P.start.x * P.S + 1.2, P.floor_y(P.start) + 1.62, sc.z), Vector3(P.S * 2.0, P.floor_y(P.start) + 1.0, sc.z), {"flashlight": false})
+	add_shot("sand_corridor", Vector3(P.start.x * P.S + 3.0, P.floor_y(P.start) + 1.62, sc.z), Vector3(P.S * 2.0, P.floor_y(P.start) + 1.0, sc.z), {"flashlight": false})
 	# the room with the most going on: a play room with a beam, seen from a doorway
-	var best_c: Vector2i = P.start + Vector2i(1, 0)
-	var best := -1.0
-	for c in P.cells.keys():
-		if P.cells[c]["kind"] == "room" and c != P.exit_cell:
-			var score: float = float(P.cells[c]["links"].size()) + (1.5 if P.cells[c]["paint"] == "red" else 0.0) + float(c.x) * 0.1
-			if score > best:
-				best = score
-				best_c = c
-	var bc: Vector3 = P.centre(best_c)
-	add_shot("sand_room", bc + Vector3(-3.6, 1.62, -3.5), bc + Vector3(2.0, 0.4, 2.2), {"flashlight": false})
+	if not D.castle_at.is_empty():
+		var cp: Vector3 = D.castle_at[0]
+		var cl: Vector2i = P.cell_at(cp)
+		var rect: Rect2 = P.walk_rect(cl)
+		# from the room corner farthest from the castle, looking across the sand at it
+		var fx := rect.position.x + 0.3 if cp.x > rect.get_center().x else rect.end.x - 0.3
+		var fz := rect.position.y + 0.3 if cp.z > rect.get_center().y else rect.end.y - 0.3
+		add_shot("sand_room", Vector3(fx, cp.y + 1.62, fz), cp + Vector3(0, 0.3, 0), {"flashlight": false})
 	var ec: Vector3 = P.centre(P.exit_cell)
 	var dp: Vector3 = info["exit_door"]
 	add_shot("no_sand_room", ec - (dp - ec).normalized() * 2.8 + Vector3(0.4, 1.62, 0.4), dp + Vector3(0, 1.1, 0), {"flashlight": false})

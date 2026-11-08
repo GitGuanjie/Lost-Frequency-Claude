@@ -7,7 +7,7 @@ const BEAM_SHADER := """
 shader_type spatial;
 render_mode unshaded, blend_add, cull_disabled, depth_draw_never, shadows_disabled;
 uniform vec3 tint : source_color = vec3(1.0, 0.86, 0.62);
-uniform float strength = 0.22;
+uniform float strength = 0.16;
 void fragment() {
 	float along = clamp(UV.y, 0.0, 1.0);
 	float edge = pow(clamp(abs(dot(normalize(NORMAL), normalize(VIEW))), 0.0, 1.0), 1.6);
@@ -21,7 +21,7 @@ const POOL_SHADER := """
 shader_type spatial;
 render_mode unshaded, blend_add, cull_disabled, depth_draw_never, shadows_disabled;
 uniform vec3 tint : source_color = vec3(1.0, 0.85, 0.6);
-uniform float strength = 0.55;
+uniform float strength = 0.3;
 void fragment() {
 	vec2 p = UV * 2.0 - 1.0;
 	float r = length(p);
@@ -70,6 +70,7 @@ var pool_mat: ShaderMaterial
 var print_mats: Array = []
 var old_prints: Array = []        # [Transform3D, kind]
 var castles := 0
+var castle_at: Array = []
 var tracks := 0
 var toy_count := 0
 
@@ -194,7 +195,7 @@ func trail(a: Vector3, b: Vector3, rng: RandomNumberGenerator, child := true) ->
 		var fp := p + side
 		fp.y = P.floor_y(P.cell_at(fp)) + 0.053
 		if rng.randf() < 0.9:
-			add_print(fp, yaw, 0, foot / 0.26)
+			add_print(fp, yaw + PI, 0, foot / 0.26)
 
 
 ## Patterns made with small hands: a ring or a fan of palm prints.
@@ -266,7 +267,11 @@ func castle(c: Vector3, rng: RandomNumberGenerator) -> void:
 		else:
 			mi(cyl(0.075, 0.095, h, 12), "l75_sand_castle", tp + Vector3(0, 0.05 + h * 0.5 + 0.05, 0))
 	mi(cyl(0.08, 0.1, 0.16, 12), "l75_sand_castle", c + Vector3(0, 0.27 + 0.08, 0))
+	toy("bucket", c + Vector3(0.75, 0.0, 0.2), rng.randf() * TAU, rng, 0.03)
+	if rng.randf() < 0.7:
+		toy("shovel", c + Vector3(-0.3, 0.0, 0.7), rng.randf() * TAU, rng, 0.02)
 	castles += 1
+	castle_at.append(c)
 
 
 # --------------------------------------------------------------------- toys
