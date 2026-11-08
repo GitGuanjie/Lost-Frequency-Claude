@@ -31,11 +31,11 @@ level_id,stable_id,group,canonical_source_resolved,correct_identity,unique_signa
 28,L028,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,2,,,NOT_TESTED,IN_DEVELOPMENT,False,engine QA not run
 29,L029,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,IN_DEVELOPMENT,False,engine QA not run
 30,L030,B_FLAGSHIP,True,True,True,True,False,False,True,True,True,True,4,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,False,
-31,L031,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,IN_DEVELOPMENT,False,engine QA not run
+31,L031,B_FLAGSHIP,True,True,True,True,False,True,True,True,True,True,4,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
 36,L036,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,2,,,NOT_TESTED,IN_DEVELOPMENT,False,engine QA not run
 48,L048,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,IN_DEVELOPMENT,False,engine QA not run
 49,L049,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,2,,,NOT_TESTED,IN_DEVELOPMENT,False,engine QA not run
-53,L053,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,IN_DEVELOPMENT,False,engine QA not run
+53,L053,B_FLAGSHIP,True,True,True,True,False,True,True,True,True,True,4,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
 69,L069,B_FLAGSHIP,True,True,True,True,False,True,True,True,True,True,4,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
 71,L071,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,2,,,NOT_TESTED,IN_DEVELOPMENT,False,engine QA not run
 73,L073,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,IN_DEVELOPMENT,False,engine QA not run
@@ -65,7 +65,7 @@ level_id,stable_id,group,canonical_source_resolved,correct_identity,unique_signa
 37.1,L037_1,C_HIGH_INTEREST,True,True,True,True,False,False,True,True,True,True,0,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,False,
 55,L055,C_HIGH_INTEREST,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,IN_DEVELOPMENT,False,engine QA not run
 58,L058,C_HIGH_INTEREST,True,True,True,True,False,True,True,True,True,True,4,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,False,
-60,L060,C_HIGH_INTEREST,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,IN_DEVELOPMENT,False,engine QA not run
+60,L060,C_HIGH_INTEREST,True,True,True,True,False,True,True,True,True,True,4,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,False,
 83,L083,C_HIGH_INTEREST,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,IN_DEVELOPMENT,False,engine QA not run
 90,L090,C_HIGH_INTEREST,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,IN_DEVELOPMENT,False,engine QA not run
 96,L096,C_HIGH_INTEREST,True,True,True,True,False,False,True,True,True,True,4,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,False,

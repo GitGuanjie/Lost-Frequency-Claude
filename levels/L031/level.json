@@ -1,76 +1,81 @@
 {
-  "stable_id": "L031",
-  "scene": "res://levels/L031/L031.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003, 28/28 each; bot fired L031>L040#1); stills reviewed by builder (AI); integrator review pending",
-  "procedural": false,
-  "legacy_overlays": false,
-  "arrivals": [
-    "start",
-    "from_L002",
-    "from_L003",
-    "from_L201"
-  ],
-  "signature": "A dimmed roller rink that feels like the one back home: a maple oval under neon tubes and a star-shaped light, muffled pop from the DJ booth, a free arcade, a free food court and the Coach, who will not let you stay too long",
-  "mechanics": [
-    "looping_maple_rink_with_skating_faceling",
-    "green_card_free_arcade",
-    "free_food_with_litter_rule",
-    "coach_lessons_skates_speed",
-    "coach_leads_you_out",
-    "comfort_decay_over_stay",
-    "dj_song_cycle",
-    "cinema_tailored_film"
-  ],
-  "exits": [
-    {
-      "id": "L031>L040#1",
-      "to": "L040",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "method": "noclip into any working arcade game",
-      "source_quote": "No-clipping into any working game in the arcade portion will transport one to Level 40",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-31",
-      "source_section": "Entrances and Exits",
-      "trigger_type": "noclip",
-      "trigger": "noclip",
-      "label": "Pushed into a working arcade machine until it let you through",
-      "hint": "The machines by the arcade's rink entrance are all switched on.",
-      "arrival": "from_L031"
-    },
-    {
-      "id": "L031>L070#2",
-      "to": "L070",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "method": "white door engraved 70",
-      "source_quote": "a white door in this level with the number 70 engraved on it",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-31",
-      "source_section": "Entrances and Exits",
-      "trigger_type": "door",
-      "trigger": "interact",
-      "label": "Opened the white door engraved 70 at the back of the arcade",
-      "hint": "Ask the Coach to lead you out; he knows the way to the back of the arcade.",
-      "arrival": "from_L031"
-    },
-    {
-      "id": "L031>L232#3",
-      "to": "L232",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "method": "door labelled \"Employees only!\" in the food court",
-      "source_quote": "a door labeled \"Employees only!\" in the food court will send you to Level 232",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-31",
-      "source_section": "Entrances and Exits",
-      "trigger_type": "door",
-      "trigger": "interact",
-      "label": "Went through the door marked \"Employees only!\"",
-      "hint": "In the food court, past the end of the counter.",
-      "arrival": "from_L031"
-    }
-  ],
-  "fail_states": [],
-  "entity_policy": "SOURCED, DOCILE FACELINGS ONLY, never combat (class: Devoid of Harmful Entities). The Coach (striped uniform, brown hair, faceless; lessons, small talk, leads you to the white door when asked or after a long stay), the food court clerk (blank name tag; free food; silent about the Backrooms; refuses litterers), the DJ (appears and disappears in the south booth), and lone customers: one skates the oval, one plays pinball, one sits in the Cinema, one in the food court. Jonathan is a past incident (notes only). The Venosha are represented by an empty temporary camp.",
-  "content_note": "The page's diary describes a wanderer's slide into apathy and his death by dehydration. Shown only in paraphrased notes; nothing graphic.",
-  "notes": "SOURCE: infinitely looping rink, rink is the largest part and the usual arrival; smooth wooden floor in a loop; short wooden gate with flaps onto rough black carpet; colourful fluorescent tubes in patterns, a star-shaped fixture at the centre, mostly dimmed; muffled pop, skates on wood, laughter, pizza smell (text); DJ station on the south side with a docile Faceling sometimes picking songs; arcade east of the rink looping back to its north entrance, games free with a green card from a metal box (blue button, card catcher); Ski-Ball, big game wheels, air hockey, pinball, a few 1980s cabinets; food court (pizza, wings, foot-long hot dogs, soda fountain with almond water; Faceling with a blank name tag serves free, refuses Backrooms questions, cleans up and refuses litterers); square tables, orange plastic chairs, orange and green metal benches by the walls, condiment stand by the queue, trash cans and a taped sign by the exit; skate rental with blue walls and a US size chart, run by the Coach (free lessons, remembers names, leads you out if asked or after a prolonged stay, always welcome back); Cinema north past TV screens (large TV, three continuous metal benches stepped like stairs; leave by walking south); no permanent communities, Venosha temporary camps. TESTIMONY used: the white door 70 in a back area of the arcade with machines off or under cloth, the Coach showing it; the diary entries (paraphrased notes). ADAPTATION: the layout and all dimensions are ours (hall 56 x 32 m, maple oval 34 x 18 m, the arcade as a ring around an island of machines, the sunken back room -0.72 m, the raised DJ booth +1.08 m, the cinema floor stepping -0.9/-0.45/0 m); the infinite loop is the oval (a Faceling skates it forever), not a huge building; the comfort decay timings (fade from 2.5 to 10 min, the Coach seeks you at 5.5 min and leads you out at 12 min) are ours; skates make you faster on the maple; the star fixture turns slowly; the Coach-led exit uses the white door because the page names no destination for it (EXT#4 is not built as its own edge)."
+ "stable_id": "L031",
+ "scene": "res://levels/L031/L031.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003, 28/28 each; bot fired L031>L040#1); stills reviewed by builder (AI); integrator review pending",
+ "procedural": false,
+ "legacy_overlays": false,
+ "arrivals": [
+  "start",
+  "from_L002",
+  "from_L003",
+  "from_L201"
+ ],
+ "signature": "A dimmed roller rink that feels like the one back home: a maple oval under neon tubes and a star-shaped light, muffled pop from the DJ booth, a free arcade, a free food court and the Coach, who will not let you stay too long",
+ "mechanics": [
+  "looping_maple_rink_with_skating_faceling",
+  "green_card_free_arcade",
+  "free_food_with_litter_rule",
+  "coach_lessons_skates_speed",
+  "coach_leads_you_out",
+  "comfort_decay_over_stay",
+  "dj_song_cycle",
+  "cinema_tailored_film"
+ ],
+ "exits": [
+  {
+   "id": "L031>L040#1",
+   "to": "L040",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "method": "noclip into any working arcade game",
+   "source_quote": "No-clipping into any working game in the arcade portion will transport one to Level 40",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-31",
+   "source_section": "Entrances and Exits",
+   "trigger_type": "noclip",
+   "trigger": "noclip",
+   "label": "Pushed into a working arcade machine until it let you through",
+   "hint": "The machines by the arcade's rink entrance are all switched on.",
+   "arrival": "from_L031"
+  },
+  {
+   "id": "L031>L070#2",
+   "to": "L070",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "method": "white door engraved 70",
+   "source_quote": "a white door in this level with the number 70 engraved on it",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-31",
+   "source_section": "Entrances and Exits",
+   "trigger_type": "door",
+   "trigger": "interact",
+   "label": "Opened the white door engraved 70 at the back of the arcade",
+   "hint": "Ask the Coach to lead you out; he knows the way to the back of the arcade.",
+   "arrival": "from_L031"
+  },
+  {
+   "id": "L031>L232#3",
+   "to": "L232",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "method": "door labelled \"Employees only!\" in the food court",
+   "source_quote": "a door labeled \"Employees only!\" in the food court will send you to Level 232",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-31",
+   "source_section": "Entrances and Exits",
+   "trigger_type": "door",
+   "trigger": "interact",
+   "label": "Went through the door marked \"Employees only!\"",
+   "hint": "In the food court, past the end of the counter.",
+   "arrival": "from_L031"
+  }
+ ],
+ "fail_states": [],
+ "entity_policy": "SOURCED, DOCILE FACELINGS ONLY, never combat (class: Devoid of Harmful Entities). The Coach (striped uniform, brown hair, faceless; lessons, small talk, leads you to the white door when asked or after a long stay), the food court clerk (blank name tag; free food; silent about the Backrooms; refuses litterers), the DJ (appears and disappears in the south booth), and lone customers: one skates the oval, one plays pinball, one sits in the Cinema, one in the food court. Jonathan is a past incident (notes only). The Venosha are represented by an empty temporary camp.",
+ "content_note": "The page's diary describes a wanderer's slide into apathy and his death by dehydration. Shown only in paraphrased notes; nothing graphic.",
+ "notes": "SOURCE: infinitely looping rink, rink is the largest part and the usual arrival; smooth wooden floor in a loop; short wooden gate with flaps onto rough black carpet; colourful fluorescent tubes in patterns, a star-shaped fixture at the centre, mostly dimmed; muffled pop, skates on wood, laughter, pizza smell (text); DJ station on the south side with a docile Faceling sometimes picking songs; arcade east of the rink looping back to its north entrance, games free with a green card from a metal box (blue button, card catcher); Ski-Ball, big game wheels, air hockey, pinball, a few 1980s cabinets; food court (pizza, wings, foot-long hot dogs, soda fountain with almond water; Faceling with a blank name tag serves free, refuses Backrooms questions, cleans up and refuses litterers); square tables, orange plastic chairs, orange and green metal benches by the walls, condiment stand by the queue, trash cans and a taped sign by the exit; skate rental with blue walls and a US size chart, run by the Coach (free lessons, remembers names, leads you out if asked or after a prolonged stay, always welcome back); Cinema north past TV screens (large TV, three continuous metal benches stepped like stairs; leave by walking south); no permanent communities, Venosha temporary camps. TESTIMONY used: the white door 70 in a back area of the arcade with machines off or under cloth, the Coach showing it; the diary entries (paraphrased notes). ADAPTATION: the layout and all dimensions are ours (hall 56 x 32 m, maple oval 34 x 18 m, the arcade as a ring around an island of machines, the sunken back room -0.72 m, the raised DJ booth +1.08 m, the cinema floor stepping -0.9/-0.45/0 m); the infinite loop is the oval (a Faceling skates it forever), not a huge building; the comfort decay timings (fade from 2.5 to 10 min, the Coach seeks you at 5.5 min and leads you out at 12 min) are ours; skates make you faster on the maple; the star fixture turns slowly; the Coach-led exit uses the white door because the page names no destination for it (EXT#4 is not built as its own edge).",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

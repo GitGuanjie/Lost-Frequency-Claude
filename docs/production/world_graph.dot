@@ -34,11 +34,11 @@ digraph LostFrequency {
   L028 [label="L28\nFinal Virtue", fillcolor="#f9a825", fontcolor="black"];
   L029 [label="L29\nHyperian", fillcolor="#f9a825", fontcolor="black"];
   L030 [label="L30\nShifted Beyond Reality", fillcolor="#2e7d32", fontcolor="white"];
-  L031 [label="L31\nThe Roller Rink", fillcolor="#f9a825", fontcolor="black"];
+  L031 [label="L31\nThe Roller Rink", fillcolor="#2e7d32", fontcolor="white"];
   L036 [label="L36\nTimeless Airport", fillcolor="#f9a825", fontcolor="black"];
   L048 [label="L48\nThe Sunset Beach", fillcolor="#f9a825", fontcolor="black"];
   L049 [label="L49\nThe Unfilled River of Ph", fillcolor="#f9a825", fontcolor="black"];
-  L053 [label="L53\nAlone", fillcolor="#f9a825", fontcolor="black"];
+  L053 [label="L53\nAlone", fillcolor="#2e7d32", fontcolor="white"];
   L069 [label="L69\nThe Road Trip of Afflict", fillcolor="#2e7d32", fontcolor="white"];
   L071 [label="L71\nVoid Basement", fillcolor="#f9a825", fontcolor="black"];
   L073 [label="L73\nThe Redlands", fillcolor="#f9a825", fontcolor="black"];
@@ -68,7 +68,7 @@ digraph LostFrequency {
   L037_1 [label="L37.1\nThe Sanguine Reservoir", fillcolor="#2e7d32", fontcolor="white"];
   L055 [label="L55\nPit Stop", fillcolor="#f9a825", fontcolor="black"];
   L058 [label="L58\nWater Wonder", fillcolor="#2e7d32", fontcolor="white"];
-  L060 [label="L60\nThe Baywalk", fillcolor="#f9a825", fontcolor="black"];
+  L060 [label="L60\nThe Baywalk", fillcolor="#2e7d32", fontcolor="white"];
   L083 [label="L83\nThe Sunken Submarine", fillcolor="#f9a825", fontcolor="black"];
   L090 [label="L90\nNewly Renovated Home", fillcolor="#f9a825", fontcolor="black"];
   L096 [label="L96\nSolace", fillcolor="#2e7d32", fontcolor="white"];
