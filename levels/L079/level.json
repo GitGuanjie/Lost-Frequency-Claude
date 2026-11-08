@@ -1,39 +1,44 @@
 {
-  "stable_id": "L079",
-  "scene": "res://levels/L079/L079.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT_TESTED",
-  "procedural": false,
-  "legacy_overlays": false,
-  "arrivals": [
-    "start"
-  ],
-  "signature": "A mid-century medical research clinic of seven rooms off one linoleum corridor, ending five steps down at a machine of undetermined composition whose sixteen clocks all disagree, which sobs electrically and, every so often, knocks.",
-  "mechanics": [
-    "seven_rooms_off_one_corridor",
-    "room_contents_as_listed",
-    "sunken_operating_theatre_and_machine_hall",
-    "sixteen_disagreeing_clocks",
-    "machine_knock_tremor_noclip_cycle",
-    "spreading_leak",
-    "inconsistent_single_exit"
-  ],
-  "exits": [
-    {
-      "id": "L079>EXT#1",
-      "to": "EXT",
-      "to_label": "Not stated (the log suggests displacement in time)",
-      "trigger": "interact",
-      "label": "Opened the door at the start of the main corridor",
-      "confidence": "CONFIRMED+DANGEROUS",
-      "basis": "SOURCE",
-      "source_section": "Entrance and Exit",
-      "source_quote": "only one known entrance and exit located at the beginning of the main corridor",
-      "hint": "The way in is the only way out. Where, and when, it opens is not stated.",
-      "arrival": "from_L079"
-    }
-  ],
-  "fail_states": [],
-  "entity_policy": "NO ENTITY PER SOURCE. The page names none (its warning says only 'Unknown Potential for Entities'); the title's 'ghosts' are not spawned. The machine is not a creature or a boss: it sobs, ticks, knocks and leaks.",
-  "notes": "SOURCE: seven rooms of intelligent design off one main corridor, alternating right/left with the seventh central at the end; about 370 m2; mid-20th-century medical research clinic with signs of occupation. Room contents follow the page tab by tab: 1 office (fire-damaged desk, filing cabinets and shelving haphazard in a storage closet; Dr. Zohn's yellow-chalk note on a large black chalkboard, quoted, 22 words), 2 equipment storage (cardiopulmonary monitor, dialysis machine, sonograph, ECG, ventilator, fixed-angle centrifuge, four advanced machines of unknown purpose), 3 examination (wall-embedded machine on the right with corrugated hoses, IV lines and wires; locked medicine cabinet on the left: Almond Water, pethidine, azathioprine, LSD, doxorubicin, Seer powder, scopolamine, melatonin lollipops), 4 X-ray (mid-century unit, negatoscope with one film of a child's deformed arm), 5 living quarters (six twin mattresses on wire frames, two dressers: grey youth-small clothes, red handball, three black crayons, 14 blank sheets), 6 operating theatre (empty; slurry of viscera and fluids with screws and metal shavings), 7 the machine (16 clocks each a different time; electrically distorted sobbing and a knock/tremor/no-clip sensation about every 30 minutes, both TESTIMONY; slow leak from its left side). One entrance/exit at the start of the corridor; inconsistent exit; submission log dates. ADAPTATION: exact floor plan and dimensions (corridor 24 x 2.8 m, rooms 30-48 m2, machine hall 11 x 10 m), the theatre sunk 0.72 m below a viewing landing and the machine hall 0.9 m below the corridor (natural vertical variation; the page gives none); lighting is not stated, so most fixtures are dead, a few weak ones remain, plus the lit negatoscope and the faintly lit clock faces; one machine cycle per ~150 s of play instead of 30 min; the corridor clock jumps at each knock and the leak spreads over time; equipment is assembled from generic carts and CC0 models (the four unknown machines use Kenney space-kit machines); the exit's destination is not stated (EXT release boundary) and the date mismatch is only reported as text. No Level 78 edge (link list only)."
+ "stable_id": "L079",
+ "scene": "res://levels/L079/L079.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": false,
+ "legacy_overlays": false,
+ "arrivals": [
+  "start"
+ ],
+ "signature": "A mid-century medical research clinic of seven rooms off one linoleum corridor, ending five steps down at a machine of undetermined composition whose sixteen clocks all disagree, which sobs electrically and, every so often, knocks.",
+ "mechanics": [
+  "seven_rooms_off_one_corridor",
+  "room_contents_as_listed",
+  "sunken_operating_theatre_and_machine_hall",
+  "sixteen_disagreeing_clocks",
+  "machine_knock_tremor_noclip_cycle",
+  "spreading_leak",
+  "inconsistent_single_exit"
+ ],
+ "exits": [
+  {
+   "id": "L079>EXT#1",
+   "to": "EXT",
+   "to_label": "Not stated (the log suggests displacement in time)",
+   "trigger": "interact",
+   "label": "Opened the door at the start of the main corridor",
+   "confidence": "CONFIRMED+DANGEROUS",
+   "basis": "SOURCE",
+   "source_section": "Entrance and Exit",
+   "source_quote": "only one known entrance and exit located at the beginning of the main corridor",
+   "hint": "The way in is the only way out. Where, and when, it opens is not stated.",
+   "arrival": "from_L079"
+  }
+ ],
+ "fail_states": [],
+ "entity_policy": "NO ENTITY PER SOURCE. The page names none (its warning says only 'Unknown Potential for Entities'); the title's 'ghosts' are not spawned. The machine is not a creature or a boss: it sobs, ticks, knocks and leaks.",
+ "notes": "SOURCE: seven rooms of intelligent design off one main corridor, alternating right/left with the seventh central at the end; about 370 m2; mid-20th-century medical research clinic with signs of occupation. Room contents follow the page tab by tab: 1 office (fire-damaged desk, filing cabinets and shelving haphazard in a storage closet; Dr. Zohn's yellow-chalk note on a large black chalkboard, quoted, 22 words), 2 equipment storage (cardiopulmonary monitor, dialysis machine, sonograph, ECG, ventilator, fixed-angle centrifuge, four advanced machines of unknown purpose), 3 examination (wall-embedded machine on the right with corrugated hoses, IV lines and wires; locked medicine cabinet on the left: Almond Water, pethidine, azathioprine, LSD, doxorubicin, Seer powder, scopolamine, melatonin lollipops), 4 X-ray (mid-century unit, negatoscope with one film of a child's deformed arm), 5 living quarters (six twin mattresses on wire frames, two dressers: grey youth-small clothes, red handball, three black crayons, 14 blank sheets), 6 operating theatre (empty; slurry of viscera and fluids with screws and metal shavings), 7 the machine (16 clocks each a different time; electrically distorted sobbing and a knock/tremor/no-clip sensation about every 30 minutes, both TESTIMONY; slow leak from its left side). One entrance/exit at the start of the corridor; inconsistent exit; submission log dates. ADAPTATION: exact floor plan and dimensions (corridor 24 x 2.8 m, rooms 30-48 m2, machine hall 11 x 10 m), the theatre sunk 0.72 m below a viewing landing and the machine hall 0.9 m below the corridor (natural vertical variation; the page gives none); lighting is not stated, so most fixtures are dead, a few weak ones remain, plus the lit negatoscope and the faintly lit clock faces; one machine cycle per ~150 s of play instead of 30 min; the corridor clock jumps at each knock and the leak spreads over time; equipment is assembled from generic carts and CC0 models (the four unknown machines use Kenney space-kit machines); the exit's destination is not stated (EXT release boundary) and the date mismatch is only reported as text. No Level 78 edge (link list only).",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

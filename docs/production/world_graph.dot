@@ -29,7 +29,7 @@ digraph LostFrequency {
   L023 [label="L23\nThe Petrified Garden", fillcolor="#f9a825", fontcolor="black"];
   L024 [label="L24\nThe Moon", fillcolor="#f9a825", fontcolor="black"];
   L025 [label="L25\nThe Quarter Hub", fillcolor="#2e7d32", fontcolor="white"];
-  L026 [label="L26\nThe SS Fun =)", fillcolor="#f9a825", fontcolor="black"];
+  L026 [label="L26\nThe SS Fun =)", fillcolor="#2e7d32", fontcolor="white"];
   L027 [label="L27\nThe Bunker Springs", fillcolor="#2e7d32", fontcolor="white"];
   L028 [label="L28\nFinal Virtue", fillcolor="#f9a825", fontcolor="black"];
   L029 [label="L29\nHyperian", fillcolor="#f9a825", fontcolor="black"];
@@ -42,8 +42,8 @@ digraph LostFrequency {
   L069 [label="L69\nThe Road Trip of Afflict", fillcolor="#2e7d32", fontcolor="white"];
   L071 [label="L71\nVoid Basement", fillcolor="#f9a825", fontcolor="black"];
   L073 [label="L73\nThe Redlands", fillcolor="#f9a825", fontcolor="black"];
-  L075 [label="L75\nLiminality", fillcolor="#f9a825", fontcolor="black"];
-  L079 [label="L79\nGhosts in the Machine", fillcolor="#f9a825", fontcolor="black"];
+  L075 [label="L75\nLiminality", fillcolor="#2e7d32", fontcolor="white"];
+  L079 [label="L79\nGhosts in the Machine", fillcolor="#2e7d32", fontcolor="white"];
   L094 [label="L94\nMotion", fillcolor="#f9a825", fontcolor="black"];
   L200 [label="L200\nHome", fillcolor="#2e7d32", fontcolor="white"];
   L256 [label="L256\nDemoscene", fillcolor="#2e7d32", fontcolor="white"];
