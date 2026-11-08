@@ -24,7 +24,7 @@ digraph LostFrequency {
   L016 [label="L16\nAltered Topography", fillcolor="#f9a825", fontcolor="black"];
   L017 [label="L17\nThe Carrier", fillcolor="#f9a825", fontcolor="black"];
   L018 [label="L18\nMemories", fillcolor="#2e7d32", fontcolor="white"];
-  L020 [label="L20\nBoreas Structure", fillcolor="#f9a825", fontcolor="black"];
+  L020 [label="L20\nBoreas Structure", fillcolor="#2e7d32", fontcolor="white"];
   L022 [label="L22\nRuins Left Behind", fillcolor="#2e7d32", fontcolor="white"];
   L023 [label="L23\nThe Petrified Garden", fillcolor="#f9a825", fontcolor="black"];
   L024 [label="L24\nThe Moon", fillcolor="#f9a825", fontcolor="black"];
@@ -61,7 +61,7 @@ digraph LostFrequency {
   L001_5 [label="L1.5\nInverted", fillcolor="#2e7d32", fontcolor="white"];
   L003_5 [label="L3.5\nElectropolis", fillcolor="#2e7d32", fontcolor="white"];
   L005_1 [label="L5.1\nGRAND OPENING OF THE TER", fillcolor="#2e7d32", fontcolor="white"];
-  L006_1 [label="L6.1\nThe Snackrooms", fillcolor="#f9a825", fontcolor="black"];
+  L006_1 [label="L6.1\nThe Snackrooms", fillcolor="#2e7d32", fontcolor="white"];
   L007_7 [label="L7.7\nThe Forsaken Debris", fillcolor="#2e7d32", fontcolor="white"];
   L010_1 [label="L10.1\nCorpse Lake", fillcolor="#2e7d32", fontcolor="white"];
   L011_3 [label="L11.3\nThe Red Light District", fillcolor="#2e7d32", fontcolor="white"];
@@ -99,7 +99,7 @@ digraph LostFrequency {
   L201 [label="L201\nA E S T H E T I C", fillcolor="#f9a825", fontcolor="black"];
   L263 [label="L263\nPretty Pink", fillcolor="#2e7d32", fontcolor="white"];
   L320 [label="L320\nThe new, and Improved, E", fillcolor="#f9a825", fontcolor="black"];
-  L737 [label="L737\nDune Eternal", fillcolor="#f9a825", fontcolor="black"];
+  L737 [label="L737\nDune Eternal", fillcolor="#2e7d32", fontcolor="white"];
   L899 [label="L899\nYonder's End", fillcolor="#f9a825", fontcolor="black"];
   L998 [label="L998\nA Path Across Hell, and ", fillcolor="#f9a825", fontcolor="black"];
   EXT [label="outside the 100-level roster\n(unbuilt / unnumbered)", shape=ellipse, style="dashed", fillcolor="white"];
@@ -176,8 +176,8 @@ digraph LostFrequency {
   L020 -> L002 [color="#2e7d32", penwidth=2.4];
   L020 -> L024 [color="#2e7d32", penwidth=2.4];
   L020 -> L004 [color="#2e7d32", penwidth=2.4];
-  L020 -> L006 [color="#424242", fontcolor="#c62828", label="!"];
-  L020 -> L007 [style=dashed, color="#616161"];
+  L020 -> L006 [color="#2e7d32", penwidth=2.4, fontcolor="#c62828", label="!"];
+  L020 -> L007 [color="#2e7d32", penwidth=2.4];
   L022 -> L021 [color="#2e7d32", penwidth=2.4];
   L022 -> L023 [color="#2e7d32", penwidth=2.4];
   L023 -> L007 [color="#2e7d32", penwidth=2.4];
