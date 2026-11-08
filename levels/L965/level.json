@@ -2,18 +2,23 @@
   "stable_id": "L965",
   "scene": "res://levels/L965/L965.tscn",
   "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev6 candidate",
+  "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003 18/18 each; no exit per canon, no_exit_reason documented); stills reviewed by builder (AI); integrator review pending",
   "procedural": true,
   "arrivals": [
     "start"
   ],
-  "signature": "Monochrome flood plain with silent turbines and no confirmed route mechanism",
+  "signature": "A grey plain of defunct wind turbines and disused flood barriers under a motionless pale blue sky, where the only colour is a rainbow to the west that does nothing",
   "mechanics": [
-    "monochrome_plain",
-    "static_sky",
-    "defunct_turbines"
+    "monochrome_streamed_plain",
+    "static_sky_wisps",
+    "defunct_turbines_seeded_lattice",
+    "disused_flood_channel_and_barrier",
+    "rainbow_gaze_two_documents",
+    "no_exit_documented"
   ],
   "exits": [],
-  "notes": "Reduced-scale source-based adaptation; incomplete features and all real physics, render and Windows tests are pending.",
-  "entity_policy": "NO ENTITY PER SOURCE"
+  "notes": "SOURCE (accepted entry): monochrome landscape, defunct wind turbines, structures of unknown purpose presumed to be disused flood barriers, grey plains over the horizon, motionless pale blue sky with barely-clouds, rainbow 'seemingly of no inherent effect' (photo: rainbow over the barrier), 'There is nothing else of note', class 0. DRAFT (unreliable, shown only as a document): unclaimed living spaces, settlers leaving within a day, the 'impossible barrier' west of the initial view, blinding claims. ADAPTATION: the finite streaming window (96 m chunks, radius 2) with haze stands for the plain; the barrier's form (five piers with curved steel hoods across an east-west concrete channel, sector gates on the bed, stair tower and pier-top walkway) is ours, read from 'flood barriers' and the photo caption; turbine lattice (170 m, seeded), missing/fallen blades, stray flood-wall segments, the control house as 'the cleanest establishment' and its furniture are ours; all imported props are desaturated at runtime; the rainbow is the only colour and keeps a fixed westward bearing; gaze mechanic: ~13 s of looking at the rainbow does nothing to the player but replaces the draft on the desk with the accepted entry (the page's own draft -> accepted structure); the draft's blinding/memory effects are never applied. Sound: faint wind, near silence, an occasional tick from a stopped turbine.",
+  "entity_policy": "NO ENTITY PER SOURCE ('Entities: 0/5 No Hostile Entities'; no creature named). Darrion Jent appears only as the author of the draft and in the dedication card; no NPC.",
+  "no_exit_reason": "The page gives no exit method or destination: the class line says 'Exit: 0/5 Guaranteed Exit' but nothing else, and data/canon/transitions.json records L965>EXT#1 (to: null, trigger: unknown, confidence UNKNOWN) and L965>EXT#2 (the rhetorical 'Turn back or move forward' links to 964/966, not an exit). Building a door or boundary would invent a mechanism, so no physical exit exists (same policy as L200). No entrance is documented either, so the level is developer-accessible only (F3 browser); the non-canon release boundary is Pause -> Main menu.",
+  "fail_states": []
 }
