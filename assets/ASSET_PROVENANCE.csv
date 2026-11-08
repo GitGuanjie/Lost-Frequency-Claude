@@ -501,3 +501,86 @@ assets/packs/space-kit/structure-diagonal.glb,GLB 3D model,Kenney collection via
 assets/packs/space-kit/structure.glb,GLB 3D model,Kenney collection via third-party tge-assets GLB conversion,Kenney,CC0 1.0,user-supplied collection; source and verification recorded in assets/packs/LICENSE_AND_SOURCE.txt and catalog.json
 assets/packs/space-kit/supports-high.glb,GLB 3D model,Kenney collection via third-party tge-assets GLB conversion,Kenney,CC0 1.0,user-supplied collection; source and verification recorded in assets/packs/LICENSE_AND_SOURCE.txt and catalog.json
 assets/packs/space-kit/supports-low.glb,GLB 3D model,Kenney collection via third-party tge-assets GLB conversion,Kenney,CC0 1.0,user-supplied collection; source and verification recorded in assets/packs/LICENSE_AND_SOURCE.txt and catalog.json
+assets/external/models/ArmChair_01.glb,model (glb),https://polyhaven.com/a/ArmChair_01,Kirill Sannikov,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/Barrel_01.glb,model (glb),https://polyhaven.com/a/Barrel_01,Jorge Camacho,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/CashRegister_01.glb,model (glb),https://polyhaven.com/a/CashRegister_01,Joe Seabuhr,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/Chandelier_01.glb,model (glb),https://polyhaven.com/a/Chandelier_01,Kirill Sannikov,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/ClassicNightstand_01.glb,model (glb),https://polyhaven.com/a/ClassicNightstand_01,Kirill Sannikov,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/GreenChair_01.glb,model (glb),https://polyhaven.com/a/GreenChair_01,Kirill Sannikov,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/SchoolChair_01.glb,model (glb),https://polyhaven.com/a/SchoolChair_01,Ethan Place,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/SchoolDesk_01.glb,model (glb),https://polyhaven.com/a/SchoolDesk_01,Ethan Place,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/Shelf_01.glb,model (glb),https://polyhaven.com/a/Shelf_01,Gabriel Radić,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/Sofa_01.glb,model (glb),https://polyhaven.com/a/Sofa_01,Kirill Sannikov,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/Television_01.glb,model (glb),https://polyhaven.com/a/Television_01,Gabriel Radić,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/WetFloorSign_01.glb,model (glb),https://polyhaven.com/a/WetFloorSign_01,Fran Calvente,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/bar_chair_round_01.glb,model (glb),https://polyhaven.com/a/bar_chair_round_01,Dairon Sanchez,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/barrel_03.glb,model (glb),https://polyhaven.com/a/barrel_03,Serhii Khromov,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/binder_notebook.glb,model (glb),https://polyhaven.com/a/binder_notebook,DaDrood,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/boulder_01.glb,model (glb),https://polyhaven.com/a/boulder_01,Rico Cilliers,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/caged_hanging_light.glb,model (glb),https://polyhaven.com/a/caged_hanging_light,Ulan Cabanilla,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/cardboard_box_01.glb,model (glb),https://polyhaven.com/a/cardboard_box_01,Rahul Chaudhary,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/ceiling_fan.glb,model (glb),https://polyhaven.com/a/ceiling_fan,Ulan Cabanilla,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/classic_laptop.glb,model (glb),https://polyhaven.com/a/classic_laptop,Arrangemonk,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/clipboard.glb,model (glb),https://polyhaven.com/a/clipboard,ProgrammerOnCoffee,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/coffee_table_round_01.glb,model (glb),https://polyhaven.com/a/coffee_table_round_01,Ulan Cabanilla,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/concrete_road_barrier.glb,model (glb),https://polyhaven.com/a/concrete_road_barrier,Amal Kumar,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/covered_car.glb,model (glb),https://polyhaven.com/a/covered_car,MP,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/dead_tree_trunk.glb,model (glb),https://polyhaven.com/a/dead_tree_trunk,Rob Tuytel,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/dining_chair_02.glb,model (glb),https://polyhaven.com/a/dining_chair_02,James Ray Cock,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/dining_table.glb,model (glb),https://polyhaven.com/a/dining_table,Aron Łyczek,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/drawer_cabinet.glb,model (glb),https://polyhaven.com/a/drawer_cabinet,Ulan Cabanilla,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/exterior_aircon_unit.glb,model (glb),https://polyhaven.com/a/exterior_aircon_unit,Monsta3D,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/fire_alarm.glb,model (glb),https://polyhaven.com/a/fire_alarm,Slinc,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/fire_hydrant.glb,model (glb),https://polyhaven.com/a/fire_hydrant,Gonçalo Felício,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/grass_medium_01.glb,model (glb),https://polyhaven.com/a/grass_medium_01,"Rob Tuytel, Rico Cilliers",CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/hand_truck.glb,model (glb),https://polyhaven.com/a/hand_truck,Mutanzom3D,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/hanging_industrial_lamp.glb,model (glb),https://polyhaven.com/a/hanging_industrial_lamp,Kuutti Siitonen,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/industrial_wall_lamp.glb,model (glb),https://polyhaven.com/a/industrial_wall_lamp,Kuutti Siitonen,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/korean_fire_extinguisher_01.glb,model (glb),https://polyhaven.com/a/korean_fire_extinguisher_01,UM JOORIN,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/lantern_chandelier_01.glb,model (glb),https://polyhaven.com/a/lantern_chandelier_01,Kirill Sannikov,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/lifebuoy.glb,model (glb),https://polyhaven.com/a/lifebuoy,Hank Kaamura,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/medical_box.glb,model (glb),https://polyhaven.com/a/medical_box,Ulan Cabanilla,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/metal_office_desk.glb,model (glb),https://polyhaven.com/a/metal_office_desk,Ulan Cabanilla,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/metal_tool_chest.glb,model (glb),https://polyhaven.com/a/metal_tool_chest,"Yann Kervran, John Hutcheson",CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/metal_trash_can.glb,model (glb),https://polyhaven.com/a/metal_trash_can,GurJas Studios,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/modern_ceiling_lamp_01.glb,model (glb),https://polyhaven.com/a/modern_ceiling_lamp_01,James Ray Cock,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/modular_airduct_rectangular_01.glb,model (glb),https://polyhaven.com/a/modular_airduct_rectangular_01,James Ray Cock,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/modular_electric_cables.glb,model (glb),https://polyhaven.com/a/modular_electric_cables,Kuutti Siitonen,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/modular_industrial_pipes_01.glb,model (glb),https://polyhaven.com/a/modular_industrial_pipes_01,Jorge Camacho,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/modular_pipes.glb,model (glb),https://polyhaven.com/a/modular_pipes,Kuutti Siitonen,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/modular_wooden_pier.glb,model (glb),https://polyhaven.com/a/modular_wooden_pier,Rico Cilliers,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/mounted_fluorescent_lights.glb,model (glb),https://polyhaven.com/a/mounted_fluorescent_lights,Ulan Cabanilla,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/office_notepads.glb,model (glb),https://polyhaven.com/a/office_notepads,Ulan Cabanilla,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/old_bed_frame.glb,model (glb),https://polyhaven.com/a/old_bed_frame,Luca B,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/old_military_crate.glb,model (glb),https://polyhaven.com/a/old_military_crate,Jack Mava,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/old_tyre.glb,model (glb),https://polyhaven.com/a/old_tyre,MP,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/ornate_mirror_01.glb,model (glb),https://polyhaven.com/a/ornate_mirror_01,James Ray Cock,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/plastic_bottle_gallon.glb,model (glb),https://polyhaven.com/a/plastic_bottle_gallon,Rahul Chaudhary,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/plastic_crate_01.glb,model (glb),https://polyhaven.com/a/plastic_crate_01,PierreB3D,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/plastic_monobloc_chair_01.glb,model (glb),https://polyhaven.com/a/plastic_monobloc_chair_01,Kuutti Siitonen,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/portable_generator.glb,model (glb),https://polyhaven.com/a/portable_generator,James Ray Cock,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/power_box_01.glb,model (glb),https://polyhaven.com/a/power_box_01,"Rico Cilliers, Yann Kervran",CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/propane_tank.glb,model (glb),https://polyhaven.com/a/propane_tank,Slinc,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/rock_07.glb,model (glb),https://polyhaven.com/a/rock_07,Jenelle van Heerden,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/rollershutter_door.glb,model (glb),https://polyhaven.com/a/rollershutter_door,MP,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/rubber_duck_toy.glb,model (glb),https://polyhaven.com/a/rubber_duck_toy,Plat251,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/security_camera_01.glb,model (glb),https://polyhaven.com/a/security_camera_01,"Alexander Otterbeck, Yann Kervran",CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/security_light.glb,model (glb),https://polyhaven.com/a/security_light,Maximilian Schuster,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/stationery_supplies.glb,model (glb),https://polyhaven.com/a/stationery_supplies,Mateusz Sadek,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/steel_frame_shelves_01.glb,model (glb),https://polyhaven.com/a/steel_frame_shelves_01,James Ray Cock,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/steel_frame_shelves_02.glb,model (glb),https://polyhaven.com/a/steel_frame_shelves_02,James Ray Cock,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/street_lamp_01.glb,model (glb),https://polyhaven.com/a/street_lamp_01,Josh Dean,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/street_lamp_02.glb,model (glb),https://polyhaven.com/a/street_lamp_02,Josh Dean,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/trashbag.glb,model (glb),https://polyhaven.com/a/trashbag,Benny Weimer,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/utility_box_01.glb,model (glb),https://polyhaven.com/a/utility_box_01,James Ray Cock,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/vintage_flashlight.glb,model (glb),https://polyhaven.com/a/vintage_flashlight,Omar M. El-Safy,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/vintage_grandfather_clock_01.glb,model (glb),https://polyhaven.com/a/vintage_grandfather_clock_01,"Yann Kervran, James Ray Cock",CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/vintage_radio_transceiver.glb,model (glb),https://polyhaven.com/a/vintage_radio_transceiver,Mateusz Sadek,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/vintage_suitcase.glb,model (glb),https://polyhaven.com/a/vintage_suitcase,Maximilian Schuster,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/vintage_telephone_wall_clock.glb,model (glb),https://polyhaven.com/a/vintage_telephone_wall_clock,Adrian C,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/wall_clock.glb,model (glb),https://polyhaven.com/a/wall_clock,PierreB3D,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/water_manhole_cover.glb,model (glb),https://polyhaven.com/a/water_manhole_cover,Raunox,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/wooden_bookshelf_worn.glb,model (glb),https://polyhaven.com/a/wooden_bookshelf_worn,Ulan Cabanilla,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/wooden_crate_01.glb,model (glb),https://polyhaven.com/a/wooden_crate_01,James Ray Cock,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/wooden_ladder.glb,model (glb),https://polyhaven.com/a/wooden_ladder,Miroslav Turura,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack
+assets/external/models/wooden_picnic_table.glb,model (glb),https://polyhaven.com/a/wooden_picnic_table,Ulan Cabanilla,CC0 1.0,Poly Haven; textures 512 px; mesh simplified with gltfpack

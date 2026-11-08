@@ -1,0 +1,36 @@
+{
+  "build_ms": 198,
+  "engine_native": true,
+  "level": "L018",
+  "manifest_status": "IN_DEVELOPMENT",
+  "metrics": {
+    "audio_players": 2,
+    "collision_shapes": 71,
+    "exit_triggers": 1,
+    "footprint_x": 53.0,
+    "footprint_y": 5.3,
+    "footprint_z": 75.0,
+    "glb_models": 3,
+    "interactables": 7,
+    "lights": 10,
+    "materials": 14,
+    "mesh_instances": 17,
+    "multimesh_instances": 0,
+    "triangles": 1992
+  },
+  "reason": "loaded via real developer transition, safe player spawn, 15 physics ticks",
+  "scene": "res://levels/L018/L018.tscn",
+  "spawn_report": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+  },
+  "spawn_y_after": 0.016388887539506,
+  "spawn_y_before": 0.016388887539506,
+  "stage": "complete",
+  "status": "PASS",
+  "test": "real F3 developer jump and safe spawn"
+}

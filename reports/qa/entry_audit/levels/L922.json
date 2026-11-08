@@ -1,0 +1,36 @@
+{
+  "build_ms": 10,
+  "engine_native": true,
+  "level": "L922",
+  "manifest_status": "IN_DEVELOPMENT",
+  "metrics": {
+    "audio_players": 1,
+    "collision_shapes": 14,
+    "exit_triggers": 0,
+    "footprint_x": 28.4,
+    "footprint_y": 36.5,
+    "footprint_z": 32.4,
+    "glb_models": 0,
+    "interactables": 0,
+    "lights": 5,
+    "materials": 3,
+    "mesh_instances": 3,
+    "multimesh_instances": 0,
+    "triangles": 1080
+  },
+  "reason": "loaded via real developer transition, safe player spawn, 15 physics ticks",
+  "scene": "res://levels/L922/L922.tscn",
+  "spawn_report": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+  },
+  "spawn_y_after": 0.0445545837283134,
+  "spawn_y_before": 0.0445545837283134,
+  "stage": "complete",
+  "status": "PASS",
+  "test": "real F3 developer jump and safe spawn"
+}

@@ -1,0 +1,36 @@
+{
+  "build_ms": 216,
+  "engine_native": true,
+  "level": "L020",
+  "manifest_status": "IN_DEVELOPMENT",
+  "metrics": {
+    "audio_players": 3,
+    "collision_shapes": 136,
+    "exit_triggers": 3,
+    "footprint_x": 48.5,
+    "footprint_y": 14.6,
+    "footprint_z": 180.0,
+    "glb_models": 4,
+    "interactables": 5,
+    "lights": 13,
+    "materials": 16,
+    "mesh_instances": 41,
+    "multimesh_instances": 0,
+    "triangles": 6920
+  },
+  "reason": "loaded via real developer transition, safe player spawn, 15 physics ticks",
+  "scene": "res://levels/L020/L020.tscn",
+  "spawn_report": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+  },
+  "spawn_y_after": 0.0163886491209269,
+  "spawn_y_before": 0.0163886491209269,
+  "stage": "complete",
+  "status": "PASS",
+  "test": "real F3 developer jump and safe spawn"
+}

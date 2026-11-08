@@ -1,0 +1,36 @@
+{
+  "build_ms": 311,
+  "engine_native": true,
+  "level": "L160",
+  "manifest_status": "IN_DEVELOPMENT",
+  "metrics": {
+    "audio_players": 2,
+    "collision_shapes": 40,
+    "exit_triggers": 0,
+    "footprint_x": 36.0,
+    "footprint_y": 8.5,
+    "footprint_z": 144.0,
+    "glb_models": 4,
+    "interactables": 8,
+    "lights": 8,
+    "materials": 11,
+    "mesh_instances": 13,
+    "multimesh_instances": 0,
+    "triangles": 786
+  },
+  "reason": "loaded via real developer transition, safe player spawn, 15 physics ticks",
+  "scene": "res://levels/L160/L160.tscn",
+  "spawn_report": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+  },
+  "spawn_y_after": 0.016388887539506,
+  "spawn_y_before": 0.016388887539506,
+  "stage": "complete",
+  "status": "PASS",
+  "test": "real F3 developer jump and safe spawn"
+}

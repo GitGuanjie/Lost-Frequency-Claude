@@ -1,0 +1,36 @@
+{
+  "build_ms": 476,
+  "engine_native": true,
+  "level": "L006",
+  "manifest_status": "PLAYABLE",
+  "metrics": {
+    "audio_players": 4,
+    "collision_shapes": 1183,
+    "exit_triggers": 2,
+    "footprint_x": 120.0,
+    "footprint_y": 4.8,
+    "footprint_z": 120.0,
+    "glb_models": 0,
+    "interactables": 0,
+    "lights": 2,
+    "materials": 2,
+    "mesh_instances": 26,
+    "multimesh_instances": 0,
+    "triangles": 9532
+  },
+  "reason": "loaded via real developer transition, safe player spawn, 15 physics ticks",
+  "scene": "res://levels/L006/L006.tscn",
+  "spawn_report": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+  },
+  "spawn_y_after": 2.41638922691345,
+  "spawn_y_before": 2.41638922691345,
+  "stage": "complete",
+  "status": "PASS",
+  "test": "real F3 developer jump and safe spawn"
+}

@@ -582,7 +582,9 @@ func _build_credits() -> Control:
 func _credits_bbcode() -> String:
 	var s := "[b]LOST FREQUENCY[/b] — an unofficial, non-commercial adaptation of the [b]Backrooms Wiki[/b] (English Wikidot continuity, https://backrooms-wiki.wikidot.com/).\n"
 	s += "Content relating to the Backrooms is licensed under Creative Commons Sharealike 3.0 and all concepts originate from http://backrooms-wiki.wikidot.com/ and its authors. LOST FREQUENCY, being derived from this content, is hereby also released under [b]Creative Commons Sharealike 3.0[/b] (code included; see LICENSE.md).\n"
-	s += "All textures, materials and sounds in this build are generated procedurally in-project; no third-party images, models or audio are shipped.\n"
+	s += "Sounds and most materials are generated procedurally in-project. Third-party art is CC0 only and listed below.\n"
+	s += "Low-poly models: Kenney (kenney.nl) asset packs, CC0 1.0 (see assets/packs/LICENSE_AND_SOURCE.txt).\n"
+	s += "3D models: 83 CC0 1.0 models from Poly Haven (polyhaven.com) by Adrian C, Alexander Otterbeck, Amal Kumar, Aron Łyczek, Arrangemonk, Benny Weimer, DaDrood, Dairon Sanchez, Ethan Place, Fran Calvente, Gabriel Radić, Gonçalo Felício, GurJas Studios, Hank Kaamura, Jack Mava, James Ray Cock, Jenelle van Heerden, Joe Seabuhr, John Hutcheson, Jorge Camacho, Josh Dean, Kirill Sannikov, Kuutti Siitonen, Luca B, MP, Mateusz Sadek, Maximilian Schuster, Miroslav Turura, Monsta3D, Mutanzom3D, Omar M. El-Safy, PierreB3D, Plat251, ProgrammerOnCoffee, Rahul Chaudhary, Raunox, Rico Cilliers, Rob Tuytel, Serhii Khromov, Slinc, UM JOORIN, Ulan Cabanilla, Yann Kervran (see assets/external/lock.json).\n"
 	s += "Photographic textures: CC0 1.0 sets from Poly Haven (polyhaven.com) by Rob Tuytel, eye-candy.xyz, Guillaume Monsergent and Amal Kumar (see assets/ASSET_PROVENANCE.csv).\n"
 	s += "Built with Godot Engine (MIT). Physics: Jolt (MIT).\n\n[b]Source pages (accessed 2026-11-04)[/b]\n"
 	for e in LevelRegistry.entries:

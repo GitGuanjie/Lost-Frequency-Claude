@@ -4,7 +4,7 @@ extends Node
 ## then verifies a built LevelBase, player, and a safe start spawn.
 ## This is a real native test, not a JSON/scene-exists shortcut.
 
-const REPORT_DIR := "res://reports/qa/dev24_entry_100/levels"
+const REPORT_DIR := "res://reports/qa/entry_audit/levels"
 const MAX_WAIT_MS := 90000
 
 var _sid := ""
@@ -96,10 +96,64 @@ func _run_probe() -> void:
 	if end_y < initial_y - 1.5:
 		_finish("player fell more than 1.5 m immediately after entering")
 		return
+	_report["metrics"] = _metrics(scene)
 	_report["stage"] = "complete"
 	_report["status"] = "PASS"
 	_report["reason"] = "loaded via real developer transition, safe player spawn, 15 physics ticks"
 	_write_and_quit(0)
+
+
+## Content metrics used to flag empty/placeholder levels (counts, not judgement).
+func _metrics(scene: Node) -> Dictionary:
+	var m := {"mesh_instances": 0, "multimesh_instances": 0, "triangles": 0, "lights": 0,
+		"collision_shapes": 0, "exit_triggers": 0, "interactables": 0, "glb_models": 0,
+		"materials": 0, "audio_players": 0}
+	var mats := {}
+	var aabb := AABB()
+	var first := true
+	var stack: Array[Node] = [scene]
+	while not stack.is_empty():
+		var n: Node = stack.pop_back()
+		for c in n.get_children():
+			stack.append(c)
+		if n is MeshInstance3D:
+			var mi := n as MeshInstance3D
+			if mi.mesh == null:
+				continue
+			m["mesh_instances"] += 1
+			for si in mi.mesh.get_surface_count():
+				var mat: Material = mi.get_active_material(si)
+				if mat:
+					mats[mat.get_rid()] = true
+				var arr := mi.mesh.surface_get_arrays(si) if mi.mesh is ArrayMesh else []
+				if arr.size() > Mesh.ARRAY_INDEX and arr[Mesh.ARRAY_INDEX] != null:
+					m["triangles"] += (arr[Mesh.ARRAY_INDEX] as PackedInt32Array).size() / 3
+				elif arr.size() > Mesh.ARRAY_VERTEX and arr[Mesh.ARRAY_VERTEX] != null:
+					m["triangles"] += (arr[Mesh.ARRAY_VERTEX] as PackedVector3Array).size() / 3
+			var box := mi.global_transform * mi.get_aabb()
+			if box.size.length() < 2000.0:
+				aabb = box if first else aabb.merge(box)
+				first = false
+		elif n is MultiMeshInstance3D:
+			var mm := n as MultiMeshInstance3D
+			m["multimesh_instances"] += mm.multimesh.instance_count if mm.multimesh else 0
+		elif n is Light3D:
+			m["lights"] += 1
+		elif n is CollisionShape3D:
+			m["collision_shapes"] += 1
+		elif n is AudioStreamPlayer3D or n is AudioStreamPlayer:
+			m["audio_players"] += 1
+		if n is ExitTrigger:
+			m["exit_triggers"] += 1
+		elif n is Interactable:
+			m["interactables"] += 1
+		if str(n.name).begins_with("GLB_"):
+			m["glb_models"] += 1
+	m["materials"] = mats.size()
+	m["footprint_x"] = snappedf(aabb.size.x, 0.1)
+	m["footprint_y"] = snappedf(aabb.size.y, 0.1)
+	m["footprint_z"] = snappedf(aabb.size.z, 0.1)
+	return m
 
 
 func _finish(reason: String) -> void:

@@ -3,3 +3,9 @@
 *.tmp
 export/
 build/
+.work/
+# Textures Godot extracts from embedded GLB images on import (regenerated)
+assets/external/models/*.jpg
+assets/external/models/*.jpg.import
+assets/external/models/*.png
+assets/external/models/*.png.import
