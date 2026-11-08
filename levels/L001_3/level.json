@@ -1,56 +1,61 @@
 {
-  "stable_id": "L001_3",
-  "scene": "res://levels/L001_3/L001_3.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT_TESTED",
-  "procedural": true,
-  "arrivals": [
-    "start",
-    "from_L001"
-  ],
-  "signature": "One long blinding-white hallway with branches to sixteen large rooms: eight Detox Zones (sunken, green-taped, ringed by the M.E.G. Ward) that heal fast but burn, and eight rooms of medical supplies and equipment; in the seeded Decay (Dead Zone) state black pits swallow the floor, walls buckle, blood dries brown and the Detox Zones tear flesh instead of healing it.",
-  "mechanics": [
-    "single_hallway_sixteen_rooms",
-    "detox_zone_painful_healing",
-    "decay_dead_zone_variant",
-    "decay_pits_real_holes",
-    "decay_detox_reversal",
-    "fishing_line_pit_test",
-    "regenerating_surfaces",
-    "ward_beds_mezzanines",
-    "noclip_either_hallway_end"
-  ],
-  "exits": [
-    {
-      "id": "L001_3>L001#1",
-      "to": "L001",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "method": "No-clip into either end of the main hallway",
-      "source_quote": "One may return to Level 1 by no-clipping into either end of the main hallway.",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-1-3",
-      "trigger_type": "noclip",
-      "trigger": "noclip",
-      "label": "No-clipped through the end of the main hallway back to Level 1",
-      "source_section": "Entrances And Exits",
-      "hint": "Both ends of the main hallway are blank white walls; push into one.",
-      "arrival": "from_L001_3"
-    }
-  ],
-  "notes": "SOURCE: roughly one square mile of white rooms and corridors floored with smooth, almost soft tile; surfaces cannot be sullied and regenerate; one lengthy hallway with branches left and right to sixteen large rooms holding medical supplies/equipment or an empty Detox Zone; Detox Zones heal bones, wounds, fevers and poisoning fast but painfully (burning, sharp pain), not congenital illness; the M.E.G. Ward in all eight zones, M.E.G. manages entry; return to Level 1 by no-clipping into either end of the main hallway. Decay documents (testimony): reclassified Dead Zone, black pits that swallow fishing line, white walls bending into spots of pure blackness, rancid humid air, dried brown blood, green tape at a Detox Zone that is mostly abyss, healing that bubbles and tears the skin. ADAPTATION: the hallway is 204 m long (page: one square mile) with eight branch pairs streamed in 24 m chunks; rooms are 16 x 18 x 5.4 m; room types are seeded (8 Detox Zones, 3 supply stores, 2 surgeries, admissions, staff quarters, pharmacy; one Detox Zone always in the first pair); Detox Zones are sunken three risers and ringed with Ward beds; supply stores and surgeries have a +2.7 m steel mezzanine; the M.E.G. checkpoint at the south end; the Decay state is a seeded flag (about one seed in three; dossier: 'second variant (seeded flag)'), and the QA self-test and stills switch both states; heal 7 HP/s (White), Decay zone heals 1.6 s then deals 6 HP/s rising by 4 HP/s each second; falling into a pit is fatal; damaged tile in the White state fades over ~20 s when you are near; the arrival from Level 1 stands 3 m inside the south end wall facing down the hallway. Not built: The Ward's doctors as NPCs, corpses, Level 1.2 / Level 1.4 (link targets only).",
-  "entity_policy": "NO ENTITY PER SOURCE. The M.E.G. Ward staff, Dr. Reathe, the scout and the Director appear only in the documents; nobody is spawned.",
-  "fail_states": [
-    {
-      "kind": "hazard",
-      "label": "Fell into a Decay pit (Dead Zone state)",
-      "basis": "SOURCE",
-      "source_quote": "Black spots were scattered everywhere"
-    },
-    {
-      "kind": "hazard",
-      "label": "Torn apart by a Decay-corrupted Detox Zone",
-      "basis": "SOURCE",
-      "source_quote": "the surrounding skin began to bubble and tear"
-    }
-  ]
+ "stable_id": "L001_3",
+ "scene": "res://levels/L001_3/L001_3.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": true,
+ "arrivals": [
+  "start",
+  "from_L001"
+ ],
+ "signature": "One long blinding-white hallway with branches to sixteen large rooms: eight Detox Zones (sunken, green-taped, ringed by the M.E.G. Ward) that heal fast but burn, and eight rooms of medical supplies and equipment; in the seeded Decay (Dead Zone) state black pits swallow the floor, walls buckle, blood dries brown and the Detox Zones tear flesh instead of healing it.",
+ "mechanics": [
+  "single_hallway_sixteen_rooms",
+  "detox_zone_painful_healing",
+  "decay_dead_zone_variant",
+  "decay_pits_real_holes",
+  "decay_detox_reversal",
+  "fishing_line_pit_test",
+  "regenerating_surfaces",
+  "ward_beds_mezzanines",
+  "noclip_either_hallway_end"
+ ],
+ "exits": [
+  {
+   "id": "L001_3>L001#1",
+   "to": "L001",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "method": "No-clip into either end of the main hallway",
+   "source_quote": "One may return to Level 1 by no-clipping into either end of the main hallway.",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-1-3",
+   "trigger_type": "noclip",
+   "trigger": "noclip",
+   "label": "No-clipped through the end of the main hallway back to Level 1",
+   "source_section": "Entrances And Exits",
+   "hint": "Both ends of the main hallway are blank white walls; push into one.",
+   "arrival": "from_L001_3"
+  }
+ ],
+ "notes": "SOURCE: roughly one square mile of white rooms and corridors floored with smooth, almost soft tile; surfaces cannot be sullied and regenerate; one lengthy hallway with branches left and right to sixteen large rooms holding medical supplies/equipment or an empty Detox Zone; Detox Zones heal bones, wounds, fevers and poisoning fast but painfully (burning, sharp pain), not congenital illness; the M.E.G. Ward in all eight zones, M.E.G. manages entry; return to Level 1 by no-clipping into either end of the main hallway. Decay documents (testimony): reclassified Dead Zone, black pits that swallow fishing line, white walls bending into spots of pure blackness, rancid humid air, dried brown blood, green tape at a Detox Zone that is mostly abyss, healing that bubbles and tears the skin. ADAPTATION: the hallway is 204 m long (page: one square mile) with eight branch pairs streamed in 24 m chunks; rooms are 16 x 18 x 5.4 m; room types are seeded (8 Detox Zones, 3 supply stores, 2 surgeries, admissions, staff quarters, pharmacy; one Detox Zone always in the first pair); Detox Zones are sunken three risers and ringed with Ward beds; supply stores and surgeries have a +2.7 m steel mezzanine; the M.E.G. checkpoint at the south end; the Decay state is a seeded flag (about one seed in three; dossier: 'second variant (seeded flag)'), and the QA self-test and stills switch both states; heal 7 HP/s (White), Decay zone heals 1.6 s then deals 6 HP/s rising by 4 HP/s each second; falling into a pit is fatal; damaged tile in the White state fades over ~20 s when you are near; the arrival from Level 1 stands 3 m inside the south end wall facing down the hallway. Not built: The Ward's doctors as NPCs, corpses, Level 1.2 / Level 1.4 (link targets only).",
+ "entity_policy": "NO ENTITY PER SOURCE. The M.E.G. Ward staff, Dr. Reathe, the scout and the Director appear only in the documents; nobody is spawned.",
+ "fail_states": [
+  {
+   "kind": "hazard",
+   "label": "Fell into a Decay pit (Dead Zone state)",
+   "basis": "SOURCE",
+   "source_quote": "Black spots were scattered everywhere"
+  },
+  {
+   "kind": "hazard",
+   "label": "Torn apart by a Decay-corrupted Detox Zone",
+   "basis": "SOURCE",
+   "source_quote": "the surrounding skin began to bubble and tear"
+  }
+ ],
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

@@ -1,28 +1,33 @@
 {
-  "stable_id": "L037_1",
-  "scene": "res://levels/L037_1/L037_1.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "ENGINE_SMOKE_PASS seeds 1001/2002/3003 (r1b, 2026-11-08); stills self-reviewed; integrator review pending",
-  "procedural": true,
-  "arrivals": [
-    "start",
-    "from_L037"
-  ],
-  "signature": "A perfect copy of the white-tiled Poolrooms whose light slowly dies around you, until the water has thickened, the way back is gone and only bright red sprouts along the pool walls light a reservoir where shapes lie on the bottom.",
-  "mechanics": [
-    "poolrooms_copy_streaming",
-    "progressive_light_attenuation",
-    "flashlight_fades",
-    "viscous_water",
-    "point_of_no_return",
-    "red_sprout_light",
-    "chant_parsing",
-    "ambassador_flypast",
-    "elusive_entity_audio_only"
-  ],
-  "exits": [],
-  "no_exit_reason": "The Level 37.1 page has no Entrances and Exits section and documents no exit; it states that once the water turns viscous 'retracing their steps will be useless'. No exit is invented. The level is reached on foot from deep in Level 37 (dossier entrance, CONDITIONAL); that edge is not in data/canon/transitions.json, so only the arrival tag exists here.",
-  "fail_states": [],
-  "entity_policy": "Ambassadors (CONFIRMED) only as an undefined dark silhouette that streaks overhead at high speed and ignores the player. The rumoured elusive entity is audio only (slithering, whimpers) and never visible. ENTITY_01/02 exist only inside the paraphrased camera transcript (TESTIMONY). No combat, no chaser.",
-  "notes": "SOURCE: structural copy of Level 37 (the procedural chunks reuse levels/L037/L037_cells.gd and L037_kinds.gd read-only, so tiles, pools, pillar lattices, stair pits, corridors and basins are literally Level 37's grammar); progressive attenuation of all light sources, native and foreign (wells, panels, underwater lamps and the flashlight dim together); water turns viscous (wading and swimming slow); once darkness is complete the water takes a red tint and bright red sprouts light the level; faint distant chants that draw wanderers and, with long exposure, can be parsed ('the mother's gift', 'a place in paradise'); rumoured water effects only as an unverified wanderers' page and a drink interaction with no effect; damaged camera with paraphrased transcript and the glitched last frame (TESTIMONY); Ambassadors fly past. ADAPTATION: the authored spine (Threshold hall -> Gallery -> Reservoir, chunks (0,0)-(2,0)) and the 32 m streaming window are ours; attenuation progress = distance wandered from the arrival (full at ~72 m) or 15 minutes, whichever is first; the point of no return rebuilds the threshold hall as ordinary red rooms; sprout form (thin emissive stalks with swollen tips at pool walls, pillar feet and wall feet) is our reading of 'sprouts'; the pale shapes on the reservoir floor stage the transcript's 'people lying at the bottom of that pool' (TESTIMONY, indistinct); dropped torches and two water jugs are our dressing for failed foreign light and rumour-seekers. No Epsom/healing effect: the page's water effects are rumours. Level 37.2 appears only in the link list and is not an edge."
+ "stable_id": "L037_1",
+ "scene": "res://levels/L037_1/L037_1.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "ENGINE_SMOKE_PASS seeds 1001/2002/3003 (r1b, 2026-11-08); stills self-reviewed; integrator review pending",
+ "procedural": true,
+ "arrivals": [
+  "start",
+  "from_L037"
+ ],
+ "signature": "A perfect copy of the white-tiled Poolrooms whose light slowly dies around you, until the water has thickened, the way back is gone and only bright red sprouts along the pool walls light a reservoir where shapes lie on the bottom.",
+ "mechanics": [
+  "poolrooms_copy_streaming",
+  "progressive_light_attenuation",
+  "flashlight_fades",
+  "viscous_water",
+  "point_of_no_return",
+  "red_sprout_light",
+  "chant_parsing",
+  "ambassador_flypast",
+  "elusive_entity_audio_only"
+ ],
+ "exits": [],
+ "no_exit_reason": "The Level 37.1 page has no Entrances and Exits section and documents no exit; it states that once the water turns viscous 'retracing their steps will be useless'. No exit is invented. The level is reached on foot from deep in Level 37 (dossier entrance, CONDITIONAL); that edge is not in data/canon/transitions.json, so only the arrival tag exists here.",
+ "fail_states": [],
+ "entity_policy": "Ambassadors (CONFIRMED) only as an undefined dark silhouette that streaks overhead at high speed and ignores the player. The rumoured elusive entity is audio only (slithering, whimpers) and never visible. ENTITY_01/02 exist only inside the paraphrased camera transcript (TESTIMONY). No combat, no chaser.",
+ "notes": "SOURCE: structural copy of Level 37 (the procedural chunks reuse levels/L037/L037_cells.gd and L037_kinds.gd read-only, so tiles, pools, pillar lattices, stair pits, corridors and basins are literally Level 37's grammar); progressive attenuation of all light sources, native and foreign (wells, panels, underwater lamps and the flashlight dim together); water turns viscous (wading and swimming slow); once darkness is complete the water takes a red tint and bright red sprouts light the level; faint distant chants that draw wanderers and, with long exposure, can be parsed ('the mother's gift', 'a place in paradise'); rumoured water effects only as an unverified wanderers' page and a drink interaction with no effect; damaged camera with paraphrased transcript and the glitched last frame (TESTIMONY); Ambassadors fly past. ADAPTATION: the authored spine (Threshold hall -> Gallery -> Reservoir, chunks (0,0)-(2,0)) and the 32 m streaming window are ours; attenuation progress = distance wandered from the arrival (full at ~72 m) or 15 minutes, whichever is first; the point of no return rebuilds the threshold hall as ordinary red rooms; sprout form (thin emissive stalks with swollen tips at pool walls, pillar feet and wall feet) is our reading of 'sprouts'; the pale shapes on the reservoir floor stage the transcript's 'people lying at the bottom of that pool' (TESTIMONY, indistinct); dropped torches and two water jugs are our dressing for failed foreign light and rumour-seekers. No Epsom/healing effect: the page's water effects are rumours. Level 37.2 appears only in the link list and is not an edge.",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

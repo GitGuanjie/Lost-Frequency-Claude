@@ -1,41 +1,46 @@
 {
-  "stable_id": "L263",
-  "scene": "res://levels/L263/L263.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003 21/21 each; bot fired L263>EXT#1 through the static door); stills reviewed by builder (AI); integrator review pending",
-  "procedural": false,
-  "arrivals": [
-    "start"
-  ],
-  "signature": "An endless vibrant-pink hallway under a pitch-black ceiling 17 m up, lined with tall segmented windows of living static; the level is Pink, who writes on your camera, talks through a dead visitor's laptop, and keeps the way out always right behind you",
-  "mechanics": [
-    "pink_writes_on_camera_rec_line",
-    "laptop_text_to_speech_conversation",
-    "mood_tints_the_static",
-    "door_always_behind_you",
-    "sadness_when_you_leave",
-    "streamed_endless_hallway"
-  ],
-  "exits": [
-    {
-      "id": "L263>EXT#1",
-      "to": "@origin",
-      "to_label": "Wherever you came from",
-      "trigger": "walk_in",
-      "trigger_type": "walk_in",
-      "label": "Turned around and walked back out through the static door",
-      "confidence": "CONFIRMED",
-      "basis": "SOURCE",
-      "source_section": "Entrances and Exits (Revision 4)",
-      "method": "Turn around",
-      "source_quote": "can easily be exited by simply turning around",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-263",
-      "conditions": "always returns to origin",
-      "hint": "Turn around: the static door is right behind you.",
-      "arrival": "from_L263"
-    }
-  ],
-  "notes": "SOURCE (Revision 4): seemingly endless repetitive hallway with large segmented windows both sides; vibrant pink walls and carpet (carpet slightly darker); windows are solid surfaces of constantly changing static; pitch-black ceiling ~17 m; Pink, the level's consciousness, speaks through any text display (Blair's camera screen, then a laptop with text-to-speech); friendly, eager, sad when wanderers leave; aware of everything inside, sees out only through the exit; a past visitor with a laptop and backpack collapsed after days and Pink used the laptop; GPD drafts as pretty_pink (Revisions 1-3, emails); 'maybe more than a hallway would be nice'; soft static, no buzzing, no monsters; static doors; exit by turning around, always back to origin. ADAPTATION: corridor 9 m wide, 6 m bays, windows 3.6 x 7.8 m in 2 x 4 panes with pilasters, cornice and baseboards; the camcorder REC line is the camera screen Pink writes on (subtitle fallback when the camcorder filter is off); the laptop lies ~90 m in with a backpack, nothing else of the visitor; conversation lines paraphrase the 04/26/2019 transcript; Pink's mood tints the static pink (happy) or grey (sad); the static door is carried along behind the player while they face away, so turning around always shows the way out; the hall streams along -Z in 24 m chunks (finite window); window glow is the only light (pooled lights at each window). Not procedural: the page's hallway is identical everywhere. No second walkable height: the page describes one flat corridor.",
-  "entity_policy": "SOURCED ENTITIES ONLY: Pink is the level's own nonhostile consciousness, expressed only as text on displays and a text-to-speech voice; no body, no creature. No other entities ('Except for Pink herself, there are no entities').",
-  "content_warning": "Loneliness; a past visitor who walked until they collapsed (only their backpack and laptop are shown)."
+ "stable_id": "L263",
+ "scene": "res://levels/L263/L263.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003 21/21 each; bot fired L263>EXT#1 through the static door); stills reviewed by builder (AI); integrator review pending",
+ "procedural": false,
+ "arrivals": [
+  "start"
+ ],
+ "signature": "An endless vibrant-pink hallway under a pitch-black ceiling 17 m up, lined with tall segmented windows of living static; the level is Pink, who writes on your camera, talks through a dead visitor's laptop, and keeps the way out always right behind you",
+ "mechanics": [
+  "pink_writes_on_camera_rec_line",
+  "laptop_text_to_speech_conversation",
+  "mood_tints_the_static",
+  "door_always_behind_you",
+  "sadness_when_you_leave",
+  "streamed_endless_hallway"
+ ],
+ "exits": [
+  {
+   "id": "L263>EXT#1",
+   "to": "@origin",
+   "to_label": "Wherever you came from",
+   "trigger": "walk_in",
+   "trigger_type": "walk_in",
+   "label": "Turned around and walked back out through the static door",
+   "confidence": "CONFIRMED",
+   "basis": "SOURCE",
+   "source_section": "Entrances and Exits (Revision 4)",
+   "method": "Turn around",
+   "source_quote": "can easily be exited by simply turning around",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-263",
+   "conditions": "always returns to origin",
+   "hint": "Turn around: the static door is right behind you.",
+   "arrival": "from_L263"
+  }
+ ],
+ "notes": "SOURCE (Revision 4): seemingly endless repetitive hallway with large segmented windows both sides; vibrant pink walls and carpet (carpet slightly darker); windows are solid surfaces of constantly changing static; pitch-black ceiling ~17 m; Pink, the level's consciousness, speaks through any text display (Blair's camera screen, then a laptop with text-to-speech); friendly, eager, sad when wanderers leave; aware of everything inside, sees out only through the exit; a past visitor with a laptop and backpack collapsed after days and Pink used the laptop; GPD drafts as pretty_pink (Revisions 1-3, emails); 'maybe more than a hallway would be nice'; soft static, no buzzing, no monsters; static doors; exit by turning around, always back to origin. ADAPTATION: corridor 9 m wide, 6 m bays, windows 3.6 x 7.8 m in 2 x 4 panes with pilasters, cornice and baseboards; the camcorder REC line is the camera screen Pink writes on (subtitle fallback when the camcorder filter is off); the laptop lies ~90 m in with a backpack, nothing else of the visitor; conversation lines paraphrase the 04/26/2019 transcript; Pink's mood tints the static pink (happy) or grey (sad); the static door is carried along behind the player while they face away, so turning around always shows the way out; the hall streams along -Z in 24 m chunks (finite window); window glow is the only light (pooled lights at each window). Not procedural: the page's hallway is identical everywhere. No second walkable height: the page describes one flat corridor.",
+ "entity_policy": "SOURCED ENTITIES ONLY: Pink is the level's own nonhostile consciousness, expressed only as text on displays and a text-to-speech voice; no body, no creature. No other entities ('Except for Pink herself, there are no entities').",
+ "content_warning": "Loneliness; a past visitor who walked until they collapsed (only their backpack and laptop are shown).",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

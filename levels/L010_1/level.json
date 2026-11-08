@@ -1,56 +1,61 @@
 {
-  "stable_id": "L010_1",
-  "scene": "res://levels/L010_1/L010_1.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003 23/23 each; bot fired L010_1>L010#2 after ~47 m); stills reviewed by builder (AI); integrator review pending",
-  "procedural": true,
-  "arrivals": [
-    "start",
-    "from_L010",
-    "from_L028"
-  ],
-  "signature": "A murky crimson lake in a grass basin of the Level 10 plain, ringed by barbed wire and radiation signs; inside the fence every minute counts towards death within the hour, and the liquid swells towards whoever stands at its edge",
-  "mechanics": [
-    "exclusion_zone_state",
-    "exposure_clock_10_30_60_min",
-    "geiger_inside_fence_only",
-    "seeking_swell",
-    "contact_is_fatal",
-    "walk_out_to_level_10"
-  ],
-  "exits": [
-    {
-      "id": "L010_1>L010#2",
-      "to": "L010",
-      "trigger": "walk_in",
-      "trigger_type": "walk_in",
-      "label": "Walked back out of the Exclusion Zone into the Level 10 wheat (any exposure stays with you)",
-      "confidence": "CONDITIONAL",
-      "basis": "SOURCE",
-      "source_section": "Introduction",
-      "method": "leave the Exclusion Zone",
-      "source_quote": "considered deceased",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-10-1",
-      "conditions": "already contaminated if you crossed the fence; no M.E.G. help",
-      "hint": "The dirt track runs back south through the wheat, away from the fence.",
-      "arrival": "from_L010_1"
-    }
-  ],
-  "notes": "SOURCE: manmade lake in Level 10 ~40 km from Malt Town; radioactive, toxic, carnivorous liquid from melted Object 24 masks that seeks the nearest living animal; murky crimson (was black); central black area darker than Vantablack; plants unharmed (grass on banks, algae/trichodesmium); 7 Sv/h; adjacent >1 h fatal; three stages within 10/30/60 min, even through a suit; deadly 1 cm inside the zone, absent outside; barbed-wire fence + warning signs (10 Aug 2021); entrants considered deceased; nuclear waste barrels and the dump; undocumented level under the depression (never an exit); Geiger sample in the page credits; high winds. ADAPTATION: lake ~350 m across (page 0.8 cubic miles) in a grass basin ~12 m below the Level 10 plain; fence ring on the rim 86 m from the water; gate, M.E.G. notice board, Geiger counter left on the board, abandoned barrels and crates at the dump point, a cut fence section; the 'seeking' is one slow swell that follows the player along the shore and kills on reaching them; walking 146 m out from the water on any bearing fires L010_1>L010#2 (a single walk-in band that follows your bearing); exposure persists inside this level only (the clock does not travel to Level 10: core has no carried-status API); stage effects are captions, desaturation, vignette, red tint and a blackout, never gore. Wheat beyond the verge and the tree lines on plot boundaries continue Level 10. Seed varies field stones, barrel placement and the swell's start. QA: no damage in QA mode; the exit band is 42 m behind the start.",
-  "entity_policy": "NO ENTITY PER SOURCE (only the substance itself). The liquid's 'seeking' is a swell on the surface, never a creature. Gluffs/undocumented wanderers (RUMORED) are not shown.",
-  "fail_states": [
-    {
-      "kind": "radiation",
-      "label": "Exposure inside the fence: death within the hour",
-      "basis": "SOURCE",
-      "source_quote": "spells guaranteed death within the next hour"
-    },
-    {
-      "kind": "contact",
-      "label": "Touched the liquid",
-      "basis": "SOURCE",
-      "source_quote": "drain the victim's blood through the ultraviolet veins"
-    }
-  ],
-  "content_warning": "Page carries a CONTENT WARNING (radiation death, body horror, casualty list). The game implies death with captions and screen effects only."
+ "stable_id": "L010_1",
+ "scene": "res://levels/L010_1/L010_1.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003 23/23 each; bot fired L010_1>L010#2 after ~47 m); stills reviewed by builder (AI); integrator review pending",
+ "procedural": true,
+ "arrivals": [
+  "start",
+  "from_L010",
+  "from_L028"
+ ],
+ "signature": "A murky crimson lake in a grass basin of the Level 10 plain, ringed by barbed wire and radiation signs; inside the fence every minute counts towards death within the hour, and the liquid swells towards whoever stands at its edge",
+ "mechanics": [
+  "exclusion_zone_state",
+  "exposure_clock_10_30_60_min",
+  "geiger_inside_fence_only",
+  "seeking_swell",
+  "contact_is_fatal",
+  "walk_out_to_level_10"
+ ],
+ "exits": [
+  {
+   "id": "L010_1>L010#2",
+   "to": "L010",
+   "trigger": "walk_in",
+   "trigger_type": "walk_in",
+   "label": "Walked back out of the Exclusion Zone into the Level 10 wheat (any exposure stays with you)",
+   "confidence": "CONDITIONAL",
+   "basis": "SOURCE",
+   "source_section": "Introduction",
+   "method": "leave the Exclusion Zone",
+   "source_quote": "considered deceased",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-10-1",
+   "conditions": "already contaminated if you crossed the fence; no M.E.G. help",
+   "hint": "The dirt track runs back south through the wheat, away from the fence.",
+   "arrival": "from_L010_1"
+  }
+ ],
+ "notes": "SOURCE: manmade lake in Level 10 ~40 km from Malt Town; radioactive, toxic, carnivorous liquid from melted Object 24 masks that seeks the nearest living animal; murky crimson (was black); central black area darker than Vantablack; plants unharmed (grass on banks, algae/trichodesmium); 7 Sv/h; adjacent >1 h fatal; three stages within 10/30/60 min, even through a suit; deadly 1 cm inside the zone, absent outside; barbed-wire fence + warning signs (10 Aug 2021); entrants considered deceased; nuclear waste barrels and the dump; undocumented level under the depression (never an exit); Geiger sample in the page credits; high winds. ADAPTATION: lake ~350 m across (page 0.8 cubic miles) in a grass basin ~12 m below the Level 10 plain; fence ring on the rim 86 m from the water; gate, M.E.G. notice board, Geiger counter left on the board, abandoned barrels and crates at the dump point, a cut fence section; the 'seeking' is one slow swell that follows the player along the shore and kills on reaching them; walking 146 m out from the water on any bearing fires L010_1>L010#2 (a single walk-in band that follows your bearing); exposure persists inside this level only (the clock does not travel to Level 10: core has no carried-status API); stage effects are captions, desaturation, vignette, red tint and a blackout, never gore. Wheat beyond the verge and the tree lines on plot boundaries continue Level 10. Seed varies field stones, barrel placement and the swell's start. QA: no damage in QA mode; the exit band is 42 m behind the start.",
+ "entity_policy": "NO ENTITY PER SOURCE (only the substance itself). The liquid's 'seeking' is a swell on the surface, never a creature. Gluffs/undocumented wanderers (RUMORED) are not shown.",
+ "fail_states": [
+  {
+   "kind": "radiation",
+   "label": "Exposure inside the fence: death within the hour",
+   "basis": "SOURCE",
+   "source_quote": "spells guaranteed death within the next hour"
+  },
+  {
+   "kind": "contact",
+   "label": "Touched the liquid",
+   "basis": "SOURCE",
+   "source_quote": "drain the victim's blood through the ultraviolet veins"
+  }
+ ],
+ "content_warning": "Page carries a CONTENT WARNING (radiation death, body horror, casualty list). The game implies death with captions and screen effects only.",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

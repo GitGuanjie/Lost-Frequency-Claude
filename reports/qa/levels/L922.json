@@ -1,0 +1,71 @@
+{
+ "duplication_pairs": [],
+ "engine": "4.5.1-stable (official)",
+ "failures": [],
+ "levels": [
+  {
+   "build_ms": 88,
+   "collision_shapes": 8,
+   "distinct_layouts_over_3_seeds": 1,
+   "dup_profile": {
+    "boxes": {
+     "-1_1_1": 1,
+     "-1_5_5": 1,
+     "0_0_0": 2
+    },
+    "materials": {
+     "l922_concrete_band": 2114,
+     "l922_concrete_soffit": 636,
+     "l922_concrete_step": 1344,
+     "l922_concrete_wall": 96,
+     "l922_metal_black": 6048,
+     "l922_terrazzo_black": 48,
+     "l922_tile_nosing": 1440
+    }
+   },
+   "exits_declared": 0,
+   "exits_found": 0,
+   "load_ms": 151,
+   "nav": {
+    "exits": [],
+    "map_regions": 1,
+    "map_sync_ticks": 3,
+    "nav_polygons": 174,
+    "spawn_on_navmesh": true,
+    "spawn_projection_error": 0.100000388920307,
+    "start": "(2.82395, 0.116389, -2.542696)"
+   },
+   "qa_status": "ENGINE_SMOKE_PASS",
+   "save_tested": true,
+   "self_tests": 9,
+   "spawn": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+   },
+   "stable_id": "L922"
+  }
+ ],
+ "renderer": "headless",
+ "started": "2026-11-08T19:15:31",
+ "suites": {
+  "duplication": {
+   "checks": [],
+   "failed": 0,
+   "passed": 1
+  },
+  "framework": {
+   "checks": [],
+   "failed": 0,
+   "passed": 8
+  },
+  "level:L922": {
+   "checks": [],
+   "failed": 0,
+   "passed": 21
+  }
+ }
+}

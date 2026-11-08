@@ -5,10 +5,10 @@
  "levels": [
   {
    "bot": {
-    "distance_to_target": 13.9647884368896,
-    "distance_walked": 2.87592303287238,
+    "distance_to_target": 1.13888895511627,
+    "distance_walked": 2.87657442223281,
     "edge": "L021>L000#1",
-    "final_position": "(11.3391, 0.02, 18.39871)",
+    "final_position": "(11.33373, 0.02, 18.39835)",
     "fired": true,
     "path_index": 6,
     "path_points": 6,
@@ -18,7 +18,7 @@
     "target": "L021>L000#1",
     "ticks": 65
    },
-   "build_ms": 530,
+   "build_ms": 836,
    "collision_shapes": 237,
    "distinct_layouts_over_3_seeds": 3,
    "dup_profile": {
@@ -76,7 +76,7 @@
    },
    "exits_declared": 9,
    "exits_found": 22,
-   "load_ms": 639,
+   "load_ms": 978,
    "nav": {
     "exits": [
      {
@@ -278,7 +278,7 @@
   }
  ],
  "renderer": "headless",
- "started": "2026-11-08T15:37:30",
+ "started": "2026-11-08T19:14:44",
  "suites": {
   "duplication": {
    "checks": [],

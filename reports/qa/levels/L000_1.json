@@ -5,14 +5,93 @@
  "levels": [
   {
    "bot": {
+    "distance_to_target": 1.58433973789215,
     "distance_walked": 58.8426513671875,
     "edge": "L000_1>L000#1",
+    "final_position": "(0.0, 799.4801, -1782.443)",
     "fired": true,
+    "path_index": 12,
+    "path_points": 13,
+    "progress_samples": [
+     {
+      "L009_route_progress": -1,
+      "goal": "(0.000002, 799.6164, -1752.52)",
+      "nav_vertex": 7,
+      "position": "(0.000004, 799.48, -1729.258)",
+      "slide_collisions": 0,
+      "tick": 120
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(0.000002, 799.6164, -1752.52)",
+      "nav_vertex": 7,
+      "position": "(0.000004, 799.48, -1735.454)",
+      "slide_collisions": 0,
+      "tick": 240
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(0.000002, 799.6164, -1752.52)",
+      "nav_vertex": 7,
+      "position": "(0.000003, 799.48, -1741.65)",
+      "slide_collisions": 0,
+      "tick": 360
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(0.000002, 799.6164, -1752.52)",
+      "nav_vertex": 7,
+      "position": "(0.000003, 799.48, -1747.847)",
+      "slide_collisions": 0,
+      "tick": 480
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(0.0, 799.6164, -1779.203)",
+      "nav_vertex": 8,
+      "position": "(0.000002, 799.48, -1753.991)",
+      "slide_collisions": 0,
+      "tick": 600
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(0.0, 799.6164, -1779.203)",
+      "nav_vertex": 8,
+      "position": "(0.000002, 799.48, -1760.188)",
+      "slide_collisions": 0,
+      "tick": 720
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(0.0, 799.6164, -1779.203)",
+      "nav_vertex": 8,
+      "position": "(0.000001, 799.48, -1766.384)",
+      "slide_collisions": 0,
+      "tick": 840
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(0.0, 799.6164, -1779.203)",
+      "nav_vertex": 8,
+      "position": "(0.000001, 799.48, -1772.58)",
+      "slide_collisions": 0,
+      "tick": 960
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(0.0, 799.6164, -1779.203)",
+      "nav_vertex": 8,
+      "position": "(0.0, 799.48, -1778.776)",
+      "slide_collisions": 0,
+      "tick": 1080
+     }
+    ],
+    "reason": "triggered",
     "sim_seconds": 19.25,
     "target": "L000_1>L000#1",
     "ticks": 1155
    },
-   "build_ms": 795,
+   "build_ms": 942,
    "collision_shapes": 750,
    "distinct_layouts_over_3_seeds": 3,
    "dup_profile": {
@@ -145,25 +224,31 @@
    },
    "exits_declared": 2,
    "exits_found": 2,
-   "load_ms": 960,
+   "load_ms": 1094,
    "nav": {
     "exits": [
      {
       "edge": "L000_1>L000#1",
       "goal": "(0.0, 799.6164, -1783.5)",
       "path_points": 13,
-      "reachable": true
+      "reachable": true,
+      "snap_error": 1.0435791015625,
+      "start_projection_error": 0.0999755859375
      },
      {
       "edge": "L000_1>L001#2",
       "goal": "(-13.33, 800.1164, -1722.6)",
       "path_points": 12,
-      "reachable": true
+      "reachable": true,
+      "snap_error": 1.03363037109375,
+      "start_projection_error": 0.0999755859375
      }
     ],
     "map_regions": 1,
     "map_sync_ticks": 2,
     "nav_polygons": 178,
+    "spawn_on_navmesh": true,
+    "spawn_projection_error": 0.0999755859375,
     "start": "(0.0, 800.1164, -1723.6)"
    },
    "qa_status": "ENGINE_SMOKE_PASS",
@@ -172,6 +257,7 @@
    "spawn": {
     "floor_hit": true,
     "offset": 0.0,
+    "provisional_start_alias": false,
     "requested_arrival": "start",
     "spawn_ok": true,
     "used_arrival": "start"
@@ -180,7 +266,7 @@
   }
  ],
  "renderer": "headless",
- "started": "2026-11-06T08:12:39",
+ "started": "2026-11-08T14:38:33",
  "suites": {
   "duplication": {
    "checks": [],

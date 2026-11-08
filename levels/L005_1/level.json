@@ -1,46 +1,51 @@
 {
-  "stable_id": "L005_1",
-  "scene": "res://levels/L005_1/L005_1.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003, 37/37 each; bot fired L005_1>L005#1); stills reviewed by builder (AI); integrator review pending",
-  "procedural": false,
-  "legacy_overlays": false,
-  "arrivals": [
-    "start",
-    "from_L005"
-  ],
-  "signature": "The Terror Hotel's damask, walnut and gilt turned Vegas: a dim, flashing casino floor of slot banks and felt tables under crystal chandeliers, TH in red neon, chips bartered at the front desk, and the Beast's raised table waiting for a lucky winner",
-  "mechanics": [
-    "chip_economy_four_colours",
-    "barter_at_front_desk",
-    "slots_roulette_dice_cards",
-    "trade_in_value_table",
-    "bar_drinks_and_food",
-    "beast_wager_house_always_wins",
-    "lights_flash_periodically",
-    "open_16_closed_8_compressed"
-  ],
-  "exits": [
-    {
-      "id": "L005_1>L005#1",
-      "to": "L005",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "method": "Leave through the same front doors; chips may be traded for goods when leaving.",
-      "source_quote": "The only way to enter and exit is through the front doors of the casino in Level 5",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-5-1",
-      "source_section": "Entrances and Exits",
-      "trigger_type": "door",
-      "trigger": "interact",
-      "label": "Left the casino through its front doors, back into the Terror Hotel",
-      "hint": "The walnut double doors behind the front desk and the cashier's cage.",
-      "arrival": "from_L005_1"
-    }
-  ],
-  "fail_states": [
-    "accepting the Beast's wager: he has never lost; you are taken on as casino staff"
-  ],
-  "entity_policy": "SOURCED ENTITIES ONLY, all passive, never combat. Staff are stylised figures with casino parts: Louie Sulphur (pool-stick arms, a billiard-ball eye) roams the floor with a tray; Peg-Leg welcomes at the arch; Sir Billiard deals cards; The Barkeep (Entity 164) tends the mezzanine bar; the chip clerk at the front desk stands for the on-duty staff member (the Comedian, Entity 185, per TESTIMONY). The Beast (Entity 18) is not modelled: his empty high-backed chair, a steaming cup of tea and his voice. The Bellhopper (Entity 135) appears only in the log and is not placed. Patrons are heard (crowd, cheers, chips), not shown.",
-  "content_note": "The page describes a man's body changed into casino parts and a gambling-addiction theme; the audio log ends with his capture. Shown only as a stylised staff figure and text; nothing graphic.",
-  "notes": "SOURCE: casino inside Level 5 owned by Entity 18; entered and left only by its front doors; TH in large red letters; ~5000 occupancy; roulettes, cards, dice, slots; chips bartered with the front desk; red $1, blue $5, yellow $10, green $20 (purple $50 RUMOURED, not built); winnings paid in chips; the trade-in value table (Almond Water 2 red, Deuclidators 1 blue, Memory Jars 4 red, Activated Charcoal 3 yellow/g, Scarabacks 6 red, Royal Rations 1 green per 1/4 lb, Babel Balm 4 yellow, Maiden's Ink 4 green); dim lights flashing periodically, game noise, blaring music, chips clinking, AC breeze, classy new carpet, fine alcohol; rigging and living cards are REPORTED/unproven (the game odds are ours and nothing asserts rigging); the bar run by The Barkeep with a large menu; staff partly human with casino parts; Louie Sulphur the manager; the Beast's card wager (never lost); open 16 h, closed 8 h. TESTIMONY used as flavour: free first drink at the grand opening, the Comedian on chip duty, the stage. ADAPTATION: layout (lobby with front desk and cashier's cage, sunk floor -0.6 m and promenade, the Beast's dais +0.6 m, stage, east mezzanine +4.2 m with the bar) is ours; TH appears over the lobby arch and over the hall entrance because the exterior front belongs to Level 5; materials repeat Level 5's damask/walnut/gilt/marble/crystal palette; the open/closed cycle is compressed to 1 hour = 1 minute; a one-time 'pocket barter' (5 red) lets a wanderer with nothing to trade play; game odds and payouts, the jackpot-driven wager invitation and the scripted loss are ours; food and drink heal a little. Seeded: slot cabinet colours and the opening-hours phase."
+ "stable_id": "L005_1",
+ "scene": "res://levels/L005_1/L005_1.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003, 37/37 each; bot fired L005_1>L005#1); stills reviewed by builder (AI); integrator review pending",
+ "procedural": false,
+ "legacy_overlays": false,
+ "arrivals": [
+  "start",
+  "from_L005"
+ ],
+ "signature": "The Terror Hotel's damask, walnut and gilt turned Vegas: a dim, flashing casino floor of slot banks and felt tables under crystal chandeliers, TH in red neon, chips bartered at the front desk, and the Beast's raised table waiting for a lucky winner",
+ "mechanics": [
+  "chip_economy_four_colours",
+  "barter_at_front_desk",
+  "slots_roulette_dice_cards",
+  "trade_in_value_table",
+  "bar_drinks_and_food",
+  "beast_wager_house_always_wins",
+  "lights_flash_periodically",
+  "open_16_closed_8_compressed"
+ ],
+ "exits": [
+  {
+   "id": "L005_1>L005#1",
+   "to": "L005",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "method": "Leave through the same front doors; chips may be traded for goods when leaving.",
+   "source_quote": "The only way to enter and exit is through the front doors of the casino in Level 5",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-5-1",
+   "source_section": "Entrances and Exits",
+   "trigger_type": "door",
+   "trigger": "interact",
+   "label": "Left the casino through its front doors, back into the Terror Hotel",
+   "hint": "The walnut double doors behind the front desk and the cashier's cage.",
+   "arrival": "from_L005_1"
+  }
+ ],
+ "fail_states": [
+  "accepting the Beast's wager: he has never lost; you are taken on as casino staff"
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY, all passive, never combat. Staff are stylised figures with casino parts: Louie Sulphur (pool-stick arms, a billiard-ball eye) roams the floor with a tray; Peg-Leg welcomes at the arch; Sir Billiard deals cards; The Barkeep (Entity 164) tends the mezzanine bar; the chip clerk at the front desk stands for the on-duty staff member (the Comedian, Entity 185, per TESTIMONY). The Beast (Entity 18) is not modelled: his empty high-backed chair, a steaming cup of tea and his voice. The Bellhopper (Entity 135) appears only in the log and is not placed. Patrons are heard (crowd, cheers, chips), not shown.",
+ "content_note": "The page describes a man's body changed into casino parts and a gambling-addiction theme; the audio log ends with his capture. Shown only as a stylised staff figure and text; nothing graphic.",
+ "notes": "SOURCE: casino inside Level 5 owned by Entity 18; entered and left only by its front doors; TH in large red letters; ~5000 occupancy; roulettes, cards, dice, slots; chips bartered with the front desk; red $1, blue $5, yellow $10, green $20 (purple $50 RUMOURED, not built); winnings paid in chips; the trade-in value table (Almond Water 2 red, Deuclidators 1 blue, Memory Jars 4 red, Activated Charcoal 3 yellow/g, Scarabacks 6 red, Royal Rations 1 green per 1/4 lb, Babel Balm 4 yellow, Maiden's Ink 4 green); dim lights flashing periodically, game noise, blaring music, chips clinking, AC breeze, classy new carpet, fine alcohol; rigging and living cards are REPORTED/unproven (the game odds are ours and nothing asserts rigging); the bar run by The Barkeep with a large menu; staff partly human with casino parts; Louie Sulphur the manager; the Beast's card wager (never lost); open 16 h, closed 8 h. TESTIMONY used as flavour: free first drink at the grand opening, the Comedian on chip duty, the stage. ADAPTATION: layout (lobby with front desk and cashier's cage, sunk floor -0.6 m and promenade, the Beast's dais +0.6 m, stage, east mezzanine +4.2 m with the bar) is ours; TH appears over the lobby arch and over the hall entrance because the exterior front belongs to Level 5; materials repeat Level 5's damask/walnut/gilt/marble/crystal palette; the open/closed cycle is compressed to 1 hour = 1 minute; a one-time 'pocket barter' (5 red) lets a wanderer with nothing to trade play; game odds and payouts, the jackpot-driven wager invitation and the scripted loss are ours; food and drink heal a little. Seeded: slot cabinet colours and the opening-hours phase.",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

@@ -1,53 +1,58 @@
 {
-  "stable_id": "L000_2",
-  "scene": "res://levels/L000_2/L000_2.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT_TESTED",
-  "procedural": true,
-  "arrivals": [
-    "start",
-    "from_L000"
-  ],
-  "signature": "A spotless remodelled Level 0 office suite (dry red carpet, white walls, working outlets and Wi-Fi, a bathroom) that comes apart around you once you enter: ceilings swing down, wall sheets topple and the floor sags, exposing the bare framing of an unfinished house, until the chain reaction stops at the door back to Level 0.",
-  "mechanics": [
-    "remodeled_office_suite",
-    "chain_reaction_collapse_entrance_to_door",
-    "falling_debris_damage",
-    "plaster_dust_fog_and_choking",
-    "unfinished_house_framing_revealed",
-    "sunken_lounge_split_level",
-    "clipboard_documents_1_to_3",
-    "reset_on_reentry"
-  ],
-  "exits": [
-    {
-      "id": "L000_2>L000#1",
-      "to": "L000",
-      "trigger": "interact",
-      "label": "Opened the old door back to Level 0",
-      "confidence": "CONFIRMED",
-      "basis": "SOURCE",
-      "source_section": "Entrances And Exits",
-      "source_quote": "The level can be exited the same way it is entered, finding a door will lead back to Level 0.",
-      "hint": "Past the end of the hall, one door in the lobby is older than everything else here. Yellow light and a familiar buzz leak under it.",
-      "arrival": "from_L000_2",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-0-2"
-    }
-  ],
-  "fail_states": [
-    {
-      "kind": "hazard",
-      "label": "Crushed by falling ceiling panels during the collapse",
-      "basis": "SOURCE",
-      "source_quote": "the debris can collapse on top of them"
-    },
-    {
-      "kind": "hazard",
-      "label": "Choked on the plaster dust that follows",
-      "basis": "SOURCE",
-      "source_quote": "the dust afterward can be very dangerous"
-    }
-  ],
-  "entity_policy": "NO ENTITY PER SOURCE. Backrooms Remodelling Co. staff (Major Took, Cap'n, the four-person crew) exist only as authors and addressees of the clipboard documents; nobody is spawned.",
-  "notes": "SOURCE: sub-section between Level 0 and Level 1 created by Backrooms Remodelling Co.; untouched it looks like a revamped Level 0 with dry red carpets, repainted white walls, consistently working Wi-Fi and outlets and the occasional bathroom; on entering it falls apart (ceiling tiles fall, walls topple, the floor collapses) revealing what looks like an unfinished house; debris and the dust afterwards are dangerous; the destruction stops when the chain reaction reaches the door back to Level 0 and the level is completely fixed on re-entry; whether the collapse is deliberate is unknown; no bases; recovered clipboard documents 1-3 (slogan, job order, torn reply). ADAPTATION: the floor plan (3 m grid, 27 x 36 m: reception, hall, lobby, open-plan office, bathroom, crew storage room, conference room, file room, break room, sunken lounge, foreman's site office, small office, utility room) is ours, as are the sunken lounge (three 0.18 m risers; the page gives no geometry), the drop ceiling, the crawlspace under the deck and the joists above the ceiling (our reading of 'an unfinished house'); the collapse arms after you walk 4 m in or touch anything and runs from the entrance toward the lobby door at 0.85 m/s, stopping at the door; ceiling panels hinge down or drop, about 40% of wall sheets topple (studs and the far sheet keep the wall solid), nine seeded floor cells sag into a walkable valley; falling ceiling 22 damage, dust fog with slow health loss; the new door you entered by stays shut (the page names only a door back to Level 0 as the way out); the old door's yellow light and buzz are our cue for Level 0 behind it. Reset on re-entry is the scene reload. Not built: any Level 1 exit (none stated). Seeds vary door positions, collapse flags, sagging cells and furniture."
+ "stable_id": "L000_2",
+ "scene": "res://levels/L000_2/L000_2.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": true,
+ "arrivals": [
+  "start",
+  "from_L000"
+ ],
+ "signature": "A spotless remodelled Level 0 office suite (dry red carpet, white walls, working outlets and Wi-Fi, a bathroom) that comes apart around you once you enter: ceilings swing down, wall sheets topple and the floor sags, exposing the bare framing of an unfinished house, until the chain reaction stops at the door back to Level 0.",
+ "mechanics": [
+  "remodeled_office_suite",
+  "chain_reaction_collapse_entrance_to_door",
+  "falling_debris_damage",
+  "plaster_dust_fog_and_choking",
+  "unfinished_house_framing_revealed",
+  "sunken_lounge_split_level",
+  "clipboard_documents_1_to_3",
+  "reset_on_reentry"
+ ],
+ "exits": [
+  {
+   "id": "L000_2>L000#1",
+   "to": "L000",
+   "trigger": "interact",
+   "label": "Opened the old door back to Level 0",
+   "confidence": "CONFIRMED",
+   "basis": "SOURCE",
+   "source_section": "Entrances And Exits",
+   "source_quote": "The level can be exited the same way it is entered, finding a door will lead back to Level 0.",
+   "hint": "Past the end of the hall, one door in the lobby is older than everything else here. Yellow light and a familiar buzz leak under it.",
+   "arrival": "from_L000_2",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-0-2"
+  }
+ ],
+ "fail_states": [
+  {
+   "kind": "hazard",
+   "label": "Crushed by falling ceiling panels during the collapse",
+   "basis": "SOURCE",
+   "source_quote": "the debris can collapse on top of them"
+  },
+  {
+   "kind": "hazard",
+   "label": "Choked on the plaster dust that follows",
+   "basis": "SOURCE",
+   "source_quote": "the dust afterward can be very dangerous"
+  }
+ ],
+ "entity_policy": "NO ENTITY PER SOURCE. Backrooms Remodelling Co. staff (Major Took, Cap'n, the four-person crew) exist only as authors and addressees of the clipboard documents; nobody is spawned.",
+ "notes": "SOURCE: sub-section between Level 0 and Level 1 created by Backrooms Remodelling Co.; untouched it looks like a revamped Level 0 with dry red carpets, repainted white walls, consistently working Wi-Fi and outlets and the occasional bathroom; on entering it falls apart (ceiling tiles fall, walls topple, the floor collapses) revealing what looks like an unfinished house; debris and the dust afterwards are dangerous; the destruction stops when the chain reaction reaches the door back to Level 0 and the level is completely fixed on re-entry; whether the collapse is deliberate is unknown; no bases; recovered clipboard documents 1-3 (slogan, job order, torn reply). ADAPTATION: the floor plan (3 m grid, 27 x 36 m: reception, hall, lobby, open-plan office, bathroom, crew storage room, conference room, file room, break room, sunken lounge, foreman's site office, small office, utility room) is ours, as are the sunken lounge (three 0.18 m risers; the page gives no geometry), the drop ceiling, the crawlspace under the deck and the joists above the ceiling (our reading of 'an unfinished house'); the collapse arms after you walk 4 m in or touch anything and runs from the entrance toward the lobby door at 0.85 m/s, stopping at the door; ceiling panels hinge down or drop, about 40% of wall sheets topple (studs and the far sheet keep the wall solid), nine seeded floor cells sag into a walkable valley; falling ceiling 22 damage, dust fog with slow health loss; the new door you entered by stays shut (the page names only a door back to Level 0 as the way out); the old door's yellow light and buzz are our cue for Level 0 behind it. Reset on re-entry is the scene reload. Not built: any Level 1 exit (none stated). Seeds vary door positions, collapse flags, sagging cells and furniture.",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

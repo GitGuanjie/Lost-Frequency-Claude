@@ -5,15 +5,21 @@
  "levels": [
   {
    "bot": {
+    "distance_to_target": 1.04719877243042,
     "distance_walked": 3.1865711864084,
     "edge": "L007>L009#3",
+    "final_position": "(-1.389117, 360.02, 2.732145)",
     "fired": true,
+    "path_index": 8,
+    "path_points": 8,
+    "progress_samples": [],
+    "reason": "triggered",
     "sim_seconds": 1.21666666666667,
     "target": "L007>L009#3",
     "ticks": 73
    },
-   "build_ms": 1726,
-   "collision_shapes": 139,
+   "build_ms": 2036,
+   "collision_shapes": 140,
    "distinct_layouts_over_3_seeds": 3,
    "dup_profile": {
     "boxes": {
@@ -43,7 +49,7 @@
      "-6_0_1": 7,
      "-8_1_1": 1,
      "0_10_10": 30,
-     "1_1_1": 1,
+     "1_1_1": 2,
      "2_2_2": 4,
      "5_5_5": 1,
      "5_5_6": 4,
@@ -81,19 +87,23 @@
    },
    "exits_declared": 3,
    "exits_found": 1,
-   "load_ms": 1852,
+   "load_ms": 2169,
    "nav": {
     "exits": [
      {
       "edge": "L007>L009#3",
       "goal": "(-1.55, 360.1164, 2.4)",
       "path_points": 8,
-      "reachable": true
+      "reachable": true,
+      "snap_error": 0.88360595703125,
+      "start_projection_error": 0.100006103515625
      }
     ],
     "map_regions": 1,
     "map_sync_ticks": 2,
     "nav_polygons": 37,
+    "spawn_on_navmesh": true,
+    "spawn_projection_error": 0.100006103515625,
     "start": "(0.0, 360.1164, 5.6)"
    },
    "qa_status": "ENGINE_SMOKE_PASS",
@@ -102,6 +112,7 @@
    "spawn": {
     "floor_hit": true,
     "offset": 0.0,
+    "provisional_start_alias": false,
     "requested_arrival": "start",
     "spawn_ok": true,
     "used_arrival": "start"
@@ -110,7 +121,7 @@
   }
  ],
  "renderer": "headless",
- "started": "2026-11-06T08:12:43",
+ "started": "2026-11-08T14:39:43",
  "suites": {
   "duplication": {
    "checks": [],

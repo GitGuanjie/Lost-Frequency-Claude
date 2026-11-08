@@ -59,7 +59,7 @@
     "target": "L000_2>L000#1",
     "ticks": 686
    },
-   "build_ms": 1481,
+   "build_ms": 15747,
    "collision_shapes": 259,
    "distinct_layouts_over_3_seeds": 3,
    "dup_profile": {
@@ -156,7 +156,7 @@
    },
    "exits_declared": 1,
    "exits_found": 1,
-   "load_ms": 1605,
+   "load_ms": 16205,
    "nav": {
     "exits": [
      {
@@ -190,7 +190,7 @@
   }
  ],
  "renderer": "headless",
- "started": "2026-11-08T15:01:44",
+ "started": "2026-11-08T19:13:46",
  "suites": {
   "duplication": {
    "checks": [],

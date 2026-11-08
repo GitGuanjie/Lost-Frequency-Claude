@@ -5,15 +5,30 @@
  "levels": [
   {
    "bot": {
-    "distance_walked": 10.8322674743831,
+    "distance_to_target": 1.04700744152069,
+    "distance_walked": 10.8322669565678,
     "edge": "L003>L069#4",
+    "final_position": "(6.440216, 0.02, -6.033657)",
     "fired": true,
+    "path_index": 10,
+    "path_points": 10,
+    "progress_samples": [
+     {
+      "L009_route_progress": -1,
+      "goal": "(7.123489, 0.101973, -1.876511)",
+      "nav_vertex": 6,
+      "position": "(6.79634, 0.000176, -1.086108)",
+      "slide_collisions": 0,
+      "tick": 120
+     }
+    ],
+    "reason": "triggered",
     "sim_seconds": 3.75,
     "target": "L003>L069#4",
     "ticks": 225
    },
-   "build_ms": 792,
-   "collision_shapes": 494,
+   "build_ms": 844,
+   "collision_shapes": 510,
    "distinct_layouts_over_3_seeds": 3,
    "dup_profile": {
     "boxes": {
@@ -80,6 +95,9 @@
      "-3_0_4": 1,
      "-3_2_2": 1,
      "-3_2_3": 2,
+     "-3_2_4": 1,
+     "-3_2_5": 2,
+     "-3_2_6": 1,
      "-3_3_3": 1,
      "-3_3_7": 1,
      "-4_-1_0": 1,
@@ -93,23 +111,23 @@
      "-4_1_2": 1,
      "-4_2_2": 3,
      "-4_3_4": 1,
+     "-5_-2_-1": 1,
      "-5_-2_5": 14,
      "-5_0_2": 3,
      "-5_0_4": 1,
      "-5_1_2": 1,
-     "-5_1_4": 4,
+     "-5_1_4": 5,
      "-5_1_6": 1,
      "-5_2_2": 2,
      "-5_2_4": 1,
      "-6_-1_0": 1,
      "-6_-2_-2": 1,
-     "-6_0_1": 1,
+     "-6_0_1": 2,
      "-6_0_2": 2,
-     "-6_0_3": 1,
-     "-6_0_4": 3,
-     "-6_0_5": 4,
-     "-6_0_6": 6,
-     "-6_0_7": 1,
+     "-6_0_3": 2,
+     "-6_0_4": 6,
+     "-6_0_5": 8,
+     "-6_0_6": 8,
      "-6_1_1": 1,
      "-6_1_5": 1,
      "-6_1_6": 4,
@@ -172,7 +190,7 @@
      "l3_gen_drum": 248,
      "l3_glass_dark": 300,
      "l3_glyphs": 12,
-     "l3_grate": 1848,
+     "l3_grate": 2112,
      "l3_green_led": 12,
      "l3_headlamp": 24,
      "l3_lift": 84,
@@ -186,7 +204,7 @@
      "l3_pipe_rust": 116,
      "l3_purple": 12,
      "l3_purple_flesh": 54,
-     "l3_rail": 2388,
+     "l3_rail": 3552,
      "l3_red_led": 22,
      "l3_rubber": 36,
      "l3_screen": 2,
@@ -196,7 +214,7 @@
      "l3_sign_white": 48,
      "l3_sign_yellow": 84,
      "l3_sludge": 384,
-     "l3_steel": 5000,
+     "l3_steel": 5036,
      "l3_stone": 12,
      "l3_sun": 52,
      "l3_sun_dim": 12,
@@ -213,45 +231,56 @@
    },
    "exits_declared": 4,
    "exits_found": 4,
-   "load_ms": 959,
+   "load_ms": 1018,
    "nav": {
     "exits": [
      {
       "edge": "L003>L069#4",
       "goal": "(6.4, 0.101973, -6.4)",
       "path_points": 10,
-      "reachable": true
+      "reachable": true,
+      "snap_error": 0.898027420043945,
+      "start_projection_error": 0.100000157952309
      },
      {
       "edge": "L003>L011#3",
       "goal": "(117.3, -4.621696, -4.977393)",
       "path_points": 95,
-      "reachable": true
+      "reachable": true,
+      "snap_error": 0.622106909751892,
+      "start_projection_error": 0.100000157952309
      },
      {
       "edge": "L003>L004#1",
       "goal": "(110.0, -4.798028, -13.8)",
       "path_points": 90,
-      "reachable": true
+      "reachable": true,
+      "snap_error": 0.798027515411377,
+      "start_projection_error": 0.100000157952309
      },
      {
       "edge": "L003>L005#2",
       "goal": "(110.0, -4.798028, -13.8)",
       "path_points": 90,
-      "reachable": true
+      "reachable": true,
+      "snap_error": 0.798027515411377,
+      "start_projection_error": 0.100000157952309
      }
     ],
     "map_regions": 1,
-    "map_sync_ticks": 2,
-    "nav_polygons": 1327,
+    "map_sync_ticks": 3,
+    "nav_polygons": 1372,
+    "spawn_on_navmesh": true,
+    "spawn_projection_error": 0.100000157952309,
     "start": "(1.2, 0.101973, 0.0)"
    },
    "qa_status": "ENGINE_SMOKE_PASS",
    "save_tested": true,
-   "self_tests": 10,
+   "self_tests": 12,
    "spawn": {
     "floor_hit": true,
     "offset": 0.0,
+    "provisional_start_alias": false,
     "requested_arrival": "start",
     "spawn_ok": true,
     "used_arrival": "start"
@@ -260,17 +289,22 @@
   }
  ],
  "renderer": "headless",
- "started": "2026-11-06T05:35:55",
+ "started": "2026-11-08T14:38:45",
  "suites": {
   "duplication": {
    "checks": [],
    "failed": 0,
    "passed": 1
   },
+  "framework": {
+   "checks": [],
+   "failed": 0,
+   "passed": 8
+  },
   "level:L003": {
    "checks": [],
    "failed": 0,
-   "passed": 33
+   "passed": 35
   }
  }
 }

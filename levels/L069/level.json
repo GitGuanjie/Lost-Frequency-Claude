@@ -1,67 +1,72 @@
 {
-  "stable_id": "L069",
-  "scene": "res://levels/L069/L069.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003, 36/36 each; bot fired L069>L011#1 from the QA tunnel-end fixture); stills reviewed by builder (AI); integrator review pending",
-  "procedural": true,
-  "legacy_overlays": false,
-  "arrivals": [
-    "start",
-    "from_L022",
-    "from_L003",
-    "from_L008"
-  ],
-  "signature": "A deserted highway between tall weathered concrete walls in fog and pitch darkness; your car's headlights are the only light, the car is the only safe place, and something waits in the dark above for you to get out",
-  "mechanics": [
-    "drivable_car_no_fuel_crash_kills",
-    "car_safe_zone_fog_bubble",
-    "fragment_of_destivinatia_compartment",
-    "beings_from_above_exposure_clock",
-    "parked_too_long_smiler_wretch_warnings",
-    "the_whispers_shared_thoughts",
-    "perpendicular_tunnel_17_hours_compressed",
-    "noclip_wall_spot_with_car"
-  ],
-  "exits": [
-    {
-      "id": "L069>L011#1",
-      "to": "L011",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED+ONE-WAY",
-      "method": "Perpendicular tunnel, drive about 17 hours, then walk",
-      "source_quote": "This tunnel leads to Level 11.",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-69",
-      "source_section": "Entrances And Exits / Exits",
-      "trigger_type": "vehicle",
-      "trigger": "walk_in",
-      "label": "Drove the perpendicular tunnel for seventeen hours until the car died, then walked out",
-      "hint": "Keep to the side of the highway and watch the walls: an opening at a right angle to the road.",
-      "arrival": "from_L069",
-      "conditions": "one-way; the walk-out appears only after the compressed 17-hour drive"
-    },
-    {
-      "id": "L069>L022#2",
-      "to": "L022",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "method": "No-clip through roadside wall",
-      "source_quote": "you will appear in Level 22 with your car parked in a parking space",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-69",
-      "source_section": "Entrances And Exits / Exits",
-      "trigger_type": "noclip",
-      "trigger": "condition",
-      "label": "Pressed the car into the right panel of the wall until the concrete let it through",
-      "hint": "Somewhere along the walls a panel looks slightly wrong and something crackles behind it.",
-      "arrival": "from_L069",
-      "conditions": "in the car, pressed against a seeded wall spot for about 2.6 s"
-    }
-  ],
-  "fail_states": [
-    "crash into a wall at speed",
-    "captured by the Beings From Above after too long outside the car (or with the Fragment out)",
-    "the dead car catches fire while you sit in it (damage, forced out)"
-  ],
-  "entity_policy": "SOURCED ENTITIES ONLY, never combat. The Beings From Above (CONFIRMED) are jointed legs that descend silently while you are outside the car and capture you (death; their fate is unknown, the Level 0 wake-up is RUMORED and not built). Smilers/Wretches (CONFIRMED, extremely rare) appear only after parking for minutes: a grin in the fog, nails on the car, a fist on the window; no attack is rendered. The Whispers (REPORTED) are shared intrusive thoughts shown as subtitles.",
-  "content_note": "The page describes people being speared or carried off by entities, crashes and starvation. Nothing graphic is shown.",
-  "notes": "SOURCE: infinite highway, tall weathered concrete walls, no vehicles or civilisation apart from the highway, thick fog, pitch darkness, the only light is your own; you wake in the car at a random place (lane, heading and the tunnel's distance come from the seed); the car is the only safe place and fog/entities avoid it; Fragment Of Destivinatia in a hidden compartment at the bottom centre, removing it turns its effect off; parts may be broken (one headlight dead in ~30% of seeds); no fuel; crashing most likely kills; do not park too long; Beings From Above descend silently when you exit; stay near the car; the Whispers; the perpendicular one-lane tunnel, fog fading and roof lights turning on, ~17 h, the car breaks down and catches fire if driven too long after, walk the rest; no-clip through a side wall with the car to Level 22. ADAPTATION: cross-section (four lanes, 20 m between 9 m walls) and wall panelling are ours; the highway is a finite streaming window of 40 m chunks; the 17 hours are compressed to 150 s of driving inside the tunnel, which loops seamlessly (it is uniform) until the time is done, then a stair, landing and lit doorway appear ahead and the car dies; the tunnel walkway (+0.6 m) and end landing (+1.26 m) are ours; the no-clip spots (one about every 520 m, either side) are marked only by a slightly different panel and a crackle; the exposure clock (14 s, x0.35 near the car, x1.6 without the Fragment) and parked thresholds (150/240/320 s) are ours; the Whispers' phrases are written for the game. Not built: Level 4 (RUMORED on-foot no-clip) and Level 0 (RUMORED capture wake-up); flipped cars. QA fixture (QA mode only): start beside the dead car at the tunnel end so the walker bot walks out to Level 11."
+ "stable_id": "L069",
+ "scene": "res://levels/L069/L069.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003, 36/36 each; bot fired L069>L011#1 from the QA tunnel-end fixture); stills reviewed by builder (AI); integrator review pending",
+ "procedural": true,
+ "legacy_overlays": false,
+ "arrivals": [
+  "start",
+  "from_L022",
+  "from_L003",
+  "from_L008"
+ ],
+ "signature": "A deserted highway between tall weathered concrete walls in fog and pitch darkness; your car's headlights are the only light, the car is the only safe place, and something waits in the dark above for you to get out",
+ "mechanics": [
+  "drivable_car_no_fuel_crash_kills",
+  "car_safe_zone_fog_bubble",
+  "fragment_of_destivinatia_compartment",
+  "beings_from_above_exposure_clock",
+  "parked_too_long_smiler_wretch_warnings",
+  "the_whispers_shared_thoughts",
+  "perpendicular_tunnel_17_hours_compressed",
+  "noclip_wall_spot_with_car"
+ ],
+ "exits": [
+  {
+   "id": "L069>L011#1",
+   "to": "L011",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED+ONE-WAY",
+   "method": "Perpendicular tunnel, drive about 17 hours, then walk",
+   "source_quote": "This tunnel leads to Level 11.",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-69",
+   "source_section": "Entrances And Exits / Exits",
+   "trigger_type": "vehicle",
+   "trigger": "walk_in",
+   "label": "Drove the perpendicular tunnel for seventeen hours until the car died, then walked out",
+   "hint": "Keep to the side of the highway and watch the walls: an opening at a right angle to the road.",
+   "arrival": "from_L069",
+   "conditions": "one-way; the walk-out appears only after the compressed 17-hour drive"
+  },
+  {
+   "id": "L069>L022#2",
+   "to": "L022",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "method": "No-clip through roadside wall",
+   "source_quote": "you will appear in Level 22 with your car parked in a parking space",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-69",
+   "source_section": "Entrances And Exits / Exits",
+   "trigger_type": "noclip",
+   "trigger": "condition",
+   "label": "Pressed the car into the right panel of the wall until the concrete let it through",
+   "hint": "Somewhere along the walls a panel looks slightly wrong and something crackles behind it.",
+   "arrival": "from_L069",
+   "conditions": "in the car, pressed against a seeded wall spot for about 2.6 s"
+  }
+ ],
+ "fail_states": [
+  "crash into a wall at speed",
+  "captured by the Beings From Above after too long outside the car (or with the Fragment out)",
+  "the dead car catches fire while you sit in it (damage, forced out)"
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY, never combat. The Beings From Above (CONFIRMED) are jointed legs that descend silently while you are outside the car and capture you (death; their fate is unknown, the Level 0 wake-up is RUMORED and not built). Smilers/Wretches (CONFIRMED, extremely rare) appear only after parking for minutes: a grin in the fog, nails on the car, a fist on the window; no attack is rendered. The Whispers (REPORTED) are shared intrusive thoughts shown as subtitles.",
+ "content_note": "The page describes people being speared or carried off by entities, crashes and starvation. Nothing graphic is shown.",
+ "notes": "SOURCE: infinite highway, tall weathered concrete walls, no vehicles or civilisation apart from the highway, thick fog, pitch darkness, the only light is your own; you wake in the car at a random place (lane, heading and the tunnel's distance come from the seed); the car is the only safe place and fog/entities avoid it; Fragment Of Destivinatia in a hidden compartment at the bottom centre, removing it turns its effect off; parts may be broken (one headlight dead in ~30% of seeds); no fuel; crashing most likely kills; do not park too long; Beings From Above descend silently when you exit; stay near the car; the Whispers; the perpendicular one-lane tunnel, fog fading and roof lights turning on, ~17 h, the car breaks down and catches fire if driven too long after, walk the rest; no-clip through a side wall with the car to Level 22. ADAPTATION: cross-section (four lanes, 20 m between 9 m walls) and wall panelling are ours; the highway is a finite streaming window of 40 m chunks; the 17 hours are compressed to 150 s of driving inside the tunnel, which loops seamlessly (it is uniform) until the time is done, then a stair, landing and lit doorway appear ahead and the car dies; the tunnel walkway (+0.6 m) and end landing (+1.26 m) are ours; the no-clip spots (one about every 520 m, either side) are marked only by a slightly different panel and a crackle; the exposure clock (14 s, x0.35 near the car, x1.6 without the Fragment) and parked thresholds (150/240/320 s) are ours; the Whispers' phrases are written for the game. Not built: Level 4 (RUMORED on-foot no-clip) and Level 0 (RUMORED capture wake-up); flipped cars. QA fixture (QA mode only): start beside the dead car at the tunnel end so the walker bot walks out to Level 11.",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

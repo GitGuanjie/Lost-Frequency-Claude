@@ -1,1 +1,150 @@
-{"counters":{"accepted":0,"blocked_source":0,"playable":0,"requested":100,"source_audited":100,"spawnable":3},"engine":"4.5.1-stable (official)","failures":[],"legacy_save_found_on_machine":true,"levels":[{"bot":{"distance_walked":26.4109257999808,"edge":"L008>L009#1","fired":true,"sim_seconds":8.91666666666667,"target":"L008>L009#1","ticks":535},"build_ms":1762,"collision_shapes":148,"distinct_layouts_over_3_seeds":3,"exits_declared":3,"exits_found":1,"load_ms":1879,"nav":{"exits":[{"edge":"L008>L009#1","goal":"(33.8992, -0.405935, 4.736176)","path_points":22,"reachable":true}],"map_regions":1,"map_sync_ticks":3,"nav_polygons":924,"start":"(6.0, 0.116389, 4.0)"},"qa_status":"ENGINE_SMOKE_PASS","spawn":{"floor_hit":true,"offset":0.0,"requested_arrival":"start","spawn_ok":true,"used_arrival":"start"},"stable_id":"L008"}],"renderer":"headless","started":"2026-11-05T18:45:50","suites":{"level:L008":{"checks":[],"failed":0,"passed":14},"lint":{"checks":[],"failed":0,"passed":43},"registry":{"checks":[],"failed":0,"passed":410},"save":{"checks":[],"failed":0,"passed":14},"ui":{"checks":[],"failed":0,"passed":25}}}
+{
+ "duplication_pairs": [],
+ "engine": "4.5.1-stable (official)",
+ "failures": [],
+ "levels": [
+  {
+   "bot": {
+    "distance_to_target": 2.31694865226746,
+    "distance_walked": 26.4685140643269,
+    "edge": "L008>L009#1",
+    "final_position": "(32.24279, -0.487362, 4.203601)",
+    "fired": true,
+    "path_index": 19,
+    "path_points": 23,
+    "progress_samples": [
+     {
+      "L009_route_progress": -1,
+      "goal": "(12.3059, 0.116389, 4.368229)",
+      "nav_vertex": 2,
+      "position": "(11.9081, 0.02, 4.345)",
+      "slide_collisions": 0,
+      "tick": 120
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(18.93524, 0.059258, 3.800699)",
+      "nav_vertex": 10,
+      "position": "(17.66989, -0.112218, 3.925203)",
+      "slide_collisions": 0,
+      "tick": 240
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(25.14972, -0.183611, 3.188666)",
+      "nav_vertex": 15,
+      "position": "(23.58117, -0.25645, 3.343144)",
+      "slide_collisions": 0,
+      "tick": 360
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(32.44772, -0.383611, 4.271078)",
+      "nav_vertex": 18,
+      "position": "(29.59424, -0.410734, 3.333342)",
+      "slide_collisions": 0,
+      "tick": 480
+     }
+    ],
+    "reason": "triggered",
+    "sim_seconds": 8.91666666666667,
+    "target": "L008>L009#1",
+    "ticks": 535
+   },
+   "build_ms": 1492,
+   "collision_shapes": 153,
+   "distinct_layouts_over_3_seeds": 3,
+   "dup_profile": {
+    "boxes": {
+     "-1_-1_-1": 36,
+     "-1_-1_0": 1,
+     "-1_0_0": 1,
+     "-2_-1_-1": 1,
+     "-2_3_3": 1,
+     "-4_-4_1": 6,
+     "-5_-5_1": 2,
+     "-5_1_2": 1,
+     "-6_0_1": 1,
+     "-6_0_2": 2,
+     "-6_2_2": 13,
+     "-6_2_5": 1,
+     "-7_-2_-1": 8,
+     "0_0_0": 8,
+     "0_0_1": 4,
+     "0_1_1": 8,
+     "1_1_1": 3,
+     "2_2_2": 1,
+     "2_2_3": 1
+    },
+    "materials": {
+     "l8_asphalt": 60,
+     "l8_board": 36,
+     "l8_cracked": 12,
+     "l8_flowstone": 108,
+     "l8_gravel": 60,
+     "l8_heat": 12,
+     "l8_metal": 744,
+     "l8_pack": 12,
+     "l8_paint": 2052,
+     "l8_rock": 288,
+     "l8_sand": 60,
+     "l8_skin": 12,
+     "l8_suit": 60,
+     "l8_tar": 584
+    }
+   },
+   "exits_declared": 3,
+   "exits_found": 1,
+   "load_ms": 1612,
+   "nav": {
+    "exits": [
+     {
+      "edge": "L008>L009#1",
+      "goal": "(33.96055, -0.400612, 4.8)",
+      "path_points": 23,
+      "reachable": true,
+      "snap_error": 1.30121052265167,
+      "start_projection_error": 0.100000269711018
+     }
+    ],
+    "map_regions": 1,
+    "map_sync_ticks": 3,
+    "nav_polygons": 990,
+    "spawn_on_navmesh": true,
+    "spawn_projection_error": 0.100000269711018,
+    "start": "(6.0, 0.116389, 4.0)"
+   },
+   "qa_status": "ENGINE_SMOKE_PASS",
+   "save_tested": true,
+   "self_tests": 0,
+   "spawn": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+   },
+   "stable_id": "L008"
+  }
+ ],
+ "renderer": "headless",
+ "started": "2026-11-08T14:39:49",
+ "suites": {
+  "duplication": {
+   "checks": [],
+   "failed": 0,
+   "passed": 1
+  },
+  "framework": {
+   "checks": [],
+   "failed": 0,
+   "passed": 8
+  },
+  "level:L008": {
+   "checks": [],
+   "failed": 0,
+   "passed": 17
+  }
+ }
+}

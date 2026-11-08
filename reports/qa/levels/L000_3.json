@@ -4,7 +4,7 @@
  "failures": [],
  "levels": [
   {
-   "build_ms": 1737,
+   "build_ms": 1823,
    "collision_shapes": 2521,
    "distinct_layouts_over_3_seeds": 3,
    "dup_profile": {
@@ -94,11 +94,11 @@
    },
    "exits_declared": 0,
    "exits_found": 0,
-   "load_ms": 1922,
+   "load_ms": 2011,
    "nav": {
     "exits": [],
     "map_regions": 1,
-    "map_sync_ticks": 7,
+    "map_sync_ticks": 8,
     "nav_polygons": 2435,
     "spawn_on_navmesh": true,
     "spawn_projection_error": 0.100000388920307,
@@ -119,7 +119,7 @@
   }
  ],
  "renderer": "headless",
- "started": "2026-11-08T15:57:50",
+ "started": "2026-11-08T19:14:57",
  "suites": {
   "duplication": {
    "checks": [],

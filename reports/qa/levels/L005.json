@@ -1,0 +1,401 @@
+{
+ "duplication_pairs": [],
+ "engine": "4.5.1-stable (official)",
+ "failures": [],
+ "levels": [
+  {
+   "bot": {
+    "distance_to_target": 1.70727229118347,
+    "distance_walked": 145.369737744331,
+    "edge": "L005>L006#3",
+    "final_position": "(16.08496, -9.901093, 97.25238)",
+    "fired": true,
+    "path_index": 66,
+    "path_points": 68,
+    "progress_samples": [
+     {
+      "L009_route_progress": -1,
+      "goal": "(0.910036, 0.116389, 8.526033)",
+      "nav_vertex": 7,
+      "position": "(-0.390055, 0.020694, 6.712295)",
+      "slide_collisions": 0,
+      "tick": 120
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(3.866801, 0.116389, 11.59202)",
+      "nav_vertex": 12,
+      "position": "(3.297411, 0.017974, 11.30699)",
+      "slide_collisions": 0,
+      "tick": 240
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(11.3007, 0.116389, 15.4754)",
+      "nav_vertex": 14,
+      "position": "(8.705235, 0.02, 14.12053)",
+      "slide_collisions": 0,
+      "tick": 360
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(15.59195, 0.116389, 17.7171)",
+      "nav_vertex": 15,
+      "position": "(14.15521, 0.02, 16.96658)",
+      "slide_collisions": 0,
+      "tick": 480
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(23.70554, 0.116389, 21.95554)",
+      "nav_vertex": 19,
+      "position": "(19.46745, 0.02, 19.74157)",
+      "slide_collisions": 0,
+      "tick": 600
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(23.85553, 0.116389, 23.60554)",
+      "nav_vertex": 21,
+      "position": "(23.89115, 0.02, 23.18473)",
+      "slide_collisions": 0,
+      "tick": 720
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(12.72797, -3.617469, 23.17312)",
+      "nav_vertex": 27,
+      "position": "(18.45126, -0.391528, 23.4902)",
+      "slide_collisions": 0,
+      "tick": 840
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(11.27721, -4.469159, 23.09399)",
+      "nav_vertex": 28,
+      "position": "(12.44723, -3.950179, 23.16682)",
+      "slide_collisions": 0,
+      "tick": 960
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(6.905533, -4.883611, 21.95554)",
+      "nav_vertex": 35,
+      "position": "(6.862893, -4.98, 22.55397)",
+      "slide_collisions": 0,
+      "tick": 1080
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(18.60554, -4.883611, 21.95554)",
+      "nav_vertex": 37,
+      "position": "(12.36436, -4.98, 21.95792)",
+      "slide_collisions": 0,
+      "tick": 1200
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(22.80554, -4.883611, 21.95554)",
+      "nav_vertex": 38,
+      "position": "(18.51264, -4.98, 21.95563)",
+      "slide_collisions": 0,
+      "tick": 1320
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(22.95554, -4.883611, 38.15553)",
+      "nav_vertex": 40,
+      "position": "(22.97653, -4.98, 23.43459)",
+      "slide_collisions": 0,
+      "tick": 1440
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(22.95554, -4.883611, 38.15553)",
+      "nav_vertex": 40,
+      "position": "(22.96765, -4.98, 29.63396)",
+      "slide_collisions": 0,
+      "tick": 1560
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(22.95554, -4.883611, 38.15553)",
+      "nav_vertex": 40,
+      "position": "(22.95884, -4.98, 35.83392)",
+      "slide_collisions": 0,
+      "tick": 1680
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(21.92314, -5.483611, 45.41271)",
+      "nav_vertex": 42,
+      "position": "(22.50914, -5.579999, 41.9442)",
+      "slide_collisions": 0,
+      "tick": 1800
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(21.39845, -5.483611, 48.92525)",
+      "nav_vertex": 46,
+      "position": "(21.55737, -5.579999, 47.86124)",
+      "slide_collisions": 0,
+      "tick": 1920
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(20.45267, -5.483611, 55.25668)",
+      "nav_vertex": 49,
+      "position": "(20.66431, -5.579999, 53.83969)",
+      "slide_collisions": 0,
+      "tick": 2040
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(19.6462, -5.883611, 60.65553)",
+      "nav_vertex": 53,
+      "position": "(19.78215, -5.898025, 59.74553)",
+      "slide_collisions": 0,
+      "tick": 2160
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(18.23719, -6.083611, 70.08808)",
+      "nav_vertex": 58,
+      "position": "(18.90747, -6.179999, 65.60088)",
+      "slide_collisions": 0,
+      "tick": 2280
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(17.40553, -6.083611, 75.65553)",
+      "nav_vertex": 59,
+      "position": "(17.99911, -6.179999, 71.68198)",
+      "slide_collisions": 0,
+      "tick": 2400
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(16.5499, -7.583611, 89.13246)",
+      "nav_vertex": 61,
+      "position": "(17.17839, -6.368533, 77.57076)",
+      "slide_collisions": 0,
+      "tick": 2520
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(16.5499, -7.583611, 89.13246)",
+      "nav_vertex": 61,
+      "position": "(16.84442, -7.115942, 83.71661)",
+      "slide_collisions": 0,
+      "tick": 2640
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(16.3987, -8.083611, 91.76323)",
+      "nav_vertex": 63,
+      "position": "(16.51375, -7.850889, 89.75995)",
+      "slide_collisions": 0,
+      "tick": 2760
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(16.12791, -9.583955, 96.47459)",
+      "nav_vertex": 64,
+      "position": "(16.16632, -9.485468, 95.86697)",
+      "slide_collisions": 0,
+      "tick": 2880
+     }
+    ],
+    "reason": "triggered",
+    "sim_seconds": 48.4833333333333,
+    "target": "L005>L006#3",
+    "ticks": 2909
+   },
+   "build_ms": 1385,
+   "collision_shapes": 2422,
+   "distinct_layouts_over_3_seeds": 3,
+   "dup_profile": {
+    "boxes": {
+     "-1_-1_-1": 81,
+     "-1_-1_0": 1,
+     "-1_0_0": 25,
+     "-1_0_1": 82,
+     "-2_-1_-1": 2,
+     "-2_-2_-1": 81,
+     "-2_0_0": 14,
+     "-2_0_1": 17,
+     "-2_0_2": 5,
+     "-2_1_1": 81,
+     "-2_1_2": 3,
+     "-2_2_2": 296,
+     "-2_2_3": 2,
+     "-2_2_4": 126,
+     "-2_2_5": 39,
+     "-2_2_6": 28,
+     "-2_2_7": 2,
+     "-2_3_3": 2,
+     "-2_3_4": 3,
+     "-2_3_5": 8,
+     "-2_3_6": 2,
+     "-2_4_6": 5,
+     "-2_5_6": 1,
+     "-2_5_7": 1,
+     "-2_6_6": 2,
+     "-3_-1_0": 2,
+     "-3_0_0": 326,
+     "-3_0_2": 652,
+     "-3_1_3": 1,
+     "-3_1_4": 5,
+     "-3_2_2": 1110,
+     "-5_0_2": 1,
+     "-5_1_3": 1,
+     "-5_2_4": 1,
+     "-6_-1_1": 2,
+     "-6_-2_-2": 1,
+     "-6_0_2": 326,
+     "-6_2_2": 3,
+     "-7_2_2": 1,
+     "0_0_0": 4,
+     "0_0_1": 33,
+     "0_1_1": 82,
+     "1_1_1": 3,
+     "1_1_3": 1,
+     "2_2_2": 8,
+     "2_2_5": 2
+    },
+    "materials": {
+     "l5_arcade_body": 24,
+     "l5_arcade_button": 36,
+     "l5_arcade_marquee": 12,
+     "l5_arcade_screen": 12,
+     "l5_arcade_side": 24,
+     "l5_boiler_brick": 150,
+     "l5_boiler_ceiling": 24,
+     "l5_boiler_floor": 190,
+     "l5_boiler_iron": 1508,
+     "l5_books": 2724,
+     "l5_books_b": 1860,
+     "l5_bulb": 512,
+     "l5_candle": 6768,
+     "l5_carpet": 120,
+     "l5_ceiling": 962,
+     "l5_coal": 420,
+     "l5_cork": 12,
+     "l5_crate": 36,
+     "l5_crown": 28088,
+     "l5_door_inset": 1572,
+     "l5_flame": 6768,
+     "l5_furnace_brick": 132,
+     "l5_furnace_glow": 12,
+     "l5_gauge": 192,
+     "l5_grille": 216,
+     "l5_lampshade_green": 12,
+     "l5_lattice": 36,
+     "l5_linen": 2916,
+     "l5_marble": 142,
+     "l5_notice": 12,
+     "l5_painting": 1584,
+     "l5_paper": 72,
+     "l5_pipe_brass": 224,
+     "l5_pipe_green": 192,
+     "l5_pipe_hot": 32,
+     "l5_pipe_rust": 5218,
+     "l5_rail": 1156,
+     "l5_record": 896,
+     "l5_room_carpet": 398,
+     "l5_room_paper": 7884,
+     "l5_room_paper_b": 5892,
+     "l5_rug": 1728,
+     "l5_shade": 3240,
+     "l5_steel": 84,
+     "l5_trim_gold": 36402,
+     "l5_valve_red": 100,
+     "l5_velvet": 3528,
+     "l5_velvet_dark": 1764,
+     "l5_vent_glow": 72,
+     "l5_wainscot": 5334,
+     "l5_wallpaper": 7290,
+     "l5_walnut": 338,
+     "l5_wood": 50200,
+     "void_black": 10
+    }
+   },
+   "exits_declared": 5,
+   "exits_found": 4,
+   "load_ms": 1620,
+   "nav": {
+    "exits": [
+     {
+      "edge": "L005>L006#3",
+      "goal": "(16.0, -9.883611, 98.7)",
+      "path_points": 68,
+      "reachable": true,
+      "snap_error": 0.883610725402832,
+      "start_projection_error": 0.100000388920307
+     },
+     {
+      "edge": "L005>L040#8",
+      "goal": "(27.3, -4.883611, 17.0)",
+      "path_points": 47,
+      "reachable": true,
+      "snap_error": 0.883610725402832,
+      "start_projection_error": 0.100000388920307
+     },
+     {
+      "edge": "L005>L009#4",
+      "goal": "(-5.6, 0.116389, 27.2)",
+      "path_points": 20,
+      "reachable": true,
+      "snap_error": 0.98361074924469,
+      "start_projection_error": 0.100000388920307
+     },
+     {
+      "edge": "L005>L003#1",
+      "goal": "(-8.0, 0.116389, 8.0)",
+      "path_points": 11,
+      "reachable": true,
+      "snap_error": 0.98361074924469,
+      "start_projection_error": 0.100000388920307
+     }
+    ],
+    "map_regions": 1,
+    "map_sync_ticks": 6,
+    "nav_polygons": 2130,
+    "spawn_on_navmesh": true,
+    "spawn_projection_error": 0.100000388920307,
+    "start": "(-3.2, 0.116389, 1.8)"
+   },
+   "qa_status": "ENGINE_SMOKE_PASS",
+   "save_tested": true,
+   "self_tests": 4,
+   "spawn": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+   },
+   "stable_id": "L005"
+  }
+ ],
+ "renderer": "headless",
+ "started": "2026-11-08T14:38:55",
+ "suites": {
+  "duplication": {
+   "checks": [],
+   "failed": 0,
+   "passed": 1
+  },
+  "framework": {
+   "checks": [],
+   "failed": 0,
+   "passed": 8
+  },
+  "level:L005": {
+   "checks": [],
+   "failed": 0,
+   "passed": 27
+  }
+ }
+}
