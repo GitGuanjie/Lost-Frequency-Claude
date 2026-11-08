@@ -1,63 +1,68 @@
 {
-  "stable_id": "L018",
-  "scene": "res://levels/L018/L018.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT_TESTED",
-  "procedural": true,
-  "arrivals": [
-    "start",
-    "from_L019"
-  ],
-  "signature": "The daycare you remember from when you were three, at a child's scale: crayon drawings, a book nook, a fenced playground, a dead goldfish you never had, whispers of every regret, and a plush green dinosaur who brings you juice and, if you follow him long enough, takes you wherever you want to go.",
-  "mechanics": [
-    "seeded_childhood_daycare",
-    "child_scale_memory",
-    "other_memory_room_seeded",
-    "raised_book_nook",
-    "playground_tower_and_slide",
-    "regret_whispers_grow",
-    "dead_goldfish_resurfaced",
-    "survival_snacks",
-    "stay_gets_warmer",
-    "plush_dino_wanders_and_gifts",
-    "follow_plush_dino_to_desired_level",
-    "turn_around_and_leave_to_L019"
-  ],
-  "exits": [
-    {
-      "id": "L018>L019#1",
-      "to": "L019",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "method": "Turn around and leave",
-      "source_quote": "the most simple method is to turn around and leave, which will take you to Level 19",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-18",
-      "trigger_type": "walk_in",
-      "trigger": "walk_in",
-      "label": "Turned round and walked back out of the memory",
-      "source_section": "Entrances And Exits",
-      "hint": "The doorway you came in by is still right behind you, full of light.",
-      "arrival": "from_L018"
-    },
-    {
-      "id": "L018>EXT#2",
-      "to": null,
-      "basis": "SOURCE",
-      "confidence": "CONDITIONAL",
-      "method": "Follow The Plush Dino for an extended period",
-      "source_quote": "you can follow him for an extended period, which will take you to the Level you desire to go to",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-18",
-      "trigger_type": "condition",
-      "trigger": "condition",
-      "label": "Followed the Plush Dino through the playground gate to the level you wanted",
-      "source_section": "Entrances And Exits",
-      "hint": "If the little green dinosaur finds you, stay close to him.",
-      "arrival": "from_L018",
-      "to_label": "Level of choice",
-      "implemented_as": "the gate trigger is created only once the follow is complete; the chosen level is written into the cached edge right before it can fire (as in L906)"
-    }
-  ],
-  "notes": "SOURCE: appears as a childhood memory of age 2-5, different per viewer, most commonly a preschool or daycare, otherwise a bedroom, classroom or playground; numerous voices whispering regrets and mistakes, nearly impossible to suppress; resurfaced forgotten memories such as dead childhood animals; allergies suppressed; addictive, no harm, provides all materials for survival, no threats, 'enjoys' company; The Plush Dino: rare, sentient, moving, wanders, guides, brings food and water; exits: turn around and leave -> Level 19; follow the Plush Dino for an extended period -> the Level you desire. ADAPTATION: one seeded daycare (wall palette and a seeded extra memory room: bedroom, classroom or washroom) with a fenced playground stands in for 'different for every viewer'; everything is built at a child's scale (~1.4x: 3.9 m ceilings, 2.9 m doors, toddler furniture at adult height); soft afternoon light and room tone are ours (the page states neither); whisper lines are generic and player-neutral; the dead animal is a goldfish; the Plush Dino appears after 1-2.5 minutes, wanders a loop, leaves a juice box and sandwich, and after 150 s of following leads to the playground gate where a picker lists levels (visited first) and the gate opens onto the choice; the arrival doorway behind the player is the 'turn around and leave' exit. QA: the dino is present from the start and the follow takes 6 s.",
-  "entity_policy": "SOURCED ENTITIES ONLY: The Plush Dino (rare, gentle, wanders, guides, brings food and water). The whispering voices are a phenomenon, not an entity. The Children outpost is not staged (no people are shown).",
-  "legacy_overlays": false
+ "stable_id": "L018",
+ "scene": "res://levels/L018/L018.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": true,
+ "arrivals": [
+  "start",
+  "from_L019"
+ ],
+ "signature": "The daycare you remember from when you were three, at a child's scale: crayon drawings, a book nook, a fenced playground, a dead goldfish you never had, whispers of every regret, and a plush green dinosaur who brings you juice and, if you follow him long enough, takes you wherever you want to go.",
+ "mechanics": [
+  "seeded_childhood_daycare",
+  "child_scale_memory",
+  "other_memory_room_seeded",
+  "raised_book_nook",
+  "playground_tower_and_slide",
+  "regret_whispers_grow",
+  "dead_goldfish_resurfaced",
+  "survival_snacks",
+  "stay_gets_warmer",
+  "plush_dino_wanders_and_gifts",
+  "follow_plush_dino_to_desired_level",
+  "turn_around_and_leave_to_L019"
+ ],
+ "exits": [
+  {
+   "id": "L018>L019#1",
+   "to": "L019",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "method": "Turn around and leave",
+   "source_quote": "the most simple method is to turn around and leave, which will take you to Level 19",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-18",
+   "trigger_type": "walk_in",
+   "trigger": "walk_in",
+   "label": "Turned round and walked back out of the memory",
+   "source_section": "Entrances And Exits",
+   "hint": "The doorway you came in by is still right behind you, full of light.",
+   "arrival": "from_L018"
+  },
+  {
+   "id": "L018>EXT#2",
+   "to": null,
+   "basis": "SOURCE",
+   "confidence": "CONDITIONAL",
+   "method": "Follow The Plush Dino for an extended period",
+   "source_quote": "you can follow him for an extended period, which will take you to the Level you desire to go to",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-18",
+   "trigger_type": "condition",
+   "trigger": "condition",
+   "label": "Followed the Plush Dino through the playground gate to the level you wanted",
+   "source_section": "Entrances And Exits",
+   "hint": "If the little green dinosaur finds you, stay close to him.",
+   "arrival": "from_L018",
+   "to_label": "Level of choice",
+   "implemented_as": "the gate trigger is created only once the follow is complete; the chosen level is written into the cached edge right before it can fire (as in L906)"
+  }
+ ],
+ "notes": "SOURCE: appears as a childhood memory of age 2-5, different per viewer, most commonly a preschool or daycare, otherwise a bedroom, classroom or playground; numerous voices whispering regrets and mistakes, nearly impossible to suppress; resurfaced forgotten memories such as dead childhood animals; allergies suppressed; addictive, no harm, provides all materials for survival, no threats, 'enjoys' company; The Plush Dino: rare, sentient, moving, wanders, guides, brings food and water; exits: turn around and leave -> Level 19; follow the Plush Dino for an extended period -> the Level you desire. ADAPTATION: one seeded daycare (wall palette and a seeded extra memory room: bedroom, classroom or washroom) with a fenced playground stands in for 'different for every viewer'; everything is built at a child's scale (~1.4x: 3.9 m ceilings, 2.9 m doors, toddler furniture at adult height); soft afternoon light and room tone are ours (the page states neither); whisper lines are generic and player-neutral; the dead animal is a goldfish; the Plush Dino appears after 1-2.5 minutes, wanders a loop, leaves a juice box and sandwich, and after 150 s of following leads to the playground gate where a picker lists levels (visited first) and the gate opens onto the choice; the arrival doorway behind the player is the 'turn around and leave' exit. QA: the dino is present from the start and the follow takes 6 s.",
+ "entity_policy": "SOURCED ENTITIES ONLY: The Plush Dino (rare, gentle, wanders, guides, brings food and water). The whispering voices are a phenomenon, not an entity. The Children outpost is not staged (no people are shown).",
+ "legacy_overlays": false,
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

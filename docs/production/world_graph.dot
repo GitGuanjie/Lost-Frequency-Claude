@@ -23,7 +23,7 @@ digraph LostFrequency {
   L015 [label="L15\nFuturistic Halls", fillcolor="#f9a825", fontcolor="black"];
   L016 [label="L16\nAltered Topography", fillcolor="#f9a825", fontcolor="black"];
   L017 [label="L17\nThe Carrier", fillcolor="#f9a825", fontcolor="black"];
-  L018 [label="L18\nMemories", fillcolor="#f9a825", fontcolor="black"];
+  L018 [label="L18\nMemories", fillcolor="#2e7d32", fontcolor="white"];
   L020 [label="L20\nBoreas Structure", fillcolor="#f9a825", fontcolor="black"];
   L022 [label="L22\nRuins Left Behind", fillcolor="#f9a825", fontcolor="black"];
   L023 [label="L23\nThe Petrified Garden", fillcolor="#f9a825", fontcolor="black"];
@@ -33,7 +33,7 @@ digraph LostFrequency {
   L027 [label="L27\nThe Bunker Springs", fillcolor="#2e7d32", fontcolor="white"];
   L028 [label="L28\nFinal Virtue", fillcolor="#f9a825", fontcolor="black"];
   L029 [label="L29\nHyperian", fillcolor="#f9a825", fontcolor="black"];
-  L030 [label="L30\nShifted Beyond Reality", fillcolor="#f9a825", fontcolor="black"];
+  L030 [label="L30\nShifted Beyond Reality", fillcolor="#2e7d32", fontcolor="white"];
   L031 [label="L31\nThe Roller Rink", fillcolor="#f9a825", fontcolor="black"];
   L036 [label="L36\nTimeless Airport", fillcolor="#f9a825", fontcolor="black"];
   L048 [label="L48\nThe Sunset Beach", fillcolor="#f9a825", fontcolor="black"];
@@ -64,10 +64,10 @@ digraph LostFrequency {
   L006_1 [label="L6.1\nThe Snackrooms", fillcolor="#f9a825", fontcolor="black"];
   L007_7 [label="L7.7\nThe Forsaken Debris", fillcolor="#2e7d32", fontcolor="white"];
   L010_1 [label="L10.1\nCorpse Lake", fillcolor="#2e7d32", fontcolor="white"];
-  L011_3 [label="L11.3\nThe Red Light District", fillcolor="#f9a825", fontcolor="black"];
+  L011_3 [label="L11.3\nThe Red Light District", fillcolor="#2e7d32", fontcolor="white"];
   L037_1 [label="L37.1\nThe Sanguine Reservoir", fillcolor="#2e7d32", fontcolor="white"];
   L055 [label="L55\nPit Stop", fillcolor="#f9a825", fontcolor="black"];
-  L058 [label="L58\nWater Wonder", fillcolor="#f9a825", fontcolor="black"];
+  L058 [label="L58\nWater Wonder", fillcolor="#2e7d32", fontcolor="white"];
   L060 [label="L60\nThe Baywalk", fillcolor="#f9a825", fontcolor="black"];
   L083 [label="L83\nThe Sunken Submarine", fillcolor="#f9a825", fontcolor="black"];
   L090 [label="L90\nNewly Renovated Home", fillcolor="#f9a825", fontcolor="black"];
@@ -79,13 +79,13 @@ digraph LostFrequency {
   L999 [label="L999\n", fillcolor="#f9a825", fontcolor="black"];
   L005_3 [label="L5.3\nPromethei Bibliotheca", fillcolor="#f9a825", fontcolor="black"];
   L007_8 [label="L7.8\nImpaled Ocean", fillcolor="#2e7d32", fontcolor="white"];
-  L009_3 [label="L9.3\nThe Overcast Manifold", fillcolor="#f9a825", fontcolor="black"];
+  L009_3 [label="L9.3\nThe Overcast Manifold", fillcolor="#2e7d32", fontcolor="white"];
   L011_2 [label="L11.2\nThe Refuge", fillcolor="#2e7d32", fontcolor="white"];
   L021 [label="L21\nNumbered Doors", fillcolor="#2e7d32", fontcolor="white"];
   L032 [label="L32\nForest of the Skeleton Q", fillcolor="#f9a825", fontcolor="black"];
   L041 [label="L41\nThe Black Lake", fillcolor="#f9a825", fontcolor="black"];
   L050 [label="L50\nThe moribund Highway", fillcolor="#f9a825", fontcolor="black"];
-  L052 [label="L52\nDESTINATION REACHED", fillcolor="#f9a825", fontcolor="black"];
+  L052 [label="L52\nDESTINATION REACHED", fillcolor="#2e7d32", fontcolor="white"];
   L077 [label="L77\nOh, Shenandoah", fillcolor="#f9a825", fontcolor="black"];
   L085 [label="L85\nBrilliant Evermore", fillcolor="#f9a825", fontcolor="black"];
   L100 [label="L100\nBrief Peace", fillcolor="#2e7d32", fontcolor="white"];
