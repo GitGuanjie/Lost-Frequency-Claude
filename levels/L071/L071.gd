@@ -222,7 +222,8 @@ func _close_door() -> void:
 	if door_closed:
 		return
 	door_closed = true
-	door_node.queue_free()
+	if is_instance_valid(door_node):
+		door_node.queue_free()
 	lights.remove_group("level4")
 	var x0: float = Chunk.SHAFT.position.x
 	var x1: float = Chunk.SHAFT.end.x
@@ -330,6 +331,8 @@ func qa_self_test() -> Array:
 	var c := _corrupt("there was an error while loading entry data")
 	out.append({"what": "text corrupts into leetspeak as the fade grows", "ok": c != "there was an error while loading entry data", "detail": c})
 	fade = f0
+	if not is_instance_valid(world):
+		return out
 	var before := world.versions.duplicate()
 	var k := Vector2i(2, 2)
 	world.rebuild(k, true)

@@ -512,6 +512,9 @@ func self_test() -> Array:
 	out.append({"what": "four mineral zones meshed (turquoise, amethyst, ruby, graphite)", "ok": L.zone_meshes.size() == 4, "detail": L.zone_meshes})
 	out.append({"what": "the documented Level 0 exit exists (fluorescent tunnel)", "ok": L.exits.size() == 1})
 	out.append({"what": "crystals were found on real walls", "ok": L.hot_spots.size() > 80, "detail": L.hot_spots.size()})
+	if not (is_instance_valid(wall_lo) and is_instance_valid(wall_hi) and is_instance_valid(wall_shape)):
+		out.append({"what": "amethyst wall nodes exist", "ok": false})
+		return out
 	var g0 := wall_g
 	_set_wall(0.95)
 	await L.get_tree().physics_frame
