@@ -1,19 +1,43 @@
 {
-  "stable_id": "L015",
-  "scene": "res://levels/L015/L015.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev4 source candidate",
-  "procedural": true,
-  "arrivals": [
-    "start"
-  ],
-  "signature": "Futuristic machinery halls, terminals and an unresolved starry exit frame",
-  "mechanics": [
-    "engine_gallery",
-    "control_terminals",
-    "unknown_destination"
-  ],
-  "exits": [],
-  "notes": "Uses a compact prototype scale. Godot/Windows gameplay and performance not yet verified; no promotion to PLAYABLE.",
-  "entity_policy": "NO ENTITY PER SOURCE (only Hound corpses)"
+ "stable_id": "L015",
+ "scene": "res://levels/L015/L015.tscn",
+ "status": "IN_DEVELOPMENT",
+ "qa_status": "NOT_TESTED",
+ "procedural": false,
+ "legacy_overlays": false,
+ "arrivals": [
+  "start"
+ ],
+ "signature": "White-ribbed concrete halls lit from walls, ceilings and floor, with stretches of total dark; engine halls behind laminated glass and reinforced doors; the lab-coated dead with makeshift spears; Enric's camp in the control room under a radar every terminal shares; and, at the end, an emptied engine room whose glowing doorframe opens on a starfield and a still blue sphere.",
+ "mechanics": [
+  "shared_scanner_state_all_terminals",
+  "four_lighting_regimes_incl_pitch_black",
+  "engine_hall_below_glass",
+  "rod_press_production",
+  "control_room_gallery_camp",
+  "sealed_level10_door",
+  "doorframe_exposure_counter",
+  "doorframe_unknown_exit"
+ ],
+ "exits": [
+  {
+   "id": "L015>EXT#2",
+   "to": "EXT",
+   "to_label": "Unnamed, undocumented level (the void of space beyond the doorframe)",
+   "trigger": "walk_in",
+   "label": "Stepped through the glowing doorframe into the night beyond",
+   "confidence": "DANGEROUS+UNKNOWN",
+   "basis": "SOURCE",
+   "source_section": "Entrances and Exits",
+   "source_quote": "a doorframe, leading to what appears to be the empty void of space",
+   "hint": "The room at the end of the halls has no engines left in it. Something at its back glows.",
+   "arrival": "from_L015"
+  }
+ ],
+ "fail_states": [],
+ "entity_policy": "NO ENTITY PER SOURCE. No living entity; dead humans in lab coats and piled Hound corpses only. Enric (the only known resident) is not spawned: his camp is shown, he is out.",
+ "notes": "SOURCE: futuristic hallways of white or gray concrete with white steel beams bearing arabesque-like symbols; large lights on walls, ceilings or ground; occasional pitch-black areas; engine noise from large rooms behind reinforced metal doors with a thick glass wall section; machines from laptop size to unmeasurable, some producing steel rods; rare rooms of exploded machines with glass shattered but not broken; labs, dormitories, kitchens, control rooms, storage (food, water, equipment), mostly empty; desiccated lab-coated corpses with makeshift knives and spears, no firearms; dried blood; Hound corpses piled in a cremation room; no Almond Water; Avalon 2.4 terminals with unreadable files; identical scanner displays on every terminal; Enric's camp in a large control room; the Level 10 door slammed shut and never reopened; the doorframe room with no engines, a glowing frame, a night sky and a still blue sphere, behind an intact reinforced door. ADAPTATION: the authored layout and dimensions (page: at least 6,080 km2, no map); the doorframe room 'two hours from camp' sits at the end of a 165 m spine; the cross gallery ends at sealed doors to imply the halls continue; the flywheel, drum and rod press forms; the scanner's object set and timings; the exposure counter gives captions only (irradiation is only 'possible' on the page); Enric's laptop, map and survey sheet are framing devices for paraphrased page text. L015>L010#1 (door back, closed since) is an interactable that never opens. Not built: Enric as an NPC, the radar GIF itself (footnote not captured).",
+ "review": {
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

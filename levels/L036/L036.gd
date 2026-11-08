@@ -1,174 +1,178 @@
 extends LevelBase
-const VerticalArchitecture := preload("res://core/world/VerticalArchitecture.gd")
-## Level 36 — Timeless Airport. Canon: docs/canon/levels/L036.md.
-## 26 distinct A-Z terminals, checked-luggage carousels, dormant check-in
-## counters, units-only flight clock and contradictory navigational signs.
-## This is an IN_DEVELOPMENT authored slice, NOT a claim of an infinite airport.
+## Level 36 — "Timeless Airport" (Backrooms Wikidot rev 33, accessed 2026-11-04;
+## cite: Endrew1, CC BY-SA 3.0). Dossier: docs/canon/levels/L036.md.
+##
+## PLAN (v2.0 rebuild; authored layout, procedural: false)
+## SOURCE: you arrive by conveyor belt in baggage claim; endless rows of numbered
+##   carousels, attached to a wall that is the only known bounded edge; most belts
+##   are still; each active belt is one entrance (Level 11: #9, #28, #147); bags left
+##   10 rounds are rerouted to the mostly empty Lost and Found. Check-in: an infinite
+##   row of deserted counters; screens everywhere list flights by unitless countdown,
+##   flight number, gate and status; at 1000 a flight boards and its gate becomes a
+##   threshold to Sublevel 36.1; at 0 it closes and vanishes. BTA booth 0 with
+##   bright purple signs. Defunct security, then a non-Euclidean maze of concourses
+##   that connect to themselves, contradictory signs (do not trust "exit"; an empty
+##   sign is no good), hot and cold air, light distortion and afterimages of
+##   wanderers, carpeted duty-free halls of mostly worthless goods, one-way
+##   travelators, the Meeting Place. Terminals: gates with seats, bathrooms,
+##   fountains, lounges with books, buffets and fridges. Clocks random or handless,
+##   no day or night, sleep impossible. Gate C32: the Support Group waits for flight
+##   1784XBA8JLP (countdown 94612753). A monotone, androgynous PA voice.
+## SPACE: the baggage hall (6.5 m) and the check-in hall (12 m) stream in 32 m chunks
+##   along x without end, fading into haze; the bounded wall stays on one side. At
+##   the centre: Lost and Found, BTA booth 0, a food-court mezzanine (+5 m) over the
+##   security frames, then the concourse (one-way travelator, signs that disagree)
+##   with the duty-free hall, the sunken Meeting Place and Concourse M (a seam returns
+##   you 30 m back: it connects to itself), then Terminal C: gate C31 and its jet
+##   bridge, the C32 camp, a lounge mezzanine (+4.2 m), restrooms, a fountain.
+## SIGNATURE MECHANIC (stateful): one countdown drives every screen; gate C31's
+##   doors open only while its flight boards (1000..0) and close at 0, when a new
+##   flight takes the gate; PA calls boarding, delays and gate changes; luggage rides
+##   the active belts and is rerouted to Lost and Found after 10 rounds.
+## EXIT: L036>L036_1#1, walk through gate C31 while boarding (Sublevel 36.1, not
+##   built: release boundary). ADAPTATION: the Support Group are out on one of their
+##   group outings (the page lists them), so their camp is empty but their talk
+##   carries; flight numbers other than C32's are generated.
+## ABSENT: hostile entities, a real exit sign that works, clocks that tell time,
+##   day/night, sleep, fixed destinations.
 
-const H := 8.4
-const TERMINALS := 26
-const GATE_SPACING := 15.0
+const Strip := preload("res://levels/L036/L036_strip.gd")
+const Core := preload("res://levels/L036/L036_core.gd")
+const Term := preload("res://levels/L036/L036_term.gd")
+const Sys := preload("res://levels/L036/L036_sys.gd")
+const Docs := preload("res://levels/L036/L036_docs.gd")
+const SPAWN := Vector3(9.7, 0.3, 13.0)
+const EXIT_ID := "L036>L036_1#1"
 
-var gate: ExitTrigger
-var flight_display: Label3D
-var countdown := 1020
-var _unit_timer := 0.0
-var _arrivals_count := 0
-var _terminal_signs: Array = []
+var strip
+var core
+var term
+var sys
+var world: ChunkWorld
+var door_open := 0.0
 
 
 func build() -> void:
-	rules["view_distance"] = 260.0
-	rules["reverb_room"] = 0.75
-	rules["reverb_wet"] = 0.16
 	rules["flashlight"] = "none"
-	indoor_env(Color(0.79, 0.84, 0.88), 0.29, Color(0.42, 0.44, 0.48), 0.001)
-	environment.tonemap_exposure = 1.15
-	_materials()
-	lights.setup(18, 1)
-	_baggage_and_checkin()
-	VerticalArchitecture.install(self, "AirportOverlook", Vector3(0, 0, -35), 4, 3.45, "l36_metal", "l36_wall", true)
-	add_landmark("Four-storey baggage overlook", Vector3(0, 10.35, -35))
-	_concourse()
-	_gate()
-	if SessionState.is_qa():
-		# Isolated fixture begins during a legitimate boarding window.
-		countdown = 995
-	add_arrival("start", Vector3(0, 0.08, -76), 0.0)
-	add_arrival("from_L011", Vector3(0, 0.08, -76), 0.0)
-	add_arrival("from_L009", Vector3(0, 0.08, -76), 0.0)  # sourced L009 airport transfer
-	add_landmark("Conveyor-belt baggage claim", Vector3(0, 0.2, -75))
-	add_landmark("Unstaffed check-in hall", Vector3(0, 0.5, 2))
-	add_landmark("Terminal A-Z concourse", Vector3(0, 0.5, 65))
-	add_landmark("Gate to the unbuilt Airplane", Vector3(39, 0.5, 78))
-	add_shot("airport_arrival", Vector3(5, 1.62, -70), Vector3(0, 1.3, -20))
-	add_shot("terminal_disorientation", Vector3(8, 1.62, 38), Vector3(36, 2.2, 90))
-	sound.bed("fluorescent_hum", {"seconds": 4.0, "base": 60.0, "rasp": 0.12}, -35.0)
-	sound.bed("room_tone", {"seconds": 5.0, "cutoff": 250.0}, -25.0)
-	# No hostile inhabitants; the article explicitly classifies hostile entity risk 0.
+	rules["view_distance"] = 170.0
+	rules["reverb_room"] = 0.85
+	rules["reverb_wet"] = 0.26
+	var haze := Color(0.52, 0.54, 0.56)
+	indoor_env(Color(0.82, 0.84, 0.88), 0.11, haze, 0.015)
+	environment.background_color = haze
+	environment.tonemap_exposure = 0.88
+	environment.glow_intensity = 0.4
+	environment.adjustment_enabled = true
+	environment.adjustment_saturation = 0.85
+	environment.adjustment_contrast = 1.05
+	Core.materials()
+	lights.setup(16, 1)
+	lights.max_distance = 42.0
+	strip = Strip.new(self)
+	var ks := kit("Centre")
+	var kd := kit("CentreDetail")
+	kd.shadows = false
+	core = Core.new(self, ks, kd)
+	var node := Node3D.new()
+	node.name = "Authored"
+	add_child(node)
+	var r := RandomNumberGenerator.new()
+	r.seed = 3636
+	core.lost_and_found(node, r)
+	core.bta_booth(node)
+	core.mezzanine(node, r)
+	core.concourse(node, r)
+	core.duty_free(node, r)
+	core.meeting_place(node)
+	core.loop(node)
+	term = Term.new(self, core)
+	term.build(node, r)
+	ks.commit()
+	kd.commit()
+	world = ChunkWorld.new()
+	world.name = "Strips"
+	world.chunk_size = Strip.CS
+	world.radius = 3
+	world.unload_radius = 4
+	world.builder = _build_chunk
+	add_child(world)
+	world.chunk_unloaded.connect(_on_unload)
+	world.build_around(SPAWN, 3)
+	sys = Sys.new()
+	sys.name = "AirportSystems"
+	add_child(sys)
+	sys.setup(self, level_seed)
+	var luggage := Node3D.new()
+	luggage.name = "Luggage"
+	add_child(luggage)
+	sys.spawn_bags(luggage)
+	sys.make_ghosts(node)
+	Docs.lights(self)
+	Docs.sounds(self)
+	Docs.notes(self)
+	add_arrival("start", SPAWN, 0.0)
+	add_arrival("from_L011", SPAWN, 0.0)
+	add_arrival("from_L009", Vector3(25.7, 0.3, 13.0), 0.0)
+	add_arrival("from_L011_2", Vector3(-22.3, 0.3, 13.0), 0.0)
+	var ex := add_exit(EXIT_ID, "walk_in", Vector3(0, 1.3, Term.GATE_DOOR.z - 1.2), Vector3(3.0, 2.6, 1.6), "Board the flight at gate C31")
+	if ex:
+		ex.condition = func() -> bool: return sys.boarding()
+	_door(1.0 if sys.boarding() else 0.0)
+	refresh_screens()
+	add_landmark("Baggage carousel #9", Vector3(8, 0, 8))
+	add_landmark("Check-in counters", Vector3(0, 0, -26))
+	add_landmark("BTA booth 0", Vector3(-9, 0, -15.5))
+	add_landmark("Concourse and travelator", Vector3(0, 0, -75))
+	add_landmark("Gate C31", Term.GATE_DOOR)
+	add_landmark("Gate C32 Support Group camp", Term.C32_CAMP)
+	Docs.shots(self)
 
 
-func _materials() -> void:
-	MatLib.define("l36_tile", {"albedo_a": Color(0.54, 0.60, 0.64), "albedo_b": Color(0.61, 0.64, 0.67), "noise_scale": 3.0, "roughness_a": 0.36}, "tile")
-	MatLib.define("l36_ceiling", {"albedo_a": Color(0.70, 0.73, 0.74), "albedo_b": Color(0.62, 0.65, 0.65)}, "plaster")
-	MatLib.define("l36_wall", {"albedo_a": Color(0.45, 0.49, 0.51), "albedo_b": Color(0.55, 0.58, 0.59), "roughness_a": 0.80}, "concrete")
-	MatLib.define("l36_metal", {"albedo_a": Color(0.36, 0.37, 0.40), "albedo_b": Color(0.46, 0.48, 0.5), "metallic_value": 0.83}, "metal")
-	MatLib.define("l36_belt", {"albedo_a": Color(0.10, 0.13, 0.15), "albedo_b": Color(0.18, 0.20, 0.23), "roughness_a": 0.82}, "rubber")
-	MatLib.define("l36_glass", {"albedo_a": Color(0.13, 0.18, 0.23), "albedo_b": Color(0.18, 0.23, 0.27), "metallic_value": 0.25}, "glass")
-	MatLib.register("l36_screen", MatLib.panel(Color(0.23, 0.69, 0.82), 1.45))
-	MatLib.register("l36_light", MatLib.panel(Color(0.94, 0.94, 0.89), 1.2))
+func _build_chunk(cx: int, cz: int, _v: int, node: Node3D) -> Dictionary:
+	if cz != 0:
+		return {}
+	return strip.build_chunk(cx, node)
 
 
-func _label(text: String, p: Vector3, sz: float = 0.8, tint: Color = Color(0.72, 0.88, 0.92)) -> Label3D:
-	var l := Label3D.new()
-	l.text = text
-	l.font_size = 30
-	l.pixel_size = 0.01 * sz
-	l.modulate = tint
-	l.billboard = BaseMaterial3D.BILLBOARD_ENABLED
-	l.no_depth_test = false
-	l.position = p
-	add_child(l)
-	return l
+func _on_unload(k: Vector2i) -> void:
+	if k.y != 0:
+		return
+	lights.remove_group("c%d" % k.x)
+	strip.screens = strip.screens.filter(func(s): return is_instance_valid(s) and not (s as Node).is_queued_for_deletion() and not (s as Node).get_parent().is_queued_for_deletion())
 
 
-func _baggage_and_checkin() -> void:
-	var k := kit("BaggageClaimAndCheckIn")
-	k.slab(-36, -100, 36, 36, 0, 0.4, "l36_tile")
-	# Center baggage observation shaft; ceiling strips retain the rest.
-	k.slab(-36,-101,-8.8,35,H+0.6,0.6,"l36_ceiling")
-	k.slab(8.8,-101,36,35,H+0.6,0.6,"l36_ceiling")
-	k.slab(-8.8,-101,8.8,-51,H+0.6,0.6,"l36_ceiling")
-	k.slab(-8.8,-19,8.8,35,H+0.6,0.6,"l36_ceiling")
-	# One bounded wall at luggage-claim, and open extension toward terminals.
-	k.box(Vector3(0, H * 0.5, -101), Vector3(72, H, 0.5), "l36_wall")
-	for x in [-35.8, 35.8]:
-		k.box(Vector3(x, 4.0, -33), Vector3(0.42, H, 136), "l36_wall")
-	for i in 8:
-		var x := -24.0 + float(i % 4) * 16.0
-		var z := -82.0 + float(i / 4) * 21.0
-		# Disconnected, oblong baggage belts: no crates are player items.
-		k.box(Vector3(x, 0.47, z), Vector3(11, 0.86, 4.5), "l36_metal")
-		k.box(Vector3(x, 0.92, z), Vector3(10.2, 0.09, 3.7), "l36_belt", GeoKit.ALL, false)
-		for b in 6:
-			if (b + i) % 3 != 0:
-				continue
-			k.box(Vector3(x - 4 + float(b) * 1.45, 1.14, z), Vector3(0.75, 0.42, 0.45), "l36_metal", GeoKit.ALL, false)
-		_label("BELT %d" % (9 + i * 19), Vector3(x, 2.9, z + 4.6), 0.78)
-	for i in 18:
-		var x := -29.0 + float(i % 9) * 7.2
-		var z := -6.0 + float(i / 9) * 12.0
-		k.box(Vector3(x, 0.54, z), Vector3(5.0, 1.08, 1.9), "l36_metal")
-		k.box(Vector3(x, 1.18, z - 0.56), Vector3(1.35, 0.64, 0.14), "l36_screen", GeoKit.ALL, false)
-	for i in 20:
-		var x := -31.0 + float(i % 10) * 7.0
-		var z := -91.0 + float(i / 10) * 92.0
-		k.box(Vector3(x, H + 0.02, z), Vector3(2.4, 0.08, 3.6), "l36_light", GeoKit.NY, false)
-		if i % 3 == 1:
-			lights.add_anchor(Vector3(x, H - 0.28, z), Color(0.86, 0.95, 1), 0.7, 15.0, 0.75, "l36_coldpanel")
-	k.commit()
-	_label("BAGGAGE CLAIM  /  CHECK-IN", Vector3(0, 5.7, -22), 1.2)
-	_label("FLIGHTS: BOARDING UNKNOWN | TIMES UNRELIABLE", Vector3(0, 5.3, 21), 0.8)
+func refresh_screens() -> void:
+	var small: String = sys.board_text(5)
+	for s in strip.screens:
+		if is_instance_valid(s):
+			(s as Label3D).text = small
+	if term.board:
+		term.board.text = sys.board_text(14)
+	var f: Dictionary = sys.ours()
+	if term.gate_label and not f.is_empty():
+		term.gate_label.text = "FLIGHT %s\n%s   %d\nDESTINATION: NOT ANNOUNCED" % [f["num"], sys.status(f), int(f["cd"])]
 
 
-func _concourse() -> void:
-	var k := kit("AtoZGateConcourse")
-	k.slab(-40, 36, 47, 240, 0, 0.4, "l36_tile")
-	k.box(Vector3(3.5, H + 0.3, 138), Vector3(87, 0.6, 204), "l36_ceiling")
-	for side in [-40.0, 47.0]:
-		k.box(Vector3(side, H * 0.5, 138), Vector3(0.35, H, 204), "l36_wall")
-	# Two banks of 13 terminals, each with an independent gate alcove.
-	for i in TERMINALS:
-		var bank := -1.0 if i < 13 else 1.0
-		var row := i if i < 13 else i - 13
-		var z := 47.0 + float(row) * GATE_SPACING
-		var x := -25.0 if bank < 0.0 else 32.0
-		var alpha := String.chr(65 + i)
-		k.box(Vector3(x, 0.52, z), Vector3(11.5, 1.04, 5.8), "l36_tile")
-		k.box(Vector3(x, 4.0, z + 3.1), Vector3(11.5, 8.0, 0.24), "l36_glass", GeoKit.ALL, false)
-		k.box(Vector3(x, 4.7, z), Vector3(4.0, 0.1, 0.38), "l36_screen", GeoKit.ALL, false)
-		k.box(Vector3(x, 1.15, z), Vector3(1.6, 2.2, 0.10), "l36_metal")
-		_terminal_signs.append(_label("TERMINAL %s  |  GATE %03d" % [alpha, row + 1], Vector3(x, 5.7, z), 0.55))
-		if i % 3 == 0:
-			lights.add_anchor(Vector3(x, 7.25, z), Color(0.89, 0.91, 1), 0.65, 10.0, 0.7, "l36_gate")
-	# Contradictory, in-universe sign maze: signs are deliberately NOT exits.
-	for i in 7:
-		var z := 50.0 + float(i) * 25.0
-		k.box(Vector3(0.0, 7.3, z), Vector3(7.5, 0.85, 0.13), "l36_metal", GeoKit.ALL, false)
-		_label("A-C  ←   /  →  X-Z    [FOLLOW LATEST]", Vector3(0, 6.7, z + 0.3), 0.65)
-	k.commit()
-
-
-func _gate() -> void:
-	# A boarding gate leads only to Sublevel 36.1 (not yet built here).
-	# No fake direct arrival at the airport's unknown flight destination.
-	gate = add_exit("L036>L036_1#1", "interact", Vector3(32, 1.3, 77), Vector3(3.0, 2.6, 2.2), "Board flight to the Airplane (36.1)")
-	gate.condition = func(): return countdown <= 1000 and countdown > 0
-	flight_display = _label("GATE 36.1  BOARDING IN --", Vector3(25.5, 5.2, 77), 0.7)
+## Gate C31's glass leaves: open (1) while boarding, shut (0) otherwise.
+func _door(v: float) -> void:
+	door_open = v
+	for i in term.leaves.size():
+		var sx := -1.0 if i == 0 else 1.0
+		(term.leaves[i] as Node3D).position.x = sx * (0.75 + 1.45 * v)
+	term.door_body.collision_layer = 0 if v > 0.5 else 1
 
 
 func on_player_ready() -> void:
+	world.target = player
 	if not SessionState.is_qa():
-		Overlay.subtitle("[the announcements have no recognizable time scale]", 5.0)
+		Overlay.subtitle("[a conveyor belt carries you out through rubber flaps, into baggage claim]", 4.0)
 
 
 func level_process(delta: float) -> void:
-	if SessionState.is_qa():
-		return
-	_unit_timer += delta
-	if _unit_timer > 0.25:
-		_unit_timer = 0.0
-		countdown -= 1
-		if countdown <= 0:
-			countdown = 1600
-	if flight_display != null:
-		flight_display.text = "GATE 36.1  %d  %s" % [countdown, "BOARDING" if countdown <= 1000 else "CLOSED"]
+	var want := 1.0 if sys.boarding() else 0.0
+	if absf(door_open - want) > 0.001:
+		_door(move_toward(door_open, want, delta * 0.8))
 
 
 func qa_self_test() -> Array:
-	return [
-		{"ok": _terminal_signs.size() == TERMINALS, "what": "all 26 terminal bank labels authored"},
-		{"ok": gate != null, "what": "single sourced boarding gate to the unbuilt Airplane"},
-		{"ok": arrivals.has("from_L011"), "what": "arrival from documented city connection"},
-		{"ok": flight_display != null, "what": "unitless boarding clock display available"},
-	]
+	return await Docs.self_test(self)
