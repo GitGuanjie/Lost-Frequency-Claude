@@ -51,7 +51,7 @@
     "target": "L906>EXT#1",
     "ticks": 526
    },
-   "build_ms": 1460,
+   "build_ms": 1341,
    "collision_shapes": 1948,
    "distinct_layouts_over_3_seeds": 3,
    "dup_profile": {
@@ -169,7 +169,7 @@
    },
    "exits_declared": 2,
    "exits_found": 2,
-   "load_ms": 1636,
+   "load_ms": 1521,
    "nav": {
     "exits": [
      {
@@ -211,7 +211,7 @@
   }
  ],
  "renderer": "headless",
- "started": "2026-11-08T14:41:20",
+ "started": "2026-11-08T20:55:49",
  "suites": {
   "duplication": {
    "checks": [],
@@ -226,7 +226,7 @@
   "level:L906": {
    "checks": [],
    "failed": 0,
-   "passed": 34
+   "passed": 35
   }
  }
 }

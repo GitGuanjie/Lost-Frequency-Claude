@@ -1,7 +1,7 @@
 {
  "stable_id": "L015",
  "scene": "res://levels/L015/L015.tscn",
- "status": "IN_DEVELOPMENT",
+ "status": "PLAYABLE",
  "qa_status": "NOT_TESTED",
  "procedural": false,
  "legacy_overlays": false,
@@ -38,6 +38,8 @@
  "entity_policy": "NO ENTITY PER SOURCE. No living entity; dead humans in lab coats and piled Hound corpses only. Enric (the only known resident) is not spawned: his camp is shown, he is out.",
  "notes": "SOURCE: futuristic hallways of white or gray concrete with white steel beams bearing arabesque-like symbols; large lights on walls, ceilings or ground; occasional pitch-black areas; engine noise from large rooms behind reinforced metal doors with a thick glass wall section; machines from laptop size to unmeasurable, some producing steel rods; rare rooms of exploded machines with glass shattered but not broken; labs, dormitories, kitchens, control rooms, storage (food, water, equipment), mostly empty; desiccated lab-coated corpses with makeshift knives and spears, no firearms; dried blood; Hound corpses piled in a cremation room; no Almond Water; Avalon 2.4 terminals with unreadable files; identical scanner displays on every terminal; Enric's camp in a large control room; the Level 10 door slammed shut and never reopened; the doorframe room with no engines, a glowing frame, a night sky and a still blue sphere, behind an intact reinforced door. ADAPTATION: the authored layout and dimensions (page: at least 6,080 km2, no map); the doorframe room 'two hours from camp' sits at the end of a 165 m spine; the cross gallery ends at sealed doors to imply the halls continue; the flywheel, drum and rod press forms; the scanner's object set and timings; the exposure counter gives captions only (irradiation is only 'possible' on the page); Enric's laptop, map and survey sheet are framing devices for paraphrased page text. L015>L010#1 (door back, closed since) is an interactable that never opens. Not built: Enric as an NPC, the radar GIF itself (footnote not captured).",
  "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
   "programme": "v2 rebuild of dev28 placeholder"
  }
 }

@@ -18,7 +18,7 @@
     "target": "L007>L009#3",
     "ticks": 73
    },
-   "build_ms": 2036,
+   "build_ms": 2095,
    "collision_shapes": 140,
    "distinct_layouts_over_3_seeds": 3,
    "dup_profile": {
@@ -87,7 +87,7 @@
    },
    "exits_declared": 3,
    "exits_found": 1,
-   "load_ms": 2169,
+   "load_ms": 2218,
    "nav": {
     "exits": [
      {
@@ -121,7 +121,7 @@
   }
  ],
  "renderer": "headless",
- "started": "2026-11-08T14:39:43",
+ "started": "2026-11-08T20:52:14",
  "suites": {
   "duplication": {
    "checks": [],
@@ -136,7 +136,7 @@
   "level:L007": {
    "checks": [],
    "failed": 0,
-   "passed": 17
+   "passed": 18
   }
  }
 }

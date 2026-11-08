@@ -1,7 +1,7 @@
 {
  "stable_id": "L036",
  "scene": "res://levels/L036/L036.tscn",
- "status": "IN_DEVELOPMENT",
+ "status": "PLAYABLE",
  "qa_status": "NOT_TESTED",
  "procedural": false,
  "legacy_overlays": false,
@@ -43,6 +43,8 @@
  "entity_policy": "NO HOSTILE ENTITY PER SOURCE (Entities 0/5). No entity is spawned. Wanderers and BTA/MEG/B.N.T.G. staff exist on the page but are not shown as characters: the Gate 32 Support Group's camp is empty while they are on an outing; faint afterimages of wanderers are the page's light-distortion mirage.",
  "notes": "SOURCE: belt arrival in baggage claim; endless carousels on the only bounded wall; Level 11 carousels #9, #28, #147; most belts inactive; 10 rounds then Lost and Found; endless deserted check-in counters; screens with countdown, flight number, gate, status; boarding at 1000, threshold to Sublevel 36.1, closes at 0; BTA booth 0 with purple signs; defunct security; non-Euclidean concourses connecting to themselves; contradictory signs, untrustworthy exit signs, empty signs; hot/cold overlapping concourses; light distortion and afterimages; carpeted duty-free with mostly worthless goods and rare native items; one-way travelators; the Meeting Place (47 positions, one place); terminals with seats, bathrooms, fountains, lounges (books, buffet, fridges); clocks random or handless, no day/night; sleep impossible; Gate C32 Support Group waiting for 1784XBA8JLP to Level 186 at 94612753; a monotone androgynous PA voice. ADAPTATION: the strips are streamed 32 m chunks with a haze instead of a mapped infinity; the centre layout, Terminal C gates C30/C31/C32, the jet bridge, the food-court and lounge mezzanines, the sunken Meeting Place and the 30 m Concourse M seam are ours; countdown rate (7 units/s), generated flight numbers and gates; the PA uses a chime plus captions; the Support Group is out on an outing (empty camp, voices). Catalogue flights to 828/750/186 are not exits here (no boarding occurs for them in this slice). Sublevel 36.1 is not built: the exit is a release boundary.",
  "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
   "programme": "v2 rebuild of dev28 placeholder"
  }
 }

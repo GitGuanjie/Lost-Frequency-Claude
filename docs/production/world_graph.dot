@@ -20,7 +20,7 @@ digraph LostFrequency {
   L019 [label="L19\nAttic Floorboards", fillcolor="#2e7d32", fontcolor="white"];
   L037 [label="L37\nSublimity", fillcolor="#2e7d32", fontcolor="white"];
   L188 [label="L188\nThe Courtyard of Windows", fillcolor="#2e7d32", fontcolor="white"];
-  L015 [label="L15\nFuturistic Halls", fillcolor="#f9a825", fontcolor="black"];
+  L015 [label="L15\nFuturistic Halls", fillcolor="#2e7d32", fontcolor="white"];
   L016 [label="L16\nAltered Topography", fillcolor="#f9a825", fontcolor="black"];
   L017 [label="L17\nThe Carrier", fillcolor="#f9a825", fontcolor="black"];
   L018 [label="L18\nMemories", fillcolor="#2e7d32", fontcolor="white"];
@@ -35,7 +35,7 @@ digraph LostFrequency {
   L029 [label="L29\nHyperian", fillcolor="#f9a825", fontcolor="black"];
   L030 [label="L30\nShifted Beyond Reality", fillcolor="#2e7d32", fontcolor="white"];
   L031 [label="L31\nThe Roller Rink", fillcolor="#2e7d32", fontcolor="white"];
-  L036 [label="L36\nTimeless Airport", fillcolor="#f9a825", fontcolor="black"];
+  L036 [label="L36\nTimeless Airport", fillcolor="#2e7d32", fontcolor="white"];
   L048 [label="L48\nThe Sunset Beach", fillcolor="#f9a825", fontcolor="black"];
   L049 [label="L49\nThe Unfilled River of Ph", fillcolor="#f9a825", fontcolor="black"];
   L053 [label="L53\nAlone", fillcolor="#2e7d32", fontcolor="white"];
@@ -56,7 +56,7 @@ digraph LostFrequency {
   L000_2 [label="L0.2\nRemodeled Mess", fillcolor="#2e7d32", fontcolor="white"];
   L000_3 [label="L0.3\nThe Icy Rooms", fillcolor="#2e7d32", fontcolor="white"];
   L001_1 [label="L1.1\nCorrupted Corridor", fillcolor="#2e7d32", fontcolor="white"];
-  L001_2 [label="L1.2\nConcrete Garden", fillcolor="#f9a825", fontcolor="black"];
+  L001_2 [label="L1.2\nConcrete Garden", fillcolor="#2e7d32", fontcolor="white"];
   L001_3 [label="L1.3\nMalignance", fillcolor="#2e7d32", fontcolor="white"];
   L001_5 [label="L1.5\nInverted", fillcolor="#2e7d32", fontcolor="white"];
   L003_5 [label="L3.5\nElectropolis", fillcolor="#2e7d32", fontcolor="white"];

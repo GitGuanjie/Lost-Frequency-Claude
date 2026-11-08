@@ -18,7 +18,7 @@
     "target": "L079>EXT#1",
     "ticks": 49
    },
-   "build_ms": 1353,
+   "build_ms": 1261,
    "collision_shapes": 110,
    "distinct_layouts_over_3_seeds": 1,
    "dup_profile": {
@@ -112,7 +112,7 @@
    },
    "exits_declared": 1,
    "exits_found": 1,
-   "load_ms": 1496,
+   "load_ms": 1370,
    "nav": {
     "exits": [
      {
@@ -146,7 +146,7 @@
   }
  ],
  "renderer": "headless",
- "started": "2026-11-08T19:43:32",
+ "started": "2026-11-08T20:55:05",
  "suites": {
   "duplication": {
    "checks": [],
@@ -161,7 +161,7 @@
   "level:L079": {
    "checks": [],
    "failed": 0,
-   "passed": 19
+   "passed": 20
   }
  }
 }

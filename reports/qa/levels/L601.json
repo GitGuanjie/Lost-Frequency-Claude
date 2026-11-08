@@ -5,10 +5,10 @@
  "levels": [
   {
    "bot": {
-    "distance_to_target": 27.5658283233643,
-    "distance_walked": 40.3949089767411,
+    "distance_to_target": 1.09691119194031,
+    "distance_walked": 40.4038736158982,
     "edge": "L601>EXT#1",
-    "final_position": "(35.94783, 0.02, 41.06451)",
+    "final_position": "(35.93457, 0.02, 41.07847)",
     "fired": true,
     "path_index": 38,
     "path_points": 38,
@@ -67,7 +67,7 @@
     "target": "L601>EXT#1",
     "ticks": 825
    },
-   "build_ms": 1483,
+   "build_ms": 1411,
    "collision_shapes": 742,
    "distinct_layouts_over_3_seeds": 3,
    "dup_profile": {
@@ -183,7 +183,7 @@
    },
    "exits_declared": 1,
    "exits_found": 2,
-   "load_ms": 1620,
+   "load_ms": 1546,
    "nav": {
     "exits": [
      {
@@ -225,7 +225,7 @@
   }
  ],
  "renderer": "headless",
- "started": "2026-11-08T14:41:14",
+ "started": "2026-11-08T20:55:43",
  "suites": {
   "duplication": {
    "checks": [],
@@ -240,7 +240,7 @@
   "level:L601": {
    "checks": [],
    "failed": 0,
-   "passed": 31
+   "passed": 32
   }
  }
 }

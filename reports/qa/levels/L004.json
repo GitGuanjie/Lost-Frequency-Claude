@@ -51,7 +51,7 @@
     "target": "L004>L005#1",
     "ticks": 570
    },
-   "build_ms": 1026,
+   "build_ms": 1259,
    "collision_shapes": 2854,
    "distinct_layouts_over_3_seeds": 3,
    "dup_profile": {
@@ -186,7 +186,7 @@
    },
    "exits_declared": 4,
    "exits_found": 2,
-   "load_ms": 1171,
+   "load_ms": 1421,
    "nav": {
     "exits": [
      {
@@ -207,7 +207,7 @@
      }
     ],
     "map_regions": 1,
-    "map_sync_ticks": 15,
+    "map_sync_ticks": 2,
     "nav_polygons": 2882,
     "spawn_on_navmesh": true,
     "spawn_projection_error": 0.0941536948084831,
@@ -228,7 +228,7 @@
   }
  ],
  "renderer": "headless",
- "started": "2026-11-08T14:38:49",
+ "started": "2026-11-08T20:51:14",
  "suites": {
   "duplication": {
    "checks": [],
@@ -243,7 +243,7 @@
   "level:L004": {
    "checks": [],
    "failed": 0,
-   "passed": 29
+   "passed": 30
   }
  }
 }

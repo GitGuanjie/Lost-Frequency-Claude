@@ -18,7 +18,7 @@
     "target": "L263>EXT#1",
     "ticks": 87
    },
-   "build_ms": 352,
+   "build_ms": 369,
    "collision_shapes": 438,
    "distinct_layouts_over_3_seeds": 1,
    "dup_profile": {
@@ -47,7 +47,7 @@
    },
    "exits_declared": 1,
    "exits_found": 1,
-   "load_ms": 432,
+   "load_ms": 453,
    "nav": {
     "exits": [
      {
@@ -81,7 +81,7 @@
   }
  ],
  "renderer": "headless",
- "started": "2026-11-08T19:15:22",
+ "started": "2026-11-08T20:55:35",
  "suites": {
   "duplication": {
    "checks": [],
@@ -96,7 +96,7 @@
   "level:L263": {
    "checks": [],
    "failed": 0,
-   "passed": 21
+   "passed": 22
   }
  }
 }
