@@ -1,72 +1,77 @@
 {
-  "stable_id": "L094",
-  "scene": "res://levels/L094/L094.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT_TESTED",
-  "procedural": false,
-  "legacy_overlays": false,
-  "arrivals": [
-    "start"
-  ],
-  "signature": "A hand-made 1930s stop-motion town of tiny clay houses round a fountain of Almond Water, old cars and Almond Milk vans in the streets, siren poles that break into cartoon music by day and fall silent when the Animations come out at night; endless grass hills with a water tower, stray parked cars and lone walls with furniture, and a castle floating overhead on a transparent mountain.",
-  "mechanics": [
-    "stop_motion_boil_every_surface_moves_on_twos",
-    "day_night_cycle_music_stops_at_night",
-    "siren_pole_music_now_and_then",
-    "animations_patrol_and_chase_on_sight_houses_hide_you",
-    "seeded_back_doors_to_levels_7_9_53",
-    "endless_hills_with_wall_and_furniture_fragments"
-  ],
-  "exits": [
-    {
-      "id": "L094>L007#2",
-      "to": "L007",
-      "trigger": "interact",
-      "label": "Opened the back door of one of the little houses and stepped through",
-      "basis": "SOURCE",
-      "confidence": "CONDITIONAL",
-      "source_section": "Entrances And Exits",
-      "source_quote": "some houses will lead to Level 7, Level 9 and Level 53",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-94",
-      "trigger_type": "door",
-      "method": "some houses",
-      "hint": "Some back doors have a draught that does not come from the yard.",
-      "arrival": "from_L094"
-    },
-    {
-      "id": "L094>L009#3",
-      "to": "L009",
-      "trigger": "interact",
-      "label": "Opened the back door of one of the little houses and stepped through",
-      "basis": "SOURCE",
-      "confidence": "CONDITIONAL",
-      "source_section": "Entrances And Exits",
-      "source_quote": "some houses will lead to Level 7, Level 9 and Level 53",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-94",
-      "trigger_type": "door",
-      "method": "some houses",
-      "hint": "Some back doors have a draught that does not come from the yard.",
-      "arrival": "from_L094"
-    },
-    {
-      "id": "L094>L053#4",
-      "to": "L053",
-      "trigger": "interact",
-      "label": "Opened the back door of one of the little houses and stepped through",
-      "basis": "SOURCE",
-      "confidence": "CONDITIONAL",
-      "source_section": "Entrances And Exits",
-      "source_quote": "some houses will lead to Level 7, Level 9 and Level 53",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-94",
-      "trigger_type": "door",
-      "method": "some houses",
-      "hint": "Some back doors have a draught that does not come from the yard.",
-      "arrival": "from_L094"
-    }
-  ],
-  "fail_states": [
-    "being caught in the open by an Animation at night (page: they attack violently if they spot you)"
-  ],
-  "entity_policy": "SOURCED ENTITIES ONLY, night only: Animations (ink-black cartoon cut-outs that patrol and chase on sight; houses hide you) and Death Rats (stop-motion rats). The other night entities the page lists (Smilers, Skin-Stealers, Hounds, male Deathmoths) and the castle's Robo-Men and Animated King are not shown. Nothing appears by day.",
-  "notes": "SOURCE: a large town, a floating castle and grass hills, everything grainy as if crafted; 1930s stop-motion feel; the town safe with no entities by day; a big fountain in the centre flowing with Almond Water; tiny houses with 1930s-1950s furniture; 1930s cars and milk vans filled with Almond Milk; siren poles that from time to time play happy cartoony music; at night the music stops completely and Animations appear and attack if they spot you; Death Rats evolved to look stop-motion; the hills go on forever with a few strange cars parked in the middle of nowhere, a water tower of Almond Water, and random furniture sets or whole single rooms shown as just a wall with furniture next to it; above the hills a floating castle on a 'Transparent Mountain'; some houses lead to Levels 7, 9 and 53; group survival is hard and the M.E.G. is still looking for an outpost. ADAPTATION: a four-street town round a cobbled square on a plateau about 190 m across, 44 tiny gabled houses (12 open and furnished, four corner houses with an upper floor and stair); the stop-motion look is one clay shader whose thumb-pressed texture re-settles six times a second, everything that moves (water, clouds, figures) moves on twos, plus screen grain; the day is 6 min and the night 3 min, and the siren music plays for 25-40 s every 45-90 s by day; the Animations are ink-black rubber-hose cut-outs (the page does not describe them), see you within ~24 m outdoors, chase, and catching you is fatal; houses are cover; three open houses chosen per seed get a back door leading to Levels 7, 9 and 53 (the page does not say which houses); the castle hangs ~640 m north-west, ~175 m up, and is not reachable because the page gives no route (so the King's trial exit L094>EXT#1 is not built); the water tower has a ladder to a catwalk; hill chunks stream round the player with wall-and-furniture fragments and stray cars. QA mode freezes the clock in daytime and disables catches so the walker bot is deterministic. Canon: docs/canon/levels/L094.md; page by Stretchsterz, Dr. Bierre and ShadowOfTheProphet, CC BY-SA 3.0."
+ "stable_id": "L094",
+ "scene": "res://levels/L094/L094.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": false,
+ "legacy_overlays": false,
+ "arrivals": [
+  "start"
+ ],
+ "signature": "A hand-made 1930s stop-motion town of tiny clay houses round a fountain of Almond Water, old cars and Almond Milk vans in the streets, siren poles that break into cartoon music by day and fall silent when the Animations come out at night; endless grass hills with a water tower, stray parked cars and lone walls with furniture, and a castle floating overhead on a transparent mountain.",
+ "mechanics": [
+  "stop_motion_boil_every_surface_moves_on_twos",
+  "day_night_cycle_music_stops_at_night",
+  "siren_pole_music_now_and_then",
+  "animations_patrol_and_chase_on_sight_houses_hide_you",
+  "seeded_back_doors_to_levels_7_9_53",
+  "endless_hills_with_wall_and_furniture_fragments"
+ ],
+ "exits": [
+  {
+   "id": "L094>L007#2",
+   "to": "L007",
+   "trigger": "interact",
+   "label": "Opened the back door of one of the little houses and stepped through",
+   "basis": "SOURCE",
+   "confidence": "CONDITIONAL",
+   "source_section": "Entrances And Exits",
+   "source_quote": "some houses will lead to Level 7, Level 9 and Level 53",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-94",
+   "trigger_type": "door",
+   "method": "some houses",
+   "hint": "Some back doors have a draught that does not come from the yard.",
+   "arrival": "from_L094"
+  },
+  {
+   "id": "L094>L009#3",
+   "to": "L009",
+   "trigger": "interact",
+   "label": "Opened the back door of one of the little houses and stepped through",
+   "basis": "SOURCE",
+   "confidence": "CONDITIONAL",
+   "source_section": "Entrances And Exits",
+   "source_quote": "some houses will lead to Level 7, Level 9 and Level 53",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-94",
+   "trigger_type": "door",
+   "method": "some houses",
+   "hint": "Some back doors have a draught that does not come from the yard.",
+   "arrival": "from_L094"
+  },
+  {
+   "id": "L094>L053#4",
+   "to": "L053",
+   "trigger": "interact",
+   "label": "Opened the back door of one of the little houses and stepped through",
+   "basis": "SOURCE",
+   "confidence": "CONDITIONAL",
+   "source_section": "Entrances And Exits",
+   "source_quote": "some houses will lead to Level 7, Level 9 and Level 53",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-94",
+   "trigger_type": "door",
+   "method": "some houses",
+   "hint": "Some back doors have a draught that does not come from the yard.",
+   "arrival": "from_L094"
+  }
+ ],
+ "fail_states": [
+  "being caught in the open by an Animation at night (page: they attack violently if they spot you)"
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY, night only: Animations (ink-black cartoon cut-outs that patrol and chase on sight; houses hide you) and Death Rats (stop-motion rats). The other night entities the page lists (Smilers, Skin-Stealers, Hounds, male Deathmoths) and the castle's Robo-Men and Animated King are not shown. Nothing appears by day.",
+ "notes": "SOURCE: a large town, a floating castle and grass hills, everything grainy as if crafted; 1930s stop-motion feel; the town safe with no entities by day; a big fountain in the centre flowing with Almond Water; tiny houses with 1930s-1950s furniture; 1930s cars and milk vans filled with Almond Milk; siren poles that from time to time play happy cartoony music; at night the music stops completely and Animations appear and attack if they spot you; Death Rats evolved to look stop-motion; the hills go on forever with a few strange cars parked in the middle of nowhere, a water tower of Almond Water, and random furniture sets or whole single rooms shown as just a wall with furniture next to it; above the hills a floating castle on a 'Transparent Mountain'; some houses lead to Levels 7, 9 and 53; group survival is hard and the M.E.G. is still looking for an outpost. ADAPTATION: a four-street town round a cobbled square on a plateau about 190 m across, 44 tiny gabled houses (12 open and furnished, four corner houses with an upper floor and stair); the stop-motion look is one clay shader whose thumb-pressed texture re-settles six times a second, everything that moves (water, clouds, figures) moves on twos, plus screen grain; the day is 6 min and the night 3 min, and the siren music plays for 25-40 s every 45-90 s by day; the Animations are ink-black rubber-hose cut-outs (the page does not describe them), see you within ~24 m outdoors, chase, and catching you is fatal; houses are cover; three open houses chosen per seed get a back door leading to Levels 7, 9 and 53 (the page does not say which houses); the castle hangs ~640 m north-west, ~175 m up, and is not reachable because the page gives no route (so the King's trial exit L094>EXT#1 is not built); the water tower has a ladder to a catwalk; hill chunks stream round the player with wall-and-furniture fragments and stray cars. QA mode freezes the clock in daytime and disables catches so the walker bot is deterministic. Canon: docs/canon/levels/L094.md; page by Stretchsterz, Dr. Bierre and ShadowOfTheProphet, CC BY-SA 3.0.",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

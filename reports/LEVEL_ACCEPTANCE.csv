@@ -41,7 +41,7 @@ level_id,stable_id,group,canonical_source_resolved,correct_identity,unique_signa
 73,L073,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,IN_DEVELOPMENT,False,engine QA not run
 75,L075,B_FLAGSHIP,True,True,True,True,False,True,True,True,True,True,4,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,False,
 79,L079,B_FLAGSHIP,True,True,True,True,False,True,True,True,True,True,4,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,False,
-94,L094,B_FLAGSHIP,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,IN_DEVELOPMENT,False,engine QA not run
+94,L094,B_FLAGSHIP,True,True,True,True,False,True,True,True,True,True,4,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,False,
 200,L200,B_FLAGSHIP,True,True,True,True,False,False,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,False,
 256,L256,B_FLAGSHIP,True,True,True,True,False,False,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,False,
 289,L289,B_FLAGSHIP,True,True,True,True,False,True,True,True,True,True,2,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
@@ -83,11 +83,11 @@ level_id,stable_id,group,canonical_source_resolved,correct_identity,unique_signa
 41,L041,D_BREADTH,True,True,True,True,False,True,True,True,True,True,4,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
 50,L050,D_BREADTH,True,False,False,False,False,False,False,False,False,False,2,,,NOT_TESTED,IN_DEVELOPMENT,False,engine QA not run
 52,L052,D_BREADTH,True,True,True,True,False,False,True,True,True,True,4,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,False,
-77,L077,D_BREADTH,True,False,False,False,False,False,False,False,False,False,2,,,NOT_TESTED,IN_DEVELOPMENT,False,engine QA not run
+77,L077,D_BREADTH,True,True,True,True,False,True,True,True,True,True,4,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,False,
 85,L085,D_BREADTH,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,IN_DEVELOPMENT,False,engine QA not run
 100,L100,D_BREADTH,True,True,True,True,False,True,True,True,True,True,4,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,False,
 101,L101,D_BREADTH,True,True,True,True,False,True,True,True,True,True,4,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
-108,L108,D_BREADTH,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,IN_DEVELOPMENT,False,engine QA not run
+108,L108,D_BREADTH,True,True,True,True,False,True,True,True,True,True,4,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,True,
 114,L114,D_BREADTH,True,True,True,True,False,True,True,True,True,True,4,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,False,
 140,L140,D_BREADTH,True,False,False,False,False,False,False,False,False,False,0,,,NOT_TESTED,IN_DEVELOPMENT,False,engine QA not run
 149,L149,D_BREADTH,True,True,True,True,False,True,True,True,True,True,4,UNVERIFIED (software renderer only),Claude (AI); human review pending,ENGINE_SMOKE_PASS,PLAYABLE,False,

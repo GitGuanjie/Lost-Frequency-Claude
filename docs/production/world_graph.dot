@@ -44,7 +44,7 @@ digraph LostFrequency {
   L073 [label="L73\nThe Redlands", fillcolor="#f9a825", fontcolor="black"];
   L075 [label="L75\nLiminality", fillcolor="#2e7d32", fontcolor="white"];
   L079 [label="L79\nGhosts in the Machine", fillcolor="#2e7d32", fontcolor="white"];
-  L094 [label="L94\nMotion", fillcolor="#f9a825", fontcolor="black"];
+  L094 [label="L94\nMotion", fillcolor="#2e7d32", fontcolor="white"];
   L200 [label="L200\nHome", fillcolor="#2e7d32", fontcolor="white"];
   L256 [label="L256\nDemoscene", fillcolor="#2e7d32", fontcolor="white"];
   L289 [label="L289\nOverflow", fillcolor="#2e7d32", fontcolor="white"];
@@ -86,11 +86,11 @@ digraph LostFrequency {
   L041 [label="L41\nThe Black Lake", fillcolor="#2e7d32", fontcolor="white"];
   L050 [label="L50\nThe moribund Highway", fillcolor="#f9a825", fontcolor="black"];
   L052 [label="L52\nDESTINATION REACHED", fillcolor="#2e7d32", fontcolor="white"];
-  L077 [label="L77\nOh, Shenandoah", fillcolor="#f9a825", fontcolor="black"];
+  L077 [label="L77\nOh, Shenandoah", fillcolor="#2e7d32", fontcolor="white"];
   L085 [label="L85\nBrilliant Evermore", fillcolor="#f9a825", fontcolor="black"];
   L100 [label="L100\nBrief Peace", fillcolor="#2e7d32", fontcolor="white"];
   L101 [label="L101\nYour Dream Shall Never D", fillcolor="#2e7d32", fontcolor="white"];
-  L108 [label="L108\nFertile Grounds", fillcolor="#f9a825", fontcolor="black"];
+  L108 [label="L108\nFertile Grounds", fillcolor="#2e7d32", fontcolor="white"];
   L114 [label="L114\nSweet Dreams", fillcolor="#2e7d32", fontcolor="white"];
   L140 [label="L140\nHoney", fillcolor="#f9a825", fontcolor="black"];
   L149 [label="L149\nThe Coconut Isles", fillcolor="#2e7d32", fontcolor="white"];

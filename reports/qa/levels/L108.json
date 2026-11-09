@@ -1,0 +1,280 @@
+{
+ "duplication_pairs": [],
+ "engine": "4.5.1-stable (official)",
+ "failures": [],
+ "levels": [
+  {
+   "bot": {
+    "distance_to_target": 1.74207949638367,
+    "distance_walked": 91.763408751227,
+    "edge": "L108>EXT#2",
+    "final_position": "(-50.3961, 2.123964, -50.01892)",
+    "fired": true,
+    "path_index": 70,
+    "path_points": 72,
+    "progress_samples": [
+     {
+      "L009_route_progress": -1,
+      "goal": "(-36.71276, 2.44734, 32.73725)",
+      "nav_vertex": 5,
+      "position": "(-36.63622, 2.279064, 34.40638)",
+      "slide_collisions": 1,
+      "tick": 120
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-37.84509, 2.44734, 28.00498)",
+      "nav_vertex": 8,
+      "position": "(-37.71228, 2.273047, 28.56106)",
+      "slide_collisions": 0,
+      "tick": 240
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-39.13706, 2.334429, 20.85819)",
+      "nav_vertex": 15,
+      "position": "(-38.98584, 2.142101, 22.87145)",
+      "slide_collisions": 1,
+      "tick": 360
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-39.54229, 2.438425, 14.53295)",
+      "nav_vertex": 20,
+      "position": "(-39.39112, 2.247608, 16.9472)",
+      "slide_collisions": 1,
+      "tick": 480
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-39.89448, 2.57269, 9.035746)",
+      "nav_vertex": 24,
+      "position": "(-39.77061, 2.334692, 10.96934)",
+      "slide_collisions": 0,
+      "tick": 600
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-40.21535, 2.630932, 4.027143)",
+      "nav_vertex": 27,
+      "position": "(-40.15723, 2.470948, 4.941173)",
+      "slide_collisions": 1,
+      "tick": 720
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-42.57448, 2.266566, -4.563621)",
+      "nav_vertex": 31,
+      "position": "(-41.50618, 2.278004, -0.869475)",
+      "slide_collisions": 0,
+      "tick": 840
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-44.01717, 2.386343, -9.463164)",
+      "nav_vertex": 33,
+      "position": "(-43.2094, 2.249655, -6.718994)",
+      "slide_collisions": 1,
+      "tick": 960
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-45.56525, 2.41539, -14.72064)",
+      "nav_vertex": 35,
+      "position": "(-44.93048, 2.290137, -12.56644)",
+      "slide_collisions": 0,
+      "tick": 1080
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-46.91855, 2.24734, -19.31658)",
+      "nav_vertex": 41,
+      "position": "(-46.59344, 2.202179, -18.2125)",
+      "slide_collisions": 0,
+      "tick": 1200
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-47.43385, 2.32658, -26.97107)",
+      "nav_vertex": 46,
+      "position": "(-47.1048, 2.180436, -24.07751)",
+      "slide_collisions": 1,
+      "tick": 1320
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-47.86275, 2.04734, -30.76275)",
+      "nav_vertex": 50,
+      "position": "(-47.78002, 2.000309, -30.0282)",
+      "slide_collisions": 0,
+      "tick": 1440
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-48.44527, 2.04734, -36.56066)",
+      "nav_vertex": 56,
+      "position": "(-48.37726, 1.874799, -35.88439)",
+      "slide_collisions": 0,
+      "tick": 1560
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-49.03114, 2.137179, -42.39195)",
+      "nav_vertex": 60,
+      "position": "(-48.9734, 1.995942, -41.84091)",
+      "slide_collisions": 2,
+      "tick": 1680
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-50.21326, 2.278084, -49.57779)",
+      "nav_vertex": 65,
+      "position": "(-49.57056, 2.036878, -47.74747)",
+      "slide_collisions": 2,
+      "tick": 1800
+     }
+    ],
+    "reason": "triggered",
+    "sim_seconds": 30.8666666666667,
+    "target": "L108>EXT#2",
+    "ticks": 1852
+   },
+   "build_ms": 2405,
+   "collision_shapes": 1329,
+   "distinct_layouts_over_3_seeds": 1,
+   "dup_profile": {
+    "boxes": {
+     "-1_-1_0": 10,
+     "-1_-1_1": 6,
+     "-1_-1_2": 5,
+     "-1_0_0": 2,
+     "-1_0_1": 1,
+     "-1_0_2": 1,
+     "-1_0_5": 4,
+     "-1_1_1": 4,
+     "-1_1_2": 13,
+     "-1_1_5": 5,
+     "-1_2_2": 2,
+     "-1_2_3": 7,
+     "-1_3_3": 6,
+     "-1_3_4": 1,
+     "-1_4_4": 2,
+     "-1_4_5": 2,
+     "-1_4_7": 2,
+     "-2_-1_-1": 1,
+     "-2_-1_0": 1,
+     "-2_-1_1": 12,
+     "-2_-1_2": 3,
+     "-2_-2_-2": 2,
+     "-2_-2_0": 2,
+     "-2_-2_1": 2,
+     "-2_-2_2": 2,
+     "-2_0_1": 23,
+     "-2_0_2": 3,
+     "-2_1_1": 25,
+     "-2_1_2": 5,
+     "-2_2_2": 1,
+     "-2_2_6": 3,
+     "-2_6_6": 2,
+     "-3_-2_-1": 3,
+     "-3_-2_-2": 2,
+     "-3_-3_2": 2,
+     "-3_-3_4": 4,
+     "-3_0_0": 3,
+     "-3_2_2": 1,
+     "-3_2_3": 2,
+     "-3_2_4": 4,
+     "-3_3_6": 2,
+     "-3_6_7": 1,
+     "-4_-4_2": 2,
+     "-4_3_3": 1,
+     "-5_0_4": 3,
+     "-5_2_2": 1,
+     "-6_-2_-2": 12,
+     "-6_0_3": 3,
+     "-6_3_3": 1,
+     "-6_4_5": 1,
+     "-7_2_6": 2,
+     "-7_2_8": 1,
+     "-7_2_9": 2,
+     "0_0_1": 3,
+     "0_0_2": 1,
+     "0_0_4": 2,
+     "0_0_5": 1,
+     "1_1_3": 3,
+     "1_2_2": 1,
+     "1_4_6": 1
+    },
+    "materials": {
+     "l108_concrete": 336,
+     "l108_flags": 16,
+     "l108_floor": 14,
+     "l108_leaded": 84,
+     "l108_mesh": 60,
+     "l108_oak": 708,
+     "l108_plaster": 120,
+     "l108_post": 144,
+     "l108_purple": 168,
+     "l108_sandbag": 84,
+     "l108_slate": 108,
+     "l108_steel": 2628,
+     "l108_stone": 1628,
+     "l108_teal": 144,
+     "l108_tube": 16
+    }
+   },
+   "exits_declared": 2,
+   "exits_found": 1,
+   "load_ms": 2541,
+   "nav": {
+    "exits": [
+     {
+      "edge": "L108>EXT#2",
+      "goal": "(-50.90373, 2.35318, -51.23608)",
+      "path_points": 72,
+      "reachable": true,
+      "snap_error": 0.94875556230545,
+      "start_projection_error": 0.139173403382301
+     }
+    ],
+    "map_regions": 1,
+    "map_sync_ticks": 6,
+    "nav_polygons": 10842,
+    "spawn_on_navmesh": true,
+    "spawn_projection_error": 0.139173403382301,
+    "start": "(-37.99747, 2.486183, 39.99076)"
+   },
+   "qa_status": "ENGINE_SMOKE_PASS",
+   "save_tested": true,
+   "self_tests": 7,
+   "spawn": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+   },
+   "stable_id": "L108"
+  }
+ ],
+ "renderer": "headless",
+ "started": "2026-11-09T01:53:13",
+ "suites": {
+  "duplication": {
+   "checks": [],
+   "failed": 0,
+   "passed": 1
+  },
+  "framework": {
+   "checks": [],
+   "failed": 0,
+   "passed": 8
+  },
+  "level:L108": {
+   "checks": [],
+   "failed": 0,
+   "passed": 24
+  }
+ }
+}

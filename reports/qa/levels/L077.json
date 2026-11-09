@@ -1,0 +1,204 @@
+{
+ "duplication_pairs": [],
+ "engine": "4.5.1-stable (official)",
+ "failures": [],
+ "levels": [
+  {
+   "bot": {
+    "distance_to_target": 1.93190503120422,
+    "distance_walked": 75.7005828274414,
+    "edge": "L077>EXT#1",
+    "final_position": "(-172.4513, 13.76478, 521.962)",
+    "fired": true,
+    "path_index": 80,
+    "path_points": 80,
+    "progress_samples": [
+     {
+      "L009_route_progress": -1,
+      "goal": "(-143.5048, 13.41311, 467.3656)",
+      "nav_vertex": 6,
+      "position": "(-143.002, 13.01949, 464.5608)",
+      "slide_collisions": 2,
+      "tick": 120
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-144.1397, 13.90244, 470.8891)",
+      "nav_vertex": 12,
+      "position": "(-144.0353, 13.65135, 470.2786)",
+      "slide_collisions": 2,
+      "tick": 240
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-145.2991, 14.15888, 477.3234)",
+      "nav_vertex": 17,
+      "position": "(-145.0763, 14.06318, 476.0856)",
+      "slide_collisions": 1,
+      "tick": 360
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-146.2921, 14.31294, 482.8345)",
+      "nav_vertex": 25,
+      "position": "(-146.0986, 14.17289, 481.7711)",
+      "slide_collisions": 2,
+      "tick": 480
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-149.7933, 14.52228, 487.162)",
+      "nav_vertex": 31,
+      "position": "(-149.1293, 14.32386, 486.5249)",
+      "slide_collisions": 1,
+      "tick": 600
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-154.248, 14.35626, 491.9483)",
+      "nav_vertex": 33,
+      "position": "(-153.3191, 14.30479, 490.9515)",
+      "slide_collisions": 0,
+      "tick": 720
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-158.5745, 14.35393, 496.5968)",
+      "nav_vertex": 38,
+      "position": "(-157.3645, 14.21041, 495.298)",
+      "slide_collisions": 0,
+      "tick": 840
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-163.3575, 14.42228, 501.9957)",
+      "nav_vertex": 47,
+      "position": "(-161.2681, 14.32498, 499.4911)",
+      "slide_collisions": 1,
+      "tick": 960
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-165.3342, 14.2769, 504.3984)",
+      "nav_vertex": 53,
+      "position": "(-165.0262, 14.19787, 504.0239)",
+      "slide_collisions": 0,
+      "tick": 1080
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-169.1474, 14.27346, 509.0331)",
+      "nav_vertex": 61,
+      "position": "(-168.6968, 14.16632, 508.4849)",
+      "slide_collisions": 2,
+      "tick": 1200
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-172.8485, 13.99004, 513.5316)",
+      "nav_vertex": 67,
+      "position": "(-172.4287, 13.82879, 513.0212)",
+      "slide_collisions": 1,
+      "tick": 1320
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-174.8201, 13.75582, 519.2194)",
+      "nav_vertex": 75,
+      "position": "(-175.1284, 13.60239, 518.0)",
+      "slide_collisions": 0,
+      "tick": 1440
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-172.4297, 14.78799, 520.3235)",
+      "nav_vertex": 80,
+      "position": "(-172.5241, 13.76038, 521.9782)",
+      "slide_collisions": 2,
+      "tick": 1560
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(-172.4297, 14.78799, 520.3235)",
+      "nav_vertex": 80,
+      "position": "(-172.4513, 13.76478, 521.962)",
+      "slide_collisions": 1,
+      "tick": 1680
+     }
+    ],
+    "reason": "triggered",
+    "sim_seconds": 28.3666666666667,
+    "target": "L077>EXT#1",
+    "ticks": 1702
+   },
+   "build_ms": 1795,
+   "collision_shapes": 2332,
+   "distinct_layouts_over_3_seeds": 1,
+   "dup_profile": {
+    "boxes": {
+     "-1_-1_0": 2,
+     "-3_-2_-2": 2,
+     "-4_-2_-1": 1,
+     "0_2_2": 1,
+     "1_3_3": 1,
+     "2_3_3": 1
+    },
+    "materials": {
+
+    }
+   },
+   "exits_declared": 1,
+   "exits_found": 1,
+   "load_ms": 1897,
+   "nav": {
+    "exits": [
+     {
+      "edge": "L077>EXT#1",
+      "goal": "(-172.4297, 14.92228, 520.3235)",
+      "path_points": 80,
+      "reachable": true,
+      "snap_error": 0.134296417236328,
+      "start_projection_error": 0.214357659220695
+     }
+    ],
+    "map_regions": 1,
+    "map_sync_ticks": 27,
+    "nav_polygons": 8809,
+    "spawn_on_navmesh": true,
+    "spawn_projection_error": 0.214357659220695,
+    "start": "(-141.9936, 12.83601, 458.979)"
+   },
+   "qa_status": "ENGINE_SMOKE_PASS",
+   "save_tested": true,
+   "self_tests": 7,
+   "spawn": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+   },
+   "stable_id": "L077"
+  }
+ ],
+ "renderer": "headless",
+ "started": "2026-11-09T01:52:58",
+ "suites": {
+  "duplication": {
+   "checks": [],
+   "failed": 0,
+   "passed": 1
+  },
+  "framework": {
+   "checks": [],
+   "failed": 0,
+   "passed": 8
+  },
+  "level:L077": {
+   "checks": [],
+   "failed": 0,
+   "passed": 24
+  }
+ }
+}
