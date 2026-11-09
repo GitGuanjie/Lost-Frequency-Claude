@@ -1,45 +1,110 @@
 {
-  "stable_id": "L048",
-  "scene": "res://levels/L048/L048.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — candidate dev3",
-  "procedural": true,
-  "arrivals": [
-    "start",
-    "from_L010",
-    "from_L320"
-  ],
-  "signature": "Permanent-sunset beach, hotels and forest at 200 metres",
-  "mechanics": [
-    "beach",
-    "forest",
-    "farmhouse"
-  ],
-  "exits": [
-    {
-      "id": "L048>L010#5",
-      "to": "L010",
-      "basis": "SOURCE",
-      "confidence": "CONDITIONAL",
-      "method": "Enter and exit a random farmhouse",
-      "source_quote": "Entering and exiting any of the farmhouses will take you to Level 10.",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-48",
-      "trigger_type": "door"
-    },
-    {
-      "id": "L048>L049#4",
-      "to": "L049",
-      "basis": "SOURCE",
-      "confidence": "CONDITIONAL",
-      "method": "Follow dirt trenches in the forest",
-      "source_quote": "will progressively lead one to Level 49",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-48",
-      "trigger_type": "walk_in"
-    }
-  ],
-  "notes": "Source constrained to 2026-11-04 snapshot. All distances are compressed for playable prototype. No engine QA, Windows test or human screenshot review passed yet.",
-  "entity_policy": "No invented hostile entities; narrative testimony is not treated as verified encounter.",
-  "arrival_aliases": [
-    "from_L320"
-  ]
+ "stable_id": "L048",
+ "scene": "res://levels/L048/L048.tscn",
+ "status": "IN_DEVELOPMENT",
+ "qa_status": "NOT_TESTED",
+ "procedural": false,
+ "legacy_overlays": false,
+ "arrivals": [
+  "start",
+  "from_L010",
+  "from_L011",
+  "from_L320"
+ ],
+ "signature": "An endless warm beach stuck at sunset: luxury hotels and glass villas along a lamp-lit promenade, a pool terrace over the lukewarm sea, the Veroka Farmers' grey fruit, and 200 m inland a humid tropical forest whose trenches, lake and farmhouses lead elsewhere",
+ "mechanics": [
+  "permanent_sunset_30_percent_light",
+  "hotel_lobby_wall_noclip",
+  "lake_floor_swim_exit",
+  "trench_following_progress",
+  "farmhouse_enter_then_exit",
+  "play_dead_small_chance_rumoured",
+  "temperature_zone_captions",
+  "soft_endless_beach_limit"
+ ],
+ "exits": [
+  {
+   "id": "L048>L581#1",
+   "to": "L581",
+   "trigger": "noclip",
+   "trigger_type": "noclip",
+   "label": "Leaned into the lobby wall of a beach hotel until it gave way into another hotel lobby",
+   "confidence": "CONFIRMED",
+   "basis": "SOURCE",
+   "source_section": "Entrances And Exits",
+   "method": "Noclip inside a hotel to the lobby",
+   "source_quote": "No-clipping inside of a hotel on Level 48 will lead to the lobby of Level 581",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-48",
+   "hint": "The guest book in the lobby mentions a wall that someone leaned on for too long.",
+   "arrival": "from_L048"
+  },
+  {
+   "id": "L048>L100#3",
+   "to": "L100",
+   "trigger": "condition",
+   "trigger_type": "death",
+   "label": "Played dead on the beach; something dark dragged you away (rumoured, small chance)",
+   "confidence": "RUMORED",
+   "basis": "SOURCE",
+   "source_section": "Entrances And Exits",
+   "method": "Play dead on beach floor; The Shadow drags",
+   "source_quote": "This is not confirmed.",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-48",
+   "conditions": "8% chance per attempt; never in QA mode",
+   "hint": "Someone left a towel on the sand.",
+   "arrival": "from_L048"
+  },
+  {
+   "id": "L048>L010#5",
+   "to": "L010",
+   "trigger": "condition",
+   "trigger_type": "door",
+   "label": "Walked into a farmhouse in the forest and back out of it",
+   "confidence": "CONDITIONAL",
+   "basis": "SOURCE",
+   "source_section": "Entrances And Exits",
+   "method": "Enter and exit a random farmhouse",
+   "source_quote": "Entering and exiting any of the farmhouses will take you to Level 10.",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-48",
+   "hint": "An old farmhouse stands among the trees west of the trench.",
+   "arrival": "from_L048"
+  },
+  {
+   "id": "L048>L121#2",
+   "to": "L121",
+   "trigger": "walk_in",
+   "trigger_type": "swim",
+   "label": "Dived to the floor of the small forest lake",
+   "confidence": "CONFIRMED",
+   "basis": "SOURCE",
+   "source_section": "Entrances And Exits",
+   "method": "Swim to floor of a small lake",
+   "source_quote": "Swimming to the floor of a small lake will transport one back to Level 121",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-48",
+   "hint": "A small lake lies in the forest north-east of the farm.",
+   "arrival": "from_L048"
+  },
+  {
+   "id": "L048>L049#4",
+   "to": "L049",
+   "trigger": "condition",
+   "trigger_type": "walk_in",
+   "label": "Followed a dirt trench through the forest until it led somewhere else",
+   "confidence": "CONDITIONAL",
+   "basis": "SOURCE",
+   "source_section": "Entrances And Exits",
+   "method": "Follow dirt trenches in the forest",
+   "source_quote": "will progressively lead one to Level 49",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-48",
+   "conditions": "at least 200 m walked inside the trench",
+   "hint": "A trench starts at the forest edge north of the promenade path.",
+   "arrival": "from_L048"
+  }
+ ],
+ "fail_states": [],
+ "entity_policy": "NO HOSTILE ENTITIES. Forest fauna resembling the Frontrooms is non-hostile and not modelled (heard as insects only); the unique species (Languars, Veraffes, Pinkthers, Zapes, Qarrots) live ~30 km north and are not placed. The Shadow is RUMORED: never shown, only implied by the play-dead caption on a successful roll.",
+ "notes": "SOURCE: infinite sandy beachfront with a presumably infinite lukewarm ocean to the south; tropical forest 200 m north of the beach; permanent sunny sunset, red-yellow sun at 30% of noon light; 22-36 C by location; many modern luxury houses and hotels with contemporary furniture, appliances and air conditioning; lush vegetation and edible plants; forest of palms, conifers, broadleaf evergreen and deciduous trees; Gromeliads; grey Veroka flowers with grey egg-like fruit rich in vitamin C and potassium, juice with lithium; the Veroka Farmers (~300) with shops selling juice and fruit; M.E.G. rates it Habitable; exits by hotel noclip (581), small-lake floor (121), play dead (100, unconfirmed), following forest dirt trenches (49), entering and exiting a farmhouse (10). EXITS ADDED in this rebuild (all documented edges in data/canon/transitions.json): L048>L581#1, L048>L121#2, L048>L100#3. ADAPTATION: a ~480 x 500 m playable window of the endless beach (soft limit past |x| 232 m or 432 m inland: the sand slows you and the haze thickens; never in QA), with the beach, sea and a canopy band continuing in a far mesh to the horizon; the hotel names, villa designs, pool, terrace, promenade lamps, kiosk and farm shed are our dressing of 'luxury houses and hotels' and 'shops'; the noclip is a sustained 2.2 s push into the lobby's east wall; the lake exit fires at its floor (~4 m down); the trench exit only opens after 200 m walked inside the 290 m trench; the farmhouse exit fires when you leave through its door after being inside; 'randomly seen' farmhouses are represented by one fixed farmhouse; play dead has an 8% chance per attempt. Forest exits are created only within ~90 m so the QA navigation window stays local. Temperature is told through zone captions. Terrain uses CC0 Poly Haven coast_sand_01, sparse_grass, dirt_floor and old_wood_floor textures already in assets/external.",
+ "review": {
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }
