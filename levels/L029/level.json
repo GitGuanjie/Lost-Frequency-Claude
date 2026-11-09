@@ -1,42 +1,65 @@
 {
-  "stable_id": "L029",
-  "scene": "res://levels/L029/L029.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev5 source candidate",
-  "procedural": true,
-  "arrivals": [
-    "start",
-    "from_L025"
-  ],
-  "signature": "Pink-sky harbor, wooden market, white-leaf trees and hazardous ocean crossings",
-  "mechanics": [
-    "trading_hub",
-    "island_cliffs",
-    "harbor",
-    "unsafe_ocean"
-  ],
-  "exits": [
-    {
-      "id": "L029>L114#1",
-      "to": "L114",
-      "basis": "SOURCE",
-      "confidence": "DANGEROUS+UNKNOWN",
-      "method": "Sail several days away from the island",
-      "source_quote": "all attempts result in the death of the wanderers",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-29",
-      "trigger_type": "vehicle"
-    },
-    {
-      "id": "L029>L284#2",
-      "to": "L284",
-      "basis": "SOURCE",
-      "confidence": "DANGEROUS+UNKNOWN",
-      "method": "Same ocean crossing",
-      "source_quote": "one would theoretically end up in Level 114 or Level 284",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-29",
-      "trigger_type": "vehicle"
-    }
-  ],
-  "notes": "Compact exploration adaptation. Runtime Godot and Windows verification required; no automatic PLAYABLE promotion.",
-  "entity_policy": "SOURCED ENTITIES ONLY: the Kraken offshore; unnamed ocean entities as reports; no land entities named"
+ "stable_id": "L029",
+ "scene": "res://levels/L029/L029.tscn",
+ "status": "IN_DEVELOPMENT",
+ "qa_status": "NOT_TESTED",
+ "procedural": false,
+ "legacy_overlays": false,
+ "arrivals": [
+  "start",
+  "from_L025"
+ ],
+ "signature": "A red-wood civilisation on an island under a pale pink sky and an everlasting sun: a cove dockyard where arrivals land, cliff watchtowers over a sea that breaks every boat, and behind the mountains the farms, Almond Water river and the timber gathering station of Hyperia",
+ "mechanics": [
+  "dead_zone_sea_current_and_drowning",
+  "departures_end_in_the_dead_zone",
+  "watchtower_sightings_logged",
+  "outer_and_inner_circle_regions",
+  "almond_water_river"
+ ],
+ "exits": [
+  {
+   "id": "L029>L114#1",
+   "to": "L114",
+   "trigger": "interact",
+   "trigger_type": "vehicle",
+   "label": "Cast off from the T-head in a sloop and sailed into the dead zone; the hull split (every recorded attempt died; Level 114 is only the theoretical landfall)",
+   "confidence": "DANGEROUS+UNKNOWN",
+   "basis": "SOURCE",
+   "source_section": "Entrances and Exits",
+   "method": "Sail several days away from the island",
+   "source_quote": "all attempts result in the death of the wanderers",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-29",
+   "hint": "The harbour log lists every departure for the far side. None came back.",
+   "arrival": "from_L029"
+  },
+  {
+   "id": "L029>L284#2",
+   "to": "L284",
+   "trigger": "interact",
+   "trigger_type": "vehicle",
+   "label": "Cast off from the T-head in the second sloop; the same crossing (Level 284 is the other theoretical landfall)",
+   "confidence": "DANGEROUS+UNKNOWN",
+   "basis": "SOURCE",
+   "source_section": "Entrances and Exits",
+   "method": "Same ocean crossing",
+   "source_quote": "one would theoretically end up in Level 114 or Level 284",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-29",
+   "hint": "Two sloops are kept rigged at the end of the jetty.",
+   "arrival": "from_L029"
+  }
+ ],
+ "fail_states": [
+  {
+   "kind": "drowning",
+   "label": "Swam past the cove mouth into the dead zone",
+   "basis": "SOURCE",
+   "source_quote": "Anything ahead of the boundaries of our island is deemed a dead zone"
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY. The Kraken sleeps far out in the depths and is never shown. The REPORTED sightings of enormous entities outside the island appear only as a dark mass breaking the surface ~1 km offshore, seen from a watchtower deck. No land entities and no NPCs (the page names no individuals; the 25,000 inhabitants are implied by dressing, smoke and sound).",
+ "notes": "SOURCE: island in vast oceans; rough cliffs and steep slopes of rock and metal; inner mountains feeding wide Almond Water rivers; outer areas / outer circle / inner circle; small wooden towns with large farms and huts between the mountains; huts and watchtowers at elevated places in the outer circle; dead zone past the shore that breaks the strongest boats; red-trunk white-leaf trees, fire-proof wood stronger than aluminium, easily cut with an axe; Hyperia as the trade hub in the middle with office-like diplomatic buildings, a gathering station not a capital; mountains and coastline not habitable; iron and copper in giant cave veins; colourful flowers on the hills and sometimes rainbows; ~25,000 inhabitants, Wanderer Nations without formal names; pale pink sky and everlasting sun; arrival at the dockyards; Kraken asleep far away; only exit is the deadly crossing to Level 114 or 284 (theoretical). ADAPTATION: the 2 166 000 km2 island is compressed to a ~0.5 x 0.6 km playable corridor (cove dockyard -> gully -> plateau ~14 m with two cliff watchtowers, decks +6.4 m -> pass -> inner basin ~20 m with Hyperia, nine farm fields, a river from a mountain waterfall into a lake, a bridge) closed by 150-300 m mountains and the sea; the diplomatic hall's public gallery (+3 m), banners without society names, trade hall, timber yard and market stalls are our dressing of the hub; the T-head sloops are the physical form of the documented crossing and fire the edge as DANGEROUS+UNKNOWN with a caption that the hull splits in the dead zone (the page gives death in all attempts and only a theoretical landfall); the arcade-machine arrival from Level 25 is placed in the Hyperia plaza because the page does not say where it lands. Dead zone: past z=140 the sea current pulls outward and captions escalate; past z=190 the player dies (not in QA mode). Watching from a tower deck for 6 s shows a dark mass breaking the surface ~1 km offshore (max 3 per visit) and appends an entry to the west tower's watch log. Terrain uses CC0 Poly Haven sparse_grass, coast_sand_01, aerial_rocks_02, dirt_floor, rusty_metal, old_wood_floor textures already in assets/external.",
+ "review": {
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }
