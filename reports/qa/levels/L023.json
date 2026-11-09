@@ -1,0 +1,145 @@
+{
+ "duplication_pairs": [],
+ "engine": "4.5.1-stable (official)",
+ "failures": [],
+ "levels": [
+  {
+   "bot": {
+    "distance_to_target": 1.15703046321869,
+    "distance_walked": 4.4265500633046,
+    "edge": "L023>L135#4",
+    "final_position": "(-3.966855, 0.010724, 2.388715)",
+    "fired": true,
+    "path_index": 11,
+    "path_points": 11,
+    "progress_samples": [],
+    "reason": "triggered",
+    "sim_seconds": 1.66666666666667,
+    "target": "L023>L135#4",
+    "ticks": 100
+   },
+   "build_ms": 7290,
+   "collision_shapes": 729,
+   "distinct_layouts_over_3_seeds": 1,
+   "dup_profile": {
+    "boxes": {
+     "-1_-1_0": 2,
+     "-1_0_2": 2,
+     "-1_0_3": 6,
+     "-1_0_6": 7,
+     "-2_-1_0": 2,
+     "-2_-2_0": 1,
+     "-2_0_1": 1,
+     "-3_-1_-1": 1,
+     "-4_-1_0": 1,
+     "-4_0_0": 136,
+     "-4_0_1": 74,
+     "-5_1_2": 1,
+     "-6_0_1": 1,
+     "0_0_0": 5,
+     "0_0_1": 1,
+     "0_0_6": 13,
+     "0_1_2": 5,
+     "0_1_3": 8,
+     "0_2_2": 4,
+     "0_2_3": 2,
+     "0_3_3": 1,
+     "1_1_1": 2,
+     "1_2_2": 6,
+     "1_3_3": 3,
+     "2_2_2": 1,
+     "2_3_3": 1,
+     "2_4_4": 2,
+     "2_5_5": 1
+    },
+    "materials": {
+     "l23_bark": 840,
+     "l23_block": 3144,
+     "l23_canvas": 192,
+     "l23_moss": 16,
+     "l23_paint": 12,
+     "l23_plank": 36,
+     "l23_pole": 480,
+     "l23_stone": 972,
+     "unlit_black": 2
+    }
+   },
+   "exits_declared": 4,
+   "exits_found": 4,
+   "load_ms": 7423,
+   "nav": {
+    "exits": [
+     {
+      "edge": "L023>L135#4",
+      "goal": "(-4.0, 0.135315, 2.0)",
+      "path_points": 11,
+      "reachable": true,
+      "snap_error": 0.964685082435608,
+      "start_projection_error": 0.144049167633057
+     },
+     {
+      "edge": "L023>L007#1",
+      "goal": "(-92.00392, -11.66469, 10.31372)",
+      "path_points": 105,
+      "reachable": true,
+      "snap_error": 2.38093423843384,
+      "start_projection_error": 0.144049167633057
+     },
+     {
+      "edge": "L023>L121#2",
+      "goal": "(-92.00392, -11.66469, 10.31372)",
+      "path_points": 105,
+      "reachable": true,
+      "snap_error": 2.38093423843384,
+      "start_projection_error": 0.144049167633057
+     },
+     {
+      "edge": "L023>L043#3",
+      "goal": "(-92.00392, -11.66469, 10.31372)",
+      "path_points": 105,
+      "reachable": true,
+      "snap_error": 2.38093423843384,
+      "start_projection_error": 0.144049167633057
+     }
+    ],
+    "map_regions": 1,
+    "map_sync_ticks": 64,
+    "nav_polygons": 4725,
+    "spawn_on_navmesh": true,
+    "spawn_projection_error": 0.144049167633057,
+    "start": "(-3.591036, 0.179051, 6.796863)"
+   },
+   "qa_status": "ENGINE_SMOKE_PASS",
+   "save_tested": true,
+   "self_tests": 9,
+   "spawn": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+   },
+   "stable_id": "L023"
+  }
+ ],
+ "renderer": "headless",
+ "started": "2026-11-09T00:45:09",
+ "suites": {
+  "duplication": {
+   "checks": [],
+   "failed": 0,
+   "passed": 1
+  },
+  "framework": {
+   "checks": [],
+   "failed": 0,
+   "passed": 8
+  },
+  "level:L023": {
+   "checks": [],
+   "failed": 0,
+   "passed": 32
+  }
+ }
+}

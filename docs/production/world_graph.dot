@@ -26,7 +26,7 @@ digraph LostFrequency {
   L018 [label="L18\nMemories", fillcolor="#2e7d32", fontcolor="white"];
   L020 [label="L20\nBoreas Structure", fillcolor="#2e7d32", fontcolor="white"];
   L022 [label="L22\nRuins Left Behind", fillcolor="#2e7d32", fontcolor="white"];
-  L023 [label="L23\nThe Petrified Garden", fillcolor="#f9a825", fontcolor="black"];
+  L023 [label="L23\nThe Petrified Garden", fillcolor="#2e7d32", fontcolor="white"];
   L024 [label="L24\nThe Moon", fillcolor="#f9a825", fontcolor="black"];
   L025 [label="L25\nThe Quarter Hub", fillcolor="#2e7d32", fontcolor="white"];
   L026 [label="L26\nThe SS Fun =)", fillcolor="#2e7d32", fontcolor="white"];
@@ -76,7 +76,7 @@ digraph LostFrequency {
   L922 [label="L922\nI finally travelled to t", fillcolor="#2e7d32", fontcolor="white"];
   L965 [label="L965\nColorful Colorless", fillcolor="#2e7d32", fontcolor="white"];
   L994 [label="L994\nExist Here", fillcolor="#2e7d32", fontcolor="white"];
-  L999 [label="L999\n", fillcolor="#f9a825", fontcolor="black"];
+  L999 [label="L999\n", fillcolor="#2e7d32", fontcolor="white"];
   L005_3 [label="L5.3\nPromethei Bibliotheca", fillcolor="#f9a825", fontcolor="black"];
   L007_8 [label="L7.8\nImpaled Ocean", fillcolor="#2e7d32", fontcolor="white"];
   L009_3 [label="L9.3\nThe Overcast Manifold", fillcolor="#2e7d32", fontcolor="white"];
@@ -101,7 +101,7 @@ digraph LostFrequency {
   L320 [label="L320\nThe new, and Improved, E", fillcolor="#f9a825", fontcolor="black"];
   L737 [label="L737\nDune Eternal", fillcolor="#2e7d32", fontcolor="white"];
   L899 [label="L899\nYonder's End", fillcolor="#f9a825", fontcolor="black"];
-  L998 [label="L998\nA Path Across Hell, and ", fillcolor="#f9a825", fontcolor="black"];
+  L998 [label="L998\nA Path Across Hell, and ", fillcolor="#2e7d32", fontcolor="white"];
   EXT [label="outside the 100-level roster\n(unbuilt / unnumbered)", shape=ellipse, style="dashed", fillcolor="white"];
   L000 -> L001 [color="#2e7d32", penwidth=2.4];
   L001 -> L002 [color="#2e7d32", penwidth=2.4];
