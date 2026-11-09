@@ -1,5 +1,5 @@
 {
-  "build_ms": 1773,
+  "build_ms": 1434,
   "engine_native": true,
   "level": "L005",
   "manifest_status": "PLAYABLE",
@@ -10,13 +10,13 @@
     "footprint_x": 99.3,
     "footprint_y": 18.3,
     "footprint_z": 132.0,
-    "glb_models": 9,
+    "glb_models": 15,
     "interactables": 61,
     "lights": 31,
     "materials": 105,
     "mesh_instances": 491,
     "multimesh_instances": 0,
-    "triangles": 187146
+    "triangles": 187122
   },
   "reason": "loaded via real developer transition, safe player spawn, 15 physics ticks",
   "scene": "res://levels/L005/L005.tscn",

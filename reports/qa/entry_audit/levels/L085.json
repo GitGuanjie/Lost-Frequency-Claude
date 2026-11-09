@@ -1,5 +1,5 @@
 {
-  "build_ms": 674,
+  "build_ms": 530,
   "engine_native": true,
   "level": "L085",
   "manifest_status": "IN_DEVELOPMENT",
@@ -10,7 +10,7 @@
     "footprint_x": 394.6,
     "footprint_y": 21.6,
     "footprint_z": 346.1,
-    "glb_models": 47,
+    "glb_models": 115,
     "interactables": 39,
     "lights": 27,
     "materials": 52,

@@ -1,5 +1,5 @@
 {
-  "build_ms": 1702,
+  "build_ms": 1809,
   "engine_native": true,
   "level": "L009",
   "manifest_status": "PLAYABLE",
@@ -10,7 +10,7 @@
     "footprint_x": 344.0,
     "footprint_y": 10.4,
     "footprint_z": 344.0,
-    "glb_models": 6,
+    "glb_models": 16,
     "interactables": 5,
     "lights": 12,
     "materials": 88,

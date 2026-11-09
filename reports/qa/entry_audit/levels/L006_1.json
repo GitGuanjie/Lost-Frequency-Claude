@@ -1,8 +1,8 @@
 {
-  "build_ms": 2186,
+  "build_ms": 1818,
   "engine_native": true,
   "level": "L006_1",
-  "manifest_status": "IN_DEVELOPMENT",
+  "manifest_status": "PLAYABLE",
   "metrics": {
     "audio_players": 23,
     "collision_shapes": 534,
@@ -14,9 +14,9 @@
     "interactables": 46,
     "lights": 18,
     "materials": 192,
-    "mesh_instances": 379,
+    "mesh_instances": 378,
     "multimesh_instances": 0,
-    "triangles": 352973
+    "triangles": 353933
   },
   "reason": "loaded via real developer transition, safe player spawn, 15 physics ticks",
   "scene": "res://levels/L006_1/L006_1.tscn",

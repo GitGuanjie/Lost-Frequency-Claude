@@ -1,8 +1,8 @@
 {
-  "build_ms": 2444,
+  "build_ms": 2192,
   "engine_native": true,
   "level": "L140",
-  "manifest_status": "IN_DEVELOPMENT",
+  "manifest_status": "PLAYABLE",
   "metrics": {
     "audio_players": 10,
     "collision_shapes": 139,
@@ -16,7 +16,7 @@
     "materials": 61,
     "mesh_instances": 64,
     "multimesh_instances": 13324,
-    "triangles": 358821
+    "triangles": 358823
   },
   "reason": "loaded via real developer transition, safe player spawn, 15 physics ticks",
   "scene": "res://levels/L140/L140.tscn",

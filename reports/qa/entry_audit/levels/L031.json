@@ -1,10 +1,10 @@
 {
-  "build_ms": 1764,
+  "build_ms": 1224,
   "engine_native": true,
   "level": "L031",
-  "manifest_status": "IN_DEVELOPMENT",
+  "manifest_status": "PLAYABLE",
   "metrics": {
-    "audio_players": 12,
+    "audio_players": 13,
     "collision_shapes": 426,
     "exit_triggers": 4,
     "footprint_x": 100.3,

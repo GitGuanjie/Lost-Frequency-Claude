@@ -32,11 +32,11 @@ digraph LostFrequency {
   L026 [label="L26\nThe SS Fun =)", fillcolor="#2e7d32", fontcolor="white"];
   L027 [label="L27\nThe Bunker Springs", fillcolor="#2e7d32", fontcolor="white"];
   L028 [label="L28\nFinal Virtue", fillcolor="#f9a825", fontcolor="black"];
-  L029 [label="L29\nHyperian", fillcolor="#f9a825", fontcolor="black"];
+  L029 [label="L29\nHyperian", fillcolor="#2e7d32", fontcolor="white"];
   L030 [label="L30\nShifted Beyond Reality", fillcolor="#2e7d32", fontcolor="white"];
   L031 [label="L31\nThe Roller Rink", fillcolor="#2e7d32", fontcolor="white"];
   L036 [label="L36\nTimeless Airport", fillcolor="#2e7d32", fontcolor="white"];
-  L048 [label="L48\nThe Sunset Beach", fillcolor="#f9a825", fontcolor="black"];
+  L048 [label="L48\nThe Sunset Beach", fillcolor="#2e7d32", fontcolor="white"];
   L049 [label="L49\nThe Unfilled River of Ph", fillcolor="#2e7d32", fontcolor="white"];
   L053 [label="L53\nAlone", fillcolor="#2e7d32", fontcolor="white"];
   L069 [label="L69\nThe Road Trip of Afflict", fillcolor="#2e7d32", fontcolor="white"];
@@ -92,7 +92,7 @@ digraph LostFrequency {
   L101 [label="L101\nYour Dream Shall Never D", fillcolor="#2e7d32", fontcolor="white"];
   L108 [label="L108\nFertile Grounds", fillcolor="#2e7d32", fontcolor="white"];
   L114 [label="L114\nSweet Dreams", fillcolor="#2e7d32", fontcolor="white"];
-  L140 [label="L140\nHoney", fillcolor="#f9a825", fontcolor="black"];
+  L140 [label="L140\nHoney", fillcolor="#2e7d32", fontcolor="white"];
   L149 [label="L149\nThe Coconut Isles", fillcolor="#2e7d32", fontcolor="white"];
   L160 [label="L160\nThe City Of Promised Mem", fillcolor="#2e7d32", fontcolor="white"];
   L197 [label="L197\nCrystal Caverns", fillcolor="#2e7d32", fontcolor="white"];
@@ -202,7 +202,7 @@ digraph LostFrequency {
   L028 -> L073 [color="#2e7d32", penwidth=2.4, fontcolor="#c62828", label="!"];
   L028 -> L009_3 [color="#2e7d32", penwidth=2.4];
   L029 -> L114 [color="#2e7d32", penwidth=2.4, fontcolor="#c62828", label="!"];
-  L048 -> L100 [style=dotted, color="#9e9e9e"];
+  L048 -> L100 [color="#2e7d32", penwidth=2.4];
   L048 -> L049 [color="#2e7d32", penwidth=2.4];
   L048 -> L010 [color="#2e7d32", penwidth=2.4];
   L049 -> L014 [color="#2e7d32", penwidth=2.4];

@@ -1,8 +1,8 @@
 {
-  "build_ms": 1813,
+  "build_ms": 1300,
   "engine_native": true,
   "level": "L160",
-  "manifest_status": "IN_DEVELOPMENT",
+  "manifest_status": "PLAYABLE",
   "metrics": {
     "audio_players": 7,
     "collision_shapes": 179,
@@ -10,7 +10,7 @@
     "footprint_x": 420.0,
     "footprint_y": 10.5,
     "footprint_z": 420.0,
-    "glb_models": 39,
+    "glb_models": 41,
     "interactables": 11,
     "lights": 13,
     "materials": 103,

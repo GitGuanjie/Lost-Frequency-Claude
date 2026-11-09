@@ -1,7 +1,7 @@
 {
  "stable_id": "L048",
  "scene": "res://levels/L048/L048.tscn",
- "status": "IN_DEVELOPMENT",
+ "status": "PLAYABLE",
  "qa_status": "NOT_TESTED",
  "procedural": false,
  "legacy_overlays": false,
@@ -105,6 +105,8 @@
  "entity_policy": "NO HOSTILE ENTITIES. Forest fauna resembling the Frontrooms is non-hostile and not modelled (heard as insects only); the unique species (Languars, Veraffes, Pinkthers, Zapes, Qarrots) live ~30 km north and are not placed. The Shadow is RUMORED: never shown, only implied by the play-dead caption on a successful roll.",
  "notes": "SOURCE: infinite sandy beachfront with a presumably infinite lukewarm ocean to the south; tropical forest 200 m north of the beach; permanent sunny sunset, red-yellow sun at 30% of noon light; 22-36 C by location; many modern luxury houses and hotels with contemporary furniture, appliances and air conditioning; lush vegetation and edible plants; forest of palms, conifers, broadleaf evergreen and deciduous trees; Gromeliads; grey Veroka flowers with grey egg-like fruit rich in vitamin C and potassium, juice with lithium; the Veroka Farmers (~300) with shops selling juice and fruit; M.E.G. rates it Habitable; exits by hotel noclip (581), small-lake floor (121), play dead (100, unconfirmed), following forest dirt trenches (49), entering and exiting a farmhouse (10). EXITS ADDED in this rebuild (all documented edges in data/canon/transitions.json): L048>L581#1, L048>L121#2, L048>L100#3. ADAPTATION: a ~480 x 500 m playable window of the endless beach (soft limit past |x| 232 m or 432 m inland: the sand slows you and the haze thickens; never in QA), with the beach, sea and a canopy band continuing in a far mesh to the horizon; the hotel names, villa designs, pool, terrace, promenade lamps, kiosk and farm shed are our dressing of 'luxury houses and hotels' and 'shops'; the noclip is a sustained 2.2 s push into the lobby's east wall; the lake exit fires at its floor (~4 m down); the trench exit only opens after 200 m walked inside the 290 m trench; the farmhouse exit fires when you leave through its door after being inside; 'randomly seen' farmhouses are represented by one fixed farmhouse; play dead has an 8% chance per attempt. Forest exits are created only within ~90 m so the QA navigation window stays local. Temperature is told through zone captions. Terrain uses CC0 Poly Haven coast_sand_01, sparse_grass, dirt_floor and old_wood_floor textures already in assets/external.",
  "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
   "programme": "v2 rebuild of dev28 placeholder"
  }
 }
