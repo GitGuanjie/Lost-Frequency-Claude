@@ -175,7 +175,7 @@ func _floor_growth(c: Vector3, rx: float, rz: float, fps: Array, n_fungi: int, n
 		var col: Color = PALETTE[r.randi() % PALETTE.size()]
 		for j in 12:
 			var q := p + Vector3(r.randf_range(-1.2, 1.2), -0.02, r.randf_range(-1.2, 1.2))
-			fx.append(Flora.xf(q, r.randf() * TAU, Vector3.ONE * r.randf_range(0.6, 2.6)))
+			fx.append(Flora.xf(q, r.randf() * TAU, Vector3.ONE * r.randf_range(0.5, 1.7)))
 			fcol.append(col * r.randf_range(0.6, 1.1))
 	fl.mm(root, "mushroom", fx, fl.glow_soft, fcol, 70.0)
 	var bx: Array = []

@@ -258,7 +258,7 @@ func _shots() -> void:
 	var t := Places.TREE
 	add_shot("seedling_camp", t + Vector3(12.0, 1.7, 15.0), t + Vector3(-1.0, 3.2, 0.0), {"flashlight": false})
 	add_shot("ruin_grove", Places.SPHERE + Vector3(14.0, 2.4, 13.0), Places.SPHERE + Vector3(0.0, 3.5, 0.0), {"flashlight": false})
-	add_shot("heart_core", P.CORE + Vector3(24.0, 3.0, 9.0), P.CORE + Vector3(0.0, 1.0, 0.0), {"flashlight": false})
+	add_shot("heart_core", P.CORE + Vector3(cos(1.45) * 25.0, 4.5, sin(1.45) * 25.0), P.CORE + Vector3(0.0, 0.5, 0.0), {"flashlight": false})
 	add_shot("surface_canopy", P.SURF + Vector3(-19.5, 1.7, 2.0), P.SURF + Vector3(2.0, 7.0, -4.0), {"flashlight": false})
 
 
