@@ -8,8 +8,8 @@ extends RefCounted
 const LEAF := """
 shader_type spatial;
 render_mode diffuse_burley, cull_disabled;
-uniform vec3 tint_a : source_color = vec3(0.12, 0.26, 0.07);
-uniform vec3 tint_b : source_color = vec3(0.2, 0.36, 0.1);
+uniform vec3 tint_a : source_color = vec3(0.025, 0.1, 0.018);
+uniform vec3 tint_b : source_color = vec3(0.05, 0.22, 0.02);
 uniform float sway = 1.0;
 uniform float sand = 0.0;
 varying vec3 wp;
@@ -24,31 +24,38 @@ void fragment() {
 	if (COLOR.a > 0.5) {
 		// bark (COLOR.a = 1): ridged, mossy toward the base
 		float ridge = abs(fract(UV.x * 9.0) - 0.5);
-		vec3 bark = mix(vec3(0.16, 0.12, 0.08), vec3(0.3, 0.26, 0.2), ridge);
+		vec3 bark = mix(vec3(0.07, 0.065, 0.055), vec3(0.17, 0.16, 0.13), ridge);
 		bark = mix(bark, vec3(0.12, 0.2, 0.06), (1.0 - smoothstep(0.0, 4.0, UV.y)) * 0.6);
 		float grit = hsh(floor(UV * vec2(40.0, 30.0)));
 		bark = mix(bark, vec3(0.6, 0.5, 0.34) * (0.8 + 0.35 * grit), sand * (0.75 + 0.25 * grit));
 		ALBEDO = bark;
 		ROUGHNESS = 0.95;
+		SPECULAR = 0.2;
 	} else {
 		// leaf card: a few long leaves fanning from the base of the card
 		vec2 uv = UV;
 		float m = 0.0;
-		for (int i = 0; i < 4; i++) {
+		float rib = 0.0;
+		for (int i = 0; i < 3; i++) {
 			float fi = float(i);
-			float ang = (fi - 1.5) * 0.35;
+			float ang = (fi - 1.0) * 0.45;
 			vec2 p = uv - vec2(0.5, 1.0);
 			vec2 q = vec2(p.x * cos(ang) - p.y * sin(ang), p.x * sin(ang) + p.y * cos(ang));
 			float along = -q.y;
-			float wdt = 0.13 * sin(clamp(along, 0.0, 1.0) * 3.14159) * (0.8 + 0.4 * hsh(vec2(fi, 2.0)));
-			m = max(m, step(abs(q.x), wdt) * step(0.02, along) * step(along, 0.98));
+			float wdt = 0.2 * pow(sin(clamp(along, 0.0, 1.0) * 3.14159), 0.7) * (0.8 + 0.4 * hsh(vec2(fi, 2.0)));
+			float inl = step(abs(q.x), wdt) * step(0.02, along) * step(along, 0.98);
+			m = max(m, inl);
+			rib = max(rib, inl * step(abs(q.x), 0.012));
 		}
 		if (m < 0.5) { discard; }
 		float v = hsh(floor(wp.xz * 0.7));
-		vec3 c = mix(tint_a, tint_b, v) * (0.75 + 0.5 * UV.y);
+		if (!FRONT_FACING) { NORMAL = -NORMAL; }
+		vec3 c = mix(tint_a, tint_b, v) * (0.7 + 0.5 * UV.y);
+		c = mix(c, c * 1.8 + vec3(0.02, 0.03, 0.0), rib * 0.6);
 		ALBEDO = c;
-		ROUGHNESS = 0.6;
-		BACKLIGHT = c * 0.6;
+		ROUGHNESS = 0.85;
+		SPECULAR = 0.08;
+		BACKLIGHT = c * 0.5;
 	}
 }
 """
@@ -62,8 +69,8 @@ float hsh(vec2 p) { vec3 q = fract(vec3(p.xyx) * 0.1031); q += dot(q, q.yzx + 33
 void vertex() { wp = (MODEL_MATRIX * vec4(VERTEX, 1.0)).xyz; }
 void fragment() {
 	float fr = pow(1.0 - clamp(dot(NORMAL, VIEW), 0.0, 1.0), 3.0);
-	float band = hsh(vec2(floor(wp.y * 1.3), floor(wp.x * 0.2)));
-	vec3 c = mix(vec3(0.3, 0.55, 0.75), vec3(0.75, 0.88, 0.96), band * 0.6 + fr * 0.4);
+	float band = hsh(vec2(floor(wp.y * 0.6 + wp.x * 0.3), 1.0)) * 0.35 + hsh(floor(wp.xz * 3.0 + wp.y * 2.0)) * 0.15;
+	vec3 c = mix(vec3(0.16, 0.36, 0.55), vec3(0.72, 0.86, 0.95), band + fr * 0.55);
 	ALBEDO = c;
 	ROUGHNESS = 0.05 + 0.15 * band;
 	SPECULAR = 0.9;

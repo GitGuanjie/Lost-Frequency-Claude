@@ -59,6 +59,7 @@ func build() -> void:
 	sun.shadow_blur = 2.0
 	sun.directional_shadow_max_distance = 90.0
 	MatLib.define("l16_rock", {}, "rock")
+	MatLib.register("l16_ice", wld.ice_mat)
 	MatLib.define("l16_sand", {"albedo_a": Color(0.62, 0.52, 0.36), "albedo_b": Color(0.52, 0.43, 0.29), "pattern": 13, "noise_scale": 0.8}, "sand")
 	var geo := Node3D.new()
 	geo.name = "Terrain"
@@ -147,7 +148,7 @@ func _shots() -> void:
 	add_shot("sand_tree", s0 + (start - s0).normalized() * 7.0 + Vector3(1.5, 1.7, 0), s0 + Vector3(0, 5.0, 0), {"flashlight": false, "prepare": _prep.bind(0.0, 0.0)})
 	add_shot("arctic_glaciers", m + Vector3(-4.0, 9.4, 6.0), Vector3(-30, 2.0, 40.0), {"flashlight": false, "prepare": _prep.bind(1.0, 0.3)})
 	add_shot("alteration_front", m + Vector3(-3.0, 9.4, 7.0), Vector3(-40, 0.0, 30.0), {"flashlight": false, "prepare": _prep.bind(0.5, 0.0)})
-	add_shot("light_guides_night", start + Vector3(0, 1.7, 0), wld.guides.get_child(0).position if wld.guides.get_child_count() > 0 else Vector3(30, 2, 30), {"flashlight": false, "prepare": _prep.bind(1.0, 0.75)})
+	add_shot("light_guides_night", start + Vector3(4.0, 1.7, -6.0), Vector3(-22.0, land.h(-22.0, 16.0) + 3.0, 16.0), {"flashlight": false, "prepare": _prep.bind(1.0, 0.75)})
 
 
 func _prep(state: float, day: float) -> void:

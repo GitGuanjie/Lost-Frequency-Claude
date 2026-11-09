@@ -193,17 +193,17 @@ void fragment() {
 	float macro = vn(wp.xz * 0.04) * 0.6 + vn(wp.xz * 0.2) * 0.4;
 	float steep = clamp(COLOR.r * 2.4, 0.0, 1.0);
 	// rainforest floor: dark soil, leaf litter, moss
-	vec3 soil = texture(soil_alb, wp.xz / 2.6).rgb * vec3(0.55, 0.45, 0.34);
-	vec3 moss = texture(grass_alb, wp.xz / 2.2).rgb * vec3(0.55, 0.85, 0.4);
+	vec3 soil = texture(soil_alb, wp.xz / 2.6).rgb * vec3(0.32, 0.27, 0.2);
+	vec3 moss = texture(grass_alb, wp.xz / 2.2).rgb * vec3(0.32, 0.6, 0.22);
 	float litter = vn(wp.xz * 1.7) * 0.5 + vn(wp.xz * 5.0) * 0.5;
-	vec3 forest = mix(soil, moss, smoothstep(0.35, 0.75, macro) * 0.8);
+	vec3 forest = mix(soil, moss, smoothstep(0.2, 0.6, macro) * 0.85);
 	forest = mix(forest, vec3(0.2, 0.11, 0.05) * (0.6 + 0.6 * litter), smoothstep(0.55, 0.85, litter) * 0.45);
 	vec3 rock = texture(rock_alb, wp.xz / 4.0 + wp.y * 0.1).rgb * 0.8;
 	forest = mix(forest, rock, smoothstep(0.35, 0.7, steep));
 	forest = mix(forest, soil * 0.55, COLOR.g * 0.7);
 	// arctic: snow with luminous, highly reflective ice where it is flat and low
 	float sparkle = step(0.992, hsh(floor(wp.xz * 40.0) + floor(TIME * 2.0)));
-	vec3 snow = vec3(0.78, 0.84, 0.9) * (0.88 + 0.12 * macro);
+	vec3 snow = vec3(0.6, 0.67, 0.74) * (0.85 + 0.15 * macro);
 	float icef = clamp(smoothstep(0.45, 0.8, vn(wp.xz * 0.05 + 3.0)) + COLOR.g, 0.0, 1.0);
 	vec3 ice = vec3(0.45, 0.66, 0.82);
 	vec3 arctic = mix(snow, ice, icef * 0.75);
@@ -224,7 +224,7 @@ void fragment() {
 const SKY := """
 shader_type sky;
 uniform vec3 top_a : source_color = vec3(0.32, 0.38, 0.52);
-uniform vec3 hor_a : source_color = vec3(0.95, 0.62, 0.42);
+uniform vec3 hor_a : source_color = vec3(0.82, 0.66, 0.55);
 uniform vec3 top_b : source_color = vec3(0.24, 0.42, 0.7);
 uniform vec3 hor_b : source_color = vec3(0.8, 0.88, 0.95);
 uniform float state = 0.0;

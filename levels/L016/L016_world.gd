@@ -177,18 +177,20 @@ func build_spires(parent: Node3D, rng: RandomNumberGenerator, clear: Array) -> v
 	guides = Node3D.new()
 	guides.name = "LightGuides"
 	parent.add_child(guides)
-	var q := F.dot_mesh(0.35)
+	var q := F.dot_mesh(0.7)
 	for g in 5:
 		var a := rng.randf_range(0, TAU)
 		var r := rng.randf_range(35.0, 95.0)
 		var c := Vector3(cos(a) * r, 0, sin(a) * r)
+		if g == 0:
+			c = Vector3(-22.0, 0, 16.0)
 		c.y = land.h(c.x, c.z) + rng.randf_range(2.0, 4.5)
 		for i in 14:
 			var mi := MeshInstance3D.new()
 			mi.mesh = q
 			var m := dot_mat.duplicate() as ShaderMaterial
 			m.set_shader_parameter("col", Vector3(0.85, 0.95, 1.0))
-			m.set_shader_parameter("energy", rng.randf_range(1.5, 3.0))
+			m.set_shader_parameter("energy", rng.randf_range(3.0, 5.0))
 			mi.material_override = m
 			mi.position = c + Vector3(rng.randf_range(-4, 4), rng.randf_range(-1.2, 1.5), rng.randf_range(-4, 4))
 			mi.set_meta("base", mi.position)
