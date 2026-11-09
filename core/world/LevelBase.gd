@@ -53,6 +53,10 @@ func _ready() -> void:
 	build_ms = Time.get_ticks_msec() - t0
 	Settings.set_reverb(rules["reverb_room"], rules["reverb_wet"])
 	_spawn_player()
+	# Streamed worlds follow the player unless the level chose another target.
+	for c in find_children("*", "ChunkWorld", true, false):
+		if (c as ChunkWorld).target == null:
+			(c as ChunkWorld).target = player
 	# Data-driven, non-intrusive ambience, registered only for curated levels.
 	# No canonical exit/level data is changed by these optional cues.
 	# Rebuilt levels set "legacy_overlays": false in level.json so the dev18-dev28
