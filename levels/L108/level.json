@@ -1,41 +1,65 @@
 {
-  "stable_id": "L108",
-  "scene": "res://levels/L108/L108.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
-  "procedural": true,
-  "arrivals": [
-    "start",
-    "from_L025"
-  ],
-  "signature": "Mutant forest with crater mist and safer settlement",
-  "mechanics": [
-    "craterwood",
-    "hauntwood",
-    "purple_trail"
-  ],
-  "exits": [
-    {
-      "id": "L108>EXT#1",
-      "to": "EXT",
-      "basis": "SOURCE",
-      "confidence": "CONDITIONAL",
-      "method": "Walk straight out of Hauntwood",
-      "source_quote": "either into the Craterwood or to another level entirely",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-108",
-      "trigger_type": "walk_in"
-    },
-    {
-      "id": "L108>EXT#2",
-      "to": "EXT",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "method": "Purple trail guides to known exits; New Hereth help",
-      "source_quote": "Purple trail guides also mark the known exits of the level.",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-108",
-      "trigger_type": "walk_in"
-    }
-  ],
-  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
-  "entity_policy": "SOURCED ENTITIES ONLY: Dendroids, Anthosia, Grimshells, Craterwood Super-organism, The Black Goat, generic mutants"
+ "stable_id": "L108",
+ "scene": "res://levels/L108/L108.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": false,
+ "legacy_overlays": false,
+ "arrivals": [
+  "start",
+  "from_L025"
+ ],
+ "signature": "A primeval, moss-hung forest whose trees swell toward the crater in the west: the restored stone Church of Rosmerta among the overgrown footings of Old Hereth, New Hereth's filtered compound dug into the ground beside it, teal and purple trail guides, a flooded fissure, Anthosia in bloom, and to the east the grey Hauntwood that rearranges itself whenever you look away.",
+ "mechanics": [
+  "mutagenic_mist_pulses_in_step_with_floor_lift",
+  "irreversible_exposure_stages_respirator_cuts_dose",
+  "hauntwood_reseeds_when_unobserved",
+  "hauntwood_straight_heading_exit",
+  "teal_guides_to_new_hereth_purple_guides_to_known_exit",
+  "twelve_light_eighteen_dark_cycle_compressed",
+  "anthosia_pollen_dendroid_grimshell_black_goat_presences"
+ ],
+ "exits": [
+  {
+   "id": "L108>EXT#2",
+   "to": "EXT",
+   "to_label": "A known exit marked by purple trail guides (destination not stated)",
+   "trigger": "walk_in",
+   "label": "Followed the purple trail guides between the marked posts and kept walking",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "source_section": "F.O.R.E.S.T. Safety Protocols / Entrances and Exits",
+   "source_quote": "Purple trail guides also mark the known exits of the level.",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-108",
+   "trigger_type": "walk_in",
+   "hint": "Teal leads to shelter. The other colour leads out.",
+   "arrival": "from_L108"
+  },
+  {
+   "id": "L108>EXT#1",
+   "to": "EXT",
+   "to_label": "Another level entirely (or back into the Craterwood)",
+   "trigger": "walk_in",
+   "label": "Picked a direction in the Hauntwood and never changed course until the grey trees ended",
+   "basis": "SOURCE",
+   "confidence": "CONDITIONAL",
+   "source_section": "The Hauntwood Expanse",
+   "source_quote": "pick a direction and do not change course—eventually you will exit the zone, either into the Craterwood or to another level entirely",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-108",
+   "trigger_type": "walk_in",
+   "hint": "In the grey trees, do not turn.",
+   "arrival": "from_L108"
+  }
+ ],
+ "fail_states": [
+  "wading into a Grimshell pair's nest in the flooded margin (page: they kill and consume any threat in their nesting area)",
+  "falling into the fissure (page: depths of nearly three hundred metres)"
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY, as scripted presences without combat: Anthosia (flower patches with pollen), a Dendroid lying as a dead tree that shifts when approached, a Grimshell pair half-submerged in the flooded margin, the Black Goat (REPORTED) glimpsed at the edge of sight to the west. Cass, the generic mutant forms and the diary's 'smiling monsters' are not shown.",
+ "notes": "SOURCE: verdant primeval forest (Craterwood) beyond which lie the fractured remains of the level (Hauntwood Expanse); trees grow larger toward the central crater; flooded areas around fissures radiating from the crater, fissures nearly 300 m deep, water unsafe; floor rises and falls in a slow cycle, the crater's mutagenic mist released in step, radiating across the level and coalescing in the Hauntwood, effects immediate and irreversible; 12 h light / 18 h dark; Hauntwood: dormant or decaying hardwoods in spatial superposition that choose a position only when observed, biome position fixed, keep a straight heading to leave either into the Craterwood or to another level; F.O.R.E.S.T. protocols; teal guides lead to New Hereth, purple guides mark known exits; Old Hereth (38 people, Way of the All-Mother, Rosmerta) vanished c. 1906; Zenith Corp built New Hereth over it in 1987, traded to the B.N.T.G. in 2022; New Hereth ~2 km from the eastern Hauntwood border, partly underground with air filtration, hosts the B.N.T.G. Medicinal Research Group (Dr. Melissa Sims), U.E.C. Training Squad Agoge (~16) and I.M.B.H. Outpost K3 (12); the Church of Rosmerta is the only near-intact building of Old Hereth and holds its records and the child's diary (TESTIMONY); Dendroids fear fire and ambush as dead trees; Anthosia pollen; Grimshells in flooded areas; the Black Goat stalks and wants to be followed. ADAPTATION: distances read at 1 m = 12 m (New Hereth to the Hauntwood border ~170 m); one fissure ~110 m west of the church; the day is 2 min light / 3 min dark; mist pulses every ~3-4 min after a groan from the west; exposure counts mist and pollen, a respirator from the rack cuts it to 10%, three permanent stages (screen tint, desaturation) and no cure; the Hauntwood straight-heading exit appears ahead of you after ~70 m on one course (heading west returns you to the Craterwood); Hauntwood chunks re-seed after 6 s unobserved; the purple guides lead to one marked gap between fallen boles (destination not stated, so EXT); the church layout (west tower, gallery, pews, restorers' shelves) and the compound layout (sunken court, blast door, three rooms, intake stacks, watch platform, fence) are ours; the Boneyard, Neon Grove, Cass and the crater are not built. The streamed forest is a finite window round the player. QA mode freezes the clock and mist and skips the presences so the walker bot is deterministic. Canon: docs/canon/levels/L108.md; page by DrAkimoto, CC BY-SA 3.0.",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

@@ -1,8 +1,8 @@
 {
-  "build_ms": 950,
+  "build_ms": 508,
   "engine_native": true,
   "level": "L055",
-  "manifest_status": "IN_DEVELOPMENT",
+  "manifest_status": "PLAYABLE",
   "metrics": {
     "audio_players": 2,
     "collision_shapes": 800,

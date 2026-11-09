@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm4fn0803b3hb"
-path="res://.godot/imported/road-bridge_colormap.png-5ee45806a9287aa8d5f203ceb553209f.ctex"
+path.s3tc="res://.godot/imported/road-bridge_colormap.png-5ee45806a9287aa8d5f203ceb553209f.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "9024a760dd1e13f0ccd0c2e2bd7e1811"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/packs/city-kit-roads/road-bridge_colormap.png"
-dest_files=["res://.godot/imported/road-bridge_colormap.png-5ee45806a9287aa8d5f203ceb553209f.ctex"]
+dest_files=["res://.godot/imported/road-bridge_colormap.png-5ee45806a9287aa8d5f203ceb553209f.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

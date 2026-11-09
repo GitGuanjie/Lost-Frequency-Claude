@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgyk3x3fu72gy"
-path="res://.godot/imported/floor-thick-corner-round_colormap.png-c2bbc88b684057f5ff3e6561a058037c.ctex"
+path.s3tc="res://.godot/imported/floor-thick-corner-round_colormap.png-c2bbc88b684057f5ff3e6561a058037c.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "76084aa0c65dc2c593e6532f1f61f968"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/packs/prototype-kit/floor-thick-corner-round_colormap.png"
-dest_files=["res://.godot/imported/floor-thick-corner-round_colormap.png-c2bbc88b684057f5ff3e6561a058037c.ctex"]
+dest_files=["res://.godot/imported/floor-thick-corner-round_colormap.png-c2bbc88b684057f5ff3e6561a058037c.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

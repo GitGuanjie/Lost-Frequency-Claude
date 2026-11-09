@@ -1,42 +1,113 @@
 {
-  "stable_id": "L041",
-  "scene": "res://levels/L041/L041.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev5 source candidate",
-  "procedural": true,
-  "arrivals": [
-    "start",
-    "from_L008"
-  ],
-  "signature": "Foggy boiling-tar basin, separate burning islands and a continuous supported boardwalk",
-  "mechanics": [
-    "tar_lake",
-    "supported_piers",
-    "charcoal_islands",
-    "hazardous_environment"
-  ],
-  "exits": [
-    {
-      "id": "L041>L612#3",
-      "to": "L612",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "method": "Barn door on stone plinth",
-      "source_quote": "Finding an odd barn door on a stone plinth and going through it.",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-41",
-      "trigger_type": "door"
-    },
-    {
-      "id": "L041>L626#4",
-      "to": "L626",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "method": "Submerged lighthouse gallery; tamper with beacon",
-      "source_quote": "then tampering with the functional, flickering beacon within it.",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-41",
-      "trigger_type": "interact"
-    }
-  ],
-  "notes": "Compact exploration adaptation. Runtime Godot and Windows verification required; no automatic PLAYABLE promotion.",
-  "entity_policy": "SOURCED ENTITIES ONLY: Collagen Leviathans"
+ "stable_id": "L041",
+ "scene": "res://levels/L041/L041.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": true,
+ "legacy_overlays": false,
+ "arrivals": [
+  "start",
+  "from_L008"
+ ],
+ "signature": "A round lake of boiling, burning tar in grey fog: patchy charcoal-sand islands, old boardwalks on concrete feet 2-6 m above it (some burnt to stumps, one sunk onto a drowned lighthouse), roofs, poles and pylons going under, bone-white leviathans breaching like dolphins, and four one-of-a-kind ways out.",
+ "mechanics": [
+  "tar_contact_fatal_past_a_second",
+  "fume_intoxication_builds_and_faints",
+  "hot_sand_keep_moving",
+  "islands_and_raised_walkways_only",
+  "group_built_ladders",
+  "burnt_and_sunken_boardwalks",
+  "collagen_leviathan_senses_edges_and_walkways",
+  "four_unique_exit_objects"
+ ],
+ "exits": [
+  {
+   "id": "L041>L612#3",
+   "to": "L612",
+   "trigger": "interact",
+   "trigger_type": "door",
+   "label": "Opened the odd barn door standing on its stone plinth and went through",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "method": "Barn door on stone plinth",
+   "source_section": "Entrances And Exits",
+   "source_quote": "Finding an odd barn door on a stone plinth and going through it.",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-41",
+   "hint": "Across the sand spit from where you land, something red stands on a block of stone.",
+   "arrival": "from_L041"
+  },
+  {
+   "id": "L041>L626#4",
+   "to": "L626",
+   "trigger": "interact",
+   "trigger_type": "interact",
+   "label": "Climbed into the drowned lighthouse's gallery and tampered with the flickering beacon",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "method": "Submerged lighthouse gallery; tamper with beacon",
+   "source_section": "Entrances And Exits",
+   "source_quote": "then tampering with the functional, flickering beacon within it.",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-41",
+   "hint": "A light flickers far to the west, low over the tar. A walkway leads that way.",
+   "arrival": "from_L041"
+  },
+  {
+   "id": "L041>L500#1",
+   "to": "L500",
+   "trigger": "interact",
+   "trigger_type": "interact",
+   "label": "Clambered in through the broken window of the sunken navy vessel's bridge",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "method": "Broken window of submerged navy vessel bridge",
+   "source_section": "Entrances And Exits",
+   "source_quote": "Clambering inside the broken window of a submerged bridge for a USA navy vessel.",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-41",
+   "hint": "The highest walkway climbs north from the midway island towards something grey and square.",
+   "arrival": "from_L041"
+  },
+  {
+   "id": "L041>L515#2",
+   "to": "L515",
+   "trigger": "interact",
+   "trigger_type": "interact",
+   "label": "Got into the booster nozzle of the upside-down shuttle",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "method": "Booster nozzles of upside-down NASA shuttle",
+   "source_section": "Entrances And Exits",
+   "source_quote": "Somehow getting oneself into the booster nozzles of an upside down, NASA space shuttle.",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-41",
+   "hint": "East, past the plinth, a walkway leads to an island with two white cylinders lying against its shore.",
+   "arrival": "from_L041"
+  }
+ ],
+ "fail_states": [
+  {
+   "kind": "contact",
+   "label": "Held in the tar for more than a second",
+   "basis": "SOURCE",
+   "source_quote": "especially for any time over a second"
+  },
+  {
+   "kind": "entity",
+   "label": "Taken under by a Collagen Leviathan at an island edge or on a walkway",
+   "basis": "SOURCE",
+   "source_quote": "grab the wanderer(s) within their jaws and subsequently burrow back within the tar"
+  },
+  {
+   "kind": "intoxication",
+   "label": "Fainting from the fumes (repeated)",
+   "basis": "SOURCE",
+   "source_quote": "fainting, illness, or vomiting"
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Collagen Leviathans (CONFIRMED) as a scripted presence: passive dolphin dives and a telegraphed strike at island edges and walkways, never combat. The Macchina and the Lost (link list only) are absent.",
+ "content_warning": "Page: burns, melting flesh, fusing with tar, abduction deaths, intoxication, dehydration. Implied only: captions, red tint, blackout.",
+ "notes": "SOURCE: bubbling, oozing, flaming asphalt tar pit with charcoal desert, perpetual grey fog; tar never cools, boils at ~95 C; heat and fumes intoxicate (fainting, illness, vomiting); touch burns even through clothing, flesh fuses past about a second; shallow tar with patchy hot charcoal-sand islands in clusters (bones, dead dried bushes only; do not stand still); islands and piers are the two safe ways; piers: concrete or metal supports, wooden legs and walkways, 2-6 m up, not connected to islands; dry boardwalks burn to their concrete supports; ground gives way, platforms sink and burn; rare fires spread over the tar; submerged telegraph poles, small pylons, tiled bungalow roofs, flat brick townhouse roofs, metal rods; circular lake, ~15 m dunes nobody gets within 50 m of; ~10 failed groups in 50 years (one harvested telegraph copper), their remains blend with the boardwalks; no bases now; Collagen Leviathans (fossil-bone eels 7-20 ft) breach like dolphins, shower tar, sense wanderers at island edges or on piers, leap, grab and burrow; exits: navy vessel bridge broken window (L500), shuttle booster nozzles (L515), barn door on a stone plinth (L612), lighthouse gallery beacon (L626), each unique. ADAPTATION: lake ~500 m across with dunes at r 252-290 m (page gives no size); fog and height fog hide the dunes; the authored network (arrival island, sand spit, plinth island, midway island, shuttle island; three boardwalks at 2.4-4.6 m) plus seeded outlying islets, ruins, sunken decks, roofs, poles, rods and fires; group-built ladders are the way up to the walkways (page: groups built bridges to islands); the lighthouse gallery is reached down a boardwalk that sank onto it; the navy bridge's forward deckhouse roof sits level with the end of the highest walkway; the fume meter only rises (fainting resets it to 62% and costs health); the leviathan wakes at random, senses you at an island edge or on a walkway, bulges the tar beside you after ~6 s, then strikes where you stood (sprint away; burning tar spray if close). Exits L041>L500#1 and L041>L515#2 are documented edges (transitions.json) added in the v2 rebuild. Exits exist only within ~60 m of their object. QA: no damage or death in QA mode; the walker bot walks the sand spit to the barn door (about 25 m).",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdy2d1pxw1a0e"
-path="res://.godot/imported/stairs_colormap.png-c2aea91e498595d5cfaf64cbba8ed2c5.ctex"
+path.s3tc="res://.godot/imported/stairs_colormap.png-c2aea91e498595d5cfaf64cbba8ed2c5.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "76084aa0c65dc2c593e6532f1f61f968"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/packs/prototype-kit/stairs_colormap.png"
-dest_files=["res://.godot/imported/stairs_colormap.png-c2aea91e498595d5cfaf64cbba8ed2c5.ctex"]
+dest_files=["res://.godot/imported/stairs_colormap.png-c2aea91e498595d5cfaf64cbba8ed2c5.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

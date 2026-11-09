@@ -1,33 +1,49 @@
 {
-  "stable_id": "L998",
-  "scene": "res://levels/L998/L998.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
-  "procedural": true,
-  "arrivals": [
-    "start",
-    "from_L737",
-    "from_L002",
-    "from_L011"
-  ],
-  "signature": "Cloud plane grading from white to stormblack",
-  "mechanics": [
-    "graduated_clouds",
-    "office_stairwell",
-    "storm_gradient"
-  ],
-  "exits": [
-    {
-      "id": "L998>EXT#1",
-      "to": "EXT",
-      "basis": "SOURCE",
-      "confidence": "UNKNOWN+DANGEROUS",
-      "method": "walk outward across the cloud plane through the grey and black zones and the storm",
-      "source_quote": "it has never once been known where the edges of Level 998 actually lead to",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-998",
-      "trigger_type": "walk_in"
-    }
-  ],
-  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
-  "entity_policy": "SOURCED ENTITIES ONLY: Smilers, Dullers, entity-17-infected creatures, Woodlins (reported); animalistic types rumoured"
+ "stable_id": "L998",
+ "scene": "res://levels/L998/L998.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": false,
+ "legacy_overlays": false,
+ "content_warning": "Suicide is the central theme of the source page (shown in-game as a content note at first entry). No method or harm is depicted.",
+ "arrivals": [
+  "start",
+  "from_L001",
+  "from_L002",
+  "from_L011",
+  "from_L737"
+ ],
+ "signature": "Through a white lift-like double door to the foot of a concrete office stairwell; eight flights up, a bare room with a clumsy pile of painted pebbles and an empty doorway onto a flat plane of wool-soft cloud that seems deep enough to fall into. Walk outward and the clouds grey, then blacken under gales and rain, figures drift past toward the same edge, and at the neverending storm your camera drowns and the walk ends with no known destination.",
+ "mechanics": [
+  "eight_flight_stairwell_to_bare_room",
+  "painted_pebble_count",
+  "parallax_wool_cloud_plane",
+  "compressed_outward_odometer_white_grey_black_storm",
+  "cold_breeze_gales_rain_push",
+  "outward_drifters_ignore_you_unless_crowded",
+  "storm_kills_light_and_camera",
+  "abstract_end_no_destination"
+ ],
+ "exits": [
+  {
+   "id": "L998>EXT#1",
+   "to": "EXT",
+   "to_label": "Unknown ('the beyond' past the storm; never known)",
+   "trigger": "walk_in",
+   "label": "Walked on into the black storm until nothing could be seen",
+   "confidence": "UNKNOWN+DANGEROUS",
+   "basis": "SOURCE",
+   "source_section": "Entrances And Exits (Exits)",
+   "source_quote": "it has never once been known where the edges of Level 998 actually lead to",
+   "hint": "Everyone on the plane is walking the same way: outward."
+  }
+ ],
+ "fail_states": [],
+ "entity_policy": "REPORTED, scripted only, never combat: dark featureless figures standing in for the grey-zone drifters (Smilers, Dullers, entity-17 infected, Woodlins) walk slowly outward and ignore the player; crowding one makes it stop, turn and shove you back. One Smiler (grin and eyes only) stands in the black haze as a rumoured sighting. Hounds, Wretches, Crawlers, Plague Goblins and Wranglers (RUMORED) are not shown.",
+ "notes": "SOURCE: identical white metal lift-like double doors in many levels lead to the base of a concrete office stairwell; eight flights up a small, originally bare room with ~38 hand-painted pebbles in a clumsy pile and an empty doorway onto the flat cloud plane; the room seen from outside is a square rooftop elevator house with roof skirting and a triangular skylight; the plane is solid, wool-textured, its imprinted clouds seem to move with position and gaze; past ~30 km greying clouds and sky and a cold light breeze (~11 C) with drifting entities heading outward that are not outwardly hostile but may attack if crowded; past ~80 km a black haze, gales to 29 m/s and harsh rain that can push travellers; 15 km further the edge of a neverending black storm (31 m/s, torrential rain) where cameras break and become waterlogged within minutes; beyond is an enigma and where the edges lead was never known; the page treats suicide as a central theme. ADAPTATION: distance compressed (1 m = 200 m of the level; QA mode 1 m = 1 km) so the zones fall at 150/400/475 m; zones drive sky, fog, sun, wind, rain and gust pushes; the storm wall is a ring of churning black cloud; inside it the flashlight fails and the camera blacks out over 8 s, after which a ring of storm triggers fires the documented edge to 'EXT' (the release boundary prompt; no destination is built or implied). Neither hypothesis (safe haven or lethal storm) is presented as fact. The stairwell dressing (painted dado stripe, yellow tread nosings, bulkhead lamps, a fire extinguisher, alarm and utility box) is ours for a believable office stairwell; the page gives no detail. The return through the white doors is not built: the page documents no edge back. Content note shown once at first entry (non-QA). QA mode skips gusts, thunder, drifter reactions and the note. Canon: docs/canon/levels/L998.md; page by Greggita Mahayfaio, CC BY-SA 3.0.",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

@@ -4,6 +4,12 @@ Repository `GitGuanjie/Lost-Frequency-Claude`, branch `main`. The game is at the
 Its history was imported from `GitGuanjie/claude-EO` (`lost_frequency/`, branch `claude/affectionate-wright-axgljs`)
 on 2026-11-06. Engine: Godot **4.5.1** (Forward+).
 
+## Latest state (2026-11-09) — read `docs/production/REMAINING_PLAN.md` first
+- 100/100 levels load and spawn (native entry probe); CompileAll 0 failing scripts.
+- 93 PLAYABLE (66 rebuilt in the v2 programme + 27 earlier), 7 IN_DEVELOPMENT left:
+  L050, L073, L085, L320, L032, L028, L808. Paste-ready prompt: `docs/production/NEXT_SESSION_PROMPT.md`.
+- Windows export: VRAM-compressed textures, non-game folders excluded (`export_presets.cfg`).
+
 ## State (2026-11-08, v2 rebuild programme)
 - **Intake of the external "dev28" build.** The user supplied a dev28 build by another AI agent (100 scenes,
   27 playable + 73 IN_DEVELOPMENT). It was imported verbatim (commit 98fa23f), then:

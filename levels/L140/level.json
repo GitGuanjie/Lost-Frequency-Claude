@@ -1,23 +1,35 @@
 {
-  "stable_id": "L140",
-  "scene": "res://levels/L140/L140.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "UNVERIFIED Godot import, walker, GPU capture and human review pending",
-  "procedural": false,
-  "arrivals": [
-    "start",
-    "from_L019",
-    "from_L149"
-  ],
-  "signature": "A quiet horizon of sunflowers and honey under a changing sky, framed as a personal testimony rather than a quest.",
-  "mechanics": [
-    "sunflower_multimesh",
-    "day_night_cycle",
-    "lobby_with_honey",
-    "testimony_notes",
-    "no_invented_exits"
-  ],
-  "exits": [],
-  "entity_policy": "SOURCE testimony only; no invented enemies",
-  "notes": "ADAPTATION: finite field and accelerated day-night cycle. Distant voice reports are testimony only, no additional creature is invented. Canon: docs/canon/levels/L140.md; authors credited there under CC BY-SA 3.0. Not yet PLAYABLE."
+ "stable_id": "L140",
+ "scene": "res://levels/L140/L140.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": false,
+ "legacy_overlays": false,
+ "arrivals": [
+  "start",
+  "from_L019",
+  "from_L149"
+ ],
+ "signature": "A sunflower field taller than you under a turning day and a starry night: two grandmothers' camp cottage full of honey bottles, a buzzing beehive, a weird flower that hums like a machine, and a blue flower whose petal turns to dust and blooms a path south to the endless wheat",
+ "mechanics": [
+  "day_night_clock_sunrise_5_sunset_18",
+  "stars_at_night",
+  "blue_petal_dust_blooms_path_to_wheat",
+  "comb_to_honey_bottle",
+  "water_the_little_one",
+  "jacket_for_chilly_mornings",
+  "human_made_buzz_flower",
+  "distant_giggle",
+  "soft_endless_field_limit"
+ ],
+ "exits": [],
+ "no_exit_reason": "The page is an epistolary testimony with no Entrances or Exits section and names no way out; its link list (Level 139, Level 141) is navigation only. The wheat field the flower path leads to is terrain, not a level transition. No exit is invented. The level is reached from Level 19 (perimeter blur) and Level 149 (Barrier noclip); those arrivals exist.",
+ "fail_states": [],
+ "entity_policy": "NO ENTITY PER SOURCE. Bees (testimony, animals) appear as particle swarms and buzzing at the hive, the sunflowers and the weird flower. The distant giggling voice is heard once every 6-10 minutes with a caption and never shown. The human-made buzz of the weird flower is only a sound; no watcher is shown. Mary and Gina/Georgia are never shown: they exist through their letters and notes.",
+ "notes": "SOURCE (all TESTIMONY, epistolary page): a field stretching to the horizon; normal day-night cycle, sunsets around 6 pm and sunrises around 5 am (the narrators' convention), stars at night; a distant voice giggles; a lobby with many honey bottles; a backyard with flowers and a little one that looks sad and tired; many sunflowers; buzzing and wind; a beehive near the first sunflower field; cultivated honey, sunflower honey tasting faintly of sunflower oil; the last comb jarred and named after the queen; a second field of weeds left of the sunflower field with a tiny tree in front of a weird hydrangea-like flower giving a human-made buzz, visited by bees; a peculiar blue flower whose petal turns into sparkly dust, after which flowers bloom where the dust flew into a path south toward an infinite wheat field, where it stops abruptly; chilly mornings and a jacket in the closet; the couple set camp first and were asked to investigate the level. ADAPTATION: the camp cottage (ground-floor lobby with shelves of bottles, strainer table, kitchen corner, closet; sleeping loft at +2.75 m up a stair; porch), the fenced backyard, a four-box hive row, the 96 x 74 m sunflower field with walkable furrows, the weed field to its north, the wheat from 150 m south (planted band, then a waist-high golden surface to the horizon); rolling grass to the horizon in a far mesh; a soft limit 250 m from the camp (the field slows you and holds you). Time runs at 1 hour per 75 s (sunrise 5:00, sunset 18:00, stars at night); in QA mode the clock is frozen and stills set their own hour. The petal path blooms over 50 s ('a few hours later' compressed). The author's closing comment ('sunflower hill', 'grannies') is not used as lore. Terrain uses CC0 Poly Haven sparse_grass, dirt_floor and old_wood_floor textures already in assets/external.",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

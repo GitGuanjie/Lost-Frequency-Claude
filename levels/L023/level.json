@@ -1,33 +1,89 @@
 {
-  "stable_id": "L023",
-  "scene": "res://levels/L023/L023.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev4 source candidate",
-  "procedural": true,
-  "arrivals": [
-    "start",
-    "from_L012",
-    "from_L022"
-  ],
-  "signature": "Forest canopy plus an underground luminous water-heart chamber",
-  "mechanics": [
-    "forest",
-    "two_elevations",
-    "water",
-    "root_cave"
-  ],
-  "exits": [
-    {
-      "id": "L023>L007#1",
-      "to": "L007",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "method": "Enter the Heart of Water reservoir; random noclip",
-      "source_quote": "you will be randomly no-clipped into the middle of the ocean in either Level 7 or Level 121",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-23",
-      "trigger_type": "noclip"
-    }
-  ],
-  "notes": "Uses a compact prototype scale. Godot/Windows gameplay and performance not yet verified; no promotion to PLAYABLE.",
-  "entity_policy": "SOURCED ENTITIES ONLY: Gardener's Sorries, Volpes, Hounds, Clumps, Smilers, Death Rats, Deathmoths, Curabitur Birds, Wranglers, buried sentries"
+ "stable_id": "L023",
+ "scene": "res://levels/L023/L023.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": false,
+ "legacy_overlays": false,
+ "content_warning": "Screams loud enough to burst eardrums (the buried sentries), only if the player chooses to say the phrase.",
+ "arrivals": [
+  "start",
+  "from_L135",
+  "from_L012",
+  "from_L022"
+ ],
+ "signature": "The inside of a planetoid made of intertwined trees: glow-room caverns where trees grow in from the walls and multicoloured Gardener's Sorries hang their threads from the ceiling whispering sorry, M.E.G. Base Seedling camped around the hollow tree to Level 135, mossy ruins with their shapes swapped (a spherical Great Pyramid with its Latin plaque, a square Colosseum, a triangular Parthenon, a pyramidal Lighthouse), a dark surface forest under a star that never moves, and the hollow core where the Green Giants rise from the Heart of Water.",
+ "mechanics": [
+  "heart_of_water_random_noclip_7_121_43",
+  "buried_sentries_phrase_scream_and_deafness",
+  "sorry_light_and_whispers",
+  "hollow_tree_gate_to_L135",
+  "surface_forest_under_fixed_star",
+  "swapped_shape_ruins_and_plaque",
+  "no_day_night"
+ ],
+ "exits": [
+  {
+   "id": "L023>L135#4",
+   "to": "L135",
+   "to_label": "Level 135",
+   "trigger": "interact",
+   "label": "Stepped into the hollow tree at the centre of Base Seedling",
+   "confidence": "CONFIRMED",
+   "basis": "SOURCE",
+   "source_section": "Entrances And Exits (Exits)",
+   "source_quote": "This exit serves as a two-way gateway between Level 135 and Level 23 .",
+   "arrival": "from_L023",
+   "hint": "The base guards the only consistent way out; ask the camp."
+  },
+  {
+   "id": "L023>L007#1",
+   "to": "L007",
+   "to_label": "Level 7 (ocean middle)",
+   "trigger": "walk_in",
+   "label": "Waded into the Heart of Water and was no-clipped into the middle of an ocean (Level 7)",
+   "confidence": "CONFIRMED",
+   "basis": "SOURCE",
+   "source_section": "Entrances And Exits (Exits)",
+   "source_quote": "you will be randomly no-clipped into the middle of the ocean in either Level 7 or Level 121",
+   "arrival": "from_L023",
+   "hint": "Everything here drinks from the core."
+  },
+  {
+   "id": "L023>L121#2",
+   "to": "L121",
+   "to_label": "Level 121 (ocean middle)",
+   "trigger": "walk_in",
+   "label": "Waded into the Heart of Water and was no-clipped into the middle of an ocean (Level 121)",
+   "confidence": "CONFIRMED",
+   "basis": "SOURCE",
+   "source_section": "Entrances And Exits (Exits)",
+   "source_quote": "in either Level 7 or Level 121",
+   "arrival": "from_L023",
+   "hint": "Everything here drinks from the core."
+  },
+  {
+   "id": "L023>L043#3",
+   "to": "L043",
+   "to_label": "Level 43 (exhibit)",
+   "trigger": "walk_in",
+   "label": "Waded into the Heart of Water and was no-clipped into an exhibit (Level 43)",
+   "confidence": "CONDITIONAL",
+   "basis": "SOURCE",
+   "source_section": "Entrances And Exits (Exits)",
+   "source_quote": "There is also a chance to no-clip into one of the exhibits in Level 43",
+   "arrival": "from_L023",
+   "hint": "Everything here drinks from the core."
+  }
+ ],
+ "fail_states": [
+  "eardrums: repeated sentry screams hurt (player choice)"
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY, scripted, never combat: Gardener's Sorries (CONFIRMED) as thousands of glowing specks with silk threads, coloured light and whispered 'sorry'; buried sentries (CONFIRMED) as voices screaming from the wood when the phrase is said outside Base Seedling. The other listed entities (Volpes, Hounds, Clumps, Smilers, Death Rats, Deathmoths, Curabitur Birds, rare Wranglers, unknown glow-room animals) are named on the base notice and implied by sound only; none is spawned. Base Seedling is cleared of hostiles and sentries. The ~30 M.E.G. members are not modelled as characters (their camp, gear and notice are).",
+ "notes": "SOURCE: planetoid superorganism of intertwined trees (Ceres-sized surface, Earth gravity); travel through air pockets and winding tunnels; surface an extremely dense forest of varied species (Douglas firs, aspens, mahoganies, redwoods, cedars, cypresses, white oaks) letting little light through; no day or night, a fixed star above the canopy, bathed in light from all directions; glow rooms: large caverns where trees grow in and sprout leaves, lit by multicoloured bioluminescent Sorries whispering 'sorry', glowing fungi and bushes, damp cool air; ruins overgrown with moss and fungi with swapped shapes (spherical Great Pyramid, square Colosseum, triangular Parthenon, pyramidal Lighthouse), worse-quality pottery, damaged paintings and cloth, hasty Latin writing, nothing later than 1000 A.D.; the Great Sphere's Latin plaque; the phrase that wakes the buried sentries in the wood; the hollow core with a spherical ceiling held by the Green Giants, trees growing downward, the Heart of Water at the centre; entering it no-clips you at random to the ocean middle of Level 7 or 121, or by chance to an exhibit of Level 43; M.E.G. Base Seedling in a glow room, friendly, steady water, limited food, guarding the hollow tree that is a two-way gate to Level 135. ADAPTATION: the planetoid is compressed into one connected cave system carved in wood (signed-distance caves, mesher copied from L197): Base Seedling's glow room (y 0), a ruin grove (y +3), a root trench rising to a surface clearing (y +12) and a descending tunnel to a 76 m core (y -10); the Giants are 8-13 m wide trunks (the page's largest is 18 m wide and 3.2 km tall); the Heart is a 25 m basin. The Heart rolls 7 (45%), 121 (45%) or 43 (10%) each time you wade in. The phrase is an interact prompt ('Say it aloud') at two wood walls outside the base (no sentry markers are shown); it screams, hurts and muffles hearing for 18 s. The Latin scrawl is described, not invented. Arrivals from Level 12 (ritual) and Level 22 (post-collapse holes) are placed in the base cavern and the ruin grove. Canon: docs/canon/levels/L023.md; page by Kitty Rika and Beep Bot, CC BY-SA 3.0.",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

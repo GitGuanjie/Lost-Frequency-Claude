@@ -1,11 +1,11 @@
 {
-  "build_ms": 640,
+  "build_ms": 564,
   "engine_native": true,
   "level": "L974",
   "manifest_status": "PLAYABLE",
   "metrics": {
     "audio_players": 6,
-    "collision_shapes": 116,
+    "collision_shapes": 117,
     "exit_triggers": 2,
     "footprint_x": 12.4,
     "footprint_y": 3.4,
@@ -16,7 +16,7 @@
     "materials": 44,
     "mesh_instances": 125,
     "multimesh_instances": 0,
-    "triangles": 4356
+    "triangles": 4380
   },
   "reason": "loaded via real developer transition, safe player spawn, 15 physics ticks",
   "scene": "res://levels/L974/L974.tscn",

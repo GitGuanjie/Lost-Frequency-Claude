@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ducyvjva2uhco"
-path="res://.godot/imported/pipe-corner_colormap.png-9c51638bb89da7f9e24b2d9600d0161b.ctex"
+path.s3tc="res://.godot/imported/pipe-corner_colormap.png-9c51638bb89da7f9e24b2d9600d0161b.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "76084aa0c65dc2c593e6532f1f61f968"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/packs/prototype-kit/pipe-corner_colormap.png"
-dest_files=["res://.godot/imported/pipe-corner_colormap.png-9c51638bb89da7f9e24b2d9600d0161b.ctex"]
+dest_files=["res://.godot/imported/pipe-corner_colormap.png-9c51638bb89da7f9e24b2d9600d0161b.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

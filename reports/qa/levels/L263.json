@@ -18,7 +18,7 @@
     "target": "L263>EXT#1",
     "ticks": 87
    },
-   "build_ms": 369,
+   "build_ms": 284,
    "collision_shapes": 438,
    "distinct_layouts_over_3_seeds": 1,
    "dup_profile": {
@@ -47,7 +47,7 @@
    },
    "exits_declared": 1,
    "exits_found": 1,
-   "load_ms": 453,
+   "load_ms": 357,
    "nav": {
     "exits": [
      {
@@ -81,7 +81,7 @@
   }
  ],
  "renderer": "headless",
- "started": "2026-11-08T20:55:35",
+ "started": "2026-11-09T01:54:19",
  "suites": {
   "duplication": {
    "checks": [],

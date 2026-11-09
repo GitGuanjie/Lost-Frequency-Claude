@@ -1,0 +1,136 @@
+{
+ "duplication_pairs": [],
+ "engine": "4.5.1-stable (official)",
+ "failures": [],
+ "levels": [
+  {
+   "bot": {
+    "distance_to_target": 1.14205729961395,
+    "distance_walked": 1.37865781784058,
+    "edge": "L005_3>L005#2",
+    "final_position": "(14.0, 0.02, 4.878658)",
+    "fired": true,
+    "path_index": 4,
+    "path_points": 4,
+    "progress_samples": [],
+    "reason": "triggered",
+    "sim_seconds": 0.566666666666667,
+    "target": "L005_3>L005#2",
+    "ticks": 34
+   },
+   "build_ms": 1878,
+   "collision_shapes": 3926,
+   "distinct_layouts_over_3_seeds": 3,
+   "dup_profile": {
+    "boxes": {
+     "-1_0_0": 3,
+     "-1_0_1": 17,
+     "-1_1_1": 1,
+     "-1_2_2": 119,
+     "-1_2_3": 253,
+     "-1_2_4": 397,
+     "-1_2_5": 925,
+     "-1_2_6": 298,
+     "-2_-1_2": 141,
+     "-2_0_3": 34,
+     "-2_1_1": 77,
+     "-2_1_2": 17,
+     "-2_1_3": 30,
+     "-2_2_2": 3,
+     "-2_3_6": 350,
+     "-2_6_6": 140,
+     "-3_-2_-2": 2,
+     "-4_-2_-1": 1,
+     "-4_-3_-2": 3,
+     "-5_-1_-1": 1,
+     "-5_-2_-2": 1,
+     "-5_1_3": 60,
+     "-6_-1_0": 30,
+     "-6_0_1": 30,
+     "-6_0_2": 30,
+     "-6_0_3": 90,
+     "-6_0_4": 30,
+     "-6_0_5": 60,
+     "-6_0_6": 80,
+     "0_0_3": 700,
+     "0_1_2": 3,
+     "1_1_2": 1
+    },
+    "materials": {
+     "l53_bars": 1400,
+     "l53_books": 8532,
+     "l53_candle": 33816,
+     "l53_carpet": 700,
+     "l53_ceiling": 1030,
+     "l53_door_old": 250,
+     "l53_flame": 50616,
+     "l53_gold": 124448,
+     "l53_granite": 23380,
+     "l53_iron": 8100,
+     "l53_marble": 700,
+     "l53_marble_wall": 6250,
+     "l53_painting": 1704,
+     "l53_paper": 24,
+     "l53_parquet": 1360,
+     "l53_shade": 648,
+     "l53_tuff": 5600,
+     "l53_wallpaper_old": 4,
+     "l53_walnut": 80188,
+     "l53_walnut_end": 8532
+    }
+   },
+   "exits_declared": 2,
+   "exits_found": 1,
+   "load_ms": 1993,
+   "nav": {
+    "exits": [
+     {
+      "edge": "L005_3>L005#2",
+      "goal": "(14.0, 0.101973, 5.25)",
+      "path_points": 4,
+      "reachable": true,
+      "snap_error": 0.998027443885803,
+      "start_projection_error": 0.100000038743019
+     }
+    ],
+    "map_regions": 1,
+    "map_sync_ticks": 46,
+    "nav_polygons": 6549,
+    "spawn_on_navmesh": true,
+    "spawn_projection_error": 0.100000038743019,
+    "start": "(14.0, 0.101973, 3.5)"
+   },
+   "qa_status": "ENGINE_SMOKE_PASS",
+   "save_tested": true,
+   "self_tests": 11,
+   "spawn": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+   },
+   "stable_id": "L005_3"
+  }
+ ],
+ "renderer": "headless",
+ "started": "2026-11-09T00:55:35",
+ "suites": {
+  "duplication": {
+   "checks": [],
+   "failed": 0,
+   "passed": 1
+  },
+  "framework": {
+   "checks": [],
+   "failed": 0,
+   "passed": 8
+  },
+  "level:L005_3": {
+   "checks": [],
+   "failed": 0,
+   "passed": 29
+  }
+ }
+}

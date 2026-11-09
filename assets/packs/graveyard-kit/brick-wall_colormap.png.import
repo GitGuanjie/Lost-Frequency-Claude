@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://e2ffmjfiqmi"
-path="res://.godot/imported/brick-wall_colormap.png-ca2a145dd914ec1ba6b4db41698f0c82.ctex"
+path.s3tc="res://.godot/imported/brick-wall_colormap.png-ca2a145dd914ec1ba6b4db41698f0c82.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "2c2ace150b11bb1168672d092f519f02"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/packs/graveyard-kit/brick-wall_colormap.png"
-dest_files=["res://.godot/imported/brick-wall_colormap.png-ca2a145dd914ec1ba6b4db41698f0c82.ctex"]
+dest_files=["res://.godot/imported/brick-wall_colormap.png-ca2a145dd914ec1ba6b4db41698f0c82.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

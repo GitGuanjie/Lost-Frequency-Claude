@@ -1,35 +1,46 @@
 {
-  "stable_id": "L083",
-  "scene": "res://levels/L083/L083.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "UNVERIFIED Godot import, walker, GPU capture and human review pending",
-  "procedural": false,
-  "arrivals": [
-    "start",
-    "from_L007"
-  ],
-  "signature": "An intact but submerged nuclear submarine with two deck levels, humming compartments and a return hatch to Level 7.",
-  "mechanics": [
-    "two_decks",
-    "bulkhead_chambers",
-    "reactor_warning",
-    "bridge_portholes",
-    "canonical_hatch"
-  ],
-  "exits": [
-    {
-      "id": "L083>L007#1",
-      "to": "L007",
-      "trigger": "interact",
-      "label": "Escape hatch to Level 7",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "source_section": "Dated canonical snapshot; exits",
-      "source_quote": "undo the escape hatch and swim out",
-      "arrival": "from_L083",
-      "hint": "Escape hatch to Level 7"
-    }
-  ],
-  "entity_policy": "The Crew and Great Observer described in source; no unsourced hostile AI",
-  "notes": "ADAPTATION: finite two-deck traverse and periodic offscreen knocking stand in for long, distant hull events; no unsupported crew combat or reactor quest. Window eye not portrayed as a confirmed monster model. Canon: docs/canon/levels/L083.md; authors credited there under CC BY-SA 3.0. Not yet PLAYABLE."
+ "stable_id": "L083",
+ "scene": "res://levels/L083/L083.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": false,
+ "arrivals": [
+  "start",
+  "from_L007"
+ ],
+ "signature": "The USS Ace of Spades lying intact on a rocky valley floor 600 m down: three humming decks of berthing, mess, galley and dead controls, a reactor tunnel and an engine room under the bare hull, windows on both sides onto black water and fish, Kira's pirate drawings and post-its everywhere, and the Great Observer's eye at the glass.",
+ "mechanics": [
+  "three_decks_four_ladders",
+  "engine_room_two_levels",
+  "reactor_tunnel_ports",
+  "windows_both_sides_fish_rocks",
+  "restocking_refrigerators",
+  "great_observer_rock_tap_eye_cycle",
+  "dead_controls",
+  "kira_postits_and_drawings",
+  "crew_traces_and_signs",
+  "escape_trunk_hatch_exit"
+ ],
+ "exits": [
+  {
+   "id": "L083>L007#1",
+   "to": "L007",
+   "trigger": "interact",
+   "label": "Escape hatch to Level 7",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "source_section": "Dated canonical snapshot; exits",
+   "source_quote": "undo the escape hatch and swim out",
+   "arrival": "from_L083",
+   "hint": "Escape hatch to Level 7"
+  }
+ ],
+ "entity_policy": "SOURCED ONLY: the Great Observer as a scripted, harmless presence outside the hull (creaking and rocking currents, rhythmic tapping, its 20-inch eye pressed to the nearest window, one arm sweeping past, then it darts away; never damage). Pacific salmon, ragfish and Atka mackerel seen through the windows. The Crew (friendly residents) shown by their traces only. No hostile entities.",
+ "notes": "SOURCE: sunken nuclear submarine USS Ace of Spades (SSN 744), Los Angeles-class layout plus windows on both sides; ~600 m deep in a rocky valley; controls dead, lights and kitchen appliances work, reactor runs; fridges with bottled water and food that restock; arrival in the berth or the canteen (leather couch, small metal tables, a few chairs); berth of empty mattresses; holds 140, crew of 20-100 asks non-residents to leave by the escape hatch; Kira's pirate drawings and signed post-it instructions; her undamaged note on the outside of the hull; Great Observer rocks, taps and watches; exit: undo the escape hatch at the top and swim out. ADAPTATION: hull compressed to 84 m (forward compartment 40 m on three decks, reactor compartment 14 m crossed by a tunnel at middle-deck height, engine room 30 m on two levels); exact room plan is ours after a generic Los Angeles-class arrangement; the arrival room is chosen by seed parity; the Crew is shown by traces (made-up racks, notice board, trade table, hand-written signs to the hatch) because no figure model is used; Great Observer cycle every 70-140 s (rocking push unless crouched, no damage); fridge restock after 40-75 s and heals 15; the outside note is read through the glass; Kira's post-it texts are ours in her voice. The outside of the boat is not walkable (page: unexplored); the ten-minute rule outside is therefore not modelled.",
+ "legacy_overlays": false,
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

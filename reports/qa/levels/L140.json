@@ -1,0 +1,101 @@
+{
+ "duplication_pairs": [],
+ "engine": "4.5.1-stable (official)",
+ "failures": [],
+ "levels": [
+  {
+   "build_ms": 2297,
+   "collision_shapes": 139,
+   "distinct_layouts_over_3_seeds": 1,
+   "dup_profile": {
+    "boxes": {
+     "-1_-1_-1": 1,
+     "-1_0_0": 1,
+     "-1_0_1": 2,
+     "-2_-2_-2": 4,
+     "-2_1_3": 6,
+     "-3_-1_2": 1,
+     "-3_0_0": 10,
+     "-3_1_2": 4,
+     "-3_2_2": 3,
+     "-3_2_3": 1,
+     "-3_2_4": 1,
+     "-3_2_5": 1,
+     "-3_3_5": 1,
+     "-4_-4_2": 3,
+     "-4_0_4": 1,
+     "-4_0_5": 1,
+     "-5_0_1": 1,
+     "-5_0_3": 1,
+     "-5_0_5": 1,
+     "-5_0_6": 2,
+     "-5_4_5": 1,
+     "-6_-2_-2": 3,
+     "0_0_0": 1,
+     "0_0_4": 2,
+     "0_1_2": 1,
+     "0_4_5": 1,
+     "1_1_1": 1
+    },
+    "materials": {
+     "l140_boards": 544,
+     "l140_comb": 36,
+     "l140_floor_wood": 264,
+     "l140_glass": 48,
+     "l140_hive_a": 1620,
+     "l140_hive_b": 36,
+     "l140_hive_c": 24,
+     "l140_honey": 2800,
+     "l140_roof": 120,
+     "l140_stone": 24,
+     "l140_trim": 3044,
+     "l140_window_lit": 64,
+     "unlit_black": 48
+    }
+   },
+   "exits_declared": 0,
+   "exits_found": 0,
+   "load_ms": 2426,
+   "nav": {
+    "exits": [],
+    "map_regions": 1,
+    "map_sync_ticks": 3,
+    "nav_polygons": 651,
+    "spawn_on_navmesh": true,
+    "spawn_projection_error": 0.100000143051147,
+    "start": "(1.5, 2.444681, 1.6)"
+   },
+   "qa_status": "ENGINE_SMOKE_PASS",
+   "save_tested": true,
+   "self_tests": 8,
+   "spawn": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+   },
+   "stable_id": "L140"
+  }
+ ],
+ "renderer": "headless",
+ "started": "2026-11-09T02:11:35",
+ "suites": {
+  "duplication": {
+   "checks": [],
+   "failed": 0,
+   "passed": 1
+  },
+  "framework": {
+   "checks": [],
+   "failed": 0,
+   "passed": 8
+  },
+  "level:L140": {
+   "checks": [],
+   "failed": 0,
+   "passed": 21
+  }
+ }
+}

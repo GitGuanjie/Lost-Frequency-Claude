@@ -1,30 +1,46 @@
 {
-  "stable_id": "L077",
-  "scene": "res://levels/L077/L077.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev7 candidate",
-  "procedural": true,
-  "arrivals": [
-    "start"
-  ],
-  "signature": "Rolling summer pastures ringed by dangerous night forest",
-  "mechanics": [
-    "daylight_pasture",
-    "sheep_country",
-    "peripheral_night_forest"
-  ],
-  "exits": [
-    {
-      "id": "L077>EXT#1",
-      "to": "EXT",
-      "basis": "SOURCE",
-      "confidence": "CONDITIONAL+DANGEROUS",
-      "method": "Walk in surrounding forest beyond 6 km; noclip through detritus",
-      "source_quote": "When walking through the surrounding forest, at any distance greater than 6 km, a traveler will have a 65% chance to no-clip through the detritus",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-77",
-      "trigger_type": "noclip"
-    }
-  ],
-  "notes": "Distinct source-informed compact prototype, not a full-scale adaptation. Only source-defined exits are declared; unknown exit destinations stay unlinked. Physical traversal/lighting/scene scripts require Godot 4.5.1 verification.",
-  "entity_policy": "SOURCED ENTITIES ONLY: Nguithr'xurh, Shenandoah Sheep, Murphy Estate humans"
+ "stable_id": "L077",
+ "scene": "res://levels/L077/L077.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": false,
+ "legacy_overlays": false,
+ "arrivals": [
+  "start"
+ ],
+ "signature": "Steep, fog-filled hills of even green grass under a constant day, flocks of Shenandoah Sheep drifting through the mist, and all round them a wall of deciduous forest where it is always night and the Nguithr'xurh have strung their silk.",
+ "mechanics": [
+  "bisected_day_light_follows_forest_depth",
+  "valley_fog_height_layer",
+  "grazing_flocks_drift_and_shy",
+  "nguithrxurh_threat_builds_beside_subclusters",
+  "six_km_detritus_roll_65_percent_noclip"
+ ],
+ "exits": [
+  {
+   "id": "L077>EXT#1",
+   "to": "EXT",
+   "to_label": "Any level with heavily forested areas",
+   "trigger": "noclip",
+   "label": "Pushed on into the detritus more than 6 km into the forest and fell through it",
+   "basis": "SOURCE",
+   "confidence": "CONDITIONAL+DANGEROUS",
+   "source_section": "Entrances and Exits",
+   "source_quote": "at any distance greater than 6 km, a traveler will have a 65% chance to no-clip through the detritus",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-77",
+   "trigger_type": "noclip",
+   "hint": "Keep walking away from the light until the litter is deep enough to sink into.",
+   "arrival": "from_L077"
+  }
+ ],
+ "fail_states": [
+  "lingering beside a Nguithr'xurh sub-cluster in the forest (page: 95% of unaligned travelers do not survive their territory)"
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Shenandoah Sheep (grazing flocks in the hills); Nguithr'xurh only in the forest ring, as silk sub-clusters, egg sacs, eye-glints and sound, never seen in the hills and never fought; the Murphy Estate humans are not shown (the page does not place them).",
+ "notes": "SOURCE: 25 km2 of steep undulating hills and valleys (under 1 m to nearly 80 m, median ~25 m) in a bisected diurnal cycle: constant daylight in the centre, the surrounding dense deciduous forest nightbound; zoysia grass, bluegrass and mosses on loam in uniform growth; one constant condition, fog, densest in valleys and crevices, direction hard to keep; no standing fresh water; ~15,000 Shenandoah Sheep that hydrate from the fog; a Nguithr'xurh super-colony of sub-clusters with queens, highest concentration within 1 km of the border, never in the central area, 95% of unaligned travelers die in it; entrances all occur in the forest ~4 km from the border; exit beyond 6 km in the forest with a 65% chance to no-clip through the detritus into any heavily forested level; Samuel Murphy's 1938 diary names the hills New Shenandoah. ADAPTATION: the hills are scaled to ~0.45 km2 (border radius ~380 m, crests to ~70 m) and forest depth is read at 1 m = 40 m, so the 4 km arrival is 100 m into the trees and the 6 km line is 150 m in; the light, sky and fog blend between day and night with forest depth, and the hills glow with daylight when seen from inside the night; the Nguithr'xurh are shown as silk sheets, funnels, egg sacs and eye-glints (the page's hatchery caption) with clicking sound, and lingering beside a sub-cluster for ~18 s is fatal; each detritus heap beyond 6 km rolls its 65% once when you first reach it; a stone cairn on the highest crest holds the diary page and a wanderer's survey card (paraphrased); a scratched stone at the treeline; the Murphy Estate and the B.N.T.G. trade route are not built because the page keeps them unknown/secret. The streamed forest is a finite window round the player; beyond ~600 m the far forest is a canopy shell. QA mode always opens the authored heap on the arrival bearing and skips threat deaths so the walker bot is deterministic. Canon: docs/canon/levels/L077.md; page by DrAkimoto, CC BY-SA 3.0.",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

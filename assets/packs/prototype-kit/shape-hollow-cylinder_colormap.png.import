@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://x2cf6bns4m4f"
-path="res://.godot/imported/shape-hollow-cylinder_colormap.png-6dfd27548cc305850ea43d5273b4d930.ctex"
+path.s3tc="res://.godot/imported/shape-hollow-cylinder_colormap.png-6dfd27548cc305850ea43d5273b4d930.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "76084aa0c65dc2c593e6532f1f61f968"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/packs/prototype-kit/shape-hollow-cylinder_colormap.png"
-dest_files=["res://.godot/imported/shape-hollow-cylinder_colormap.png-6dfd27548cc305850ea43d5273b4d930.ctex"]
+dest_files=["res://.godot/imported/shape-hollow-cylinder_colormap.png-6dfd27548cc305850ea43d5273b4d930.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

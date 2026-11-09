@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnrxkfagtxtff"
-path="res://.godot/imported/plate-broken_colormap.png-4ee9d4f01301b20da60082bf03e53b51.ctex"
+path.s3tc="res://.godot/imported/plate-broken_colormap.png-4ee9d4f01301b20da60082bf03e53b51.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "4296df7c74d385beaabf51e4d39e95b2"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/packs/food-kit/plate-broken_colormap.png"
-dest_files=["res://.godot/imported/plate-broken_colormap.png-4ee9d4f01301b20da60082bf03e53b51.ctex"]
+dest_files=["res://.godot/imported/plate-broken_colormap.png-4ee9d4f01301b20da60082bf03e53b51.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

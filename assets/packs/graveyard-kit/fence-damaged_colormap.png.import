@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bausmbaj84nmi"
-path="res://.godot/imported/fence-damaged_colormap.png-5b08fb361784077a2f0261e25b8b4126.ctex"
+path.s3tc="res://.godot/imported/fence-damaged_colormap.png-5b08fb361784077a2f0261e25b8b4126.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "2c2ace150b11bb1168672d092f519f02"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/packs/graveyard-kit/fence-damaged_colormap.png"
-dest_files=["res://.godot/imported/fence-damaged_colormap.png-5b08fb361784077a2f0261e25b8b4126.ctex"]
+dest_files=["res://.godot/imported/fence-damaged_colormap.png-5b08fb361784077a2f0261e25b8b4126.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

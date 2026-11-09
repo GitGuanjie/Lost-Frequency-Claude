@@ -1,31 +1,54 @@
 {
-  "stable_id": "L016",
-  "scene": "res://levels/L016/L016.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev5 source candidate",
-  "procedural": true,
-  "arrivals": [
-    "start"
-  ],
-  "signature": "Rainforest at permanent dawn adjoining a bright glacial basin; archived climate-shift cycle",
-  "mechanics": [
-    "low_gravity",
-    "rainforest",
-    "glacial_tract",
-    "climate_shift"
-  ],
-  "exits": [
-    {
-      "id": "L016>L046#1",
-      "to": "L046",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "method": "Rainforest state: climb a sand-covered tree; arctic state: stand on a sand-covered ice sheet",
-      "source_quote": "The location of the exit is different with each alteration, but the destination is constant.",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-16",
-      "trigger_type": "interact"
-    }
-  ],
-  "notes": "Compact exploration adaptation. Runtime Godot and Windows verification required; no automatic PLAYABLE promotion.",
-  "entity_policy": "SOURCED ENTITIES ONLY: Light Guides (arctic state); NO ENTITY PER SOURCE for the rainforest state"
+ "stable_id": "L016",
+ "scene": "res://levels/L016/L016.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": true,
+ "legacy_overlays": false,
+ "arrivals": [
+  "start"
+ ],
+ "signature": "A fog-bound valley that will not stay the same place: a dawn rainforest where you weigh almost nothing, then - after the little lights circle you and the ground lurches - a luminous arctic of glaciers and frozen river under Light Guides, with the way to Level 46 never where it was.",
+ "mechanics": [
+  "two_terrain_states_rainforest_arctic",
+  "alteration_at_unknown_intervals",
+  "warning_orbs",
+  "glaciers_jut_up_rivers_gush_from_boulders",
+  "encasement_in_changing_terrain",
+  "low_gravity_for_foreigners_in_rainforest",
+  "permanent_dawn_vs_13h_day",
+  "exit_moves_with_each_alteration"
+ ],
+ "exits": [
+  {
+   "id": "L016>L046#1",
+   "to": "L046",
+   "trigger": "interact",
+   "trigger_type": "interact",
+   "label": "Climbed the sand-covered tree (rainforest) / stood on the sand-covered ice sheet (arctic) and came out in Level 46",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "method": "Rainforest state: climb a sand-covered tree; arctic state: stand on a sand-covered ice sheet",
+   "source_section": "Entrances And Exits",
+   "source_quote": "The location of the exit is different with each alteration, but the destination is constant.",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-16",
+   "hint": "Something here is the colour of a beach. It moves every time the land does.",
+   "arrival": "from_L016"
+  }
+ ],
+ "fail_states": [
+  {
+   "kind": "encased",
+   "label": "Encased by a glacier rising under you during an alteration",
+   "basis": "SOURCE",
+   "source_quote": "you can become encased within the changing terrain"
+  }
+ ],
+ "entity_policy": "SOURCED ENTITIES ONLY: Light Guides (arctic state, CONFIRMED by name only) shown as groups of small drifting lights, never interactive. Rainforest state: no entity per source (native organisms implied only by insect ambience).",
+ "notes": "SOURCE: terminal frame with two backup files; File 1: heavy rainforest, persistent fog, gravity greatly reduced for foreign objects/entities only, permanent dawn, constant 21 C, base theoretically possible; exit: climb a tree covered in sand (Level 46). File 2 (current state): arctic, luminous highly reflective ice, ~13 h day-night, 10-6 C, large groups of Light Guides; terrain alters at unknown intervals and its properties change; no long-term bases; testimony: glaciers jutting up, rivers gushing from boulders, freezing air, small orbs as a warning, encasement (frostbite and scrapes); the Level Key changed with the level; exit location changes with each alteration, destination constant: stand on a sheet of ice covered in sand; 'Walked into a rainforest, walked out of a tundra.' ADAPTATION: one valley ~260 m across with ridges, a mesa with a walkable spur and a river; both states share it; the alteration is a front sweeping out from a seeded point 70 m from you (trees sink, glaciers rise, the river freezes or thaws); seeded starting state; intervals 4-7 min with a 25 s orb warning (never in QA); the arctic day is compressed to 13 minutes; low gravity (3.4 m/s2) applies to the player only in the rainforest; Light Guides' look is not in the snapshot (drifting lights); the climb of the sand tree is an interact at its base; the ice-sheet exit is a 2.5 s dwell; the clipboard printouts paraphrase the two files; a soft push-back stops you climbing the ridges past r=132 m. QA: the first exit spot is 30-40 m from the arrival on dry ground.",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }
