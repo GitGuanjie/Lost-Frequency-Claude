@@ -1,50 +1,85 @@
 {
-  "stable_id": "L006_1",
-  "scene": "res://levels/L006_1/L006_1.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — candidate dev3",
-  "procedural": false,
-  "arrivals": [
-    "start",
-    "from_L006"
-  ],
-  "signature": "1980s food-court mall with historical diners and free vending",
-  "mechanics": [
-    "vending",
-    "restaurant_warp"
-  ],
-  "exits": [
-    {
-      "id": "L006_1>L006#1",
-      "to": "L006",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "method": "Rusty steel door",
-      "source_quote": "Constantly guarded by The M.E.G. and access to this exit without permission is restricted.",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-6-1",
-      "trigger_type": "door"
-    },
-    {
-      "id": "L006_1>L011#2",
-      "to": "L011",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "method": "Sliding glass doors on perimeter",
-      "source_quote": "This exit is the safest and easiest way to exit Level 6.1 .",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-6-1",
-      "trigger_type": "door"
-    },
-    {
-      "id": "L006_1>L003#3",
-      "to": "L003",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "method": "Enter any vent opening",
-      "source_quote": "Entering through any vent opening will cause you to be sucked into the vent and dropped into Level 3 .",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-6-1",
-      "trigger_type": "interact"
-    }
-  ],
-  "notes": "Source constrained to 2026-11-04 snapshot. All distances are compressed for playable prototype. No engine QA, Windows test or human screenshot review passed yet.",
-  "entity_policy": "No invented hostile entities; narrative testimony is not treated as verified encounter."
+ "stable_id": "L006_1",
+ "scene": "res://levels/L006_1/L006_1.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED (v2.0 rebuild)",
+ "procedural": true,
+ "arrivals": [
+  "start",
+  "from_L006"
+ ],
+ "signature": "An endless 1980s mall food court lit like daylight under skylights that show only darkness: navy tables around a sunken circle, halls of snack bars from the 1950s to the 1600s, free food that runs out until the weekly restock, and restaurant back doors that let you out somewhere else.",
+ "mechanics": [
+  "free_food_counters_with_stock",
+  "shutters_close_until_restock",
+  "free_vending_with_stock",
+  "restaurant_backdoor_warp",
+  "seeded_vending_room",
+  "track_mappers_map",
+  "meg_guard_permission",
+  "faceling_staff",
+  "dark_skylights_daylight",
+  "sunken_circular_dip",
+  "eighties_mall_music"
+ ],
+ "exits": [
+  {
+   "id": "L006_1>L011#2",
+   "to": "L011",
+   "trigger": "walk_in",
+   "label": "Walked out through the perimeter sliding glass doors",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "source_section": "Entrances And Exits",
+   "source_quote": "Sliding glass doors that will bring you to Level 11 , outside of a random restaurant.",
+   "hint": "The south hall ends at the perimeter: glass doors and orange-white light.",
+   "arrival": "from_L006_1"
+  },
+  {
+   "id": "L006_1>L006#1",
+   "to": "L006",
+   "trigger": "condition",
+   "label": "Through the rusty steel door into the dark",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "source_section": "Entrances And Exits",
+   "source_quote": "A rusty steel door that leads to Level 6 . Screaming can often be heard behind this door.",
+   "hint": "The guarded door at the end of the north hall; talk to the guards first.",
+   "arrival": "from_L006_1"
+  },
+  {
+   "id": "L006_1>L003#3",
+   "to": "L003",
+   "trigger": "interact",
+   "label": "Sucked into a vent and dropped",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "source_section": "Entrances And Exits",
+   "source_quote": "Entering through any vent opening will cause you to be sucked into the vent and dropped into Level 3 .",
+   "hint": "Low vent grilles in the hall walls; listen for the draught.",
+   "arrival": "from_L006_1"
+  },
+  {
+   "id": "L006_1>EXT#4",
+   "to": null,
+   "to_label": "The Blue Channel",
+   "trigger": "condition",
+   "label": "Stepped into an unnaturally bent wall",
+   "basis": "SOURCE",
+   "confidence": "CONDITIONAL",
+   "source_section": "Entrances And Exits",
+   "source_quote": "Finding a wall that is unnaturally bent and entering it can lead you to The Blue Channel .",
+   "hint": "A stretch of wall in the west hall that is not straight any more.",
+   "arrival": "from_L006_1"
+  }
+ ],
+ "notes": "ADAPTATION: the infinite mall is an authored, seeded slice (a 32 m atrium and four 40-48 m halls, ~40 storefronts) closed by sourced features: the guarded Level 6 door, perimeter glass doors, a room choked with vending machines and a shuttered entrance. The weekly restock is not simulated in real time (stock only runs down). Seeds change the vending-room arrangement, stocks, staff placement and the back-door mapping. Storefront names other than Clippers and Liquorette are generic dressing. The Blue Channel is not built (release boundary). Canon: docs/canon/levels/L006_1.md; CC BY-SA 3.0. Not yet PLAYABLE.",
+ "entity_policy": "SOURCE_ONLY. Facelings with The 11 Effect (friendly staff) and humans (M.E.G. guards, a Track Mapper, Snackrooms Staff) as static scripted presences. No hostile spawns; the December 2020 infestation is a logged incident shown only through the lockdown notice.",
+ "legacy_overlays": false,
+ "fail_states": [],
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

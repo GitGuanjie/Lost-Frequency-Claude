@@ -10,6 +10,8 @@ var fails := 0
 var _story_fired := ""
 
 
+var _err_logger: Logger = null
+
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	for a in OS.get_cmdline_user_args():
@@ -433,7 +435,14 @@ func _level_suite(sid: String) -> void:
 		check(bot.get("fired", false), s, "walker bot physically triggers an exit", bot)
 		check(bot.get("edge", "") in found_ids, s, "bot fired a declared exit", bot.get("edge", ""))
 	print("QA[%s] pause_save" % sid)
-	var st: Array = await lvl.qa_self_test()
+	if _err_logger == null:
+		_err_logger = preload("res://tests/QAErrorLogger.gd").new()
+		OS.add_logger(_err_logger)
+	_err_logger.arm()
+	var st_v: Variant = await lvl.qa_self_test()
+	var st_errors: Array[String] = _err_logger.disarm()
+	var st: Array = st_v if st_v is Array else []
+	check(st_errors.is_empty(), s, "self-tests raise no script errors", st_errors)
 	for c in st:
 		check(c.get("ok", false), s, "self-test: " + str(c.get("what", "")), c.get("detail", null))
 	rec["self_tests"] = st.size()

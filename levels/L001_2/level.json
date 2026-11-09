@@ -1,32 +1,51 @@
 {
-  "stable_id": "L001_2",
-  "scene": "res://levels/L001_2/L001_2.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev5 source candidate",
-  "procedural": true,
-  "arrivals": [
-    "start",
-    "from_L001"
-  ],
-  "signature": "Overgrown concrete warehouse; living-memory flowers, walkable ruins and a safe return threshold",
-  "mechanics": [
-    "overgrown_warehouse",
-    "memory_visions",
-    "exploration",
-    "source_return"
-  ],
-  "exits": [
-    {
-      "id": "L001_2>L001#1",
-      "to": "L001",
-      "basis": "SOURCE",
-      "confidence": "CONDITIONAL",
-      "method": "walk back to entrance; mechanism not described",
-      "source_quote": "looking for the Garden's entrance",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-1-2",
-      "trigger_type": "walk_in"
-    }
-  ],
-  "notes": "Compact exploration adaptation. Runtime Godot and Windows verification required; no automatic PLAYABLE promotion.",
-  "entity_policy": "NO ENTITY PER SOURCE"
+ "stable_id": "L001_2",
+ "scene": "res://levels/L001_2/L001_2.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": true,
+ "legacy_overlays": false,
+ "arrivals": [
+  "start",
+  "from_L001"
+ ],
+ "signature": "Level 1's concrete warehouse swallowed by a garden: grass and flowers of every colour between the huge pillars, vines up every column and across the ceiling, a batch of sunflowers under a live tube, ancient stone ruins and abandoned camps, and pollen that carries the memories of the people the garden has already taken.",
+ "mechanics": [
+  "bloom_after_compressed_hour",
+  "bluebonnet_pollen_memories",
+  "fragile_stone_fence",
+  "notebook_loses_words",
+  "transformation_fail_state",
+  "labyrinth_partition_walls_seeded",
+  "terrace_lookout_sunken_bay"
+ ],
+ "exits": [
+  {
+   "id": "L001_2>L001#1",
+   "to": "L001",
+   "trigger": "walk_in",
+   "label": "Walked back out of the Concrete Garden into the bare concrete halls",
+   "confidence": "CONDITIONAL",
+   "basis": "SOURCE",
+   "source_section": "Story",
+   "source_quote": "looking for the Garden's entrance",
+   "hint": "The way out is the way in: the concrete hall where the grass thins out.",
+   "arrival": "from_L001_2"
+  }
+ ],
+ "fail_states": [
+  {
+   "kind": "hazard",
+   "label": "Became part of the Concrete Garden (Bloom reached 100 %)",
+   "basis": "SOURCE",
+   "source_quote": "progressively turning you into a plant like many others in the past"
+  }
+ ],
+ "entity_policy": "NO ENTITY PER SOURCE. Entities avoid the garden; nothing is spawned. The Curabitur Bird and the Leaders operative appear only as pollen memories (captions).",
+ "notes": "SOURCE: sub-sector of Scene 01.3 with Level 1's layout plus heavy vegetation (tall grass and multicoloured flowers on the floor; vines on pillars and walls, sometimes across the ceiling); no entities; settlers never heard from again; an hour inside starts turning you into a plant. TESTIMONY: concrete floor giving way to crunchy grass; fresh air; plants of contradicting climates with no sun or soil; ruins of settlements, some far too ancient for wanderers; fragile stone fences; bluebonnet pollen memories (togas and birds; a Leaders operative rooted to the ground); the level taking the visitor's memories (sunflowers as anchor); a rose through the leg, muscles failing; labyrinthine layout. ADAPTATION: a 64 x 80 m garden behind a 24 m concrete hall (the page gives no size); the terrace (+1.2 m), lookout (+2.4 m) and sunken bay (-1.2 m) are natural variation, not page facts; partition-wall openings and rubble are seeded; the compressed hour (4 min) and Bloom rate (7 min to full); pollen adds 5 %; Bloom stages and the notebook text are paraphrases of the story beats. The rescue to Base Alpha (L001_2>EXT#2) and death by transformation (L001_2>EXT#3) are not exits: the latter is the fail state. Not built: Olivia, Megan or Tournesol as characters; Level 1.1 / 1.3 links (link list only).",
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

@@ -1,36 +1,43 @@
 {
-  "stable_id": "L090",
-  "scene": "res://levels/L090/L090.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "UNVERIFIED Godot import, walker, GPU capture and human review pending",
-  "procedural": false,
-  "arrivals": [
-    "start",
-    "from_L025"
-  ],
-  "signature": "A renovated but unreliable two-floor family house with an attic, broken AC and an ancient oak in the backyard.",
-  "mechanics": [
-    "two_storey_house",
-    "attic",
-    "old_oak_exit",
-    "unreliable_real_estate_voice",
-    "broken_ac"
-  ],
-  "exits": [
-    {
-      "id": "L090>EXT#1",
-      "to": "EXT",
-      "trigger": "walk_in",
-      "label": "Exit by old oak tree; destination unstated",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "source_section": "Dated canonical snapshot; exits",
-      "source_quote": "Exit near the old oak tree in the backyard",
-      "arrival": "",
-      "hint": "Exit by old oak tree; destination unstated",
-      "to_label": "Unnumbered exit by the backyard oak"
-    }
-  ],
-  "entity_policy": "Death Rats unverified, no new entity spawned",
-  "notes": "ADAPTATION: finite house footprint and hand-placed furnishings. Do not imply the alleged Death Rats are confirmed; exit destination kept unknown. Canon: docs/canon/levels/L090.md; authors credited there under CC BY-SA 3.0. Not yet PLAYABLE."
+ "stable_id": "L090",
+ "scene": "res://levels/L090/L090.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "ENGINE_SMOKE_PASS (2026-11-08, seeds 1001/2002/3003 22/22 each; bot fired L090>EXT#1 behind the oak); stills reviewed by builder (AI); integrator review pending",
+ "procedural": false,
+ "arrivals": [
+  "start",
+  "from_L025"
+ ],
+ "signature": "A freshly painted family house for sale - two floors, a big attic, two bedrooms, two bathrooms - whose cheerful sales notes don't quite match it: a door painted shut under the stair, traps in the attic, an air conditioner that trips the power, and an exit by the old oak in the back garden",
+ "mechanics": [
+  "two_storey_house_with_walkable_attic",
+  "unreliable_sales_voice_notes",
+  "broken_ac_trips_breaker",
+  "painted_shut_cupboard",
+  "old_oak_exit",
+  "fenced_lot_chained_gate"
+ ],
+ "exits": [
+  {
+   "id": "L090>EXT#1",
+   "to": "EXT",
+   "trigger": "walk_in",
+   "label": "Walked round the far side of the old oak tree in the backyard and out of the house's world",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "source_section": "Entrances And Exits",
+   "source_quote": "There's an exit near the old oak tree in the backyard.",
+   "arrival": "",
+   "hint": "The grass is worn into a path that goes round behind the old oak.",
+   "to_label": "Unnumbered exit by the backyard oak"
+  }
+ ],
+ "entity_policy": "NO ENTITY PER SOURCE ('there isn't really anybody here... yet'). Death Rats are RUMORED (claimed exterminated by an unreliable voice): only traps, bait boxes and an ambiguous scratching sound; no rat is modelled or spawned. No residents.",
+ "notes": "SOURCE: sales-pitch voice of an unnamed renovation team; 'newly renovated house'; two floors, a pretty big attic, two bedrooms, two bathrooms; used to be 'real bad', a 'torture labyrinth'; Death Rat infestation said to be exterminated; nobody lives here yet, hard to sell because of its reputation; AC installed but 'in shambles'; anyone who means well may stay; exit near the old oak in the backyard, return allowed. ADAPTATION: the house plan (hall and stair; living room, open kitchen/dining; laundry, bathroom 1, den mid-paint; bedroom 1, bathroom 2, bedroom 2, bonus room with a steep attic stair; walkable attic under a 40-degree gable), the staged furniture, the fenced lot with a chained front gate (the page names only the oak exit, so the gate is a diegetic limit), woods and late-afternoon haze round the lot, a FOR SALE sign; small wrongness under the fresh paint (a door under the stair painted shut that breathes cold stone air, snap traps and bait boxes along the attic eaves, a rare scratching that may be the house settling); the AC mechanic (thermostat -> rattle -> breaker trips and the house lights die -> reset at the laundry panel; fails the same way every time) dramatises 'in shambles'. Lighting, sound, temperature and materials are not stated by the page; ordinary house tone, wind and evening insects. No labyrinth is walkable and no rats appear (canon traps). Exit destination unstated (to EXT). Canon: docs/canon/levels/L090.md; author ratscrapz credited there under CC BY-SA 3.0. Not yet PLAYABLE.",
+ "legacy_overlays": false,
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

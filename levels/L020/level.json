@@ -1,59 +1,101 @@
 {
-  "stable_id": "L020",
-  "scene": "res://levels/L020/L020.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "UNVERIFIED Godot import, walker, GPU capture and human review pending",
-  "procedural": false,
-  "arrivals": [
-    "start",
-    "from_L011",
-    "from_L019"
-  ],
-  "signature": "A complex activity palace with quiet waiting halls and a second, electrically lit arcade district.",
-  "mechanics": [
-    "two_distinct_regions",
-    "interactive_three_console_sequence",
-    "staff_only_exit",
-    "arcade_ambient"
-  ],
-  "exits": [
-    {
-      "id": "L020>L002#1",
-      "to": "L002",
-      "trigger": "interact",
-      "label": "Staff-only door",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "source_section": "Dated canonical snapshot; exits",
-      "source_quote": "Staff-only doors in Waiting halls",
-      "arrival": "from_L020",
-      "hint": "Staff-only door"
-    },
-    {
-      "id": "L020>L024#2",
-      "to": "L024",
-      "trigger": "noclip",
-      "label": "Windows into Level 24",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "source_section": "Dated canonical snapshot; exits",
-      "source_quote": "No-clip through windows",
-      "arrival": "from_L020",
-      "hint": "Windows into Level 24"
-    },
-    {
-      "id": "L020>L004#3",
-      "to": "L004",
-      "trigger": "interact",
-      "label": "Game-room exit sign",
-      "basis": "SOURCE",
-      "confidence": "CONDITIONAL",
-      "source_section": "Dated canonical snapshot; exits",
-      "source_quote": "Game doors with exit sign",
-      "arrival": "from_L020",
-      "hint": "Game-room exit sign"
-    }
-  ],
-  "entity_policy": "SOURCE_ONLY; hazardous games unimplemented",
-  "notes": "ADAPTATION: finite 180m curated slice and three-console unlocking sequence represent the documented game exits; the other game outcomes are not implemented. No arbitrary hostile entity spawning. Canon: docs/canon/levels/L020.md; authors credited there under CC BY-SA 3.0. Not yet PLAYABLE."
+ "stable_id": "L020",
+ "scene": "res://levels/L020/L020.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED (v2.0 rebuild)",
+ "procedural": false,
+ "arrivals": [
+  "start",
+  "from_L011",
+  "from_L019"
+ ],
+ "signature": "Fun Zone: white-concrete Waiting halls of lockers and empty reception desks whose windows open on a freezing starfield, and below them the neon-lit Electric, sloping down so gently you never notice it getting colder, its doors leading to games that feed winners and punish losers.",
+ "mechanics": [
+  "cold_field_windows_and_depth",
+  "body_chill_and_winter_clothing",
+  "lockers_stocked_by_distance",
+  "almond_water_fountains",
+  "hallucinated_breath_wind_snow",
+  "orange_gel_drops",
+  "imperceptible_electric_slope",
+  "game_viridis_red",
+  "game_rock_climbing_liquid_pain",
+  "game_asteroid_blasters",
+  "game_lasers",
+  "rare_exit_sign_game_door"
+ ],
+ "exits": [
+  {
+   "id": "L020>L002#1",
+   "to": "L002",
+   "trigger": "interact",
+   "label": "Staff-only door in the Waiting halls",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "source_section": "Entrances And Exits",
+   "source_quote": "finding staff-only doors within the Waiting halls, these will take you to Level 2",
+   "arrival": "from_L020",
+   "hint": "A plain grey door marked STAFF ONLY behind the empty reception desk."
+  },
+  {
+   "id": "L020>L024#2",
+   "to": "L024",
+   "trigger": "noclip",
+   "label": "No-clipped through a window into the void",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "source_section": "Entrances And Exits",
+   "source_quote": "no-clipping through the windows, which will take you to either Level 24 or Level 78",
+   "arrival": "from_L020",
+   "hint": "The windows of the lounge; the cold is worst against the glass."
+  },
+  {
+   "id": "L020>L004#3",
+   "to": "L004",
+   "trigger": "condition",
+   "label": "A game door with an exit sign opened elsewhere",
+   "basis": "SOURCE",
+   "confidence": "CONDITIONAL",
+   "source_section": "Entrances And Exits",
+   "source_quote": "These have a rare chance of taking you to Level 4 , Level 21 , or Level 36 . These doors will always have an exit sign nearby.",
+   "arrival": "from_L020",
+   "hint": "One game door in the Electric has an exit sign beside it."
+  },
+  {
+   "id": "L020>L006#4",
+   "to": "L006",
+   "trigger": "condition",
+   "label": "Lost Asteroid Blasters",
+   "basis": "SOURCE",
+   "confidence": "DANGEROUS",
+   "source_section": "The Electric (games table)",
+   "source_quote": "The room will either teleport one to Level 6 or manifest a Wrangler .",
+   "arrival": "from_L020",
+   "hint": "Fewer than ten asteroids."
+  },
+  {
+   "id": "L020>L007#5",
+   "to": "L007",
+   "trigger": "condition",
+   "label": "Lost Lasers",
+   "basis": "SOURCE",
+   "confidence": "CONDITIONAL",
+   "source_section": "The Electric (games table)",
+   "source_quote": "The wanderer will be sent to either Level 7 or Level 154 .",
+   "arrival": "from_L020",
+   "hint": "Do not let a beam touch you."
+  }
+ ],
+ "entity_policy": "SOURCE_ONLY. Entities are 'minimal' in the Waiting halls and cannot enter games; none are shown as actors. The planet/sky entity is one hallucinating narrator's TESTIMONY and is absent.",
+ "notes": "ADAPTATION: the unknown-extent palace is an authored slice (Waiting halls ~50 x 46 m; the Electric three sloped runs, ~130 m, 4.4 m down) closed by doors, a dark bend and a frost-locked double door; the 1-4 days before the Electric is found are compressed into a cross hall; temperature with depth is scaled to the 4.4 m descent; games start on a lit pad; aiming is by gaze. The Level 78 window outcome, Level 21/36 game-door outcomes, Level 154, the Wrangler and Mole Holes are not built (no transitions edge or not implemented). Canon: docs/canon/levels/L020.md; authors credited there under CC BY-SA 3.0. Not yet PLAYABLE.",
+ "legacy_overlays": false,
+ "fail_states": [
+  "Liquid Pain flood after losing Rock Climbing (damage while submerged)",
+  "deep cold without winter clothing (slow damage)"
+ ],
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

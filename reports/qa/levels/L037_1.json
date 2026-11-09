@@ -4,7 +4,7 @@
  "failures": [],
  "levels": [
   {
-   "build_ms": 1221,
+   "build_ms": 1177,
    "collision_shapes": 1644,
    "distinct_layouts_over_3_seeds": 3,
    "dup_profile": {
@@ -106,7 +106,7 @@
    },
    "exits_declared": 0,
    "exits_found": 0,
-   "load_ms": 1350,
+   "load_ms": 1327,
    "nav": {
     "exits": [],
     "map_regions": 1,
@@ -131,7 +131,7 @@
   }
  ],
  "renderer": "headless",
- "started": "2026-11-08T19:14:47",
+ "started": "2026-11-08T20:54:43",
  "suites": {
   "duplication": {
    "checks": [],
@@ -146,7 +146,7 @@
   "level:L037_1": {
    "checks": [],
    "failed": 0,
-   "passed": 17
+   "passed": 18
   }
  }
 }

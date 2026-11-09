@@ -18,7 +18,7 @@
     "target": "L188>EXT#1",
     "ticks": 15
    },
-   "build_ms": 415,
+   "build_ms": 421,
    "collision_shapes": 346,
    "distinct_layouts_over_3_seeds": 3,
    "dup_profile": {
@@ -96,7 +96,7 @@
    },
    "exits_declared": 2,
    "exits_found": 2,
-   "load_ms": 524,
+   "load_ms": 533,
    "nav": {
     "exits": [
      {
@@ -138,7 +138,7 @@
   }
  ],
  "renderer": "headless",
- "started": "2026-11-08T14:41:01",
+ "started": "2026-11-08T20:55:28",
  "suites": {
   "duplication": {
    "checks": [],
@@ -153,7 +153,7 @@
   "level:L188": {
    "checks": [],
    "failed": 0,
-   "passed": 19
+   "passed": 20
   }
  }
 }
