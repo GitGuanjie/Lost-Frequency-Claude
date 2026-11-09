@@ -1,34 +1,45 @@
 {
-  "stable_id": "L024",
-  "scene": "res://levels/L024/L024.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT ENGINE VERIFIED — dev5 source candidate",
-  "procedural": true,
-  "arrivals": [
-    "start",
-    "from_L001",
-    "from_L020",
-    "from_L025"
-  ],
-  "signature": "Lead-painted plastic lunar plain with machinery, industrial mines and the PlasticWorks boundary gate",
-  "mechanics": [
-    "plastic_lunar_model",
-    "industrial_mine",
-    "ambient_siren",
-    "hazardous_mist"
-  ],
-  "exits": [
-    {
-      "id": "L024>EXT#1",
-      "to": "EXT",
-      "basis": "SOURCE",
-      "confidence": "CONFIRMED",
-      "method": "follow the road to the PlasticWorks main gate; miners show the way out",
-      "source_quote": "just follow the road to the main gate, the miners will show you the way out",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-24",
-      "trigger_type": "walk_in"
-    }
-  ],
-  "notes": "Compact exploration adaptation. Runtime Godot and Windows verification required; no automatic PLAYABLE promotion.",
-  "entity_policy": "SOURCED ENTITIES ONLY: Moon Mites, Beauford"
+ "stable_id": "L024",
+ "scene": "res://levels/L024/L024.tscn",
+ "status": "IN_DEVELOPMENT",
+ "qa_status": "NOT_TESTED",
+ "procedural": false,
+ "arrivals": [
+  "start",
+  "from_L001",
+  "from_L020",
+  "from_L025"
+ ],
+ "signature": "The Moon of a 1:1 plastic model solar system: lead-grey paint over plastic under a black sky, the floodlit B.N.T.G. PlasticWorks and its benched mining columns, the blue-stained ruin of the Bluehole down the road, harmless giant mites, and Beauford's far-off silhouette bringing lemon mist or a storm of skin and fibre.",
+ "mechanics": [
+  "painted_plastic_lunar_terrain_standard_gravity",
+  "plasticworks_mining_columns_and_shed",
+  "road_with_marker_poles_to_main_gate",
+  "bluehole_ruin_caustic_pool",
+  "beauford_approach_alarm_cycle",
+  "toxic_lemon_mist_needs_shelter",
+  "dust_storm_oversized_particles",
+  "moon_mites_flee_and_follow_storms",
+  "mite_egg_burrows"
+ ],
+ "exits": [
+  {
+   "id": "L024>EXT#1",
+   "to": "EXT",
+   "basis": "SOURCE",
+   "confidence": "CONFIRMED",
+   "method": "follow the road to the PlasticWorks main gate; miners show the way out",
+   "source_quote": "just follow the road to the main gate, the miners will show you the way out",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-24",
+   "trigger_type": "walk_in",
+   "trigger": "walk_in",
+   "label": "Followed the road to the PlasticWorks main gate; the miners showed the way out",
+   "to_label": "Not stated (destination unnamed)",
+   "source_section": "Entrances and Exits",
+   "hint": "Orange marker poles line the road to the floodlit gate."
+  }
+ ],
+ "notes": "SOURCE: Level 24 is a plastic (HDPE-polystyrene, lead paint) scale model of the Frontrooms solar system at an estimated 1:1; 11 bodies observed, only the Moon accessible; upper ~30 m is lead-based light grey paint; standard gravity; two weathers tied to Beauford approaching: a brief toxic lemon-smelling mist (nausea, ataxia; disinfectant when diluted) and a sandstorm of dead skin, plastic, bacteria, lead, hair and fibres with oversized particles; surroundings theorised as a Victorian study (not shown); Moon Mites (3 species, harmless, avoid humans, 6-8 mating pairs, shallow burrows with 25-50 cream eggs, eaten in shortages); Beauford (incomprehensibly large humanoid, seen at distance, vocalisations heard and felt); B.N.T.G. Bluehole: paint removal injuries, paint thinner dyed the plastic blue, gantry pulley failure, Hot-Shovel (propane, 530 C), moonquake (TESTIMONY), disaster killing Mining Crew 1 (TESTIMONY); alarms announce Beauford (TESTIMONY); PlasticWorks: new automated mine 1 km from Bluehole, mining columns, three crews on three-day shifts, ~300 t daily, recruiting; the sole exit is following the road to the PlasticWorks main gate (destination not stated: EXT). ADAPTATION: walkable area 1.6 x 0.5 km with a far surface to the horizon, Bluehole placed 1.3 km down the road, site layouts (three benched columns with ramps under gantry cranes, processing shed with conveyors and a control mezzanine, fenced crew compound and gatehouse), road marker poles, the weather cycle timing (~3-4 min calm, 38 s approach, 45-70 s weather), mist damage outside shelter, caustic pool damage, Beauford rendered as a vast unlit silhouette beyond the horizon in one fixed direction; the Sun and one planet drawn as model bodies in the sky. Arrivals from L001, L020 and L025 are placed on the plain near PlasticWorks (pages give no landing point). Level 57's painting entrance is not a built edge.",
+ "entity_policy": "SOURCED ENTITIES ONLY, never combat: Moon Mites (wander, flee within ~24 m, new group after each storm, egg burrows) and Beauford (distant silhouette and felt vocalisations only, never reachable). PlasticWorks miners are human staff (scripted, idle).",
+ "legacy_overlays": false
 }
