@@ -21,7 +21,7 @@ digraph LostFrequency {
   L037 [label="L37\nSublimity", fillcolor="#2e7d32", fontcolor="white"];
   L188 [label="L188\nThe Courtyard of Windows", fillcolor="#2e7d32", fontcolor="white"];
   L015 [label="L15\nFuturistic Halls", fillcolor="#2e7d32", fontcolor="white"];
-  L016 [label="L16\nAltered Topography", fillcolor="#f9a825", fontcolor="black"];
+  L016 [label="L16\nAltered Topography", fillcolor="#2e7d32", fontcolor="white"];
   L017 [label="L17\nThe Carrier", fillcolor="#2e7d32", fontcolor="white"];
   L018 [label="L18\nMemories", fillcolor="#2e7d32", fontcolor="white"];
   L020 [label="L20\nBoreas Structure", fillcolor="#2e7d32", fontcolor="white"];
@@ -77,13 +77,13 @@ digraph LostFrequency {
   L965 [label="L965\nColorful Colorless", fillcolor="#2e7d32", fontcolor="white"];
   L994 [label="L994\nExist Here", fillcolor="#2e7d32", fontcolor="white"];
   L999 [label="L999\n", fillcolor="#2e7d32", fontcolor="white"];
-  L005_3 [label="L5.3\nPromethei Bibliotheca", fillcolor="#f9a825", fontcolor="black"];
+  L005_3 [label="L5.3\nPromethei Bibliotheca", fillcolor="#2e7d32", fontcolor="white"];
   L007_8 [label="L7.8\nImpaled Ocean", fillcolor="#2e7d32", fontcolor="white"];
   L009_3 [label="L9.3\nThe Overcast Manifold", fillcolor="#2e7d32", fontcolor="white"];
   L011_2 [label="L11.2\nThe Refuge", fillcolor="#2e7d32", fontcolor="white"];
   L021 [label="L21\nNumbered Doors", fillcolor="#2e7d32", fontcolor="white"];
   L032 [label="L32\nForest of the Skeleton Q", fillcolor="#f9a825", fontcolor="black"];
-  L041 [label="L41\nThe Black Lake", fillcolor="#f9a825", fontcolor="black"];
+  L041 [label="L41\nThe Black Lake", fillcolor="#2e7d32", fontcolor="white"];
   L050 [label="L50\nThe moribund Highway", fillcolor="#f9a825", fontcolor="black"];
   L052 [label="L52\nDESTINATION REACHED", fillcolor="#2e7d32", fontcolor="white"];
   L077 [label="L77\nOh, Shenandoah", fillcolor="#f9a825", fontcolor="black"];

@@ -1,7 +1,7 @@
 {
  "stable_id": "L005_3",
  "scene": "res://levels/L005_3/L005_3.tscn",
- "status": "IN_DEVELOPMENT",
+ "status": "PLAYABLE",
  "qa_status": "NOT_TESTED",
  "procedural": true,
  "legacy_overlays": false,
@@ -54,11 +54,18 @@
   }
  ],
  "fail_states": [
-  {"kind": "fall", "label": "Fell into the void below the seventh floor", "basis": "ADAPTATION", "source_quote": "near the side of the corridor connecting to a void"}
+  {
+   "kind": "fall",
+   "label": "Fell into the void below the seventh floor",
+   "basis": "ADAPTATION",
+   "source_quote": "near the side of the corridor connecting to a void"
+  }
  ],
  "entity_policy": "SOURCED ENTITIES ONLY: the Library Mind is bodiless and never shown (captions, falling books, a collapsing bookcase, headaches). The Gentleman appears only as evidence of his visit (a flung notebook of staff sketches). No wandering entities (testimony: none seen).",
  "notes": "SOURCE: sub-section of the Terror Hotel discovered May 2016; only known entrance an old wooden door at the end of a newly found corridor of peeled, old wallpaper near the M.E.G. base Housekeeping (unreliable); elegant library, hundreds of corridors on all sides; marble walls with granite features; tuff pillars; iron bars along the side of the corridor that meets a void; Renaissance-style paintings above the bookshelves; infinitely long corridors but only seven floors, linked by wooden staircases; the name at the top of some walls; books of any colour and size, rare gilded illuminations, pristine but dusty; mostly unknown languages, some English, French, Italian; topics mainly the Backrooms (Hoofstaad, Ambassadors, the Macchina named); memory extraction after one to two hours (newer or important memories), growing headaches, unnoticed without outside help; memories consigned to books (notebook to series); do not stay over an hour; the Library Mind trades knowledge for memory, refuses those who would harm or dominate (headaches, heavy loss), talks through emotions, drops books to guide, collapses bookshelves in anger; animosity to the hotel staff (documents imply the staff isolated it); the Lost Hall Society (peaceful collectors and historians) used it until about the 17th century; no entities seen (testimony); a corridor may end in a dead end with a wooden door that leads back to the entrance; the Gentleman's visit (vignette). ADAPTATION: finite streaming window of 24 m chunks with all seven floors (5 m storeys, arrival on floor 4); the corridor grid, shelf walls and ranges, bay reading tables and the void-block frequency (~1 in 5) are ours; switchback wooden stairs in each void; dead ends seeded at 10% per block and storey, one always next to the arrival on floor 4; the loop door is a seamless return to the entrance (no reload) so the memory state persists; L005_3>L005#2 is realised as the old door you arrived through (page: the Gentleman 'left the Promethean Library'; no explicit exit); time compression: one hour is about six minutes, extraction seeded between 6 and 12 minutes; the lectern's three requests, the margin-translated Lost Hall book and the Hermes-team card are framing devices for paraphrased page facts; consigned notebooks list your most recent levels and what you read; a fall below floor 1 is fatal (ADAPTATION). QA: the bot walks to the old door behind the arrival.",
  "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
   "programme": "v2 rebuild of dev28 placeholder"
  }
 }
