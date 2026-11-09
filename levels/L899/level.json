@@ -1,7 +1,7 @@
 {
  "stable_id": "L899",
  "scene": "res://levels/L899/L899.tscn",
- "status": "IN_DEVELOPMENT",
+ "status": "PLAYABLE",
  "qa_status": "NOT_TESTED",
  "procedural": false,
  "arrivals": [
@@ -53,5 +53,10 @@
  ],
  "notes": "BROCHURE (unreliable advert): floating island overlooking a view; colours dance across an endless void lighting the sky 24/7, so no electricity; water from a spring-fed lake; a sustainable mushroom crop varied by chefs; staff with fangs for show, extra eyes and arms; send a letter, a representative collects you. TESTIMONY (Jameson's diary): the representative Karl, a human-shaped gargoyle-like caretaker with wings; mostly a lot of walking; people there, not too many but enough; grass and sky; anything longer than a few days is a lifetime reservation; stay forever, lose your youth, never worry again; Mike stays and ages; auroras; Karl shows the way back and it feels shorter; 'It is 9AM'. ADAPTATION: island layout and size (~230 x 170 m), the passage in a rock outcrop as the way back (EXT#1, walk_in, open until day 4), cottages, terrace hall, mushroom beds and lookout as built forms, the rim rail, the day clock (sleep, lie in the grass, or ~7 minutes of play advance a day; day 4 = lifetime reservation, EXT#2 fires after the colour drains). Karl is referred to as 'she' as in the diary. Mike is not singled out. Base Omega's banging pipes are not present on the island (dossier trap).",
  "entity_policy": "SOURCED/REPORTED, non-hostile idle presences only: Karl (testimony; speaks, watches, walks you to the passage), residents (aged, sitting and lying under the sky), staff with four arms and extra eyes (brochure, REPORTED). No hostile entity; the brochure's creatures of the night live elsewhere.",
- "legacy_overlays": false
+ "legacy_overlays": false,
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

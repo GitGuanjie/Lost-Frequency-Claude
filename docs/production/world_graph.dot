@@ -22,12 +22,12 @@ digraph LostFrequency {
   L188 [label="L188\nThe Courtyard of Windows", fillcolor="#2e7d32", fontcolor="white"];
   L015 [label="L15\nFuturistic Halls", fillcolor="#2e7d32", fontcolor="white"];
   L016 [label="L16\nAltered Topography", fillcolor="#f9a825", fontcolor="black"];
-  L017 [label="L17\nThe Carrier", fillcolor="#f9a825", fontcolor="black"];
+  L017 [label="L17\nThe Carrier", fillcolor="#2e7d32", fontcolor="white"];
   L018 [label="L18\nMemories", fillcolor="#2e7d32", fontcolor="white"];
   L020 [label="L20\nBoreas Structure", fillcolor="#2e7d32", fontcolor="white"];
   L022 [label="L22\nRuins Left Behind", fillcolor="#2e7d32", fontcolor="white"];
   L023 [label="L23\nThe Petrified Garden", fillcolor="#2e7d32", fontcolor="white"];
-  L024 [label="L24\nThe Moon", fillcolor="#f9a825", fontcolor="black"];
+  L024 [label="L24\nThe Moon", fillcolor="#2e7d32", fontcolor="white"];
   L025 [label="L25\nThe Quarter Hub", fillcolor="#2e7d32", fontcolor="white"];
   L026 [label="L26\nThe SS Fun =)", fillcolor="#2e7d32", fontcolor="white"];
   L027 [label="L27\nThe Bunker Springs", fillcolor="#2e7d32", fontcolor="white"];
@@ -100,7 +100,7 @@ digraph LostFrequency {
   L263 [label="L263\nPretty Pink", fillcolor="#2e7d32", fontcolor="white"];
   L320 [label="L320\nThe new, and Improved, E", fillcolor="#f9a825", fontcolor="black"];
   L737 [label="L737\nDune Eternal", fillcolor="#2e7d32", fontcolor="white"];
-  L899 [label="L899\nYonder's End", fillcolor="#f9a825", fontcolor="black"];
+  L899 [label="L899\nYonder's End", fillcolor="#2e7d32", fontcolor="white"];
   L998 [label="L998\nA Path Across Hell, and ", fillcolor="#2e7d32", fontcolor="white"];
   EXT [label="outside the 100-level roster\n(unbuilt / unnumbered)", shape=ellipse, style="dashed", fillcolor="white"];
   L000 -> L001 [color="#2e7d32", penwidth=2.4];

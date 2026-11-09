@@ -1,0 +1,235 @@
+{
+ "duplication_pairs": [],
+ "engine": "4.5.1-stable (official)",
+ "failures": [],
+ "levels": [
+  {
+   "bot": {
+    "distance_to_target": 4.16352844238281,
+    "distance_walked": 76.2095593148842,
+    "edge": "L024>EXT#1",
+    "final_position": "(300.7251, 0.020013, -3.157462)",
+    "fired": true,
+    "path_index": 11,
+    "path_points": 16,
+    "progress_samples": [
+     {
+      "L009_route_progress": -1,
+      "goal": "(260.5013, 0.116389, -4.606865)",
+      "nav_vertex": 1,
+      "position": "(237.8375, 0.02, 0.249251)",
+      "slide_collisions": 0,
+      "tick": 120
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(260.5013, 0.116389, -4.606865)",
+      "nav_vertex": 1,
+      "position": "(243.9001, 0.020013, -1.049727)",
+      "slide_collisions": 0,
+      "tick": 240
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(260.5013, 0.116389, -4.606865)",
+      "nav_vertex": 1,
+      "position": "(249.9628, 0.020013, -2.348723)",
+      "slide_collisions": 0,
+      "tick": 360
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(260.5013, 0.116389, -4.606865)",
+      "nav_vertex": 1,
+      "position": "(256.0254, 0.020013, -3.64775)",
+      "slide_collisions": 0,
+      "tick": 480
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(293.5187, 0.116389, -11.68134)",
+      "nav_vertex": 2,
+      "position": "(262.0356, 0.020013, -4.935765)",
+      "slide_collisions": 0,
+      "tick": 600
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(293.5187, 0.116389, -11.68134)",
+      "nav_vertex": 2,
+      "position": "(268.0964, 0.020013, -6.234664)",
+      "slide_collisions": 0,
+      "tick": 720
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(293.5187, 0.116389, -11.68134)",
+      "nav_vertex": 2,
+      "position": "(274.1572, 0.020013, -7.533485)",
+      "slide_collisions": 0,
+      "tick": 840
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(293.5187, 0.116389, -11.68134)",
+      "nav_vertex": 2,
+      "position": "(280.218, 0.020013, -8.832191)",
+      "slide_collisions": 0,
+      "tick": 960
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(293.5187, 0.116389, -11.68134)",
+      "nav_vertex": 2,
+      "position": "(286.2788, 0.020013, -10.13075)",
+      "slide_collisions": 0,
+      "tick": 1080
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(293.5187, 0.116389, -11.68134)",
+      "nav_vertex": 2,
+      "position": "(292.3398, 0.020013, -11.42896)",
+      "slide_collisions": 0,
+      "tick": 1200
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(298.1733, 0.116389, -7.907914)",
+      "nav_vertex": 5,
+      "position": "(297.5219, 0.02, -11.24964)",
+      "slide_collisions": 0,
+      "tick": 1320
+     }
+    ],
+    "reason": "triggered",
+    "sim_seconds": 24.9666666666667,
+    "target": "L024>EXT#1",
+    "ticks": 1498
+   },
+   "build_ms": 4721,
+   "collision_shapes": 365,
+   "distinct_layouts_over_3_seeds": 3,
+   "dup_profile": {
+    "boxes": {
+     "-1_-1_0": 48,
+     "-1_-1_5": 12,
+     "-1_0_0": 1,
+     "-1_1_1": 29,
+     "-1_3_5": 5,
+     "-2_-1_1": 9,
+     "-2_-2_0": 1,
+     "-2_-2_3": 3,
+     "-2_-2_5": 4,
+     "-2_0_0": 3,
+     "-2_0_1": 6,
+     "-2_0_5": 1,
+     "-2_2_7": 2,
+     "-2_2_9": 3,
+     "-2_3_5": 1,
+     "-2_4_4": 1,
+     "-2_4_5": 1,
+     "-2_5_5": 1,
+     "-2_5_6": 3,
+     "-2_5_7": 1,
+     "-2_5_8": 1,
+     "-2_7_8": 1,
+     "-3_-3_4": 2,
+     "-3_-3_5": 4,
+     "-3_3_7": 1,
+     "-4_2_4": 1,
+     "-5_0_5": 3,
+     "-5_0_6": 9,
+     "-5_0_7": 1,
+     "-5_1_2": 1,
+     "-5_1_4": 1,
+     "0_0_1": 2,
+     "0_0_3": 2,
+     "0_0_5": 1,
+     "0_1_1": 1,
+     "0_1_7": 2,
+     "0_2_2": 1,
+     "0_7_8": 1,
+     "1_1_2": 3,
+     "1_3_4": 1,
+     "2_2_2": 3,
+     "2_3_3": 2,
+     "2_3_4": 2,
+     "2_3_5": 5,
+     "3_3_3": 1
+    },
+    "materials": {
+     "l24_beacon": 24,
+     "l24_blue_panel": 108,
+     "l24_concrete": 94,
+     "l24_lamp": 168,
+     "l24_mesh": 372,
+     "l24_orange": 1464,
+     "l24_panel": 360,
+     "l24_plastic": 948,
+     "l24_plastic_blue": 240,
+     "l24_reflector": 1344,
+     "l24_rubber": 72,
+     "l24_rust": 60,
+     "l24_steel": 2520,
+     "l24_window": 564,
+     "l24_window_dead": 36,
+     "l24_wood": 96,
+     "l24_yellow": 2028
+    }
+   },
+   "exits_declared": 1,
+   "exits_found": 1,
+   "load_ms": 4876,
+   "nav": {
+    "exits": [
+     {
+      "edge": "L024>EXT#1",
+      "goal": "(303.0, 0.116389, 0.0)",
+      "path_points": 16,
+      "reachable": true,
+      "snap_error": 1.38361072540283,
+      "start_projection_error": 0.100000388920307
+     }
+    ],
+    "map_regions": 1,
+    "map_sync_ticks": 2,
+    "nav_polygons": 508,
+    "spawn_on_navmesh": true,
+    "spawn_projection_error": 0.100000388920307,
+    "start": "(232.0, 0.116389, 1.5)"
+   },
+   "qa_status": "ENGINE_SMOKE_PASS",
+   "save_tested": true,
+   "self_tests": 7,
+   "spawn": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+   },
+   "stable_id": "L024"
+  }
+ ],
+ "renderer": "headless",
+ "started": "2026-11-09T00:51:50",
+ "suites": {
+  "duplication": {
+   "checks": [],
+   "failed": 0,
+   "passed": 1
+  },
+  "framework": {
+   "checks": [],
+   "failed": 0,
+   "passed": 8
+  },
+  "level:L024": {
+   "checks": [],
+   "failed": 0,
+   "passed": 24
+  }
+ }
+}

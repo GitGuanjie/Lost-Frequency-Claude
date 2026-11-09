@@ -1,0 +1,172 @@
+{
+ "duplication_pairs": [],
+ "engine": "4.5.1-stable (official)",
+ "failures": [],
+ "levels": [
+  {
+   "bot": {
+    "distance_to_target": 2.17188310623169,
+    "distance_walked": 16.2829842623323,
+    "edge": "L899>EXT#1",
+    "final_position": "(5.999644, 4.070001, 65.28297)",
+    "fired": true,
+    "path_index": 13,
+    "path_points": 14,
+    "progress_samples": [
+     {
+      "L009_route_progress": -1,
+      "goal": "(5.997615, 4.195914, 55.34243)",
+      "nav_vertex": 10,
+      "position": "(5.997447, 4.070001, 54.48472)",
+      "slide_collisions": 0,
+      "tick": 120
+     },
+     {
+      "L009_route_progress": -1,
+      "goal": "(5.999238, 4.195914, 63.27485)",
+      "nav_vertex": 12,
+      "position": "(5.998682, 4.070001, 60.58134)",
+      "slide_collisions": 0,
+      "tick": 240
+     }
+    ],
+    "reason": "triggered",
+    "sim_seconds": 5.53333333333333,
+    "target": "L899>EXT#1",
+    "ticks": 332
+   },
+   "build_ms": 3296,
+   "collision_shapes": 497,
+   "distinct_layouts_over_3_seeds": 3,
+   "dup_profile": {
+    "boxes": {
+     "-1_-1_-1": 2,
+     "-1_-1_0": 12,
+     "-1_-1_1": 1,
+     "-1_0_1": 1,
+     "-1_0_3": 3,
+     "-1_0_5": 2,
+     "-1_2_2": 3,
+     "-1_2_6": 2,
+     "-1_3_3": 1,
+     "-1_3_6": 1,
+     "-1_5_6": 1,
+     "-2_-1_0": 32,
+     "-2_-2_0": 11,
+     "-2_-2_1": 13,
+     "-2_-2_2": 10,
+     "-2_0_0": 25,
+     "-2_0_2": 16,
+     "-2_1_2": 24,
+     "-2_2_2": 16,
+     "-2_2_3": 8,
+     "-2_2_6": 1,
+     "-2_4_4": 2,
+     "-3_1_2": 4,
+     "-3_1_5": 2,
+     "-3_2_2": 188,
+     "-3_2_3": 17,
+     "-4_1_4": 1,
+     "-5_0_1": 7,
+     "-5_2_5": 1,
+     "-6_3_3": 8,
+     "0_0_1": 3,
+     "0_0_2": 2,
+     "0_1_1": 3,
+     "0_1_3": 1,
+     "0_1_4": 1,
+     "0_1_5": 12,
+     "1_1_1": 11,
+     "1_1_2": 2,
+     "1_2_2": 3,
+     "1_3_3": 8,
+     "1_4_5": 2,
+     "2_2_2": 1,
+     "2_2_3": 4,
+     "2_3_3": 3,
+     "2_3_4": 2,
+     "2_4_5": 1,
+     "3_4_5": 1,
+     "3_4_6": 1,
+     "4_4_6": 2,
+     "9_12_12": 1
+    },
+    "materials": {
+     "l899_cloth": 36,
+     "l899_fire": 12,
+     "l899_flag": 380,
+     "l899_iron": 12,
+     "l899_plank": 484,
+     "l899_plaster": 2400,
+     "l899_rockmass": 60,
+     "l899_roof": 216,
+     "l899_soil": 24,
+     "l899_stone": 336,
+     "l899_timber": 8316,
+     "l899_window": 288,
+     "unlit_black": 12
+    }
+   },
+   "exits_declared": 2,
+   "exits_found": 2,
+   "load_ms": 3406,
+   "nav": {
+    "exits": [
+     {
+      "edge": "L899>EXT#1",
+      "goal": "(6.0, 4.195914, 67.0)",
+      "path_points": 14,
+      "reachable": true,
+      "snap_error": 1.20408582687378,
+      "start_projection_error": 0.114124462008476
+     },
+     {
+      "edge": "L899>EXT#2",
+      "goal": "(6.143574, 12.99591, 55.31719)",
+      "path_points": 11,
+      "reachable": true,
+      "snap_error": 6.40613985061646,
+      "start_projection_error": 0.114124462008476
+     }
+    ],
+    "map_regions": 1,
+    "map_sync_ticks": 2,
+    "nav_polygons": 1317,
+    "spawn_on_navmesh": true,
+    "spawn_projection_error": 0.114124462008476,
+    "start": "(5.996316, 4.009846, 48.99448)"
+   },
+   "qa_status": "ENGINE_SMOKE_PASS",
+   "save_tested": true,
+   "self_tests": 6,
+   "spawn": {
+    "floor_hit": true,
+    "offset": 0.0,
+    "provisional_start_alias": false,
+    "requested_arrival": "start",
+    "spawn_ok": true,
+    "used_arrival": "start"
+   },
+   "stable_id": "L899"
+  }
+ ],
+ "renderer": "headless",
+ "started": "2026-11-09T00:51:41",
+ "suites": {
+  "duplication": {
+   "checks": [],
+   "failed": 0,
+   "passed": 1
+  },
+  "framework": {
+   "checks": [],
+   "failed": 0,
+   "passed": 8
+  },
+  "level:L899": {
+   "checks": [],
+   "failed": 0,
+   "passed": 25
+  }
+ }
+}
