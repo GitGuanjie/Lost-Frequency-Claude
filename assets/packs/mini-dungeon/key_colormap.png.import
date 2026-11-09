@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://de782230itoky"
-path="res://.godot/imported/key_colormap.png-1ec6b655af3235621baf326d8ae7ff8a.ctex"
+path.s3tc="res://.godot/imported/key_colormap.png-1ec6b655af3235621baf326d8ae7ff8a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "ebed4cf69c26d2bde4d013cd21e29ec4"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/packs/mini-dungeon/key_colormap.png"
-dest_files=["res://.godot/imported/key_colormap.png-1ec6b655af3235621baf326d8ae7ff8a.ctex"]
+dest_files=["res://.godot/imported/key_colormap.png-1ec6b655af3235621baf326d8ae7ff8a.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

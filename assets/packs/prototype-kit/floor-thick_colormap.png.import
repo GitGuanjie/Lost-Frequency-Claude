@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7wngmtew8yya"
-path="res://.godot/imported/floor-thick_colormap.png-3d4a863e26c2687a4860f1f2e876a250.ctex"
+path.s3tc="res://.godot/imported/floor-thick_colormap.png-3d4a863e26c2687a4860f1f2e876a250.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "76084aa0c65dc2c593e6532f1f61f968"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/packs/prototype-kit/floor-thick_colormap.png"
-dest_files=["res://.godot/imported/floor-thick_colormap.png-3d4a863e26c2687a4860f1f2e876a250.ctex"]
+dest_files=["res://.godot/imported/floor-thick_colormap.png-3d4a863e26c2687a4860f1f2e876a250.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

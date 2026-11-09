@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdxqw50ckdea"
-path="res://.godot/imported/wall-window-cutout-large_colormap.png-2ebcf69bad2c6d092fa2febd2bb9897e.ctex"
+path.s3tc="res://.godot/imported/wall-window-cutout-large_colormap.png-2ebcf69bad2c6d092fa2febd2bb9897e.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "76084aa0c65dc2c593e6532f1f61f968"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/packs/prototype-kit/wall-window-cutout-large_colormap.png"
-dest_files=["res://.godot/imported/wall-window-cutout-large_colormap.png-2ebcf69bad2c6d092fa2febd2bb9897e.ctex"]
+dest_files=["res://.godot/imported/wall-window-cutout-large_colormap.png-2ebcf69bad2c6d092fa2febd2bb9897e.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

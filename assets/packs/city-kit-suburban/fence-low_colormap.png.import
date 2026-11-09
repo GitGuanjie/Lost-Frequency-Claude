@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwinvkw17ovmc"
-path="res://.godot/imported/fence-low_colormap.png-001eeac55f1e6b6674a7865dfca81a8f.ctex"
+path.s3tc="res://.godot/imported/fence-low_colormap.png-001eeac55f1e6b6674a7865dfca81a8f.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "75a02bdbe531f1d377e96bcd8cd9ec50"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/packs/city-kit-suburban/fence-low_colormap.png"
-dest_files=["res://.godot/imported/fence-low_colormap.png-001eeac55f1e6b6674a7865dfca81a8f.ctex"]
+dest_files=["res://.godot/imported/fence-low_colormap.png-001eeac55f1e6b6674a7865dfca81a8f.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

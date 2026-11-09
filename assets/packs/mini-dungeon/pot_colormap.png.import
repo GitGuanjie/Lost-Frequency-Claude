@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3xq0637oaolo"
-path="res://.godot/imported/pot_colormap.png-c9ff459ad10660a01ae06b55ea1e4848.ctex"
+path.s3tc="res://.godot/imported/pot_colormap.png-c9ff459ad10660a01ae06b55ea1e4848.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "ebed4cf69c26d2bde4d013cd21e29ec4"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/packs/mini-dungeon/pot_colormap.png"
-dest_files=["res://.godot/imported/pot_colormap.png-c9ff459ad10660a01ae06b55ea1e4848.ctex"]
+dest_files=["res://.godot/imported/pot_colormap.png-c9ff459ad10660a01ae06b55ea1e4848.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0k1vih0wcp7i"
-path="res://.godot/imported/stones_colormap.png-186d78b26198d4450dd69dc2d281622e.ctex"
+path.s3tc="res://.godot/imported/stones_colormap.png-186d78b26198d4450dd69dc2d281622e.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "ebed4cf69c26d2bde4d013cd21e29ec4"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/packs/mini-dungeon/stones_colormap.png"
-dest_files=["res://.godot/imported/stones_colormap.png-186d78b26198d4450dd69dc2d281622e.ctex"]
+dest_files=["res://.godot/imported/stones_colormap.png-186d78b26198d4450dd69dc2d281622e.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
