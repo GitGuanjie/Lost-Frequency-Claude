@@ -31,7 +31,7 @@ func _init() -> void:
 	n_fine.frequency = 0.08
 	var r := RandomNumberGenerator.new()
 	r.seed = 2424
-	for i in 260:
+	for i in 620:
 		var c := Vector2(r.randf_range(-1400.0, 700.0), r.randf_range(-500.0, 500.0))
 		var R := pow(r.randf(), 2.6) * 70.0 + 5.0
 		if _road_d(c) < R + 8.0 or PW.grow(R + 10.0).has_point(c) or c.distance_to(BH) < 70.0 + R:
@@ -71,8 +71,8 @@ func _craters(x: float, z: float) -> float:
 		var r := Vector2(x, z).distance_to(c) / R
 		if r < 1.6:
 			if r < 1.0:
-				y -= R * 0.17 * (1.0 - r * r)
-			y += R * 0.055 * exp(-pow((r - 1.0) / 0.22, 2.0))
+				y -= R * 0.22 * (1.0 - r * r)
+			y += R * 0.07 * exp(-pow((r - 1.0) / 0.22, 2.0))
 	return y
 
 
@@ -148,10 +148,10 @@ void vertex() { wpos = (MODEL_MATRIX * vec4(VERTEX, 1.0)).xyz; }
 void fragment() {
 	float g = texture(grain, wpos.xz / 3.0).r * 0.6 + texture(grain, wpos.xz / 23.0).g * 0.4;
 	float macro = texture(grain, wpos.xz / 190.0).b;
-	vec3 paint = vec3(0.42, 0.42, 0.41) * (0.78 + 0.32 * g) * (0.85 + 0.25 * macro);
-	vec3 plastic = vec3(0.66, 0.62, 0.58) * (0.9 + 0.12 * g);
+	vec3 paint = vec3(0.27, 0.27, 0.265) * (0.78 + 0.32 * g) * (0.85 + 0.25 * macro);
+	vec3 plastic = vec3(0.5, 0.47, 0.44) * (0.9 + 0.12 * g);
 	vec3 blue = vec3(0.12, 0.3, 0.62) * (0.85 + 0.2 * g);
-	vec3 road = vec3(0.3, 0.3, 0.3) * (0.8 + 0.3 * g);
+	vec3 road = vec3(0.17, 0.17, 0.17) * (0.8 + 0.3 * g);
 	vec3 alb = mix(paint, road, COLOR.g * 0.8);
 	alb = mix(alb, plastic, COLOR.r);
 	alb = mix(alb, blue, COLOR.b);

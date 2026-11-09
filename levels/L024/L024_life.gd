@@ -164,7 +164,7 @@ func make_beauford() -> void:
 	lv.add_child(beauford)
 	var m := StandardMaterial3D.new()
 	m.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-	m.albedo_color = Color(0.0, 0.0, 0.0)
+	m.albedo_color = Color(0.004, 0.003, 0.003)
 	m.disable_fog = true
 	var parts := [[Vector3(0, 0.62, 0), 0.16, 0.5, Vector3(1.0, 1.0, 0.6)], [Vector3(0, 0.98, 0), 0.08, 0.16, Vector3(0.85, 1.0, 0.85)],
 		[Vector3(-0.08, 0.25, 0), 0.06, 0.5, Vector3.ONE], [Vector3(0.08, 0.25, 0), 0.06, 0.5, Vector3.ONE],
@@ -199,7 +199,7 @@ func place_beauford(k: float, around: Vector3) -> void:
 
 func make_weather() -> void:
 	mist = _particles(1600, 1.6, Vector3(18, 6, 18), Vector3(0, -1, 0), 7.0, 9.0, Vector2(0.015, 0.4), Color(0.85, 0.85, 0.55, 0.35), true)
-	storm = _particles(1400, 3.0, Vector3(30, 7, 30), Vector3(1, 0.05, 0.2), 10.0, 18.0, Vector2(0.35, 0.3), Color(0.78, 0.7, 0.58, 0.85), false)
+	storm = _particles(1400, 3.0, Vector3(30, 7, 30), Vector3(1, 0.05, 0.2), 10.0, 18.0, Vector2(0.35, 0.28), Color(0.55, 0.47, 0.38, 0.6), false)
 	fibres = _particles(300, 3.0, Vector3(30, 7, 30), Vector3(1, 0.1, 0.25), 9.0, 15.0, Vector2(1.6, 0.03), Color(0.25, 0.2, 0.15, 0.9), false)
 
 
@@ -226,7 +226,7 @@ func _particles(amount: int, life: float, box: Vector3, dir: Vector3, v0: float,
 	var q := QuadMesh.new()
 	q.size = quad
 	var m := StandardMaterial3D.new()
-	m.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	m.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED if streak else BaseMaterial3D.SHADING_MODE_PER_PIXEL
 	m.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
 	m.albedo_color = col
 	m.billboard_mode = BaseMaterial3D.BILLBOARD_FIXED_Y if streak else BaseMaterial3D.BILLBOARD_PARTICLES

@@ -38,14 +38,15 @@ const BHS := preload("res://levels/L024/L024_bluehole.gd")
 const Life := preload("res://levels/L024/L024_life.gd")
 const SKY := """
 shader_type sky;
-uniform vec3 warm : source_color = vec3(0.05, 0.032, 0.018);
+uniform vec3 warm : source_color = vec3(0.07, 0.045, 0.025);
+uniform float glow = 0.0;
 uniform vec3 planet_dir = vec3(-0.45, 0.32, -0.83);
 uniform float dim = 1.0;
 float hash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
 void sky() {
 	vec3 d = EYEDIR;
 	float e = max(d.y, 0.0);
-	vec3 col = warm * exp(-e * 7.0) * (0.6 + 0.4 * hash(floor(d.xz * 3.0)) * 0.0);
+	vec3 col = warm * (exp(-e * 7.0) + glow * 2.2 * exp(-e * 2.2));
 	if (d.y < 0.0) { col = warm * 0.4; }
 	vec3 sd = normalize(LIGHT0_DIRECTION);
 	float s = dot(d, sd);
@@ -71,7 +72,7 @@ var beau_k := 0.0
 var shelter_t := 0.0
 var said := {}
 var cycles := 0
-var sun_e0 := 1.6
+var sun_e0 := 1.25
 var _sirens: Array = []
 var _boom_t := 0.0
 var _hurt_t := 0.0
@@ -87,7 +88,7 @@ func build() -> void:
 	rules["kill_y"] = -60.0
 	rules["reverb_room"] = 0.1
 	rules["reverb_wet"] = 0.04
-	outdoor_env(Color(0, 0, 0), Color(0.03, 0.02, 0.01), Color(0.02, 0.02, 0.02), Vector2(14.0, 115.0), Color(1.0, 0.97, 0.92), sun_e0, Color(0.03, 0.025, 0.02), 0.00012)
+	outdoor_env(Color(0, 0, 0), Color(0.03, 0.02, 0.01), Color(0.02, 0.02, 0.02), Vector2(12.0, 20.0), Color(1.0, 0.97, 0.92), sun_e0, Color(0.03, 0.025, 0.02), 0.00012)
 	var sh := Shader.new()
 	sh.code = SKY
 	sky_mat = ShaderMaterial.new()
@@ -95,7 +96,7 @@ func build() -> void:
 	environment.sky.sky_material = sky_mat
 	environment.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
 	environment.ambient_light_color = Color(0.55, 0.58, 0.65)
-	environment.ambient_light_energy = 0.32
+	environment.ambient_light_energy = 0.22
 	environment.reflected_light_source = Environment.REFLECTION_SOURCE_DISABLED
 	environment.fog_sky_affect = 0.0
 	environment.tonemap_exposure = 1.0
@@ -279,6 +280,7 @@ func _weather(delta: float) -> void:
 	environment.fog_density = lerpf(environment.fog_density, dens, minf(1.0, delta * 0.5))
 	sun.light_energy = sun_e0 * lerpf(1.0, 0.45, beau_k)
 	sky_mat.set_shader_parameter("dim", lerpf(1.0, 0.5, beau_k))
+	sky_mat.set_shader_parameter("glow", beau_k if life.beauford.visible else 0.0)
 	if life.beauford.visible:
 		life.place_beauford(beau_k, pp)
 	var siren_on := state == "approach" or (state == "weather" and state_t > 30.0)
@@ -330,15 +332,15 @@ func level_process(delta: float) -> void:
 
 func _shots() -> void:
 	var gx: Vector3 = works.spots["gate"]
-	add_shot("road_to_plasticworks", START + Vector3(-6.0, 1.75, 1.5), gx + Vector3(20.0, 3.0, -12.0), {"flashlight": false})
+	add_shot("road_to_plasticworks", START + Vector3(30.0, 3.2, 9.0), gx + Vector3(24.0, 1.0, -16.0), {"flashlight": false})
 	var c1: Vector3 = works.spots["column1"]
-	add_shot("mining_column", c1 + Vector3(-13.0, 11.5, 14.0), c1 + Vector3(2.0, 0.5, -2.0), {"flashlight": false})
+	add_shot("mining_column", c1 + Vector3(-1.5, 13.0, 17.5), c1 + Vector3(0.5, -6.0, -3.0), {"flashlight": false})
 	var pool: Vector3 = bh.spots["pool"]
-	add_shot("bluehole", pool + Vector3(-24.0, 12.4, -10.0), pool + Vector3(2.0, 2.0, 1.0), {"flashlight": false})
+	add_shot("bluehole", pool + Vector3(-19.0, 16.5, -9.0), pool + Vector3(4.0, 0.0, 2.0), {"flashlight": false})
 	add_shot("beauford_and_the_storm", START + Vector3(0.0, 1.75, 0.0), START + Vector3(500.0, 260.0, -760.0), {"flashlight": false, "prepare": _prep_storm})
 	var sh: Vector3 = works.spots["shed"]
 	add_shot("processing_shed", sh + Vector3(-18.0, 2.0, -12.0), sh + Vector3(12.0, 2.5, 8.0), {"flashlight": false, "prepare": _prep_calm})
-	add_shot("mites", Vector3(92.0, ter.h(92.0, 52.0) + 1.7, 52.0), Vector3(110.0, ter.h(110.0, 72.0) + 0.3, 72.0), {"flashlight": false, "prepare": _prep_calm})
+	add_shot("mites", Vector3(87.0, ter.h(87.0, 64.0) + 1.7, 64.0), Vector3(110.0, ter.h(110.0, 72.0) + 0.3, 70.0), {"flashlight": false, "prepare": _prep_calm})
 
 
 func _prep_storm() -> void:
@@ -348,6 +350,9 @@ func _prep_storm() -> void:
 	weather = "storm"
 	state_t = 50.0
 	life.place_beauford(beau_k, START)
+	sky_mat.set_shader_parameter("glow", beau_k)
+	sky_mat.set_shader_parameter("dim", 0.6)
+	sun.light_energy = sun_e0 * 0.6
 	for i in 4:
 		await get_tree().process_frame
 

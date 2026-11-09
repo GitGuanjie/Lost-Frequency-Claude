@@ -77,7 +77,7 @@ func mast(p: Vector3, hgt: float, face_yaw: float) -> void:
 	var head := p + Vector3(0, hgt, 0)
 	var dir := Vector3(sin(face_yaw), 0, cos(face_yaw))
 	for s in [-0.6, 0.6]:
-		var side := dir.cross(Vector3.UP) * s
+		var side: Vector3 = dir.cross(Vector3.UP) * s
 		k.box(head + side + dir * 0.3, Vector3(0.7, 0.45, 0.7), "l24_steel", GeoKit.ALL, false)
 		k.box(head + side + dir * 0.66 - Vector3(0, 0.05, 0), Vector3(0.55, 0.3, 0.05) if absf(dir.z) > 0.5 else Vector3(0.05, 0.3, 0.55), "l24_lamp", GeoKit.ALL, false)
 	light_pts.append([head + dir * 1.2 - Vector3(0, 0.8, 0), Color(1.0, 0.92, 0.8), 3.0, 28.0])
@@ -318,7 +318,7 @@ func markers() -> void:
 			continue
 		var side := Vector2(-dir.y, dir.x) * 4.6
 		for s in [-1.0, 1.0]:
-			var q := p2 + side * s
+			var q: Vector2 = p2 + side * s
 			var y := g(q.x, q.y)
 			k.box(Vector3(q.x, y + 0.7, q.y), Vector3(0.1, 1.4, 0.1), "l24_orange", GeoKit.ALL, false)
 			k.box(Vector3(q.x, y + 1.25, q.y), Vector3(0.12, 0.12, 0.12), "l24_reflector", GeoKit.ALL, false)
