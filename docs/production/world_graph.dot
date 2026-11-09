@@ -69,7 +69,7 @@ digraph LostFrequency {
   L055 [label="L55\nPit Stop", fillcolor="#2e7d32", fontcolor="white"];
   L058 [label="L58\nWater Wonder", fillcolor="#2e7d32", fontcolor="white"];
   L060 [label="L60\nThe Baywalk", fillcolor="#2e7d32", fontcolor="white"];
-  L083 [label="L83\nThe Sunken Submarine", fillcolor="#f9a825", fontcolor="black"];
+  L083 [label="L83\nThe Sunken Submarine", fillcolor="#2e7d32", fontcolor="white"];
   L090 [label="L90\nNewly Renovated Home", fillcolor="#2e7d32", fontcolor="white"];
   L096 [label="L96\nSolace", fillcolor="#2e7d32", fontcolor="white"];
   L808 [label="L808\nSynthwave World", fillcolor="#f9a825", fontcolor="black"];
@@ -93,10 +93,10 @@ digraph LostFrequency {
   L108 [label="L108\nFertile Grounds", fillcolor="#f9a825", fontcolor="black"];
   L114 [label="L114\nSweet Dreams", fillcolor="#2e7d32", fontcolor="white"];
   L140 [label="L140\nHoney", fillcolor="#f9a825", fontcolor="black"];
-  L149 [label="L149\nThe Coconut Isles", fillcolor="#f9a825", fontcolor="black"];
+  L149 [label="L149\nThe Coconut Isles", fillcolor="#2e7d32", fontcolor="white"];
   L160 [label="L160\nThe City Of Promised Mem", fillcolor="#2e7d32", fontcolor="white"];
   L197 [label="L197\nCrystal Caverns", fillcolor="#2e7d32", fontcolor="white"];
-  L201 [label="L201\nA E S T H E T I C", fillcolor="#f9a825", fontcolor="black"];
+  L201 [label="L201\nA E S T H E T I C", fillcolor="#2e7d32", fontcolor="white"];
   L263 [label="L263\nPretty Pink", fillcolor="#2e7d32", fontcolor="white"];
   L320 [label="L320\nThe new, and Improved, E", fillcolor="#f9a825", fontcolor="black"];
   L737 [label="L737\nDune Eternal", fillcolor="#2e7d32", fontcolor="white"];
@@ -259,10 +259,10 @@ digraph LostFrequency {
   L201 -> L001 [color="#2e7d32", penwidth=2.4];
   L201 -> L003 [color="#2e7d32", penwidth=2.4];
   L201 -> L004 [color="#2e7d32", penwidth=2.4];
-  L201 -> L005 [color="#424242"];
-  L201 -> L007 [color="#424242"];
+  L201 -> L005 [color="#2e7d32", penwidth=2.4];
+  L201 -> L007 [color="#2e7d32", penwidth=2.4];
   L201 -> L025 [color="#2e7d32", penwidth=2.4];
-  L201 -> L031 [color="#424242"];
+  L201 -> L031 [color="#2e7d32", penwidth=2.4];
   L320 -> L001 [color="#2e7d32", penwidth=2.4];
   L320 -> L009 [color="#2e7d32", penwidth=2.4];
   L320 -> L011 [color="#2e7d32", penwidth=2.4];

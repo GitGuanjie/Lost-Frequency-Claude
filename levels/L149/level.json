@@ -1,55 +1,60 @@
 {
-  "stable_id": "L149",
-  "scene": "res://levels/L149/L149.tscn",
-  "status": "IN_DEVELOPMENT",
-  "qa_status": "NOT_TESTED",
-  "procedural": false,
-  "arrivals": [
-    "start",
-    "from_L046"
-  ],
-  "signature": "An evening that never ends over a sky full of drifting sand isles crowded with coconut palms: the Lost Suns' longhouses, tree houses, huts and public house on the largest isle, low-gravity leaps from isle to isle, warm rain, and the heavy, booming Barrier at the edge where no isles float.",
-  "mechanics": [
-    "low_gravity_0_15g",
-    "drifting_isles",
-    "palm_groves_half_isle_width",
-    "lost_suns_settlement",
-    "rain_showers",
-    "barrier_gravity_and_dread",
-    "rolled_barrier_noclip",
-    "coconuts_shared"
-  ],
-  "exits": [
-    {
-      "id": "L149>L037#1",
-      "to": "L037",
-      "basis": "SOURCE",
-      "confidence": "CONDITIONAL+DANGEROUS",
-      "method": "extremely small chance of no-clip deep in the Barrier",
-      "source_quote": "extremely small chance of no-clipping into Level 37 or level-140",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-149",
-      "trigger_type": "noclip",
-      "trigger": "noclip",
-      "label": "No-clipped deep in the Barrier, out past the last isle",
-      "hint": "Past the last isles the air grows heavy and loud; nothing floats beyond.",
-      "source_section": "Entrances And Exits"
-    },
-    {
-      "id": "L149>L140#2",
-      "to": "L140",
-      "basis": "SOURCE",
-      "confidence": "CONDITIONAL+DANGEROUS",
-      "method": "extremely small chance of no-clip deep in the Barrier",
-      "source_quote": "extremely small chance of no-clipping into Level 37 or level-140",
-      "source_url": "https://backrooms-wiki.wikidot.com/level-149",
-      "trigger_type": "noclip",
-      "trigger": "noclip",
-      "label": "No-clipped deep in the Barrier, out past the last isle",
-      "hint": "Past the last isles the air grows heavy and loud; nothing floats beyond.",
-      "source_section": "Entrances And Exits"
-    }
-  ],
-  "notes": "SOURCE: evening sky of floating sand isles with coconut palms, finite, fixed Sun, no night; ~15 % Earth gravity; winds below hold the isles over the abyss; isles of sand, dirt and rock drift slowly, 5 m to 6 km, palms in the middle about half the isle's width tall; larger isles near the centre with grass, bushes, rare flowers, crickets; rain and moderate wind common; the Lost Suns on the largest isle (Iroquois-style longhouses, tree houses, coconut-tree huts, one public house; palm-bark bows, palm spears, shared coconuts; neutral, house newcomers); the Barrier at the border: stronger gravity, no isles beyond, loud noises, anxiety; extremely small chance of no-clipping to Level 37 or Level 140 deep in it. ADAPTATION: distances compressed: the largest isle is 144 x 124 m, the Barrier begins 250 m east of it and its outermost isle sits at x 295 (page: ~200 km); 15 walkable isles plus ~50 distant ones (page: ~2,000); palms on the largest isle are 13-24 m (page proportion would be ~70 m); bridges absent, isles reached by low-gravity jumps (jump 3.3 m/s, ~20 m sprint leaps); drift amplitudes 1-4 m over 3-5 minutes; rain showers 1-2 minutes every 3-5 minutes; Barrier gravity rises to 5 m/s2; the no-clip is a 1-in-150 roll per 6 s attempt of pushing into the rock lip on the outermost isle's east rim (QA fixture: start on that isle with the roll forced to Level 37); Lost Suns residents not modelled; falling below -120 m into the abyss is fatal.",
-  "entity_policy": "Coconut Snares (Entity 61) are the only entity; the page gives only their habitat (palms of the smaller, farther isles) and hunting, so they are not shown: crowns rustle, the public house holds drawings of them. Crickets are ambience. The Lost Suns are a friendly, neutral community shown by their houses, fires, stores and notes (no figure models). No combat.",
-  "legacy_overlays": false
+ "stable_id": "L149",
+ "scene": "res://levels/L149/L149.tscn",
+ "status": "PLAYABLE",
+ "qa_status": "NOT_TESTED",
+ "procedural": false,
+ "arrivals": [
+  "start",
+  "from_L046"
+ ],
+ "signature": "An evening that never ends over a sky full of drifting sand isles crowded with coconut palms: the Lost Suns' longhouses, tree houses, huts and public house on the largest isle, low-gravity leaps from isle to isle, warm rain, and the heavy, booming Barrier at the edge where no isles float.",
+ "mechanics": [
+  "low_gravity_0_15g",
+  "drifting_isles",
+  "palm_groves_half_isle_width",
+  "lost_suns_settlement",
+  "rain_showers",
+  "barrier_gravity_and_dread",
+  "rolled_barrier_noclip",
+  "coconuts_shared"
+ ],
+ "exits": [
+  {
+   "id": "L149>L037#1",
+   "to": "L037",
+   "basis": "SOURCE",
+   "confidence": "CONDITIONAL+DANGEROUS",
+   "method": "extremely small chance of no-clip deep in the Barrier",
+   "source_quote": "extremely small chance of no-clipping into Level 37 or level-140",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-149",
+   "trigger_type": "noclip",
+   "trigger": "noclip",
+   "label": "No-clipped deep in the Barrier, out past the last isle",
+   "hint": "Past the last isles the air grows heavy and loud; nothing floats beyond.",
+   "source_section": "Entrances And Exits"
+  },
+  {
+   "id": "L149>L140#2",
+   "to": "L140",
+   "basis": "SOURCE",
+   "confidence": "CONDITIONAL+DANGEROUS",
+   "method": "extremely small chance of no-clip deep in the Barrier",
+   "source_quote": "extremely small chance of no-clipping into Level 37 or level-140",
+   "source_url": "https://backrooms-wiki.wikidot.com/level-149",
+   "trigger_type": "noclip",
+   "trigger": "noclip",
+   "label": "No-clipped deep in the Barrier, out past the last isle",
+   "hint": "Past the last isles the air grows heavy and loud; nothing floats beyond.",
+   "source_section": "Entrances And Exits"
+  }
+ ],
+ "notes": "SOURCE: evening sky of floating sand isles with coconut palms, finite, fixed Sun, no night; ~15 % Earth gravity; winds below hold the isles over the abyss; isles of sand, dirt and rock drift slowly, 5 m to 6 km, palms in the middle about half the isle's width tall; larger isles near the centre with grass, bushes, rare flowers, crickets; rain and moderate wind common; the Lost Suns on the largest isle (Iroquois-style longhouses, tree houses, coconut-tree huts, one public house; palm-bark bows, palm spears, shared coconuts; neutral, house newcomers); the Barrier at the border: stronger gravity, no isles beyond, loud noises, anxiety; extremely small chance of no-clipping to Level 37 or Level 140 deep in it. ADAPTATION: distances compressed: the largest isle is 144 x 124 m, the Barrier begins 250 m east of it and its outermost isle sits at x 295 (page: ~200 km); 15 walkable isles plus ~50 distant ones (page: ~2,000); palms on the largest isle are 13-24 m (page proportion would be ~70 m); bridges absent, isles reached by low-gravity jumps (jump 3.3 m/s, ~20 m sprint leaps); drift amplitudes 1-4 m over 3-5 minutes; rain showers 1-2 minutes every 3-5 minutes; Barrier gravity rises to 5 m/s2; the no-clip is a 1-in-150 roll per 6 s attempt of pushing into the rock lip on the outermost isle's east rim (QA fixture: start on that isle with the roll forced to Level 37); Lost Suns residents not modelled; falling below -120 m into the abyss is fatal.",
+ "entity_policy": "Coconut Snares (Entity 61) are the only entity; the page gives only their habitat (palms of the smaller, farther isles) and hunting, so they are not shown: crowns rustle, the public house holds drawings of them. Crickets are ambience. The Lost Suns are a friendly, neutral community shown by their houses, fires, stores and notes (no figure models). No combat.",
+ "legacy_overlays": false,
+ "review": {
+  "stills_reviewed_by": "integrator (Claude)",
+  "date": "2026-11-08",
+  "programme": "v2 rebuild of dev28 placeholder"
+ }
 }

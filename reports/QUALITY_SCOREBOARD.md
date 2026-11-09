@@ -1,8 +1,8 @@
 # Quality scoreboard
 
-Generated 2026-11-09 00:55 UTC by `tools/build_reports.py` from engine artefacts.
+Generated 2026-11-09 01:16 UTC by `tools/build_reports.py` from engine artefacts.
 
-**100 requested / 100 source-audited / 100 built scenes / 73 playable-in-engine / 84 lore-validated (AI review) / 0 fully accepted / 36 story-reachable**
+**100 requested / 100 source-audited / 100 built scenes / 76 playable-in-engine / 87 lore-validated (AI review) / 0 fully accepted / 38 story-reachable**
 
 Definitions: *playable-in-engine* means the scene loads in Godot, spawns safely, and a walker bot physically triggered a sourced exit. *Lore-validated* means the integrator reviewed the stills and manifest against the dossier (Claude, not a human). *Fully accepted* needs human sign-off and real-GPU performance evidence, so it is 0 by design until those exist. *Story-reachable* means reachable from Level 0 through implemented story exits between playable levels.
 
@@ -22,7 +22,7 @@ Definitions: *playable-in-engine* means the scene loads in Godot, spawns safely,
 
 | Level | Status | QA | Checks | Bot exit (sim s) | Nav | Save | Stills | Story-reachable |
 |---|---|---|---:|---|---|---|---:|---|
-| L000 | PLAYABLE | ENGINE_SMOKE_PASS | 22/22 | L000>L001#1 (11.7) | ok | ok | 11 | yes |
+| L000 | PLAYABLE | ENGINE_SMOKE_PASS | 22/22 | L000>L001#1 (11.7) | ok | ok | 17 | yes |
 | L001 | PLAYABLE | ENGINE_SMOKE_PASS | 20/20 | L001>L019#10 (11.7) | ok | ok | 12 | yes |
 | L002 | PLAYABLE | ENGINE_SMOKE_PASS | 29/29 | L002>L998#13 (40.8) | ok | ok | 2 | yes |
 | L003 | PLAYABLE | ENGINE_SMOKE_PASS | 36/36 | L003>L069#4 (3.8) | ok | ok | 4 | yes |
@@ -89,7 +89,7 @@ Definitions: *playable-in-engine* means the scene loads in Godot, spawns safely,
 | L055 | PLAYABLE | ENGINE_SMOKE_PASS | 25/25 | L055>EXT#1 (1.6) | ok | ok | 4 | no |
 | L058 | PLAYABLE | ENGINE_SMOKE_PASS | 28/28 | L058>L001#2 (43.2) | ok | ok | 4 | no |
 | L060 | PLAYABLE | ENGINE_SMOKE_PASS | 27/27 | L060>L007#1 (1.5) | ok | ok | 4 | no |
-| L083 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |
+| L083 | PLAYABLE | ENGINE_SMOKE_PASS | 23/23 | L083>L007#1 (10.5) | ok | ok | 4 | yes |
 | L090 | PLAYABLE | ENGINE_SMOKE_PASS | 23/23 | L090>EXT#1 (10.3) | ok | ok | 4 | yes |
 | L096 | PLAYABLE | ENGINE_SMOKE_PASS | 21/21 | — | ok | ok | 4 | no |
 | L808 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 2 | no |
@@ -113,10 +113,10 @@ Definitions: *playable-in-engine* means the scene loads in Godot, spawns safely,
 | L108 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |
 | L114 | PLAYABLE | ENGINE_SMOKE_PASS | 26/26 | L114>L009#1 (2.6) | ok | ok | 4 | no |
 | L140 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |
-| L149 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |
+| L149 | PLAYABLE | ENGINE_SMOKE_PASS | 26/26 | L149>L037#1 (6.8) | ok | ok | 4 | no |
 | L160 | PLAYABLE | ENGINE_SMOKE_PASS | 22/22 | L160>EXT#1 (21.5) | ok | ok | 6 | no |
 | L197 | PLAYABLE | ENGINE_SMOKE_PASS | 23/23 | L197>L000#5 (59.8) | ok | ok | 4 | no |
-| L201 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |
+| L201 | PLAYABLE | ENGINE_SMOKE_PASS | 50/50 | L201>L001#3 (25.6) | ok | ok | 4 | yes |
 | L263 | PLAYABLE | ENGINE_SMOKE_PASS | 22/22 | L263>EXT#1 (1.4) | ok | ok | 4 | no |
 | L320 | IN_DEVELOPMENT | NOT_TESTED | 0/0 | — | — | — | 0 | no |
 | L737 | PLAYABLE | ENGINE_SMOKE_PASS | 29/29 | L737>L169#2 (9.4) | ok | ok | 4 | no |
