@@ -37,6 +37,14 @@ So the warning in the brief was correct: the laboratory work was **not** on
 archive=4389  repo=3694  same=1672  different=2017  new=700  missing=5
 ```
 
+> The manifest itself is ~620 kB of per-path rows and is **not kept in git**.
+> It is regenerated in about a minute by the committed tool:
+> `tools/v5_import_manifest.py --archive <extracted archive> --repo <checkout>
+> --out reports/infinite_world/v5_import_manifest.json`.
+> The compact, authoritative integrity record — the SHA-256 of every copied
+> file, before and after — **is** committed:
+> `reports/infinite_world/v5_import_provenance.json`.
+
 The 2 017 "different" files are dominated by noise that is **not** a content
 difference:
 

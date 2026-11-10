@@ -279,6 +279,11 @@ a code difference.
 Logs: `reports/qa/levels_suite.log` (branch), `reports/qa/levels_suite_BASE.log`
 (base), `reports/qa/story_suite.log`, `reports/qa/story_suite_BASE.log`.
 
+> `reports/qa/levels_results.json` is the QA runner's full machine output for
+> the levels suite (about 1 MB). It is **not kept in git** — it is regenerated
+> by `res://tests/QARunner.tscn -- --qa --suite=levels`, and the failure list
+> is preserved in the log and in the table above.
+
 ### 6.4 Two harness bugs that had to be fixed before the regression could run
 
 Both were in `RUN_100_LEVEL_ENTRY_QA_WINDOWS.ps1`, and both made the harness

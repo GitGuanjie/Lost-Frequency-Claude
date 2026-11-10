@@ -19,3 +19,15 @@ __pycache__/
 # reports/qa/entry_audit/levels/, which is tracked.
 reports/qa/dev24_entry_100/logs/
 reports/qa/dev24_entry_100/levels/
+# Two GENERATED reports that are too large to keep in git and are
+# regenerable from the tools that write them:
+#   reports/infinite_world/v5_import_manifest.json
+#       -> tools/v5_import_manifest.py (per-file comparison of the supplied
+#          archive against the checkout; ~620 kB of path/hash rows)
+#   reports/qa/levels_results.json
+#       -> res://tests/QARunner.tscn -- --qa --suite=levels
+# The compact, human-readable evidence for both IS committed:
+# reports/infinite_world/v5_import_provenance.json (the SHA-256 record of
+# every copied file) and reports/infinite_world/SESSION_REPORT.md.
+reports/infinite_world/v5_import_manifest.json
+reports/qa/levels_results.json
