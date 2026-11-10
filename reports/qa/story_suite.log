@@ -1,0 +1,25 @@
+﻿Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org
+
+STORY hop 0 at L000 paused=false
+STORY hop 1 at L001 paused=false
+STORY hop 2 at L019 paused=false
+STORY hop 3 at L020 paused=true
+Godot_v4.5.1-stable_win64_console.exe : FAIL [story] bot used L020>L007#5 in story mode { "fired": false, "ticks": 540,
+ "sim_seconds": 9.0, "edge": "", "distance_walked": 0.0, "target": "L020>L007#5", "path_points": 57, "path_index": 1, "
+progress_samples": [{ "tick": 120, "position": "(-28.9, 0.03, -46.0)", "goal": "(-26.23391, 0.13, -46.02769)", "nav_ver
+tex": 1, "slide_collisions": 0, "L009_route_progress": -1 }, { "tick": 240, "position": "(-28.9, 0.03, -46.0)", "goal":
+ "(-26.23391, 0.13, -46.02769)", "nav_vertex": 1, "slide_collisions": 0, "L009_route_progress": -1 }, { "tick": 360, "p
+osition": "(-28.9, 0.03, -46.0)", "goal": "(-26.23391, 0.13, -46.02769)", "nav_vertex": 1, "slide_collisions": 0, "L009
+_route_progress": -1 }, { "tick": 480, "position": "(-28.9, 0.03, -46.0)", "goal": "(-26.23391, 0.13, -46.02769)", "nav
+_vertex": 1, "slide_collisions": 0, "L009_route_progress": -1 }], "final_position": "(-28.9, 0.03, -46.0)", "distance_t
+o_target": 58.8628234863281, "reason": "physically blocked at navigation vertex 1/57, distance 2.67 m, body movement 0.
+00 m, no progress 8 s" }
+所在位置 行:4 字符: 1
++ & $godot --headless --path $repo --fixed-fps 60 res://tests/QARunner. ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (FAIL [story] bo...progress 8 s" }:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+QA DONE: 1 failures; suites={"framework":[8,0],"story":[26,1]}
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+   at: cleanup (core/object/object.cpp:2514)

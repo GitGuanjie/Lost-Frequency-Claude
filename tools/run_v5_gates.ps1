@@ -73,6 +73,8 @@ Invoke-Gate -Name '04_continuity_macro'    -GodotArgs @('--headless', '--path', 
 Invoke-Gate -Name '05_continuity_super'    -GodotArgs @('--headless', '--path', $Root, '--script', 'res://tests/ContinuitySuperDistrictTest.gd') -LogName 'gate05_super.log' | Out-Null
 Invoke-Gate -Name '06_continuity_plan'     -GodotArgs @('--headless', '--path', $Root, '--script', 'res://tests/ContinuityRegionalPlanTest.gd') -LogName 'gate06_plan.log' | Out-Null
 Invoke-Gate -Name '07_physical_walk'       -GodotArgs @('--headless', '--path', $Root, '--fixed-fps', '60', 'res://tests/ContinuityPhysicalWalkTest.tscn') -LogName 'gate07_walk.log' | Out-Null
+Invoke-Gate -Name '09_canon_transition'    -GodotArgs @('--headless', '--path', $Root, '--fixed-fps', '60', 'res://tests/ContinuityCanonTransitionTest.tscn') -LogName 'gate09_canon.log' | Out-Null
+Invoke-Gate -Name '10_performance_probe'   -GodotArgs @('--headless', '--path', $Root, '--fixed-fps', '60', 'res://tests/ContinuityPerformanceProbe.tscn') -LogName 'gate10_performance.log' | Out-Null
 
 # 08: the offline Python contracts
 $pyLog = Join-Path $LogDir 'gate08_python.log'

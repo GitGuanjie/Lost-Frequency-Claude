@@ -29,7 +29,35 @@ func _run() -> void:
 						ContinuityTopology.face_offset(seed_value, k + Vector3i(0, 0, 1), "south"))
 					for f in ["west", "east", "south", "north"]:
 						var off := ContinuityTopology.face_offset(seed_value, k, f)
-						_check("door safely within wall", off >= 8.0 and off <= 16.0)
+						_check("door safely within wall", off >= 1.0 and off <= 23.0)
+						# The invariant that actually matters is not "the door
+						# sits in the middle of the wall" but "the door does not
+						# open onto a stairwell". The old proxy check let a door
+						# land on the stair band, which dropped the player into
+						# an open well.
+						var axis := ContinuityTopology.face_axis(f)
+						_check("door clear of every stair slot",
+							not ContinuityTopology.opening_hits_stair(off, 4.0, axis))
+					# The floor opening and the ramp that fills it are the same
+					# rectangle, so the hole can never leave an uncovered strip.
+					#
+					# The comparison MUST be approximate. Godot stores Rect2 and
+					# Vector2 as 32-bit floats in a standard build, so the slot
+					# that comes back from `stair_slot()` is 2.40000009536743,
+					# not 2.4, and `== 2.4` is FALSE. An exact comparison here
+					# reported 2430 false failures against a correct geometry.
+					for shaft in 2:
+						var slot := ContinuityTopology.stair_slot(shaft)
+						var ramp_centre := ContinuityTopology.shaft_x(shaft) + 1.5
+						_check("stair slot has no uncovered strip",
+							is_equal_approx(slot.size.x, ContinuityTopology.STAIR_WIDTH) and
+							is_equal_approx(slot.size.y, ContinuityTopology.STAIR_RUN * ContinuityTopology.STAIR_STEPS))
+						# The slot is not merely the right size: it is the ramp
+						# footprint, centred on the ramp and starting where the
+						# first riser starts.
+						_check("stair slot is exactly the ramp footprint",
+							is_equal_approx(slot.position.x, ramp_centre - ContinuityTopology.STAIR_WIDTH * 0.5) and
+							is_equal_approx(slot.position.y, ContinuityTopology.STAIR_Z0))
 					_check("coordinate serialization", ContinuityTopology.encode(k) == "%d:%d:%d" % [x, y, z])
 					_check("theme reproducibility", ContinuityTopology.macro_theme(seed_value, k) ==
 						ContinuityTopology.macro_theme(seed_value, k))
