@@ -355,6 +355,8 @@ spawn, no fall) was never affected by this — only the content counters were.
 | 1 | `10fc7aa9be70871dac94e112cfe913dc3feb0567` | Import the Infinite Backrooms v5 laboratory onto a feature branch (hash-verified whitelist import; `levels/**` and `data/canon/**` untouched) |
 | 2 | `0c653e0a04c4940c693f2827e489296de5f0e228` | Implement the persistent WorldCoordinator and the canonical Level 0 → Level 1 fold |
 | 3 | `bd34600` | Keep the two oversized generated reports out of git |
+| 4 | `d809812` | Publish the branch and record how it was verified |
+| 5 | `9c37aeea0f6e647f4bfd2a4afa9b6b741e4ca64f` | Close the engine error the shipped build printed on every boot (§9) |
 
 ### 7.2 How it was published, and how it was verified
 
@@ -365,9 +367,9 @@ the content of each commit.
 
 That connector **rejects a request whose payload is too large** (about half a
 megabyte), so the file list was split into size-limited requests. The
-published history is therefore the same three logical commits, each split into
+published history is therefore the same logical commits, each split into
 several connector commits, and the remote commit SHAs are **not** the local
-ones.
+ones. The remote head after commit 5 is `a394e01ab7aae620890e535955b4b047cc8cd6ae`.
 
 What is authoritative is the **tree**, and it was verified blob by blob:
 
@@ -376,16 +378,32 @@ python tools/verify_branch_tree.py HEAD
 ```
 
 ```
-local blobs : 3787
-remote blobs: 3787
-only local  : 0 []
+local blobs : 3792
+remote blobs: 3791
+only local  : 1 ['reports/infinite_world/continuity_lab_release_build.jpg']
 only remote : 0 []
 different sha: 0 []
-IDENTICAL
+DIFFERENCES FOUND
 ```
 
-**The published branch carries exactly the same 3 787 blobs, with the same
-SHA-1 for every one of them, as the local `HEAD`.**
+**3 791 of the 3 792 blobs are published with the same SHA-1 as the local
+`HEAD`, and not one of them differs.** The single file that is *not* on the
+remote is the 194 010-byte screenshot, and the reason is the connector itself:
+`push_files` and `create_or_update_file` take their content as a **string**
+and base64-encode it themselves, so a **binary asset cannot be carried** by
+this publishing path at all. Its identity is recorded so the difference is
+checkable rather than merely asserted:
+
+```
+path   : reports/infinite_world/continuity_lab_release_build.jpg
+bytes  : 194010
+sha256 : 4b4a010062f7170876c27ac3af2d1f28846d0f1792272786d4463f936297b6df
+gitblob: adcc5b3d3e140cdf3a2ade6c043d7c13cac94563
+```
+
+The image is also inside the source ZIP and next to the Windows build, and the
+committed command in `release_boot_windowed.log` regenerates it in about two
+seconds.
 
 Two tools make this reproducible and are committed:
 
