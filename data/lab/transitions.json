@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "note": "ADAPTATION. The procedural continuity laboratory is an adaptation of Level 0, not the canonical Level 0 scene. The edge below is therefore an adaptation edge and not a canon edge. It names the canonical edge that it realises, so the trigger, the source quote and the destination arrival are taken from the canon manifests and are never invented here. The destination is the REAL Level 1 scene; there is no proxy level.",
+  "edges": [
+    {
+      "id": "LAB>L000>L001#1",
+      "from": "LAB",
+      "to": "L001",
+      "to_label": "Level 1",
+      "trigger": "noclip",
+      "basis": "ADAPTATION",
+      "canon_edge": "L000>L001#1",
+      "arrival": "from_L000",
+      "label": "Throw yourself through the flickering wall",
+      "hint": "Some wall sections flicker and crackle. Sprint into one and keep pushing.",
+      "placement": "Deterministic: a flickering wall section on the north boundary of the spawn chunk, away from every declared portal, stair slot and atrium well."
+    }
+  ]
+}

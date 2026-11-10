@@ -203,6 +203,11 @@ func _build(k: Vector3i) -> void:
 	_adding_child = false
 	var meta: Dictionary = builder.call(k.x, k.y, k.z, version_of(k), n)
 	chunks[k] = {"node": n, "meta": meta}
+	# The counter has to be advanced HERE. It was declared in `stream_stats`
+	# but never incremented, so every measurement that read it reported zero
+	# builds while the streamer was in fact building chunks. A counter that
+	# is always zero is indistinguishable from a broken instrument.
+	stream_stats["built"] = int(stream_stats["built"]) + 1
 	chunk_built.emit(k, meta)
 
 

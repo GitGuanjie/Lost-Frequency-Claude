@@ -4,6 +4,38 @@ Repository `GitGuanjie/Lost-Frequency-Claude`, branch `main`. The game is at the
 Its history was imported from `GitGuanjie/claude-EO` (`lost_frequency/`, branch `claude/affectionate-wright-axgljs`)
 on 2026-11-06. Engine: Godot **4.5.1** (Forward+).
 
+## Latest state (2026-11-10) — Infinite Backrooms v5 on `feature/infinite-backrooms-v5`
+**Read `docs/production/WORLD_COORDINATOR_AND_CANON_TRANSITION.md` first** (architecture),
+then `reports/infinite_world/SESSION_REPORT.md` (this session's results).
+
+- **The Continuity Laboratory (v5) is on a feature branch, not on `main`.**
+  Branch `feature/infinite-backrooms-v5`, base `ebbf6f7` (`main`). `main` was **not** modified.
+  The laboratory was imported from the supplied `LostFrequency-v2.1.0-InfiniteBackrooms-v5-SOURCE.zip`
+  by a hash-verified whitelist import (`tools/v5_import_*.py`); `levels/**` and `data/canon/**`
+  were protected and are byte-identical to `main`.
+- **The canonical Level 0 → Level 1 route now exists and is physically walked.**
+  `core/world/WorldCoordinator.gd` is a persistent coordinator that owns the player across a
+  non-Euclidean fold; `core/world/LabPortal.gd` drives it from a flickering wall built with the
+  canonical `l0_wall_flicker` material. The destination is the **real** `res://levels/L001/L001.tscn`;
+  `L001_PROXY` is never used. The laboratory edge is labelled **ADAPTATION** and names the canon
+  edge `L000>L001#1`, which must exist or the adaptation stops working.
+- **Gates: 10/10 PASS** on Godot 4.5.1 via `powershell -ExecutionPolicy Bypass -File tools\run_v5_gates.ps1`.
+  Native assertions 207 344 + 14 physical-walk checks + 37 canonical-transition checks + 45 Python contracts.
+- **Regression, measured against the base commit `ebbf6f7` on a separate worktree:**
+  the 100 canonical levels all enter and spawn (**100/100**), and the level suite shows
+  **15 failures on the branch vs 16 on the base, with ZERO failures on the branch that the base
+  does not also have**. The 15 + 1 story failure is exactly the v5 handoff's *"16 pre-existing
+  failures"* in exactly the levels it named (L026, L028, L032, L050, L073, L085, L320, L808).
+- **Closed this session:** the open stairwell (hole and ramp are one rectangle), the door that could
+  open onto a stairwell, the missing noclip/canon transition, the missing performance numbers, and a
+  `stream_stats["built"]` counter that was declared but never incremented.
+- **Measured (headless CPU):** 0.70 ms median frame cost, p95 1.59 ms, p99 12.73 ms, max 27.56 ms;
+  18 chunks built and 9 unloaded over a 68.9 m walk that crosses two chunk seams.
+  **GPU frame time and human playability are `UNVERIFIED`** — the runs are headless.
+- **Not yet done:** the archive's own 452 differing `levels/**` files were deliberately NOT imported.
+  Reconciling the archive's 100-level snapshot with the canonical story system is the next phase,
+  and it needs its own branch and its own decision about which content line wins.
+
 ## Latest state (2026-11-09) — read `docs/production/REMAINING_PLAN.md` first
 - 100/100 levels load and spawn (native entry probe); CompileAll 0 failing scripts.
 - 93 PLAYABLE (66 rebuilt in the v2 programme + 27 earlier), 7 IN_DEVELOPMENT left:

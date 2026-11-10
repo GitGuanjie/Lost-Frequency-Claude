@@ -35,8 +35,64 @@ static func border_slot(seed_value: int, k: Vector3i, axis: String) -> int:
 	return 1 + stable_roll(seed_value, ["shared-edge", axis, k.x, k.y, k.z], 3)
 
 
+## The lateral position of a face portal.
+##
+## The staircase occupies a band inside every chunk, so a door must not open
+## onto it. The stairs run along z and stand in two narrow x bands, one per
+## shaft, so:
+##
+##   * an east or west face has a lateral coordinate along z, and the stair
+##     run occupies z in [STAIR_Z0, STAIR_Z0 + run];
+##   * a north or south face has a lateral coordinate along x, and the two
+##     shafts occupy two narrow x bands.
+##
+## A door that opened straight onto a stairwell put the player in front of an
+## open well. The door width stays 4 m, so the OPENING, not just its centre,
+## has to be clear of the stairs.
 static func border_offset(seed_value: int, k: Vector3i, axis: String) -> float:
-	return 4.0 + 4.0 * float(border_slot(seed_value, k, axis))
+	var slot := border_slot(seed_value, k, axis)
+	if axis == "x":
+		# East and west faces: clear of the stair run, and on the same lanes
+		# the shared circulation uses. The opening is 4 m wide, so the whole
+		# opening has to stay clear of the stair band.
+		return [3.0, 4.5, 21.0][slot - 1]
+	# North and south faces: clear of both shaft bands, and in line with the
+	# door of the room partitions so a partition never blocks a doorway.
+	return [11.0, 12.0, 13.0][slot - 1]
+
+
+# --------------------------- staircase geometry ---------------------------
+# The hole in a floor and the ramp that fills it are ONE rectangle. A hole that
+# is wider or longer than its ramp leaves an uncovered strip, and that strip
+# is an unguarded drop to the storey below.
+const STAIR_WIDTH := 2.4
+const STAIR_RUN := 0.60
+const STAIR_STEPS := 20
+const STAIR_Z0 := 6.8
+
+
+## The floor opening of the staircase in a shaft, and the footprint of the ramp
+## that fills it. They are the same rectangle by construction, so the hole can
+## never be wider or longer than the ramp.
+static func stair_slot(shaft: int) -> Rect2:
+	return Rect2(shaft_x(shaft) + 0.3, STAIR_Z0, STAIR_WIDTH, STAIR_RUN * STAIR_STEPS)
+
+
+## True when a lateral opening of the given width would touch a stair slot.
+## The door is 4 m wide, so the whole opening has to be clear, not only its
+## centre.
+static func opening_hits_stair(at: float, width: float, axis: String) -> bool:
+	var lo := at - width * 0.5
+	var hi := at + width * 0.5
+	if axis == "x":
+		# Lateral coordinate along z: the stair run occupies this band.
+		return hi > STAIR_Z0 and lo < STAIR_Z0 + STAIR_RUN * STAIR_STEPS
+	# Lateral coordinate along x: the two shafts occupy two narrow bands.
+	for shaft in 2:
+		var slot := stair_slot(shaft)
+		if hi > slot.position.x and lo < slot.end.x:
+			return true
+	return false
 
 
 ## Outgoing stairs alternate between two disjoint shafts. The next floor cuts

@@ -13,3 +13,9 @@ assets/external/models/*.png.import
 # Python bytecode cache from the offline contract suites
 __pycache__/
 *.pyc
+# Per-level raw logs and duplicate probe reports from the 100-level entry
+# regression. The summary (summary.csv / summary.json) is committed; the raw
+# logs are regenerable, and the per-level copies duplicate
+# reports/qa/entry_audit/levels/, which is tracked.
+reports/qa/dev24_entry_100/logs/
+reports/qa/dev24_entry_100/levels/
