@@ -106,6 +106,7 @@ func _menu() -> void:
 	vb.add_child(_continue_btn)
 	vb.add_child(UITheme.button("New expedition", _new))
 	vb.add_child(UITheme.button("Developer · 100-Level Browser", func(): Overlay.push(Overlay.dev_browser)))
+	vb.add_child(UITheme.button("Experimental · Infinite Backrooms · Continuity Lab v5", _open_world_lab))
 	vb.add_child(UITheme.button("Settings", func(): Overlay.push(Overlay.settings_panel)))
 	vb.add_child(UITheme.button("Credits & attribution", func(): Overlay.push(Overlay.credits_panel)))
 	vb.add_child(UITheme.button("Quit", func(): get_tree().quit()))
@@ -116,6 +117,17 @@ func _menu() -> void:
 		ProjectSettings.get_setting("application/config/version"), Engine.get_version_info()["string"]], 13, UITheme.MUTED)
 	vb.add_child(foot)
 	(_continue_btn if not _continue_btn.disabled else vb.get_child(5)).grab_focus()
+	# Command line entry point for QA and for players who want the procedural
+	# world straight away:  LostFrequency.exe --lab
+	for arg in OS.get_cmdline_user_args():
+		if arg == "--lab":
+			_open_world_lab()
+			return
+
+
+func _open_world_lab() -> void:
+	SessionState.set_mode(SessionState.Mode.DEVELOPER)
+	get_tree().change_scene_to_file("res://labs/Level0ContinuityLab.tscn")
 
 
 func _new() -> void:
