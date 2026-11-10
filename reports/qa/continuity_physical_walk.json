@@ -31,8 +31,8 @@
       "check": "walker reaches the declared east portal of chunk 0",
       "detail": {
         "distance": 0.0,
-        "offset": 12.0,
-        "pos": "(24.86133, 0.02, 11.74462)"
+        "offset": 4.5,
+        "pos": "(24.87756, 0.020333, 4.255348)"
       },
       "pass": true
     },
@@ -40,7 +40,7 @@
       "check": "walker physically crossed a chunk seam eastward",
       "detail": {
         "chunk": "(1, 0, 0)",
-        "pos": "(24.86133, 0.02, 11.74462)"
+        "pos": "(24.87756, 0.020333, 4.255348)"
       },
       "pass": true
     },
@@ -48,7 +48,7 @@
       "check": "walker returns to the spawn point through the same portal",
       "detail": {
         "distance": 0.0,
-        "pos": "(11.10764, 0.02, 9.856676)"
+        "pos": "(11.10864, 0.020333, 9.870248)"
       },
       "pass": true
     },
@@ -56,8 +56,8 @@
       "check": "walker reaches negative chunk coordinates",
       "detail": {
         "distance": 0.0,
-        "offset": 8.0,
-        "pos": "(-1.384115, 0.02, 7.756979)"
+        "offset": 3.0,
+        "pos": "(-1.336366, 0.020333, 2.826364)"
       },
       "pass": true
     },
@@ -72,7 +72,7 @@
       "check": "walker returns from negative coordinates",
       "detail": {
         "distance": 0.0,
-        "pos": "(10.88732, 0.02, 9.814205)"
+        "pos": "(10.88435, 0.020333, 9.807423)"
       },
       "pass": true
     },
@@ -80,7 +80,7 @@
       "check": "walker climbs the staircase to the next storey",
       "detail": {
         "distance": 0.0,
-        "pos": "(7.520217, 4.52, 20.31258)"
+        "pos": "(7.519654, 4.52, 20.31745)"
       },
       "pass": true
     },
@@ -96,7 +96,7 @@
       "check": "walker physically crosses the atrium bridge",
       "detail": {
         "distance": 0.0,
-        "pos": "(49.81698, 0.02, 45.5)"
+        "pos": "(49.83908, 0.02, 45.5)"
       },
       "pass": true
     },
@@ -117,8 +117,8 @@
     {
       "check": "an unloaded and rebuilt chunk is byte-identical in structure",
       "detail": {
-        "after": "{ \"district\": \"Z_L000_YELLOW\", \"macro\": \"silent_quarters\", \"room\": \"entry_hall\", \"superstructure\": \"grand_atrium\", \"superdistrict\": \"threshold_nexus\", \"hub\": false, \"spine\": false, \"atrium\": false, \"floor\": 0, \"role\": \"structure\", \"structure\": \"S0_0_M0\", \"structure_kind\": \"arcade\", \"district_style\": \"flooded_basement\", \"version\": 0, \"boxes\": 72, \"triangles\": 980, \"colliders\": 24 }",
-        "before": "{ \"district\": \"Z_L000_YELLOW\", \"macro\": \"silent_quarters\", \"room\": \"entry_hall\", \"superstructure\": \"grand_atrium\", \"superdistrict\": \"threshold_nexus\", \"hub\": false, \"spine\": false, \"atrium\": false, \"floor\": 0, \"role\": \"structure\", \"structure\": \"S0_0_M0\", \"structure_kind\": \"arcade\", \"district_style\": \"flooded_basement\", \"version\": 0, \"boxes\": 72, \"triangles\": 980, \"colliders\": 24 }"
+        "after": "{ \"district\": \"Z_L000_YELLOW\", \"macro\": \"silent_quarters\", \"room\": \"entry_hall\", \"superstructure\": \"grand_atrium\", \"superdistrict\": \"threshold_nexus\", \"hub\": false, \"spine\": false, \"atrium\": false, \"floor\": 0, \"role\": \"structure\", \"structure\": \"S0_0_M0\", \"structure_kind\": \"arcade\", \"district_style\": \"flooded_basement\", \"version\": 0, \"boxes\": 73, \"triangles\": 992, \"colliders\": 25 }",
+        "before": "{ \"district\": \"Z_L000_YELLOW\", \"macro\": \"silent_quarters\", \"room\": \"entry_hall\", \"superstructure\": \"grand_atrium\", \"superdistrict\": \"threshold_nexus\", \"hub\": false, \"spine\": false, \"atrium\": false, \"floor\": 0, \"role\": \"structure\", \"structure\": \"S0_0_M0\", \"structure_kind\": \"arcade\", \"district_style\": \"flooded_basement\", \"version\": 0, \"boxes\": 73, \"triangles\": 992, \"colliders\": 25 }"
       },
       "pass": true
     }

@@ -28,6 +28,10 @@ var _current_district := "L000"
 var _hud_clock := 0.0
 var _capture_shot_path := ""
 var _capture_shot_countdown := 0
+## Where the canonical flickering wall is, once the spawn chunk is built.
+var _canon_portal_pos := Vector3.ZERO
+## True once the destination scene has been loaded ahead of the fold.
+var _canon_prefetched := false
 
 
 func _ready() -> void:
@@ -63,9 +67,15 @@ func _ready() -> void:
 	player.flashlight.visible = true
 	player.died.connect(_on_dead)
 	world.target = player
+	# The laboratory hands the wanderer to the persistent coordinator, which
+	# keeps this exact player alive across a non-Euclidean fold.
+	var coordinator := WorldCoordinator.ensure(get_tree())
+	if coordinator != null:
+		coordinator.adopt(player)
 	_make_hud()
 	SessionState.capture_mouse()
 	Overlay.toast("INFINITE BACKROOMS v5: 16x16 districts, 8x8 superdistricts, region-owned megastructures. F8 map, F9 mark, F4 reshape, F5/F6 seeds, F10 menu", 8.0)
+	Overlay.toast("A flickering wall in the spawn hall throws you through to Level 1 (canon route, ADAPTATION entry). Sprint into it and keep pushing.", 9.0)
 	_maybe_capture_shot()
 
 
@@ -265,9 +275,13 @@ func _build_chunk(cx: int, cy: int, cz: int, version: int, node: Node3D) -> Dict
 	else:
 		kit.slab(o.x, o.z, o.x + C, o.z + C, y, 0.25, ground)
 	if cy < ContinuityTopology.MAX_FLOOR:
-		var sx := o.x + ContinuityTopology.shaft_x(outgoing) + 1.5
-		kit.stairs(Vector3(sx, y, o.z + 6.8), Vector3(0, 0, 1), 2.4, DY, 20,
-			"metal" if warehouse else "wood_floor", 0.60, false)
+		# The ramp is built on the SAME rectangle as the floor opening it
+		# passes through, so the hole is always completely filled.
+		var ramp_slot := ContinuityTopology.stair_slot(outgoing)
+		var sx := o.x + ramp_slot.position.x + ramp_slot.size.x * 0.5
+		kit.stairs(Vector3(sx, y, o.z + ramp_slot.position.y), Vector3(0, 0, 1),
+			ramp_slot.size.x, DY, ContinuityTopology.STAIR_STEPS,
+			"metal" if warehouse else "wood_floor", ContinuityTopology.STAIR_RUN, false)
 	else:
 		kit.slab(o.x, o.z, o.x + C, o.z + C, y + DY, 0.22, roof)
 	for face in ["west", "east", "south", "north"]:
@@ -285,6 +299,10 @@ func _build_chunk(cx: int, cy: int, cz: int, version: int, node: Node3D) -> Dict
 	else:
 		_add_architecture(kit, o, key, room, theme, warehouse, version)
 	_add_lighting(kit, node, o, key, room, theme, warehouse)
+	# The documented Level 0 -> Level 1 route lives in the spawn chunk, so it
+	# is always reachable from the start and its position never moves.
+	if key == Vector3i(0, 0, 0):
+		_add_canon_portal(kit, node, o, y)
 	if ContinuityTopology.is_power_anchor(world.seed_value, key):
 		_add_power_relay(kit, node, key, o)
 	if ContinuityTopology.is_super_terminal(key):
@@ -314,11 +332,13 @@ func _build_chunk(cx: int, cy: int, cz: int, version: int, node: Node3D) -> Dict
 ## The bridge is an actual floor strip, not decorative geometry.
 func _floor_with_slot_and_atrium(kit: GeoKit, o: Vector3, y: float, shaft: int,
 		mat: String, hole: Rect2, bridge: Rect2) -> void:
-	var a := ContinuityTopology.shaft_x(shaft) - 0.6
-	var stair := Rect2(a, 5.4, 4.2, 13.2)
-	var xs: Array = [0.0, a, a + 4.2, hole.position.x,
+	# Same rectangle as _floor_with_slot: the hole is the ramp's footprint.
+	var slot := ContinuityTopology.stair_slot(shaft)
+	var a := slot.position.x
+	var b := slot.end.x
+	var xs: Array = [0.0, a, b, hole.position.x,
 		hole.end.x, C]
-	var zs: Array = [0.0, 5.4, 18.6, hole.position.y,
+	var zs: Array = [0.0, slot.position.y, slot.end.y, hole.position.y,
 		hole.end.y, bridge.position.y, bridge.end.y, C]
 	xs.sort()
 	zs.sort()
@@ -331,17 +351,16 @@ func _floor_with_slot_and_atrium(kit: GeoKit, o: Vector3, y: float, shaft: int,
 			if x1 - x0 < 0.02 or z1 - z0 < 0.02:
 				continue
 			var mid := Vector2((x0 + x1) * 0.5, (z0 + z1) * 0.5)
-			if stair.has_point(mid):
+			if slot.has_point(mid):
 				continue
 			if hole.has_point(mid) and not bridge.has_point(mid):
 				continue
 			kit.slab(o.x + x0, o.z + z0, o.x + x1, o.z + z1, y, 0.22, mat)
 	# Same incoming-stair protection as the ordinary floors.
-	var b := a + 4.2
 	for lateral in [a - 0.12, b + 0.12]:
-		kit.box(Vector3(o.x + lateral, y + 0.55, o.z + 12.0),
-			Vector3(0.15, 1.10, 13.2), "metal")
-	kit.box(Vector3(o.x + (a + b) * 0.5, y + 0.55, o.z + 5.28),
+		kit.box(Vector3(o.x + lateral, y + 0.55, o.z + (slot.position.y + slot.end.y) * 0.5),
+			Vector3(0.15, 1.10, slot.size.y), "metal")
+	kit.box(Vector3(o.x + (a + b) * 0.5, y + 0.55, o.z + slot.position.y - 0.12),
 		Vector3(b - a, 1.10, 0.15), "metal")
 
 
@@ -687,6 +706,55 @@ func _toggle_relay(anchor: Vector3i) -> void:
 ## central doorway, so a west/south/east/north boundary opening always has
 ## a route into the central circulation. Architectural rooms remain fully
 ## inside their chunk: walls never depend on neighbouring generation order.
+## The documented Level 0 -> Level 1 route, reachable from the laboratory.
+##
+## The canonical Level 0 exit is a flickering wall: "find a flickering wall to
+## throw yourself through". This builds one in the spawn chunk, against the
+## north boundary, clear of every declared portal, stair slot, atrium well and
+## structural pilaster. The placement is deterministic and does not depend on
+## the seed, so the route is always in the same place.
+##
+## The WALL is an ADAPTATION entry point into the laboratory. The ROUTE it
+## opens is the canon route, and it leads to the REAL Level 1 scene through
+## the persistent WorldCoordinator. There is no proxy level here.
+func _add_canon_portal(kit: GeoKit, node: Node3D, o: Vector3, y: float) -> void:
+	# The same material the canonical Level 0 uses, so the wall reads exactly
+	# like the one the source page describes.
+	MatLib.define("l0_wall_flicker",
+		{"emission_color": Color(1.0, 0.93, 0.62), "emission_energy": 0.55,
+			"emission_flicker": 1.0}, "l0_wallpaper")
+	var x0 := o.x + 20.9
+	var x1 := o.x + 23.6
+	var z := o.z + 23.78
+	kit.wall(Vector3(x0, y, z), Vector3(x1, y, z), H, 0.16, "l0_wall_flicker", [], GeoKit.ALL)
+	# A buzzing light in front of it: the wall is lit, and it crackles.
+	var light := OmniLight3D.new()
+	light.position = Vector3((x0 + x1) * 0.5, y + 2.3, z - 0.9)
+	light.light_color = Color(1.0, 0.95, 0.75)
+	light.light_energy = 1.7
+	light.omni_range = 9.0
+	light.shadow_enabled = false
+	node.add_child(light)
+	var hum := AudioStreamPlayer3D.new()
+	hum.stream = AudioSynth.get_stream("static", {"seconds": 2.0})
+	hum.unit_size = 6.0
+	hum.max_db = -16.0
+	hum.position = Vector3((x0 + x1) * 0.5, y + 1.2, z - 0.9)
+	hum.autoplay = true
+	node.add_child(hum)
+	# The trigger volume sits in front of the wall, on the side the player
+	# approaches from. Its centre is NORTH of the player's body centre, so the
+	# "pushing into it" test points the right way when the player runs at it.
+	var portal := LabPortal.new()
+	portal.name = "LabPortal_L000_L001"
+	node.add_child(portal)
+	portal.setup_portal("LAB>L000>L001#1",
+		Vector3((x0 + x1) * 0.5, y + 1.1, z - 0.28),
+		Vector3(2.9, 2.3, 1.6),
+		"Throw yourself through the flickering wall (sprint into it)")
+	_canon_portal_pos = portal.global_position
+
+
 func _add_room_partitions(kit: GeoKit, o: Vector3, room: String, wall_mat: String) -> void:
 	if room in ["entry_hall", "crossroads", "column_gallery"]:
 		return
@@ -704,10 +772,13 @@ func _add_room_partitions(kit: GeoKit, o: Vector3, room: String, wall_mat: Strin
 
 
 func _floor_with_slot(kit: GeoKit, o: Vector3, y: float, shaft: int, mat: String) -> void:
-	var a := ContinuityTopology.shaft_x(shaft) - 0.6
-	var b := a + 4.2
-	var z0 := 5.4
-	var z1 := 18.6
+	# The hole in the floor IS the footprint of the ramp that fills it. The two
+	# are one rectangle, so there is no uncovered strip and no unguarded drop.
+	var slot := ContinuityTopology.stair_slot(shaft)
+	var a := slot.position.x
+	var b := slot.end.x
+	var z0 := slot.position.y
+	var z1 := slot.end.y
 	kit.slab(o.x, o.z, o.x + a, o.z + C, y, 0.22, mat)
 	kit.slab(o.x + b, o.z, o.x + C, o.z + C, y, 0.22, mat)
 	kit.slab(o.x + a, o.z, o.x + b, o.z + z0, y, 0.22, mat)
@@ -870,6 +941,14 @@ func _process(delta: float) -> void:
 		_capture_shot()
 	if player == null:
 		return
+	# Load the destination of the canonical route while the player is still
+	# walking towards it, so the fold itself is a cache hit and costs nothing.
+	if not _canon_prefetched and _canon_portal_pos != Vector3.ZERO:
+		if player.global_position.distance_to(_canon_portal_pos) < 16.0:
+			_canon_prefetched = true
+			var coordinator := WorldCoordinator.ensure(get_tree())
+			if coordinator != null:
+				coordinator.prefetch_scene("res://levels/L001/L001.tscn")
 	var key := world.key_at(player.global_position)
 	if key != _near_key:
 		_near_key = key

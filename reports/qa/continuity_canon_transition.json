@@ -1,0 +1,255 @@
+{
+  "canon_edge": "L000>L001#1",
+  "checks": [
+    {
+      "check": "a WorldCoordinator exists",
+      "pass": true
+    },
+    {
+      "check": "the laboratory edge resolves",
+      "detail": {
+        "edge": "LAB>L000>L001#1"
+      },
+      "pass": true
+    },
+    {
+      "check": "the laboratory edge names the canon edge",
+      "detail": {
+        "canon_edge": "L000>L001#1"
+      },
+      "pass": true
+    },
+    {
+      "check": "the laboratory edge is labelled ADAPTATION, not canon",
+      "detail": {
+        "basis": "ADAPTATION"
+      },
+      "pass": true
+    },
+    {
+      "check": "the laboratory edge points at the real Level 1",
+      "detail": {
+        "to": "L001"
+      },
+      "pass": true
+    },
+    {
+      "check": "the canon edge resolves from the canonical manifest",
+      "detail": {
+        "edge": "L000>L001#1"
+      },
+      "pass": true
+    },
+    {
+      "check": "the canon edge is a noclip route",
+      "detail": {
+        "trigger": "noclip"
+      },
+      "pass": true
+    },
+    {
+      "check": "the canon edge carries a source basis",
+      "detail": {
+        "basis": "SOURCE"
+      },
+      "pass": true
+    },
+    {
+      "check": "the canon edge carries a source quote",
+      "detail": {
+        "quote": "find a flickering wall to throw yourself through"
+      },
+      "pass": true
+    },
+    {
+      "check": "the arrival is the one Level 1 declares for this route",
+      "detail": {
+        "arrival": "from_L000"
+      },
+      "pass": true
+    },
+    {
+      "check": "LevelRegistry is present",
+      "pass": true
+    },
+    {
+      "check": "the destination is the real Level 1 scene",
+      "detail": {
+        "scene": "res://levels/L001/L001.tscn"
+      },
+      "pass": true
+    },
+    {
+      "check": "the Level 1 scene exists on disk",
+      "detail": {
+        "scene": "res://levels/L001/L001.tscn"
+      },
+      "pass": true
+    },
+    {
+      "check": "Level 1 declares the from_L000 arrival",
+      "pass": true
+    },
+    {
+      "check": "no proxy level is used as the destination",
+      "detail": {
+        "proxies": []
+      },
+      "pass": true
+    },
+    {
+      "check": "the laboratory spawns a player",
+      "pass": true
+    },
+    {
+      "check": "the laboratory has a world",
+      "pass": true
+    },
+    {
+      "check": "the coordinator adopted the laboratory player",
+      "pass": true
+    },
+    {
+      "check": "the laboratory built the flickering-wall portal",
+      "pass": true
+    },
+    {
+      "check": "the portal fires the laboratory edge",
+      "detail": {
+        "edge": "LAB>L000>L001#1"
+      },
+      "pass": true
+    },
+    {
+      "check": "the portal is a noclip portal",
+      "detail": {
+        "kind": "noclip"
+      },
+      "pass": true
+    },
+    {
+      "check": "the runner stands on solid ground in front of the wall",
+      "detail": {
+        "pos": "(22.25, 0.000391, 20.9)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the runner reaches the trigger volume",
+      "detail": {
+        "frames": 28,
+        "pos": "(22.25, 0.02, 22.98121)",
+        "trigger": "(22.25, 1.1, 23.5)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the player survived the approach",
+      "pass": true
+    },
+    {
+      "check": "the fold completed exactly once",
+      "detail": {
+        "transfers": 1
+      },
+      "pass": true
+    },
+    {
+      "check": "the session is now in Level 1",
+      "detail": {
+        "current_level": "L001"
+      },
+      "pass": true
+    },
+    {
+      "check": "the current scene is Level 1",
+      "detail": {
+        "scene": "L001"
+      },
+      "pass": true
+    },
+    {
+      "check": "the current scene runs the canonical Level 1 script",
+      "detail": {
+        "script": "res://levels/L001/L001.gd"
+      },
+      "pass": true
+    },
+    {
+      "check": "exactly one player node exists after the fold",
+      "detail": {
+        "group_size": 1,
+        "players": 1
+      },
+      "pass": true
+    },
+    {
+      "check": "the original player node is still alive",
+      "pass": true
+    },
+    {
+      "check": "the player node was MOVED, not destroyed and re-created",
+      "detail": {
+        "after": 101015620287,
+        "before": 101015620287
+      },
+      "pass": true
+    },
+    {
+      "check": "the player now belongs to the Level 1 scene",
+      "detail": {
+        "parent": "L001"
+      },
+      "pass": true
+    },
+    {
+      "check": "Level 1 drives the persistent player",
+      "pass": true
+    },
+    {
+      "check": "the player is standing on solid ground in Level 1",
+      "detail": {
+        "pos": "(12.0, 0.02, 11.18789)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the carried light state survived the fold",
+      "detail": {
+        "after": true,
+        "before": true
+      },
+      "pass": true
+    },
+    {
+      "check": "the laboratory's streamed world was released",
+      "detail": {
+        "still_resolves": false,
+        "world_id": 86587213902
+      },
+      "pass": true
+    },
+    {
+      "check": "the laboratory PLACE was released, not merely its chunks",
+      "detail": {
+        "lab_id": 86452996173,
+        "still_resolves": false
+      },
+      "pass": true
+    }
+  ],
+  "engine": {
+    "build": "official",
+    "hash": "f62fdbde15035c5576dad93e586201f4d41ef0cb",
+    "hex": 263425,
+    "major": 4,
+    "minor": 5,
+    "patch": 1,
+    "status": "stable",
+    "string": "4.5.1-stable (official)",
+    "timestamp": 0
+  },
+  "failures": 0,
+  "lab_edge": "LAB>L000>L001#1",
+  "seed": 1337
+}

@@ -134,6 +134,12 @@ The failures that remain are **inherited from the v5 archive and are not yet
 addressed**; they are listed here so the baseline is honest, and each one is
 either fixed or explicitly carried forward in this session:
 
+> **Status update (2026-11-10, later the same day):** B1, B2, B3 and B5 were
+> **closed** in the session that followed this baseline, and B4 was
+> **re-measured** rather than assumed. See `reports/infinite_world/SESSION_REPORT.md`
+> and `docs/production/WORLD_COORDINATOR_AND_CANON_TRANSITION.md`. The table
+> below is deliberately left as it was, because it is the *baseline*.
+
 | # | Source | Status at this baseline |
 |---|---|---|
 | B1 | v5 handoff known issue 2 — the floor slot of a stairwell is 4.2 m wide but the ramp that fills it is 2.4 m wide, leaving a 1.8 m unguarded drop to the storey below | **open** |

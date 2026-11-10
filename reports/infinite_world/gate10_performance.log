@@ -1,0 +1,12 @@
+﻿Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org
+
+PERFORMANCE wall steady median=0.719ms p95=1.780ms p99=13.555ms max=30.012ms | wall cold median=0.601ms max=19.580ms | engine-process steady median=20.699ms max=20.744ms | engine cold median=20.744ms max=20.744ms
+PERFORMANCE streaming built=45(+18) unloaded=9(+9) peak_chunks=36 peak_tris=34012 peak_colliders=1147 travel=68.9m failures=0
+Godot_v4.5.1-stable_win64_console.exe : WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+At E:\cherry mimo ccnot\backrooms\_dl\lf_v5\tools\run_v5_gates.ps1:45 char:5
++     & $Engine @GodotArgs 2>&1 | Out-File -FilePath $log -Encoding utf ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: Object...e for details).:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+   at: cleanup (core/object/object.cpp:2514)

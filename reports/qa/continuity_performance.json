@@ -1,0 +1,140 @@
+{
+  "engine": {
+    "build": "official",
+    "hash": "f62fdbde15035c5576dad93e586201f4d41ef0cb",
+    "hex": 263425,
+    "major": 4,
+    "minor": 5,
+    "patch": 1,
+    "status": "stable",
+    "string": "4.5.1-stable (official)",
+    "timestamp": 0
+  },
+  "engine_monitors": "UNRELIABLE under --fixed-fps: Performance.TIME_PROCESS and Performance.TIME_PHYSICS_PROCESS report the simulation step budget, not the CPU cost. The wall clock is the number that is believed, and it is cross-checked against the elapsed time of the measured section.",
+  "failures": 0,
+  "gpu_frame_time": "UNVERIFIED: headless run has no renderer",
+  "headless": true,
+  "memory_static_mb": 92.6252765655518,
+  "note": "CPU numbers from a headless run. The 60 fps frame budget is 16.667 ms.",
+  "physics_ms_cold_start": {
+    "max_ms": 0.757,
+    "median_ms": 0.757,
+    "min_ms": 0.757,
+    "p95_ms": 0.757,
+    "p99_ms": 0.757,
+    "samples": 120
+  },
+  "physics_ms_steady_state": {
+    "max_ms": 15.423,
+    "median_ms": 15.423,
+    "min_ms": 0.757,
+    "p95_ms": 15.423,
+    "p99_ms": 15.423,
+    "samples": 954
+  },
+  "process_ms_cold_start": {
+    "max_ms": 20.744,
+    "median_ms": 20.744,
+    "min_ms": 20.744,
+    "p95_ms": 20.744,
+    "p99_ms": 20.744,
+    "samples": 120
+  },
+  "process_ms_steady_state": {
+    "max_ms": 20.744,
+    "median_ms": 20.699,
+    "min_ms": 20.699,
+    "p95_ms": 20.744,
+    "p99_ms": 20.744,
+    "samples": 954
+  },
+  "route": {
+    "elapsed_ms": 1274.194,
+    "legs": [
+      {
+        "budget": 2400,
+        "closest_m": 0.0,
+        "end_chunk": "(1, 0, 0)",
+        "frames": 265,
+        "name": "east seam",
+        "reached": true,
+        "waypoints": [
+          "(11.0, 0.0, 2.2)",
+          "(23.0, 0.0, 2.2)",
+          "(23.0, 0.0, 4.5)",
+          "(26.0, 0.0, 4.5)"
+        ]
+      },
+      {
+        "budget": 1800,
+        "closest_m": 0.0,
+        "end_chunk": "(0, 0, 0)",
+        "frames": 190,
+        "name": "back to the lane",
+        "reached": true,
+        "waypoints": [
+          "(23.0, 0.0, 4.5)",
+          "(23.0, 0.0, 2.2)",
+          "(11.0, 0.0, 2.2)"
+        ]
+      },
+      {
+        "budget": 3000,
+        "closest_m": 0.0,
+        "end_chunk": "(-1, 0, 0)",
+        "frames": 203,
+        "name": "west seam",
+        "reached": true,
+        "waypoints": [
+          "(11.0, 0.0, 2.2)",
+          "(1.0, 0.0, 2.2)",
+          "(1.0, 0.0, 3.0)",
+          "(-2.5, 0.0, 3.0)"
+        ]
+      },
+      {
+        "budget": 2400,
+        "closest_m": 0.0,
+        "end_chunk": "(0, 0, 0)",
+        "frames": 296,
+        "name": "home",
+        "reached": true,
+        "waypoints": [
+          "(1.0, 0.0, 3.0)",
+          "(1.0, 0.0, 2.2)",
+          "(11.0, 0.0, 2.2)",
+          "(11.0, 0.0, 11.0)"
+        ]
+      }
+    ],
+    "measured_frames": 954,
+    "travelled_m": 68.9276362312958,
+    "warmup_frames": 120
+  },
+  "seed": 1337,
+  "streaming": {
+    "chunks_built_during_measurement": 18,
+    "chunks_built_total": 45,
+    "chunks_unloaded_during_measurement": 9,
+    "chunks_unloaded_total": 9,
+    "peak_chunks": 36,
+    "peak_colliders": 1147,
+    "peak_triangles": 34012
+  },
+  "wall_ms_cold_start": {
+    "max_ms": 19.58,
+    "median_ms": 0.601,
+    "min_ms": 0.48,
+    "p95_ms": 0.866,
+    "p99_ms": 3.705,
+    "samples": 120
+  },
+  "wall_ms_steady_state": {
+    "max_ms": 30.012,
+    "median_ms": 0.719,
+    "min_ms": 0.561,
+    "p95_ms": 1.78,
+    "p99_ms": 13.555,
+    "samples": 954
+  }
+}
