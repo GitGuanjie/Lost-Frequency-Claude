@@ -887,11 +887,15 @@ func toast(text: String, seconds: float = 3.0) -> void:
 	l.custom_minimum_size = Vector2(800, 0)
 	pc.add_child(l)
 	toast_box.add_child(pc)
-	# detach before freeing: queue_free alone keeps the child counted this frame
-	while toast_box.get_child_count() > 4:
-		var old := toast_box.get_child(0)
-		toast_box.remove_child(old)
-		old.queue_free()
+	# Keep the stack short. The toast box lays out its children, so removing
+	# one by hand here raises an engine error ("parent node is busy adding or
+	# removing children") and the old toast would stay on screen. queue_free
+	# detaches the node at the end of the frame, which is safe.
+	var excess := toast_box.get_child_count() - 4
+	for i in maxi(excess, 0):
+		var old := toast_box.get_child(i)
+		if old != pc:
+			old.queue_free()
 	var ref: WeakRef = weakref(pc)   # the toast may already be gone when the timer fires
 	get_tree().create_timer(seconds, true, false, true).timeout.connect(func():
 		var n: Object = ref.get_ref()
