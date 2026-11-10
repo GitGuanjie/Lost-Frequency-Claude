@@ -14,42 +14,42 @@
   "failures": 0,
   "gpu_frame_time": "UNVERIFIED: headless run has no renderer",
   "headless": true,
-  "memory_static_mb": 92.6252765655518,
+  "memory_static_mb": 92.6287708282471,
   "note": "CPU numbers from a headless run. The 60 fps frame budget is 16.667 ms.",
   "physics_ms_cold_start": {
-    "max_ms": 0.757,
-    "median_ms": 0.757,
-    "min_ms": 0.757,
-    "p95_ms": 0.757,
-    "p99_ms": 0.757,
+    "max_ms": 0.807,
+    "median_ms": 0.807,
+    "min_ms": 0.807,
+    "p95_ms": 0.807,
+    "p99_ms": 0.807,
     "samples": 120
   },
   "physics_ms_steady_state": {
-    "max_ms": 15.423,
-    "median_ms": 15.423,
-    "min_ms": 0.757,
-    "p95_ms": 15.423,
-    "p99_ms": 15.423,
+    "max_ms": 35.159,
+    "median_ms": 35.159,
+    "min_ms": 0.807,
+    "p95_ms": 35.159,
+    "p99_ms": 35.159,
     "samples": 954
   },
   "process_ms_cold_start": {
-    "max_ms": 20.744,
-    "median_ms": 20.744,
-    "min_ms": 20.744,
-    "p95_ms": 20.744,
-    "p99_ms": 20.744,
+    "max_ms": 16.141,
+    "median_ms": 16.141,
+    "min_ms": 16.141,
+    "p95_ms": 16.141,
+    "p99_ms": 16.141,
     "samples": 120
   },
   "process_ms_steady_state": {
-    "max_ms": 20.744,
-    "median_ms": 20.699,
-    "min_ms": 20.699,
-    "p95_ms": 20.744,
-    "p99_ms": 20.744,
+    "max_ms": 34.971,
+    "median_ms": 34.971,
+    "min_ms": 16.141,
+    "p95_ms": 34.971,
+    "p99_ms": 34.971,
     "samples": 954
   },
   "route": {
-    "elapsed_ms": 1274.194,
+    "elapsed_ms": 1485.994,
     "legs": [
       {
         "budget": 2400,
@@ -122,19 +122,19 @@
     "peak_triangles": 34012
   },
   "wall_ms_cold_start": {
-    "max_ms": 19.58,
-    "median_ms": 0.601,
-    "min_ms": 0.48,
-    "p95_ms": 0.866,
-    "p99_ms": 3.705,
+    "max_ms": 10.577,
+    "median_ms": 0.687,
+    "min_ms": 0.606,
+    "p95_ms": 0.974,
+    "p99_ms": 6.139,
     "samples": 120
   },
   "wall_ms_steady_state": {
-    "max_ms": 30.012,
-    "median_ms": 0.719,
-    "min_ms": 0.561,
-    "p95_ms": 1.78,
-    "p99_ms": 13.555,
+    "max_ms": 35.536,
+    "median_ms": 0.822,
+    "min_ms": 0.649,
+    "p95_ms": 1.837,
+    "p99_ms": 17.107,
     "samples": 954
   }
 }

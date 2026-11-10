@@ -4,45 +4,52 @@
     "project":  "E:\\cherry mimo ccnot\\backrooms\\_dl\\lf_v5",
     "gates":  [
                   {
+                      "gate":  "01_asset_import",
+                      "status":  "PASS",
+                      "exit_code":  0,
+                      "seconds":  14.3,
+                      "log":  "gate01_import.log"
+                  },
+                  {
                       "gate":  "02_compile_all",
                       "status":  "PASS",
                       "exit_code":  0,
-                      "seconds":  38.2,
+                      "seconds":  37,
                       "log":  "gate02_compile.log"
                   },
                   {
                       "gate":  "03_continuity_topology",
                       "status":  "PASS",
                       "exit_code":  0,
-                      "seconds":  3.5,
+                      "seconds":  3.4,
                       "log":  "gate03_topology.log"
                   },
                   {
                       "gate":  "04_continuity_macro",
                       "status":  "PASS",
                       "exit_code":  0,
-                      "seconds":  4.6,
+                      "seconds":  5.1,
                       "log":  "gate04_macro.log"
                   },
                   {
                       "gate":  "05_continuity_super",
                       "status":  "PASS",
                       "exit_code":  0,
-                      "seconds":  5.1,
+                      "seconds":  5.9,
                       "log":  "gate05_super.log"
                   },
                   {
                       "gate":  "06_continuity_plan",
                       "status":  "PASS",
                       "exit_code":  0,
-                      "seconds":  3.5,
+                      "seconds":  2.8,
                       "log":  "gate06_plan.log"
                   },
                   {
                       "gate":  "07_physical_walk",
                       "status":  "PASS",
                       "exit_code":  0,
-                      "seconds":  7.5,
+                      "seconds":  7.2,
                       "log":  "gate07_walk.log"
                   },
                   {
@@ -56,18 +63,18 @@
                       "gate":  "10_performance_probe",
                       "status":  "PASS",
                       "exit_code":  0,
-                      "seconds":  5.2,
+                      "seconds":  5.3,
                       "log":  "gate10_performance.log"
                   },
                   {
                       "gate":  "08_python_contracts",
                       "status":  "PASS",
                       "exit_code":  0,
-                      "seconds":  0.6,
+                      "seconds":  0.8,
                       "log":  "gate08_python.log"
                   }
               ],
-    "total":  9,
-    "passed":  9,
+    "total":  10,
+    "passed":  10,
     "failed":  0
 }

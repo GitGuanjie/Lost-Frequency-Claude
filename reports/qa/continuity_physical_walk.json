@@ -80,7 +80,7 @@
       "check": "walker climbs the staircase to the next storey",
       "detail": {
         "distance": 0.0,
-        "pos": "(7.519654, 4.52, 20.31745)"
+        "pos": "(7.519676, 4.520001, 20.31487)"
       },
       "pass": true
     },
@@ -88,7 +88,7 @@
       "check": "walker is one storey higher after the climb",
       "detail": {
         "chunk": "(0, 1, 0)",
-        "y": 4.52000045776367
+        "y": 4.52000093460083
       },
       "pass": true
     },

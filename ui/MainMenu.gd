@@ -127,7 +127,11 @@ func _menu() -> void:
 
 func _open_world_lab() -> void:
 	SessionState.set_mode(SessionState.Mode.DEVELOPER)
-	get_tree().change_scene_to_file("res://labs/Level0ContinuityLab.tscn")
+	# Changing the scene straight from _ready() re-enters root->remove_child()
+	# while root is still adding the main scene, and Godot refuses that with
+	# "Parent node is busy adding/removing children". Defer one frame so the
+	# tree is idle again. The same call from the menu button is unaffected.
+	get_tree().call_deferred("change_scene_to_file", "res://labs/Level0ContinuityLab.tscn")
 
 
 func _new() -> void:

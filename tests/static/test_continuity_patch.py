@@ -57,20 +57,39 @@ class ContinuityPatchTests(unittest.TestCase):
         self.assertGreater(6.8 + 20 * .60, 18.6)
 
     def test_no_old_level_replaced(self):
-        main_menu = (ROOT / 'ui/MainMenu.gd').read_text()
-        assert 'Experimental · Seamless 3D World Lab' in main_menu
-        lab = (ROOT / 'labs/Level0ContinuityLab.gd').read_text()
-        self.assertIn('"L001_PROXY"', (ROOT / 'core/world/ContinuityTopology.gd').read_text())
-        self.assertIn('disk_persistence_enabled = true', lab)
+        main_menu = (ROOT / 'ui/MainMenu.gd').read_text(encoding='utf-8')
+        # v5 renamed the v2-era label. The guard is "the lab is still reachable
+        # from the menu and no finished level was replaced by a template", so
+        # it pins the current label AND the lab scene path.
+        self.assertIn('Experimental · Infinite Backrooms · Continuity Lab v5', main_menu)
+        self.assertIn('res://labs/Level0ContinuityLab.tscn', main_menu)
+        lab = (ROOT / 'labs/Level0ContinuityLab.gd').read_text(encoding='utf-8')
+        topology = (ROOT / 'core/world/ContinuityTopology.gd').read_text(encoding='utf-8')
+        # The proxy warehouse must never be presented as canonical Level 1.
+        # v2 called it "L001_PROXY"; v5 names the zone after what it is and
+        # keeps a level-shaped identifier out of it altogether.
+        self.assertIn('ZONE_PROXY := "Z_PROXY_WAREHOUSE"', topology)
+        self.assertIn('func is_proxy_zone', topology)
+        self.assertNotIn('L001_PROXY', topology)
+        self.assertIn('disk_persistence_enabled = qa_persistence', lab)
+        # Disk persistence is on by default; the QA switch can turn it off.
+        self.assertIn('static var qa_persistence := true', lab)
         self.assertIn('F10', lab)
-        self.assertIn('persistence_key = "L000"', (ROOT / 'levels/L000/L000.gd').read_text())
+        # Level 0 is still the upstream level and not a copy of the laboratory
+        # template: it keeps the 2-D ChunkWorld and declares no laboratory
+        # persistence key. The laboratory keeps its own save file.
+        l000 = (ROOT / 'levels/L000/L000.gd').read_text(encoding='utf-8')
+        self.assertIn('extends LevelBase', l000)
+        self.assertNotIn('ChunkWorld3D', l000)
+        self.assertNotIn('persistence_key', l000)
+        self.assertIn('user://continuity_lab/', lab)
 
     def test_no_script_reference_missing(self):
         for path in (
             ROOT / 'ui/MainMenu.gd', ROOT / 'labs/Level0ContinuityLab.tscn',
             ROOT / 'labs/Level0ContinuityLab.gd',
         ):
-            text = path.read_text()
+            text = path.read_text(encoding='utf-8')
             for m in re.finditer(r'res://((?:labs|core/world)/[\w/]+\.(?:gd|tscn))', text):
                 self.assertTrue((ROOT / m.group(1)).exists(), f'{path}: {m.group(1)}')
 

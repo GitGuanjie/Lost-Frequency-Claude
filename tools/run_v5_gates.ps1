@@ -84,9 +84,19 @@ $prev = $ErrorActionPreference
 $ErrorActionPreference = 'Continue'
 try {
   $env:PYTHONUTF8 = '1'
+  # (a) the worldlab contracts that live directly under tests/
   & $Python -m unittest discover -s (Join-Path $Root 'tests') -p 'test_worldlab*static.py' -q 2>&1 |
     Out-File -FilePath $pyLog -Encoding utf8
   $code = $LASTEXITCODE
+  # (b) the continuity patch contract under tests/static/. That directory is
+  #     not a package, so unittest discovery never recurses into it by
+  #     itself and it used to rot unnoticed. Only the continuity contract is
+  #     gated; the other files there are upstream dev-cycle contracts pinned
+  #     to historical hashes of levels/** and are reported, not gated.
+  & $Python -m unittest discover -s (Join-Path $Root 'tests/static') -p 'test_continuity_patch.py' -q 2>&1 |
+    Out-File -FilePath $pyLog -Encoding utf8 -Append
+  $code2 = $LASTEXITCODE
+  if ($code -eq 0) { $code = $code2 }
 } finally {
   $ErrorActionPreference = $prev
   Pop-Location
