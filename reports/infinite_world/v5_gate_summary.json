@@ -1,0 +1,59 @@
+﻿{
+    "engine":  "E:\\cherry mimo ccnot\\backrooms\\_dl\\godot451\\Godot_v4.5.1-stable_win64_console.exe",
+    "python":  "E:\\pythonF\\python.exe",
+    "project":  "E:\\cherry mimo ccnot\\backrooms\\_dl\\lf_v5",
+    "gates":  [
+                  {
+                      "gate":  "02_compile_all",
+                      "status":  "PASS",
+                      "exit_code":  0,
+                      "seconds":  38.1,
+                      "log":  "gate02_compile.log"
+                  },
+                  {
+                      "gate":  "03_continuity_topology",
+                      "status":  "PASS",
+                      "exit_code":  0,
+                      "seconds":  3.1,
+                      "log":  "gate03_topology.log"
+                  },
+                  {
+                      "gate":  "04_continuity_macro",
+                      "status":  "PASS",
+                      "exit_code":  0,
+                      "seconds":  4.5,
+                      "log":  "gate04_macro.log"
+                  },
+                  {
+                      "gate":  "05_continuity_super",
+                      "status":  "PASS",
+                      "exit_code":  0,
+                      "seconds":  4.9,
+                      "log":  "gate05_super.log"
+                  },
+                  {
+                      "gate":  "06_continuity_plan",
+                      "status":  "PASS",
+                      "exit_code":  0,
+                      "seconds":  3.1,
+                      "log":  "gate06_plan.log"
+                  },
+                  {
+                      "gate":  "07_physical_walk",
+                      "status":  "PASS",
+                      "exit_code":  0,
+                      "seconds":  7.1,
+                      "log":  "gate07_walk.log"
+                  },
+                  {
+                      "gate":  "08_python_contracts",
+                      "status":  "PASS",
+                      "exit_code":  0,
+                      "seconds":  0.5,
+                      "log":  "gate08_python.log"
+                  }
+              ],
+    "total":  7,
+    "passed":  7,
+    "failed":  0
+}
