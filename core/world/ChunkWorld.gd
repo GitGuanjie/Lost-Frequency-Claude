@@ -25,6 +25,45 @@ var chunks: Dictionary = {}      # Vector2i -> {node, version, unseen, meta}
 var versions: Dictionary = {}    # Vector2i -> int, survives unload
 var shift_count := 0
 var _queue: Array = []
+var persistence_key := ""  # opt-in, preserves existing levels by default
+var _persistent_state: Dictionary = {}
+
+
+func _ready() -> void:
+	if persistence_key != "":
+		var scope := SaveService.scope()
+		if not scope.has("chunk_worlds"):
+			scope["chunk_worlds"] = {}
+		var all_worlds: Dictionary = scope["chunk_worlds"]
+		if not all_worlds.has(persistence_key):
+			all_worlds[persistence_key] = {"versions": {}, "changes": {}}
+		_persistent_state = all_worlds[persistence_key]
+		if not _persistent_state.has("versions"):
+			_persistent_state["versions"] = {}
+		if not _persistent_state.has("changes"):
+			_persistent_state["changes"] = {}
+		for id in _persistent_state["versions"].keys():
+			var parts: PackedStringArray = str(id).split(":")
+			if parts.size() != 2:
+				continue
+			versions[Vector2i(int(parts[0]), int(parts[1]))] = int(_persistent_state["versions"][id])
+
+
+func change_of(k: Vector2i, name: String, fallback: Variant = null) -> Variant:
+	if persistence_key == "":
+		return fallback
+	return _persistent_state.get("changes", {}).get("%d:%d" % [k.x, k.y], {}).get(name, fallback)
+
+
+func set_change(k: Vector2i, name: String, value: Variant) -> void:
+	if persistence_key == "":
+		return
+	var id := "%d:%d" % [k.x, k.y]
+	var changes: Dictionary = _persistent_state["changes"]
+	if not changes.has(id):
+		changes[id] = {}
+	changes[id][name] = value
+
 
 
 func key_at(p: Vector3) -> Vector2i:
@@ -72,6 +111,8 @@ func _unload(k: Vector2i) -> void:
 func rebuild(k: Vector2i, bump_version: bool) -> void:
 	if bump_version:
 		versions[k] = int(versions.get(k, 0)) + 1
+		if persistence_key != "":
+			_persistent_state["versions"]["%d:%d" % [k.x, k.y]] = versions[k]
 	_unload(k)
 	_build(k)
 

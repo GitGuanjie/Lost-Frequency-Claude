@@ -9,3 +9,7 @@ assets/external/models/*.jpg
 assets/external/models/*.jpg.import
 assets/external/models/*.png
 assets/external/models/*.png.import
+
+# Python bytecode cache from the offline contract suites
+__pycache__/
+*.pyc
