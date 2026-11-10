@@ -433,14 +433,22 @@ measurement, and that the streamed world has real geometry and real collision.
 (An earlier version of the probe reported a clean 19.7 ms median while the
 player had never left the spawn chunk and not one chunk had been built.)
 
-**Headless CPU numbers, Godot 4.5.1, RTX-less dummy renderer:**
+**Headless CPU numbers, Godot 4.5.1, RTX-less dummy renderer** (the run whose
+log is committed in `reports/infinite_world/gate10_performance.log`):
 
 | Statistic | Per frame |
 |---|---|
-| median | **0.84 ms** |
-| p95 | 2.14 ms |
-| p99 | 15.37 ms |
-| max | 29.14 ms |
+| median | **0.822 ms** |
+| p95 | 1.837 ms |
+| p99 | 17.107 ms |
+| max | 35.536 ms |
+
+These are wall-clock samples, so they move a little from run to run: an earlier
+run of the same probe measured median 0.84 ms, p95 2.14 ms, p99 15.37 ms,
+max 29.14 ms. The **median** is stable to about ±0.03 ms; the **tail** is not,
+because the tail is the chunk-build burst and the burst lands on a different
+frame each time. Any single number from the tail should be read as "one burst",
+not as a bound.
 
 The 60 fps budget is 16.667 ms. The median is comfortably inside it; the tail
 is not, and the tail is the chunk-build burst (`builds_per_frame = 2`, so up to
@@ -482,3 +490,125 @@ renderer, and the cost of drawing 34 012 triangles on a real GPU is
   checkpoint and journal untouched.
 * The performance numbers are **CPU numbers from a headless run**. They are
   not a frame-time budget for the shipping game.
+
+---
+
+## 9. The shipped build printed an engine error on every boot
+
+This section is about the **exported Windows executable**, and about the check
+that was supposed to cover it and did not.
+
+### 9.1 The symptom
+
+Every boot of the exported build printed:
+
+```
+ERROR: Parent node is busy adding/removing children, `remove_child()` can't be called at this time. Consider using `remove_child.call_deferred(child)` instead.
+   at: remove_child (scene/main/node.cpp:1718)
+```
+
+`MainMenu._ready()` is where the `--lab` command line entry point lives, and it
+called the scene change straight from `_ready()`:
+
+```gdscript
+func _open_world_lab() -> void:
+	SessionState.set_mode(SessionState.Mode.DEVELOPER)
+	get_tree().change_scene_to_file("res://labs/Level0ContinuityLab.tscn")
+```
+
+The engine, replacing the outgoing scene, calls `root->remove_child(old_scene)`.
+That call happens **inside** `root->add_child(main_scene)`, so root is still
+committing the main-scene insertion and refuses the removal.
+
+### 9.2 How bad it actually is — measured, not inferred
+
+The first reading of this defect was "the laboratory never opens in the shipped
+build". An A/B on the same tree, with one file swapped and nothing else
+changed, says otherwise:
+
+| Variant | `Parent node is busy` errors | laboratory started |
+|---|---|---|
+| pre-fix (synchronous `change_scene_to_file`) | **1** | **yes** |
+| post-fix (deferred) | **0** | **yes** |
+
+The outgoing scene is still disposed — by the deferred `queue_free()` one frame
+later — so nothing leaks. **The honest severity is: a spurious engine error on
+every boot of the shipped build, and a removal the engine explicitly refused.**
+That is exactly the hazard the engine's own message warns about, and it is not
+a cosmetic matter: an error on every boot is the first thing a reviewer sees,
+and it is the kind of error that hides the *next* error.
+
+The evidence is in `reports/infinite_world/mainmenu_ab.log`.
+
+### 9.3 The check that said "clean" and was measuring the wrong process
+
+The first version of this session ran the same command against the **editor
+binary**:
+
+```
+Godot_v4.5.1-stable_win64_console.exe --headless --path <project> -- --lab
+```
+
+and reported **zero errors**. That was a false negative, and the reason is
+mundane: `godot --path <project>` with **no scene argument opens the editor**.
+The measured process was a headless editor sitting idle. It never executed
+`MainMenu._ready()`, so it could not produce the error.
+
+* **A run that does not reach the code cannot report a defect in it — and it
+  cannot certify the absence of one either.** The instrument has to be shown to
+  have reached the thing it is measuring, and the only way to show that is a
+  positive signal from inside the code under test.
+
+That is why the laboratory now prints one line the moment its scene is live:
+
+```
+[ContinuityLab] ready seed=1337 world_id=L000_CONTINUITY_PROTOTYPE
+```
+
+A silent process proves nothing; this line does.
+
+### 9.4 The fix
+
+The engine's message says what to do: defer the removal. The scene change is
+now deferred by one frame, so it runs when the tree is idle:
+
+```gdscript
+func _open_world_lab() -> void:
+	SessionState.set_mode(SessionState.Mode.DEVELOPER)
+	get_tree().call_deferred("change_scene_to_file", "res://labs/Level0ContinuityLab.tscn")
+```
+
+The laboratory already used `call_deferred` for the same reason when it
+re-enters itself for a new seed (`_switch_seed`). The menu was the one path
+that did not.
+
+### 9.5 A QA entry point that hung instead of failing
+
+`--shot` waited on `await RenderingServer.frame_post_draw`, which **never
+fires** under the dummy renderer that `--headless` uses. The run therefore
+hung for ever and looked like a slow success — the same failure shape as §9.3,
+one level down. The shot path now refuses to pretend:
+
+```
+SHOT failed: the headless display server cannot render a frame
+```
+
+and exits with status 2. A headless capture is not possible; a windowed one is.
+
+### 9.6 Evidence from the exported executable
+
+| Run | Command | Engine errors | Laboratory |
+|---|---|---|---|
+| headless | `LostFrequency-InfiniteBackrooms-v5.exe --headless --fixed-fps 60 -- --lab` | **0** | starts |
+| windowed | `LostFrequency-InfiniteBackrooms-v5.exe --fixed-fps 60 -- --lab --shot=<png>` | **0** | starts, renders |
+
+The windowed run is a real Vulkan frame from the shipped build
+(`Vulkan 1.4.351 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU`),
+1600×900, kept as `reports/infinite_world/continuity_lab_release_build.jpg`.
+The raw logs are `reports/infinite_world/release_boot_headless.log` and
+`reports/infinite_world/release_boot_windowed.log`.
+
+**Still not claimed:** a human at the keyboard on the shipped build. The frame
+proves the renderer draws the laboratory; it does not prove the game is
+*playable*. See §8.
+

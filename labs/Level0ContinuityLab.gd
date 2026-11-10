@@ -76,6 +76,10 @@ func _ready() -> void:
 	SessionState.capture_mouse()
 	Overlay.toast("INFINITE BACKROOMS v5: 16x16 districts, 8x8 superdistricts, region-owned megastructures. F8 map, F9 mark, F4 reshape, F5/F6 seeds, F10 menu", 8.0)
 	Overlay.toast("A flickering wall in the spawn hall throws you through to Level 1 (canon route, ADAPTATION entry). Sprint into it and keep pushing.", 9.0)
+	# Announce the scene on stdout. A headless or exported run that reaches
+	# this line proves the lab scene was really instantiated, which a silent
+	# process cannot show.
+	print("[ContinuityLab] ready seed=%d world_id=%s" % [initial_seed, world.world_id])
 	_maybe_capture_shot()
 
 
@@ -103,6 +107,13 @@ func _capture_shot() -> void:
 		return
 	_capture_shot_countdown -= 1
 	if _capture_shot_countdown > 0:
+		return
+	if DisplayServer.get_name() == "headless":
+		# RenderingServer.frame_post_draw never fires under the dummy
+		# renderer, so the await below would hang forever and the run would
+		# look like a silent success. Fail loudly instead.
+		print("SHOT failed: the headless display server cannot render a frame")
+		get_tree().quit(2)
 		return
 	await RenderingServer.frame_post_draw
 	var image := get_viewport().get_texture().get_image()

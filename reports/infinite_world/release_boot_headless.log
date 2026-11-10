@@ -1,0 +1,12 @@
+Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org
+
+[ContinuityLab] ready seed=1337 world_id=L000_CONTINUITY_PROTOTYPE
+SHOT failed: the headless display server cannot render a frame
+LostFrequency-InfiniteBackrooms-v5.exe : WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+   at: cleanup (core/object/object.cpp:2514)
+
+# Command:
+#   LostFrequency-InfiniteBackrooms-v5.exe --headless --fixed-fps 60 -- --lab --shot=<path>
+# Exit code: 2 (the QA shot entry point refuses to pretend it rendered a frame
+# under the dummy renderer; it used to hang forever on the same await).
+# Engine ERROR lines: 0.  "Parent node is busy" errors: 0.

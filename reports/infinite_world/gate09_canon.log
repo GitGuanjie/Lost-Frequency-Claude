@@ -2,7 +2,16 @@
 
 CT phase edges
 CT phase boot
+[ContinuityLab] ready seed=1337 world_id=L000_CONTINUITY_PROTOTYPE
 CT phase walk
 CT phase transfer
 CT phase destination
 CANON_TRANSITION 37 checks, 0 failures
+Godot_v4.5.1-stable_win64_console.exe : WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+At E:\cherry mimo ccnot\backrooms\_dl\lf_v5\tools\run_v5_gates.ps1:45 char:5
++     & $Engine @GodotArgs 2>&1 | Out-File -FilePath $log -Encoding utf ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: Object...e for details).:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+   at: cleanup (core/object/object.cpp:2514)

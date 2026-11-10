@@ -25,6 +25,11 @@ inferred from the existence of a script.
 | Measured performance, honestly instrumented | `tests/ContinuityPerformanceProbe.gd` | gate 10 |
 | A dead counter found and fixed (`stream_stats["built"]`) | `core/world/ChunkWorld3D.gd` | gate 10 |
 | One reproducible command that runs every gate | `tools/run_v5_gates.ps1` | 10/10 |
+| The engine error the **shipped build** printed on every boot, closed | `ui/MainMenu.gd` | A/B in §9, `mainmenu_ab.log` |
+| The laboratory now says on stdout that it is alive | `labs/Level0ContinuityLab.gd` | `[ContinuityLab] ready …` in every boot log |
+| A QA entry point that used to hang now fails loudly | `labs/Level0ContinuityLab.gd` | `SHOT failed: the headless display server…`, exit 2 |
+| A stale contract that could never pass, repaired and put under the gate | `tests/static/test_continuity_patch.py` | gate 08, 6/6 |
+| A real frame rendered by the **exported** Windows build | `reports/infinite_world/continuity_lab_release_build.jpg` | `release_boot_windowed.log` |
 
 **The headline:** the canonical Level 0 → Level 1 route now exists, it is
 **physically walked** by a real `CharacterBody3D` into a real flickering wall,
@@ -41,25 +46,27 @@ powershell -ExecutionPolicy Bypass -File tools\run_v5_gates.ps1
 
 | # | Gate | Result | Detail | Seconds |
 |---|---|---|---|---|
-| 01 | asset import | **PASS** | exit 0 | 13.6 |
-| 02 | CompileAll | **PASS** | `scripts=429 failing=0` | 33.1 |
+| 01 | asset import | **PASS** | exit 0 | 14.3 |
+| 02 | CompileAll | **PASS** | `scripts=429 failing=0` | 37.0 |
 | 03 | ContinuityTopologyTest | **PASS** | `25313 checks, 0 failures` | 3.4 |
-| 04 | ContinuityMacroStructureTest | **PASS** | `74529 assertions, 0 failures` | 5.5 |
-| 05 | ContinuitySuperDistrictTest | **PASS** | `100997 assertions, 0 failures` | 6.2 |
-| 06 | ContinuityRegionalPlanTest | **PASS** | `6505 assertions, 0 failures` | 3.5 |
-| 07 | ContinuityPhysicalWalkTest | **PASS** | `14 checks, 0 failures` | 8.0 |
+| 04 | ContinuityMacroStructureTest | **PASS** | `74529 assertions, 0 failures` | 5.1 |
+| 05 | ContinuitySuperDistrictTest | **PASS** | `100997 assertions, 0 failures` | 5.9 |
+| 06 | ContinuityRegionalPlanTest | **PASS** | `6505 assertions, 0 failures` | 2.8 |
+| 07 | ContinuityPhysicalWalkTest | **PASS** | `14 checks, 0 failures` | 7.2 |
 | 09 | ContinuityCanonTransitionTest | **PASS** | `37 checks, 0 failures` | 5.5 |
-| 10 | ContinuityPerformanceProbe | **PASS** | `failures=0` | 6.1 |
-| 08 | offline Python contracts | **PASS** | `Ran 45 tests … OK` | 0.6 |
+| 10 | ContinuityPerformanceProbe | **PASS** | `failures=0` | 5.3 |
+| 08 | offline Python contracts | **PASS** | `Ran 45 tests … OK` + `Ran 6 tests … OK` | 0.8 |
 
-**10 / 10 PASS.**
+**10 / 10 PASS.** (This is the run taken **after** the boot fix of §9; the
+assertion counts are byte-identical to the run before it, which is the point —
+the fix changes the boot path and nothing else.)
 
 **Native assertion total: 207 344** (25 313 + 74 529 + 100 997 + 6 505), plus
-14 physical-walk checks, 37 canonical-transition checks and 45 offline Python
-contracts. The baseline was 198 624; the increase is the *stronger* topology
-assertions added in this session (the weak "door safely within wall" proxy was
-replaced by a real geometric invariant, and the stair-slot invariant was split
-into two).
+14 physical-walk checks, 37 canonical-transition checks and 51 offline Python
+contracts (45 worldlab + 6 continuity). The baseline was 198 624; the increase is
+the *stronger* topology assertions added in this session (the weak "door safely
+within wall" proxy was replaced by a real geometric invariant, and the stair-slot
+invariant was split into two).
 
 Logs: `reports/infinite_world/gate01..gate10*.log`
 Machine-readable table: `reports/infinite_world/v5_gate_summary.json`
@@ -417,7 +424,124 @@ godot --headless --path . --fixed-fps 60 res://tests/ContinuityPerformanceProbe.
 # the 100 canonical levels, one process each
 powershell -ExecutionPolicy Bypass -File RUN_100_LEVEL_ENTRY_QA_WINDOWS.ps1 `
     -GodotExe "<godot 4.5.1 console exe>"
+
+# the shipped build: does it enter the laboratory, and does it render?
+& 'E:\cherry mimo ccnot\backrooms\_dl\export\windows\LostFrequency-InfiniteBackrooms-v5.exe' `
+    --headless --fixed-fps 60 -- --lab          # headless: must print the lab banner, 0 errors
+& 'E:\cherry mimo ccnot\backrooms\_dl\export\windows\LostFrequency-InfiniteBackrooms-v5.exe' `
+    --fixed-fps 60 -- --lab --shot=<out.png>    # windowed: must print SHOT ... err=0
 ```
 
 Exit code 0 means every gate passed. The gate runner writes
 `reports/infinite_world/v5_gate_summary.json` with one row per gate.
+
+---
+
+## 9. The shipped build printed an engine error on every boot
+
+This section covers a defect that **only the exported executable** exposed, and
+the check that was supposed to cover it and did not. The architecture report
+carries the full analysis in §9; this is the summary.
+
+### 9.1 What the shipped build printed
+
+```
+ERROR: Parent node is busy adding/removing children, `remove_child()` can't be called at this time.
+   at: remove_child (scene/main/node.cpp:1718)
+```
+
+`MainMenu._ready()` called `get_tree().change_scene_to_file(...)` for the
+laboratory entry point. The engine replaces the outgoing scene with
+`root->remove_child(old_scene)`, and that call happens **inside**
+`root->add_child(main_scene)` — so root is still committing the insertion and
+refuses the removal.
+
+### 9.2 How bad it is, measured
+
+The first reading was "the laboratory never opens in the shipped build". An A/B
+on the same tree, one file swapped, proved that **wrong**: the laboratory scene
+was instantiated in *both* variants.
+
+| Variant | `Parent node is busy` errors | laboratory started |
+|---|---|---|
+| pre-fix | **1** | yes |
+| post-fix | **0** | yes |
+
+So the honest severity is: **a spurious engine error on every boot, and a scene
+removal the engine explicitly refused.** The outgoing scene is still disposed by
+the deferred `queue_free()` one frame later, so nothing leaks. That is still
+worth closing — an error on every boot is what a reviewer sees first, and it is
+what hides the next error.
+
+*Fixed* by deferring the scene change by one frame, which is what the engine's
+own message advises. The laboratory already used `call_deferred` for the same
+reason when it re-enters itself for a new seed; the menu was the one path that
+did not.
+
+### 9.3 The check that said "clean" and was measuring the wrong process
+
+The first version of this check ran
+
+```
+Godot_v4.5.1-stable_win64_console.exe --headless --path <project> -- --lab
+```
+
+and reported **zero errors**. `godot --path <project>` with **no scene argument
+opens the editor** — the measured process was a headless editor sitting idle.
+It never executed `MainMenu._ready()`, so it could not produce the error.
+
+* **A run that does not reach the code cannot report a defect in it, and it
+  cannot certify the absence of one either.** The instrument has to be shown to
+  have reached the thing it measures, by a positive signal from inside the code.
+
+Hence the laboratory now prints, the moment its scene is live:
+
+```
+[ContinuityLab] ready seed=1337 world_id=L000_CONTINUITY_PROTOTYPE
+```
+
+### 9.4 A QA entry point that hung instead of failing
+
+`--shot` waited on `await RenderingServer.frame_post_draw`, which never fires
+under the dummy renderer `--headless` uses. The run hung for ever and looked
+like a slow success — the same failure shape as §9.3, one level down. The shot
+path now refuses to pretend and exits 2:
+
+```
+SHOT failed: the headless display server cannot render a frame
+```
+
+### 9.5 Evidence from the exported executable
+
+| Run | Command | Engine errors | Result |
+|---|---|---|---|
+| headless | `…-v5.exe --headless --fixed-fps 60 -- --lab --shot=<png>` | **0** | exit 2, lab banner printed, shot refused loudly |
+| windowed | `…-v5.exe --fixed-fps 60 -- --lab --shot=<png>` | **0** | exit 0, `SHOT … err=0 size=1600x900` |
+
+The windowed run is a real Vulkan frame from the shipped build on an
+**NVIDIA GeForce RTX 3060 Laptop GPU** (`Vulkan 1.4.351 - Forward+`), kept as
+`reports/infinite_world/continuity_lab_release_build.jpg`. The raw logs are
+`release_boot_headless.log` and `release_boot_windowed.log`; the A/B is
+`mainmenu_ab.log`.
+
+### 9.6 A stale contract that could never pass
+
+`tests/static/test_continuity_patch.py` sat outside the gate (unittest
+discovery does not recurse into a directory that is not a package), and it
+**failed** when run: it asserted a v2-era menu label, a v2-era `L001_PROXY`
+identifier and a v2-era persistence hook that v5 deliberately replaced. It also
+crashed on a non-UTF-8 locale, because it called `read_text()` without an
+encoding.
+
+It is now repaired against the v5 reality — each assertion still carries the
+original intent, including *"the proxy must never be presented as canonical
+Level 1"* and *"Level 0 is still the upstream level, not a copy of the
+laboratory template"* — and it is **gated** (6/6 pass).
+
+The rest of `tests/static/` is **not** gated and is **not** claimed to be
+green: 29 files of upstream dev-cycle contracts, 57 tests, of which 13 fail and
+31 error against the current tree (they are pinned to historical hashes of
+`levels/**` and to a data shape the levels no longer have). They are reported
+here rather than silently adopted into the gate, because making them pass would
+mean rewriting the 100 finished levels against contracts from earlier dev
+cycles.

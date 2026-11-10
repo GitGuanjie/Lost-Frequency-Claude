@@ -1,0 +1,34 @@
+A/B: the pre-fix and post-fix MainMenu, same tree, same command, same machine.
+
+Command for both runs:
+  Godot_v4.5.1-stable_win64_console.exe --headless --fixed-fps 60 --quit-after 300 \
+      --path <project> res://ui/MainMenu.tscn -- --lab
+
+--- A: pre-fix (ui/MainMenu.gd restored from HEAD, synchronous change_scene_to_file in _ready)
+busy-errors : 1
+lab banner  : [ContinuityLab] ready seed=1337 world_id=L000_CONTINUITY_PROTOTYPE
+
+--- B: post-fix (deferred change_scene_to_file)
+busy-errors : 0
+lab banner  : [ContinuityLab] ready seed=1337 world_id=L000_CONTINUITY_PROTOTYPE
+
+Reading of the pair:
+  * the laboratory scene was instantiated in BOTH variants. The defect is a
+    spurious engine error on every boot, not a broken entry point.
+  * the engine refused the explicit removal of the outgoing scene; the scene is
+    still disposed by the deferred queue_free() one frame later.
+  * the fix removes the error and changes nothing else about the flow.
+
+--- The check that said "clean" and was wrong
+The earlier run used:
+  Godot_v4.5.1-stable_win64_console.exe --headless --path <project> -- --lab
+With no scene argument the editor binary opens the EDITOR. It never executed
+MainMenu._ready(), so it could not print the error. The run reported zero
+errors because it never reached the code.
+
+--- The exported build, after the fix
+R1 headless : LostFrequency-InfiniteBackrooms-v5.exe --headless --fixed-fps 60 -- --lab --shot=<png>
+  exit 2, 0 engine errors, banner printed, "SHOT failed: the headless display server cannot render a frame"
+R2 windowed: LostFrequency-InfiniteBackrooms-v5.exe --fixed-fps 60 -- --lab --shot=<png>
+  exit 0, 0 engine errors, banner printed,
+  "SHOT ... err=0 size=1600x900", Vulkan 1.4.351 Forward+ on NVIDIA GeForce RTX 3060 Laptop GPU

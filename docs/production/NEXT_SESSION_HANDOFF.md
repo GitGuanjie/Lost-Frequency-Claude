@@ -4,6 +4,45 @@ Repository `GitGuanjie/Lost-Frequency-Claude`, branch `main`. The game is at the
 Its history was imported from `GitGuanjie/claude-EO` (`lost_frequency/`, branch `claude/affectionate-wright-axgljs`)
 on 2026-11-06. Engine: Godot **4.5.1** (Forward+).
 
+## Latest state (2026-11-10, second pass) — the shipped build was checked, not just the tree
+
+**Read `docs/production/WORLD_COORDINATOR_AND_CANON_TRANSITION.md` §9 first** (the
+boot defect and the check that missed it), then
+`reports/infinite_world/SESSION_REPORT.md` §9.
+
+- **The exported Windows executable printed an engine error on every boot**
+  (`Parent node is busy adding/removing children`). Cause: `MainMenu._ready()`
+  called `change_scene_to_file()` synchronously, so the engine's
+  `root->remove_child(outgoing)` re-entered a root that was still committing
+  `root->add_child(main_scene)`. **Closed** by deferring the scene change one
+  frame, which is what the engine's own message advises.
+- **The severity was measured, not assumed.** An A/B on the same tree showed the
+  laboratory scene loads in **both** variants, so this was a spurious error and
+  a refused removal — *not* a dead entry point. The earlier reading ("the lab
+  never opens") was wrong and was corrected. Evidence:
+  `reports/infinite_world/mainmenu_ab.log`.
+- **The check that said "clean" was measuring the wrong process.**
+  `godot --headless --path <project> -- --lab` **opens the editor** when no
+  scene argument is given; it never ran `MainMenu._ready()`, so it could not
+  report the error. The laboratory now prints
+  `[ContinuityLab] ready seed=… world_id=…` when its scene is live, so every
+  run now carries a positive signal that it reached the code.
+- **`--shot` used to hang for ever under `--headless`** (`frame_post_draw` never
+  fires on the dummy renderer). It now refuses to pretend and exits 2:
+  `SHOT failed: the headless display server cannot render a frame`.
+- **A real frame from the shipped build**: `…-v5.exe --fixed-fps 60 -- --lab
+  --shot=<png>` produced a 1600×900 Vulkan frame on an RTX 3060 Laptop GPU,
+  `err=0`, kept as `reports/infinite_world/continuity_lab_release_build.jpg`.
+  **A human at the keyboard on the shipped build is still `UNVERIFIED`** — a
+  rendered frame is not playability.
+- **`tests/static/test_continuity_patch.py` could never pass** (v2-era label,
+  v2-era `L001_PROXY`, v2-era persistence hook, and a `read_text()` without an
+  encoding that crashes off UTF-8). Repaired against the v5 reality with the
+  original intent intact, and **gated** (6/6). The other 28 files in
+  `tests/static/` are upstream dev-cycle contracts pinned to historical hashes;
+  **13 fail and 31 error** against the current tree. They are reported, not
+  gated, and not silently adopted.
+
 ## Latest state (2026-11-10) — Infinite Backrooms v5 on `feature/infinite-backrooms-v5`
 **Read `docs/production/WORLD_COORDINATOR_AND_CANON_TRANSITION.md` first** (architecture),
 then `reports/infinite_world/SESSION_REPORT.md` (this session's results).
@@ -20,7 +59,8 @@ then `reports/infinite_world/SESSION_REPORT.md` (this session's results).
   `L001_PROXY` is never used. The laboratory edge is labelled **ADAPTATION** and names the canon
   edge `L000>L001#1`, which must exist or the adaptation stops working.
 - **Gates: 10/10 PASS** on Godot 4.5.1 via `powershell -ExecutionPolicy Bypass -File tools\run_v5_gates.ps1`.
-  Native assertions 207 344 + 14 physical-walk checks + 37 canonical-transition checks + 45 Python contracts.
+  Native assertions 207 344 + 14 physical-walk checks + 37 canonical-transition checks + 51 Python contracts
+  (45 worldlab + 6 continuity). The numbers are unchanged by the boot fix, which is the point.
 - **Regression, measured against the base commit `ebbf6f7` on a separate worktree:**
   the 100 canonical levels all enter and spawn (**100/100**), and the level suite shows
   **15 failures on the branch vs 16 on the base, with ZERO failures on the branch that the base
@@ -29,7 +69,8 @@ then `reports/infinite_world/SESSION_REPORT.md` (this session's results).
 - **Closed this session:** the open stairwell (hole and ramp are one rectangle), the door that could
   open onto a stairwell, the missing noclip/canon transition, the missing performance numbers, and a
   `stream_stats["built"]` counter that was declared but never incremented.
-- **Measured (headless CPU):** 0.70 ms median frame cost, p95 1.59 ms, p99 12.73 ms, max 27.56 ms;
+- **Measured (headless CPU):** 0.82 ms median frame cost, p95 1.84 ms, p99 17.11 ms, max 35.54 ms
+  (wall clock; the median is stable across runs, the tail is a chunk-build burst and moves);
   18 chunks built and 9 unloaded over a 68.9 m walk that crosses two chunk seams.
   **GPU frame time and human playability are `UNVERIFIED`** — the runs are headless.
 - **Not yet done:** the archive's own 452 differing `levels/**` files were deliberately NOT imported.

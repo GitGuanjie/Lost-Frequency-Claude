@@ -1,6 +1,7 @@
 ﻿Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org
 
-PERFORMANCE wall steady median=0.719ms p95=1.780ms p99=13.555ms max=30.012ms | wall cold median=0.601ms max=19.580ms | engine-process steady median=20.699ms max=20.744ms | engine cold median=20.744ms max=20.744ms
+[ContinuityLab] ready seed=1337 world_id=L000_CONTINUITY_PROTOTYPE
+PERFORMANCE wall steady median=0.822ms p95=1.837ms p99=17.107ms max=35.536ms | wall cold median=0.687ms max=10.577ms | engine-process steady median=34.971ms max=34.971ms | engine cold median=16.141ms max=16.141ms
 PERFORMANCE streaming built=45(+18) unloaded=9(+9) peak_chunks=36 peak_tris=34012 peak_colliders=1147 travel=68.9m failures=0
 Godot_v4.5.1-stable_win64_console.exe : WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
 At E:\cherry mimo ccnot\backrooms\_dl\lf_v5\tools\run_v5_gates.ps1:45 char:5
