@@ -15,6 +15,17 @@ var radius_y := 1
 var unload_xz := 2
 var unload_y := 2
 var builds_per_frame := 2
+## Level of detail. A chunk far from the wanderer is built with less
+## geometry, and rebuilt with the full detail when the wanderer approaches.
+## OFF by default, so a caller that does not ask for it sees exactly the
+## behaviour it saw before.
+var lod_enabled := false
+var lod_near_chunks := 1
+var lod_far_chunks := 2
+## Distance in metres at which a chunk stops being drawn. Zero never culls.
+## This is the renderer side of the level of detail: it needs no rebuild, so
+## the world never hitches when the wanderer moves.
+var visibility_range := 0.0
 ## Time budget for chunk construction in one frame, in milliseconds. A fixed
 ## chunk count per frame stalls badly when one chunk happens to be expensive;
 ## a time budget keeps the frame time flat whatever the chunk contains.
@@ -201,13 +212,89 @@ func _build(k: Vector3i) -> void:
 	_adding_child = true
 	add_child(n)
 	_adding_child = false
-	var meta: Dictionary = builder.call(k.x, k.y, k.z, version_of(k), n)
-	chunks[k] = {"node": n, "meta": meta}
+	var detail := _detail_for(k, _stream_center())
+	var meta: Dictionary = _call_builder(k, n, detail)
+	chunks[k] = {"node": n, "meta": meta, "detail": detail}
 	# The counter has to be advanced HERE. It was declared in `stream_stats`
 	# but never incremented, so every measurement that read it reported zero
 	# builds while the streamer was in fact building chunks. A counter that
 	# is always zero is indistinguishable from a broken instrument.
 	stream_stats["built"] = int(stream_stats["built"]) + 1
+	chunk_built.emit(k, meta)
+
+
+## The chunk the streamer is centred on right now.
+func _stream_center() -> Vector3i:
+	if target != null and is_instance_valid(target):
+		return key_at(target.global_position)
+	return _last_center
+
+
+## How detailed a chunk has to be, given how far it is from the wanderer.
+## 0 = full detail, 1 = structure without the decorative tail, 2 = shell.
+func _detail_for(k: Vector3i, center: Vector3i) -> int:
+	if not lod_enabled:
+		return 0
+	var d := _chunk_distance(k, center)
+	if d <= lod_near_chunks:
+		return 0
+	if d <= lod_far_chunks:
+		return 1
+	return 2
+
+
+## The distance of a chunk from the wanderer, in chunks.
+func _chunk_distance(k: Vector3i, center: Vector3i) -> int:
+	return maxi(absi(k.x - center.x), maxi(absi(k.y - center.y), absi(k.z - center.z)))
+
+
+## May this chunk give its detail back?
+##
+## The band that earns a level of detail is narrower than the band that keeps
+## it, so a wanderer who walks back and forth over the edge of the band does
+## not rebuild the same chunk every few seconds. Without this, the level of
+## detail only ever went one way: a chunk that the wanderer had visited kept
+## its full detail for ever, which is exactly the wrong behaviour in a world
+## that is explored.
+func _may_lose_detail(k: Vector3i, center: Vector3i) -> bool:
+	return _chunk_distance(k, center) > lod_far_chunks
+
+
+## Apply the visibility range to every resident chunk. It can be called at
+## any time, so a measurement can switch it on and off on the same scene.
+func apply_visibility_range() -> void:
+	for k in chunks.keys():
+		var node: Node3D = chunks[k]["node"]
+		for child in node.find_children("*", "GeometryInstance3D", true, false):
+			var g := child as GeometryInstance3D
+			g.visibility_range_end = visibility_range
+			g.visibility_range_fade_mode = GeometryInstance3D.VISIBILITY_RANGE_FADE_DISABLED
+
+
+## Call the builder with the detail level. A builder written before the level
+## of detail existed takes five arguments, and is called with five.
+func _call_builder(k: Vector3i, node: Node3D, detail: int) -> Dictionary:
+	if builder.get_argument_count() >= 6:
+		return builder.call(k.x, k.y, k.z, version_of(k), node, detail)
+	return builder.call(k.x, k.y, k.z, version_of(k), node)
+
+
+## Rebuild a chunk at another level of detail, in place. The old node stays in
+## the tree until the end of the frame, so the collision under the wanderer
+## never disappears for a single frame.
+func _upgrade(k: Vector3i, detail: int) -> void:
+	if not chunks.has(k):
+		return
+	var old: Node3D = chunks[k]["node"]
+	var n := Node3D.new()
+	n.name = "World_%d_%d_%d" % [k.x, k.y, k.z]
+	_adding_child = true
+	add_child(n)
+	_adding_child = false
+	var meta: Dictionary = _call_builder(k, n, detail)
+	chunks[k] = {"node": n, "meta": meta, "detail": detail}
+	if is_instance_valid(old):
+		old.queue_free()
 	chunk_built.emit(k, meta)
 
 
@@ -248,6 +335,28 @@ func _process(delta: float) -> void:
 	# cancelled before it is ever created.
 	var started := Time.get_ticks_usec()
 	var built := 0
+	# A chunk the wanderer is approaching has to show its full detail again,
+	# and a chunk the wanderer has left behind may give its detail back.
+	# The rebuild happens in place, so the collision under the wanderer never
+	# disappears for a frame, and it is charged to the same frame budget as a
+	# new build.
+	if lod_enabled:
+		var changes: Array = []
+		for k in chunks.keys().duplicate():
+			var want := _detail_for(k, center)
+			var have := int(chunks[k].get("detail", 0))
+			if want == have:
+				continue
+			if want > have and not _may_lose_detail(k, center):
+				continue
+			changes.append([k, want])
+		for entry in changes:
+			if built >= builds_per_frame:
+				break
+			if built > 0 and float(Time.get_ticks_usec() - started) / 1000.0 > build_budget_ms:
+				break
+			_upgrade(entry[0], entry[1])
+			built += 1
 	for k in missing:
 		if chunks.has(k):
 			continue

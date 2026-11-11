@@ -612,3 +612,204 @@ The raw logs are `reports/infinite_world/release_boot_headless.log` and
 proves the renderer draws the laboratory; it does not prove the game is
 *playable*. See §8.
 
+---
+
+## 10. The six instruments the brief asked for, and the three defects they found in each other
+
+The brief's seventh requirement is the one a static check cannot satisfy:
+*"physically walk between chunks and floors, verify transitions, stress-test
+long-distance exploration, test saving and reloading. Static-code checks alone
+do not demonstrate playability."* Requirement 3 asks for loops and hidden
+regions, requirement 4 for guaranteed connectivity, requirement 6 for LOD and
+occlusion. This section is about the native Godot tests that answer those, and
+— more usefully — about the three defects the instruments found **in the
+instruments**, each of which had produced a green result.
+
+### 10.1 The six tests
+
+| # | Test | Requirement | What it actually proves | Result |
+|---|---|---|---|---|
+| 11 | `ContinuityConnectivityTest` | 1, 4 | Every chunk of a 7×7 area is connected to the spawn through real doorways: a seam graph BFS, then a per-chunk flood fill with the player's own capsule, then a walkable-area count per chunk. Any disconnected component must be a **declared** hidden region. | 152 checks, 0 failures |
+| 12 | `ContinuityLoopWalkTest` | 3 | The megastructure publishes one closed circuit ring; the ring is present in the **built mesh** (vertices in the 2–20 mm band the floor slab never reaches); and a real body walks the four-chunk ring and comes home. | 17 checks, 0 failures |
+| 13 | `ContinuityHiddenRegionTest` | 3 | A dead-end vault with **exactly one** opening, proved by a physics sweep rather than by sampling: a 1.4 m mouth is thinner than a uniform grid can cross, so any grid flood fill would silently fail to prove it. | 16 checks, 0 failures |
+| 14 | `ContinuityStressTest` | 7 | A body walks 134.8 m through six chunk seams on a route planned on the player's own walkable grid; then a 40-chunk sweep proves chunks stream in and out, that the resident count stays bounded, and that a change made before the sweep is still there after it. | 12 checks, 0 failures |
+| 15/16 | `ContinuityPersistenceTest` | 7 | The save → restart → reload round trip, split across **two processes** because a single process cannot tell "the disk works" from "the in-memory scope was never cleared". | 22 checks, 0 failures |
+| — | `ContinuityGpuProbe` | 6 | LOD, the visibility range and occlusion culling measured on a **real GPU in a window**: draw calls, objects, primitives and frame time for four configurations, three interleaved rounds each; plus the lifecycle of a chunk's detail in both directions. | 9 checks, 0 failures |
+
+The GPU probe is deliberately **not** in the headless gate. The headless display
+server has no renderer, so a headless run of that file would report zero draw
+calls and a perfect frame time — the exact kind of green that means nothing.
+Run windowed, it refuses to start:
+
+```
+GPU PROBE: the headless display server has no renderer.
+```
+
+### 10.2 The first instrument defect: "stuck" was measured as net displacement
+
+The long walk failed on its first run. The body stopped at world position
+`(119.31, 0.02, 14.76)` with 18 of 26 waypoints reached, and the walker had
+been asked to recover **2 817 times**.
+
+The walker was not stuck. The trace showed it walking towards its waypoint at
+about three metres per second, being dragged back to the corner, walking
+forward again, and being dragged back. The reason it was dragged back was the
+**stuck detector itself**:
+
+```gdscript
+if player.global_position.distance_to(_last_progress) > 1.6:   # OLD
+    _last_progress = player.global_position
+    _stuck = 0
+else:
+    _stuck += 1
+```
+
+Progress was measured as *net displacement from an arbitrary earlier
+position*. A body that walks a metre towards its target, turns a corner and
+walks a metre back has covered two metres and arrived where it started, and
+that instrument calls it stuck. The fix is to measure the thing that actually
+means progress:
+
+```gdscript
+if distance < _best - 0.02:      # NEW
+    _best = distance
+    _stuck = 0
+else:
+    _stuck += 1
+```
+
+**A "stuck" detector must watch the distance to the target, not the distance
+from an anchor.** The anchor version cannot distinguish "the body is wedged"
+from "the body is on a detour", so it fires on every corner.
+
+### 10.3 The second instrument defect: "reached" was looser than the corner
+
+With the detector fixed, the walker still stopped — 0.9 m short of a waypoint
+that sat in a doorway, facing a wall. The cause was the second radius:
+
+```gdscript
+const REACH := 1.0     # OLD: a waypoint counts as reached from a metre away
+```
+
+The route turned a corner at a point that was **0.88 m away**. A radius of
+1.0 m therefore let the body "reach" the corner while it was still on the wrong
+side of it, turn towards the next waypoint, and walk into the partition wall
+that the corner exists to go around. The radius is now **0.4 m**, smaller than
+the planner's 0.75 m grid step, so the body has to arrive at a corner before it
+is allowed to leave it.
+
+**A waypoint that marks a corner has to be reached, not approached.** A
+reach radius that is large compared with the geometry turns every corner into
+a wall.
+
+### 10.4 The third instrument defect: the two halves of the round trip wrote one report
+
+`ContinuityPersistenceTest` runs its write half and its read half in two
+separate processes — that is the whole point of the test — but both halves
+wrote their findings to `continuity_persistence.json`. The read half ran last
+and **overwrote the write half's evidence**, so the report showed 9 checks
+where the run had made 22.
+
+**An instrument that overwrites its own evidence is an instrument that can
+only ever show the last thing that happened.** The two phases now write to
+`continuity_persistence_write.json` and `continuity_persistence_read.json`.
+
+### 10.5 The two pieces of shared test infrastructure, and why they are shared
+
+Two files carry the walking:
+
+* `tests/ContinuityPathFinder.gd` — lays a grid of points the player's capsule
+  fits in, searches it, and removes the corners of the result with a physics
+  sweep, so the body is only ever asked to walk along a line it can walk.
+* `tests/ContinuityWalker.gd` — drives the body. It probes the directions
+  around the desired one with the player's **own** collision shape and picks
+  the first one that is actually free; it never walks backwards into a side
+  room (a free heading that turns *away* from the target is rejected); and it
+  backtracks along the route it has already walked when it does stall.
+
+They are shared on purpose. The first version of the walker lived in two files
+at once, and a bug in it — a detour offset that was never cleared, so a body
+that had detoured once walked 100° off its route for the rest of the walk —
+had to be fixed in two places. **One walker, one planner.** The stress test and
+the loop test now use the same body behaviour, so a bug in the body cannot
+show up in one test and hide in the other.
+
+The planner's clearance is 2 cm, not 0, and that is not tidiness. Godot's
+physics server keeps transforms in **float32**, so a capsule placed flush with
+the floor lands 2.4 × 10⁻⁷ m inside it in half of the chunks and reads as a
+collision. With a zero clearance, three chunks of a nine-chunk area were
+reported as "not standable" — **the defect was in the instrument, not in the
+world**, and the way to tell the two apart was to look at the magnitude of the
+penetration.
+
+### 10.6 LOD, the visibility range and occlusion culling, measured
+
+Measured on an **NVIDIA GeForce RTX 3060 Laptop GPU**, Vulkan 1.4.351, three
+interleaved rounds of 60 frames each, median of the rounds. The four
+configurations are interleaved rather than measured one after the other,
+because a laptop GPU that is shared with the desktop drifts, and a number
+measured now and a number measured two minutes later are not the same
+measurement.
+
+| Configuration | Draw calls | Objects | Primitives | Frame time | Chunks by detail |
+|---|---|---|---|---|---|
+| baseline | 189 | 189 | 35 608 | 2.61 ms | 75 × detail 0 |
+| geometric LOD only | 181 | 181 | 35 194 | 2.39 ms | 27 × detail 0, 48 × detail 2 |
+| + visibility range 40 m | **76** | 76 | **15 394** | 2.42 ms | 27 × detail 0, 48 × detail 2 |
+| + occlusion culling | **71** | 71 | **15 310** | 2.42 ms | 27 × detail 0, 48 × detail 2 |
+
+Reading the four rows separately, because the mechanisms are not additive:
+
+* The **visibility range** is where the money is: it takes **59.8 % of the
+  draw calls** and **56.8 % of the primitives** away, and it costs nothing
+  but a range on a mesh, because the geometry beyond it is never drawn and is
+  never rebuilt.
+* The **geometric level of detail** alone takes **1.2 % of the primitives**
+  and 4.2 % of the draw calls. That is small on purpose: the walkable world —
+  the floor, the walls, the stairs, the partitions, the columns — is built at
+  **every** level of detail, so a far chunk is a cheaper chunk and not a
+  *different* chunk. A level of detail that dropped the walls would make the
+  topology of the world depend on the distance of the camera, and the player
+  would walk through a wall that was there a moment ago. (The offline Python
+  contract `test_routing_does_not_depend_on_mutable_room_versions` caught
+  exactly that mistake when it was introduced.)
+* The level of detail works in **both** directions. A chunk that the wanderer
+  has left behind gives its detail back while it is still resident — the
+  probe walks the camera three chunks away and watches the chunk it left go
+  from detail 0 to detail 2. A level of detail that only ever *added* detail
+  would save nothing in a world that is explored, because the chunks the
+  wanderer has visited are exactly the ones that are kept. The two
+  directions have different thresholds, so a wanderer walking back and forth
+  over the edge of a band does not rebuild the same chunk every few seconds.
+* **Occlusion culling** takes another 5 draw calls (6.6 %) and 84 primitives
+  on top of that. The occlusion instances are real: **75 `OccluderInstance3D`
+  nodes**, one set of wall spans per chunk, with the door gaps left open so
+  that what is visible through a doorway is never culled. With the level of
+  detail inert — the first configuration measured, where `lod_far_chunks`
+  equalled the streaming radius and no chunk ever left the decorative tail —
+  occlusion culling on its own took the draw calls from 189 to **133
+  (−29.6 %)**. The two mechanisms overlap: the more the level of detail
+  removes, the less is left for occlusion to hide.
+
+Two more things are worth stating plainly:
+
+* **The frame time barely moves** (2.61 ms → 2.42 ms). At this scale the
+  scene is far below the capacity of the GPU, so the win is in *what the
+  renderer draws*, not in milliseconds. On a scene that actually reaches the
+  frame budget the same ratio is worth far more than 0.2 ms.
+* The project setting `rendering/occlusion_culling/use_occlusion_culling` is
+  now **on**, and the probe asserts it, because with it off the fourth
+  configuration is byte for byte the third one and the comparison would be a
+  comparison of a world with itself.
+
+### 10.7 What is still NOT claimed
+
+* **A human at the keyboard.** Every number in §10.6 comes from a robot
+  walking a route a planner computed for it. The GPU probe proves the renderer
+  draws the world cheaply; it does not prove the game is playable.
+* **The occlusion and LOD numbers are for one camera position** in one seed.
+  They are a measurement, not a budget.
+* **The GPU probe is not in the headless gate.** It is a separate windowed
+  command, and it says so loudly when it is run headless.
+
+

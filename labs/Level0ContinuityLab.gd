@@ -20,6 +20,9 @@ static var qa_persistence := true
 
 var world: ChunkWorld3D
 var player: Player
+## The occlusion culling can be switched off, so that a measurement can
+## compare a world with it and a world without it in the same process.
+var occluders_enabled := true
 var _hud: Label
 var _map: Label
 var _map_shown := false
@@ -252,9 +255,117 @@ func _boundary(kit: GeoKit, key: Vector3i, o: Vector3, face: String, mat: String
 	kit.wall(a, b, H, 0.18, mat, openings)
 
 
-func _build_chunk(cx: int, cy: int, cz: int, version: int, node: Node3D) -> Dictionary:
+## The wall segments that actually exist, with the door gaps taken out.
+## An occluder must never cover a door: what is visible through the door is
+## exactly what the renderer must not cull.
+func _solid_spans(total: float, gaps: Array) -> Array:
+	var spans: Array = []
+	var cursor := 0.0
+	var sorted_gaps := gaps.duplicate()
+	sorted_gaps.sort_custom(func(a, b): return float(a[0]) < float(b[0]))
+	for gap in sorted_gaps:
+		var g0 := maxf(0.0, float(gap[0]))
+		var g1 := minf(total, float(gap[1]))
+		if g0 > cursor:
+			spans.append([cursor, g0])
+		cursor = maxf(cursor, g1)
+	if cursor < total:
+		spans.append([cursor, total])
+	return spans
+
+
+## The four walls of the room, as occluders. What is behind a wall cannot be
+## seen from inside the room, so the renderer may drop it. The door gaps are
+## left open, otherwise the neighbouring room would disappear through the
+## doorway.
+##
+## The engine API moved between releases: Occluder3D is abstract, and the
+## shapes live in BoxOccluder3D and ArrayOccluder3D. Everything is looked up
+## through ClassDB by name, so a build without these classes simply gets no
+## occluders instead of a parse error.
+func _add_occluders(node: Node3D, o: Vector3, key: Vector3i) -> void:
+	if not occluders_enabled:
+		return
+	if not ClassDB.can_instantiate("ArrayOccluder3D"):
+		return
+	if not ClassDB.can_instantiate("OccluderInstance3D"):
+		return
+	var boxes: Array = []
+	for face in ["west", "east", "south", "north"]:
+		var openings := ContinuityTopology.face_openings(world.seed_value, key, face)
+		var gaps: Array = []
+		for op in openings:
+			gaps.append([float(op["at"]) - float(op["w"]) * 0.5,
+				float(op["at"]) + float(op["w"]) * 0.5])
+		for span in _solid_spans(C, gaps):
+			var length := float(span[1]) - float(span[0])
+			if length < 0.5:
+				continue
+			var centre := (float(span[0]) + float(span[1])) * 0.5
+			match face:
+				"east":
+					boxes.append([Vector3(o.x + C, o.y + H * 0.5, o.z + centre), Vector3(0.30, H, length)])
+				"west":
+					boxes.append([Vector3(o.x, o.y + H * 0.5, o.z + centre), Vector3(0.30, H, length)])
+				"north":
+					boxes.append([Vector3(o.x + centre, o.y + H * 0.5, o.z + C), Vector3(length, H, 0.30)])
+				"south":
+					boxes.append([Vector3(o.x + centre, o.y + H * 0.5, o.z), Vector3(length, H, 0.30)])
+	if boxes.is_empty():
+		return
+	var verts := PackedVector3Array()
+	var indices := PackedInt32Array()
+	for b in boxes:
+		_box_geometry(verts, indices, b[0], b[1])
+	if verts.is_empty():
+		return
+	var occ: Object = ClassDB.instantiate("ArrayOccluder3D")
+	occ.set("vertices", verts)
+	occ.set("indices", indices)
+	var inst: Object = ClassDB.instantiate("OccluderInstance3D")
+	inst.set("occluder", occ)
+	inst.set("name", "Occluder")
+	node.add_child(inst)
+
+
+## Append one closed box to an occluder mesh. Godot treats clockwise triangles
+## as front faces, which is the same convention GeoKit uses.
+func _box_geometry(verts: PackedVector3Array, indices: PackedInt32Array,
+		centre: Vector3, size: Vector3) -> void:
+	var h := size * 0.5
+	var corners := [
+		centre + Vector3(-h.x, -h.y, -h.z), centre + Vector3(h.x, -h.y, -h.z),
+		centre + Vector3(h.x, -h.y, h.z), centre + Vector3(-h.x, -h.y, h.z),
+		centre + Vector3(-h.x, h.y, -h.z), centre + Vector3(h.x, h.y, -h.z),
+		centre + Vector3(h.x, h.y, h.z), centre + Vector3(-h.x, h.y, h.z)]
+	var faces := [[0, 3, 2, 1], [4, 5, 6, 7], [0, 1, 5, 4], [1, 2, 6, 5],
+		[2, 3, 7, 6], [3, 0, 4, 7]]
+	for face in faces:
+		var a: Vector3 = corners[face[0]]
+		var b: Vector3 = corners[face[1]]
+		var c: Vector3 = corners[face[2]]
+		var d: Vector3 = corners[face[3]]
+		var outward := ((a + b + c + d) * 0.25 - centre).normalized()
+		var base := verts.size()
+		verts.append(a)
+		verts.append(b)
+		verts.append(c)
+		verts.append(d)
+		if (b - a).cross(c - a).dot(outward) > 0.0:
+			indices.append_array([base, base + 2, base + 1, base, base + 3, base + 2])
+		else:
+			indices.append_array([base, base + 1, base + 2, base, base + 2, base + 3])
+
+
+func _build_chunk(cx: int, cy: int, cz: int, version: int, node: Node3D, detail: int = 0) -> Dictionary:
 	var key := Vector3i(cx, cy, cz)
 	var o := ContinuityTopology.origin(key)
+	# Level of detail. 0 = everything, 1 = the room without its decorative
+	# tail, 2 = the shell of the room. The floor, the walls, the stairs and
+	# the partitions are built at every level: they are the walkable world,
+	# and a chunk that lost them would be a hole in the ground.
+	var decor := detail < 1
+	var shell := detail >= 2
 	# The regional plan owns the architecture. A 24 m chunk never chooses its
 	# own style in isolation: the 16x16 district, the 8x8 superdistrict and
 	# the megastructure inside it decide together what this space is.
@@ -297,10 +408,20 @@ func _build_chunk(cx: int, cy: int, cz: int, version: int, node: Node3D) -> Dict
 		kit.slab(o.x, o.z, o.x + C, o.z + C, y + DY, 0.22, roof)
 	for face in ["west", "east", "south", "north"]:
 		_boundary(kit, key, o, face, wall)
+	# The partitions are the walkable world and are built at EVERY level of
+	# detail. A chunk that lost them would not be a simpler chunk, it would
+	# be a different world, and the body of the player would walk through a
+	# wall that was there a moment ago. What the far levels drop is the
+	# decoration, and what the renderer drops is the geometry beyond the
+	# visibility range - and that costs nothing, because it is never drawn.
 	if not ContinuityTopology.is_macro_core(key) and not ContinuityTopology.is_super_spine(key):
 		_add_room_partitions(kit, o, room, wall)
 	# Decorative geometry never blocks the main cross-shaped circulation,
 	# either stair shaft, or any of the four seeded edge portals.
+	# The architecture that a body can walk into is built at every level of
+	# detail for the same reason as the partitions: the columns of a
+	# megastructure and the arches of a superstructure block movement.
+	var vault := {}
 	if role == "core":
 		_add_superstructure(kit, o, key, warehouse, version)
 	elif role == "hub" or role == "spine":
@@ -308,21 +429,41 @@ func _build_chunk(cx: int, cy: int, cz: int, version: int, node: Node3D) -> Dict
 	elif role == "structure":
 		_add_megastructure(kit, node, o, key, plan, version)
 	else:
-		_add_architecture(kit, o, key, room, theme, warehouse, version)
-	_add_lighting(kit, node, o, key, room, theme, warehouse)
+		_add_architecture(kit, o, key, room, theme, warehouse, version, decor)
+	# The hidden region is a room with walls, so it is walkable world too.
+	# It exists in every kind of room, including the megastructure bays: its
+	# corner is clear of the bay columns, the stair shaft, the atrium well
+	# and the guaranteed circulation.
+	vault = _add_hidden_vault(kit, node, o, key, wall)
+	# The circuit ring belongs to the WHOLE megastructure, so it is drawn in
+	# every chunk of the structure footprint - including the chunks whose role
+	# is "core" and which therefore get the superstructure instead of the
+	# megastructure. Otherwise the ring would have a hole in it exactly where
+	# the hub is.
+	var circuit := []
+	var structure_kind: String = plan["structure_kind"]
+	if not structure_kind.is_empty():
+		circuit = _add_circuit_ring(kit, o, key,
+			RegionalPlan.structure_accent(structure_kind, plan["family"]))
+	if not shell:
+		_add_lighting(kit, node, o, key, room, theme, warehouse, detail)
 	# The documented Level 0 -> Level 1 route lives in the spawn chunk, so it
 	# is always reachable from the start and its position never moves.
 	if key == Vector3i(0, 0, 0):
 		_add_canon_portal(kit, node, o, y)
-	if ContinuityTopology.is_power_anchor(world.seed_value, key):
-		_add_power_relay(kit, node, key, o)
-	if ContinuityTopology.is_super_terminal(key):
-		_add_super_terminal(kit, node, key, o)
+	if not shell:
+		if ContinuityTopology.is_power_anchor(world.seed_value, key):
+			_add_power_relay(kit, node, key, o)
+		if ContinuityTopology.is_super_terminal(key):
+			_add_super_terminal(kit, node, key, o)
 	if bool(world.change_of(key, "marked", false)):
 		kit.box(Vector3(o.x + 10.8, y + 0.14, o.z + 20.9),
 			Vector3(0.9, 0.28, 0.9), "metal", GeoKit.ALL, false)
-	if ContinuityTopology.has_landmark(world.seed_value, key):
+	if decor and ContinuityTopology.has_landmark(world.seed_value, key):
 		_add_discovery(kit, node, key, o, y)
+	# The walls of the room are occluders: what is behind them cannot be seen
+	# from inside the room, and the renderer can drop it.
+	_add_occluders(node, o, key)
 	kit.commit()
 	return {"district": zone, "macro": theme, "room": room,
 		"superstructure": ContinuityTopology.macro_structure(world.seed_value, key),
@@ -332,8 +473,10 @@ func _build_chunk(cx: int, cy: int, cz: int, version: int, node: Node3D) -> Dict
 		"atrium": hole.size != Vector2.ZERO, "floor": cy,
 		"role": role, "structure": plan["structure_id"],
 		"structure_kind": plan["structure_kind"],
+		"circuit": circuit,
+		"vault": vault,
 		"district_style": plan["district"]["style"],
-		"version": version, "boxes": kit.stats["boxes"],
+		"version": version, "detail": detail, "boxes": kit.stats["boxes"],
 		"triangles": kit.stats["tris"], "colliders": kit.stats["shapes"]}
 
 
@@ -640,6 +783,66 @@ func _add_megastructure(kit: GeoKit, node: Node3D, o: Vector3, key: Vector3i,
 				Vector3(0.3, 0.22, 20.0), "metal", GeoKit.ALL, false)
 
 
+## The circuit ring of a megastructure.
+##
+## One closed loop, drawn on the floor of the outer bay grid of the WHOLE
+## structure: it leaves the first bay column, runs the full length of the
+## building, turns, comes back along the last row and closes. Every chunk of
+## the structure contributes the piece of the ring that falls inside it, so
+## the ring is continuous across the chunk seams BY CONSTRUCTION - two chunks
+## cannot disagree about where the loop runs.
+##
+## The ring is the one route in the building that returns to its starting
+## point, and it is what the loop walk test follows through four chunks.
+##
+## The drawn segments are returned in WORLD coordinates and published in the
+## chunk meta, so a test can check the claimed loop against the floor that
+## was actually built instead of against a second copy of this formula.
+func _add_circuit_ring(kit: GeoKit, o: Vector3, key: Vector3i, accent: String) -> Array:
+	var segments: Array = []
+	var structure := RegionalPlan.structure_of(world.seed_value, key)
+	if structure.is_empty():
+		return segments
+	var footprint: Rect2i = structure.get("footprint", Rect2i())
+	var anchor: Vector3i = structure.get("anchor", Vector3i.ZERO)
+	var nx := footprint.size.x
+	var nz := footprint.size.y
+	if nx < 2 or nz < 2:
+		return segments
+	var i := key.x - anchor.x
+	var j := key.z - anchor.z
+	if i < 0 or j < 0 or i >= nx or j >= nz:
+		return segments
+	# The ring runs through the first and the last bay column and row of the
+	# structure: 4.0 m from the west edge of the first chunk, 20.0 m from the
+	# west edge of the last one, and the same for the rows. Those are exactly
+	# the anchor bay positions of the megastructure.
+	var left := float(anchor.x) * C + 4.0
+	var right := float(anchor.x + nx - 1) * C + 20.0
+	var top := float(anchor.z) * C + 3.7
+	var bottom := float(anchor.z + nz - 1) * C + 20.3
+	var chunk_x := float(key.x) * C
+	var chunk_z := float(key.z) * C
+	var band := 1.2
+	if j == 0 or j == nz - 1:
+		var lz := 3.7 if j == 0 else 20.3
+		var x0 := clampf(left - chunk_x, 0.0, C)
+		var x1 := clampf(right - chunk_x, 0.0, C)
+		if x1 - x0 > 0.5:
+			kit.box(Vector3(o.x + (x0 + x1) * 0.5, o.y + 0.009, o.z + lz),
+				Vector3(x1 - x0, 0.012, band), accent, GeoKit.ALL, false)
+			segments.append([o.x + x0, o.z + lz, o.x + x1, o.z + lz, o.y])
+	if i == 0 or i == nx - 1:
+		var lx := 4.0 if i == 0 else 20.0
+		var z0 := clampf(top - chunk_z, 0.0, C)
+		var z1 := clampf(bottom - chunk_z, 0.0, C)
+		if z1 - z0 > 0.5:
+			kit.box(Vector3(o.x + lx, o.y + 0.009, o.z + (z0 + z1) * 0.5),
+				Vector3(band, 0.012, z1 - z0), accent, GeoKit.ALL, false)
+			segments.append([o.x + lx, o.z + z0, o.x + lx, o.z + z1, o.y])
+	return segments
+
+
 ## The one landmark of a megastructure: a fluted pylon with a beacon. It sits
 ## in the corner bay, clear of every portal, stair slot and atrium well.
 func _add_structure_beacon(kit: GeoKit, node: Node3D, base: Vector3,
@@ -782,6 +985,74 @@ func _add_room_partitions(kit: GeoKit, o: Vector3, room: String, wall_mat: Strin
 			Vector3(o.x + 20.6, o.y, o.z + 23.0), H, 0.15, wall_mat, door)
 
 
+## A hidden region.
+##
+## Not a room you walk through on the way somewhere: a dead-end vault with
+## exactly one opening, no face portal inside it, and a dead archive nobody
+## is going to bump into unless they look for it. The rule is a pure
+## function of the chunk address, so every 4x4 block of chunks contains
+## exactly one vault and the world can be searched for it.
+##
+## The mouth faces north, into the room, so the vault is entered by noticing
+## the gap in a wall rather than by following a corridor.
+func _vault_cell(key: Vector3i) -> bool:
+	return posmod(key.x * 3 + key.z * 5 + 11, 4) == 0
+
+
+func _add_hidden_vault(kit: GeoKit, node: Node3D, o: Vector3, key: Vector3i,
+		wall_mat: String) -> Dictionary:
+	if not _vault_cell(key):
+		return {}
+	# The corner between the stair well and the partition wall. The stair
+	# shaft of a storey owns local x 6.3..8.7 and 15.3..17.7, and the
+	# partition wall of a divided room stands at local x 20.6, so the band
+	# from 20.9 to 23.6 is the only place in the chunk that is solid floor
+	# on EVERY storey. A vault built over the shaft would have had no floor
+	# under it at all.
+	var x0 := 20.9
+	var x1 := 23.6
+	var z0 := 14.0
+	var z1 := 18.5
+	var height := 3.1
+	var thick := 0.16
+	# The north wall carries the only opening of the whole vault, and it
+	# faces away from the middle of the room: the vault cannot be seen into
+	# from where the player stands.
+	kit.wall(Vector3(o.x + x0, o.y, o.z + z0), Vector3(o.x + x1, o.y, o.z + z0),
+		height, thick, wall_mat, [{"at": 1.35, "w": 1.4, "h": 2.4}])
+	kit.wall(Vector3(o.x + x0, o.y, o.z + z1), Vector3(o.x + x1, o.y, o.z + z1),
+		height, thick, wall_mat)
+	kit.wall(Vector3(o.x + x0, o.y, o.z + z0), Vector3(o.x + x0, o.y, o.z + z1),
+		height, thick, wall_mat)
+	kit.wall(Vector3(o.x + x1, o.y, o.z + z0), Vector3(o.x + x1, o.y, o.z + z1),
+		height, thick, wall_mat)
+	# What the vault holds: a dead archive in one corner and one dim lamp.
+	# The crate is deliberately out of the way of the mouth: a prop in the
+	# middle of the vault would split its floor into two pieces and the dead
+	# end would stop being one dead end.
+	kit.box(Vector3(o.x + 21.6, o.y + 0.5, o.z + 17.8),
+		Vector3(1.2, 1.0, 1.2), "wood_floor")
+	kit.box(Vector3(o.x + 22.25, o.y + 1.5, o.z + z0 + 0.1),
+		Vector3(1.6, 1.2, 0.12), "metal", GeoKit.ALL, false)
+	var light := OmniLight3D.new()
+	light.position = Vector3(o.x + 22.25, o.y + 2.55, o.z + 16.2)
+	light.light_color = Color(1.0, 0.86, 0.58)
+	light.light_energy = 0.5
+	light.omni_range = 7.0
+	light.shadow_enabled = false
+	node.add_child(light)
+	return {
+		"opening": Vector3(o.x + 22.25, o.y, o.z + z0),
+		"approach": Vector3(o.x + 22.25, o.y, o.z + z0 - 1.0),
+		"inside": Vector3(o.x + 22.25, o.y, o.z + 15.4),
+		"rect": Rect2(x0, z0, x1 - x0, z1 - z0),
+		"height": height,
+		"mouth_width": 1.4,
+		"mouth_wall": "north",
+		"mouth_span": [21.55, 22.95],
+	}
+
+
 func _floor_with_slot(kit: GeoKit, o: Vector3, y: float, shaft: int, mat: String) -> void:
 	# The hole in the floor IS the footprint of the ramp that fills it. The two
 	# are one rectangle, so there is no uncovered strip and no unguarded drop.
@@ -805,7 +1076,7 @@ func _floor_with_slot(kit: GeoKit, o: Vector3, y: float, shaft: int, mat: String
 
 
 func _add_architecture(kit: GeoKit, o: Vector3, key: Vector3i, room: String,
-		theme: String, warehouse: bool, version: int) -> void:
+		theme: String, warehouse: bool, version: int, decor: bool = true) -> void:
 	var y := o.y
 	var column_mat := "metal" if warehouse else "l0_wallpaper_pale"
 	var prop_mat := "metal" if warehouse else "wood_floor"
@@ -837,6 +1108,12 @@ func _add_architecture(kit: GeoKit, o: Vector3, key: Vector3i, room: String,
 				Vector3(0.82, 0.24, 0.1), "panel", GeoKit.ALL, false)
 		else:
 			kit.cylinder(Vector3(x, y + 0.7, z), 0.50, 1.4, column_mat, 8)
+	# The anchor props above are the local scale of the room and survive every
+	# detail level that still has the room itself. Everything below is the
+	# decorative tail: it gives the room its character, but a chunk far away
+	# does not need it.
+	if not decor:
+		return
 	# Suspended beams, ceiling lights, and ribs introduce scale while remaining
 	# above head clearance; they are purely visual and no-collision.
 	for i in 3:
@@ -891,13 +1168,17 @@ func _add_architecture(kit: GeoKit, o: Vector3, key: Vector3i, room: String,
 
 
 func _add_lighting(kit: GeoKit, node: Node3D, o: Vector3, key: Vector3i,
-		room: String, theme: String, warehouse: bool) -> void:
+		room: String, theme: String, warehouse: bool, detail: int = 0) -> void:
 	var cold := warehouse or room == "machinery"
 	var macro_anchor := ContinuityTopology.macro_anchor(key)
 	var relay_on := bool(world.change_of(macro_anchor, "relay_active", false))
 	var survey_anchor := ContinuityTopology.super_anchor(key)
 	var survey_on := bool(world.change_of(survey_anchor, "network_online", false))
 	for i in 2:
+		# A chunk that is far away keeps one light instead of two: the room
+		# stays lit, the light count halves.
+		if detail >= 1 and i > 0:
+			continue
 		var x := o.x + 7.0 + 10.0 * float(i)
 		var z := o.z + 12.0
 		kit.panel(Vector3(x, o.y + H - 0.08, z), 2.0, 0.55, "panel")
