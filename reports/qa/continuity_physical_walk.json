@@ -80,7 +80,7 @@
       "check": "walker climbs the staircase to the next storey",
       "detail": {
         "distance": 0.0,
-        "pos": "(7.519676, 4.520001, 20.31487)"
+        "pos": "(7.519659, 4.52, 20.31684)"
       },
       "pass": true
     },
@@ -88,7 +88,7 @@
       "check": "walker is one storey higher after the climb",
       "detail": {
         "chunk": "(0, 1, 0)",
-        "y": 4.52000093460083
+        "y": 4.52000045776367
       },
       "pass": true
     },
@@ -117,8 +117,8 @@
     {
       "check": "an unloaded and rebuilt chunk is byte-identical in structure",
       "detail": {
-        "after": "{ \"district\": \"Z_L000_YELLOW\", \"macro\": \"silent_quarters\", \"room\": \"entry_hall\", \"superstructure\": \"grand_atrium\", \"superdistrict\": \"threshold_nexus\", \"hub\": false, \"spine\": false, \"atrium\": false, \"floor\": 0, \"role\": \"structure\", \"structure\": \"S0_0_M0\", \"structure_kind\": \"arcade\", \"district_style\": \"flooded_basement\", \"version\": 0, \"boxes\": 73, \"triangles\": 992, \"colliders\": 25 }",
-        "before": "{ \"district\": \"Z_L000_YELLOW\", \"macro\": \"silent_quarters\", \"room\": \"entry_hall\", \"superstructure\": \"grand_atrium\", \"superdistrict\": \"threshold_nexus\", \"hub\": false, \"spine\": false, \"atrium\": false, \"floor\": 0, \"role\": \"structure\", \"structure\": \"S0_0_M0\", \"structure_kind\": \"arcade\", \"district_style\": \"flooded_basement\", \"version\": 0, \"boxes\": 73, \"triangles\": 992, \"colliders\": 25 }"
+        "after": "{ \"district\": \"Z_L000_YELLOW\", \"macro\": \"silent_quarters\", \"room\": \"entry_hall\", \"superstructure\": \"grand_atrium\", \"superdistrict\": \"threshold_nexus\", \"hub\": false, \"spine\": false, \"atrium\": false, \"floor\": 0, \"role\": \"structure\", \"structure\": \"S0_0_M0\", \"structure_kind\": \"arcade\", \"circuit\": [[4.0, 3.7, 24.0, 3.7, 0.0], [4.0, 3.7, 4.0, 24.0, 0.0]], \"vault\": {  }, \"district_style\": \"flooded_basement\", \"version\": 0, \"detail\": 0, \"boxes\": 75, \"triangles\": 1016, \"colliders\": 25 }",
+        "before": "{ \"district\": \"Z_L000_YELLOW\", \"macro\": \"silent_quarters\", \"room\": \"entry_hall\", \"superstructure\": \"grand_atrium\", \"superdistrict\": \"threshold_nexus\", \"hub\": false, \"spine\": false, \"atrium\": false, \"floor\": 0, \"role\": \"structure\", \"structure\": \"S0_0_M0\", \"structure_kind\": \"arcade\", \"circuit\": [[4.0, 3.7, 24.0, 3.7, 0.0], [4.0, 3.7, 4.0, 24.0, 0.0]], \"vault\": {  }, \"district_style\": \"flooded_basement\", \"version\": 0, \"detail\": 0, \"boxes\": 75, \"triangles\": 1016, \"colliders\": 25 }"
       },
       "pass": true
     }

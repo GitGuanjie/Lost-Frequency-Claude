@@ -1,0 +1,76 @@
+{
+  "checks": 9,
+  "disk_path": "C:/Users/26999/AppData/Roaming/LostFrequency/continuity_lab/test_persistence.json",
+  "engine": {
+    "build": "official",
+    "hash": "f62fdbde15035c5576dad93e586201f4d41ef0cb",
+    "hex": 263425,
+    "major": 4,
+    "minor": 5,
+    "patch": 1,
+    "status": "stable",
+    "string": "4.5.1-stable (official)",
+    "timestamp": 0
+  },
+  "failures": 0,
+  "findings": [
+    {
+      "check": "a save file exists for the reload phase",
+      "detail": {
+        "path": "C:/Users/26999/AppData/Roaming/LostFrequency/continuity_lab/test_persistence.json"
+      },
+      "pass": true
+    },
+    {
+      "check": "the visited chunk came back from the file after a restart",
+      "detail": {
+        "chunk": "(0, 0, 0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the discovered chunk came back from the file after a restart",
+      "detail": {
+        "chunk": "(1, 0, 0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the discovery text came back from the file after a restart",
+      "pass": true
+    },
+    {
+      "check": "the layout version came back from the file after a restart",
+      "detail": {
+        "version": 1
+      },
+      "pass": true
+    },
+    {
+      "check": "the change that was made after the backup came back as well",
+      "pass": true
+    },
+    {
+      "check": "a different world id does not inherit the state of another world",
+      "detail": {
+        "world_id": "QA_PERSISTENCE_OTHER"
+      },
+      "pass": true
+    },
+    {
+      "check": "a different world id does not inherit the layout versions of another world",
+      "pass": true
+    },
+    {
+      "check": "the backup is a complete save of the same world",
+      "detail": {
+        "world_id": "QA_PERSISTENCE"
+      },
+      "pass": true
+    }
+  ],
+  "native": true,
+  "phase": "read",
+  "seed": 1337,
+  "status": "PASS"
+}

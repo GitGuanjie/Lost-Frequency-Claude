@@ -1,20 +1,20 @@
 ﻿python.exe : ----------------------------------------------------------------------
-At E:\cherry mimo ccnot\backrooms\_dl\lf_v5\tools\run_v5_gates.ps1:88 char:3
+At E:\cherry mimo ccnot\backrooms\_dl\lf_v5\tools\run_v5_gates.ps1:105 char:3
 +   & $Python -m unittest discover -s (Join-Path $Root 'tests') -p 'tes ...
 +   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : NotSpecified: (---------------...---------------:String) [], RemoteException
     + FullyQualifiedErrorId : NativeCommandError
  
-Ran 45 tests in 0.067s
+Ran 45 tests in 0.060s
 
 OK
 python.exe : ----------------------------------------------------------------------
-At E:\cherry mimo ccnot\backrooms\_dl\lf_v5\tools\run_v5_gates.ps1:96 char:3
+At E:\cherry mimo ccnot\backrooms\_dl\lf_v5\tools\run_v5_gates.ps1:113 char:3
 +   & $Python -m unittest discover -s (Join-Path $Root 'tests/static')  ...
 +   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : NotSpecified: (---------------...---------------:String) [], RemoteException
     + FullyQualifiedErrorId : NativeCommandError
  
-Ran 6 tests in 0.091s
+Ran 6 tests in 0.072s
 
 OK

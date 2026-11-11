@@ -30,6 +30,13 @@ inferred from the existence of a script.
 | A QA entry point that used to hang now fails loudly | `labs/Level0ContinuityLab.gd` | `SHOT failed: the headless display server…`, exit 2 |
 | A stale contract that could never pass, repaired and put under the gate | `tests/static/test_continuity_patch.py` | gate 08, 6/6 |
 | A real frame rendered by the **exported** Windows build | `reports/infinite_world/continuity_lab_release_build.jpg` | `release_boot_windowed.log` |
+| A proof that every chunk of the world is reachable, not a table that says so | `tests/ContinuityConnectivityTest.gd` | gate 11, 152 checks |
+| A circuit ring that is closed in the plan, present in the built mesh, and walked by a real body | `tests/ContinuityLoopWalkTest.gd` | gate 12, 17 checks |
+| A hidden region with exactly one way in | `tests/ContinuityHiddenRegionTest.gd` | gate 13, 16 checks |
+| A long walk of 134.8 m over six chunk seams, and a 40-chunk streaming sweep | `tests/ContinuityStressTest.gd` | gate 14, 12 checks |
+| A save → restart → reload round trip across **two processes** | `tests/ContinuityPersistenceTest.gd` | gates 15 + 16, 22 checks |
+| LOD, visibility range and occlusion culling measured on a **real GPU in a window** | `tests/ContinuityGpuProbe.gd` | `reports/qa/continuity_gpu_probe.json`, 7 checks |
+| One planner and one walker, shared by every test that walks a body | `tests/ContinuityPathFinder.gd`, `tests/ContinuityWalker.gd` | gates 12 and 14 |
 
 **The headline:** the canonical Level 0 → Level 1 route now exists, it is
 **physically walked** by a real `CharacterBody3D` into a real flickering wall,
@@ -56,19 +63,27 @@ powershell -ExecutionPolicy Bypass -File tools\run_v5_gates.ps1
 | 09 | ContinuityCanonTransitionTest | **PASS** | `37 checks, 0 failures` | 5.5 |
 | 10 | ContinuityPerformanceProbe | **PASS** | `failures=0` | 5.3 |
 | 08 | offline Python contracts | **PASS** | `Ran 45 tests … OK` + `Ran 6 tests … OK` | 0.8 |
+| 11 | ContinuityConnectivityTest | **PASS** | `152 checks, 0 failures` | 3.8 |
+| 12 | ContinuityLoopWalkTest | **PASS** | `17 checks, 0 failures` | 6.1 |
+| 13 | ContinuityHiddenRegionTest | **PASS** | `16 checks, 0 failures` | 3.4 |
+| 14 | ContinuityStressTest | **PASS** | `12 checks, 0 failures` | 10.8 |
+| 15 | persistence — write half | **PASS** | separate process | 3.1 |
+| 16 | persistence — read half | **PASS** | separate process | 2.6 |
 
-**10 / 10 PASS.** (This is the run taken **after** the boot fix of §9; the
-assertion counts are byte-identical to the run before it, which is the point —
-the fix changes the boot path and nothing else.)
+**16 / 16 PASS.** Gates 11–16 are this session's work; they are described in
+§10. The GPU probe is deliberately **not** among them — it needs a real
+renderer, and it is a separate windowed command (§10.6).
 
 **Native assertion total: 207 344** (25 313 + 74 529 + 100 997 + 6 505), plus
-14 physical-walk checks, 37 canonical-transition checks and 51 offline Python
-contracts (45 worldlab + 6 continuity). The baseline was 198 624; the increase is
+14 physical-walk checks, 37 canonical-transition checks, 152 connectivity
+checks, 17 loop checks, 16 hidden-region checks, 12 stress checks, 22
+persistence checks and 51 offline Python contracts (45 worldlab + 6
+continuity). The baseline was 198 624; the increase is
 the *stronger* topology assertions added in this session (the weak "door safely
 within wall" proxy was replaced by a real geometric invariant, and the stair-slot
 invariant was split into two).
 
-Logs: `reports/infinite_world/gate01..gate10*.log`
+Logs: `reports/infinite_world/gate01..gate16*.log`
 Machine-readable table: `reports/infinite_world/v5_gate_summary.json`
 
 ---
@@ -563,3 +578,96 @@ green: 29 files of upstream dev-cycle contracts, 57 tests, of which 13 fail and
 here rather than silently adopted into the gate, because making them pass would
 mean rewriting the 100 finished levels against contracts from earlier dev
 cycles.
+
+---
+
+## 10. The rest of the brief: connectivity, loops, hidden regions, a long walk, a save round trip and a real GPU
+
+The first session delivered the fold and the canonical transition. The brief
+asks for seven things, and this session closed the six that a static check
+cannot show. The architecture report has the design
+(`docs/production/WORLD_COORDINATOR_AND_CANON_TRANSITION.md` §10); this
+section is what was run and what came out of it.
+
+### 10.1 What was added
+
+| Gate | Test | Requirement | Result |
+|---|---|---|---|
+| 11 | `ContinuityConnectivityTest` | 1, 4 — every area is connected | 152 checks, 0 failures |
+| 12 | `ContinuityLoopWalkTest` | 3 — a loop | 17 checks, 0 failures |
+| 13 | `ContinuityHiddenRegionTest` | 3 — a hidden region | 16 checks, 0 failures |
+| 14 | `ContinuityStressTest` | 7 — long-distance exploration | 12 checks, 0 failures |
+| 15+16 | `ContinuityPersistenceTest` | 7 — saving and reloading | 22 checks, 0 failures |
+| — | `ContinuityGpuProbe` (windowed) | 6 — LOD, occlusion | 9 checks, 0 failures |
+
+Reports: `reports/qa/continuity_{connectivity,loop_walk,hidden_region,stress,
+persistence_write,persistence_read,gpu_probe}.json`.
+
+The headline numbers of gate 14: the body walked **134.76 m** through **six
+chunk seams** on a route planned on the player's own walkable grid, with
+**0 recoveries** and **0 forced waypoints**; the 40-chunk sweep then streamed
+**220 chunks in and 283 out** with a peak of **90 resident chunks**, and a
+change made before the sweep was still there after it.
+
+### 10.2 Two defects the new instruments found — in the instruments
+
+**The walker's "stuck" detector was measuring the wrong thing.** It called a
+body stuck when it had not moved 1.6 m *net* from an earlier position. The
+long walk failed with the walker moving towards its waypoint at three metres
+per second and being dragged back to the corner every forty frames. Progress
+is the distance to the **target**, not the distance from an anchor.
+
+**The walker's "reached" radius was larger than the corner it had to reach.**
+A waypoint counts as reached from a metre away, and the route turned a corner
+0.88 m away, so the body turned before it arrived and walked into the wall
+the corner exists to go around. The radius is now 0.4 m — smaller than the
+planner's 0.75 m grid step.
+
+Both are described in full, with the traces, in the architecture report §10.2
+and §10.3.
+
+### 10.3 A defect the level of detail introduced, caught by the old contract
+
+The first version of the level of detail dropped the **partition walls** from
+far chunks. That contradicts the comment three lines above it — *"the floor,
+the walls, the stairs and the partitions are built at every level: they are
+the walkable world, and a chunk that lost them would be a hole in the ground"* —
+and it contradicts the offline Python contract
+`test_routing_does_not_depend_on_mutable_room_versions`, which failed in the
+gate.
+
+The contract was right and the level of detail was wrong. The walkable world —
+floor, walls, stairs, partitions, the columns of a megastructure — is now
+built at **every** level of detail; what the far levels drop is decoration,
+and what the renderer drops is the geometry beyond the visibility range. The
+visible cost of that decision is measured and stated: the geometric level of
+detail alone saves **1.2 %** of the primitives, while the visibility range
+saves **56.8 %**.
+
+The level of detail also had to work in **both** directions. As first written
+it only ever *added* detail, which saves nothing in a world that is explored:
+the chunks the wanderer has visited are exactly the ones that are kept. A
+chunk that the wanderer has left behind now gives its detail back while it is
+still resident — the probe walks the camera three chunks away and watches the
+chunk it left go from detail 0 to detail 2. The two directions have different
+thresholds, so a wanderer walking back and forth over the edge of a band does
+not rebuild the same chunk every few seconds.
+
+### 10.4 A defect in the evidence, not in the world
+
+The two halves of the save round trip run in two processes — that is the
+whole point of the test — but both wrote their findings to the same report
+file, so the second half **overwrote the evidence of the first**. The report
+showed 9 checks where the run had made 22. The halves now write
+`continuity_persistence_write.json` and `continuity_persistence_read.json`.
+
+### 10.5 What is still NOT claimed
+
+* **A human at the keyboard.** Every number here comes from a robot walking a
+  route a planner computed for it.
+* **The GPU numbers are for one camera position in one seed**, on a laptop GPU
+  that is shared with the desktop. They are a measurement, not a budget.
+* **The GPU probe is not in the headless gate.** Run headless it would report
+  zero draw calls and a perfect frame time, so it refuses to start and says
+  why.
+* The rest of `tests/static/` is still **not** gated — see §9.6.

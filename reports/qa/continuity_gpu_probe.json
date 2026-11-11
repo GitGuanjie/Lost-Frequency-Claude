@@ -1,0 +1,232 @@
+{
+  "api": "1.4.351",
+  "checks": 9,
+  "detail_histogram": {
+    "baseline": {
+      "0": 75
+    },
+    "lod": {
+      "0": 27,
+      "2": 48
+    },
+    "lod_geometry": {
+      "0": 27,
+      "2": 48
+    },
+    "lod_occlusion": {
+      "0": 27,
+      "2": 48
+    }
+  },
+  "engine": {
+    "build": "official",
+    "hash": "f62fdbde15035c5576dad93e586201f4d41ef0cb",
+    "hex": 263425,
+    "major": 4,
+    "minor": 5,
+    "patch": 1,
+    "status": "stable",
+    "string": "4.5.1-stable (official)",
+    "timestamp": 0
+  },
+  "failures": 0,
+  "findings": [
+    {
+      "check": "the renderer has occlusion culling switched on",
+      "detail": {
+        "setting": "rendering/occlusion_culling/use_occlusion_culling",
+        "value": true
+      },
+      "pass": true
+    },
+    {
+      "check": "the world really contains occluder instances",
+      "detail": {
+        "occluder_instances": 75
+      },
+      "pass": true
+    },
+    {
+      "check": "the level of detail really lowered the detail of some chunks",
+      "detail": {
+        "baseline": {
+          "0": 75
+        },
+        "lod": {
+          "0": 27,
+          "2": 48
+        }
+      },
+      "pass": true
+    },
+    {
+      "check": "the chunk the camera started on was built with full detail",
+      "detail": {
+        "detail": 0
+      },
+      "pass": true
+    },
+    {
+      "check": "the chunk the camera left behind gave its detail back",
+      "detail": {
+        "detail_after": 2,
+        "detail_before": 0,
+        "still_resident": true
+      },
+      "pass": true
+    },
+    {
+      "check": "the renderer really drew the world",
+      "detail": {
+        "draw_calls": 189.0,
+        "objects": 189.0
+      },
+      "pass": true
+    },
+    {
+      "check": "the geometric level of detail alone draws fewer primitives",
+      "detail": {
+        "baseline": 35608.0,
+        "lod_geometry": 35194.0
+      },
+      "pass": true
+    },
+    {
+      "check": "the level of detail and the visibility range reduce the draw calls",
+      "detail": {
+        "baseline": 189.0,
+        "lod": 76.0
+      },
+      "pass": true
+    },
+    {
+      "check": "the occlusion culling does not draw more than the level of detail alone",
+      "detail": {
+        "lod": 15394.0,
+        "lod_occlusion": 15310.0
+      },
+      "pass": true
+    }
+  ],
+  "frames_per_sample": 60,
+  "native": true,
+  "occluder_instances": 75,
+  "occlusion_culling_enabled": true,
+  "renderer": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "rounds": 3,
+  "samples": {
+    "baseline": [
+      {
+        "draw_calls": 189.0,
+        "frame_ms": 2.9325,
+        "objects": 189.0,
+        "primitives": 35608.0
+      },
+      {
+        "draw_calls": 189.0,
+        "frame_ms": 2.6065,
+        "objects": 189.0,
+        "primitives": 35608.0
+      },
+      {
+        "draw_calls": 189.0,
+        "frame_ms": 2.615,
+        "objects": 189.0,
+        "primitives": 35608.0
+      }
+    ],
+    "lod": [
+      {
+        "draw_calls": 76.0,
+        "frame_ms": 2.411,
+        "objects": 76.0,
+        "primitives": 15394.0
+      },
+      {
+        "draw_calls": 76.0,
+        "frame_ms": 2.4105,
+        "objects": 76.0,
+        "primitives": 15394.0
+      },
+      {
+        "draw_calls": 76.0,
+        "frame_ms": 2.436,
+        "objects": 76.0,
+        "primitives": 15394.0
+      }
+    ],
+    "lod_geometry": [
+      {
+        "draw_calls": 181.0,
+        "frame_ms": 2.3955,
+        "objects": 181.0,
+        "primitives": 35194.0
+      },
+      {
+        "draw_calls": 181.0,
+        "frame_ms": 2.4025,
+        "objects": 181.0,
+        "primitives": 35194.0
+      },
+      {
+        "draw_calls": 181.0,
+        "frame_ms": 2.413,
+        "objects": 181.0,
+        "primitives": 35194.0
+      }
+    ],
+    "lod_occlusion": [
+      {
+        "draw_calls": 71.0,
+        "frame_ms": 2.4345,
+        "objects": 71.0,
+        "primitives": 15310.0
+      },
+      {
+        "draw_calls": 71.0,
+        "frame_ms": 2.434,
+        "objects": 71.0,
+        "primitives": 15310.0
+      },
+      {
+        "draw_calls": 71.0,
+        "frame_ms": 2.4405,
+        "objects": 71.0,
+        "primitives": 15310.0
+      }
+    ]
+  },
+  "seed": 1337,
+  "status": "PASS",
+  "summary": {
+    "baseline": {
+      "draw_calls": 189.0,
+      "frame_ms": 2.615,
+      "objects": 189.0,
+      "primitives": 35608.0,
+      "rounds": 3
+    },
+    "lod": {
+      "draw_calls": 76.0,
+      "frame_ms": 2.411,
+      "objects": 76.0,
+      "primitives": 15394.0,
+      "rounds": 3
+    },
+    "lod_geometry": {
+      "draw_calls": 181.0,
+      "frame_ms": 2.4025,
+      "objects": 181.0,
+      "primitives": 35194.0,
+      "rounds": 3
+    },
+    "lod_occlusion": {
+      "draw_calls": 71.0,
+      "frame_ms": 2.4345,
+      "objects": 71.0,
+      "primitives": 15310.0,
+      "rounds": 3
+    }
+  },
+  "windowed": true
+}

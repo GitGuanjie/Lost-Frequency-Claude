@@ -1,0 +1,103 @@
+{
+  "checks": 13,
+  "disk_path": "C:/Users/26999/AppData/Roaming/LostFrequency/continuity_lab/test_persistence.json",
+  "engine": {
+    "build": "official",
+    "hash": "f62fdbde15035c5576dad93e586201f4d41ef0cb",
+    "hex": 263425,
+    "major": 4,
+    "minor": 5,
+    "patch": 1,
+    "status": "stable",
+    "string": "4.5.1-stable (official)",
+    "timestamp": 0
+  },
+  "failures": 0,
+  "findings": [
+    {
+      "check": "the world reports a successful save",
+      "detail": {
+        "path": "user://continuity_lab/test_persistence.json"
+      },
+      "pass": true
+    },
+    {
+      "check": "the save file exists on disk",
+      "detail": {
+        "path": "C:/Users/26999/AppData/Roaming/LostFrequency/continuity_lab/test_persistence.json"
+      },
+      "pass": true
+    },
+    {
+      "check": "the save file is readable JSON",
+      "detail": {
+        "path": "C:/Users/26999/AppData/Roaming/LostFrequency/continuity_lab/test_persistence.json"
+      },
+      "pass": true
+    },
+    {
+      "check": "the save file names its world",
+      "detail": {
+        "world_id": "QA_PERSISTENCE"
+      },
+      "pass": true
+    },
+    {
+      "check": "the save file records the seed",
+      "detail": {
+        "seed": 1337.0
+      },
+      "pass": true
+    },
+    {
+      "check": "the visited chunk is in the saved changes",
+      "detail": {
+        "keys": [
+          "0:0:0",
+          "1:0:0"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "check": "the visited flag is on disk, not only in memory",
+      "pass": true
+    },
+    {
+      "check": "the discovery text is on disk",
+      "pass": true
+    },
+    {
+      "check": "the layout version is on disk",
+      "detail": {
+        "versions": {
+          "2:0:0": 1.0
+        }
+      },
+      "pass": true
+    },
+    {
+      "check": "the previous save was rotated into the backup",
+      "detail": {
+        "path": "C:/Users/26999/AppData/Roaming/LostFrequency/continuity_lab/test_persistence.json.bak"
+      },
+      "pass": true
+    },
+    {
+      "check": "the backup still holds the state of the first save",
+      "pass": true
+    },
+    {
+      "check": "the backup does not contain the change that was made after it",
+      "pass": true
+    },
+    {
+      "check": "the current save holds the change that was made after the backup",
+      "pass": true
+    }
+  ],
+  "native": true,
+  "phase": "write",
+  "seed": 1337,
+  "status": "PASS"
+}

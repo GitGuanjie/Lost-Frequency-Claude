@@ -1,13 +1,5 @@
 ﻿Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org
 
 [ContinuityLab] ready seed=1337 world_id=L000_CONTINUITY_PROTOTYPE
-PERFORMANCE wall steady median=0.822ms p95=1.837ms p99=17.107ms max=35.536ms | wall cold median=0.687ms max=10.577ms | engine-process steady median=34.971ms max=34.971ms | engine cold median=16.141ms max=16.141ms
-PERFORMANCE streaming built=45(+18) unloaded=9(+9) peak_chunks=36 peak_tris=34012 peak_colliders=1147 travel=68.9m failures=0
-Godot_v4.5.1-stable_win64_console.exe : WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
-At E:\cherry mimo ccnot\backrooms\_dl\lf_v5\tools\run_v5_gates.ps1:45 char:5
-+     & $Engine @GodotArgs 2>&1 | Out-File -FilePath $log -Encoding utf ...
-+     ~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (WARNING: Object...e for details).:String) [], RemoteException
-    + FullyQualifiedErrorId : NativeCommandError
- 
-   at: cleanup (core/object/object.cpp:2514)
+PERFORMANCE wall steady median=0.692ms p95=1.534ms p99=11.622ms max=24.546ms | wall cold median=0.595ms max=4.915ms | engine-process steady median=15.126ms max=15.126ms | engine cold median=15.126ms max=23.517ms
+PERFORMANCE streaming built=45(+18) unloaded=9(+9) peak_chunks=36 peak_tris=35272 peak_colliders=1210 travel=68.9m failures=0

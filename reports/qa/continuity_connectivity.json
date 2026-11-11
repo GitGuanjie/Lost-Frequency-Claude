@@ -1,0 +1,1683 @@
+{
+  "checks": 152,
+  "engine": {
+    "build": "official",
+    "hash": "f62fdbde15035c5576dad93e586201f4d41ef0cb",
+    "hex": 263425,
+    "major": 4,
+    "minor": 5,
+    "patch": 1,
+    "status": "stable",
+    "string": "4.5.1-stable (official)",
+    "timestamp": 0
+  },
+  "failures": 0,
+  "findings": [
+    {
+      "check": "the seam graph of a 25x25 area is fully connected (seed 1337)",
+      "detail": {
+        "expected": 625,
+        "reachable": 625
+      },
+      "pass": true
+    },
+    {
+      "check": "the seam graph of a 25x25 area is fully connected (seed 4242)",
+      "detail": {
+        "expected": 625,
+        "reachable": 625
+      },
+      "pass": true
+    },
+    {
+      "check": "the seam graph of a 25x25 area is fully connected (seed 9001)",
+      "detail": {
+        "expected": 625,
+        "reachable": 625
+      },
+      "pass": true
+    },
+    {
+      "check": "the continuity lab scene loads",
+      "detail": {
+        "scene": "res://labs/Level0ContinuityLab.tscn"
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (-2, 0, -2) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.65,
+          "w": 11.0
+        },
+        "point": "(-48.0, 1.0, -36.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (-2, 0, -2) is physically open",
+      "detail": {
+        "at": {
+          "at": 21.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-24.0, 1.0, -27.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (-2, 0, -2) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.65,
+          "w": 11.0
+        },
+        "point": "(-36.0, 1.0, -48.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (-2, 0, -2) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-36.0, 1.0, -24.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (-1, 0, -2) is physically open",
+      "detail": {
+        "at": {
+          "at": 21.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-24.0, 1.0, -27.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (-1, 0, -2) is physically open",
+      "detail": {
+        "at": {
+          "at": 21.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(0.0, 1.0, -27.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (-1, 0, -2) is physically open",
+      "detail": {
+        "at": {
+          "at": 13.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-11.0, 1.0, -48.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (-1, 0, -2) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-12.0, 1.0, -24.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (0, 0, -2) is physically open",
+      "detail": {
+        "at": {
+          "at": 21.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(0.0, 1.0, -27.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (0, 0, -2) is physically open",
+      "detail": {
+        "at": {
+          "at": 4.5,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(24.0, 1.0, -43.5)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (0, 0, -2) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(12.0, 1.0, -48.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (0, 0, -2) is physically open",
+      "detail": {
+        "at": {
+          "at": 11.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(11.0, 1.0, -24.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (1, 0, -2) is physically open",
+      "detail": {
+        "at": {
+          "at": 4.5,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(24.0, 1.0, -43.5)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (1, 0, -2) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.65,
+          "w": 11.0
+        },
+        "point": "(48.0, 1.0, -36.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (1, 0, -2) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.65,
+          "w": 11.0
+        },
+        "point": "(36.0, 1.0, -48.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (1, 0, -2) is physically open",
+      "detail": {
+        "at": {
+          "at": 13.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(37.0, 1.0, -24.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (2, 0, -2) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.65,
+          "w": 11.0
+        },
+        "point": "(48.0, 1.0, -36.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (2, 0, -2) is physically open",
+      "detail": {
+        "at": {
+          "at": 3.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(72.0, 1.0, -45.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (2, 0, -2) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.65,
+          "w": 11.0
+        },
+        "point": "(60.0, 1.0, -48.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (2, 0, -2) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(60.0, 1.0, -24.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (-2, 0, -1) is physically open",
+      "detail": {
+        "at": {
+          "at": 21.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-48.0, 1.0, -3.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (-2, 0, -1) is physically open",
+      "detail": {
+        "at": {
+          "at": 3.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-24.0, 1.0, -21.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (-2, 0, -1) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-36.0, 1.0, -24.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (-2, 0, -1) is physically open",
+      "detail": {
+        "at": {
+          "at": 11.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-37.0, 1.0, 0.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (-1, 0, -1) is physically open",
+      "detail": {
+        "at": {
+          "at": 3.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-24.0, 1.0, -21.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (-1, 0, -1) is physically open",
+      "detail": {
+        "at": {
+          "at": 21.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(0.0, 1.0, -3.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (-1, 0, -1) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-12.0, 1.0, -24.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (-1, 0, -1) is physically open",
+      "detail": {
+        "at": {
+          "at": 13.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-11.0, 1.0, 0.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "all four portals of chunk (-1, 0, -1) lie in one walkable component",
+      "detail": {
+        "cells": 576,
+        "components": 1,
+        "fraction": 0.838541666666667,
+        "pockets": 0,
+        "portal_components": 1,
+        "walkable_cells": 483
+      },
+      "pass": true
+    },
+    {
+      "check": "every disconnected part of chunk (-1, 0, -1) is inside a declared hidden region",
+      "detail": {
+        "declared_hidden_regions": 0,
+        "pockets": 0,
+        "stray_parts": 0
+      },
+      "pass": true
+    },
+    {
+      "check": "chunk (-1, 0, -1) is mostly walkable",
+      "detail": {
+        "cells": 576,
+        "fraction": 0.838541666666667,
+        "walkable_cells": 483
+      },
+      "pass": true
+    },
+    {
+      "check": "every portal of chunk (-1, 0, -1) is reachable on foot",
+      "detail": {
+        "found": 4,
+        "portals": 4
+      },
+      "pass": true
+    },
+    {
+      "check": "chunk (-1, 0, -1) has no floor cell that only fits on a knife edge",
+      "detail": {
+        "knife_edges": 0
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (0, 0, -1) is physically open",
+      "detail": {
+        "at": {
+          "at": 21.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(0.0, 1.0, -3.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (0, 0, -1) is physically open",
+      "detail": {
+        "at": {
+          "at": 3.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(24.0, 1.0, -21.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (0, 0, -1) is physically open",
+      "detail": {
+        "at": {
+          "at": 11.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(11.0, 1.0, -24.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (0, 0, -1) is physically open",
+      "detail": {
+        "at": {
+          "at": 13.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(13.0, 1.0, 0.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "all four portals of chunk (0, 0, -1) lie in one walkable component",
+      "detail": {
+        "cells": 576,
+        "components": 1,
+        "fraction": 0.838541666666667,
+        "pockets": 0,
+        "portal_components": 1,
+        "walkable_cells": 483
+      },
+      "pass": true
+    },
+    {
+      "check": "every disconnected part of chunk (0, 0, -1) is inside a declared hidden region",
+      "detail": {
+        "declared_hidden_regions": 0,
+        "pockets": 0,
+        "stray_parts": 0
+      },
+      "pass": true
+    },
+    {
+      "check": "chunk (0, 0, -1) is mostly walkable",
+      "detail": {
+        "cells": 576,
+        "fraction": 0.838541666666667,
+        "walkable_cells": 483
+      },
+      "pass": true
+    },
+    {
+      "check": "every portal of chunk (0, 0, -1) is reachable on foot",
+      "detail": {
+        "found": 4,
+        "portals": 4
+      },
+      "pass": true
+    },
+    {
+      "check": "chunk (0, 0, -1) has no floor cell that only fits on a knife edge",
+      "detail": {
+        "knife_edges": 0
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (1, 0, -1) is physically open",
+      "detail": {
+        "at": {
+          "at": 3.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(24.0, 1.0, -21.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (1, 0, -1) is physically open",
+      "detail": {
+        "at": {
+          "at": 3.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(48.0, 1.0, -21.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (1, 0, -1) is physically open",
+      "detail": {
+        "at": {
+          "at": 13.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(37.0, 1.0, -24.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (1, 0, -1) is physically open",
+      "detail": {
+        "at": {
+          "at": 11.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(35.0, 1.0, 0.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "all four portals of chunk (1, 0, -1) lie in one walkable component",
+      "detail": {
+        "cells": 576,
+        "components": 1,
+        "fraction": 0.838541666666667,
+        "pockets": 0,
+        "portal_components": 1,
+        "walkable_cells": 483
+      },
+      "pass": true
+    },
+    {
+      "check": "every disconnected part of chunk (1, 0, -1) is inside a declared hidden region",
+      "detail": {
+        "declared_hidden_regions": 0,
+        "pockets": 0,
+        "stray_parts": 0
+      },
+      "pass": true
+    },
+    {
+      "check": "chunk (1, 0, -1) is mostly walkable",
+      "detail": {
+        "cells": 576,
+        "fraction": 0.838541666666667,
+        "walkable_cells": 483
+      },
+      "pass": true
+    },
+    {
+      "check": "every portal of chunk (1, 0, -1) is reachable on foot",
+      "detail": {
+        "found": 4,
+        "portals": 4
+      },
+      "pass": true
+    },
+    {
+      "check": "chunk (1, 0, -1) has no floor cell that only fits on a knife edge",
+      "detail": {
+        "knife_edges": 0
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (2, 0, -1) is physically open",
+      "detail": {
+        "at": {
+          "at": 3.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(48.0, 1.0, -21.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (2, 0, -1) is physically open",
+      "detail": {
+        "at": {
+          "at": 3.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(72.0, 1.0, -21.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (2, 0, -1) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(60.0, 1.0, -24.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (2, 0, -1) is physically open",
+      "detail": {
+        "at": {
+          "at": 11.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(59.0, 1.0, 0.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (-2, 0, 0) is physically open",
+      "detail": {
+        "at": {
+          "at": 21.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-48.0, 1.0, 21.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (-2, 0, 0) is physically open",
+      "detail": {
+        "at": {
+          "at": 4.5,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-24.0, 1.0, 4.5)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (-2, 0, 0) is physically open",
+      "detail": {
+        "at": {
+          "at": 11.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-37.0, 1.0, 0.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (-2, 0, 0) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-36.0, 1.0, 24.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (-1, 0, 0) is physically open",
+      "detail": {
+        "at": {
+          "at": 4.5,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-24.0, 1.0, 4.5)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (-1, 0, 0) is physically open",
+      "detail": {
+        "at": {
+          "at": 3.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(0.0, 1.0, 3.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (-1, 0, 0) is physically open",
+      "detail": {
+        "at": {
+          "at": 13.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-11.0, 1.0, 0.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (-1, 0, 0) is physically open",
+      "detail": {
+        "at": {
+          "at": 13.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-11.0, 1.0, 24.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "all four portals of chunk (-1, 0, 0) lie in one walkable component",
+      "detail": {
+        "cells": 576,
+        "components": 1,
+        "fraction": 0.866319444444444,
+        "pockets": 0,
+        "portal_components": 1,
+        "walkable_cells": 499
+      },
+      "pass": true
+    },
+    {
+      "check": "every disconnected part of chunk (-1, 0, 0) is inside a declared hidden region",
+      "detail": {
+        "declared_hidden_regions": 1,
+        "pockets": 0,
+        "stray_parts": 0
+      },
+      "pass": true
+    },
+    {
+      "check": "chunk (-1, 0, 0) is mostly walkable",
+      "detail": {
+        "cells": 576,
+        "fraction": 0.866319444444444,
+        "walkable_cells": 499
+      },
+      "pass": true
+    },
+    {
+      "check": "every portal of chunk (-1, 0, 0) is reachable on foot",
+      "detail": {
+        "found": 4,
+        "portals": 4
+      },
+      "pass": true
+    },
+    {
+      "check": "chunk (-1, 0, 0) has no floor cell that only fits on a knife edge",
+      "detail": {
+        "knife_edges": 0
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (0, 0, 0) is physically open",
+      "detail": {
+        "at": {
+          "at": 3.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(0.0, 1.0, 3.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (0, 0, 0) is physically open",
+      "detail": {
+        "at": {
+          "at": 4.5,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(24.0, 1.0, 4.5)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (0, 0, 0) is physically open",
+      "detail": {
+        "at": {
+          "at": 13.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(13.0, 1.0, 0.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (0, 0, 0) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(12.0, 1.0, 24.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "all four portals of chunk (0, 0, 0) lie in one walkable component",
+      "detail": {
+        "cells": 576,
+        "components": 1,
+        "fraction": 0.881944444444444,
+        "pockets": 0,
+        "portal_components": 1,
+        "walkable_cells": 508
+      },
+      "pass": true
+    },
+    {
+      "check": "every disconnected part of chunk (0, 0, 0) is inside a declared hidden region",
+      "detail": {
+        "declared_hidden_regions": 0,
+        "pockets": 0,
+        "stray_parts": 0
+      },
+      "pass": true
+    },
+    {
+      "check": "chunk (0, 0, 0) is mostly walkable",
+      "detail": {
+        "cells": 576,
+        "fraction": 0.881944444444444,
+        "walkable_cells": 508
+      },
+      "pass": true
+    },
+    {
+      "check": "every portal of chunk (0, 0, 0) is reachable on foot",
+      "detail": {
+        "found": 4,
+        "portals": 4
+      },
+      "pass": true
+    },
+    {
+      "check": "chunk (0, 0, 0) has no floor cell that only fits on a knife edge",
+      "detail": {
+        "knife_edges": 0
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (1, 0, 0) is physically open",
+      "detail": {
+        "at": {
+          "at": 4.5,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(24.0, 1.0, 4.5)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (1, 0, 0) is physically open",
+      "detail": {
+        "at": {
+          "at": 4.5,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(48.0, 1.0, 4.5)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (1, 0, 0) is physically open",
+      "detail": {
+        "at": {
+          "at": 11.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(35.0, 1.0, 0.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (1, 0, 0) is physically open",
+      "detail": {
+        "at": {
+          "at": 13.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(37.0, 1.0, 24.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "all four portals of chunk (1, 0, 0) lie in one walkable component",
+      "detail": {
+        "cells": 576,
+        "components": 1,
+        "fraction": 0.887152777777778,
+        "pockets": 0,
+        "portal_components": 1,
+        "walkable_cells": 511
+      },
+      "pass": true
+    },
+    {
+      "check": "every disconnected part of chunk (1, 0, 0) is inside a declared hidden region",
+      "detail": {
+        "declared_hidden_regions": 0,
+        "pockets": 0,
+        "stray_parts": 0
+      },
+      "pass": true
+    },
+    {
+      "check": "chunk (1, 0, 0) is mostly walkable",
+      "detail": {
+        "cells": 576,
+        "fraction": 0.887152777777778,
+        "walkable_cells": 511
+      },
+      "pass": true
+    },
+    {
+      "check": "every portal of chunk (1, 0, 0) is reachable on foot",
+      "detail": {
+        "found": 4,
+        "portals": 4
+      },
+      "pass": true
+    },
+    {
+      "check": "chunk (1, 0, 0) has no floor cell that only fits on a knife edge",
+      "detail": {
+        "knife_edges": 0
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (2, 0, 0) is physically open",
+      "detail": {
+        "at": {
+          "at": 4.5,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(48.0, 1.0, 4.5)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (2, 0, 0) is physically open",
+      "detail": {
+        "at": {
+          "at": 4.5,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(72.0, 1.0, 4.5)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (2, 0, 0) is physically open",
+      "detail": {
+        "at": {
+          "at": 11.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(59.0, 1.0, 0.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (2, 0, 0) is physically open",
+      "detail": {
+        "at": {
+          "at": 11.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(59.0, 1.0, 24.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (-2, 0, 1) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.65,
+          "w": 11.0
+        },
+        "point": "(-48.0, 1.0, 36.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (-2, 0, 1) is physically open",
+      "detail": {
+        "at": {
+          "at": 21.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-24.0, 1.0, 45.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (-2, 0, 1) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-36.0, 1.0, 24.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (-2, 0, 1) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.65,
+          "w": 11.0
+        },
+        "point": "(-36.0, 1.0, 48.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (-1, 0, 1) is physically open",
+      "detail": {
+        "at": {
+          "at": 21.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-24.0, 1.0, 45.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (-1, 0, 1) is physically open",
+      "detail": {
+        "at": {
+          "at": 3.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(0.0, 1.0, 27.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (-1, 0, 1) is physically open",
+      "detail": {
+        "at": {
+          "at": 13.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-11.0, 1.0, 24.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (-1, 0, 1) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-12.0, 1.0, 48.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "all four portals of chunk (-1, 0, 1) lie in one walkable component",
+      "detail": {
+        "cells": 576,
+        "components": 1,
+        "fraction": 0.782986111111111,
+        "pockets": 0,
+        "portal_components": 1,
+        "walkable_cells": 451
+      },
+      "pass": true
+    },
+    {
+      "check": "every disconnected part of chunk (-1, 0, 1) is inside a declared hidden region",
+      "detail": {
+        "declared_hidden_regions": 0,
+        "pockets": 0,
+        "stray_parts": 0
+      },
+      "pass": true
+    },
+    {
+      "check": "chunk (-1, 0, 1) is mostly walkable",
+      "detail": {
+        "cells": 576,
+        "fraction": 0.782986111111111,
+        "walkable_cells": 451
+      },
+      "pass": true
+    },
+    {
+      "check": "every portal of chunk (-1, 0, 1) is reachable on foot",
+      "detail": {
+        "found": 4,
+        "portals": 4
+      },
+      "pass": true
+    },
+    {
+      "check": "chunk (-1, 0, 1) has no floor cell that only fits on a knife edge",
+      "detail": {
+        "knife_edges": 0
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (0, 0, 1) is physically open",
+      "detail": {
+        "at": {
+          "at": 3.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(0.0, 1.0, 27.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (0, 0, 1) is physically open",
+      "detail": {
+        "at": {
+          "at": 4.5,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(24.0, 1.0, 28.5)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (0, 0, 1) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(12.0, 1.0, 24.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (0, 0, 1) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(12.0, 1.0, 48.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "all four portals of chunk (0, 0, 1) lie in one walkable component",
+      "detail": {
+        "cells": 576,
+        "components": 1,
+        "fraction": 0.817708333333333,
+        "pockets": 0,
+        "portal_components": 1,
+        "walkable_cells": 471
+      },
+      "pass": true
+    },
+    {
+      "check": "every disconnected part of chunk (0, 0, 1) is inside a declared hidden region",
+      "detail": {
+        "declared_hidden_regions": 1,
+        "pockets": 0,
+        "stray_parts": 0
+      },
+      "pass": true
+    },
+    {
+      "check": "chunk (0, 0, 1) is mostly walkable",
+      "detail": {
+        "cells": 576,
+        "fraction": 0.817708333333333,
+        "walkable_cells": 471
+      },
+      "pass": true
+    },
+    {
+      "check": "every portal of chunk (0, 0, 1) is reachable on foot",
+      "detail": {
+        "found": 4,
+        "portals": 4
+      },
+      "pass": true
+    },
+    {
+      "check": "chunk (0, 0, 1) has no floor cell that only fits on a knife edge",
+      "detail": {
+        "knife_edges": 0
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (1, 0, 1) is physically open",
+      "detail": {
+        "at": {
+          "at": 4.5,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(24.0, 1.0, 28.5)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (1, 0, 1) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.65,
+          "w": 11.0
+        },
+        "point": "(48.0, 1.0, 36.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (1, 0, 1) is physically open",
+      "detail": {
+        "at": {
+          "at": 13.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(37.0, 1.0, 24.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (1, 0, 1) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.65,
+          "w": 11.0
+        },
+        "point": "(36.0, 1.0, 48.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "all four portals of chunk (1, 0, 1) lie in one walkable component",
+      "detail": {
+        "cells": 576,
+        "components": 1,
+        "fraction": 0.876736111111111,
+        "pockets": 0,
+        "portal_components": 1,
+        "walkable_cells": 505
+      },
+      "pass": true
+    },
+    {
+      "check": "every disconnected part of chunk (1, 0, 1) is inside a declared hidden region",
+      "detail": {
+        "declared_hidden_regions": 0,
+        "pockets": 0,
+        "stray_parts": 0
+      },
+      "pass": true
+    },
+    {
+      "check": "chunk (1, 0, 1) is mostly walkable",
+      "detail": {
+        "cells": 576,
+        "fraction": 0.876736111111111,
+        "walkable_cells": 505
+      },
+      "pass": true
+    },
+    {
+      "check": "every portal of chunk (1, 0, 1) is reachable on foot",
+      "detail": {
+        "found": 4,
+        "portals": 4
+      },
+      "pass": true
+    },
+    {
+      "check": "chunk (1, 0, 1) has no floor cell that only fits on a knife edge",
+      "detail": {
+        "knife_edges": 0
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (2, 0, 1) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.65,
+          "w": 11.0
+        },
+        "point": "(48.0, 1.0, 36.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (2, 0, 1) is physically open",
+      "detail": {
+        "at": {
+          "at": 4.5,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(72.0, 1.0, 28.5)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (2, 0, 1) is physically open",
+      "detail": {
+        "at": {
+          "at": 11.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(59.0, 1.0, 24.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (2, 0, 1) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.65,
+          "w": 11.0
+        },
+        "point": "(60.0, 1.0, 48.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (-2, 0, 2) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.65,
+          "w": 11.0
+        },
+        "point": "(-48.0, 1.0, 60.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (-2, 0, 2) is physically open",
+      "detail": {
+        "at": {
+          "at": 4.5,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-24.0, 1.0, 52.5)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (-2, 0, 2) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.65,
+          "w": 11.0
+        },
+        "point": "(-36.0, 1.0, 48.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (-2, 0, 2) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-36.0, 1.0, 72.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (-1, 0, 2) is physically open",
+      "detail": {
+        "at": {
+          "at": 4.5,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-24.0, 1.0, 52.5)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (-1, 0, 2) is physically open",
+      "detail": {
+        "at": {
+          "at": 3.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(0.0, 1.0, 51.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (-1, 0, 2) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-12.0, 1.0, 48.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (-1, 0, 2) is physically open",
+      "detail": {
+        "at": {
+          "at": 13.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(-11.0, 1.0, 72.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (0, 0, 2) is physically open",
+      "detail": {
+        "at": {
+          "at": 3.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(0.0, 1.0, 51.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (0, 0, 2) is physically open",
+      "detail": {
+        "at": {
+          "at": 21.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(24.0, 1.0, 69.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (0, 0, 2) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(12.0, 1.0, 48.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (0, 0, 2) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(12.0, 1.0, 72.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (1, 0, 2) is physically open",
+      "detail": {
+        "at": {
+          "at": 21.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(24.0, 1.0, 69.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (1, 0, 2) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.65,
+          "w": 11.0
+        },
+        "point": "(48.0, 1.0, 60.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (1, 0, 2) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.65,
+          "w": 11.0
+        },
+        "point": "(36.0, 1.0, 48.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (1, 0, 2) is physically open",
+      "detail": {
+        "at": {
+          "at": 11.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(35.0, 1.0, 72.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the west portal of chunk (2, 0, 2) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.65,
+          "w": 11.0
+        },
+        "point": "(48.0, 1.0, 60.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the east portal of chunk (2, 0, 2) is physically open",
+      "detail": {
+        "at": {
+          "at": 4.5,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(72.0, 1.0, 52.5)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the south portal of chunk (2, 0, 2) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.65,
+          "w": 11.0
+        },
+        "point": "(60.0, 1.0, 48.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "the north portal of chunk (2, 0, 2) is physically open",
+      "detail": {
+        "at": {
+          "at": 12.0,
+          "h": 3.25,
+          "w": 4.0
+        },
+        "point": "(60.0, 1.0, 72.0)"
+      },
+      "pass": true
+    },
+    {
+      "check": "every chunk contributed four probed doors",
+      "detail": {
+        "chunks": 25,
+        "doors": 100
+      },
+      "pass": true
+    },
+    {
+      "check": "the probed area covers the whole 5x5 spawn neighbourhood",
+      "detail": {
+        "chunks": 25
+      },
+      "pass": true
+    },
+    {
+      "check": "the flood fill covered the 3x3 spawn neighbourhood",
+      "detail": {
+        "chunks": 9
+      },
+      "pass": true
+    }
+  ],
+  "native": true,
+  "probe": {
+    "capsule_height": 1.78,
+    "capsule_radius": 0.32,
+    "grid_step": 1.0
+  },
+  "seed": 1337,
+  "status": "PASS"
+}

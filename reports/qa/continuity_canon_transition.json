@@ -190,8 +190,8 @@
     {
       "check": "the player node was MOVED, not destroyed and re-created",
       "detail": {
-        "after": 101015620287,
-        "before": 101015620287
+        "after": 101921589997,
+        "before": 101921589997
       },
       "pass": true
     },
@@ -225,14 +225,14 @@
       "check": "the laboratory's streamed world was released",
       "detail": {
         "still_resolves": false,
-        "world_id": 86587213902
+        "world_id": 86687877198
       },
       "pass": true
     },
     {
       "check": "the laboratory PLACE was released, not merely its chunks",
       "detail": {
-        "lab_id": 86452996173,
+        "lab_id": 86553659469,
         "still_resolves": false
       },
       "pass": true
