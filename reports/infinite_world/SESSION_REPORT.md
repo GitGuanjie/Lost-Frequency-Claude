@@ -37,6 +37,7 @@ inferred from the existence of a script.
 | A save → restart → reload round trip across **two processes** | `tests/ContinuityPersistenceTest.gd` | gates 15 + 16, 22 checks |
 | LOD, visibility range and occlusion culling measured on a **real GPU in a window** | `tests/ContinuityGpuProbe.gd` | `reports/qa/continuity_gpu_probe.json`, 7 checks |
 | One planner and one walker, shared by every test that walks a body | `tests/ContinuityPathFinder.gd`, `tests/ContinuityWalker.gd` | gates 12 and 14 |
+| The **Windows build** of this branch, exported and booted | `export/windows/LostFrequency-InfiniteBackrooms-v5.exe` | 238 118 720 B, sha256 `DB8B4758…`, headless boot 0 engine errors, windowed 1600×900 |
 
 **The headline:** the canonical Level 0 → Level 1 route now exists, it is
 **physically walked** by a real `CharacterBody3D` into a real flickering wall,
@@ -393,15 +394,15 @@ python tools/verify_branch_tree.py HEAD
 ```
 
 ```
-local blobs : 3792
-remote blobs: 3791
+local blobs : 3827
+remote blobs: 3826
 only local  : 1 ['reports/infinite_world/continuity_lab_release_build.jpg']
 only remote : 0 []
 different sha: 0 []
 DIFFERENCES FOUND
 ```
 
-**3 791 of the 3 792 blobs are published with the same SHA-1 as the local
+**3 826 of the 3 827 blobs are published with the same SHA-1 as the local
 `HEAD`, and not one of them differs.** The single file that is *not* on the
 remote is the 194 010-byte screenshot, and the reason is the connector itself:
 `push_files` and `create_or_update_file` take their content as a **string**
@@ -419,6 +420,37 @@ gitblob: adcc5b3d3e140cdf3a2ade6c043d7c13cac94563
 The image is also inside the source ZIP and next to the Windows build, and the
 committed command in `release_boot_windowed.log` regenerates it in about two
 seconds.
+
+**This session's published state.** The remote head after this session's commit
+is `a094e7c24ef1da8c24e4b09245c1bd51f4aa1076` (a connector-created commit; the
+local commit is `94c73af`). The tree verification above is the state of the
+branch **after** that push, and the one difference is the same binary
+screenshot as before — the publishing path has not changed.
+
+**This session's Windows build.** The exported executable is a build artifact,
+not a source file, and it is identified by its hash:
+
+```
+path   : export/windows/LostFrequency-InfiniteBackrooms-v5.exe
+bytes  : 238118720
+sha256 : DB8B4758E3A201B74A0944087EA41DF91F19213C30FCE8F0284C602495669839
+```
+
+It boots from the exported binary, not from the source tree: headless, the
+laboratory prints `[ContinuityLab] ready seed=1337 …` and there are **zero
+engine error lines**; windowed, it renders a 1600×900 frame
+(`SHOT … err=0 size=1600x900`). The screenshot of that frame is the PNG
+delivered with this session:
+
+```
+path   : export/windows/continuity_lab_release_build.png
+bytes  : 2542248
+sha256 : F29928CFCA739C7385AED44E55AF6CDD8D1AD67A770592618629728507D80FFD
+```
+
+It is not in the branch for the same reason the JPEG is not: it is a binary
+asset and the publishing path carries text.
+
 
 Two tools make this reproducible and are committed:
 
