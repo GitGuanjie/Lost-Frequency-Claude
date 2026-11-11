@@ -1,0 +1,143 @@
+{
+  "checks": 12,
+  "engine": {
+    "build": "official",
+    "hash": "f62fdbde15035c5576dad93e586201f4d41ef0cb",
+    "hex": 263425,
+    "major": 4,
+    "minor": 5,
+    "patch": 1,
+    "status": "stable",
+    "string": "4.5.1-stable (official)",
+    "timestamp": 0
+  },
+  "failures": 0,
+  "findings": [
+    {
+      "check": "twelve fresh chunks were built for the cost measurement",
+      "detail": {
+        "built": 12
+      },
+      "pass": true
+    },
+    {
+      "check": "the median chunk build stays inside the frame budget",
+      "detail": {
+        "all_ms": [
+          6.485,
+          7.053,
+          8.518,
+          8.96,
+          9.35,
+          9.367,
+          9.842,
+          10.023,
+          10.19,
+          10.556,
+          10.585,
+          13.059
+        ],
+        "median_ms": 9.842,
+        "worst_ms": 13.059
+      },
+      "pass": true
+    },
+    {
+      "check": "the walker completed the long walk",
+      "detail": {
+        "forced": 0,
+        "pos": "(145.5964, 0.02, 4.314095)",
+        "reached": 27,
+        "recoveries": 0,
+        "stuck": {
+          "forced": 0,
+          "position": "(145.5964, 0.02, 4.314095)",
+          "recoveries": 0,
+          "target": "(145.875, 1.0, 4.125)",
+          "trace_head": "(143.4866, 0.02, 6.410609)",
+          "trace_tail": "(145.5964, 0.02, 4.314095)",
+          "waypoint_index": 27
+        },
+        "waypoints": 27
+      },
+      "pass": true
+    },
+    {
+      "check": "a route was planned for every leg of the long walk",
+      "detail": {
+        "failed_legs": []
+      },
+      "pass": true
+    },
+    {
+      "check": "the long walk is a route with real waypoints in it",
+      "detail": {
+        "chunks": 6,
+        "waypoints": 27
+      },
+      "pass": true
+    },
+    {
+      "check": "the walker crossed every chunk seam of the long walk",
+      "detail": {
+        "chunks": 6,
+        "crossed": 6
+      },
+      "pass": true
+    },
+    {
+      "check": "the walker travelled more than 100 m",
+      "detail": {
+        "distance": 134.762344360352
+      },
+      "pass": true
+    },
+    {
+      "check": "every chunk of the long sweep was built before it was entered",
+      "detail": {
+        "missing": 0,
+        "steps": 40
+      },
+      "pass": true
+    },
+    {
+      "check": "the sweep really streamed new chunks in",
+      "detail": {
+        "built": 222,
+        "unloaded": 286
+      },
+      "pass": true
+    },
+    {
+      "check": "the sweep really streamed chunks back out",
+      "detail": {
+        "built": 222,
+        "unloaded": 286
+      },
+      "pass": true
+    },
+    {
+      "check": "the resident chunk count stays bounded during the sweep",
+      "detail": {
+        "final_resident": 26,
+        "peak_resident": 90,
+        "radius_xz": 2,
+        "unload_xz": 3
+      },
+      "pass": true
+    },
+    {
+      "check": "a change made before the sweep is still there after it",
+      "detail": {
+        "chunk": "(0, 0, 0)",
+        "marker": 1
+      },
+      "pass": true
+    }
+  ],
+  "native": true,
+  "seed": 1337,
+  "status": "PASS",
+  "sweep_chunks": 40,
+  "walk_chunks": 6
+}

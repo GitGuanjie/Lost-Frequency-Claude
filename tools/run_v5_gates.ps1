@@ -76,6 +76,23 @@ Invoke-Gate -Name '07_physical_walk'       -GodotArgs @('--headless', '--path', 
 Invoke-Gate -Name '09_canon_transition'    -GodotArgs @('--headless', '--path', $Root, '--fixed-fps', '60', 'res://tests/ContinuityCanonTransitionTest.tscn') -LogName 'gate09_canon.log' | Out-Null
 Invoke-Gate -Name '10_performance_probe'   -GodotArgs @('--headless', '--path', $Root, '--fixed-fps', '60', 'res://tests/ContinuityPerformanceProbe.tscn') -LogName 'gate10_performance.log' | Out-Null
 
+# 11..14: the physical world. These are SCENES and not --script runs because
+# they need the autoloads (SessionState, SaveService) and a real physics
+# space. The --quit-after value is a safety net only: each test quits itself
+# as soon as it has its answer, and a test that hangs must still be reported
+# as a failure instead of running until the machine gives up.
+Invoke-Gate -Name '11_continuity_connectivity' -GodotArgs @('--headless', '--path', $Root, '--fixed-fps', '60', '--quit-after', '20000', 'res://tests/ContinuityConnectivityTest.tscn') -LogName 'gate11_connectivity.log' | Out-Null
+Invoke-Gate -Name '12_continuity_loop_walk'   -GodotArgs @('--headless', '--path', $Root, '--fixed-fps', '60', '--quit-after', '200000', 'res://tests/ContinuityLoopWalkTest.tscn') -LogName 'gate12_loop_walk.log' | Out-Null
+Invoke-Gate -Name '13_continuity_hidden_region' -GodotArgs @('--headless', '--path', $Root, '--fixed-fps', '60', '--quit-after', '60000', 'res://tests/ContinuityHiddenRegionTest.tscn') -LogName 'gate13_hidden_region.log' | Out-Null
+Invoke-Gate -Name '14_continuity_stress'      -GodotArgs @('--headless', '--path', $Root, '--fixed-fps', '60', '--quit-after', '400000', 'res://tests/ContinuityStressTest.tscn') -LogName 'gate14_stress.log' | Out-Null
+
+# 15 and 16: the save / reload round trip. They are two SEPARATE processes on
+# purpose - a single process cannot tell "the disk works" from "the in-memory
+# scope was never cleared" - so they have to run in this order and they must
+# not be merged into one gate.
+Invoke-Gate -Name '15_persistence_write' -GodotArgs @('--headless', '--path', $Root, '--fixed-fps', '60', '--quit-after', '60000', 'res://tests/ContinuityPersistenceTest.tscn', '--', '--phase=write') -LogName 'gate15_persistence_write.log' | Out-Null
+Invoke-Gate -Name '16_persistence_read'  -GodotArgs @('--headless', '--path', $Root, '--fixed-fps', '60', '--quit-after', '60000', 'res://tests/ContinuityPersistenceTest.tscn', '--', '--phase=read')  -LogName 'gate16_persistence_read.log' | Out-Null
+
 # 08: the offline Python contracts
 $pyLog = Join-Path $LogDir 'gate08_python.log'
 $sw = [Diagnostics.Stopwatch]::StartNew()
